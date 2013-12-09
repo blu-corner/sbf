@@ -15,7 +15,8 @@ HEADERS += \
     sbfLog.h \
     sbfMemory.h \
     sbfPool.h \
-    sbfUdpMulticast.h
+    sbfUdpMulticast.h \
+    sbfVersion.h
 SOURCES += \
     sbfBuffer.c \
     sbfCpuFreq.c \
@@ -50,6 +51,7 @@ install_headers.files = \
     sbfPoolInline.h \
     sbfRefCount.h \
     sbfUdpMulticast.h \
+    sbfVersion.h \
     syshash.h \
     sysqueue.h \
     systree.h

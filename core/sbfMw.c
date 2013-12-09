@@ -43,6 +43,7 @@ sbfMw_create (u_int threads)
     mw->mNumThreads = threads;
     mw->mThreads = xcalloc (mw->mNumThreads, sizeof *mw->mThreads);
 
+    sbfLog_info ("this is version " SBF_VERSION);
     sbfLog_debug ("creating %p, using %u threads", mw, threads);
 
     if (evthread_use_pthreads () != 0)

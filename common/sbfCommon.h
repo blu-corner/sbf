@@ -1,6 +1,8 @@
 #ifndef _SBF_COMMON_H_
 #define _SBF_COMMON_H_
 
+#include "sbfVersion.h"
+
 #ifdef linux
 #include "sbfCommonLinux.h"
 #endif
