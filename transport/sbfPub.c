@@ -18,6 +18,23 @@ sbfPubMakeHeader (sbfPub pub)
     memcpy (pub->mHeader + 1, topic, topicSize);
 }
 
+static inline sbfTportStream
+sbfPubEnsureStream (sbfPub pub)
+{
+    sbfTport tport = pub->mTport;
+
+    if (pub->mTportStream == NULL || pub->mTportStream->mStream == NULL)
+    {
+        /*
+         * Take and release lock to synchronize AddStream return being copied
+         * into the member.
+         */
+        pthread_mutex_lock (&tport->mStreamsLock);
+        pthread_mutex_unlock (&tport->mStreamsLock);
+    }
+    return pub->mTportStream;
+}
+
 static inline void
 sbfPubFree (sbfPub pub)
 {
@@ -32,7 +49,7 @@ sbfPubAddEventCb (int fd, short events, void* closure)
 {
     sbfPub         pub0 = closure;
     sbfTopic       topic = pub0->mTopic;
-    sbfTportStream tstream = pub0->mTportStream;
+    sbfTportStream tstream = sbfPubEnsureStream (pub0);
     sbfTportTopic  ttopic;
 
     sbfLog_debug ("adding %p", pub0);
@@ -55,21 +72,9 @@ sbfPubAddStreamCompleteCb (sbfHandlerHandle handle,
                            void* closure)
 {
     sbfPub         pub0 = closure;
-    sbfTport       tport = pub0->mTport;
-    sbfTportStream tstream;
+    sbfTportStream tstream = sbfPubEnsureStream (pub0);
     sbfTportTopic  ttopic;
     sbfPub         pub;
-
-    if (pub0->mTportStream == NULL || pub0->mTportStream->mStream == NULL)
-    {
-        /*
-         * Take and release lock to synchronize AddStream return being copied
-         * into the member.
-         */
-        pthread_mutex_lock (&tport->mStreamsLock);
-        pthread_mutex_unlock (&tport->mStreamsLock);
-    }
-    tstream = pub0->mTportStream;
 
     if (error != 0)
     {
@@ -140,8 +145,8 @@ sbfPubSetStream (sbfPub pub)
                                       pub->mTopic,
                                       sbfPubAddStreamCompleteCb,
                                       pub);
-        pub->mTportStream = tstream;
     }
+    pub->mTportStream = tstream;
     pthread_mutex_unlock (&tport->mStreamsLock);
 }
 

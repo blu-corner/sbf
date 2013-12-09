@@ -8,12 +8,29 @@ sbfSubFree (sbfSub sub)
     free (sub);
 }
 
+static inline sbfTportStream
+sbfSubEnsureStream (sbfSub sub)
+{
+    sbfTport tport = sub->mTport;
+
+    if (sub->mTportStream == NULL || sub->mTportStream->mStream == NULL)
+    {
+        /*
+         * Take and release lock to synchronize AddStream return being copied
+         * into the member.
+         */
+        pthread_mutex_lock (&tport->mStreamsLock);
+        pthread_mutex_unlock (&tport->mStreamsLock);
+    }
+    return sub->mTportStream;
+}
+
 static void
 sbfSubAddEventCb (int fd, short events, void* closure)
 {
     sbfSub         sub0 = closure;
     sbfTopic       topic = sub0->mTopic;
-    sbfTportStream tstream = sub0->mTportStream;
+    sbfTportStream tstream = sbfSubEnsureStream (sub0);
     sbfTportTopic  ttopic;
 
     sbfLog_debug ("adding %p", sub0);
@@ -36,21 +53,9 @@ sbfSubAddStreamCompleteCb (sbfHandlerHandle handle,
                            void* closure)
 {
     sbfSub         sub0 = closure;
-    sbfTport       tport = sub0->mTport;
-    sbfTportStream tstream;
+    sbfTportStream tstream = sbfSubEnsureStream (sub0);
     sbfTportTopic  ttopic;
     sbfSub         sub;
-
-    if (sub0->mTportStream == NULL || sub0->mTportStream->mStream == NULL)
-    {
-        /*
-         * Take and release lock to synchronize AddStream return being copied
-         * into the mStream member.
-         */
-        pthread_mutex_lock (&tport->mStreamsLock);
-        pthread_mutex_unlock (&tport->mStreamsLock);
-    }
-    tstream = sub0->mTportStream;
 
     if (error != 0)
     {
@@ -125,8 +130,8 @@ sbfSubSetStream (sbfSub sub)
                                       sub->mTopic,
                                       sbfSubAddStreamCompleteCb,
                                       sub);
-        sub->mTportStream = tstream;
     }
+    sub->mTportStream = tstream;
     sbfTport_adjustWeight (tport, tstream->mThread, sub->mWeight);
     pthread_mutex_unlock (&tport->mStreamsLock);
 }
