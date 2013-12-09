@@ -1,7 +1,8 @@
 #!/bin/bash
 
-v=$(git describe)
-read a b c <<<${v//./ }
+description=$(git describe)
+version=${description%%-*}
+read a b c <<<${version//./ }
 
 cat <<EOF >common/sbfVersion.h
 #ifndef _SBF_VERSION_H_
@@ -11,7 +12,7 @@ cat <<EOF >common/sbfVersion.h
 #define SBF_MINOR_VERSION $b
 #define SBF_PATCH_LEVEL $c
 
-#define SBF_VERSION "$v"
+#define SBF_VERSION "$version"
 
 #endif /* _SBF_VERSION_H_ */
 EOF
