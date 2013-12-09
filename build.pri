@@ -2,6 +2,7 @@ top_src = $$PWD
 top_build = $$PWD/install
 
 CONFIG += debug plugin
+CONFIG -= qt
 
 OBJECTS_DIR = .obj
 DESTDIR = .lib
@@ -48,6 +49,9 @@ unix {
     QMAKE_LFLAGS += \
 	-pthread \
     	-Wl,--no-as-needed
+    QMAKE_LIBS += \
+        -ldl \
+        -lrt
 }
 
 windows {
