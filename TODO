@@ -1,0 +1,5 @@
+- TCP mesh handler
+- thread-policy property and weighted thread policy (as well as round-robin)
+- deliver to subs evenly (start at different one each message)
+- batching
+- reflector program
