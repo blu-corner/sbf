@@ -10,7 +10,7 @@ typedef void* sbfHandler;
 typedef void* sbfHandlerStream;
 typedef void* sbfHandlerHandle;
 
-/* Must be fired by the handler on the event thread give to AddStream. */
+/* Must be fired by the handler on the event thread given to AddStream. */
 typedef void (*sbfHandlerAddStreamCompleteCb) (sbfHandlerHandle handle,
                                                sbfError error,
                                                void* closure);
