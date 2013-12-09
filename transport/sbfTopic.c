@@ -101,16 +101,16 @@ sbfTopic_compare (sbfTopic lhs, sbfTopic rhs)
     return strcmp (lhs->mTopic, rhs->mTopic);
 }
 
-const char*
-sbfTopic_getTopic (sbfTopic topic)
-{
-    return topic->mTopic;
-}
-
 sbfTopicType
 sbfTopic_getType (sbfTopic topic)
 {
     return topic->mType;
+}
+
+const char*
+sbfTopic_getTopic (sbfTopic topic)
+{
+    return topic->mTopic;
 }
 
 const char*
