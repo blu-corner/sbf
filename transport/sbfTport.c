@@ -55,7 +55,7 @@ sbfTportFree (sbfTport tport)
     pthread_cond_destroy (&tport->mStreamsCond);
     pthread_mutex_destroy (&tport->mStreamsLock);
 
-    pthread_mutex_destroy (&tport->mNextThreadLock);
+    pthread_mutex_destroy (&tport->mWeightsLock);
 
     sbfKeyValue_destroy (tport->mProperties);
 
@@ -84,12 +84,13 @@ sbfTport_create (sbfMw mw,
     else
         tport->mProperties = sbfKeyValue_create ();
 
-    tport->mThreadMask = mask;
-
     sbfLog_debug ("creating %p: type %s", tport, type);
 
-    tport->mNextThread = 0;
-    pthread_mutex_init (&tport->mNextThreadLock, NULL);
+    if (mask == 0)
+        mask = SBF_MW_ALL_THREADS;
+    tport->mThreads = mask;
+
+    pthread_mutex_init (&tport->mWeightsLock, NULL);
 
     TAILQ_INIT (&tport->mStreams);
     pthread_mutex_init (&tport->mStreamsLock, NULL);

@@ -75,33 +75,18 @@ struct sbfTportImpl
     sbfHandlerTable*                  mHandlerTable;
     sbfHandler                        mHandler;
 
-    uint64_t                          mThreadMask;
+    uint64_t                          mThreads;
 
-    u_int                             mNextThread;
-    pthread_mutex_t                   mNextThreadLock;
+    u_int                             mWeights[SBF_MW_THREAD_LIMIT];
+    pthread_mutex_t                   mWeightsLock;
 
     TAILQ_HEAD (, sbfTportStreamImpl) mStreams;
     pthread_mutex_t                   mStreamsLock;
     pthread_cond_t                    mStreamsCond;
 };
 
-static inline sbfMwThread
-sbfTport_nextThread (sbfTport tport)
-{
-    sbfMwThread thread;
-
-    pthread_mutex_lock (&tport->mNextThreadLock);
-    do
-    {
-        thread = sbfMw_getThread (tport->mMw, tport->mNextThread++);
-        if (tport->mNextThread >= sbfMw_getNumThreads (tport->mMw))
-            tport->mNextThread = 0;
-    }
-    while (~tport->mThreadMask & sbfMw_getThreadMask (thread));
-    pthread_mutex_unlock (&tport->mNextThreadLock);
-
-    return thread;
-}
+u_int sbfTport_topicWeight (sbfTport tport, sbfTopic topic);
+sbfMwThread sbfTport_nextThread (sbfTport tport);
 
 static inline sbfTportTopic
 sbfTport_findTopic (sbfTportStream tstream, const char* topic)
@@ -185,7 +170,6 @@ sbfTport_removeStream (sbfTport tport, sbfTportStream tstream)
     free (tstream);
 }
 
-SBF_END_DECLS
 SBF_END_DECLS
 
 #endif /* _SBF_TPORT_PRIVATE_H_ */

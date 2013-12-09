@@ -136,10 +136,11 @@ sbfPubSetStream (sbfPub pub)
     }
     else
     {
-        pub->mTportStream = sbfTport_addStream (tport,
-                                                pub->mTopic,
-                                                sbfPubAddStreamCompleteCb,
-                                                pub);
+        tstream = sbfTport_addStream (tport,
+                                      pub->mTopic,
+                                      sbfPubAddStreamCompleteCb,
+                                      pub);
+        pub->mTportStream = tstream;
     }
     pthread_mutex_unlock (&tport->mStreamsLock);
 }

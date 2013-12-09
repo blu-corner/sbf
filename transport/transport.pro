@@ -18,6 +18,7 @@ SOURCES += \
     sbfPub.c \
     sbfSub.c \
     sbfTport.c \
+    sbfTportWeight.c \
     sbfTopic.c
 
 install_headers.path = $$top_build/include

@@ -17,6 +17,7 @@ sbfTport sbfTport_create (sbfMw mw,
                           const char* type,
                           sbfKeyValue properties);
 void sbfTport_destroy (sbfTport tport);
+
 SBF_END_DECLS
 
 #endif /* _SBF_TPORT_H_ */

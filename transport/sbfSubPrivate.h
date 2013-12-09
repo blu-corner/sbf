@@ -11,6 +11,7 @@ struct sbfTportHeaderImpl;
 struct sbfSubImpl
 {
     sbfTopic                   mTopic;
+    u_int                      mWeight;
 
     int                        mDestroyed;
     sbfRefCount                mRefCount;
