@@ -52,9 +52,14 @@ sbfTportFirstDestroyStreamCb (int fd, short events, void* closure)
 static void
 sbfTportFree (sbfTport tport)
 {
+    u_int i;
+
     pthread_cond_destroy (&tport->mStreamsCond);
     pthread_mutex_destroy (&tport->mStreamsLock);
 
+    for (i = 0; i < tport->mWeightsListSize; i++)
+        regfree (&tport->mWeightsList[i].mPattern);
+    free (tport->mWeightsList);
     pthread_mutex_destroy (&tport->mWeightsLock);
 
     sbfKeyValue_destroy (tport->mProperties);
@@ -91,6 +96,7 @@ sbfTport_create (sbfMw mw,
     tport->mThreads = mask;
 
     pthread_mutex_init (&tport->mWeightsLock, NULL);
+    sbfTport_parseWeights (tport);
 
     TAILQ_INIT (&tport->mStreams);
     pthread_mutex_init (&tport->mStreamsLock, NULL);

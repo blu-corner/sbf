@@ -66,6 +66,12 @@ struct sbfTportStreamImpl
 };
 typedef struct sbfTportStreamImpl* sbfTportStream;
 
+typedef struct
+{
+    u_int   mWeight;
+    regex_t mPattern;
+} sbfTportWeight;
+
 struct sbfTportImpl
 {
     sbfMw                             mMw;
@@ -79,12 +85,16 @@ struct sbfTportImpl
 
     u_int                             mWeights[SBF_MW_THREAD_LIMIT];
     pthread_mutex_t                   mWeightsLock;
+    u_int                             mWeightsListSize;
+    sbfTportWeight*                   mWeightsList;
 
     TAILQ_HEAD (, sbfTportStreamImpl) mStreams;
     pthread_mutex_t                   mStreamsLock;
     pthread_cond_t                    mStreamsCond;
 };
 
+void sbfTport_parseWeights (sbfTport tport);
+void sbfTport_adjustWeight (sbfTport tport, sbfMwThread thread, int change);
 u_int sbfTport_topicWeight (sbfTport tport, sbfTopic topic);
 sbfMwThread sbfTport_nextThread (sbfTport tport);
 

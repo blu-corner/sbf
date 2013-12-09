@@ -2,20 +2,6 @@
 #include "sbfTportPrivate.h"
 
 static inline void
-sbfSubAdjustWeight (sbfTport tport, sbfMwThread thread, int change)
-{
-    u_int index;
-
-    pthread_mutex_lock (&tport->mWeightsLock);
-
-    index = sbfMw_getThreadIndex (thread);
-    tport->mWeights[index] += change;
-    sbfLog_debug ("thread %u weight is %u", index, tport->mWeights[index]);
-
-    pthread_mutex_unlock (&tport->mWeightsLock);
-}
-
-static inline void
 sbfSubFree (sbfSub sub)
 {
     sbfTopic_destroy (sub->mTopic);
@@ -102,7 +88,7 @@ sbfSubRemoveEventCb (int fd, short events, void* closure)
 
     sbfLog_debug ("removing %p", sub0);
 
-    sbfSubAdjustWeight (tport, tstream->mThread, -sub0->mWeight);
+    sbfTport_adjustWeight (tport, tstream->mThread, -sub0->mWeight);
 
     if (ttopic->mNext == sub0)
         ttopic->mNext = TAILQ_NEXT (sub0, mEntry);
@@ -141,7 +127,7 @@ sbfSubSetStream (sbfSub sub)
                                       sub);
         sub->mTportStream = tstream;
     }
-    sbfSubAdjustWeight (tport, tstream->mThread, sub->mWeight);
+    sbfTport_adjustWeight (tport, tstream->mThread, sub->mWeight);
     pthread_mutex_unlock (&tport->mStreamsLock);
 }
 

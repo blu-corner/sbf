@@ -19,6 +19,7 @@
 #include <ifaddrs.h>
 #include <limits.h>
 #include <pthread.h>
+#include <regex.h>
 #include <stdarg.h>
 #include <stdint.h>
 #include <stdio.h>
