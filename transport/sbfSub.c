@@ -26,70 +26,25 @@ sbfSubEnsureStream (sbfSub sub)
 }
 
 static void
-sbfSubAddEventCb (int fd, short events, void* closure)
-{
-    sbfSub         sub0 = closure;
-    sbfTopic       topic = sub0->mTopic;
-    sbfTportStream tstream = sbfSubEnsureStream (sub0);
-    sbfTportTopic  ttopic;
-
-    sbfLog_debug ("adding %p", sub0);
-
-    ttopic = sbfTport_findTopic (tstream, sbfTopic_getTopic (topic));
-    if (ttopic == NULL)
-        ttopic = sbfTport_addTopic (tstream, sbfTopic_getTopic (topic));
-    sbfLog_debug ("using topic %p (stream %p) for %p", ttopic, tstream, sub0);
-
-    TAILQ_INSERT_TAIL (&ttopic->mSubs, sub0, mEntry);
-    sub0->mTportTopic = ttopic;
-
-    if (tstream->mReady)
-        sbfSub_ready (sub0);
-}
-
-static void
-sbfSubAddStreamCompleteCb (sbfHandlerHandle handle,
-                           sbfError error,
-                           void* closure)
-{
-    sbfSub         sub0 = closure;
-    sbfTportStream tstream = sbfSubEnsureStream (sub0);
-    sbfTportTopic  ttopic;
-    sbfSub         sub;
-
-    if (error != 0)
-    {
-        /*
-         * If stream add fails, just return - sublishers on this stream will
-         * never become ready.
-         */
-        sbfLog_err ("failed to add stream %p: %s", tstream, strerror (error));
-        return;
-    }
-
-    sbfLog_debug ("stream %p is ready (for %p): thread %u",
-                  tstream,
-                  sub0,
-                  sbfMw_getThreadIndex (tstream->mThread));
-
-    tstream->mReady = 1;
-
-    RB_FOREACH (ttopic, sbfTportTopicTreeImpl, &tstream->mTopics)
-    {
-        TAILQ_FOREACH (sub, &ttopic->mSubs, mEntry)
-            sbfSub_ready (sub);
-    }
-
-    sbfSubAddEventCb (-1, 0, sub0);
-}
-
-static void
 sbfSubRemoveEventCb (int fd, short events, void* closure)
 {
     sbfSub         sub0 = closure;
     sbfTport       tport = sub0->mTport;
     sbfTportStream tstream = sub0->mTportStream;
     sbfTportTopic  ttopic = sub0->mTportTopic;
+
+    /*
+     * If the sub is waiting for the stream to be added, the remove event could
+     * be fired before it is ready. If so, defer the remove until the add
+     * stream complete callback. The flag is set so the later callback knows
+     * this callback has already fired and isn't queued behind it.
+     */
+    if (!sub0->mReady)
+    {
+        sub0->mRemoved = 1;
+        sbfLog_debug ("not removing %p; not ready", sub0);
+        return;
+    }
 
     sbfLog_debug ("removing %p", sub0);
 
@@ -110,15 +65,98 @@ sbfSubRemoveEventCb (int fd, short events, void* closure)
 }
 
 static void
+sbfSubAddEventCb (int fd, short events, void* closure)
+{
+    sbfSub         sub0 = closure;
+    sbfTopic       topic = sub0->mTopic;
+    sbfTportStream tstream = sbfSubEnsureStream (sub0);
+    sbfTportTopic  ttopic;
+
+    sbfLog_debug ("adding %p", sub0);
+
+    ttopic = sbfTport_findTopic (tstream, sbfTopic_getTopic (topic));
+    if (ttopic == NULL)
+        ttopic = sbfTport_addTopic (tstream, sbfTopic_getTopic (topic));
+    sbfLog_debug ("using topic %p (stream %p) for %p", ttopic, tstream, sub0);
+
+    TAILQ_INSERT_TAIL (&ttopic->mSubs, sub0, mEntry);
+    sub0->mTportTopic = ttopic;
+
+    /*
+     * Can now remove the reference used to hold the stream while waiting for
+     * the event to fire - it's been replaced by the reference added in
+     * sbfTport_addTopic.
+     */
+    sbfRefCount_decrement (&tstream->mRefCount);
+
+    if (tstream->mReady)
+        sbfSub_ready (sub0);
+}
+
+static void
+sbfSubAddStreamCompleteCb (sbfHandlerHandle handle,
+                           sbfError error,
+                           void* closure)
+{
+    sbfSub         sub0 = closure;
+    sbfTportStream tstream = sbfSubEnsureStream (sub0);
+    sbfTportTopic  ttopic;
+    sbfSub         sub;
+
+    if (error != 0)
+    {
+        /*
+         * If stream add fails, just return - subs on this stream will never
+         * become ready.
+         */
+        sbfLog_err ("failed to add stream %p: %s", tstream, strerror (error));
+        return;
+    }
+
+    sbfLog_debug ("stream %p is ready (for %p): thread %u",
+                  tstream,
+                  sub0,
+                  sbfMw_getThreadIndex (tstream->mThread));
+
+    tstream->mReady = 1;
+
+    RB_FOREACH (ttopic, sbfTportTopicTreeImpl, &tstream->mTopics)
+    {
+        /*
+         * If the sub is on this list, we are sure the add callback has been
+         * fired. The sub has not been made ready and the remove callback may
+         * have been deferred.
+         */
+        TAILQ_FOREACH (sub, &ttopic->mSubs, mEntry)
+            sbfSub_ready (sub);
+        if (sub->mRemoved)
+            sbfSubRemoveEventCb (-1, 0, sub);
+    }
+
+    /*
+     * There is one special sub that created the stream - it needs its add
+     * callback fired. If the remove has been deferred it needs to be fired
+     * too. It may seem silly to call add followed immediately by remove but
+     * this shouldn't happen often and ensures that the stream is removed too
+     * if necessary.
+     */
+    sbfSubAddEventCb (-1, 0, sub0);
+    if (sub0->mRemoved)
+        sbfSubRemoveEventCb (-1, 0, sub0);
+}
+
+static void
 sbfSubSetStream (sbfSub sub)
 {
     sbfTport       tport = sub->mTport;
     sbfTportStream tstream;
 
     pthread_mutex_lock (&tport->mStreamsLock);
+
     tstream = tport->mHandlerTable->mFindStream (tport->mHandler, sub->mTopic);
     if (tstream != NULL)
     {
+        /* We know the thread so can queue the add callback directly. */
         sbfMw_enqueue (tstream->mThread,
                        &sub->mEventAdd,
                        sbfSubAddEventCb,
@@ -126,12 +164,24 @@ sbfSubSetStream (sbfSub sub)
     }
     else
     {
+        /*
+         * We don't know the thread so we need to create the stream first. The
+         * AddStreamComplete callback fires on the right thread and finishes
+         * the work on this sub.
+         */
         tstream = sbfTport_addStream (tport,
                                       sub->mTopic,
                                       sbfSubAddStreamCompleteCb,
                                       sub);
     }
+
+    /*
+     * Take a reference to the stream to prevent it going away even if the
+     * number of topics hits zero.
+     */
     sub->mTportStream = tstream;
+    sbfRefCount_increment (&tstream->mRefCount);
+
     sbfTport_adjustWeight (tport, tstream->mThread, sub->mWeight);
     pthread_mutex_unlock (&tport->mStreamsLock);
 }

@@ -45,6 +45,41 @@ sbfPubFree (sbfPub pub)
 }
 
 static void
+sbfPubRemoveEventCb (int fd, short events, void* closure)
+{
+    sbfPub         pub0 = closure;
+    sbfTport       tport = pub0->mTport;
+    sbfTportStream tstream = pub0->mTportStream;
+    sbfTportTopic  ttopic = pub0->mTportTopic;
+
+    /*
+     * If the pub is waiting for the stream to be added, the remove event could
+     * be fired before it is ready. If so, defer the remove until the add
+     * stream complete callback. The flag is set so the later callback knows
+     * this callback has already fired and isn't queued behind it.
+     */
+    if (!pub0->mReady)
+    {
+        pub0->mRemoved = 1;
+        sbfLog_debug ("not removing %p; not ready", pub0);
+        return;
+    }
+
+    sbfLog_debug ("removing %p", pub0);
+
+    TAILQ_REMOVE (&ttopic->mPubs, pub0, mEntry);
+    if (TAILQ_EMPTY (&ttopic->mPubs) && sbfTport_removeTopic (tstream, ttopic))
+    {
+        pthread_mutex_lock (&tport->mStreamsLock);
+        sbfTport_removeStream (tport, tstream);
+        pthread_mutex_unlock (&tport->mStreamsLock);
+    }
+
+    if (sbfRefCount_decrement (&pub0->mRefCount))
+        sbfPubFree (pub0);
+}
+
+static void
 sbfPubAddEventCb (int fd, short events, void* closure)
 {
     sbfPub         pub0 = closure;
@@ -61,6 +96,13 @@ sbfPubAddEventCb (int fd, short events, void* closure)
 
     TAILQ_INSERT_TAIL (&ttopic->mPubs, pub0, mEntry);
     pub0->mTportTopic = ttopic;
+
+    /*
+     * Can now remove the reference used to hold the stream while waiting for
+     * the event to fire - it's been replaced by the reference added in
+     * sbfTport_addTopic.
+     */
+    sbfRefCount_decrement (&tstream->mRefCount);
 
     if (tstream->mReady)
         sbfPub_ready (pub0);
@@ -79,8 +121,8 @@ sbfPubAddStreamCompleteCb (sbfHandlerHandle handle,
     if (error != 0)
     {
         /*
-         * If stream add fails, just return - publishers on this stream will
-         * never become ready.
+         * If stream add fails, just return - pubs on this stream will never
+         * become ready.
          */
         sbfLog_err ("failed to add stream %p: %s", tstream, strerror (error));
         return;
@@ -95,33 +137,27 @@ sbfPubAddStreamCompleteCb (sbfHandlerHandle handle,
 
     RB_FOREACH (ttopic, sbfTportTopicTreeImpl, &tstream->mTopics)
     {
+        /*
+         * If the pub is on this list, we are sure the add callback has been
+         * fired. The pub has not been made ready and the remove callback may
+         * have been deferred.
+         */
         TAILQ_FOREACH (pub, &ttopic->mPubs, mEntry)
             sbfPub_ready (pub);
+        if (pub->mRemoved)
+            sbfPubRemoveEventCb (-1, 0, pub);
     }
 
+    /*
+     * There is one special pub that created the stream - it needs its add
+     * callback fired. If the remove has been deferred it needs to be fired
+     * too. It may seem silly to call add followed immediately by remove but
+     * this shouldn't happen often and ensures that the stream is removed too
+     * if necessary.
+     */
     sbfPubAddEventCb (-1, 0, pub0);
-}
-
-static void
-sbfPubRemoveEventCb (int fd, short events, void* closure)
-{
-    sbfPub         pub0 = closure;
-    sbfTport       tport = pub0->mTport;
-    sbfTportTopic  ttopic = pub0->mTportTopic;
-    sbfTportStream tstream = pub0->mTportStream;
-
-    sbfLog_debug ("removing %p", pub0);
-
-    TAILQ_REMOVE (&ttopic->mPubs, pub0, mEntry);
-    if (TAILQ_EMPTY (&ttopic->mPubs) && sbfTport_removeTopic (tstream, ttopic))
-    {
-        pthread_mutex_lock (&tport->mStreamsLock);
-        sbfTport_removeStream (tport, tstream);
-        pthread_mutex_unlock (&tport->mStreamsLock);
-    }
-
-    if (sbfRefCount_decrement (&pub0->mRefCount))
-        sbfPubFree (pub0);
+    if (pub0->mRemoved)
+        sbfPubRemoveEventCb (-1, 0, pub0);
 }
 
 static void
@@ -131,9 +167,11 @@ sbfPubSetStream (sbfPub pub)
     sbfTportStream tstream;
 
     pthread_mutex_lock (&tport->mStreamsLock);
+
     tstream = tport->mHandlerTable->mFindStream (tport->mHandler, pub->mTopic);
     if (tstream != NULL)
     {
+        /* We know the thread so can queue the add callback directly. */
         sbfMw_enqueue (tstream->mThread,
                        &pub->mEventAdd,
                        sbfPubAddEventCb,
@@ -141,12 +179,24 @@ sbfPubSetStream (sbfPub pub)
     }
     else
     {
+        /*
+         * We don't know the thread so we need to create the stream first. The
+         * AddStreamComplete callback fires on the right thread and finishes
+         * the work on this pub.
+         */
         tstream = sbfTport_addStream (tport,
                                       pub->mTopic,
                                       sbfPubAddStreamCompleteCb,
                                       pub);
     }
+
+    /*
+     * Take a reference to the stream to prevent it going away even if the
+     * number of topics hits zero.
+     */
     pub->mTportStream = tstream;
+    sbfRefCount_increment (&tstream->mRefCount);
+
     pthread_mutex_unlock (&tport->mStreamsLock);
 }
 

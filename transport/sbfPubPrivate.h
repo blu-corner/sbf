@@ -13,6 +13,7 @@ struct sbfPubImpl
     sbfTopic                   mTopic;
 
     int                        mDestroyed;
+    int                        mRemoved;
     sbfRefCount                mRefCount;
 
     int                        mReady;

@@ -14,6 +14,7 @@ struct sbfSubImpl
     u_int                      mWeight;
 
     int                        mDestroyed;
+    int                        mRemoved;
     sbfRefCount                mRefCount;
 
     int                        mReady;

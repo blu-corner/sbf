@@ -57,6 +57,7 @@ struct sbfTportStreamImpl
 
     sbfHandlerStream                 mStream;
 
+    sbfRefCount                      mRefCount;
     int                              mReady;  /* event thread only */
     sbfTportTopicTree                mTopics; /* event thread only */
 
@@ -121,6 +122,7 @@ sbfTport_addTopic (sbfTportStream tstream, const char* topic)
     TAILQ_INIT (&ttopic->mSubs);
 
     RB_INSERT (sbfTportTopicTreeImpl, &tstream->mTopics, ttopic);
+    sbfRefCount_increment (&tstream->mRefCount);
     return ttopic;
 }
 
@@ -134,7 +136,7 @@ sbfTport_removeTopic (sbfTportStream tstream, sbfTportTopic ttopic)
     free ((void*)ttopic->mTopic);
     free (ttopic);
 
-    return RB_EMPTY (&tstream->mTopics);
+    return sbfRefCount_decrement (&tstream->mRefCount);
 }
 
 static inline sbfTportStream
@@ -150,6 +152,8 @@ sbfTport_addStream (sbfTport tport,
     tstream->mThread = sbfTport_nextThread (tport);
 
     sbfLog_debug ("adding stream %p", tstream);
+
+    sbfRefCount_init (&tstream->mRefCount, 0);
 
     tstream->mReady = 0;
     RB_INIT (&tstream->mTopics);
