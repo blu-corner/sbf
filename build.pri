@@ -46,6 +46,8 @@ unix {
         -Wpointer-arith \
         -Wsign-compare \
         -Wwrite-strings
+    #QMAKE_CFLAGS_DEBUG += \
+    #    -O0
     QMAKE_LFLAGS += \
 	-pthread \
     	-Wl,--no-as-needed
