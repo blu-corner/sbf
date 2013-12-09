@@ -11,7 +11,7 @@ sbfUdpMulticast_create (sbfUdpMulticastType type,
     struct in_addr  ia;
     struct ip_mreq  im;
 
-    s = xmalloc (sizeof *s);
+    s = xcalloc (1, sizeof *s);
     s->mType = type;
     s->mPool = sbfBuffer_createPool (SBF_UDP_MULTICAST_SIZE_LIMIT);
 

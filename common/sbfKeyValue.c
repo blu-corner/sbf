@@ -12,7 +12,7 @@ sbfKeyValue_create (void)
 {
     sbfKeyValue table;
 
-    table = xmalloc (sizeof *table);
+    table = xcalloc (1, sizeof *table);
     RB_INIT (&table->mTree);
 
     return table;

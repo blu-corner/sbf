@@ -160,7 +160,7 @@ sbfUdpHandlerCreate (sbfTport tport, sbfKeyValue properties)
     second = (bits / 6) * 1;
     third = bits - first - second;
 
-    uh = xmalloc (sizeof *uh);
+    uh = xcalloc (1, sizeof *uh);
     RB_INIT (&uh->mTree);
     uh->mPool = sbfPool_create (65536);
 
@@ -232,7 +232,7 @@ sbfUdpHandlerAddStream (sbfHandler handler,
     sbfUdpHandlerStream uhs;
     char                tmp[INET_ADDRSTRLEN];
 
-    uhs = xmalloc (sizeof *uhs);
+    uhs = xcalloc (1, sizeof *uhs);
     uhs->mParent = uh;
 
     uhs->mThread = thread;
