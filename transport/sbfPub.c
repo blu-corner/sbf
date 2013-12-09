@@ -71,7 +71,12 @@ sbfPubRemoveEventCb (int fd, short events, void* closure)
     if (TAILQ_EMPTY (&ttopic->mPubs) && sbfTport_removeTopic (tstream, ttopic))
     {
         pthread_mutex_lock (&tport->mStreamsLock);
-        sbfTport_removeStream (tport, tstream);
+        /*
+         * Reference count could be bumped between removeTopic (outside the
+         * lock) and here.
+         */
+        if (sbfRefCount_get (&tstream->mRefCount) == 0)
+            sbfTport_removeStream (tport, tstream);
         pthread_mutex_unlock (&tport->mStreamsLock);
     }
 

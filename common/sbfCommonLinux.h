@@ -13,6 +13,7 @@
 
 #include <netinet/in.h>
 
+#include <assert.h>
 #include <ctype.h>
 #include <dlfcn.h>
 #include <errno.h>

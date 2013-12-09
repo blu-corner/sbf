@@ -129,14 +129,18 @@ sbfTport_addTopic (sbfTportStream tstream, const char* topic)
 static inline int
 sbfTport_removeTopic (sbfTportStream tstream, sbfTportTopic ttopic)
 {
+    u_int empty;
+
     sbfLog_debug ("removing topic %p", ttopic);
 
+    empty = sbfRefCount_decrement (&tstream->mRefCount);
     RB_REMOVE (sbfTportTopicTreeImpl, &tstream->mTopics, ttopic);
+    assert (!empty || RB_EMPTY (&tstream->mTopics));
 
     free ((void*)ttopic->mTopic);
     free (ttopic);
 
-    return sbfRefCount_decrement (&tstream->mRefCount);
+    return empty;
 }
 
 static inline sbfTportStream
