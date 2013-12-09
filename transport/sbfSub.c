@@ -57,7 +57,7 @@ sbfSubRemoveEventCb (int fd, short events, void* closure)
     {
         pthread_mutex_lock (&tport->mStreamsLock);
         /*
-         * Reference count could be bumped betwen removeTopic (outside the
+         * Reference count could be bumped between removeTopic (outside the
          * lock) and here.
          */
         if (sbfRefCount_get (&tstream->mRefCount) == 0)
