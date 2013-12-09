@@ -202,6 +202,7 @@ sbfUdpHandlerFindStream (sbfHandler handler, sbfTopic topic)
     sbfUdpHandler                  uh = handler;
     struct sbfUdpHandlerStreamImpl impl;
     sbfUdpHandlerStream            uhs;
+    char                           tmp[INET_ADDRSTRLEN];
 
     impl.mType = sbfTopic_getType (topic);
     impl.mAddress = sbfUdpHandlerMakeAddress (uh, topic);
@@ -209,6 +210,13 @@ sbfUdpHandlerFindStream (sbfHandler handler, sbfTopic topic)
     uhs = RB_FIND (sbfUdpHandlerStreamTreeImpl, &uh->mTree, &impl);
     if (uhs == NULL)
         return NULL;
+
+    inet_ntop (AF_INET, &uhs->mAddress, tmp, sizeof tmp);
+    sbfLog_debug ("found stream %p, address %s (for topic %s)",
+                  uhs,
+                  tmp,
+                  sbfTopic_getTopic (topic));
+
     return uhs->mHandle;
 }
 
@@ -234,7 +242,10 @@ sbfUdpHandlerAddStream (sbfHandler handler,
     uhs->mAddress = sbfUdpHandlerMakeAddress (uh, topic);
 
     inet_ntop (AF_INET, &uhs->mAddress, tmp, sizeof tmp);
-    sbfLog_debug ("add stream %p, address %s", uhs, tmp);
+    sbfLog_debug ("adding stream %p, address %s (for topic %s)",
+                  uhs,
+                  tmp,
+                  sbfTopic_getTopic (topic));
 
     RB_INSERT (sbfUdpHandlerStreamTreeImpl, &uh->mTree, uhs);
 
@@ -259,7 +270,7 @@ sbfUdpHandlerRemoveStream (sbfHandlerStream stream)
     char                tmp[INET_ADDRSTRLEN];
 
     inet_ntop (AF_INET, &uhs->mAddress, tmp, sizeof tmp);
-    sbfLog_debug ("remove stream %p, address %s", uhs, tmp);
+    sbfLog_debug ("removing stream %p, address %s", uhs, tmp);
 
     if (uhs->mType == SBF_TOPIC_SUB)
         event_del (&uhs->mEventListen);
