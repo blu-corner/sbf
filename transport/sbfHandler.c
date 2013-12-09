@@ -53,8 +53,19 @@ sbfHandler_message (sbfHandlerHandle handle, sbfBuffer buffer)
     sbfBuffer_setData (buffer, (char*)(hdr + 1) + hdr->mTopicSize);
     sbfBuffer_setSize (buffer, hdr->mSize);
 
-    TAILQ_FOREACH (sub, &ttopic->mSubs, mEntry)
+    if (ttopic->mNext == NULL)
+        ttopic->mNext = TAILQ_FIRST (&ttopic->mSubs);
+    sub = ttopic->mNext;
+    do
+    {
         sbfSub_message (sub, buffer);
+
+        sub = TAILQ_NEXT (sub, mEntry);
+        if (sub == NULL)
+            sub = TAILQ_FIRST (&ttopic->mSubs);
+    }
+    while (sub != ttopic->mNext);
+    ttopic->mNext = TAILQ_NEXT (sub, mEntry);
 
     return;
 

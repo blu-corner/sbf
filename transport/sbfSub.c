@@ -88,6 +88,8 @@ sbfSubRemoveEventCb (int fd, short events, void* closure)
 
     sbfLog_debug ("removing %p", sub0);
 
+    if (ttopic->mNext == sub0)
+        ttopic->mNext = TAILQ_NEXT (sub0, mEntry);
     TAILQ_REMOVE (&ttopic->mSubs, sub0, mEntry);
     if (TAILQ_EMPTY (&ttopic->mSubs) && sbfTport_removeTopic (tstream, ttopic))
     {

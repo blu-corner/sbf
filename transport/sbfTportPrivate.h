@@ -31,6 +31,8 @@ struct sbfTportTopicImpl
     TAILQ_HEAD (, sbfPubImpl)    mPubs;  /* event thread only */
     TAILQ_HEAD (, sbfSubImpl)    mSubs;  /* event thread only */
 
+    sbfSub                       mNext;
+
     RB_ENTRY (sbfTportTopicImpl) mTreeEntry;
 };
 typedef struct sbfTportTopicImpl* sbfTportTopic;
