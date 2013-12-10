@@ -18,8 +18,8 @@ typedef void (*sbfEventCb) (sbfEvent event, int events, void* closure);
 /*
  * Events is one or both of SBF_EVENT_READ and SBF_EVENT_WRITE.
  */
-sbfEvent sbfEvent_create (struct sbfMwThreadImpl* t,
-                          struct sbfQueueImpl* q,
+sbfEvent sbfEvent_create (struct sbfMwThreadImpl* thread,
+                          struct sbfQueueImpl* queue,
                           sbfEventCb cb,
                           void* closure,
                           int descriptor,

@@ -16,6 +16,8 @@ HEADERS += \
     sbfMemory.h \
     sbfPool.h \
     sbfUdpMulticast.h \
+    sbfTcpConnection.h \
+    sbfTcpListener.h \
     sbfVersion.h
 SOURCES += \
     sbfBuffer.c \
@@ -26,6 +28,8 @@ SOURCES += \
     sbfLog.c \
     sbfMemory.c \
     sbfPool.c \
+    sbfTcpConnection.c \
+    sbfTcpListener.c \
     sbfUdpMulticast.c
 unix {
     HEADERS += sbfCommonLinux.h
@@ -50,6 +54,8 @@ install_headers.files = \
     sbfPool.h \
     sbfPoolInline.h \
     sbfRefCount.h \
+    sbfTcpConnection.h \
+    sbfTcpListener.h \
     sbfUdpMulticast.h \
     sbfVersion.h \
     syshash.h \

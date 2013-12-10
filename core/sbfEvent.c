@@ -9,7 +9,7 @@ static void
 sbfEventQueueCb (sbfQueueItem item, void* closure)
 {
     sbfEvent event = closure;
-    int        events;
+    int      events;
 
     if (!event->mDestroyed)
     {

@@ -5,6 +5,7 @@
 
 #include <event.h>
 #include <event2/thread.h>
+#include <event2/listener.h>
 
 SBF_BEGIN_DECLS
 

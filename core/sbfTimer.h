@@ -12,8 +12,8 @@ typedef struct sbfTimerImpl* sbfTimer;
 
 typedef void (*sbfTimerCb) (sbfTimer timer, void* closure);
 
-sbfTimer sbfTimer_create (struct sbfMwThreadImpl* t,
-                          struct sbfQueueImpl* q,
+sbfTimer sbfTimer_create (struct sbfMwThreadImpl* thread,
+                          struct sbfQueueImpl* queue,
                           sbfTimerCb cb,
                           void* closure,
                           double interval);
