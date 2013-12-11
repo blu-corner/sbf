@@ -46,8 +46,13 @@ sbfMw_create (u_int threads)
     sbfLog_info ("this is version " SBF_VERSION);
     sbfLog_debug ("creating %p, using %u threads", mw, threads);
 
+#ifdef WIN32
+    if (evthread_use_windows_threads() != 0)
+        SBF_FATAL ("event_use_windows_threads failed");
+#else
     if (evthread_use_pthreads () != 0)
         SBF_FATAL ("event_use_pthreads failed");
+#endif
 
     ec = event_config_new ();
     event_config_set_flag (ec, EVENT_BASE_FLAG_EPOLL_USE_CHANGELIST);
@@ -126,7 +131,7 @@ sbfMw_getThreadIndex (sbfMwThread thread)
 uint64_t
 sbfMw_getThreadMask (sbfMwThread thread)
 {
-    return 1 << thread->mIndex;
+    return 1ULL << thread->mIndex;
 }
 
 struct event_base*

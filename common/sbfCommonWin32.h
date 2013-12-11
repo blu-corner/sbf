@@ -39,6 +39,14 @@ int pthread_create (pthread_t* thread,
                     void* unused,
                     void* (*cb) (void*),
                     void* closure);
+#define pthread_join(t, v) WaitForSingleObject (t, INFINITE)
+
+typedef CONDITION_VARIABLE pthread_cond_t;
+#define pthread_cond_init(c, a) InitializeConditionVariable (c)
+#define pthread_cond_destroy(c)
+#define pthread_cond_wait(c, m) SleepConditionVariableCS (c, m, INFINITE)
+#define pthread_cond_broadcast(c) WakeAllConditionVariable (c)
+#define pthread_cond_signal(c) WakeConditionVariable (c)
 
 typedef CRITICAL_SECTION pthread_mutex_t;
 #define pthread_mutex_init(m, a) InitializeCriticalSection (m)
