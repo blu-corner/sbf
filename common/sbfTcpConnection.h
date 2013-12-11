@@ -8,11 +8,10 @@ SBF_BEGIN_DECLS
 
 struct sbfMwThreadImpl;
 struct sbfQueueImpl;
-struct sbfTcpListenerImpl;
 
 typedef struct sbfTcpConnectionImpl* sbfTcpConnection;
 
-/* Read callback returns how much of buffer was used. */
+/* Read callback should return how much of buffer was used. */
 typedef void (*sbfTcpConnectionReadyCb) (sbfTcpConnection tc, void* closure);
 typedef size_t (*sbfTcpConnectionReadCb) (sbfTcpConnection tc,
                                           sbfBuffer buffer,
@@ -20,17 +19,19 @@ typedef size_t (*sbfTcpConnectionReadCb) (sbfTcpConnection tc,
 
 sbfTcpConnection sbfTcpConnection_create (struct sbfMwThreadImpl* thread,
                                           struct sbfQueueImpl* queue,
-                                          struct sockaddr_in* address,
+                                          const char* address,
+                                          uint16_t port,
                                           sbfTcpConnectionReadyCb readyCb,
                                           sbfTcpConnectionReadCb readCb,
                                           void* closure);
 void sbfTcpConnection_destroy (sbfTcpConnection tc);
 
-void sbfTcpConnection_accept (struct sbfTcpListenerImpl* tl,
-                              sbfTcpConnection tc,
-                              sbfTcpConnectionReadyCb readyCb,
-                              sbfTcpConnectionReadCb readCb,
-                              void* closure);
+sbfError sbfTcpConnection_accept (sbfTcpConnection tc,
+                                  struct sbfMwThreadImpl* thread,
+                                  struct sbfQueueImpl* queue,
+                                  sbfTcpConnectionReadyCb readyCb,
+                                  sbfTcpConnectionReadCb readCb,
+                                  void* closure);
 
 void sbfTcpConnection_send (sbfTcpConnection tc, void* data, size_t size);
 void sbfTcpConnection_sendBuffer(sbfTcpConnection tc, sbfBuffer buffer);

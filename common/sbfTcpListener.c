@@ -105,7 +105,8 @@ sbfTcpListener_destroy (sbfTcpListener tl)
     sbfLog_debug ("destroying %p", tl);
 
     tl->mDestroyed = 1;
-    evconnlistener_free (tl->mListener);
+    if (tl->mListener != NULL)
+        evconnlistener_free (tl->mListener);
 
     if (sbfRefCount_decrement (&tl->mRefCount))
         free (tl);
