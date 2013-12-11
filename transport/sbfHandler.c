@@ -6,24 +6,40 @@ sbfHandler_load (const char* type)
 {
     char             path[PATH_MAX];
     char             symbol[128];
+#ifdef WIN32
+    HMODULE          handle;
+#else
     void*            handle;
+#endif
     sbfHandlerTable* table;
 
     sbfLog_info ("loading handler %s", type);
 
     snprintf (path, sizeof path, "libsbf%shandler.so", type);
+#ifdef WIN32
+    handle = LoadLibrary (path);
+#else
     handle = dlopen (path, RTLD_NOW|RTLD_LOCAL);
+#endif
     if (handle == NULL)
         goto fail;
 
     snprintf (symbol, sizeof symbol, "sbf_%s_handler", type);
+#ifdef WIN32
+    table = (sbfHandlerTable*)GetProcAddress (handle, symbol);
+#else
     table = dlsym (handle, symbol);
+#endif
     if (table == NULL)
         goto fail;
     return table;
 
 fail:
+#ifdef WIN32
+    sbfLog_err ("failed to open %s", path);
+#else
     sbfLog_err ("failed to open %s: %s", path, dlerror ());
+#endif
     return NULL;
 }
 

@@ -58,6 +58,7 @@ unix {
 
 windows {
     CONFIG += staticlib
+    DEFINES -= UNICODE
 
     INCLUDEPATH += \
         $$top_src/thirdparty/win32/libevent/include \
