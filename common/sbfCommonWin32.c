@@ -69,7 +69,7 @@ vasprintf (char** ret, const char* fmt, va_list ap)
     int      n;
     va_list  ap2;
 
-    va_copy (ap2, ap);
+    ap2 = ap; /* va_copy (ap2, ap); */
 
     if ((n = vsnprintf (NULL, 0, fmt, ap)) < 0)
         goto error;

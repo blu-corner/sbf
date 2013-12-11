@@ -37,7 +37,7 @@ unix {
 }
 windows {
     HEADERS += sbfCommonWin32.h
-    SOURCES += sbfCommonWin32.c
+    SOURCES += sbfCommonWin32.c getopt.c
 }
 
 install_headers.path = $$top_build/include

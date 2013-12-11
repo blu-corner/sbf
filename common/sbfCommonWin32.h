@@ -79,6 +79,19 @@ int gettimeofday (struct timeval* tv, struct timezone* tz);
 int asprintf(char** ret, const char* fmt, ...);
 int vasprintf(char** ret, const char* fmt, va_list ap);
 
+extern int   BSDopterr;
+extern int   BSDoptind;
+extern int   BSDoptopt;
+extern int   BSDoptreset;
+extern char* BSDoptarg;
+int     BSDgetopt(int, char* const*, const char*);
+#define getopt(ac, av, o) BSDgetopt(ac, av, o)
+#define opterr            BSDopterr
+#define optind            BSDoptind
+#define optopt            BSDoptopt
+#define optreset          BSDoptreset
+#define optarg            BSDoptarg
+
 SBF_END_DECLS
 
 #endif /* _SBF_COMMON_WIN32_H_ */

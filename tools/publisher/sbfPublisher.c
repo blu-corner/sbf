@@ -52,7 +52,7 @@ main (int argc, char** argv)
     const char* topic = "OUT";
     uint64_t    rate = 1000;
     const char* handler = "udp";
-    const char* interface = "eth0";
+    const char* interf = "eth0";
     size_t      size = 200;
     uint64_t*   payload;
 
@@ -64,7 +64,7 @@ main (int argc, char** argv)
             handler = optarg;
             break;
         case 'i':
-            interface = optarg;
+            interf = optarg;
             break;
         case 'r':
             rate = strtoull (optarg, NULL, 10);
@@ -94,7 +94,7 @@ main (int argc, char** argv)
     pthread_create (&t, NULL, dispatchCb, queue);
 
     properties = sbfKeyValue_create ();
-    sbfKeyValue_put (properties, "interface", interface);
+    sbfKeyValue_put (properties, "interface", interf);
 
     tport = sbfTport_create (mw, SBF_MW_ALL_THREADS, handler, properties);
 
