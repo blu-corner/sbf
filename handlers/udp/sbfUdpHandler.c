@@ -122,7 +122,7 @@ sbfUdpHandlerCreate (sbfTport tport, sbfKeyValue properties)
 {
     sbfUdpHandler uh;
     const char*   s;
-    uint32_t      interface;
+    uint32_t      interf;
     uint32_t      range;
     u_int         bits;
     u_int         first;
@@ -133,8 +133,8 @@ sbfUdpHandlerCreate (sbfTport tport, sbfKeyValue properties)
     s = sbfKeyValue_get (properties, "interface");
     if (s == NULL)
         s = "eth0";
-    interface = sbfInterface_find (s);
-    if (interface == 0)
+    interf = sbfInterface_find (s);
+    if (interf == 0)
     {
         sbfLog_err ("couldn't get interface: %s", s);
         return NULL;
@@ -164,7 +164,7 @@ sbfUdpHandlerCreate (sbfTport tport, sbfKeyValue properties)
     RB_INIT (&uh->mTree);
     uh->mPool = sbfPool_create (65536);
 
-    uh->mInterface = interface;
+    uh->mInterface = interf;
     uh->mBase = range;
 
     uh->mFirstSize = 1 + ~(0xffffffffU << first);
