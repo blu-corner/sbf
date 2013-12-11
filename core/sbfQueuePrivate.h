@@ -23,8 +23,8 @@ struct sbfQueueItemImpl
 
 struct sbfQueueImpl
 {
-    pthread_mutex_t                 mMutex;
-    pthread_cond_t                  mCond;
+    sbfMutex                        mMutex;
+    sbfCondVar                      mCondVar;
 
     int                             mDestroyed;
     sbfRefCount                     mRefCount;

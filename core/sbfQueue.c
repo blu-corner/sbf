@@ -13,8 +13,8 @@ sbfQueue_create (int flags)
     queue->mDestroyed = 0;
     sbfRefCount_init (&queue->mRefCount, 1);
 
-    pthread_mutex_init (&queue->mMutex, NULL);
-    pthread_cond_init (&queue->mCond, NULL);
+    sbfMutex_init (&queue->mMutex);
+    sbfCondVar_init (&queue->mCondVar);
 
     sbfLog_debug ("creating %p", queue);
 
@@ -27,7 +27,7 @@ sbfQueue_destroy (sbfQueue queue)
     sbfLog_debug ("destroying %p", queue);
 
     queue->mDestroyed = 1;
-    pthread_cond_broadcast (&queue->mCond);
+    sbfCondVar_broadcast (&queue->mCondVar);
 
     sbfQueue_removeRef (queue);
 }
@@ -53,8 +53,8 @@ sbfQueue_removeRef (sbfQueue queue)
         sbfPool_put (item);
     }
 
-    pthread_cond_destroy (&queue->mCond);
-    pthread_mutex_destroy (&queue->mMutex);
+    sbfCondVar_destroy (&queue->mCondVar);
+    sbfMutex_destroy (&queue->mMutex);
 
     sbfPool_destroy (queue->mPool);
     free (queue);
@@ -87,13 +87,13 @@ sbfQueue_dispatch (sbfQueue queue)
     {
         item = NULL;
 
-        pthread_mutex_lock (&queue->mMutex);
+        sbfMutex_lock (&queue->mMutex);
         while (!queue->mDestroyed &&
                (item = TAILQ_FIRST (&queue->mItems)) == NULL)
-            pthread_cond_wait (&queue->mCond, &queue->mMutex);
+            sbfCondVar_wait (&queue->mCondVar, &queue->mMutex);
         if (item != NULL)
             TAILQ_REMOVE (&queue->mItems, item, mEntry);
-        pthread_mutex_unlock (&queue->mMutex);
+        sbfMutex_unlock (&queue->mMutex);
 
         if (item != NULL)
         {
@@ -120,10 +120,10 @@ sbfQueue_getItem (sbfQueue queue, sbfQueueCb cb, void* closure)
 void
 sbfQueue_enqueueItem (sbfQueue queue, sbfQueueItem item)
 {
-    pthread_mutex_lock (&queue->mMutex);
+    sbfMutex_lock (&queue->mMutex);
     TAILQ_INSERT_TAIL (&queue->mItems, item, mEntry);
-    pthread_cond_signal (&queue->mCond);
-    pthread_mutex_unlock (&queue->mMutex);
+    sbfCondVar_signal (&queue->mCondVar);
+    sbfMutex_unlock (&queue->mMutex);
 }
 
 void*

@@ -19,8 +19,8 @@ sbfSubEnsureStream (sbfSub sub)
          * Take and release lock to synchronize AddStream return being copied
          * into the member.
          */
-        pthread_mutex_lock (&tport->mStreamsLock);
-        pthread_mutex_unlock (&tport->mStreamsLock);
+        sbfMutex_lock (&tport->mStreamsLock);
+        sbfMutex_unlock (&tport->mStreamsLock);
     }
     return sub->mTportStream;
 }
@@ -55,14 +55,14 @@ sbfSubRemoveEventCb (int fd, short events, void* closure)
     TAILQ_REMOVE (&ttopic->mSubs, sub0, mEntry);
     if (TAILQ_EMPTY (&ttopic->mSubs) && sbfTport_removeTopic (tstream, ttopic))
     {
-        pthread_mutex_lock (&tport->mStreamsLock);
+        sbfMutex_lock (&tport->mStreamsLock);
         /*
          * Reference count could be bumped between removeTopic (outside the
          * lock) and here.
          */
         if (sbfRefCount_get (&tstream->mRefCount) == 0)
             sbfTport_removeStream (tport, tstream);
-        pthread_mutex_unlock (&tport->mStreamsLock);
+        sbfMutex_unlock (&tport->mStreamsLock);
     }
 
     if (sbfRefCount_decrement (&sub0->mRefCount))
@@ -156,7 +156,7 @@ sbfSubSetStream (sbfSub sub)
     sbfTport       tport = sub->mTport;
     sbfTportStream tstream;
 
-    pthread_mutex_lock (&tport->mStreamsLock);
+    sbfMutex_lock (&tport->mStreamsLock);
 
     tstream = tport->mHandlerTable->mFindStream (tport->mHandler, sub->mTopic);
     if (tstream != NULL)
@@ -188,7 +188,7 @@ sbfSubSetStream (sbfSub sub)
     sbfRefCount_increment (&tstream->mRefCount);
 
     sbfTport_adjustWeight (tport, tstream->mThread, sub->mWeight);
-    pthread_mutex_unlock (&tport->mStreamsLock);
+    sbfMutex_unlock (&tport->mStreamsLock);
 }
 
 static void

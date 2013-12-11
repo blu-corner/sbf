@@ -41,31 +41,28 @@ typedef intptr_t sbfSocket;
 
 #define SBF_ASSERT(x) assert (x)
 
-typedef HANDLE pthread_t;
-int pthread_create (pthread_t* thread,
-                    void* unused,
-                    void* (*cb) (void*),
-                    void* closure);
-#define pthread_join(t, v) WaitForSingleObject (t, INFINITE)
+typedef HANDLE sbfThread;
+int sbfThread_create (sbdThread* thread, void* (*cb) (void*), void* closure);
+#define sbfThread_join(t) WaitForSingleObject (t, INFINITE)
 
-typedef CONDITION_VARIABLE pthread_cond_t;
-#define pthread_cond_init(c, a) InitializeConditionVariable (c)
-#define pthread_cond_destroy(c)
-#define pthread_cond_wait(c, m) SleepConditionVariableCS (c, m, INFINITE)
-#define pthread_cond_broadcast(c) WakeAllConditionVariable (c)
-#define pthread_cond_signal(c) WakeConditionVariable (c)
+typedef CONDITION_VARIABLE sbfCondVar;
+#define sbfCondVar_init(c) InitializeConditionVariable (c)
+#define sbfCondVar_destroy(c)
+#define sbfCondVar_wait(c, m) SleepConditionVariableCS (c, m, INFINITE)
+#define sbfCondVar_broadcast(c) WakeAllConditionVariable (c)
+#define sbfCondVar_signal(c) WakeConditionVariable (c)
 
-typedef CRITICAL_SECTION pthread_mutex_t;
-#define pthread_mutex_init(m, a) InitializeCriticalSection (m)
-#define pthread_mutex_destroy(m) DeleteCriticalSection (m)
-#define pthread_mutex_lock(m) EnterCriticalSection (m)
-#define pthread_mutex_unlock(m) LeaveCriticalSection (m)
+typedef CRITICAL_SECTION sbfMutex;
+#define sbfMutex_init(m, r) InitializeCriticalSection (m)
+#define sbfMutex_destroy(m) DeleteCriticalSection (m)
+#define sbfMutex_lock(m) EnterCriticalSection (m)
+#define sbfMutex_unlock(m) LeaveCriticalSection (m)
 
-#define pthread_spinlock_t pthread_mutex_t
-#define pthread_spin_init pthread_mutex_init
-#define pthread_spin_destroy pthread_mutex_destroy
-#define pthread_spin_lock pthread_mutex_lock
-#define pthread_spin_unlock pthread_mutex_unlock
+#define sbfSpinLock sbfMutex
+#define sbfSpinLock_init sbfMutex_init
+#define sbfSpinLock_destroy sbfMutex_destroy
+#define sbfSpinLock_lock sbfMutex_lock
+#define sbfSpinLock_unlock sbfMutex_unlock
 
 #define snprintf _snprintf
 #define strcasecmp _stricmp

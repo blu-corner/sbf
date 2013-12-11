@@ -14,7 +14,7 @@ struct sbfPoolImpl
     size_t                         mItemSize;
     size_t                         mSize;
 
-    pthread_spinlock_t             mLock;
+    sbfSpinLock                    mLock;
     SLIST_HEAD (, sbfPoolItemImpl) mList;
 };
 
@@ -50,15 +50,15 @@ sbfPool_get (sbfPool pool)
 {
     sbfPoolItem item;
 
-    pthread_spin_lock (&pool->mLock);
+    sbfSpinLock_lock (&pool->mLock);
     item = SLIST_FIRST (&pool->mList);
     if (item != NULL)
     {
         SLIST_REMOVE_HEAD (&pool->mList, mEntry);
-        pthread_spin_unlock (&pool->mLock);
+        sbfSpinLock_unlock (&pool->mLock);
         return item + 1;
     }
-    pthread_spin_unlock (&pool->mLock);
+    sbfSpinLock_unlock (&pool->mLock);
     return sbfPoolNew (pool) + 1;
 }
 
@@ -67,16 +67,16 @@ sbfPool_getZero (sbfPool pool)
 {
     sbfPoolItem item;
 
-    pthread_spin_lock (&pool->mLock);
+    sbfSpinLock_lock (&pool->mLock);
     item = SLIST_FIRST (&pool->mList);
     if (item != NULL)
     {
         SLIST_REMOVE_HEAD (&pool->mList, mEntry);
-        pthread_spin_unlock (&pool->mLock);
+        sbfSpinLock_unlock (&pool->mLock);
         memset (item + 1, 0, pool->mItemSize);
         return item + 1;
     }
-    pthread_spin_unlock (&pool->mLock);
+    sbfSpinLock_unlock (&pool->mLock);
     return sbfPoolNewZero (pool) + 1;
 }
 
@@ -86,7 +86,7 @@ sbfPool_put (void* data)
     sbfPoolItem item = (sbfPoolItem)data - 1;
     sbfPool     pool = item->mPool;
 
-    pthread_spin_lock (&pool->mLock);
+    sbfSpinLock_lock (&pool->mLock);
     SLIST_INSERT_HEAD (&pool->mList, item, mEntry);
-    pthread_spin_unlock (&pool->mLock);
+    sbfSpinLock_unlock (&pool->mLock);
 }

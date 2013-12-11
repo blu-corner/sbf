@@ -75,11 +75,10 @@ sbfMw_create (u_int threads)
                       thread);
         sbfMwEventBaseTimerCb (-1, 0, thread);
 
-        if (pthread_create (&thread->mThread,
-                            NULL,
-                            sbfMwEventBaseThreadCb,
-                            thread) != 0)
-            SBF_FATAL ("pthread_create failed");
+        if (sbfThread_create (&thread->mThread,
+                              sbfMwEventBaseThreadCb,
+                              thread) != 0)
+            SBF_FATAL ("sbfThread_create failed");
     }
 
     return mw;
@@ -100,7 +99,7 @@ sbfMw_destroy (sbfMw mw)
     }
     for (i = 0; i < mw->mNumThreads; i++)
     {
-        pthread_join (mw->mThreads[i].mThread, NULL);
+        sbfThread_join (mw->mThreads[i].mThread);
         event_base_free (mw->mThreads[i].mEventBase);
     }
     free (mw->mThreads);

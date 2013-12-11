@@ -16,7 +16,7 @@ sbfTportSecondDestroyStreamCb (int fd, short events, void* closure)
     sbfTportDestroyStreamClosure* closure0 = closure;
     sbfTport                      tport = closure0->mTport;
 
-    pthread_cond_broadcast (&tport->mStreamsCond);
+    sbfCondVar_broadcast (&tport->mStreamsCondVar);
 
     free (closure0);
 }
@@ -54,13 +54,13 @@ sbfTportFree (sbfTport tport)
 {
     u_int i;
 
-    pthread_cond_destroy (&tport->mStreamsCond);
-    pthread_mutex_destroy (&tport->mStreamsLock);
+    sbfCondVar_destroy (&tport->mStreamsCondVar);
+    sbfMutex_destroy (&tport->mStreamsLock);
 
     for (i = 0; i < tport->mWeightsListSize; i++)
         regfree (&tport->mWeightsList[i].mPattern);
     free (tport->mWeightsList);
-    pthread_mutex_destroy (&tport->mWeightsLock);
+    sbfMutex_destroy (&tport->mWeightsLock);
 
     sbfKeyValue_destroy (tport->mProperties);
 
@@ -95,12 +95,12 @@ sbfTport_create (sbfMw mw,
         mask = SBF_MW_ALL_THREADS;
     tport->mThreads = mask;
 
-    pthread_mutex_init (&tport->mWeightsLock, NULL);
+    sbfMutex_init (&tport->mWeightsLock);
     sbfTport_parseWeights (tport);
 
     TAILQ_INIT (&tport->mStreams);
-    pthread_mutex_init (&tport->mStreamsLock, NULL);
-    pthread_cond_init (&tport->mStreamsCond, NULL);
+    sbfMutex_init (&tport->mStreamsLock);
+    sbfCondVar_init (&tport->mStreamsCondVar);
 
     handler = table->mCreate (tport, tport->mProperties);
     if (handler == NULL)
@@ -123,7 +123,7 @@ sbfTport_destroy (sbfTport tport)
 
     sbfLog_debug ("destroying %p", tport);
 
-    pthread_mutex_lock (&tport->mStreamsLock);
+    sbfMutex_lock (&tport->mStreamsLock);
     TAILQ_FOREACH (tstream, &tport->mStreams, mEntry)
     {
         closure0 = xmalloc (sizeof *closure0);
@@ -139,9 +139,9 @@ sbfTport_destroy (sbfTport tport)
     while (!TAILQ_EMPTY (&tport->mStreams))
     {
         sbfLog_debug ("waiting for streams");
-        pthread_cond_wait (&tport->mStreamsCond, &tport->mStreamsLock);
+        sbfCondVar_wait (&tport->mStreamsCondVar, &tport->mStreamsLock);
     }
-    pthread_mutex_unlock (&tport->mStreamsLock);
+    sbfMutex_unlock (&tport->mStreamsLock);
 
     tport->mHandlerTable->mDestroy (tport->mHandler);
 

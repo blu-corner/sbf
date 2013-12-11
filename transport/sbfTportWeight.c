@@ -78,7 +78,7 @@ sbfTport_adjustWeight (sbfTport tport, sbfMwThread thread, int change)
 {
     u_int index;
 
-    pthread_mutex_lock (&tport->mWeightsLock);
+    sbfMutex_lock (&tport->mWeightsLock);
 
     index = sbfMw_getThreadIndex (thread);
     tport->mWeights[index] += change;
@@ -88,7 +88,7 @@ sbfTport_adjustWeight (sbfTport tport, sbfMwThread thread, int change)
                   tport->mWeights[index],
                   change);
 
-    pthread_mutex_unlock (&tport->mWeightsLock);
+    sbfMutex_unlock (&tport->mWeightsLock);
 }
 
 sbfMwThread
@@ -99,7 +99,7 @@ sbfTport_nextThread (sbfTport tport)
     u_int       weight;
     u_int       i;
 
-    pthread_mutex_lock (&tport->mWeightsLock);
+    sbfMutex_lock (&tport->mWeightsLock);
 
     found = NULL;
     weight = UINT_MAX;
@@ -117,6 +117,6 @@ sbfTport_nextThread (sbfTport tport)
         }
     }
 
-    pthread_mutex_unlock (&tport->mWeightsLock);
+    sbfMutex_unlock (&tport->mWeightsLock);
     return found;
 }

@@ -21,7 +21,7 @@ struct sbfMwThreadImpl
 
     struct event_base* mEventBase;
     struct event       mTimer;
-    pthread_t          mThread;
+    sbfThread          mThread;
 };
 
 SBF_END_DECLS

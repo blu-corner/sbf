@@ -62,7 +62,7 @@ struct sbfTportStreamImpl
     int                              mReady;  /* event thread only */
     sbfTportTopicTree                mTopics; /* event thread only */
 
-    pthread_mutex_t                  mSendLock;
+    sbfMutex                         mSendLock;
 
     TAILQ_ENTRY (sbfTportStreamImpl) mEntry;
 };
@@ -86,13 +86,13 @@ struct sbfTportImpl
     uint64_t                          mThreads;
 
     u_int                             mWeights[SBF_MW_THREAD_LIMIT];
-    pthread_mutex_t                   mWeightsLock;
+    sbfMutex                          mWeightsLock;
     u_int                             mWeightsListSize;
     sbfTportWeight*                   mWeightsList;
 
     TAILQ_HEAD (, sbfTportStreamImpl) mStreams;
-    pthread_mutex_t                   mStreamsLock;
-    pthread_cond_t                    mStreamsCond;
+    sbfMutex                          mStreamsLock;
+    sbfCondVar                        mStreamsCondVar;
 };
 
 void sbfTport_parseWeights (sbfTport tport);
@@ -163,7 +163,7 @@ sbfTport_addStream (sbfTport tport,
     tstream->mReady = 0;
     RB_INIT (&tstream->mTopics);
 
-    pthread_mutex_init (&tstream->mSendLock, NULL);
+    sbfMutex_init (&tstream->mSendLock);
 
     tstream->mStream = tport->mHandlerTable->mAddStream (tport->mHandler,
                                                          topic,
@@ -185,7 +185,7 @@ sbfTport_removeStream (sbfTport tport, sbfTportStream tstream)
 
     tport->mHandlerTable->mRemoveStream (tstream->mStream);
 
-    pthread_mutex_destroy (&tstream->mSendLock);
+    sbfMutex_destroy (&tstream->mSendLock);
     free (tstream);
 }
 

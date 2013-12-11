@@ -43,6 +43,29 @@ typedef int sbfSocket;
 
 #define SBF_ASSERT(x) assert (x)
 
+typedef pthread_t sbfThread;
+#define sbfThread_create(t, cb, closure) pthread_create (t, NULL, cb, closure)
+#define sbfThread_join(t) pthread_join (t, NULL)
+
+typedef pthread_cond_t sbfCondVar;
+#define sbfCondVar_init(c) pthread_cond_init (c, NULL)
+#define sbfCondVar_destroy(c) pthread_cond_destroy (c)
+#define sbfCondVar_wait(c, m) pthread_cond_wait (c, m)
+#define sbfCondVar_broadcast(c) pthread_cond_broadcast (c)
+#define sbfCondVar_signal(c) pthread_cond_signal (c)
+
+typedef pthread_mutex_t sbfMutex;
+#define sbfMutex_init(m) pthread_mutex_init (m, NULL)
+#define sbfMutex_destroy(m) pthread_mutex_destroy (m)
+#define sbfMutex_lock(m) pthread_mutex_lock (m)
+#define sbfMutex_unlock(m) pthread_mutex_unlock (m)
+
+typedef pthread_spinlock_t sbfSpinLock;
+#define sbfSpinLock_init(s) pthread_spin_init (s, 0)
+#define sbfSpinLock_destroy(s) pthread_spin_destroy (s)
+#define sbfSpinLock_lock(s) pthread_spin_lock (s)
+#define sbfSpinLock_unlock(s) pthread_spin_unlock (s)
+
 SBF_END_DECLS
 
 #endif /* _SBF_COMMON_LINUX_H_ */

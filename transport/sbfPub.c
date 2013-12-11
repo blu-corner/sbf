@@ -29,8 +29,8 @@ sbfPubEnsureStream (sbfPub pub)
          * Take and release lock to synchronize AddStream return being copied
          * into the member.
          */
-        pthread_mutex_lock (&tport->mStreamsLock);
-        pthread_mutex_unlock (&tport->mStreamsLock);
+        sbfMutex_lock (&tport->mStreamsLock);
+        sbfMutex_unlock (&tport->mStreamsLock);
     }
     return pub->mTportStream;
 }
@@ -70,14 +70,14 @@ sbfPubRemoveEventCb (int fd, short events, void* closure)
     TAILQ_REMOVE (&ttopic->mPubs, pub0, mEntry);
     if (TAILQ_EMPTY (&ttopic->mPubs) && sbfTport_removeTopic (tstream, ttopic))
     {
-        pthread_mutex_lock (&tport->mStreamsLock);
+        sbfMutex_lock (&tport->mStreamsLock);
         /*
          * Reference count could be bumped between removeTopic (outside the
          * lock) and here.
          */
         if (sbfRefCount_get (&tstream->mRefCount) == 0)
             sbfTport_removeStream (tport, tstream);
-        pthread_mutex_unlock (&tport->mStreamsLock);
+        sbfMutex_unlock (&tport->mStreamsLock);
     }
 
     if (sbfRefCount_decrement (&pub0->mRefCount))
@@ -171,7 +171,7 @@ sbfPubSetStream (sbfPub pub)
     sbfTport       tport = pub->mTport;
     sbfTportStream tstream;
 
-    pthread_mutex_lock (&tport->mStreamsLock);
+    sbfMutex_lock (&tport->mStreamsLock);
 
     tstream = tport->mHandlerTable->mFindStream (tport->mHandler, pub->mTopic);
     if (tstream != NULL)
@@ -202,7 +202,7 @@ sbfPubSetStream (sbfPub pub)
     pub->mTportStream = tstream;
     sbfRefCount_increment (&tstream->mRefCount);
 
-    pthread_mutex_unlock (&tport->mStreamsLock);
+    sbfMutex_unlock (&tport->mStreamsLock);
 }
 
 static void
@@ -337,9 +337,9 @@ sbfPub_sendBuffer (sbfPub pub, sbfBuffer buffer)
     sbfBuffer_setData (buffer, hdr);
     sbfBuffer_setSize (buffer, hdr->mSize + pub->mHeaderSize);
 
-    pthread_mutex_lock (&tstream->mSendLock);
+    sbfMutex_lock (&tstream->mSendLock);
     pub->mTport->mHandlerTable->mSendBuffer (tstream->mStream, buffer);
-    pthread_mutex_unlock (&tstream->mSendLock);
+    sbfMutex_unlock (&tstream->mSendLock);
 
     sbfBuffer_destroy (buffer);
 }

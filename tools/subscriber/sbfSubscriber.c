@@ -71,7 +71,7 @@ main (int argc, char** argv)
     const char* argv0 = argv[0];
     sbfMw       mw;
     sbfQueue    queue;
-    pthread_t   t;
+    sbfThread   t;
     sbfTport    tport;
     sbfKeyValue properties;
     int         opt;
@@ -107,7 +107,7 @@ main (int argc, char** argv)
     mw = sbfMw_create (1);
 
     queue = sbfQueue_create (0);
-    pthread_create (&t, NULL, dispatchCb, queue);
+    sbfThread_create (&t, dispatchCb, queue);
 
     properties = sbfKeyValue_create ();
     sbfKeyValue_put (properties, "interface", interf);

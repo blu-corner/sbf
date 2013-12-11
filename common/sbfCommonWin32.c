@@ -26,10 +26,7 @@ gettimeofday (struct timeval* tv, struct timezone* tz)
 }
 
 int
-pthread_create (pthread_t* thread,
-                void* unused,
-                void* (*cb) (void*),
-                void* closure)
+sbfThread_create (pthread_t* thread, void* (*cb) (void*), void* closure)
 {
     HANDLE                  h;
     sbfCommonThreadClosure* tc;
