@@ -3,13 +3,13 @@
 
 sbfUdpMulticast
 sbfUdpMulticast_create (sbfUdpMulticastType type,
-                        uint32_t interface,
+                        uint32_t interf,
                         struct sockaddr_in* address)
 {
-    sbfUdpMulticast s;
-    int             n = 1;
-    struct in_addr  ia;
-    struct ip_mreq  im;
+    sbfUdpMulticast    s;
+    struct in_addr     ia;
+    struct ip_mreq     im;
+    struct sockaddr_in sin;
 
     s = xcalloc (1, sizeof *s);
     s->mType = type;
@@ -21,35 +21,38 @@ sbfUdpMulticast_create (sbfUdpMulticastType type,
     s->mSocket = socket (AF_INET, SOCK_DGRAM, IPPROTO_UDP);
     if (s->mSocket < 0)
         goto fail;
-
-    if (setsockopt (s->mSocket, SOL_SOCKET, SO_REUSEADDR, &n, sizeof n) < 0)
-        goto fail;
-
-    if (bind (s->mSocket,
-              (struct sockaddr*)&s->mAddress,
-              sizeof s->mAddress) < 0)
-        goto fail;
+    evutil_make_socket_closeonexec (s->mSocket);
+    evutil_make_socket_nonblocking (s->mSocket);
 
     if (type == SBF_UDP_MULTICAST_SEND)
     {
         memset (&ia, 0, sizeof ia);
-        ia.s_addr = interface;
+        ia.s_addr = interf;
         if (setsockopt (s->mSocket,
                         IPPROTO_IP,
                         IP_MULTICAST_IF,
-                        &ia,
+                        (void*)&ia,
                         sizeof ia) < 0)
             goto fail;
     }
     else
     {
+        evutil_make_listen_socket_reuseable (s->mSocket);
+
+        memset (&sin, 0, sizeof sin);
+        sin.sin_family = AF_INET;
+        sin.sin_addr.s_addr = INADDR_ANY;
+        sin.sin_port = address->sin_port;
+        if (bind (s->mSocket, (struct sockaddr*)&sin, sizeof sin) < 0)
+            goto fail;
+
         memset (&im, 0, sizeof im);
         im.imr_multiaddr.s_addr = address->sin_addr.s_addr;
-        im.imr_interface.s_addr = interface;
+        im.imr_interface.s_addr = interf;
         if (setsockopt (s->mSocket,
                         IPPROTO_IP,
                         IP_ADD_MEMBERSHIP,
-                        &im,
+                        (void*)&im,
                         sizeof im) < 0)
             goto fail;
     }
@@ -65,7 +68,7 @@ void
 sbfUdpMulticast_destroy (sbfUdpMulticast s)
 {
     if (s->mSocket != -1)
-        sbfCloseSocket (s->mSocket);
+        EVUTIL_CLOSESOCKET (s->mSocket);
 
     sbfPool_destroy (s->mPool);
     free (s);
@@ -80,12 +83,16 @@ sbfUdpMulticast_getSocket (sbfUdpMulticast s)
 sbfError
 sbfUdpMulticast_send (sbfUdpMulticast s, const void* buf, size_t len)
 {
+#ifdef WIN32
+    int sent;
+#else
     ssize_t sent;
+#endif
 
     sent = sendto (s->mSocket,
                    buf,
                    len,
-                   MSG_DONTWAIT,
+                   0,
                    (struct sockaddr*)&s->mAddress,
                    sizeof s->mAddress);
     if (sent < 0)
@@ -114,7 +121,7 @@ sbfUdpMulticast_read (sbfUdpMulticast s,
         used = recv (s->mSocket,
                      sbfBuffer_getData (buffer),
                      sbfBuffer_getSize (buffer),
-                     MSG_DONTWAIT);
+                     0);
         if (used == 0)
             break;
         if (used == -1)

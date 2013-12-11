@@ -56,6 +56,9 @@ sbfTcpConnection_wrap (int s)
 {
     sbfTcpConnection tc;
 
+    evutil_make_socket_closeonexec (s);
+    evutil_make_socket_nonblocking (s);
+
     tc = xcalloc (1, sizeof *tc);
     tc->mSocket = s;
 
@@ -108,7 +111,7 @@ sbfTcpConnection_destroy (sbfTcpConnection tc)
     tc->mDestroyed = 1;
     if (tc->mEvent != NULL)
         bufferevent_free (tc->mEvent);
-    sbfCloseSocket (tc->mSocket);
+    EVUTIL_CLOSESOCKET (tc->mSocket);
 
     if (sbfRefCount_decrement (&tc->mRefCount))
         free (tc);

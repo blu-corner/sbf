@@ -51,15 +51,19 @@ unix {
     QMAKE_LFLAGS += \
 	-pthread \
     	-Wl,--no-as-needed
-    QMAKE_LIBS += \
+    LIBS += \
         -ldl \
         -lrt
 }
 
 windows {
+    CONFIG += staticlib
+
     INCLUDEPATH += \
         $$top_src/thirdparty/win32/libevent/include
 
     QMAKE_LIBDIR += \
         $$top_src/thirdparty/win32/libevent/lib
+    LIBS += \
+	libevent.lib
 }

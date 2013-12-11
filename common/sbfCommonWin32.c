@@ -25,12 +25,6 @@ gettimeofday (struct timeval* tv, struct timezone* tz)
     return evutil_gettimeofday (tv, tz);
 }
 
-void
-sbfCloseSocket (sbfSocket s)
-{
-    EVUTIL_CLOSESOCKET (s);
-}
-
 int
 pthread_create (pthread_t* thread,
                 void* unused,

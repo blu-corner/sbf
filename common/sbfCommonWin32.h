@@ -18,7 +18,6 @@
 SBF_BEGIN_DECLS
 
 typedef intptr_t sbfSocket;
-void sbfCloseSocket (sbfSocket s);
 
 #ifndef __func__
 #define __func__ __FUNCTION__

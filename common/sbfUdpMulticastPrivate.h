@@ -3,6 +3,8 @@
 
 SBF_BEGIN_DECLS
 
+#include <evutil.h>
+
 struct sbfUdpMulticastImpl
 {
     sbfUdpMulticastType mType;
