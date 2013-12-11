@@ -29,26 +29,16 @@
 #include <time.h>
 #include <unistd.h>
 
-#ifdef  __cplusplus
-#define SBF_BEGIN_DECLS extern "C" {
-#define SBF_END_DECLS }
-#else
-#define SBF_BEGIN_DECLS
-#define SBF_END_DECLS
-#endif
-
 SBF_BEGIN_DECLS
 
 #define SBF_PACKED(d) d __attribute__ ((__packed__))
 #define SBF_PRINTFLIKE(a, b) __attribute__ ((format (printf, a, b)))
+#define SBF_UNUSED __attribute__((__unused__))
 
 #define SBF_LIKELY(e) __builtin_expect (!!(e), 1)
 #define SBF_UNLIKELY(e) __builtin_expect (!!(e), 0)
 
-#define SBF_MIN(a, b) ((a) > (b) ? (b) : (a))
-#define SBF_MAX(a, b) ((a) < (b) ? (b) : (a))
-
-static inline uint64_t
+static __inline uint64_t
 sbfRdtsc (void)
 {
     uint32_t lo;

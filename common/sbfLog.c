@@ -11,9 +11,11 @@ sbfDefaultLogCb (sbfLogLevel level, const char* message, void* closure)
 {
     struct timeval tv;
     struct tm      tm;
+    time_t         t;
 
     gettimeofday (&tv, NULL);
-    gmtime_r (&tv.tv_sec, &tm);
+    t = tv.tv_sec;
+    gmtime_r (&t, &tm);
 
     fprintf (stderr,
              "%04u-%02u-%02u %02u:%02u:%02u.%06u %-5s %s\n",

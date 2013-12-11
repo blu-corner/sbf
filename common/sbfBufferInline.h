@@ -18,7 +18,7 @@ struct sbfBufferImpl
 
 extern sbfPool gSbfBufferDefaultPool;
 
-static inline sbfBuffer
+static __inline sbfBuffer
 sbfBuffer_new (sbfPool pool, size_t size)
 {
     sbfBuffer buffer;
@@ -47,7 +47,7 @@ sbfBuffer_new (sbfPool pool, size_t size)
     return buffer;
 }
 
-static inline sbfBuffer
+static __inline sbfBuffer
 sbfBuffer_newZero (sbfPool pool, size_t size)
 {
     sbfBuffer buffer;
@@ -58,7 +58,7 @@ sbfBuffer_newZero (sbfPool pool, size_t size)
     return buffer;
 }
 
-static inline sbfBuffer
+static __inline sbfBuffer
 sbfBuffer_wrap (void* data,
                 size_t size,
                 sbfBufferDestroyCb cb,
@@ -83,13 +83,13 @@ sbfBuffer_wrap (void* data,
     return buffer;
 }
 
-static inline void
+static __inline void
 sbfBuffer_addRef (sbfBuffer buffer)
 {
     sbfRefCount_increment (&buffer->mRefCount);
 }
 
-static inline void
+static __inline void
 sbfBuffer_destroy (sbfBuffer buffer)
 {
     if (!sbfRefCount_decrement (&buffer->mRefCount))
@@ -104,25 +104,25 @@ sbfBuffer_destroy (sbfBuffer buffer)
         sbfPool_put (buffer);
 }
 
-static inline void*
+static __inline void*
 sbfBuffer_getData (sbfBuffer buffer)
 {
     return buffer->mData;
 }
 
-static inline void
+static __inline void
 sbfBuffer_setData (sbfBuffer buffer, void* data)
 {
     buffer->mData = data;
 }
 
-static inline size_t
+static __inline size_t
 sbfBuffer_getSize (sbfBuffer buffer)
 {
     return buffer->mSize;
 }
 
-static inline void
+static __inline void
 sbfBuffer_setSize (sbfBuffer buffer, size_t size)
 {
     buffer->mSize = size;

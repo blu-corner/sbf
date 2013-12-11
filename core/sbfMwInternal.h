@@ -15,7 +15,7 @@ struct event_base* sbfMw_getThreadEventBase (sbfMwThread thread);
  * Add an event to a thread's event base. This uses event_active to preserve
  * the FIFO behaviour.
  */
-static inline void
+static __inline void
 sbfMw_enqueue (sbfMwThread thread,
                struct event* event,
                event_callback_fn cb,

@@ -5,26 +5,34 @@
 
 SBF_BEGIN_DECLS
 
-typedef struct { int mRefCount; } sbfRefCount;
+typedef struct { uint32_t mRefCount; } sbfRefCount;
 
 #define sbfRefCount_get(r) ((r)->mRefCount)
 
-static inline void
+static __inline void
 sbfRefCount_init (sbfRefCount* r, u_short n)
 {
     r->mRefCount = n;
 }
 
-static inline void
+static __inline void
 sbfRefCount_increment (sbfRefCount* r)
 {
+#ifdef WIN32
+    InterlockedIncrement (&r->mRefCount);
+#else
     __sync_fetch_and_add (&r->mRefCount, 1);
+#endif
 }
 
-static inline int
+static __inline int
 sbfRefCount_decrement (sbfRefCount* r)
 {
+#ifdef WIN32
+    return InterlockedDecrement (&r->mRefCount) == 0;
+#else
     return __sync_sub_and_fetch (&r->mRefCount, 1) == 0;
+#endif
 }
 
 SBF_END_DECLS

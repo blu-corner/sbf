@@ -10,11 +10,11 @@ typedef struct sbfPoolImpl* sbfPool;
 sbfPool sbfPool_create (size_t itemSize);
 void sbfPool_destroy (sbfPool pool);
 
-static inline size_t sbfPool_getItemSize (sbfPool pool);
+static __inline size_t sbfPool_getItemSize (sbfPool pool);
 
-static inline void* sbfPool_get (sbfPool pool);
-static inline void* sbfPool_getZero (sbfPool pool);
-static inline void sbfPool_put (void* data);
+static __inline void* sbfPool_get (sbfPool pool);
+static __inline void* sbfPool_getZero (sbfPool pool);
+static __inline void sbfPool_put (void* data);
 
 #include "sbfPoolInline.h"
 

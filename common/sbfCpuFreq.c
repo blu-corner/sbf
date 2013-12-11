@@ -2,6 +2,16 @@
 
 static uint64_t gSbfCpuFreq;
 
+#ifdef WIN32
+uint64_t
+sbfCpuFreq_get (void)
+{
+    LARGE_INTEGER f;
+
+    QueryPerformanceFrequency (&f);
+    return f.QuadPart;
+}
+#else
 uint64_t
 sbfCpuFreq_get (void)
 {
@@ -36,3 +46,4 @@ sbfCpuFreq_get (void)
         sbfFatal ("couldn't read CPU frequency");
     return gSbfCpuFreq;
 }
+#endif
