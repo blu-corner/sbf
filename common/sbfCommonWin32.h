@@ -3,6 +3,7 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
+#include <assert.h>
 #include <errno.h>
 #include <regex.h>
 #include <stdint.h>
@@ -20,13 +21,16 @@ SBF_BEGIN_DECLS
 
 typedef intptr_t sbfSocket;
 
+#ifndef PATH_MAX
+#define PATH_MAX MAX_PATH
+#endif
 #ifndef __func__
 #define __func__ __FUNCTION__
 #endif
 
-#define SBF_PACKED(d)		\
+#define SBF_PACKED(d) \
     __pragma(pack(push, 1)) \
-    d                       \
+    d \
     __pragma(pack(pop))
 #define SBF_PRINTFLIKE(a, b)
 #define SBF_UNUSED
@@ -34,6 +38,8 @@ typedef intptr_t sbfSocket;
 
 #define SBF_LIKELY(e)
 #define SBF_UNLIKELY(e)
+
+#define SBF_ASSERT(x) assert (x)
 
 typedef HANDLE pthread_t;
 int pthread_create (pthread_t* thread,

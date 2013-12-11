@@ -15,11 +15,12 @@ struct sbfTportStreamImpl;
  * Header is followed immediately by zero-terminated topic. The whole header
  * plus topic is padded to eight byte boundary.
  */
-typedef SBF_PACKED (struct sbfTportHeaderImpl
+SBF_PACKED (struct sbfTportHeaderImpl
 {
     uint16_t mSize;
     uint8_t  mTopicSize;
-}) sbfTportHeader;
+});
+typedef struct sbfTportHeaderImpl sbfTportHeader;
 
 #define SBF_MESSAGE_SIZE_LIMIT \
     (65536 - (sizeof (sbfTportHeader)) - SBF_TOPIC_SIZE_LIMIT)
@@ -135,7 +136,7 @@ sbfTport_removeTopic (sbfTportStream tstream, sbfTportTopic ttopic)
 
     empty = sbfRefCount_decrement (&tstream->mRefCount);
     RB_REMOVE (sbfTportTopicTreeImpl, &tstream->mTopics, ttopic);
-    assert (!empty || RB_EMPTY (&tstream->mTopics));
+    SBF_ASSERT (!empty || RB_EMPTY (&tstream->mTopics));
 
     free ((void*)ttopic->mTopic);
     free (ttopic);

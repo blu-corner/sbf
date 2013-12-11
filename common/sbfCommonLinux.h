@@ -41,6 +41,8 @@ typedef int sbfSocket;
 #define SBF_LIKELY(e) __builtin_expect (!!(e), 1)
 #define SBF_UNLIKELY(e) __builtin_expect (!!(e), 0)
 
+#define SBF_ASSERT(x) assert (x)
+
 SBF_END_DECLS
 
 #endif /* _SBF_COMMON_LINUX_H_ */

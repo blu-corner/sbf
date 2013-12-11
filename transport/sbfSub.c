@@ -48,7 +48,7 @@ sbfSubRemoveEventCb (int fd, short events, void* closure)
 
     sbfLog_debug ("removing %p", sub0);
 
-    sbfTport_adjustWeight (tport, tstream->mThread, -sub0->mWeight);
+    sbfTport_adjustWeight (tport, tstream->mThread, -(int)sub0->mWeight);
 
     if (ttopic->mNext == sub0)
         ttopic->mNext = TAILQ_NEXT (sub0, mEntry);
