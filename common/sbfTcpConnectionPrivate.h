@@ -12,7 +12,7 @@ struct sbfTcpListenerImpl;
 
 struct sbfTcpConnectionImpl
 {
-    int                        mSocket;
+    sbfSocket                  mSocket;
     struct bufferevent*        mEvent;
 
     sbfTcpConnectionReadyCb    mReadyCb;

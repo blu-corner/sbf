@@ -108,7 +108,7 @@ sbfTcpConnection_destroy (sbfTcpConnection tc)
     tc->mDestroyed = 1;
     if (tc->mEvent != NULL)
         bufferevent_free (tc->mEvent);
-    close (tc->mSocket);
+    sbfCloseSocket (tc->mSocket);
 
     if (sbfRefCount_decrement (&tc->mRefCount))
         free (tc);
@@ -134,7 +134,7 @@ sbfTcpConnection_send (sbfTcpConnection tc, void* data, size_t size)
 }
 
 void
-sbfTcpConnection_sendBuffer(sbfTcpConnection tc, sbfBuffer buffer)
+sbfTcpConnection_sendBuffer (sbfTcpConnection tc, sbfBuffer buffer)
 {
     /* XXX */
 }

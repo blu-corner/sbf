@@ -26,7 +26,7 @@ sbfUdpMulticast sbfUdpMulticast_create (sbfUdpMulticastType type,
 
 void sbfUdpMulticast_destroy (sbfUdpMulticast s);
 
-int sbfUdpMulticast_getSocket (sbfUdpMulticast s);
+sbfSocket sbfUdpMulticast_getSocket (sbfUdpMulticast s);
 
 #define sbfUdpMulticast_sendBuffer(s, b) \
     sbfUdpMulticast_send (s, sbfBuffer_getData (b), sbfBuffer_getSize (b))

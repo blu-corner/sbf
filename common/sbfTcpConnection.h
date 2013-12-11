@@ -34,8 +34,7 @@ sbfError sbfTcpConnection_accept (sbfTcpConnection tc,
                                   void* closure);
 
 void sbfTcpConnection_send (sbfTcpConnection tc, void* data, size_t size);
-void sbfTcpConnection_sendBuffer(sbfTcpConnection tc, sbfBuffer buffer);
-
+void sbfTcpConnection_sendBuffer (sbfTcpConnection tc, sbfBuffer buffer);
 
 SBF_END_DECLS
 

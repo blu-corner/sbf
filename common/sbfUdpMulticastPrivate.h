@@ -7,7 +7,7 @@ struct sbfUdpMulticastImpl
 {
     sbfUdpMulticastType mType;
 
-    int                 mSocket;
+    sbfSocket           mSocket;
     struct sockaddr_in  mAddress;
 
     sbfPool             mPool;

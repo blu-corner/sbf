@@ -65,7 +65,7 @@ void
 sbfUdpMulticast_destroy (sbfUdpMulticast s)
 {
     if (s->mSocket != -1)
-        close (s->mSocket);
+        sbfCloseSocket (s->mSocket);
 
     sbfPool_destroy (s->mPool);
     free (s);

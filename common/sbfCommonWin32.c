@@ -1,5 +1,7 @@
 #include "sbfCommon.h"
 
+#include <evutil.h>
+
 typedef struct
 {
     void* (*mCb) (void*);
@@ -20,7 +22,13 @@ sbfCommonThreadEntry (LPVOID closure)
 int
 gettimeofday (struct timeval* tv, struct timezone* tz)
 {
-    /* XXX */
+    return evutil_gettimeofday (tv, tz);
+}
+
+void
+sbfCloseSocket (sbfSocket s)
+{
+    EVUTIL_CLOSESOCKET (s);
 }
 
 int
