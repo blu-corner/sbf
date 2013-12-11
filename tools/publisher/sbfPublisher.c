@@ -1,6 +1,6 @@
 #include "sbfCommon.h"
-#include "sbfCpuFreq.h"
 #include "sbfMw.h"
+#include "sbfPerfCounter.h"
 #include "sbfTport.h"
 
 uint32_t gPublished;
@@ -107,20 +107,20 @@ main (int argc, char** argv)
     pub = sbfPub_create (tport, queue, topic, NULL, NULL);
 
     if (rate > 0)
-        interval = (sbfCpuFreq_get () * 1000 * 1000) / rate;
+        interval = sbfPerfCounter_frequency () / rate;
     else
         interval = 0;
 
     payload = xmalloc (size);
     for (;;)
     {
-        *payload = sbfRdtsc ();
+        *payload = sbfPerfCounter_get ();
         until = (*payload) + interval;
 
         sbfPub_send (pub, payload, size);
         gPublished++;
 
-        while (sbfRdtsc () < until)
+        while (sbfPerfCounter_get () < until)
             /* nothing */;
     }
 

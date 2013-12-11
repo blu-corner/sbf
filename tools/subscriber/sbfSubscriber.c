@@ -1,6 +1,6 @@
 #include "sbfCommon.h"
-#include "sbfCpuFreq.h"
 #include "sbfMw.h"
+#include "sbfPerfCounter.h"
 #include "sbfTport.h"
 
 static u_int    gMessages;
@@ -23,7 +23,7 @@ timerCb (sbfTimer timer, void* closure)
             gTimeLow == UINT64_MAX ? 0 : (unsigned long long)gTimeLow,
             gMessages == 0 ? 0 : (unsigned long long)gTimeTotal / gMessages,
             (unsigned long long)gTimeHigh);
-    
+
     gMessages = 0;
     gTimeLow = UINT64_MAX;
     gTimeTotal = 0;
@@ -38,10 +38,10 @@ messageCb (sbfSub sub, sbfBuffer buffer, void* closure)
     uint64_t  this = *payload;
     uint64_t  interval;
 
-    now = sbfRdtsc ();
+    now = sbfPerfCounter_get ();
     if (now < this)
         return;
-    interval = (now - this) / sbfCpuFreq_get ();
+    interval = sbfPerfCounter_microseconds (now - this);
 
     gMessages++;
     gTimeTotal += interval;

@@ -15,9 +15,6 @@ SBF_BEGIN_DECLS
 #ifndef __inline
 #define __inline _forceinline
 #endif
-#ifndef __unused
-#define __unused
-#endif
 #ifndef __func__
 #define __func__ __FUNCTION__
 #endif
@@ -52,15 +49,6 @@ typedef CRITICAL_SECTION pthread_mutex_t;
 
 int gettimeofday (struct timeval* tv, struct timezone* tz);
 #define gmtime_r(tp, tm) gmtime_s (tm, tp)
-
-static __inline uint64_t
-sbfRdtsc (void)
-{
-    LARGE_INTEGER v;
-
-    QueryPerformanceCounter (&v);
-    return v.QuadPart;
-}
 
 SBF_END_DECLS
 

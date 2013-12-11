@@ -7,13 +7,13 @@ HEADERS += \
     sbfBuffer.h \
     sbfBufferInline.h \
     sbfCommon.h \
-    sbfCpuFreq.h \
     sbfFatal.h \
     sbfInterface.h \
     sbfKeyValue.h \
     sbfKeyValuePrivate.h \
     sbfLog.h \
     sbfMemory.h \
+    sbfPerfCounter.h \
     sbfPool.h \
     sbfUdpMulticast.h \
     sbfTcpConnection.h \
@@ -21,12 +21,12 @@ HEADERS += \
     sbfVersion.h
 SOURCES += \
     sbfBuffer.c \
-    sbfCpuFreq.c \
     sbfFatal.c \
     sbfInterface.c \
     sbfKeyValue.c \
     sbfLog.c \
     sbfMemory.c \
+    sbfPerfCounter.c \
     sbfPool.c \
     sbfTcpConnection.c \
     sbfTcpListener.c \
@@ -45,12 +45,12 @@ install_headers.files = \
     sbfBuffer.h \
     sbfBufferInline.h \
     sbfCommon.h \
-    sbfCpuFreq.h \
     sbfFatal.h \
     sbfInterface.h \
     sbfKeyValue.h \
     sbfLog.h \
     sbfMemory.h \
+    sbfPerfCounter.h \
     sbfPool.h \
     sbfPoolInline.h \
     sbfRefCount.h \

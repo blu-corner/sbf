@@ -38,16 +38,6 @@ SBF_BEGIN_DECLS
 #define SBF_LIKELY(e) __builtin_expect (!!(e), 1)
 #define SBF_UNLIKELY(e) __builtin_expect (!!(e), 0)
 
-static __inline uint64_t
-sbfRdtsc (void)
-{
-    uint32_t lo;
-    uint32_t hi;
-
-    __asm__ __volatile__ ("rdtsc" : "=a" (lo), "=d" (hi));
-    return (uint64_t)hi << 32 | lo;
-}
-
 SBF_END_DECLS
 
 #endif /* _SBF_COMMON_LINUX_H_ */
