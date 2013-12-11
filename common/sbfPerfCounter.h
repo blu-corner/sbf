@@ -9,7 +9,7 @@ uint64_t sbfPerfCounter_frequency (void);
 double sbfPerfCounter_microseconds (uint64_t v);
 
 #ifdef WIN32
-static __inline uint64_t
+static SBF_INLINE uint64_t
 sbfPerfCounter_get (void)
 {
     LARGE_INTEGER v;
@@ -18,7 +18,7 @@ sbfPerfCounter_get (void)
     return v.QuadPart;
 }
 #else
-static __inline uint64_t
+static SBF_INLINE uint64_t
 sbfPerfCounter_get (void)
 {
     uint32_t lo;

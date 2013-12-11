@@ -40,7 +40,7 @@ typedef struct sbfTportTopicImpl* sbfTportTopic;
 RB_HEAD (sbfTportTopicTreeImpl, sbfTportTopicImpl);
 typedef struct sbfTportTopicTreeImpl sbfTportTopicTree;
 
-static __inline int
+static SBF_INLINE int
 sbfTportTopicCmp (sbfTportTopic lhs, sbfTportTopic rhs)
 {
     return strcmp (lhs->mTopic, rhs->mTopic);
@@ -99,7 +99,7 @@ void sbfTport_adjustWeight (sbfTport tport, sbfMwThread thread, int change);
 u_int sbfTport_topicWeight (sbfTport tport, sbfTopic topic);
 sbfMwThread sbfTport_nextThread (sbfTport tport);
 
-static __inline sbfTportTopic
+static SBF_INLINE sbfTportTopic
 sbfTport_findTopic (sbfTportStream tstream, const char* topic)
 {
     struct sbfTportTopicImpl impl;
@@ -108,7 +108,7 @@ sbfTport_findTopic (sbfTportStream tstream, const char* topic)
     return RB_FIND (sbfTportTopicTreeImpl, &tstream->mTopics, &impl);
 }
 
-static __inline sbfTportTopic
+static SBF_INLINE sbfTportTopic
 sbfTport_addTopic (sbfTportStream tstream, const char* topic)
 {
     sbfTportTopic ttopic;
@@ -126,7 +126,7 @@ sbfTport_addTopic (sbfTportStream tstream, const char* topic)
     return ttopic;
 }
 
-static __inline int
+static SBF_INLINE int
 sbfTport_removeTopic (sbfTportStream tstream, sbfTportTopic ttopic)
 {
     u_int empty;
@@ -143,7 +143,7 @@ sbfTport_removeTopic (sbfTportStream tstream, sbfTportTopic ttopic)
     return empty;
 }
 
-static __inline sbfTportStream
+static SBF_INLINE sbfTportStream
 sbfTport_addStream (sbfTport tport,
                     sbfTopic topic,
                     sbfHandlerAddStreamCompleteCb cb,
@@ -175,7 +175,7 @@ sbfTport_addStream (sbfTport tport,
     return tstream;
 }
 
-static __inline void
+static SBF_INLINE void
 sbfTport_removeStream (sbfTport tport, sbfTportStream tstream)
 {
     sbfLog_debug ("removing stream %p", tstream);

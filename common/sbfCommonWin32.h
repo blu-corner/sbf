@@ -12,19 +12,17 @@
 
 SBF_BEGIN_DECLS
 
-#ifndef __inline
-#define __inline _forceinline
-#endif
 #ifndef __func__
 #define __func__ __FUNCTION__
 #endif
 
-#define SIM_PACKED(d)		\
+#define SBF_PACKED(d)		\
     __pragma(pack(push, 1)) \
     d                       \
     __pragma(pack(pop))
 #define SBF_PRINTFLIKE(a, b)
 #define SBF_UNUSED
+#define SBF_INLINE _forceinline
 
 #define SBF_LIKELY(e)
 #define SBF_UNLIKELY(e)

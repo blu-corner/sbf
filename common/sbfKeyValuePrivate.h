@@ -15,7 +15,7 @@ typedef struct sbfKeyValueItemImpl* sbfKeyValueItem;
 RB_HEAD (sbfKeyValueItemTreeImpl, sbfKeyValueItemImpl);
 typedef struct sbfKeyValueItemTreeImpl sbfKeyValueItemTree;
 
-static __inline int
+static SBF_INLINE int
 sbfKeyValueItemCmp (sbfKeyValueItem lhs, sbfKeyValueItem rhs)
 {
     return strcmp (lhs->mKey, rhs->mKey);

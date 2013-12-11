@@ -34,6 +34,7 @@ SBF_BEGIN_DECLS
 #define SBF_PACKED(d) d __attribute__ ((__packed__))
 #define SBF_PRINTFLIKE(a, b) __attribute__ ((format (printf, a, b)))
 #define SBF_UNUSED __attribute__((__unused__))
+#define SBF_INLINE __inline
 
 #define SBF_LIKELY(e) __builtin_expect (!!(e), 1)
 #define SBF_UNLIKELY(e) __builtin_expect (!!(e), 0)

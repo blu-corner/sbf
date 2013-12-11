@@ -18,7 +18,7 @@ sbfPubMakeHeader (sbfPub pub)
     memcpy (pub->mHeader + 1, topic, topicSize);
 }
 
-static __inline sbfTportStream
+static SBF_INLINE sbfTportStream
 sbfPubEnsureStream (sbfPub pub)
 {
     sbfTport tport = pub->mTport;
@@ -35,7 +35,7 @@ sbfPubEnsureStream (sbfPub pub)
     return pub->mTportStream;
 }
 
-static __inline void
+static SBF_INLINE void
 sbfPubFree (sbfPub pub)
 {
     free (pub->mHeader);

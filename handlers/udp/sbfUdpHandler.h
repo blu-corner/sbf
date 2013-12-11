@@ -51,7 +51,7 @@ typedef struct sbfUdpHandlerStreamImpl* sbfUdpHandlerStream;
 RB_HEAD (sbfUdpHandlerStreamTreeImpl, sbfUdpHandlerStreamImpl);
 typedef struct sbfUdpHandlerStreamTreeImpl sbfUdpHandlerStreamTree;
 
-static __inline int
+static SBF_INLINE int
 sbfUdpHandlerStreamCmp (sbfUdpHandlerStream lhs, sbfUdpHandlerStream rhs)
 {
     if (lhs->mType != rhs->mType)

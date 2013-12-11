@@ -18,7 +18,7 @@ struct sbfPoolImpl
     SLIST_HEAD (, sbfPoolItemImpl) mList;
 };
 
-static __inline sbfPoolItem
+static SBF_INLINE sbfPoolItem
 sbfPoolNew (sbfPool pool)
 {
     sbfPoolItem item;
@@ -29,7 +29,7 @@ sbfPoolNew (sbfPool pool)
     return item;
 }
 
-static __inline sbfPoolItem
+static SBF_INLINE sbfPoolItem
 sbfPoolNewZero (sbfPool pool)
 {
     sbfPoolItem item;
@@ -39,13 +39,13 @@ sbfPoolNewZero (sbfPool pool)
     return item;
 }
 
-static __inline size_t
+static SBF_INLINE size_t
 sbfPool_getItemSize (sbfPool pool)
 {
     return pool->mItemSize;
 }
 
-static __inline void*
+static SBF_INLINE void*
 sbfPool_get (sbfPool pool)
 {
     sbfPoolItem item;
@@ -62,7 +62,7 @@ sbfPool_get (sbfPool pool)
     return sbfPoolNew (pool) + 1;
 }
 
-static __inline void*
+static SBF_INLINE void*
 sbfPool_getZero (sbfPool pool)
 {
     sbfPoolItem item;
@@ -80,7 +80,7 @@ sbfPool_getZero (sbfPool pool)
     return sbfPoolNewZero (pool) + 1;
 }
 
-static __inline void
+static SBF_INLINE void
 sbfPool_put (void* data)
 {
     sbfPoolItem item = (sbfPoolItem)data - 1;

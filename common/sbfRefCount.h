@@ -9,13 +9,13 @@ typedef struct { uint32_t mRefCount; } sbfRefCount;
 
 #define sbfRefCount_get(r) ((r)->mRefCount)
 
-static __inline void
+static SBF_INLINE void
 sbfRefCount_init (sbfRefCount* r, u_short n)
 {
     r->mRefCount = n;
 }
 
-static __inline void
+static SBF_INLINE void
 sbfRefCount_increment (sbfRefCount* r)
 {
 #ifdef WIN32
@@ -25,7 +25,7 @@ sbfRefCount_increment (sbfRefCount* r)
 #endif
 }
 
-static __inline int
+static SBF_INLINE int
 sbfRefCount_decrement (sbfRefCount* r)
 {
 #ifdef WIN32

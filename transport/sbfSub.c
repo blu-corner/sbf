@@ -1,14 +1,14 @@
 #include "sbfTport.h"
 #include "sbfTportPrivate.h"
 
-static __inline void
+static SBF_INLINE void
 sbfSubFree (sbfSub sub)
 {
     sbfTopic_destroy (sub->mTopic);
     free (sub);
 }
 
-static __inline sbfTportStream
+static SBF_INLINE sbfTportStream
 sbfSubEnsureStream (sbfSub sub)
 {
     sbfTport tport = sub->mTport;
