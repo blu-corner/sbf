@@ -60,10 +60,13 @@ windows {
     CONFIG += staticlib
 
     INCLUDEPATH += \
-        $$top_src/thirdparty/win32/libevent/include
+        $$top_src/thirdparty/win32/libevent/include \
+        $$top_src/thirdparty/win32/pcre/include
 
     QMAKE_LIBDIR += \
-        $$top_src/thirdparty/win32/libevent/lib
+        $$top_src/thirdparty/win32/libevent/lib \
+	$$top_src/thirdparty/win32/pcre/lib
     LIBS += \
-	libevent.lib
+	libevent.lib \
+        pcreposix.lib
 }
