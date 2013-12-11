@@ -49,3 +49,40 @@ pthread_create (pthread_t* thread,
     *thread = h;
     return 0;
 }
+
+int
+asprintf (char** ret, const char* fmt, ...)
+{
+    va_list ap;
+    int     n;
+
+    va_start (ap, fmt);
+    n = vasprintf (ret, fmt, ap);
+    va_end (ap);
+
+    return (n);
+}
+
+int
+vasprintf (char** ret, const char* fmt, va_list ap)
+{
+    int      n;
+    va_list  ap2;
+
+    va_copy (ap2, ap);
+
+    if ((n = vsnprintf (NULL, 0, fmt, ap)) < 0)
+        goto error;
+
+    *ret = xmalloc (n + 1);
+    if ((n = vsnprintf (*ret, n + 1, fmt, ap2)) < 0) {
+        free (*ret);
+        goto error;
+    }
+
+    return (n);
+
+error:
+    *ret = NULL;
+    return (-1);
+}

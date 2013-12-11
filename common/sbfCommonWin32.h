@@ -76,6 +76,9 @@ typedef CRITICAL_SECTION pthread_mutex_t;
 int gettimeofday (struct timeval* tv, struct timezone* tz);
 #define gmtime_r(tp, tm) gmtime_s (tm, tp)
 
+int asprintf(char** ret, const char* fmt, ...);
+int vasprintf(char** ret, const char* fmt, va_list ap);
+
 SBF_END_DECLS
 
 #endif /* _SBF_COMMON_WIN32_H_ */
