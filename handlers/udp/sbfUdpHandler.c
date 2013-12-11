@@ -1,13 +1,13 @@
 #include "sbfUdpHandler.h"
 
-static in_addr_t
+static uint32_t
 sbfUdpHandlerParseRange (const char* s, u_int* bits)
 {
-    int           found;
+    int          found;
     union
     {
-        in_addr_t address;
-        uint8_t   octets[4];
+        uint32_t address;
+        uint8_t  octets[4];
     } u = { 0 };
 
     found = 0;
@@ -35,11 +35,11 @@ sbfUdpHandlerParseRange (const char* s, u_int* bits)
     return u.address;
 }
 
-static in_addr_t
+static uint32_t
 sbfUdpHandlerMakeAddress (sbfUdpHandler uh, sbfTopic topic)
 {
-    uint32_t  h;
-    in_addr_t address;
+    uint32_t h;
+    uint32_t address;
 
     address = ntohl (uh->mBase);
 
@@ -122,8 +122,8 @@ sbfUdpHandlerCreate (sbfTport tport, sbfKeyValue properties)
 {
     sbfUdpHandler uh;
     const char*   s;
-    in_addr_t     interface;
-    in_addr_t     range;
+    uint32_t      interface;
+    uint32_t      range;
     u_int         bits;
     u_int         first;
     u_int         second;

@@ -3,7 +3,7 @@
 typedef struct
 {
     const char* mName;
-    in_addr_t   mAddress;
+    uint32_t    mAddress;
 } sbfInterface;
 
 static int           gSbfInterfacesReady;
@@ -13,6 +13,43 @@ static sbfInterface* gSbfInterfaces;
 static void
 sbfInterfaceBuild (void)
 {
+#ifdef WIN32
+    sbfInterface*         iff;
+    IP_ADAPTER_ADDRESSES* aa0 = NULL;
+    IP_ADAPTER_ADDRESSES* aa;
+    ULONG                 needed;
+    DWORD                 error;
+    struct sockaddr_in*   sin;
+
+    error = GetAdaptersAddresses (AF_INET, 0, NULL, aa0, &needed);
+    if (error == ERROR_BUFFER_OVERFLOW)
+        aa0 = xmalloc (needed);
+    else if (error != NO_ERROR)
+        return;
+
+    error = GetAdaptersAddresses (AF_INET, 0, NULL, aa0, &needed);
+    if (error != NO_ERROR)
+    {
+        free (aa);
+        return;
+    }
+
+    aa = aa;
+    for (aa = aa0; aa != NULL; aa = aa->Next)
+    {
+        gSbfInterfaces = xrealloc (gSbfInterfaces,
+                                   gSbfInterfacesSize + 1,
+                                   sizeof *gSbfInterfaces);
+        iff = &gSbfInterfaces[gSbfInterfacesSize++];
+
+        sin = (struct sockaddr_in*)aa->FirstUnicastAddress->Address.lpSockaddr;
+
+        iff->mName = xstrdup (aa->AdapterName);
+        iff->mAddress = sin->sin_addr.s_addr;
+    }
+
+    free (aa);
+#else
     sbfInterface*       iff;
     struct ifaddrs*     ifa0;
     struct ifaddrs*     ifa;
@@ -39,18 +76,19 @@ sbfInterfaceBuild (void)
     }
 
     freeifaddrs (ifa0);
+#endif
 }
 
-in_addr_t
+uint32_t
 sbfInterface_find (const char* name)
 {
     sbfInterface* iff;
-    in_addr_t     mask;
+    uint32_t      mask;
     u_int         i;
     union
     {
-        in_addr_t address;
-        uint8_t   octets[4];
+        uint32_t address;
+        uint8_t  octets[4];
     } u = { 0 };
 
     if (!gSbfInterfacesReady)

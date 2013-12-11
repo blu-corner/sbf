@@ -11,6 +11,8 @@
 #include <time.h>
 
 #include <winsock2.h> /* must be before windows.h */
+#include <iphlpapi.h>
+#include <ws2tcpip.h>
 #include <windows.h>
 
 SBF_BEGIN_DECLS

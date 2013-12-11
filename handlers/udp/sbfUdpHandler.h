@@ -35,7 +35,7 @@ struct sbfUdpHandlerStreamImpl
     sbfHandlerHandle                   mHandle;
 
     sbfTopicType                       mType;
-    in_addr_t                          mAddress;
+    uint32_t                           mAddress;
     sbfUdpMulticast                    mSocket;
 
     sbfHandlerAddStreamCompleteCb      mAddStreamCompleteCb;
@@ -74,9 +74,9 @@ RB_GENERATE_STATIC (sbfUdpHandlerStreamTreeImpl,
 
 struct sbfUdpHandlerImpl
 {
-    in_addr_t               mInterface;
+    uint32_t                mInterface;
 
-    in_addr_t               mBase;
+    uint32_t                mBase;
 
     u_int                   mFirstSize;
     u_int                   mSecondSize;
