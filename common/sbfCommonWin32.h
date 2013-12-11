@@ -3,12 +3,14 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <Windows.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+
+#include <winsock2.h> /* must be before windows.h */
+#include <windows.h>
 
 SBF_BEGIN_DECLS
 

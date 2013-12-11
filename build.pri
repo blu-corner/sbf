@@ -57,4 +57,9 @@ unix {
 }
 
 windows {
+    INCLUDEPATH += \
+        $$top_src/thirdparty/win32/libevent/include
+
+    QMAKE_LIBDIR += \
+        $$top_src/thirdparty/win32/libevent/lib
 }
