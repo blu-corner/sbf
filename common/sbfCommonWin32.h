@@ -3,6 +3,7 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
+#include <errno.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -28,6 +29,12 @@ SBF_BEGIN_DECLS
 
 #define SBF_LIKELY(e)
 #define SBF_UNLIKELY(e)
+
+typedef HANDLE pthread_t;
+int pthread_create (pthread_t* thread,
+                    void* unused,
+                    void* (*cb) (void*),
+                    void* closure);
 
 typedef CRITICAL_SECTION pthread_mutex_t;
 #define pthread_mutex_init(m, a) InitializeCriticalSection (m)
