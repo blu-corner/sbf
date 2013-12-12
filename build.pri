@@ -70,8 +70,17 @@ windows {
     LIBS += \
         advapi32.lib \
         libevent.lib \
-        pcreposix.lib \
+        pcre3.lib \
+        pcreposix3.lib \
         ws2_32.lib
+    QMAKE_LFLAGS += \
+        /NODEFAULTLIB:libcmt.lib
+
+    QMAKE_POST_LINK += \
+        if not exist $$shell_path($$top_build/bin) \
+	mkdir $$shell_path($$top_build/bin) && \
+        copy /Y $$shell_path($$top_src/thirdparty/win32/pcre/lib/*.dll) \
+	$$shell_path($$top_build/bin)
 
     QMAKE_CFLAGS_RELEASE += -MT
     QMAKE_CFLAGS_RELEASE -= -MD
