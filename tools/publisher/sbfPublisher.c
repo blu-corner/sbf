@@ -15,7 +15,8 @@ dispatchCb (void* closure)
 static void
 timerCb (sbfTimer timer, void* closure)
 {
-    printf ("%u\n", gPublished);
+    printf ("%u" SBF_EOL, gPublished);
+    fflush (stdout);
 
     gPublished = 0;
 }

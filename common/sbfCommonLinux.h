@@ -33,6 +33,8 @@ SBF_BEGIN_DECLS
 
 typedef int sbfSocket;
 
+#define SBF_EOL "\n"
+
 #define SBF_PACKED(d) d __attribute__ ((__packed__))
 #define SBF_PRINTFLIKE(a, b) __attribute__ ((format (printf, a, b)))
 #define SBF_UNUSED __attribute__((__unused__))

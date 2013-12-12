@@ -18,12 +18,7 @@ sbfDefaultLogCb (sbfLogLevel level, const char* message, void* closure)
     gmtime_r (&t, &tm);
 
     fprintf (stderr,
-             "%04u-%02u-%02u %02u:%02u:%02u.%06u %-5s %s"
-#ifdef WIN32
-             "\r\n",
-#else
-             "\n",
-#endif
+             "%04u-%02u-%02u %02u:%02u:%02u.%06u %-5s %s" SBF_EOL,
              tm.tm_year + 1900,
              tm.tm_mon + 1,
              tm.tm_mday,

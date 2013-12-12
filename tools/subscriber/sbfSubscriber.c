@@ -18,11 +18,12 @@ dispatchCb (void* closure)
 static void
 timerCb (sbfTimer timer, void* closure)
 {
-    printf ("%u low=%llu average=%llu high=%llu\n",
+    printf ("%u low=%llu average=%llu high=%llu" SBF_EOL,
             gMessages,
             gTimeLow == UINT64_MAX ? 0 : (unsigned long long)gTimeLow,
             gMessages == 0 ? 0 : (unsigned long long)gTimeTotal / gMessages,
             (unsigned long long)gTimeHigh);
+    fflush (stdout);
 
     gMessages = 0;
     gTimeLow = UINT64_MAX;

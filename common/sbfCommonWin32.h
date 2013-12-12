@@ -28,6 +28,8 @@ typedef intptr_t sbfSocket;
 #define __func__ __FUNCTION__
 #endif
 
+#define SBF_EOL "\r\n"
+
 #define SBF_PACKED(d) \
     __pragma(pack(push, 1)) \
     d \
