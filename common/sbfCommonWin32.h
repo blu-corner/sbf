@@ -68,7 +68,7 @@ typedef CRITICAL_SECTION sbfMutex;
 #define sbfSpinLock_lock sbfMutex_lock
 #define sbfSpinLock_unlock sbfMutex_unlock
 
-#define sleep(seconds) Sleep(seconds * 1000U)
+#define sleep(seconds) Sleep (seconds * 1000U)
 #define snprintf _snprintf
 #define strcasecmp _stricmp
 #define strdup _strdup
@@ -80,8 +80,8 @@ typedef CRITICAL_SECTION sbfMutex;
 int gettimeofday (struct timeval* tv, struct timezone* tz);
 #define gmtime_r(tp, tm) gmtime_s (tm, tp)
 
-int asprintf(char** ret, const char* fmt, ...);
-int vasprintf(char** ret, const char* fmt, va_list ap);
+int asprintf (char** ret, const char* fmt, ...);
+int vasprintf (char** ret, const char* fmt, va_list ap);
 
 extern int   BSDopterr;
 extern int   BSDoptind;
@@ -89,7 +89,7 @@ extern int   BSDoptopt;
 extern int   BSDoptreset;
 extern char* BSDoptarg;
 int     BSDgetopt(int, char* const*, const char*);
-#define getopt(ac, av, o) BSDgetopt(ac, av, o)
+#define getopt(ac, av, o) BSDgetopt (ac, av, o)
 #define opterr            BSDopterr
 #define optind            BSDoptind
 #define optopt            BSDoptopt
