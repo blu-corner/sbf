@@ -30,11 +30,10 @@ sbfInterfaceBuild (void)
     error = GetAdaptersAddresses (AF_INET, 0, NULL, aa0, &needed);
     if (error != NO_ERROR)
     {
-        free (aa);
+        free (aa0);
         return;
     }
 
-    aa = aa;
     for (aa = aa0; aa != NULL; aa = aa->Next)
     {
         gSbfInterfaces = xrealloc (gSbfInterfaces,

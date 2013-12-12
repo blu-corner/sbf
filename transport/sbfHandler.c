@@ -15,10 +15,11 @@ sbfHandler_load (const char* type)
 
     sbfLog_info ("loading handler %s", type);
 
-    snprintf (path, sizeof path, "libsbf%shandler.so", type);
 #ifdef WIN32
+    snprintf (path, sizeof path, "sbf%shandler.dll", type);
     handle = LoadLibrary (path);
 #else
+    snprintf (path, sizeof path, "libsbf%shandler.so", type);
     handle = dlopen (path, RTLD_NOW|RTLD_LOCAL);
 #endif
     if (handle == NULL)

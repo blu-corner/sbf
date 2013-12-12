@@ -35,6 +35,9 @@ sbfMw_create (u_int threads)
     u_int                i;
     sbfMwThread          thread;
     struct event_config* ec;
+#ifdef WIN32
+    WSADATA              wsd;
+#endif
 
     if (threads == 0 || threads > SBF_MW_THREAD_LIMIT)
         return NULL;
@@ -47,6 +50,8 @@ sbfMw_create (u_int threads)
     sbfLog_debug ("creating %p, using %u threads", mw, threads);
 
 #ifdef WIN32
+    if (WSAStartup(MAKEWORD (2, 2), &wsd) != 0)
+        SBF_FATAL ("WSAStartup failed");
     if (evthread_use_windows_threads() != 0)
         SBF_FATAL ("event_use_windows_threads failed");
 #else
