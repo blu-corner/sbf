@@ -42,7 +42,7 @@ typedef intptr_t sbfSocket;
 #define SBF_ASSERT(x) assert (x)
 
 typedef HANDLE sbfThread;
-int sbfThread_create (sbdThread* thread, void* (*cb) (void*), void* closure);
+int sbfThread_create (sbfThread* thread, void* (*cb) (void*), void* closure);
 #define sbfThread_join(t) WaitForSingleObject (t, INFINITE)
 
 typedef CONDITION_VARIABLE sbfCondVar;
@@ -53,7 +53,7 @@ typedef CONDITION_VARIABLE sbfCondVar;
 #define sbfCondVar_signal(c) WakeConditionVariable (c)
 
 typedef CRITICAL_SECTION sbfMutex;
-#define sbfMutex_init(m, r) InitializeCriticalSection (m)
+#define sbfMutex_init(m) InitializeCriticalSection (m)
 #define sbfMutex_destroy(m) DeleteCriticalSection (m)
 #define sbfMutex_lock(m) EnterCriticalSection (m)
 #define sbfMutex_unlock(m) LeaveCriticalSection (m)
@@ -64,10 +64,13 @@ typedef CRITICAL_SECTION sbfMutex;
 #define sbfSpinLock_lock sbfMutex_lock
 #define sbfSpinLock_unlock sbfMutex_unlock
 
+#define sleep(seconds) Sleep(seconds * 1000U)
 #define snprintf _snprintf
 #define strcasecmp _stricmp
 #define strdup _strdup
 #define strncasecmp _strnicmp
+#define strtoull _strtoui64
+#define strtoll _strtoi64
 #define vsnprintf _vsnprintf
 
 int gettimeofday (struct timeval* tv, struct timezone* tz);

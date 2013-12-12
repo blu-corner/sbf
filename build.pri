@@ -31,9 +31,9 @@ unix {
     }
 
     QMAKE_CFLAGS += \
-    	-std=gnu99 \
+        -std=gnu99 \
         -O2 \
-	-pthread \
+        -pthread \
         -Wall \
         -Wextra \
         -Wbad-function-cast \
@@ -49,8 +49,8 @@ unix {
     #QMAKE_CFLAGS_DEBUG += \
     #    -O0
     QMAKE_LFLAGS += \
-	-pthread \
-    	-Wl,--no-as-needed
+        -pthread \
+        -Wl,--no-as-needed
     LIBS += \
         -ldl \
         -lrt
@@ -66,8 +66,20 @@ windows {
 
     QMAKE_LIBDIR += \
         $$top_src/thirdparty/win32/libevent/lib \
-	$$top_src/thirdparty/win32/pcre/lib
+        $$top_src/thirdparty/win32/pcre/lib
     LIBS += \
-	libevent.lib \
-        pcreposix.lib
+        advapi32.lib \
+        libevent.lib \
+        pcreposix.lib \
+        ws2_32.lib
+
+    QMAKE_CFLAGS_RELEASE += -MT
+    QMAKE_CFLAGS_RELEASE -= -MD
+    QMAKE_CXXFLAGS_RELEASE += -MT
+    QMAKE_CXXFLAGS_RELEASE -= -MD
+
+    QMAKE_CFLAGS_DEBUG += -MTd
+    QMAKE_CFLAGS_DEBUG -= -MDd
+    QMAKE_CXXFLAGS_DEBUG += -MTd
+    QMAKE_CXXFLAGS_DEBUG -= -MDd
 }

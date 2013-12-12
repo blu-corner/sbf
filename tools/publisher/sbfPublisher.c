@@ -39,22 +39,23 @@ usage (const char* argv0)
 int
 main (int argc, char** argv)
 {
-    const char* argv0 = argv[0];
-    sbfMw       mw;
-    sbfQueue    queue;
-    sbfThread   t;
-    sbfTport    tport;
-    sbfKeyValue properties;
-    sbfPub      pub;
-    uint64_t    interval;
-    uint64_t    until;
-    int         opt;
-    const char* topic = "OUT";
-    uint64_t    rate = 1000;
-    const char* handler = "udp";
-    const char* interf = "eth0";
-    size_t      size = 200;
-    uint64_t*   payload;
+    const char*        argv0 = argv[0];
+    sbfMw              mw;
+    sbfQueue           queue;
+    sbfThread          t;
+    sbfTport           tport;
+    sbfKeyValue        properties;
+    sbfPub             pub;
+    uint64_t           interval;
+    uint64_t           until;
+    int                opt;
+    const char*        topic = "OUT";
+    uint64_t           rate = 1000;
+    const char*        handler = "udp";
+    const char*        interf = "eth0";
+    unsigned long long ull;
+    size_t             size = 200;
+    uint64_t*          payload;
 
     sbfLog_setLevel (SBF_LOG_OFF);
 
@@ -70,9 +71,11 @@ main (int argc, char** argv)
             rate = strtoull (optarg, NULL, 10);
             break;
         case 's':
-            size = strtoull (optarg, NULL, 10);
-            if (size < sizeof t)
-                size = sizeof t;
+            ull = strtoull (optarg, NULL, 10);
+            if (ull < sizeof t)
+                ull = sizeof t;
+            if (ull < SIZE_MAX)
+                size = (size_t)ull;
         case 't':
             topic = optarg;
             break;

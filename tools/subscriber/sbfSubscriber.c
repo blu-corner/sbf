@@ -41,7 +41,7 @@ messageCb (sbfSub sub, sbfBuffer buffer, void* closure)
     now = sbfPerfCounter_get ();
     if (now < this)
         return;
-    interval = sbfPerfCounter_microseconds (now - this);
+    interval = (uint64_t)sbfPerfCounter_microseconds (now - this);
 
     gMessages++;
     gTimeTotal += interval;
@@ -123,7 +123,7 @@ main (int argc, char** argv)
     sbfSub_create (tport, queue, topic, NULL, messageCb, NULL);
 
     for (;;)
-        pause ();
+        sleep (60);
 
     exit (0);
 }

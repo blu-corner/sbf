@@ -13,3 +13,8 @@ LIBS += \
 
 target.path = $$top_build/bin
 INSTALLS += target
+
+windows {
+    CONFIG -= staticlib
+    CONFIG += console static
+}
