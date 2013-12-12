@@ -1,25 +1,25 @@
 #include "sbfPerfCounter.h"
 
 #ifdef WIN32
-uint64_t
+double
 sbfPerfCounter_frequency (void)
 {
     LARGE_INTEGER f;
 
     QueryPerformanceFrequency (&f);
-    return f.QuadPart;
+    return f.QuadPart / 1000000.0;
 }
 #else
-uint64_t
+double
 sbfPerfCounter_frequency (void)
 {
-    static uint64_t    frequency;
+    static double      frequency;
     FILE*              f;
     char*              line;
     size_t             size;
     unsigned long long n;
 
-    if (frequency != 0)
+    if (frequency > 0)
         return frequency;
 
     f = fopen ("/proc/cpuinfo", "r");
@@ -31,8 +31,8 @@ sbfPerfCounter_frequency (void)
     {
         if (sscanf (line, "cpu MHz         : %llu.", &n) == 1)
         {
-            frequency = n * 1000000ULL;
             sbfLog_debug ("got CPU frequency of %llu MHz", n);
+            frequency = n;
             break;
         }
     }
@@ -40,14 +40,20 @@ sbfPerfCounter_frequency (void)
 
     fclose (f);
 
-    if (frequency == 0)
+    if (!(frequency > 0))
         sbfFatal ("couldn't read CPU frequency");
     return frequency;
 }
 #endif
 
 double
-sbfPerfCounter_microseconds (uint64_t v)
+sbfPerfCounter_ticks (uint64_t microseconds)
 {
-    return (double)v / sbfPerfCounter_frequency ();
+    return (double)microseconds * sbfPerfCounter_frequency ();
+}
+
+double
+sbfPerfCounter_microseconds (uint64_t ticks)
+{
+    return (double)ticks / sbfPerfCounter_frequency ();
 }
