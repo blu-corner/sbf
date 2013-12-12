@@ -41,8 +41,9 @@ messageCb (sbfSub sub, sbfBuffer buffer, void* closure)
 
     now = sbfPerfCounter_get ();
     if (now < this)
-        return;
-    interval = sbfPerfCounter_microseconds (now - this);
+        interval = 0;
+    else
+        interval = sbfPerfCounter_microseconds (now - this);
 
     gMessages++;
     gTimeTotal += (uint64_t)interval;
