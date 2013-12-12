@@ -49,11 +49,11 @@ sbfPerfCounter_frequency (void)
 double
 sbfPerfCounter_ticks (uint64_t microseconds)
 {
-    return (double)microseconds * sbfPerfCounter_frequency ();
+    return microseconds * sbfPerfCounter_frequency ();
 }
 
 double
 sbfPerfCounter_microseconds (uint64_t ticks)
 {
-    return (double)ticks / sbfPerfCounter_frequency ();
+    return ticks / sbfPerfCounter_frequency ();
 }

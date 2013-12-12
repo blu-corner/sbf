@@ -45,11 +45,11 @@ messageCb (sbfSub sub, sbfBuffer buffer, void* closure)
     interval = sbfPerfCounter_microseconds (now - this);
 
     gMessages++;
-    gTimeTotal += interval;
+    gTimeTotal += (uint64_t)interval;
     if (interval < gTimeLow)
-        gTimeLow = interval;
+        gTimeLow = (uint64_t)interval;
     if (interval > gTimeHigh)
-        gTimeHigh = interval;
+        gTimeHigh = (uint64_t)interval;
 }
 
 static void
