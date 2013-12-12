@@ -3,7 +3,6 @@
 static uint32_t
 sbfUdpHandlerParseRange (const char* s, u_int* bits)
 {
-    int          found;
     uint16_t     octets0[4];
     union
     {

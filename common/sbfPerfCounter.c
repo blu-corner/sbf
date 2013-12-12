@@ -31,7 +31,7 @@ sbfPerfCounter_frequency (void)
     {
         if (sscanf (line, "cpu MHz         : %llu.", &n) == 1)
         {
-            frequency = n;
+            frequency = n * 1000000ULL;
             sbfLog_debug ("got CPU frequency of %llu MHz", n);
             break;
         }

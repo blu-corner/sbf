@@ -37,12 +37,12 @@ messageCb (sbfSub sub, sbfBuffer buffer, void* closure)
     uint64_t* payload = sbfBuffer_getData (buffer);
     uint64_t  now;
     uint64_t  this = *payload;
-    uint64_t  interval;
+    double    interval;
 
     now = sbfPerfCounter_get ();
     if (now < this)
         return;
-    interval = (uint64_t)sbfPerfCounter_microseconds (now - this);
+    interval = sbfPerfCounter_microseconds (now - this);
 
     gMessages++;
     gTimeTotal += interval;
