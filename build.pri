@@ -68,11 +68,12 @@ windows {
         $$top_src/thirdparty/win32/libevent/lib \
         $$top_src/thirdparty/win32/pcre/lib
     LIBS += \
-        advapi32.lib \
+	-liphlpapi \
+        -ladvapi32 \
+        -lws2_32 \
         libevent.lib \
         pcre3.lib \
-        pcreposix3.lib \
-        ws2_32.lib
+        pcreposix3.lib
     QMAKE_LFLAGS += \
         /NODEFAULTLIB:libcmt.lib
 

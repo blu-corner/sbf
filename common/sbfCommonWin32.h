@@ -41,6 +41,8 @@ typedef intptr_t sbfSocket;
 
 #define SBF_ASSERT(x) assert (x)
 
+#define SBF_DLLEXPORT __declspec (dllexport)
+
 typedef HANDLE sbfThread;
 int sbfThread_create (sbfThread* thread, void* (*cb) (void*), void* closure);
 #define sbfThread_join(t) WaitForSingleObject (t, INFINITE)

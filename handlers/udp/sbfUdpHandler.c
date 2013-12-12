@@ -300,7 +300,7 @@ sbfUdpHandlerSendBuffer (sbfHandlerStream stream, sbfBuffer buffer)
     sbfUdpMulticast_sendBuffer (uhs->mSocket, buffer);
 }
 
-sbfHandlerTable sbf_udp_handler =
+SBF_DLLEXPORT sbfHandlerTable sbf_udp_handler =
 {
     sbfUdpHandlerCreate,
     sbfUdpHandlerDestroy,

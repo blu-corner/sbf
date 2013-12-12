@@ -8,6 +8,7 @@ sbfHandler_load (const char* type)
     char             symbol[128];
 #ifdef WIN32
     HMODULE          handle;
+    LPVOID           s;
 #else
     void*            handle;
 #endif
@@ -37,7 +38,18 @@ sbfHandler_load (const char* type)
 
 fail:
 #ifdef WIN32
-    sbfLog_err ("failed to open %s", path);
+    FormatMessage (FORMAT_MESSAGE_ALLOCATE_BUFFER|
+                   FORMAT_MESSAGE_FROM_SYSTEM|
+                   FORMAT_MESSAGE_IGNORE_INSERTS,
+                   NULL,
+                   GetLastError (),
+                   MAKELANGID (LANG_NEUTRAL, SUBLANG_DEFAULT),
+                   (LPTSTR)&s,
+                   0,
+                   NULL);
+    ((char*)s)[strcspn (s, "\r")] = '\0';
+    sbfLog_err ("failed to open %s: %s", path, s);
+    LocalFree (s);
 #else
     sbfLog_err ("failed to open %s: %s", path, dlerror ());
 #endif

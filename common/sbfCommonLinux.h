@@ -43,6 +43,8 @@ typedef int sbfSocket;
 
 #define SBF_ASSERT(x) assert (x)
 
+#define SBF_DLLEXPORT
+
 typedef pthread_t sbfThread;
 #define sbfThread_create(t, cb, closure) pthread_create (t, NULL, cb, closure)
 #define sbfThread_join(t) pthread_join (t, NULL)
