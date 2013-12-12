@@ -4,35 +4,74 @@ static uint32_t
 sbfUdpHandlerParseRange (const char* s, u_int* bits)
 {
     int          found;
+    uint16_t     octets0[4];
     union
     {
         uint32_t address;
         uint8_t  octets[4];
     } u = { 0 };
 
-    found = 0;
+    *bits = 0;
+
     if (sscanf (s,
-                "%hhu.%hhu.%hhu.%hhu/%u",
-                &u.octets[0],
-                &u.octets[1],
-                &u.octets[2],
-                &u.octets[3],
-                bits) == 5)
-        found = 1;
-    else if (sscanf (s,
-                     "%hhu.%hhu.%hhu/%u",
-                     &u.octets[0],
-                     &u.octets[1],
-                     &u.octets[2],
-                     bits) == 4)
-        found = 1;
-    else if (sscanf (s, "%hhu.%hhu/%u", &u.octets[0], &u.octets[1], bits) == 3)
-        found = 1;
-    else if (sscanf (s, "%hhu/%u", &u.octets[0], bits) == 2)
-        found = 1;
-    if (!found)
-        return 0;
-    return u.address;
+                "%hu.%hu.%hu.%hu/%u",
+                &octets0[0],
+                &octets0[1],
+                &octets0[2],
+                &octets0[3],
+                bits) == 5 &&
+        octets0[0] < 256 &&
+        octets0[1] < 256 &&
+        octets0[2] < 256 &&
+        octets0[3] < 256)
+    {
+        u.octets[0] = (uint8_t)octets0[0];
+        u.octets[1] = (uint8_t)octets0[1];
+        u.octets[2] = (uint8_t)octets0[2];
+        u.octets[3] = (uint8_t)octets0[3];
+        return u.address;
+    }
+
+    if (sscanf (s,
+                "%hu.%hu.%hu/%u",
+                &octets0[0],
+                &octets0[1],
+                &octets0[2],
+                bits) == 4 &&
+        octets0[0] < 256 &&
+        octets0[1] < 256 &&
+        octets0[2] < 256)
+    {
+        u.octets[0] = (uint8_t)octets0[0];
+        u.octets[1] = (uint8_t)octets0[1];
+        u.octets[2] = (uint8_t)octets0[2];
+        return u.address;
+    }
+
+    if (sscanf (s,
+                "%hu.%hu/%u",
+                &octets0[0],
+                &octets0[1],
+                bits) == 3 &&
+        octets0[0] < 256 &&
+        octets0[1] < 256)
+    {
+        u.octets[0] = (uint8_t)octets0[0];
+        u.octets[1] = (uint8_t)octets0[1];
+        return u.address;
+    }
+
+    if (sscanf (s,
+                "%hu/%u",
+                &octets0[0],
+                bits) == 2 &&
+        octets0[0] < 256)
+    {
+        u.octets[0] = (uint8_t)octets0[0];
+        return u.address;
+    }
+
+    return 0;
 }
 
 static uint32_t

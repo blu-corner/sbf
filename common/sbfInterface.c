@@ -11,6 +11,15 @@ static u_int         gSbfInterfacesSize;
 static sbfInterface* gSbfInterfaces;
 
 static void
+sbfInterfaceLog (sbfInterface* iff)
+{
+    char tmp[INET_ADDRSTRLEN];
+
+    inet_ntop (AF_INET, &iff->mAddress, tmp, sizeof tmp);
+    sbfLog_debug ("interface %s is %s", iff->mName, tmp);
+}
+
+static void
 sbfInterfaceBuild (void)
 {
 #ifdef WIN32
@@ -45,6 +54,7 @@ sbfInterfaceBuild (void)
 
         iff->mName = xstrdup (aa->AdapterName);
         iff->mAddress = sin->sin_addr.s_addr;
+        sbfInterfaceLog (iff);
     }
 
     free (aa);
@@ -72,6 +82,7 @@ sbfInterfaceBuild (void)
 
         iff->mName = xstrdup (ifa->ifa_name);
         iff->mAddress = sin->sin_addr.s_addr;
+        sbfInterfaceLog (iff);
     }
 
     freeifaddrs (ifa0);
@@ -84,6 +95,7 @@ sbfInterface_find (const char* name)
     sbfInterface* iff;
     uint32_t      mask;
     u_int         i;
+    uint16_t      octets0[4];
     union
     {
         uint32_t address;
@@ -97,22 +109,55 @@ sbfInterface_find (const char* name)
     }
 
     if (sscanf (name,
-                "%hhu.%hhu.%hhu.%hhu",
-                &u.octets[0],
-                &u.octets[1],
-                &u.octets[2],
-                &u.octets[3]) == 4)
+                "%hu.%hu.%hu.%hu",
+                &octets0[0],
+                &octets0[1],
+                &octets0[2],
+                &octets0[3]) == 4 &&
+        octets0[0] < 256 &&
+        octets0[1] < 256 &&
+        octets0[2] < 256 &&
+        octets0[3] < 256)
+    {
         mask = htonl (0xffffffffU);
+        u.octets[0] = (uint8_t)octets0[0];
+        u.octets[1] = (uint8_t)octets0[1];
+        u.octets[2] = (uint8_t)octets0[2];
+        u.octets[3] = (uint8_t)octets0[3];
+    }
     else if (sscanf (name,
-                     "%hhu.%hhu.%hhu",
-                     &u.octets[0],
-                     &u.octets[1],
-                     &u.octets[2]) == 3)
+                     "%hu.%hu.%hu",
+                     &octets0[0],
+                     &octets0[1],
+                     &octets0[2]) == 3 &&
+             octets0[0] < 256 &&
+             octets0[1] < 256 &&
+             octets0[2] < 256)
+    {
         mask = htonl (0xffffff00U);
-    else if (sscanf (name, "%hhu.%hhu", &u.octets[0], &u.octets[1]) == 2)
+        u.octets[0] = (uint8_t)octets0[0];
+        u.octets[1] = (uint8_t)octets0[1];
+        u.octets[2] = (uint8_t)octets0[2];
+    }
+    else if (sscanf (name,
+                     "%hu.%hu",
+                     &octets0[0],
+                     &octets0[1]) == 2 &&
+             octets0[0] < 256 &&
+             octets0[1] < 256)
+    {
         mask = htonl (0xffff0000U);
-    else if (sscanf (name, "%hhu", &u.octets[0]) == 1)
+        u.octets[0] = (uint8_t)octets0[0];
+        u.octets[1] = (uint8_t)octets0[1];
+    }
+    else if (sscanf (name,
+                     "%hu",
+                     &octets0[0]) == 1 &&
+             octets0[0] < 256)
+    {
         mask = htonl (0xff000000U);
+        u.octets[0] = (uint8_t)octets0[0];
+    }
     else
         mask = 0;
     if (mask != 0)
