@@ -8,7 +8,7 @@ sbfTcpListenerReadyQueueCb (sbfQueueItem item, void* closure)
 {
     sbfTcpListener tl = closure;
 
-    if (!tl->mDestroyed)
+    if (tl->mReadyCb != NULL && !tl->mDestroyed)
         tl->mReadyCb (tl, tl->mClosure);
 
     if (sbfRefCount_decrement (&tl->mRefCount))

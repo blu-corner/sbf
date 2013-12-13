@@ -17,9 +17,9 @@ static SBF_INLINE sbfBuffer sbfBuffer_new (sbfPool pool, size_t size);
 static SBF_INLINE sbfBuffer sbfBuffer_newZero (sbfPool pool, size_t size);
 
 static SBF_INLINE sbfBuffer sbfBuffer_wrap (void* data,
-                                        size_t size,
-                                        sbfBufferDestroyCb cb,
-                                        void* closure);
+                                            size_t size,
+                                            sbfBufferDestroyCb cb,
+                                            void* closure);
 
 static SBF_INLINE void sbfBuffer_addRef (sbfBuffer buffer);
 

@@ -17,6 +17,7 @@ struct sbfTcpConnectionImpl
 
     sbfTcpConnectionReadyCb    mReadyCb;
     sbfTcpConnectionReadCb     mReadCb;
+    sbfTcpConnectionErrorCb    mErrorCb;
     void*                      mClosure;
 
     sbfMwThread                mThread;
