@@ -59,7 +59,7 @@ typedef pthread_cond_t sbfCondVar;
 #define sbfCondVar_signal(c) pthread_cond_signal (c)
 
 typedef pthread_mutex_t sbfMutex;
-#define sbfMutex_init(m) pthread_mutex_init (m, NULL)
+int sbfMutex_init (pthread_mutex_t* m);
 #define sbfMutex_destroy(m) pthread_mutex_destroy (m)
 #define sbfMutex_lock(m) pthread_mutex_lock (m)
 #define sbfMutex_unlock(m) pthread_mutex_unlock (m)
