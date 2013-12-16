@@ -70,6 +70,7 @@ typedef CRITICAL_SECTION sbfMutex;
 #define sbfSpinLock_lock sbfMutex_lock
 #define sbfSpinLock_unlock sbfMutex_unlock
 
+#define fileno _fileno
 #define getpid GetCurrentProcessId
 #define sleep(seconds) Sleep (seconds * 1000U)
 #define snprintf _snprintf

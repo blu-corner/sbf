@@ -88,6 +88,7 @@
 #define _Q_INVALIDATE(a)
 #endif
 
+#if 0 /* do not use */
 /*
  * Singly-linked List definitions.
  */
@@ -165,6 +166,7 @@ struct {								\
 		_Q_INVALIDATE((elm)->field.sle_next);			\
 	}								\
 } while (0)
+#endif
 
 /*
  * List definitions.
