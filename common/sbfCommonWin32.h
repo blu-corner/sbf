@@ -14,6 +14,7 @@
 #include <string.h>
 #include <time.h>
 
+#include <process.h>
 #include <winsock2.h> /* must be before windows.h */
 #include <iphlpapi.h>
 #include <ws2tcpip.h>
@@ -71,7 +72,7 @@ typedef CRITICAL_SECTION sbfMutex;
 #define sbfSpinLock_unlock sbfMutex_unlock
 
 #define fileno _fileno
-#define getpid GetCurrentProcessId
+#define getpid _getpid
 #define sleep(seconds) Sleep (seconds * 1000U)
 #define snprintf _snprintf
 #define strcasecmp _stricmp
