@@ -75,6 +75,7 @@ windows {
         libevent.lib \
         pcre3.lib \
         pcreposix3.lib
+
     QMAKE_LFLAGS += \
         /NODEFAULTLIB:libcmt.lib
 
@@ -85,6 +86,21 @@ windows {
     QMAKE_POST_LINK += \
         copy /Y $$shell_path($$top_src/thirdparty/pcre/win32/lib/*.dll) \
 	$$shell_path($$top_build/bin) \
+	$$escape_expand(\n\t)
+    QMAKE_POST_LINK += \
+        del $$shell_path($$top_build/bin/*.pdb) \
+	$$escape_expand(\n\t)
+    QMAKE_POST_LINK += \
+        if not exist $$shell_path($$top_build/lib) \
+	mkdir $$shell_path($$top_build/lib) \
+	$$escape_expand(\n\t)
+    QMAKE_POST_LINK += \
+        copy /Y $$shell_path($$top_src/thirdparty/pcre/win32/lib/*.lib) \
+	$$shell_path($$top_build/lib) \
+	$$escape_expand(\n\t)
+    QMAKE_POST_LINK += \
+        copy /Y $$shell_path($$top_src/thirdparty/libevent/win32/lib/*.lib) \
+	$$shell_path($$top_build/lib) \
 	$$escape_expand(\n\t)
     QMAKE_POST_LINK += \
         if not exist $$shell_path($$top_build/include) \
