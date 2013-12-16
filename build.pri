@@ -17,17 +17,18 @@ QMAKE_LIBDIR += \
     $$top_src/transport/.lib
 
 unix {
-    INCLUDEPATH += \
-        $$top_src/thirdparty/linux/libevent/include
-
     contains(QMAKE_HOST.arch, x86_64) {
+        INCLUDEPATH += \
+            $$top_src/thirdparty/libevent/linux64/include
         LIBS += \
-            $$top_src/thirdparty/linux/libevent/lib64/libevent.a \
-            $$top_src/thirdparty/linux/libevent/lib64/libevent_pthreads.a
+            $$top_src/thirdparty/libevent/linux64/lib/libevent.a \
+            $$top_src/thirdparty/libevent/linux64/lib/libevent_pthreads.a
     } else {
+        INCLUDEPATH += \
+            $$top_src/thirdparty/libevent/linux32/include
         LIBS += \
-            $$top_src/thirdparty/linux/libevent/lib32/libevent.a \
-            $$top_src/thirdparty/linux/libevent/lib32/libevent_pthreads.a
+            $$top_src/thirdparty/libevent/linux32/lib/libevent.a \
+            $$top_src/thirdparty/libevent/linux32/lib/libevent_pthreads.a
     }
 
     QMAKE_CFLAGS += \
@@ -61,12 +62,12 @@ windows {
     DEFINES -= UNICODE
 
     INCLUDEPATH += \
-        $$top_src/thirdparty/win32/libevent/include \
-        $$top_src/thirdparty/win32/pcre/include
+        $$top_src/thirdparty/libevent/win32/include \
+        $$top_src/thirdparty/pcre/win32/include
 
     QMAKE_LIBDIR += \
-        $$top_src/thirdparty/win32/libevent/lib \
-        $$top_src/thirdparty/win32/pcre/lib
+        $$top_src/thirdparty/libevent/win32/lib \
+        $$top_src/thirdparty/pcre/win32/lib
     LIBS += \
 	-liphlpapi \
         -ladvapi32 \
@@ -80,7 +81,7 @@ windows {
     QMAKE_POST_LINK += \
         if not exist $$shell_path($$top_build/bin) \
 	mkdir $$shell_path($$top_build/bin) && \
-        copy /Y $$shell_path($$top_src/thirdparty/win32/pcre/lib/*.dll) \
+        copy /Y $$shell_path($$top_src/thirdparty/pcre/win32/lib/*.dll) \
 	$$shell_path($$top_build/bin)
 
     QMAKE_CFLAGS_RELEASE += -MT
