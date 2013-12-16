@@ -95,11 +95,11 @@ sbfTport_create (sbfMw mw,
         mask = SBF_MW_ALL_THREADS;
     tport->mThreads = mask;
 
-    sbfMutex_init (&tport->mWeightsLock);
+    sbfMutex_init (&tport->mWeightsLock, 0);
     sbfTport_parseWeights (tport);
 
     TAILQ_INIT (&tport->mStreams);
-    sbfMutex_init (&tport->mStreamsLock);
+    sbfMutex_init (&tport->mStreamsLock, 0);
     sbfCondVar_init (&tport->mStreamsCondVar);
 
     handler = table->mCreate (tport, tport->mProperties);

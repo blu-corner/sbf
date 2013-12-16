@@ -13,7 +13,7 @@ sbfQueue_create (int flags)
     queue->mDestroyed = 0;
     sbfRefCount_init (&queue->mRefCount, 1);
 
-    sbfMutex_init (&queue->mMutex);
+    sbfMutex_init (&queue->mMutex, 0);
     sbfCondVar_init (&queue->mCondVar);
 
     sbfLog_debug ("creating %p", queue);

@@ -163,7 +163,7 @@ sbfTport_addStream (sbfTport tport,
     tstream->mReady = 0;
     RB_INIT (&tstream->mTopics);
 
-    sbfMutex_init (&tstream->mSendLock);
+    sbfMutex_init (&tstream->mSendLock, 0);
 
     tstream->mStream = tport->mHandlerTable->mAddStream (tport->mHandler,
                                                          topic,

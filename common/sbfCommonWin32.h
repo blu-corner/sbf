@@ -59,7 +59,7 @@ typedef CONDITION_VARIABLE sbfCondVar;
 #define sbfCondVar_signal(c) WakeConditionVariable (c)
 
 typedef CRITICAL_SECTION sbfMutex;
-#define sbfMutex_init(m) InitializeCriticalSection (m)
+#define sbfMutex_init(m, recursive) InitializeCriticalSection (m)
 #define sbfMutex_destroy(m) DeleteCriticalSection (m)
 #define sbfMutex_lock(m) EnterCriticalSection (m)
 #define sbfMutex_unlock(m) LeaveCriticalSection (m)
