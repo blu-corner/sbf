@@ -70,13 +70,14 @@ typedef CRITICAL_SECTION sbfMutex;
 #define sbfSpinLock_lock sbfMutex_lock
 #define sbfSpinLock_unlock sbfMutex_unlock
 
+#define getpid GetCurrentProcessId
 #define sleep(seconds) Sleep (seconds * 1000U)
 #define snprintf _snprintf
 #define strcasecmp _stricmp
 #define strdup _strdup
 #define strncasecmp _strnicmp
-#define strtoull _strtoui64
 #define strtoll _strtoi64
+#define strtoull _strtoui64
 #define vsnprintf _vsnprintf
 
 int gettimeofday (struct timeval* tv, struct timezone* tz);
