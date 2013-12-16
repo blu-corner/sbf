@@ -1,7 +1,9 @@
 #ifndef _SBF_COMMON_WIN32_H_
 #define _SBF_COMMON_WIN32_H_
 
+#ifndef _CRT_SECURE_NO_WARNINGS
 #define _CRT_SECURE_NO_WARNINGS
+#endif
 
 #include <assert.h>
 #include <errno.h>
