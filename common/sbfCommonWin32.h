@@ -74,7 +74,12 @@ typedef CRITICAL_SECTION sbfMutex;
 #define sbfSpinLock_lock sbfMutex_lock
 #define sbfSpinLock_unlock sbfMutex_unlock
 
-#define sleep(seconds) Sleep (seconds * 1000U)
+static inline void
+sleep (u_int seconds)
+{
+    Sleep (seconds * 1000U);
+}
+
 #define snprintf _snprintf
 #define strcasecmp _stricmp
 #define strncasecmp _strnicmp
