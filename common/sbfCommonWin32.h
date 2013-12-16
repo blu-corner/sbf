@@ -65,7 +65,7 @@ typedef CRITICAL_SECTION sbfMutex;
 #define sbfMutex_unlock(m) LeaveCriticalSection (m)
 
 #define sbfSpinLock sbfMutex
-#define sbfSpinLock_init sbfMutex_init
+#define sbfSpinLock_init(l) sbfMutex_init (l, 0)
 #define sbfSpinLock_destroy sbfMutex_destroy
 #define sbfSpinLock_lock sbfMutex_lock
 #define sbfSpinLock_unlock sbfMutex_unlock

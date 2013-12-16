@@ -87,6 +87,10 @@ windows {
 	$$shell_path($$top_build/bin) \
 	$$escape_expand(\n\t)
     QMAKE_POST_LINK += \
+        if not exist $$shell_path($$top_build/include) \
+	mkdir $$shell_path($$top_build/include) \
+	$$escape_expand(\n\t)
+    QMAKE_POST_LINK += \
         copy /Y $$shell_path($$top_src/thirdparty/pcre/win32/include/*.h) \
 	$$shell_path($$top_build/include) \
 	$$escape_expand(\n\t)
