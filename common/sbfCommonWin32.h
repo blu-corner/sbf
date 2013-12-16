@@ -1,6 +1,9 @@
 #ifndef _SBF_COMMON_WIN32_H_
 #define _SBF_COMMON_WIN32_H_
 
+#ifndef _CRT_NONSTDC_NO_WARNINGS
+#define _CRT_NONSTDC_NO_WARNINGS
+#endif
 #ifndef _CRT_SECURE_NO_WARNINGS
 #define _CRT_SECURE_NO_WARNINGS
 #endif
@@ -71,12 +74,9 @@ typedef CRITICAL_SECTION sbfMutex;
 #define sbfSpinLock_lock sbfMutex_lock
 #define sbfSpinLock_unlock sbfMutex_unlock
 
-#define fileno _fileno
-#define getpid _getpid
 #define sleep(seconds) Sleep (seconds * 1000U)
 #define snprintf _snprintf
 #define strcasecmp _stricmp
-#define strdup _strdup
 #define strncasecmp _strnicmp
 #define strtoll _strtoi64
 #define strtoull _strtoui64
