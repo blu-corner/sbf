@@ -70,6 +70,8 @@ typedef pthread_spinlock_t sbfSpinLock;
 #define sbfSpinLock_lock(s) pthread_spin_lock (s)
 #define sbfSpinLock_unlock(s) pthread_spin_unlock (s)
 
+char* fgetln(FILE* fp, size_t* len);
+
 SBF_END_DECLS
 
 #endif /* _SBF_COMMON_LINUX_H_ */

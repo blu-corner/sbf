@@ -7,6 +7,7 @@ HEADERS += \
     sbfBuffer.h \
     sbfBufferInline.h \
     sbfCommon.h \
+    sbfCsvParser.h \
     sbfFatal.h \
     sbfInterface.h \
     sbfKeyValue.h \
@@ -20,7 +21,8 @@ HEADERS += \
     sbfTcpListener.h \
     sbfVersion.h
 SOURCES += \
-    sbfBuffer.c \
+    sbfBuffer.c \ 
+    sbfCsvParser.c \
     sbfFatal.c \
     sbfInterface.c \
     sbfKeyValue.c \
@@ -33,11 +35,11 @@ SOURCES += \
     sbfUdpMulticast.c
 unix {
     HEADERS += sbfCommonLinux.h
-    SOURCES += sbfCommonLinux.c
+    SOURCES += sbfCommonLinux.c fgetln.c
 }
 windows {
     HEADERS += sbfCommonWin32.h
-    SOURCES += sbfCommonWin32.c getopt.c
+    SOURCES += sbfCommonWin32.c getopt.c fgetln.c
 }
 
 install_headers.path = $$top_build/include
@@ -45,6 +47,7 @@ install_headers.files = \
     sbfBuffer.h \
     sbfBufferInline.h \
     sbfCommon.h \
+    sbfCsvParser.h \
     sbfFatal.h \
     sbfInterface.h \
     sbfKeyValue.h \

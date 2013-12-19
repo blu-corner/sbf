@@ -87,6 +87,8 @@ sleep (u_int seconds)
 #define strtoull _strtoui64
 #define vsnprintf _vsnprintf
 
+char* fgetln(FILE* fp, size_t* len);
+
 int gettimeofday (struct timeval* tv, struct timezone* tz);
 #define gmtime_r(tp, tm) gmtime_s (tm, tp)
 

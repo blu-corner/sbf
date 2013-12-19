@@ -15,7 +15,7 @@ sbfUdpMulticast_create (sbfUdpMulticastType type,
 #else
     int                opt = 1;
 #endif
-  
+
     s = xcalloc (1, sizeof *s);
     s->mType = type;
     s->mPool = sbfBuffer_createPool (SBF_UDP_MULTICAST_SIZE_LIMIT);
@@ -42,7 +42,11 @@ sbfUdpMulticast_create (sbfUdpMulticastType type,
     }
     else
     {
-        if (setsockopt (s->mSocket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0)
+        if (setsockopt (s->mSocket,
+                        SOL_SOCKET,
+                        SO_REUSEADDR,
+                        &opt,
+                        sizeof opt) < 0)
             goto fail;
 
         memset (&sin, 0, sizeof sin);
