@@ -10,7 +10,12 @@ sbfUdpMulticast_create (sbfUdpMulticastType type,
     struct in_addr     ia;
     struct ip_mreq     im;
     struct sockaddr_in sin;
-
+#ifdef WIN32
+    char               opt = 1;
+#else
+    int                opt = 1;
+#endif
+  
     s = xcalloc (1, sizeof *s);
     s->mType = type;
     s->mPool = sbfBuffer_createPool (SBF_UDP_MULTICAST_SIZE_LIMIT);
@@ -37,7 +42,8 @@ sbfUdpMulticast_create (sbfUdpMulticastType type,
     }
     else
     {
-        evutil_make_listen_socket_reuseable (s->mSocket);
+        if (setsockopt (s->mSocket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0)
+            goto fail;
 
         memset (&sin, 0, sizeof sin);
         sin.sin_family = AF_INET;
