@@ -74,7 +74,7 @@ typedef CRITICAL_SECTION sbfMutex;
 #define sbfSpinLock_lock sbfMutex_lock
 #define sbfSpinLock_unlock sbfMutex_unlock
 
-static inline void
+static SBF_INLINE void
 sleep (u_int seconds)
 {
     Sleep (seconds * 1000U);
@@ -105,6 +105,34 @@ int     BSDgetopt(int, char* const*, const char*);
 #define optopt            BSDoptopt
 #define optreset          BSDoptreset
 #define optarg            BSDoptarg
+
+struct timespec
+{
+    time_t tv_sec;
+    long   tv_nsec;
+};
+typedef enum
+{
+    CLOCK_REALTIME,
+} clockid_t;
+static SBF_INLINE int
+clock_gettime (clockid_t clock_id, struct timespec* tp)
+{
+    struct timeval tv;
+
+    if (clock_id != CLOCK_REALTIME)
+    {
+        errno = EINVAL;
+        return -1;
+    }
+
+    if (gettimeofday (&tv, NULL) != 0)
+        return -1;
+    tp->tv_sec = tv.tv_sec;
+    tp->tv_nsec = tv.tv_usec * 1000U;
+
+    return 0;
+}
 
 SBF_END_DECLS
 
