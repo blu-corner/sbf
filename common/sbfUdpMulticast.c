@@ -51,7 +51,7 @@ sbfUdpMulticast_create (sbfUdpMulticastType type,
 
         memset (&sin, 0, sizeof sin);
         sin.sin_family = AF_INET;
-        sin.sin_addr.s_addr = INADDR_ANY;
+        sin.sin_addr.s_addr = address->sin_addr.s_addr;
         sin.sin_port = address->sin_port;
         if (bind (s->mSocket, (struct sockaddr*)&sin, sizeof sin) < 0)
             goto fail;
