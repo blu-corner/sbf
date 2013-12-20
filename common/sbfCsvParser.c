@@ -16,7 +16,7 @@ sbfCsvParserAdd (char*** fields, u_int* nfields, char* field)
 }
 
 sbfError
-sbfCsvParser_next (FILE* f, char*** fields, u_int* nfields)
+sbfCsvParser_next (FILE* f, char*** fields, u_int* nfields, u_char separator)
 {
     char*  buf;
     size_t len;
@@ -74,7 +74,7 @@ sbfCsvParser_next (FILE* f, char*** fields, u_int* nfields)
         {
             c = buf[off++];
 
-            if (!quoted && c == ',')
+            if (!quoted && c == separator)
             {
                 while (nextlen > 0 && next[nextlen - 1] == ' ')
                     nextlen--;
@@ -89,7 +89,7 @@ sbfCsvParser_next (FILE* f, char*** fields, u_int* nfields)
                 {
                     while (off != len && (buf[off] == ' ' || buf[off] == '\t'))
                         off++;
-                    if (off != len && buf[off++] != ',')
+                    if (off != len && buf[off++] != separator)
                         goto fail;
                     if (off != len)
                         comma = 1;
