@@ -46,7 +46,8 @@ sbfCsvParser_next (FILE* f, char*** fields, u_int* nfields, u_char separator)
         }
         if (len > 0 && buf[len - 1] == '\n')
             len--;
-    } while (len == 0);
+    }
+    while (len == 0);
 
     *fields = NULL;
     *nfields = 0;
