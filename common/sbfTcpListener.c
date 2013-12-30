@@ -30,15 +30,22 @@ sbfTcpListenerAcceptQueueCb (sbfQueueItem item, void* closure)
 
 static void
 sbfTcpListenerEventCb (struct evconnlistener* listener,
-                       evutil_socket_t socket,
+                       evutil_socket_t s,
                        struct sockaddr* address,
                        int length,
                        void* closure)
 {
-    sbfTcpListener   tl = closure;
-    sbfTcpConnection tc;
+    sbfTcpListener      tl = closure;
+    sbfTcpConnection    tc;
+    char                tmp[INET_ADDRSTRLEN];
+    struct sockaddr_in* sin = (struct sockaddr_in*)address;
 
-    tc = sbfTcpConnection_wrap (socket);
+    inet_ntop (AF_INET, &sin->sin_addr, tmp, sizeof tmp);
+    sbfLog_info ("connection from %s:%hu",
+                 tmp,
+                 ntohs (sin->sin_port));
+
+    tc = sbfTcpConnection_wrap (s);
     tc->mListener = tl;
 
     /*
@@ -82,7 +89,8 @@ sbfTcpListener_create (struct sbfMwThreadImpl* thread,
                                              tl,
                                              LEV_OPT_THREADSAFE|
                                              LEV_OPT_CLOSE_ON_FREE|
-                                             LEV_OPT_CLOSE_ON_EXEC,
+                                             LEV_OPT_CLOSE_ON_EXEC|
+                                             LEV_OPT_REUSEABLE,
                                              -1,
                                              (struct sockaddr*)&sin,
                                              sizeof sin);

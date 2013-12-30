@@ -297,6 +297,7 @@ sbfUdpHandlerAddStream (sbfHandler handler,
                        sbfUdpHandlerAddCompleteEventCb,
                        uhs);
     }
+
     return uhs;
 }
 

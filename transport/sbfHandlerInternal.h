@@ -56,6 +56,7 @@ typedef struct
 
 sbfHandlerTable* sbfHandler_load (const char* type);
 
+size_t sbfHandler_size (void* data, size_t size);
 void sbfHandler_message (sbfHandlerHandle handle, sbfBuffer buffer);
 
 #endif /* _SBF_HANDLER_H_ */

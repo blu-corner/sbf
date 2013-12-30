@@ -41,7 +41,7 @@ sbfTcpConnectionEventReadCb (struct bufferevent* bev, void* closure)
 }
 
 static void
-sbfTcpConnectionEventEventCb (struct bufferevent* be,
+sbfTcpConnectionEventEventCb (struct bufferevent* bev,
                               short events,
                               void* closure)
 {
@@ -96,6 +96,7 @@ sbfTcpConnectionSet (sbfTcpConnection tc,
                        NULL,
                        sbfTcpConnectionEventEventCb,
                        tc);
+    bufferevent_enable (tc->mEvent, EV_READ|EV_WRITE);
 
     return 0;
 }

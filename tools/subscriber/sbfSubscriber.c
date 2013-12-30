@@ -114,6 +114,9 @@ main (int argc, char** argv)
     properties = sbfKeyValue_create ();
     sbfKeyValue_put (properties, "interface", interf);
 
+    sbfKeyValue_put (properties, "listen", "0");
+    sbfKeyValue_put (properties, "connect0", "127.0.0.1");
+
     tport = sbfTport_create (mw, SBF_MW_ALL_THREADS, handler, properties);
 
     sbfTimer_create (sbfMw_getDefaultThread (mw),

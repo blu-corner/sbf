@@ -10,7 +10,6 @@ SBF_BEGIN_DECLS
 
 struct sbfTcpListenerImpl
 {
-    int                    mSocket;
     struct evconnlistener* mListener;
 
     sbfTcpListenerReadyCb  mReadyCb;

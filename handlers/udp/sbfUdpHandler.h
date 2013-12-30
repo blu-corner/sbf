@@ -38,10 +38,10 @@ struct sbfUdpHandlerStreamImpl
     uint32_t                           mAddress;
     sbfUdpMulticast                    mSocket;
 
+    struct event                       mEventAdd;
     sbfHandlerAddStreamCompleteCb      mAddStreamCompleteCb;
     void*                              mClosure;
 
-    struct event                       mEventAdd;
     struct event                       mEventListen;
 
     RB_ENTRY (sbfUdpHandlerStreamImpl) mTreeEntry;

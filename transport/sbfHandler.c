@@ -56,6 +56,21 @@ fail:
     return NULL;
 }
 
+size_t
+sbfHandler_size (void* data, size_t size)
+{
+    sbfTportHeader* hdr = data;
+    size_t          needed;
+
+    if (size < sizeof *hdr)
+        return 0;
+
+    needed = (sizeof *hdr) + hdr->mTopicSize + hdr->mSize;
+    if (size < needed)
+        return 0;
+    return needed;
+}
+
 void
 sbfHandler_message (sbfHandlerHandle handle, sbfBuffer buffer)
 {
