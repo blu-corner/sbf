@@ -18,7 +18,7 @@ sbfTimerEventCb (int fd, short events, void* closure)
 {
     sbfTimer timer = closure;
 
-    evtimer_add (&timer->mEvent, &timer->mTime);
+    event_add (&timer->mEvent, &timer->mTime);
 
     if (!timer->mDestroyed)
     {
