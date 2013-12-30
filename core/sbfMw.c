@@ -42,6 +42,10 @@ sbfMw_create (u_int threads)
     if (threads == 0 || threads > SBF_MW_THREAD_LIMIT)
         return NULL;
 
+#ifdef linux
+    signal (SIGPIPE, SIG_IGN);
+#endif
+
     mw = xcalloc (1, sizeof *mw);
     mw->mNumThreads = threads;
     mw->mThreads = xcalloc (mw->mNumThreads, sizeof *mw->mThreads);
