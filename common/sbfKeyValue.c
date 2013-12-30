@@ -54,6 +54,23 @@ sbfKeyValue_get (sbfKeyValue table, const char* key)
     return sbfKeyValueGetValue (item);
 }
 
+const char*
+sbfKeyValue_getV (sbfKeyValue table, const char* fmt, ...)
+{
+    va_list     ap;
+    char*       key;
+    const char* value;
+
+    va_start (ap, fmt);
+    if (vasprintf (&key, fmt, ap) == -1)
+        sbfFatal ("out of memory");
+    va_end (ap);
+
+    value = sbfKeyValue_get (table, key);
+    free (key);
+    return value;
+}
+
 void
 sbfKeyValue_put (sbfKeyValue table, const char* key, const char* value)
 {
