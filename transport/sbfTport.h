@@ -18,6 +18,8 @@ sbfTport sbfTport_create (sbfMw mw,
                           sbfKeyValue properties);
 void sbfTport_destroy (sbfTport tport);
 
+sbfMw sbfTport_getMw (sbfTport tport);
+
 SBF_END_DECLS
 
 #endif /* _SBF_TPORT_H_ */

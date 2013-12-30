@@ -148,3 +148,9 @@ sbfTport_destroy (sbfTport tport)
     sbfLog_debug ("freeing %p", tport);
     sbfTportFree (tport);
 }
+
+sbfMw
+sbfTport_getMw (sbfTport tport)
+{
+    return tport->mMw;
+}
