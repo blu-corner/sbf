@@ -50,13 +50,15 @@ sbfTcpMeshHandlerConnectionReadCb (struct bufferevent* bev, void* closure)
     if (size == 0)
         return;
 
-    buffer = sbfBuffer_new (c->mParent->mPool, size);
-    memcpy (sbfBuffer_getData (buffer), data, size);
+    if (c->mParent->mHandle != NULL)
+    {
+        buffer = sbfBuffer_new (c->mParent->mPool, size);
+        memcpy (sbfBuffer_getData (buffer), data, size);
 
-    sbfHandler_message (c->mParent->mHandle, buffer);
+        sbfHandler_message (c->mParent->mHandle, buffer);
+        sbfBuffer_destroy (buffer);
+    }
     evbuffer_drain (evb, size);
-
-    sbfBuffer_destroy (buffer);
 }
 
 static void
