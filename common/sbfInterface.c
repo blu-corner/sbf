@@ -178,3 +178,30 @@ sbfInterface_find (const char* name)
     }
     return 0;
 }
+
+sbfError
+sbfInterface_getHostPort (const char* s, struct sockaddr_in* sin)
+{
+    char*         copy;
+    char*         cp;
+    char*         endptr;
+    unsigned long ul;
+
+    copy = xstrdup (s);
+
+    cp = strchr (copy, ':');
+    if (cp == NULL)
+        return EINVAL;
+
+    ul = strtoul (cp + 1, &endptr, 10);
+    if (ul == 0 || ul > UINT16_MAX || *endptr != '\0')
+        return ERANGE;
+    sin->sin_port = ntohs ((u_short)ul);
+
+    *cp = '\0';
+    if (inet_pton (AF_INET, copy, &sin->sin_addr) == 0)
+        return EINVAL;
+
+    free (copy);
+    return 0;
+}

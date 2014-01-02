@@ -11,6 +11,9 @@ SBF_BEGIN_DECLS
  */
 uint32_t sbfInterface_find (const char* name);
 
+/* Split string into host and port. */
+sbfError sbfInterface_parseAddress (const char* s, struct sockaddr_in* sin);
+
 SBF_END_DECLS
 
 #endif /* _SBF_INTERFACE_H_ */
