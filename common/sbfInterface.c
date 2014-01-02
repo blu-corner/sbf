@@ -180,7 +180,7 @@ sbfInterface_find (const char* name)
 }
 
 sbfError
-sbfInterface_getHostPort (const char* s, struct sockaddr_in* sin)
+sbfInterface_parseAddress (const char* s, struct sockaddr_in* sin)
 {
     char*         copy;
     char*         cp;
