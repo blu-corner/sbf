@@ -33,8 +33,6 @@ sbfCsvParser_next (FILE* f,
     int    comma;
     int    saved_errno;
 
-    if (line != NULL)
-        *line = 0;
     do
     {
         buf = fgetln (f, &len);
