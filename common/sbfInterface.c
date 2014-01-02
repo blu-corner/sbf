@@ -201,6 +201,7 @@ sbfInterface_getHostPort (const char* s, struct sockaddr_in* sin)
     *cp = '\0';
     if (inet_pton (AF_INET, copy, &sin->sin_addr) == 0)
         return EINVAL;
+    sin->sin_family = AF_INET;
 
     free (copy);
     return 0;
