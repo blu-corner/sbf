@@ -8,7 +8,8 @@ SBF_BEGIN_DECLS
 sbfError sbfCsvParser_next (FILE* f,
                             char*** fields,
                             u_int* nfields,
-                            u_char separator);
+                            u_char separator,
+                            u_int* line);
 void sbfCsvParser_free (char** fields, u_int nfields);
 
 SBF_END_DECLS

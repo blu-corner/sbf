@@ -16,7 +16,11 @@ sbfCsvParserAdd (char*** fields, u_int* nfields, char* field)
 }
 
 sbfError
-sbfCsvParser_next (FILE* f, char*** fields, u_int* nfields, u_char separator)
+sbfCsvParser_next (FILE* f,
+                   char*** fields,
+                   u_int* nfields,
+                   u_char separator,
+                   u_int* line)
 {
     char*  buf;
     size_t len;
@@ -29,6 +33,8 @@ sbfCsvParser_next (FILE* f, char*** fields, u_int* nfields, u_char separator)
     int    comma;
     int    saved_errno;
 
+    if (line != NULL)
+        *line = 0;
     do
     {
         buf = fgetln (f, &len);
@@ -39,6 +45,8 @@ sbfCsvParser_next (FILE* f, char*** fields, u_int* nfields, u_char separator)
                 return ENOENT;
            return saved_errno;
         }
+        if (line != NULL)
+            (*line)++;
         while (len > 0 && (*buf == ' ' || *buf == '\t'))
         {
             buf++;
