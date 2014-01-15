@@ -102,7 +102,7 @@ sbfTcpConnectionSet (sbfTcpConnection tc,
 }
 
 sbfTcpConnection
-sbfTcpConnection_wrap (int s)
+sbfTcpConnection_wrap (int s, struct sockaddr_in* sin)
 {
     sbfTcpConnection tc;
 
@@ -111,6 +111,7 @@ sbfTcpConnection_wrap (int s)
 
     tc = xcalloc (1, sizeof *tc);
     tc->mSocket = s;
+    memcpy (&tc->mPeer, sin, sizeof tc->mPeer);
 
     return tc;
 }
@@ -125,17 +126,46 @@ sbfTcpConnection_create (sbfMwThread thread,
                          sbfTcpConnectionReadCb readCb,
                          void* closure)
 {
-    sbfTcpConnection tc;
-    int              s;
+    sbfTcpConnection   tc;
+    int                s;
+    struct addrinfo    hints, *res, *res0;
+    int                error;
+    char               port0[16];
+    struct sockaddr_in sin;
+    char               tmp[INET_ADDRSTRLEN];
 
-    s = socket (AF_INET, SOCK_STREAM, IPPROTO_TCP);
-    if (s < 0)
+    memset (&hints, 0, sizeof hints);
+    hints.ai_family = AF_INET;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_protocol = IPPROTO_TCP;
+
+    snprintf (port0, sizeof port0, "%hu", port);
+    error = evutil_getaddrinfo (address, port0, &hints, &res0);
+    if (error != 0)
         return NULL;
+    s = -1;
+    for (res = res0; res != NULL; res = res->ai_next) {
+        s = socket (res->ai_family, res->ai_socktype, res->ai_protocol);
+        if (s == -1)
+            continue;
+        if (connect (s, res->ai_addr, res->ai_addrlen) == -1) {
+            close (s);
+            s = -1;
+            continue;
+        }
+        break;
+    }
+    if (s == -1)
+        return NULL;
+    memcpy (&sin, res->ai_addr, sizeof sin);
+    freeaddrinfo (res0);
 
-    tc = sbfTcpConnection_wrap (s);
+    tc = sbfTcpConnection_wrap (s, &sin);
     if (tc == NULL)
         return NULL;
-    sbfLog_debug ("creating %p", tc);
+
+    inet_ntop (AF_INET, &sin.sin_addr, tmp, sizeof tmp);
+    sbfLog_debug ("creating %p to %s:%hu", tc, tmp, ntohs (sin.sin_port));
 
     if (sbfTcpConnectionSet (tc,
                              thread,
@@ -144,13 +174,6 @@ sbfTcpConnection_create (sbfMwThread thread,
                              errorCb,
                              readCb,
                              closure) != 0)
-        goto fail;
-
-    if (bufferevent_socket_connect_hostname (tc->mEvent,
-                                             NULL, /* DNS can block */
-                                             AF_INET,
-                                             address,
-                                             port) != 0)
         goto fail;
 
     return tc;
@@ -183,7 +206,13 @@ sbfTcpConnection_accept (sbfTcpConnection tc,
                          sbfTcpConnectionReadCb readCb,
                          void* closure)
 {
-    sbfLog_debug ("accepting %p", tc);
+    char tmp[INET_ADDRSTRLEN];
+
+    inet_ntop (AF_INET, &tc->mPeer.sin_addr, tmp, sizeof tmp);
+    sbfLog_debug ("accepting %p from %s:%hu",
+                  tc,
+                  tmp,
+                  ntohs (tc->mPeer.sin_port));
 
     return sbfTcpConnectionSet (tc,
                                 thread,
@@ -206,4 +235,10 @@ sbfTcpConnection_sendBuffer (sbfTcpConnection tc, sbfBuffer buffer)
     bufferevent_write (tc->mEvent,
                        sbfBuffer_getData (buffer),
                        sbfBuffer_getSize (buffer));
+}
+
+struct sockaddr_in*
+sbfTcpConnection_getPeer (sbfTcpConnection tc)
+{
+    return &tc->mPeer;
 }

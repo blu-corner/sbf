@@ -41,6 +41,8 @@ sbfError sbfTcpConnection_accept (sbfTcpConnection tc,
 void sbfTcpConnection_send (sbfTcpConnection tc, void* data, size_t size);
 void sbfTcpConnection_sendBuffer (sbfTcpConnection tc, sbfBuffer buffer);
 
+struct sockaddr_in* sbfTcpConnection_getPeer (sbfTcpConnection tc);
+
 SBF_END_DECLS
 
 #endif /* _SBF_TCP_CONNECTION_H_ */

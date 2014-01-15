@@ -15,6 +15,8 @@ struct sbfTcpConnectionImpl
     sbfSocket                  mSocket;
     struct bufferevent*        mEvent;
 
+    struct sockaddr_in         mPeer;
+
     sbfTcpConnectionReadyCb    mReadyCb;
     sbfTcpConnectionReadCb     mReadCb;
     sbfTcpConnectionErrorCb    mErrorCb;
@@ -29,7 +31,7 @@ struct sbfTcpConnectionImpl
     struct sbfTcpListenerImpl* mListener;
 };
 
-sbfTcpConnection sbfTcpConnection_wrap (int socket);
+sbfTcpConnection sbfTcpConnection_wrap (int socket, struct sockaddr_in* sin);
 
 SBF_END_DECLS
 

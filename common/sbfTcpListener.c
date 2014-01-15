@@ -37,15 +37,9 @@ sbfTcpListenerEventCb (struct evconnlistener* listener,
 {
     sbfTcpListener      tl = closure;
     sbfTcpConnection    tc;
-    char                tmp[INET_ADDRSTRLEN];
     struct sockaddr_in* sin = (struct sockaddr_in*)address;
 
-    inet_ntop (AF_INET, &sin->sin_addr, tmp, sizeof tmp);
-    sbfLog_info ("connection from %s:%hu",
-                 tmp,
-                 ntohs (sin->sin_port));
-
-    tc = sbfTcpConnection_wrap (s);
+    tc = sbfTcpConnection_wrap (s, sin);
     tc->mListener = tl;
 
     /*
