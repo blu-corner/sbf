@@ -47,8 +47,11 @@ sbfTcpConnectionEventEventCb (struct bufferevent* bev,
 {
     sbfTcpConnection tc = closure;
 
+    sbfLog_debug ("XXX %hx", events);
+
     if (events & BEV_EVENT_CONNECTED)
     {
+        bufferevent_enable (tc->mEvent, EV_READ|EV_WRITE);
         sbfRefCount_increment (&tc->mRefCount);
         sbfQueue_enqueue (tc->mQueue, sbfTcpConnectionReadyQueueCb, tc);
         return;
@@ -96,7 +99,6 @@ sbfTcpConnectionSet (sbfTcpConnection tc,
                        NULL,
                        sbfTcpConnectionEventEventCb,
                        tc);
-    bufferevent_enable (tc->mEvent, EV_READ|EV_WRITE);
 
     return 0;
 }
@@ -146,14 +148,8 @@ sbfTcpConnection_create (sbfMwThread thread,
     s = -1;
     for (res = res0; res != NULL; res = res->ai_next) {
         s = socket (res->ai_family, res->ai_socktype, res->ai_protocol);
-        if (s == -1)
-            continue;
-        if (connect (s, res->ai_addr, res->ai_addrlen) == -1) {
-            close (s);
-            s = -1;
-            continue;
-        }
-        break;
+        if (s != -1)
+            break;
     }
     if (s == -1)
         return NULL;
@@ -174,6 +170,11 @@ sbfTcpConnection_create (sbfMwThread thread,
                              errorCb,
                              readCb,
                              closure) != 0)
+        goto fail;
+
+    if (bufferevent_socket_connect (tc->mEvent,
+                                    (struct sockaddr*)&sin,
+                                    sizeof sin) != 0)
         goto fail;
 
     return tc;
@@ -206,7 +207,8 @@ sbfTcpConnection_accept (sbfTcpConnection tc,
                          sbfTcpConnectionReadCb readCb,
                          void* closure)
 {
-    char tmp[INET_ADDRSTRLEN];
+    char     tmp[INET_ADDRSTRLEN];
+    sbfError error;
 
     inet_ntop (AF_INET, &tc->mPeer.sin_addr, tmp, sizeof tmp);
     sbfLog_debug ("accepting %p from %s:%hu",
@@ -214,13 +216,16 @@ sbfTcpConnection_accept (sbfTcpConnection tc,
                   tmp,
                   ntohs (tc->mPeer.sin_port));
 
-    return sbfTcpConnectionSet (tc,
-                                thread,
-                                queue,
-                                readyCb,
-                                errorCb,
-                                readCb,
-                                closure);
+    error = sbfTcpConnectionSet (tc,
+                                  thread,
+                                  queue,
+                                  readyCb,
+                                  errorCb,
+                                  readCb,
+                                  closure);
+    if (error == 0)
+        bufferevent_enable (tc->mEvent, EV_READ|EV_WRITE);
+    return error;
 }
 
 void
