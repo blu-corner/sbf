@@ -209,7 +209,8 @@ sbfTcpMeshHandlerDestroy (sbfHandler handler)
         sbfTcpMeshHandlerFreeConnection (c);
     sbfMutex_destroy (&tmh->mMutex);
 
-    evconnlistener_free (tmh->mListener);
+    if (tmh->mListener != NULL)
+        evconnlistener_free (tmh->mListener);
 
     sbfPool_destroy (tmh->mPool);
     free (tmh);
