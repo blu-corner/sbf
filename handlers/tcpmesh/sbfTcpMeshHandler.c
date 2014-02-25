@@ -266,7 +266,7 @@ sbfTcpMeshHandlerCreate (sbfTport tport, sbfKeyValue properties)
                                               sizeof sin);
         if (tmh->mListener == NULL)
         {
-            sbfLog_err ("failed to create listener");
+            sbfLog_err ("failed to create listener: %s", strerror (errno));
             goto fail;
         }
     }
