@@ -19,6 +19,13 @@ windows {
 }
 
 unix {
+    LIBS += \
+        -lsbfcore \
+        -lsbfcommon \
+        -lsbftransport
+}
+
+unix {
     target.path = $$top_build/lib
 }
 

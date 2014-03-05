@@ -21,8 +21,8 @@ unix {
         INCLUDEPATH += \
             $$top_src/thirdparty/libevent/linux64/include
         LIBS += \
-            $$top_src/thirdparty/libevent/linux64/lib/libevent.a \
-            $$top_src/thirdparty/libevent/linux64/lib/libevent_pthreads.a
+            $$top_src/thirdparty/libevent/linux64/lib/libevent.so \
+            $$top_src/thirdparty/libevent/linux64/lib/libevent_pthreads.so
     } else {
         INCLUDEPATH += \
             $$top_src/thirdparty/libevent/linux32/include
