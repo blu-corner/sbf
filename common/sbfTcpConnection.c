@@ -47,8 +47,6 @@ sbfTcpConnectionEventEventCb (struct bufferevent* bev,
 {
     sbfTcpConnection tc = closure;
 
-    sbfLog_debug ("XXX %hx", events);
-
     if (events & BEV_EVENT_CONNECTED)
     {
         bufferevent_enable (tc->mEvent, EV_READ|EV_WRITE);
