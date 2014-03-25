@@ -6,5 +6,6 @@ SUBDIRS = \
    common \
    core \
    transport \
+   requestreply \
    handlers \
    tools

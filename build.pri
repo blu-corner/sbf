@@ -10,10 +10,12 @@ DESTDIR = .lib
 INCLUDEPATH += \
     $$top_src/core \
     $$top_src/common \
+    $$top_src/requestreply \
     $$top_src/transport
 QMAKE_LIBDIR += \
     $$top_src/core/.lib \
     $$top_src/common/.lib \
+    $$top_src/requestreply/.lib \
     $$top_src/transport/.lib
 
 unix {
