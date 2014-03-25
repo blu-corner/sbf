@@ -90,6 +90,30 @@ sbfInterfaceBuild (void)
 }
 
 uint32_t
+sbfInterface_first (void)
+{
+    sbfInterface* iff;
+    u_int         i;
+
+    if (!gSbfInterfacesReady)
+    {
+        sbfInterfaceBuild ();
+        gSbfInterfacesReady = 1;
+    }
+
+    for (i = 0; i < gSbfInterfacesSize; i++)
+    {
+        iff = &gSbfInterfaces[i];
+        if (strcmp (iff->mName, "lo") == 0)
+            continue;
+        if ((ntohl (iff->mAddress) & 0xff000000U) == 127)
+            continue;
+        return iff->mAddress;
+    }
+    return 0;
+}
+
+uint32_t
 sbfInterface_find (const char* name)
 {
     sbfInterface* iff;

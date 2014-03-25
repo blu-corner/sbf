@@ -8,6 +8,7 @@ HEADERS += \
     sbfBufferInline.h \
     sbfCommon.h \
     sbfCsvParser.h \
+    sbfGuid.h \
     sbfFatal.h \
     sbfInterface.h \
     sbfKeyValue.h \
@@ -24,6 +25,7 @@ SOURCES += \
     sbfBuffer.c \ 
     sbfCsvParser.c \
     sbfFatal.c \
+    sbfGuid.c \
     sbfInterface.c \
     sbfKeyValue.c \
     sbfLog.c \
@@ -49,6 +51,7 @@ install_headers.files = \
     sbfCommon.h \
     sbfCsvParser.h \
     sbfFatal.h \
+    sbfGuid.h \
     sbfInterface.h \
     sbfKeyValue.h \
     sbfLog.h \

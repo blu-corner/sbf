@@ -5,6 +5,9 @@
 
 SBF_BEGIN_DECLS
 
+/* Get first interface that isn't local. */
+uint32_t sbfInterface_first (void);
+
 /*
  * Name is either an interface name (eth0) or an address in the form 10, 10.1,
  * 10.1.2, 10.1.2.3.
