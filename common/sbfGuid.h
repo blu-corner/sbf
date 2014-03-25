@@ -14,6 +14,7 @@ typedef SBF_PACKED(struct
 
 void sbfGuid_new (sbfGuid* g, uint64_t seed);
 int sbfGuid_compare (const sbfGuid* g1, const sbfGuid* g2);
+void sbfGuid_copy (sbfGuid* to, const sbfGuid* from);
 sbfGuid* sbfGuid_increment (sbfGuid* g, u_int n);
 char* sbfGuid_toString (const sbfGuid* g, char* buf, size_t len);
 

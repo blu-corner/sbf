@@ -27,6 +27,12 @@ sbfGuid_compare (const sbfGuid* g1, const sbfGuid* g2)
     return memcmp (g1, g2, sizeof *g1);
 }
 
+void
+sbfGuid_copy (sbfGuid* to, const sbfGuid* from)
+{
+    memcpy (to, from, sizeof *to);
+}
+
 sbfGuid*
 sbfGuid_increment (sbfGuid* g, u_int n)
 {
