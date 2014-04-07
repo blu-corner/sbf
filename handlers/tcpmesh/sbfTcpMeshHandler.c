@@ -307,7 +307,7 @@ fail:
     return NULL;
 }
 
-sbfHandlerHandle
+static sbfHandlerHandle
 sbfTcpMeshHandlerFindStream (sbfHandler handler, sbfTopic topic)
 {
     sbfTcpMeshHandler tmh = handler;
@@ -315,7 +315,7 @@ sbfTcpMeshHandlerFindStream (sbfHandler handler, sbfTopic topic)
     return tmh->mHandle;
 }
 
-sbfHandlerStream
+static sbfHandlerStream
 sbfTcpMeshHandlerAddStream (sbfHandler handler,
                             sbfTopic topic,
                             sbfMwThread thread,
@@ -344,7 +344,7 @@ sbfTcpMeshHandlerAddStream (sbfHandler handler,
     return tmh;
 }
 
-void
+static void
 sbfTcpMeshHandlerRemoveStream (sbfHandlerStream stream)
 {
 }

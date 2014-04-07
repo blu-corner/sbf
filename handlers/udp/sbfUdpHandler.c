@@ -234,7 +234,7 @@ sbfUdpHandlerDestroy (sbfHandler handler)
     free (uh);
 }
 
-sbfHandlerHandle
+static sbfHandlerHandle
 sbfUdpHandlerFindStream (sbfHandler handler, sbfTopic topic)
 {
     sbfUdpHandler                  uh = handler;
@@ -258,7 +258,7 @@ sbfUdpHandlerFindStream (sbfHandler handler, sbfTopic topic)
     return uhs->mHandle;
 }
 
-sbfHandlerStream
+static sbfHandlerStream
 sbfUdpHandlerAddStream (sbfHandler handler,
                         sbfTopic topic,
                         sbfMwThread thread,
@@ -301,7 +301,7 @@ sbfUdpHandlerAddStream (sbfHandler handler,
     return uhs;
 }
 
-void
+static void
 sbfUdpHandlerRemoveStream (sbfHandlerStream stream)
 {
     sbfUdpHandlerStream uhs = stream;
