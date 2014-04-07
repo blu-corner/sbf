@@ -24,10 +24,12 @@ unix {
     QMAKE_LFLAGS += \
         -pthread \
         -Wl,--no-as-needed
+    QMAKE_LIBDIR += \
+        $$top_src/thirdparty/libevent/linux/lib
     LIBS += \
-        $$top_src/thirdparty/libevent/linux/lib/libevent.so \
-        $$top_src/thirdparty/libevent/linux/lib/libevent_pthreads.so \
         -ldl \
+        -levent \
+        -levent_pthreads \
         -lrt
 
     # It is extremely annoying to get qmake to do this once at the end or to
@@ -35,7 +37,7 @@ unix {
     # every link.
     QMAKE_POST_LINK += \
         mkdir -p $$top_build/lib && \
-        cp -f $$top_src/thirdparty/libevent/linux/lib/*.so $$top_build/lib \
+        cp -f $$top_src/thirdparty/libevent/linux/lib/*.so* $$top_build/lib \
         $$escape_expand(\n\t)
 
     QMAKE_CFLAGS += \
