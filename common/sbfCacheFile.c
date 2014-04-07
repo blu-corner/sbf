@@ -28,12 +28,20 @@ sbfCacheFile_open (const char* path,
     size_t           size;
     char*            cp;
     size_t           offset;
+    int              tmp;
 
-    *created = (stat (path, &sb) != 0);
-    if (*created && errno != ENOENT)
-        return NULL;
+    if (created == NULL)
+        created = &tmp;
 
-    if (always_create || *created)
+    if (!always_create)
+    {
+        *created = (stat (path, &sb) != 0);
+        if (*created && errno != ENOENT)
+            return NULL;
+    } else
+        *created = 1;
+
+    if (*created)
         f = fopen (path, "w+b");
     else
         f = fopen (path, "r+b");
@@ -54,7 +62,7 @@ sbfCacheFile_open (const char* path,
     file->mItemSize = itemSize;
     TAILQ_INIT (&file->mItems);
 
-    if (cb != NULL)
+    if (!*created && size != 0 && cb != NULL)
     {
         cp = mmap (NULL, size, PROT_READ, MAP_PRIVATE, fileno (f), 0);
         if (cp == MAP_FAILED)
@@ -91,18 +99,22 @@ sbfCacheFile_close (sbfCacheFile file)
 }
 
 sbfCacheFileItem
-sbfCacheFile_add (sbfCacheFile file)
+sbfCacheFile_add (sbfCacheFile file, void* itemData)
 {
     sbfCacheFileItem item;
 
     item = sbfCacheFileNewItem (file, file->mUsed);
 
     file->mUsed += file->mItemSize;
+
+    if (itemData != NULL)
+        sbfCacheFile_write (item, itemData);
+
     return item;
 }
 
 sbfError
-sbfCacheFile_flush (sbfCacheFileItem item, void* itemData)
+sbfCacheFile_write (sbfCacheFileItem item, void* itemData)
 {
     sbfCacheFile file = item->mParent;
 
@@ -114,7 +126,7 @@ sbfCacheFile_flush (sbfCacheFileItem item, void* itemData)
 }
 
 sbfError
-sbfCacheFile_flushOffset (sbfCacheFileItem item,
+sbfCacheFile_writeOffset (sbfCacheFileItem item,
                           size_t offset,
                           void* data,
                           size_t size)

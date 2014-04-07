@@ -22,9 +22,9 @@ sbfCacheFile sbfCacheFile_open (const char* path,
                                 void* closure);
 void sbfCacheFile_close (sbfCacheFile file);
 
-sbfCacheFileItem sbfCacheFile_add (sbfCacheFile file);
-sbfError sbfCacheFile_flush (sbfCacheFileItem item, void* itemData);
-sbfError sbfCacheFile_flushOffset (sbfCacheFileItem item,
+sbfCacheFileItem sbfCacheFile_add (sbfCacheFile file, void* itemData);
+sbfError sbfCacheFile_write (sbfCacheFileItem item, void* itemData);
+sbfError sbfCacheFile_writeOffset (sbfCacheFileItem item,
                                    size_t offset,
                                    void* data,
                                    size_t size);
