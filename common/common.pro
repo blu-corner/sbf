@@ -6,10 +6,12 @@ include (../build.pri)
 HEADERS += \
     sbfBuffer.h \
     sbfBufferInline.h \
+    sbfCacheFile.h \
+    sbfCacheFilePrivate.h \
     sbfCommon.h \
     sbfCsvParser.h \
-    sbfGuid.h \
     sbfFatal.h \
+    sbfGuid.h \
     sbfInterface.h \
     sbfKeyValue.h \
     sbfKeyValuePrivate.h \
@@ -17,12 +19,17 @@ HEADERS += \
     sbfMemory.h \
     sbfPerfCounter.h \
     sbfPool.h \
-    sbfUdpMulticast.h \
+    sbfPoolInline.h \
     sbfTcpConnection.h \
+    sbfTcpConnectionPrivate.h \
     sbfTcpListener.h \
+    sbfTcpListenerPrivate.h \
+    sbfUdpMulticast.h \
+    sbfUdpMulticastPrivate.h \
     sbfVersion.h
 SOURCES += \
     sbfBuffer.c \ 
+    sbfCacheFile.c \
     sbfCsvParser.c \
     sbfFatal.c \
     sbfGuid.c \
@@ -48,6 +55,7 @@ install_headers.path = $$top_build/include
 install_headers.files = \
     sbfBuffer.h \
     sbfBufferInline.h \
+    sbfCacheFile.h \
     sbfCommon.h \
     sbfCsvParser.h \
     sbfFatal.h \

@@ -83,3 +83,49 @@ error:
     *ret = NULL;
     return (-1);
 }
+
+void*
+mmap (void* addr, size_t length, int prot, int flags, int fd, off_t offset)
+{
+    HANDLE mapping;
+    HANDLE handle;
+    void*  vp;
+    DWORD  type;
+
+    if (addr != NULL || flags != 0 || offset != 0)
+        goto fail;
+    if (prot != PROT_READ && prot != (PROT_READ|PROT_WRITE))
+        goto fail;
+
+    handle = _get_osfhandle (fd);
+    if (handle == INVALID_HANDLE_VALUE)
+        return NULL;
+
+    if (prot == (PROT_READ|PROT_WRITE))
+        type = PAGE_READWRITE;
+    else if (prot == PROT_READ)
+        type = PAGE_READONLY;
+    mapping = CreateFileMapping (handle, NULL, type, 0, 0, NULL);
+    if (mapping == NULL)
+        goto fail;
+
+    if (prot == (PROT_READ|PROT_WRITE))
+        type = FILE_MAP_ALL_ACCESS;
+    else if (prot == PROT_READ)
+        type = FILE_MAP_READ;
+    vp = MapViewOfFile (mapping, type, 0, 0, length);
+    if (vp != NULL)
+        goto fail;
+
+    return vp;
+
+fail:
+    errno = EINVAL;
+    return MAP_FAILED;
+}
+
+void
+munmap (void* addr, size_t length)
+{
+    UnmapViewOfFile (addr);
+}

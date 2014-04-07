@@ -136,6 +136,14 @@ clock_gettime (clockid_t clock_id, struct timespec* tp)
     return 0;
 }
 
+void* mmap (void* addr,
+            size_t length,
+            int prot,
+            int flags,
+            int fd,
+            off_t offset);
+void munmap (void* addr, size_t length);
+
 SBF_END_DECLS
 
 #endif /* _SBF_COMMON_WIN32_H_ */
