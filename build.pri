@@ -19,19 +19,24 @@ QMAKE_LIBDIR += \
     $$top_src/transport/.lib
 
 unix {
-    contains(QMAKE_HOST.arch, x86_64) {
-        INCLUDEPATH += \
-            $$top_src/thirdparty/libevent/linux64/include
-        LIBS += \
-            $$top_src/thirdparty/libevent/linux64/lib/libevent.so \
-            $$top_src/thirdparty/libevent/linux64/lib/libevent_pthreads.so
-    } else {
-        INCLUDEPATH += \
-            $$top_src/thirdparty/libevent/linux32/include
-        LIBS += \
-            $$top_src/thirdparty/libevent/linux32/lib/libevent.a \
-            $$top_src/thirdparty/libevent/linux32/lib/libevent_pthreads.a
-    }
+    INCLUDEPATH += \
+        $$top_src/thirdparty/libevent/linux/include
+    QMAKE_LFLAGS += \
+        -pthread \
+        -Wl,--no-as-needed
+    LIBS += \
+        $$top_src/thirdparty/libevent/linux/lib/libevent.so \
+        $$top_src/thirdparty/libevent/linux/lib/libevent_pthreads.so \
+        -ldl \
+        -lrt
+
+    # It is extremely annoying to get qmake to do this once at the end or to
+    # create a pro file that does an install but not a build - so do it after
+    # every link.
+    QMAKE_POST_LINK += \
+        mkdir -p $$top_build/lib && \
+        cp -f $$top_src/thirdparty/libevent/linux/lib/*.so $$top_build/lib \
+        $$escape_expand(\n\t)
 
     QMAKE_CFLAGS += \
         -std=gnu99 \
@@ -51,12 +56,6 @@ unix {
         -Wwrite-strings
     #QMAKE_CFLAGS_DEBUG += \
     #    -O0
-    QMAKE_LFLAGS += \
-        -pthread \
-        -Wl,--no-as-needed
-    LIBS += \
-        -ldl \
-        -lrt
 }
 
 windows {
@@ -66,7 +65,8 @@ windows {
     INCLUDEPATH += \
         $$top_src/thirdparty/libevent/win32/include \
         $$top_src/thirdparty/pcre/win32/include
-
+    QMAKE_LFLAGS += \
+        /NODEFAULTLIB:libcmt.lib
     QMAKE_LIBDIR += \
         $$top_src/thirdparty/libevent/win32/lib \
         $$top_src/thirdparty/pcre/win32/lib
@@ -77,9 +77,6 @@ windows {
         libevent.lib \
         pcre3.lib \
         pcreposix3.lib
-
-    QMAKE_LFLAGS += \
-        /NODEFAULTLIB:libcmt.lib
 
     QMAKE_POST_LINK += \
         if not exist $$shell_path($$top_build/bin) \
