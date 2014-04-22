@@ -92,6 +92,7 @@ sleep (u_int seconds)
 #define vsnprintf _vsnprintf
 #define fseeko _fseeki64
 #define stat _stat
+#define fstat _fstat
 
 char* fgetln(FILE* fp, size_t* len);
 
