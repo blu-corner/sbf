@@ -136,6 +136,13 @@ clock_gettime (clockid_t clock_id, struct timespec* tp)
     return 0;
 }
 
+#define PROT_READ 2
+#define PROT_WRITE 1
+
+#define MAP_PRIVATE 0
+
+#define MAP_FAILED ((void*)-1)
+
 void* mmap (void* addr,
             size_t length,
             int prot,
