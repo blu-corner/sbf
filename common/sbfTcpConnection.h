@@ -38,7 +38,7 @@ sbfError sbfTcpConnection_accept (sbfTcpConnection tc,
                                   sbfTcpConnectionReadCb readCb,
                                   void* closure);
 
-void sbfTcpConnection_send (sbfTcpConnection tc, void* data, size_t size);
+void sbfTcpConnection_send (sbfTcpConnection tc, const void* data, size_t size);
 void sbfTcpConnection_sendBuffer (sbfTcpConnection tc, sbfBuffer buffer);
 
 struct sockaddr_in* sbfTcpConnection_getPeer (sbfTcpConnection tc);

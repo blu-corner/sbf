@@ -227,7 +227,7 @@ sbfTcpConnection_accept (sbfTcpConnection tc,
 }
 
 void
-sbfTcpConnection_send (sbfTcpConnection tc, void* data, size_t size)
+sbfTcpConnection_send (sbfTcpConnection tc, const void* data, size_t size)
 {
     bufferevent_write (tc->mEvent, data, size);
 }
