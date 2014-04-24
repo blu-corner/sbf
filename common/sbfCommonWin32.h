@@ -20,6 +20,7 @@
 
 #include <process.h>
 #include <winsock2.h> /* must be before windows.h */
+#include <io.h>
 #include <iphlpapi.h>
 #include <ws2tcpip.h>
 #include <windows.h>
@@ -87,6 +88,8 @@ sleep (u_int seconds)
 #define strtoll _strtoi64
 #define strtoull _strtoui64
 #define vsnprintf _vsnprintf
+#define fseeko _fseeki64
+#define stat _stat
 
 char* fgetln(FILE* fp, size_t* len);
 
