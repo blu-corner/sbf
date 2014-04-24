@@ -24,6 +24,8 @@
 #include <iphlpapi.h>
 #include <ws2tcpip.h>
 #include <windows.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 SBF_BEGIN_DECLS
 

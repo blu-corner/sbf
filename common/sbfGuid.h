@@ -5,10 +5,11 @@
 
 SBF_BEGIN_DECLS
 
-typedef SBF_PACKED(struct
+SBF_PACKED(struct sbfGuidImpl
 {
     uint64_t mParts[4];
-}) sbfGuid;
+});
+typedef struct sbfGuidImpl sbfGuid;
 
 #define SBF_GUID_STRING_SIZE 64
 
