@@ -6,11 +6,13 @@
 
 SBF_BEGIN_DECLS
 
-typedef SBF_PACKED (struct
+SBF_PACKED (struct sbfRequestHeaderImpl
 {
     sbfGuid  mGuid;
     uint64_t mSpace[4];
-}) sbfRequestHeader;
+});
+
+typedef struct sbfRequestHeaderImpl sbfRequestHeader;
 
 struct sbfRequestImpl
 {
