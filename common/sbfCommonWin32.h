@@ -84,6 +84,15 @@ sleep (u_int seconds)
     Sleep (seconds * 1000U);
 }
 
+static SBF_INLINE char*
+basename (char* path)
+{
+    char name[_MAX_FNAME];
+    _splitpath (path, NULL, NULL, name, NULL);
+    memcpy (path, name, strlen (name) + 1);
+    return path;
+}
+
 #define snprintf _snprintf
 #define strcasecmp _stricmp
 #define strncasecmp _strnicmp
