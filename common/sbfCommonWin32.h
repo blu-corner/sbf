@@ -98,6 +98,7 @@ char* fgetln(FILE* fp, size_t* len);
 
 int gettimeofday (struct timeval* tv, struct timezone* tz);
 #define gmtime_r(tp, tm) gmtime_s (tm, tp)
+#define localtime_r(tp, tm) localtime_s (tm, tp)
 
 int asprintf (char** ret, const char* fmt, ...);
 int vasprintf (char** ret, const char* fmt, va_list ap);
