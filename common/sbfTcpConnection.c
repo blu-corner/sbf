@@ -26,18 +26,43 @@ sbfTcpConnectionErrorQueueCb (sbfQueueItem item, void* closure)
 }
 
 static void
+sbfTcpConnectionReadQueueCb (sbfQueueItem item, void* closure)
+{
+    sbfTcpConnection tc = closure;
+    struct evbuffer* evb = bufferevent_get_input (tc->mEvent);
+    size_t           size;
+    size_t           used;
+
+    size = evbuffer_get_length (evb);
+    if (size != 0)
+    {
+        used = tc->mReadCb (tc,
+                            evbuffer_pullup (evb, -1),
+                            size,
+                            tc->mClosure);
+        evbuffer_drain (evb, used);
+    }
+
+    tc->mQueued = 0;
+    bufferevent_enable (tc->mEvent, EV_READ);
+
+    if (sbfRefCount_decrement (&tc->mRefCount))
+        free (tc);
+}
+
+static void
 sbfTcpConnectionEventReadCb (struct bufferevent* bev, void* closure)
 {
     sbfTcpConnection tc = closure;
-    struct evbuffer* evb;
-    size_t           used;
 
-    evb = bufferevent_get_input (bev);
-    used = tc->mReadCb (tc,
-                        evbuffer_pullup (evb, -1),
-                        evbuffer_get_length (evb),
-                        tc->mClosure);
-    evbuffer_drain (evb, used);
+    if (tc->mQueued)
+        return;
+
+    tc->mQueued = 1;
+    bufferevent_disable (tc->mEvent, EV_READ);
+
+    sbfRefCount_increment (&tc->mRefCount);
+    sbfQueue_enqueue (tc->mQueue, sbfTcpConnectionReadQueueCb, tc);
 }
 
 static void
@@ -87,6 +112,7 @@ sbfTcpConnectionSet (sbfTcpConnection tc,
     tc->mDestroyed = 0;
     sbfRefCount_init (&tc->mRefCount, 1);
 
+    tc->mQueued = 0;
     tc->mEvent = bufferevent_socket_new (sbfMw_getThreadEventBase (thread),
                                          tc->mSocket,
                                          BEV_OPT_THREADSAFE);

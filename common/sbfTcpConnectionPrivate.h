@@ -14,6 +14,7 @@ struct sbfTcpConnectionImpl
 {
     sbfSocket                  mSocket;
     struct bufferevent*        mEvent;
+    int                        mQueued;
 
     struct sockaddr_in         mPeer;
 
