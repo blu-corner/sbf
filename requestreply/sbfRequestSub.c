@@ -43,7 +43,7 @@ sbfRequestSubSubMessageCb (sbfSub sub0, sbfBuffer buffer, void* closure)
     {
         sbfBuffer_setData (buffer, hdr + 1);
         sbfBuffer_setSize (buffer, sbfBuffer_getSize (buffer) - sizeof *hdr);
-        sub->mRequestCb (sub, req, buffer, req->mClosure);
+        sub->mRequestCb (sub, req, buffer, sub->mClosure);
     }
 
     sbfRequest_destroy (req);
