@@ -25,7 +25,10 @@ sbfKeyValue_destroy (sbfKeyValue table)
     sbfKeyValueItem item1;
 
     RB_FOREACH_SAFE (item, sbfKeyValueItemTreeImpl, &table->mTree, item1)
+    {
+        RB_REMOVE (sbfKeyValueItemTreeImpl, &table->mTree, item);
         free (item);
+    }
     free (table);
 }
 
@@ -80,7 +83,7 @@ sbfKeyValue_put (sbfKeyValue table, const char* key, const char* value)
 
     sbfKeyValue_remove (table, key);
 
-    item = xmalloc ((sizeof *item) + keySize + valueSize);
+    item = xcalloc (1, (sizeof *item) + keySize + valueSize);
 
     item->mKey = (void*)(item + 1);
     item->mKeySize = keySize;
