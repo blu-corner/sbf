@@ -97,6 +97,9 @@ sbfHandler_message (sbfHandlerHandle handle, sbfBuffer buffer)
     sbfBuffer_setData (buffer, (char*)(hdr + 1) + hdr->mTopicSize);
     sbfBuffer_setSize (buffer, hdr->mSize);
 
+    if (TAILQ_EMPTY (&ttopic->mSubs))
+        goto no_subscription;
+
     if (ttopic->mNext == NULL)
         ttopic->mNext = TAILQ_FIRST (&ttopic->mSubs);
     sub = ttopic->mNext;
@@ -111,6 +114,10 @@ sbfHandler_message (sbfHandlerHandle handle, sbfBuffer buffer)
     while (sub != ttopic->mNext);
     ttopic->mNext = TAILQ_NEXT (sub, mEntry);
 
+    return;
+
+no_subscription:
+    sbfLog_debug ("message on topic %s but not a subscriber", topic);
     return;
 
 missing:
