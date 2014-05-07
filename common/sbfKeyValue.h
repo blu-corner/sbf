@@ -12,7 +12,7 @@ void sbfKeyValue_destroy (sbfKeyValue table);
 sbfKeyValue sbfKeyValue_copy (sbfKeyValue table);
 
 const char* sbfKeyValue_get (sbfKeyValue table, const char* key);
-const char* sbfKeyValue_getV (sbfKeyValue table, const char* fmt, ...);
+const char* sbfKeyValue_getV (sbfKeyValue table, const char* fmt, ...) SBF_PRINTFLIKE(2, 3);
 void sbfKeyValue_put (sbfKeyValue table, const char* key, const char* value);
 void sbfKeyValue_remove (sbfKeyValue table, const char* key);
 

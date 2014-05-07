@@ -100,5 +100,8 @@ sbfKeyValue_remove (sbfKeyValue table, const char* key)
     impl.mKey = key;
     item = RB_FIND (sbfKeyValueItemTreeImpl, &table->mTree, &impl);
     if (item != NULL)
+    {
         RB_REMOVE (sbfKeyValueItemTreeImpl, &table->mTree, item);
+        free (item);
+    }
 }
