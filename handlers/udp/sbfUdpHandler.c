@@ -168,6 +168,10 @@ sbfUdpHandlerCreate (sbfTport tport, sbfKeyValue properties)
     u_int         third;
     char          tmp[INET_ADDRSTRLEN];
 
+#ifdef WIN32
+    evthread_use_windows_threads ();
+#endif
+
     s = sbfKeyValue_get (properties, "interface");
     if (s == NULL)
         s = "eth0";

@@ -56,7 +56,7 @@ sbfMw_create (u_int threads)
 #ifdef WIN32
     if (WSAStartup(MAKEWORD (2, 2), &wsd) != 0)
         SBF_FATAL ("WSAStartup failed");
-    if (evthread_use_windows_threads() != 0)
+    if (evthread_use_windows_threads () != 0)
         SBF_FATAL ("event_use_windows_threads failed");
 #else
     if (evthread_use_pthreads () != 0)

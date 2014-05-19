@@ -228,6 +228,10 @@ sbfTcpMeshHandlerCreate (sbfTport tport, sbfKeyValue properties)
     sbfTcpMeshHandlerConnection c;
     unsigned long               port;
 
+#ifdef WIN32
+    evthread_use_windows_threads ();
+#endif
+
     tmh = xcalloc (1, sizeof *tmh);
     sbfMutex_init (&tmh->mMutex, 0);
     TAILQ_INIT (&tmh->mConnections);
