@@ -353,8 +353,6 @@ sbfPub_send (sbfPub pub, void* data, size_t size)
     memcpy (sbfBuffer_getData (buffer), data, size);
 
     sbfPub_sendBuffer (pub, buffer);
-
-    sbfBuffer_destroy (buffer);
 }
 
 sbfTopic
