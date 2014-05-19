@@ -111,7 +111,7 @@ main (int argc, char** argv)
     pub = sbfPub_create (tport, queue, topic, NULL, NULL);
 
     if (rate > 0)
-        interval = sbfPerfCounter_ticks (1000000) / rate;
+        interval = (uint64_t)(sbfPerfCounter_ticks (1000000) / rate);
     else
         interval = 0;
 

@@ -47,8 +47,8 @@ sbfTimer_create (sbfMwThread thread,
     sbfRefCount_init (&timer->mRefCount, 1);
 
     timerclear (&timer->mTime);
-    timer->mTime.tv_sec = interval;
-    timer->mTime.tv_usec = (interval - timer->mTime.tv_sec) * 1000000;
+    timer->mTime.tv_sec = (u_int)interval;
+    timer->mTime.tv_usec = (u_int)((interval - timer->mTime.tv_sec) * 1000000);
 
     sbfLog_debug ("creating %p: interval %.3f", timer, interval);
 
