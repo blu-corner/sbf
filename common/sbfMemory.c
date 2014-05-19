@@ -57,3 +57,28 @@ sbfMemory_strdup (const char* s)
         SBF_FATAL ("out of memory");
     return ss;
 }
+
+void*
+sbfMemory_getGlobal (size_t size)
+{
+    void* ptr;
+
+#ifdef WIN32
+    ptr = LocalAlloc (0, size);
+#else
+    ptr = malloc (size);
+#endif
+    if (ptr == NULL)
+        SBF_FATAL ("out of memory");
+    return ptr;
+}
+
+void
+sbfMemory_freeGlobal (void* ptr)
+{
+#ifdef WIN32
+    LocalFree (ptr);
+#else
+    free (ptr);
+#endif
+}

@@ -14,6 +14,14 @@ void* sbfMemory_realloc (void* ptr, size_t nmemb, size_t size);
 char* sbfMemory_strdup (const char* s);
 #define xstrdup sbfMemory_strdup
 
+/*
+ * On Windows, the heap is not shared between different objects so malloc in
+ * one DLL cannot be freed in another. Instead, these functions use LocalAlloc
+ * and LocalFree.
+ */
+void* sbfMemory_getGlobal (size_t size);
+void sbfMemory_freeGlobal (void* ptr);
+
 SBF_END_DECLS
 
 #endif /* _SBF_MEMORY_H_ */

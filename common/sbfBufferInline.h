@@ -25,7 +25,7 @@ sbfBuffer_new (sbfPool pool, size_t size)
 
     if (pool == NULL)
     {
-        buffer = (sbfBuffer)xmalloc ((sizeof *buffer) + size);
+        buffer = (sbfBuffer)sbfMemory_getGlobal ((sizeof *buffer) + size);
         buffer->mAllocated = 1;
     }
     else
@@ -99,7 +99,7 @@ sbfBuffer_destroy (sbfBuffer buffer)
         buffer->mDestroyCb (buffer, buffer->mDestroyClosure);
 
     if (buffer->mAllocated)
-        free (buffer);
+        sbfMemory_freeGlobal (buffer);
     else
         sbfPool_put (buffer);
 }
