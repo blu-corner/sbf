@@ -97,7 +97,7 @@ mmap (void* addr, size_t length, int prot, int flags, int fd, off_t offset)
     if (prot != PROT_READ && prot != (PROT_READ|PROT_WRITE))
         goto fail;
 
-    handle = _get_osfhandle (fd);
+    handle = (HANDLE)_get_osfhandle (fd);
     if (handle == INVALID_HANDLE_VALUE)
         return NULL;
 
