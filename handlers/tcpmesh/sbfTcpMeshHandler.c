@@ -252,7 +252,7 @@ sbfTcpMeshHandlerCreate (sbfTport tport, sbfKeyValue properties)
         memset (&sin, 0, sizeof sin);
         sin.sin_family = AF_INET;
         sin.sin_addr.s_addr = INADDR_ANY;
-        sin.sin_port = htons (port);
+        sin.sin_port = htons ((uint16_t)port);
         tmh->mListener = evconnlistener_new_bind (
                                               tmh->mEventBase,
                                               sbfTcpMeshHandlerListenerAcceptCb,
@@ -286,12 +286,13 @@ sbfTcpMeshHandlerCreate (sbfTport tport, sbfKeyValue properties)
         {
             *endptr++ = '\0';
 
-            c->mPort = strtoul (endptr, &endptr, 10);
+            port = strtoul (endptr, &endptr, 10);
             if (port == 0 || port > 65536 || *endptr != '\0')
             {
                 sbfLog_err ("invalid port in %s", host);
                 goto fail;
             }
+            c->mPort = (uint16_t)port;
         }
         else
             c->mPort = SBF_TCP_MESH_HANDLER_DEFAULT_PORT;
