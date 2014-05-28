@@ -33,18 +33,25 @@ sbfTcpConnectionReadQueueCb (sbfQueueItem item, void* closure)
     size_t           size;
     size_t           used;
 
-    size = evbuffer_get_length (evb);
-    if (size != 0)
+    if (!tc->mDestroyed)
     {
-        used = tc->mReadCb (tc,
-                            evbuffer_pullup (evb, -1),
-                            size,
-                            tc->mClosure);
-        evbuffer_drain (evb, used);
-    }
+        size = evbuffer_get_length (evb);
+        if (size != 0)
+        {
+            used = tc->mReadCb (tc,
+                                evbuffer_pullup (evb, -1),
+                                size,
+                                tc->mClosure);
+            if (!tc->mDestroyed)
+                evbuffer_drain (evb, used);
+        }
 
-    tc->mQueued = 0;
-    bufferevent_enable (tc->mEvent, EV_READ);
+        if (!tc->mDestroyed)
+        {
+            tc->mQueued = 0;
+            bufferevent_enable (tc->mEvent, EV_READ);
+        }
+    }
 
     if (sbfRefCount_decrement (&tc->mRefCount))
         free (tc);
