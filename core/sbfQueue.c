@@ -8,7 +8,7 @@ sbfQueue_create (int flags)
 
     queue = xcalloc (1, sizeof *queue);
     queue->mPool = sbfPool_create (sizeof (struct sbfQueueItemImpl));
-    TAILQ_INIT (&queue->mItems);
+    SIMPLEQ_INIT (&queue->mItems);
 
     queue->mDestroyed = 0;
     sbfRefCount_init (&queue->mRefCount, 1);
@@ -42,14 +42,13 @@ void
 sbfQueue_removeRef (sbfQueue queue)
 {
     sbfQueueItem item;
-    sbfQueueItem item1;
 
     if (!sbfRefCount_decrement (&queue->mRefCount))
         return;
 
-    TAILQ_FOREACH_SAFE (item, &queue->mItems, mEntry, item1)
+    while ((item = SIMPLEQ_FIRST (&queue->mItems)) != NULL)
     {
-        TAILQ_REMOVE (&queue->mItems, item, mEntry);
+        SIMPLEQ_REMOVE_HEAD (&queue->mItems, mEntry);
         sbfPool_put (item);
     }
 
@@ -89,10 +88,10 @@ sbfQueue_dispatch (sbfQueue queue)
 
         sbfMutex_lock (&queue->mMutex);
         while (!queue->mDestroyed &&
-               (item = TAILQ_FIRST (&queue->mItems)) == NULL)
+               (item = SIMPLEQ_FIRST (&queue->mItems)) == NULL)
             sbfCondVar_wait (&queue->mCondVar, &queue->mMutex);
         if (item != NULL)
-            TAILQ_REMOVE (&queue->mItems, item, mEntry);
+            SIMPLEQ_REMOVE_HEAD (&queue->mItems, mEntry);
         sbfMutex_unlock (&queue->mMutex);
 
         if (item != NULL)
@@ -121,7 +120,7 @@ void
 sbfQueue_enqueueItem (sbfQueue queue, sbfQueueItem item)
 {
     sbfMutex_lock (&queue->mMutex);
-    TAILQ_INSERT_TAIL (&queue->mItems, item, mEntry);
+    SIMPLEQ_INSERT_TAIL (&queue->mItems, item, mEntry);
     sbfCondVar_signal (&queue->mCondVar);
     sbfMutex_unlock (&queue->mMutex);
 }

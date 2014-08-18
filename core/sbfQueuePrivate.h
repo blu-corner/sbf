@@ -13,24 +13,24 @@ SBF_BEGIN_DECLS
 
 struct sbfQueueItemImpl
 {
-    sbfQueueCb                     mCb;
-    void*                          mClosure;
+    sbfQueueCb                       mCb;
+    void*                            mClosure;
 
-    char                           mData[SBF_QUEUE_ITEM_DATA_SIZE];
+    char                             mData[SBF_QUEUE_ITEM_DATA_SIZE];
 
-    TAILQ_ENTRY (sbfQueueItemImpl) mEntry;
+    SIMPLEQ_ENTRY (sbfQueueItemImpl) mEntry;
 };
 
 struct sbfQueueImpl
 {
-    sbfMutex                        mMutex;
-    sbfCondVar                      mCondVar;
+    sbfMutex                          mMutex;
+    sbfCondVar                        mCondVar;
 
-    int                             mDestroyed;
-    sbfRefCount                     mRefCount;
+    int                               mDestroyed;
+    sbfRefCount                       mRefCount;
 
-    sbfPool                         mPool;
-    TAILQ_HEAD (, sbfQueueItemImpl) mItems;
+    sbfPool                           mPool;
+    SIMPLEQ_HEAD (, sbfQueueItemImpl) mItems;
 };
 
 void sbfQueue_addRef (sbfQueue queue);
