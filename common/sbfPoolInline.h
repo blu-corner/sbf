@@ -51,11 +51,7 @@ sbfPoolNextItem (sbfPool pool)
 
     item = pool->mAvailable;
     if (item == NULL)
-#ifdef WIN32
-        item = InterlockedExchange (&pool->mFree, NULL);
-#else
-        item = __sync_lock_test_and_set (&pool->mFree, NULL);
-#endif
+        item = sbfAtomic_swapP (&pool->mFree, NULL);
     if (item != NULL)
         pool->mAvailable = item->mNext;
 
@@ -99,11 +95,5 @@ sbfPool_put (void* data)
 
     do
         item->mNext = pool->mFree;
-#ifdef WIN32
-    while (InterlockedCompareExchangePointer (&pool->mFree,
-                                              item->mNext,
-                                              item) != item);
-#else
-    while (!__sync_bool_compare_and_swap (&pool->mFree, item->mNext, item));
-#endif
+    while (!sbfAtomic_compareAndSwapP (&pool->mFree, item->mNext, item));
 }

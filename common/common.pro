@@ -4,6 +4,7 @@ TARGET = sbfcommon
 include (../build.pri)
 
 HEADERS += \
+    sbfAtomic.h \
     sbfBuffer.h \
     sbfBufferInline.h \
     sbfCacheFile.h \
@@ -53,6 +54,7 @@ windows {
 
 install_headers.path = $$top_build/include
 install_headers.files = \
+    sbfAtomic.h \
     sbfBuffer.h \
     sbfBufferInline.h \
     sbfCacheFile.h \

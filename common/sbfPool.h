@@ -2,6 +2,7 @@
 #define _SBF_POOL_H_
 
 #include "sbfCommon.h"
+#include "sbfAtomic.h"
 
 SBF_BEGIN_DECLS
 
