@@ -60,7 +60,7 @@ sbfQueueEnqueue (sbfQueue queue, sbfQueueItem item)
     last = __sync_lock_test_and_set (&queue->mHead, item);
     last->mNext = item;
 
-    if (SBF_QUEUE_BLOCKING (queue))
+    if (SBF_LIKELY (SBF_QUEUE_BLOCKING (queue)))
     {
         if (__sync_bool_compare_and_swap (&queue->mSemaphore, -1, 1))
             futex (&queue->mSemaphore, FUTEX_WAKE, INT_MAX, NULL, NULL, 0);
@@ -112,14 +112,14 @@ sbfQueueDequeue (sbfQueue queue)
     sbfQueueItem item;
     int          s;
 
-    if (!SBF_QUEUE_BLOCKING (queue))
+    if (SBF_LIKELY (!SBF_QUEUE_BLOCKING (queue)))
         return sbfQueueNext (queue);
 
-    while (!queue->mDestroyed)
+    while (SBF_UNLIKELY (!queue->mDestroyed))
     {
         s = __sync_sub_and_fetch (&queue->mSemaphore, 1);
         SBF_ASSERT (s >= -1);
-        if (s != -1)
+        if (SBF_LIKELY (s != -1))
             break;
         while (futex (&queue->mSemaphore, FUTEX_WAIT, -1, NULL, NULL, 0) != 0)
         {
