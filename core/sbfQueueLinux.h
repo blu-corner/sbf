@@ -6,12 +6,12 @@
 
 #ifndef SBF_QUEUE_FUNCTIONS
 
-#define SBF_QUEUE_DECL				\
+#define SBF_QUEUE_DECL                          \
     struct sbfQueueItemImpl* volatile mHead;	\
     struct sbfQueueItemImpl*          mTail;	\
     struct sbfQueueItemImpl           mEmpty;
 
-#define SBF_QUEUE_ITEM_DECL			\
+#define SBF_QUEUE_ITEM_DECL                     \
     struct sbfQueueItemImpl* volatile mNext;
 
 #else /* SBF_QUEUE_FUNCTIONS */
@@ -40,7 +40,7 @@ SBF_QUEUE_DESTROY(sbfQueue queue)
     {
         next = item->mNext;
         sbfPool_put (item);
-	item = next;
+        item = next;
     }
 }
 
@@ -57,25 +57,25 @@ SBF_QUEUE_ENQUEUE(sbfQueue queue, sbfQueueItem item)
 static SBF_INLINE sbfQueueItem
 SBF_QUEUE_DEQUEUE(sbfQueue queue)
 {
-   sbfQueueItem tail;
-   sbfQueueItem next;
-   sbfQueueItem head;
+    sbfQueueItem tail;
+    sbfQueueItem next;
+    sbfQueueItem head;
 
-   tail = queue->mTail;
-   next = tail->mNext;
-   if (tail == &queue->mEmpty)
-   {
-      if (next == NULL)
+    tail = queue->mTail;
+    next = tail->mNext;
+    if (tail == &queue->mEmpty)
+    {
+        if (next == NULL)
             return NULL;
-      queue->mTail = next;
-      tail = next;
-      next = next->mNext;
-   }
-   if (next != NULL)
-   {
-       queue->mTail = next;
-       return tail;
-   }
+        queue->mTail = next;
+        tail = next;
+        next = next->mNext;
+    }
+    if (next != NULL)
+    {
+        queue->mTail = next;
+        return tail;
+    }
 
     head = queue->mHead;
     if (tail != head)

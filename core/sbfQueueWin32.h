@@ -4,12 +4,12 @@
 
 #ifndef SBF_QUEUE_FUNCTIONS
 
-#define SBF_QUEUE_DECL						\
-    sbfMutex                          mMutex;			\
-    sbfCondVar                        mCondVar;			\
+#define SBF_QUEUE_DECL                          \
+    sbfMutex                          mMutex;   \
+    sbfCondVar                        mCondVar; \
     SIMPLEQ_HEAD (, sbfQueueItemImpl) mItems;
 
-#define SBF_QUEUE_ITEM_DECL					\
+#define SBF_QUEUE_ITEM_DECL                     \
     SIMPLEQ_ENTRY (sbfQueueItemImpl) mEntry;
 
 #else /* SBF_QUEUE_FUNCTIONS */
@@ -35,8 +35,8 @@ SBF_QUEUE_DESTROY(sbfQueue queue, int last)
 
     while ((item = SIMPLEQ_FIRST (&queue->mItems)) != NULL)
     {
-	SIMPLEQ_REMOVE_HEAD (&queue->mItems, mEntry);
-	sbfPool_put (item);
+        SIMPLEQ_REMOVE_HEAD (&queue->mItems, mEntry);
+        sbfPool_put (item);
     }
 
     sbfCondVar_destroy (&queue->mCondVar);
