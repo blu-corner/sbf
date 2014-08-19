@@ -10,7 +10,7 @@
 #ifndef SBF_QUEUE_FUNCTIONS
 
 #define SBF_QUEUE_DECL                            \
-    int32_t                           mSemaphore; \
+    int                               mSemaphore; \
     struct sbfQueueItemImpl* volatile mHead;      \
     struct sbfQueueItemImpl*          mTail;      \
     struct sbfQueueItemImpl           mEmpty;
@@ -55,20 +55,17 @@ static SBF_INLINE void
 sbfQueueEnqueue (sbfQueue queue, sbfQueueItem item)
 {
     sbfQueueItem last;
-    int32_t      s;
 
     item->mNext = NULL;
-    last  = __sync_lock_test_and_set (&queue->mHead, item);
+    last = __sync_lock_test_and_set (&queue->mHead, item);
     last->mNext = item;
 
     if (SBF_QUEUE_BLOCKING (queue))
     {
-        s = __sync_fetch_and_add (&queue->mSemaphore, 1);
-        if (s < 0)
-        {
-            __sync_fetch_and_add (&queue->mSemaphore, 1);
+        if (__sync_bool_compare_and_swap (&queue->mSemaphore, -1, 1))
             futex (&queue->mSemaphore, FUTEX_WAKE, INT_MAX, NULL, NULL, 0);
-        }
+        else
+            __sync_fetch_and_add (&queue->mSemaphore, 1);
     }
 }
 
@@ -109,36 +106,36 @@ sbfQueueNext (sbfQueue queue)
     return NULL;
 }
 
-static SBF_INLINE void
-sbfQueueWait (sbfQueue queue)
+static SBF_INLINE sbfQueueItem
+sbfQueueDequeue (sbfQueue queue)
 {
-    int32_t s;
+    sbfQueueItem item;
+    int          s;
 
     if (!SBF_QUEUE_BLOCKING (queue))
-        return;
+        return sbfQueueNext (queue);
 
-    /*
-     * There can only be one consumer, so nobody else can remove from the
-     * queue.
-     */
     while (!queue->mDestroyed)
     {
         s = __sync_sub_and_fetch (&queue->mSemaphore, 1);
-        if (s >= 0)
+        SBF_ASSERT (s >= -1);
+        if (s != -1)
             break;
-        while (futex (&queue->mSemaphore, FUTEX_WAIT, s, NULL, NULL, 0) != 0)
+        while (futex (&queue->mSemaphore, FUTEX_WAIT, -1, NULL, NULL, 0) != 0)
         {
             if (errno == EWOULDBLOCK)
                 break;
         }
     }
-}
 
-static SBF_INLINE sbfQueueItem
-sbfQueueDequeue (sbfQueue queue)
-{
-    sbfQueueWait (queue);
-    return sbfQueueNext (queue);
+    /*
+     * If the semaphore was raised, an item should be removed, so wait until it
+     * is there. This is alright because there can only be one consumer, so
+     * nobody else can remove from the queue.
+     */
+    while ((item = sbfQueueNext (queue)) == NULL && !queue->mDestroyed)
+        ;
+    return item;
 }
 
 #endif /* SBF_QUEUE_FUNCTIONS */
