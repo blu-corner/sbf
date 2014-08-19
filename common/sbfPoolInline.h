@@ -4,18 +4,20 @@
 
 struct sbfPoolItemImpl
 {
-    sbfPool                      mPool;
-    LIST_ENTRY (sbfPoolItemImpl) mEntry;
+    sbfPool                 mPool;
+
+    struct sbfPoolItemImpl* mNext;
 };
 typedef struct sbfPoolItemImpl* sbfPoolItem;
 
 struct sbfPoolImpl
 {
-    size_t                        mItemSize;
-    size_t                        mSize;
+    size_t                  mItemSize;
+    size_t                  mSize;
 
-    sbfSpinLock                   mLock;
-    LIST_HEAD (, sbfPoolItemImpl) mList;
+    sbfSpinLock             mLock;
+    struct sbfPoolItemImpl* mAvailable;
+    struct sbfPoolItemImpl* mFree;
 };
 
 static SBF_INLINE sbfPoolItem
@@ -25,7 +27,7 @@ sbfPoolNew (sbfPool pool)
 
     item = (sbfPoolItem)xmalloc (pool->mSize);
     item->mPool = pool;
-    memset (&item->mEntry, 0, sizeof item->mEntry);
+    item->mNext = NULL;
     return item;
 }
 
@@ -36,6 +38,28 @@ sbfPoolNewZero (sbfPool pool)
 
     item = (sbfPoolItem)xcalloc (1, pool->mSize);
     item->mPool = pool;
+    item->mNext = NULL;
+    return item;
+}
+
+static SBF_INLINE sbfPoolItem
+sbfPoolNextItem (sbfPool pool)
+{
+    sbfPoolItem item;
+
+    sbfSpinLock_lock (&pool->mLock);
+
+    item = pool->mAvailable;
+    if (item == NULL)
+#ifdef WIN32
+        item = InterlockedExchange (&pool->mFree, NULL);
+#else
+        item = __sync_lock_test_and_set (&pool->mFree, NULL);
+#endif
+    if (item != NULL)
+        pool->mAvailable = item->mNext;
+
+    sbfSpinLock_unlock (&pool->mLock);
     return item;
 }
 
@@ -50,16 +74,10 @@ sbfPool_get (sbfPool pool)
 {
     sbfPoolItem item;
 
-    sbfSpinLock_lock (&pool->mLock);
-    item = LIST_FIRST (&pool->mList);
-    if (item != NULL)
-    {
-        LIST_REMOVE (item, mEntry);
-        sbfSpinLock_unlock (&pool->mLock);
-        return item + 1;
-    }
-    sbfSpinLock_unlock (&pool->mLock);
-    return sbfPoolNew (pool) + 1;
+    item = sbfPoolNextItem (pool);
+    if (item == NULL)
+        item = sbfPoolNew (pool);
+    return item + 1;
 }
 
 static SBF_INLINE void*
@@ -67,17 +85,10 @@ sbfPool_getZero (sbfPool pool)
 {
     sbfPoolItem item;
 
-    sbfSpinLock_lock (&pool->mLock);
-    item = LIST_FIRST (&pool->mList);
-    if (item != NULL)
-    {
-        LIST_REMOVE (item, mEntry);
-        sbfSpinLock_unlock (&pool->mLock);
-        memset (item + 1, 0, pool->mItemSize);
-        return item + 1;
-    }
-    sbfSpinLock_unlock (&pool->mLock);
-    return sbfPoolNewZero (pool) + 1;
+    item = sbfPoolNextItem (pool);
+    if (item == NULL)
+        item = sbfPoolNewZero (pool);
+    return item + 1;
 }
 
 static SBF_INLINE void
@@ -86,7 +97,13 @@ sbfPool_put (void* data)
     sbfPoolItem item = (sbfPoolItem)data - 1;
     sbfPool     pool = item->mPool;
 
-    sbfSpinLock_lock (&pool->mLock);
-    LIST_INSERT_HEAD (&pool->mList, item, mEntry);
-    sbfSpinLock_unlock (&pool->mLock);
+    do
+        item->mNext = pool->mFree;
+#ifdef WIN32
+    while (InterlockedCompareExchangePointer (&pool->mFree,
+                                              item->mNext,
+                                              item) != item);
+#else
+    while (!__sync_bool_compare_and_swap (&pool->mFree, item->mNext, item));
+#endif
 }

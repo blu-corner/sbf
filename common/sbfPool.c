@@ -1,5 +1,18 @@
 #include "sbfPool.h"
 
+static SBF_INLINE void
+sbfPoolDestroyList (sbfPoolItem item)
+{
+    sbfPoolItem next;
+
+    while (item != NULL)
+    {
+        next = item->mNext;
+        free (item);
+        item = next;
+    }
+}
+
 sbfPool
 sbfPool_create (size_t itemSize)
 {
@@ -8,7 +21,9 @@ sbfPool_create (size_t itemSize)
     pool = xcalloc (1, sizeof *pool);
 
     sbfSpinLock_init (&pool->mLock);
-    LIST_INIT (&pool->mList);
+
+    pool->mFree = NULL;
+    pool->mAvailable = NULL;
 
     pool->mItemSize = itemSize;
     pool->mSize = itemSize + sizeof (struct sbfPoolItemImpl);
@@ -19,11 +34,8 @@ sbfPool_create (size_t itemSize)
 void
 sbfPool_destroy (sbfPool pool)
 {
-    sbfPoolItem item;
-    sbfPoolItem item1;
-
-    LIST_FOREACH_SAFE (item, &pool->mList, mEntry, item1)
-        free (item);
+    sbfPoolDestroyList (pool->mFree);
+    sbfPoolDestroyList (pool->mAvailable);
 
     sbfSpinLock_destroy (&pool->mLock);
     free (pool);
