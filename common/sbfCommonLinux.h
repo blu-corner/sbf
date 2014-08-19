@@ -10,10 +10,13 @@
 #include <sys/socket.h>
 #include <sys/stat.h>
 #include <sys/time.h>
+#include <sys/syscall.h>
 
 #include <arpa/inet.h>
 
 #include <netinet/in.h>
+
+#include <linux/futex.h>
 
 #include <assert.h>
 #include <ctype.h>
@@ -74,6 +77,16 @@ typedef pthread_spinlock_t sbfSpinLock;
 #define sbfSpinLock_unlock(s) pthread_spin_unlock (s)
 
 char* fgetln(FILE* fp, size_t* len);
+
+static SBF_INLINE long futex (void* addr1,
+                              int op,
+                              int val1,
+                              struct timespec* timeout,
+                              void *addr2,
+                              int val3)
+{
+    return syscall (SYS_futex, addr1, op, val1, timeout, addr2, val3);
+}
 
 SBF_END_DECLS
 

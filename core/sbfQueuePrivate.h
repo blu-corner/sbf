@@ -10,6 +10,7 @@
 SBF_BEGIN_DECLS
 
 #define SBF_QUEUE_ITEM_DATA_SIZE 32
+#define SBF_QUEUE_BLOCKING(queue) (!((queue)->mFlags & SBF_QUEUE_NONBLOCK))
 
 #ifdef WIN32
 #include "sbfQueueWin32.h"

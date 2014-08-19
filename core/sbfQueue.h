@@ -5,6 +5,8 @@
 
 SBF_BEGIN_DECLS
 
+#define SBF_QUEUE_NONBLOCK 0x1
+
 typedef struct sbfQueueImpl* sbfQueue;
 
 typedef struct sbfQueueItemImpl* sbfQueueItem;

@@ -2,16 +2,20 @@
 #error "must be included from sbfQueuePrivate.h"
 #endif
 
-/* Based on code from http://tinyurl.com/44c6dqd - MPSC lock free queue. */
+/*
+ * Based on code from http://tinyurl.com/44c6dqd with a futex added for
+ * blocking.
+ */
 
 #ifndef SBF_QUEUE_FUNCTIONS
 
-#define SBF_QUEUE_DECL                          \
-    struct sbfQueueItemImpl* volatile mHead;	\
-    struct sbfQueueItemImpl*          mTail;	\
+#define SBF_QUEUE_DECL                            \
+    int32_t                           mSemaphore; \
+    struct sbfQueueItemImpl* volatile mHead;      \
+    struct sbfQueueItemImpl*          mTail;      \
     struct sbfQueueItemImpl           mEmpty;
 
-#define SBF_QUEUE_ITEM_DECL                     \
+#define SBF_QUEUE_ITEM_DECL                       \
     struct sbfQueueItemImpl* volatile mNext;
 
 #else /* SBF_QUEUE_FUNCTIONS */
@@ -19,6 +23,7 @@
 static SBF_INLINE void
 sbfQueueCreate (sbfQueue queue)
 {
+    queue->mSemaphore = 0; /* 0 empty, -1 empty with waiter, >0 not empty */
     queue->mHead = &queue->mEmpty;
     queue->mTail = &queue->mEmpty;
     queue->mEmpty.mNext = NULL;
@@ -27,6 +32,8 @@ sbfQueueCreate (sbfQueue queue)
 static SBF_INLINE void
 sbfQueueWake (sbfQueue queue)
 {
+    if (SBF_QUEUE_BLOCKING (queue))
+        futex (&queue->mSemaphore, FUTEX_WAKE, INT_MAX, NULL, NULL, 0);
 }
 
 static SBF_INLINE void
@@ -48,14 +55,25 @@ static SBF_INLINE void
 sbfQueueEnqueue (sbfQueue queue, sbfQueueItem item)
 {
     sbfQueueItem last;
+    int32_t      s;
 
     item->mNext = NULL;
     last  = __sync_lock_test_and_set (&queue->mHead, item);
     last->mNext = item;
+
+    if (SBF_QUEUE_BLOCKING (queue))
+    {
+        s = __sync_fetch_and_add (&queue->mSemaphore, 1);
+        if (s < 0)
+        {
+            __sync_fetch_and_add (&queue->mSemaphore, 1);
+            futex (&queue->mSemaphore, FUTEX_WAKE, INT_MAX, NULL, NULL, 0);
+        }
+    }
 }
 
 static SBF_INLINE sbfQueueItem
-sbfQueueDequeue (sbfQueue queue)
+sbfQueueNext (sbfQueue queue)
 {
     sbfQueueItem tail;
     sbfQueueItem next;
@@ -89,6 +107,38 @@ sbfQueueDequeue (sbfQueue queue)
         return tail;
     }
     return NULL;
+}
+
+static SBF_INLINE void
+sbfQueueWait (sbfQueue queue)
+{
+    int32_t s;
+
+    if (!SBF_QUEUE_BLOCKING (queue))
+        return;
+
+    /*
+     * There can only be one consumer, so nobody else can remove from the
+     * queue.
+     */
+    while (!queue->mDestroyed)
+    {
+        s = __sync_sub_and_fetch (&queue->mSemaphore, 1);
+        if (s >= 0)
+            break;
+        while (futex (&queue->mSemaphore, FUTEX_WAIT, s, NULL, NULL, 0) != 0)
+        {
+            if (errno == EWOULDBLOCK)
+                break;
+        }
+    }
+}
+
+static SBF_INLINE sbfQueueItem
+sbfQueueDequeue (sbfQueue queue)
+{
+    sbfQueueWait (queue);
+    return sbfQueueNext (queue);
 }
 
 #endif /* SBF_QUEUE_FUNCTIONS */
