@@ -15,7 +15,7 @@
 #else /* SBF_QUEUE_FUNCTIONS */
 
 static SBF_INLINE void
-SBF_QUEUE_CREATE(sbfQueue queue)
+sbfQueueCreate (sbfQueue queue)
 {
     sbfMutex_init (&queue->mMutex, 0);
     sbfCondVar_init (&queue->mCondVar);
@@ -23,13 +23,13 @@ SBF_QUEUE_CREATE(sbfQueue queue)
 }
 
 static SBF_INLINE void
-SBF_QUEUE_WAKE (sbfQueue queue)
+sbfQueueWake (sbfQueue queue)
 {
     sbfCondVar_broadcast (&queue->mCondVar);
 }
 
 static SBF_INLINE void
-SBF_QUEUE_DESTROY(sbfQueue queue, int last)
+sbfQueueDestroy (sbfQueue queue, int last)
 {
     sbfQueueItem item;
 
@@ -44,7 +44,7 @@ SBF_QUEUE_DESTROY(sbfQueue queue, int last)
 }
 
 static SBF_INLINE void
-SBF_QUEUE_ENQUEUE(sbfQueue queue, sbfQueueItem item)
+sbfQueueEnqueue (sbfQueue queue, sbfQueueItem item)
 {
     sbfMutex_lock (&queue->mMutex);
     SIMPLEQ_INSERT_TAIL (&queue->mItems, item, mEntry);
@@ -53,7 +53,7 @@ SBF_QUEUE_ENQUEUE(sbfQueue queue, sbfQueueItem item)
 }
 
 static SBF_INLINE sbfQueueItem
-SBF_QUEUE_DEQUEUE(sbfQueue queue)
+sbfQueueDequeue (sbfQueue queue)
 {
     sbfQueueItem item = NULL;
 

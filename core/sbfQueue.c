@@ -13,7 +13,7 @@ sbfQueue_create (int flags)
     queue->mDestroyed = 0;
     sbfRefCount_init (&queue->mRefCount, 1);
 
-    SBF_QUEUE_CREATE (queue);
+    sbfQueueCreate (queue);
 
     sbfLog_debug ("creating %p", queue);
 
@@ -26,7 +26,7 @@ sbfQueue_destroy (sbfQueue queue)
     sbfLog_debug ("destroying %p", queue);
 
     queue->mDestroyed = 1;
-    SBF_QUEUE_WAKE (queue);
+    sbfQueueWake (queue);
 
     sbfQueue_removeRef (queue);
 }
@@ -43,7 +43,7 @@ sbfQueue_removeRef (sbfQueue queue)
     if (!sbfRefCount_decrement (&queue->mRefCount))
         return;
 
-    SBF_QUEUE_DESTROY (queue);
+    sbfQueueDestroy (queue);
 
     sbfPool_destroy (queue->mPool);
     free (queue);
@@ -74,7 +74,7 @@ sbfQueue_dispatch (sbfQueue queue)
 
     while (!queue->mDestroyed)
     {
-        item = SBF_QUEUE_DEQUEUE (queue);
+        item = sbfQueueDequeue (queue);
         if (item != NULL)
         {
             item->mCb (item, item->mClosure);
@@ -100,7 +100,7 @@ sbfQueue_getItem (sbfQueue queue, sbfQueueCb cb, void* closure)
 void
 sbfQueue_enqueueItem (sbfQueue queue, sbfQueueItem item)
 {
-    SBF_QUEUE_ENQUEUE(queue, item);
+    sbfQueueEnqueue (queue, item);
 }
 
 void*

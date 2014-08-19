@@ -17,7 +17,7 @@
 #else /* SBF_QUEUE_FUNCTIONS */
 
 static SBF_INLINE void
-SBF_QUEUE_CREATE(sbfQueue queue)
+sbfQueueCreate (sbfQueue queue)
 {
     queue->mHead = &queue->mEmpty;
     queue->mTail = &queue->mEmpty;
@@ -25,12 +25,12 @@ SBF_QUEUE_CREATE(sbfQueue queue)
 }
 
 static SBF_INLINE void
-SBF_QUEUE_WAKE (sbfQueue queue)
+sbfQueueWake (sbfQueue queue)
 {
 }
 
 static SBF_INLINE void
-SBF_QUEUE_DESTROY(sbfQueue queue)
+sbfQueueDestroy (sbfQueue queue)
 {
     sbfQueueItem item;
     sbfQueueItem next;
@@ -45,7 +45,7 @@ SBF_QUEUE_DESTROY(sbfQueue queue)
 }
 
 static SBF_INLINE void
-SBF_QUEUE_ENQUEUE(sbfQueue queue, sbfQueueItem item)
+sbfQueueEnqueue (sbfQueue queue, sbfQueueItem item)
 {
     sbfQueueItem last;
 
@@ -55,7 +55,7 @@ SBF_QUEUE_ENQUEUE(sbfQueue queue, sbfQueueItem item)
 }
 
 static SBF_INLINE sbfQueueItem
-SBF_QUEUE_DEQUEUE(sbfQueue queue)
+sbfQueueDequeue (sbfQueue queue)
 {
     sbfQueueItem tail;
     sbfQueueItem next;
@@ -80,7 +80,7 @@ SBF_QUEUE_DEQUEUE(sbfQueue queue)
     head = queue->mHead;
     if (tail != head)
         return NULL;
-    SBF_QUEUE_ENQUEUE (queue, &queue->mEmpty);
+    sbfQueueEnqueue (queue, &queue->mEmpty);
 
     next = tail->mNext;
     if (next)
