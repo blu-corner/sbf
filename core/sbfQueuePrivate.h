@@ -11,27 +11,39 @@ SBF_BEGIN_DECLS
 
 #define SBF_QUEUE_ITEM_DATA_SIZE 32
 
+#ifdef WIN32
+#include "sbfQueueWin32.h"
+#else
+#include "sbfQueueLinux.h"
+#endif
+
 struct sbfQueueItemImpl
 {
-    sbfQueueCb                       mCb;
-    void*                            mClosure;
+    sbfQueueCb mCb;
+    void*      mClosure;
 
-    char                             mData[SBF_QUEUE_ITEM_DATA_SIZE];
+    char       mData[SBF_QUEUE_ITEM_DATA_SIZE];
 
-    SIMPLEQ_ENTRY (sbfQueueItemImpl) mEntry;
+    SBF_QUEUE_ITEM_DECL;
 };
 
 struct sbfQueueImpl
 {
-    sbfMutex                          mMutex;
-    sbfCondVar                        mCondVar;
+    int         mDestroyed;
+    sbfRefCount mRefCount;
 
-    int                               mDestroyed;
-    sbfRefCount                       mRefCount;
+    sbfPool     mPool;
 
-    sbfPool                           mPool;
-    SIMPLEQ_HEAD (, sbfQueueItemImpl) mItems;
+    SBF_QUEUE_DECL;
 };
+
+#define SBF_QUEUE_FUNCTIONS
+#ifdef WIN32
+#include "sbfQueueWin32.h"
+#else
+#include "sbfQueueLinux.h"
+#endif
+#undef SBF_QUEUE_FUNCTIONS
 
 void sbfQueue_addRef (sbfQueue queue);
 void sbfQueue_removeRef (sbfQueue queue);

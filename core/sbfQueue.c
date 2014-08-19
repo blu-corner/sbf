@@ -8,13 +8,11 @@ sbfQueue_create (int flags)
 
     queue = xcalloc (1, sizeof *queue);
     queue->mPool = sbfPool_create (sizeof (struct sbfQueueItemImpl));
-    SIMPLEQ_INIT (&queue->mItems);
 
     queue->mDestroyed = 0;
     sbfRefCount_init (&queue->mRefCount, 1);
 
-    sbfMutex_init (&queue->mMutex, 0);
-    sbfCondVar_init (&queue->mCondVar);
+    SBF_QUEUE_CREATE (queue, flags);
 
     sbfLog_debug ("creating %p", queue);
 
@@ -27,7 +25,7 @@ sbfQueue_destroy (sbfQueue queue)
     sbfLog_debug ("destroying %p", queue);
 
     queue->mDestroyed = 1;
-    sbfCondVar_broadcast (&queue->mCondVar);
+    SBF_QUEUE_WAKE (queue);
 
     sbfQueue_removeRef (queue);
 }
@@ -41,19 +39,10 @@ sbfQueue_addRef (sbfQueue queue)
 void
 sbfQueue_removeRef (sbfQueue queue)
 {
-    sbfQueueItem item;
-
     if (!sbfRefCount_decrement (&queue->mRefCount))
         return;
 
-    while ((item = SIMPLEQ_FIRST (&queue->mItems)) != NULL)
-    {
-        SIMPLEQ_REMOVE_HEAD (&queue->mItems, mEntry);
-        sbfPool_put (item);
-    }
-
-    sbfCondVar_destroy (&queue->mCondVar);
-    sbfMutex_destroy (&queue->mMutex);
+    SBF_QUEUE_DESTROY (queue);
 
     sbfPool_destroy (queue->mPool);
     free (queue);
@@ -84,16 +73,7 @@ sbfQueue_dispatch (sbfQueue queue)
 
     while (!queue->mDestroyed)
     {
-        item = NULL;
-
-        sbfMutex_lock (&queue->mMutex);
-        while (!queue->mDestroyed &&
-               (item = SIMPLEQ_FIRST (&queue->mItems)) == NULL)
-            sbfCondVar_wait (&queue->mCondVar, &queue->mMutex);
-        if (item != NULL)
-            SIMPLEQ_REMOVE_HEAD (&queue->mItems, mEntry);
-        sbfMutex_unlock (&queue->mMutex);
-
+        item = SBF_QUEUE_DEQUEUE (queue);
         if (item != NULL)
         {
             item->mCb (item, item->mClosure);
@@ -119,10 +99,7 @@ sbfQueue_getItem (sbfQueue queue, sbfQueueCb cb, void* closure)
 void
 sbfQueue_enqueueItem (sbfQueue queue, sbfQueueItem item)
 {
-    sbfMutex_lock (&queue->mMutex);
-    SIMPLEQ_INSERT_TAIL (&queue->mItems, item, mEntry);
-    sbfCondVar_signal (&queue->mCondVar);
-    sbfMutex_unlock (&queue->mMutex);
+    SBF_QUEUE_ENQUEUE(queue, item);
 }
 
 void*
