@@ -13,6 +13,7 @@ HEADERS += \
     sbfCsvParser.h \
     sbfFatal.h \
     sbfGuid.h \
+    sbfHugePages.h \
     sbfInterface.h \
     sbfKeyValue.h \
     sbfKeyValuePrivate.h \
@@ -34,6 +35,7 @@ SOURCES += \
     sbfCsvParser.c \
     sbfFatal.c \
     sbfGuid.c \
+    sbfHugePages.c \
     sbfInterface.c \
     sbfKeyValue.c \
     sbfLog.c \
@@ -62,6 +64,7 @@ install_headers.files = \
     sbfCsvParser.h \
     sbfFatal.h \
     sbfGuid.h \
+    sbfHugePages.h \
     sbfInterface.h \
     sbfKeyValue.h \
     sbfLog.h \
