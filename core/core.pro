@@ -11,6 +11,8 @@ HEADERS += \
     sbfMwPrivate.h \
     sbfQueue.h \
     sbfQueuePrivate.h \
+    sbfQueueLinux.h \
+    sbfQueueWin32.h \
     sbfTimer.h \
     sbfTimerPrivate.h
 SOURCES += \
