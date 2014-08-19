@@ -7,12 +7,13 @@ sbfQueue_create (int flags)
     sbfQueue queue;
 
     queue = xcalloc (1, sizeof *queue);
+    queue->mFlags = flags;
     queue->mPool = sbfPool_create (sizeof (struct sbfQueueItemImpl));
 
     queue->mDestroyed = 0;
     sbfRefCount_init (&queue->mRefCount, 1);
 
-    SBF_QUEUE_CREATE (queue, flags);
+    SBF_QUEUE_CREATE (queue);
 
     sbfLog_debug ("creating %p", queue);
 

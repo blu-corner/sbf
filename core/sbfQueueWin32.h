@@ -15,7 +15,7 @@
 #else /* SBF_QUEUE_FUNCTIONS */
 
 static SBF_INLINE void
-SBF_QUEUE_CREATE(sbfQueue queue, int flags)
+SBF_QUEUE_CREATE(sbfQueue queue)
 {
     sbfMutex_init (&queue->mMutex, 0);
     sbfCondVar_init (&queue->mCondVar);

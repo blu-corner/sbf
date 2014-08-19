@@ -29,6 +29,8 @@ struct sbfQueueItemImpl
 
 struct sbfQueueImpl
 {
+    int         mFlags;
+
     int         mDestroyed;
     sbfRefCount mRefCount;
 

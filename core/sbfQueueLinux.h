@@ -17,7 +17,7 @@
 #else /* SBF_QUEUE_FUNCTIONS */
 
 static SBF_INLINE void
-SBF_QUEUE_CREATE(sbfQueue queue, int flags)
+SBF_QUEUE_CREATE(sbfQueue queue)
 {
     queue->mHead = &queue->mEmpty;
     queue->mTail = &queue->mEmpty;
