@@ -65,8 +65,7 @@ sbfKeyValue_getV (sbfKeyValue table, const char* fmt, ...)
     const char* value;
 
     va_start (ap, fmt);
-    if (vasprintf (&key, fmt, ap) == -1)
-        sbfFatal ("out of memory");
+    xvasprintf (&key, fmt, ap);
     va_end (ap);
 
     value = sbfKeyValue_get (table, key);

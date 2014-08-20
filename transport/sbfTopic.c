@@ -46,12 +46,7 @@ sbfTopic_create (sbfTopicType type, const char* string)
     topic->mThird = xstrdup (string);
 
 out:
-    if (asprintf (&cp,
-                  "%s/%s/%s",
-                  topic->mFirst,
-                  topic->mSecond,
-                  topic->mThird) == -1)
-        sbfFatal ("out of memory");
+    xasprintf (&cp, "%s/%s/%s", topic->mFirst, topic->mSecond, topic->mThird);
     topic->mTopic = cp;
 
     if (strlen (topic->mTopic) > SBF_TOPIC_SIZE_LIMIT)

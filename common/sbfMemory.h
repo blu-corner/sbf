@@ -14,6 +14,11 @@ void* sbfMemory_realloc (void* ptr, size_t nmemb, size_t size);
 char* sbfMemory_strdup (const char* s);
 #define xstrdup sbfMemory_strdup
 
+void sbfMemory_asprintf (char** ret, const char* fmt, ...);
+#define xasprintf sbfMemory_asprintf
+void sbfMemory_vasprintf (char** ret, const char* fmt, va_list ap);
+#define xvasprintf sbfMemory_vasprintf
+
 /*
  * On Windows, the heap is not shared between different objects so malloc in
  * one DLL cannot be freed in another. Instead, these functions use LocalAlloc

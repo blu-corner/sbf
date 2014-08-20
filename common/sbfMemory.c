@@ -1,5 +1,23 @@
 #include "sbfMemory.h"
 
+void
+sbfMemory_asprintf (char** ret, const char* fmt, ...)
+{
+    va_list ap;
+
+    va_start (ap, fmt);
+    if (vasprintf (ret, fmt, ap) == -1)
+        sbfFatal ("out of memory");
+    va_end (ap);
+}
+
+void
+sbfMemory_vasprintf (char** ret, const char* fmt, va_list ap)
+{
+    if (vasprintf (ret, fmt, ap) == -1)
+        sbfFatal ("out of memory");
+}
+
 void*
 sbfMemory_malloc (size_t size)
 {
