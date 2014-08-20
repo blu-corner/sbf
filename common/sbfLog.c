@@ -44,7 +44,7 @@ sbfLog_setLevel (sbfLogLevel level)
 }
 
 sbfLogLevel
-sbfLog_getLevel (const char* s)
+sbfLog_levelFromString (const char* s)
 {
     size_t slen;
     u_int  i;

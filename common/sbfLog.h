@@ -19,7 +19,7 @@ typedef void (*sbfLogCb) (sbfLogLevel level,
                           void* closure);
 
 void sbfLog_setLevel (sbfLogLevel level);
-sbfLogLevel sbfLog_getLevel (const char* s);
+sbfLogLevel sbfLog_levelFromString (const char* s);
 void sbfLog_setCallback (sbfLogCb cb, void* closure);
 
 #define sbfLog_err(fmt, ...) \

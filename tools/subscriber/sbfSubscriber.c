@@ -95,7 +95,7 @@ main (int argc, char** argv)
             topic = optarg;
             break;
         case 'v':
-            sbfLog_setLevel (sbfLog_getLevel (optarg));
+            sbfLog_setLevel (sbfLog_levelFromString (optarg));
             break;
         default:
             usage (argv0);
