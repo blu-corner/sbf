@@ -90,6 +90,19 @@ sbfLog_log (sbfLogLevel level, const char* fmt, ...)
 }
 
 void
+sbfLog_vlog (sbfLogLevel level, const char* fmt, va_list ap)
+{
+    char tmp[BUFSIZ];
+
+    if (gSbfLogLevel > level)
+        return;
+
+    vsnprintf (tmp, sizeof tmp, fmt, ap);
+
+    gSbfLogCb (level, tmp, gSbfLogClosure);
+}
+
+void
 sbfLog_logData (sbfLogLevel level, void* buf, size_t len)
 {
     u_char* ptr;

@@ -32,6 +32,7 @@ void sbfLog_setCallback (sbfLogCb cb, void* closure);
     sbfLog_log (SBF_LOG_DEBUG, "%s: " fmt, __func__, ## __VA_ARGS__)
 
 void sbfLog_log (sbfLogLevel level, const char* fmt, ...) SBF_PRINTFLIKE(2, 3);
+void sbfLog_vlog (sbfLogLevel level, const char* fmt, va_list ap);
 void sbfLog_logData (sbfLogLevel level, void* buf, size_t len);
 
 SBF_END_DECLS
