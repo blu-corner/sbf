@@ -16,6 +16,10 @@ const char* sbfKeyValue_getV (sbfKeyValue table, const char* fmt, ...) SBF_PRINT
 void sbfKeyValue_put (sbfKeyValue table, const char* key, const char* value);
 void sbfKeyValue_remove (sbfKeyValue table, const char* key);
 
+/* Calling remove invalidates first/next. */
+const char* sbfKeyValue_first (sbfKeyValue table, void** cookie);
+const char* sbfKeyValue_next (sbfKeyValue table, void** cookie);
+
 SBF_END_DECLS
 
 #endif /* _SBF_KEY_VALUE_H_ */

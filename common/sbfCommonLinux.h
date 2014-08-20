@@ -23,6 +23,7 @@
 #include <dlfcn.h>
 #include <errno.h>
 #include <ifaddrs.h>
+#include <libgen.h>
 #include <limits.h>
 #include <pthread.h>
 #include <regex.h>

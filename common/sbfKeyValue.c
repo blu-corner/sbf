@@ -107,3 +107,29 @@ sbfKeyValue_remove (sbfKeyValue table, const char* key)
         free (item);
     }
 }
+
+const char*
+sbfKeyValue_first (sbfKeyValue table, void** cookie)
+{
+    sbfKeyValueItem item;
+
+    item = RB_MIN (sbfKeyValueItemTreeImpl, &table->mTree);
+    if (item == NULL)
+        return NULL;
+
+    *cookie = item;
+    return item->mKey;
+}
+
+const char*
+sbfKeyValue_next (sbfKeyValue table, void** cookie)
+{
+    sbfKeyValueItem item = *cookie;
+
+    item = RB_NEXT (sbfKeyValueItemTreeImpl, &table->mTree, item);
+    if (item == NULL)
+        return NULL;
+
+    *cookie = item;
+    return item->mKey;
+}
