@@ -31,7 +31,6 @@ HEADERS += \
     sbfPool.h \
     sbfPoolInline.h \
     sbfProperties.h \
-    sbfPropertiesPrivate.h \
     sbfTcpConnection.h \
     sbfTcpConnectionPrivate.h \
     sbfTcpListener.h \
