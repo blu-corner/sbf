@@ -143,3 +143,8 @@ sbfCacheFile_writeOffset (sbfCacheFileItem item,
     return 0;
 }
 
+void
+sbfCacheFile_flush (sbfCacheFile file)
+{
+    fflush (file->mFile);
+}

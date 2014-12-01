@@ -29,6 +29,8 @@ sbfError sbfCacheFile_writeOffset (sbfCacheFileItem item,
                                    void* data,
                                    size_t size);
 
+void sbfCacheFile_flush (sbfCacheFile file);
+
 SBF_END_DECLS
 
 #endif /* _SBF_CACHE_FILE_H_ */
