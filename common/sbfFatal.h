@@ -5,8 +5,8 @@
 
 SBF_BEGIN_DECLS
 
-void sbfFatal (const char* s);
-#define SBF_FATAL(s) sbfFatal (s)
+SBF_DEAD void sbfFatal_die (const char* msg);
+#define SBF_FATAL(msg) sbfFatal_die (msg)
 
 SBF_END_DECLS
 

@@ -1,11 +1,10 @@
 #include "sbfFatal.h"
 
 void
-sbfFatal (const char* s)
+sbfFatal_die (const char* msg)
 {
-    fprintf (stderr, "%s\n", s);
+    fprintf (stderr, "%s\n", msg);
     fflush (stderr);
     abort ();
     exit (1);
 }
-
