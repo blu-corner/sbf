@@ -58,7 +58,8 @@ sbfEvent_create (sbfMwThread thread,
     event->mDestroyed = 0;
     sbfRefCount_init (&event->mRefCount, 1);
 
-    sbfLog_debug ("creating %p: descriptor %d, events %s%s",
+    sbfLog_debug (thread->mParent->mLog,
+                  "creating event %p: descriptor %d, events %s%s",
                   event,
                   descriptor,
                   events & SBF_EVENT_READ ? "R" : "",
@@ -78,7 +79,7 @@ sbfEvent_create (sbfMwThread thread,
 void
 sbfEvent_destroy (sbfEvent event)
 {
-    sbfLog_debug ("destroying %p", event);
+    sbfLog_debug (event->mThread->mParent->mLog, "destroying event %p", event);
 
     event->mDestroyed = 1;
     event_del (&event->mEvent);
