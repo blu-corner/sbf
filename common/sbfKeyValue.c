@@ -13,6 +13,7 @@ sbfKeyValue_create (void)
     sbfKeyValue table;
 
     table = xcalloc (1, sizeof *table);
+    table->mSize = 0;
     RB_INIT (&table->mTree);
 
     return table;
@@ -42,6 +43,12 @@ sbfKeyValue_copy (sbfKeyValue table)
     RB_FOREACH (item, sbfKeyValueItemTreeImpl, &table->mTree)
         sbfKeyValue_put (copy, item->mKey, sbfKeyValueGetValue (item));
     return copy;
+}
+
+u_int
+sbfKeyValue_size (sbfKeyValue table)
+{
+    return table->mSize;
 }
 
 const char*
@@ -90,6 +97,7 @@ sbfKeyValue_put (sbfKeyValue table, const char* key, const char* value)
     memcpy (item + 1, key, keySize);
     memcpy (sbfKeyValueGetValue (item), value, valueSize);
 
+    table->mSize++;
     RB_INSERT (sbfKeyValueItemTreeImpl, &table->mTree, item);
 }
 
@@ -103,6 +111,7 @@ sbfKeyValue_remove (sbfKeyValue table, const char* key)
     item = RB_FIND (sbfKeyValueItemTreeImpl, &table->mTree, &impl);
     if (item != NULL)
     {
+        table->mSize--;
         RB_REMOVE (sbfKeyValueItemTreeImpl, &table->mTree, item);
         free (item);
     }

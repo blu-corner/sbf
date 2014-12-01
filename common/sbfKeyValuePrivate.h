@@ -12,22 +12,15 @@ struct sbfKeyValueItemImpl
 };
 typedef struct sbfKeyValueItemImpl* sbfKeyValueItem;
 
-RB_HEAD (sbfKeyValueItemTreeImpl, sbfKeyValueItemImpl);
-typedef struct sbfKeyValueItemTreeImpl sbfKeyValueItemTree;
-
-static SBF_INLINE int
-sbfKeyValueItemCmp (sbfKeyValueItem lhs, sbfKeyValueItem rhs)
+SBF_RB_TREE (sbfKeyValueItem, Tree, mTreeEntry,
 {
     return strcmp (lhs->mKey, rhs->mKey);
-}
-RB_GENERATE_STATIC (sbfKeyValueItemTreeImpl,
-                    sbfKeyValueItemImpl,
-                    mTreeEntry,
-                    sbfKeyValueItemCmp)
+})
 
 struct sbfKeyValueImpl
 {
     sbfKeyValueItemTree mTree;
+    u_int               mSize;
 };
 
 SBF_END_DECLS
