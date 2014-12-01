@@ -39,7 +39,7 @@ sbfTcpListenerEventCb (struct evconnlistener* listener,
     sbfTcpConnection    tc;
     struct sockaddr_in* sin = (struct sockaddr_in*)address;
 
-    tc = sbfTcpConnection_wrap (s, sin);
+    tc = sbfTcpConnection_wrap (tl->mLog, s, sin);
     tc->mListener = tl;
 
     /*
@@ -51,7 +51,8 @@ sbfTcpListenerEventCb (struct evconnlistener* listener,
 }
 
 sbfTcpListener
-sbfTcpListener_create (struct sbfMwThreadImpl* thread,
+sbfTcpListener_create (sbfLog log,
+                       struct sbfMwThreadImpl* thread,
                        struct sbfQueueImpl* queue,
                        uint16_t port,
                        sbfTcpListenerReadyCb readyCb,
@@ -62,6 +63,7 @@ sbfTcpListener_create (struct sbfMwThreadImpl* thread,
     struct sockaddr_in sin;
 
     tl = xcalloc (1, sizeof *tl);
+    tl->mLog = log;
     tl->mThread = thread;
     tl->mQueue = queue;
 
@@ -72,7 +74,10 @@ sbfTcpListener_create (struct sbfMwThreadImpl* thread,
     tl->mDestroyed = 0;
     sbfRefCount_init (&tl->mRefCount, 1);
 
-    sbfLog_debug ("creating %p: port %hu", tl, port);
+    sbfLog_debug (tl->mLog,
+                  "creating TCP listener %p: port %hu",
+                  tl,
+                  port);
 
     memset (&sin, 0, sizeof sin);
     sin.sin_family = AF_INET;
@@ -89,7 +94,10 @@ sbfTcpListener_create (struct sbfMwThreadImpl* thread,
                                              (struct sockaddr*)&sin,
                                              sizeof sin);
     if (tl->mListener == NULL)
+    {
+        sbfLog_err (tl->mLog, "failed to create event listener");
         goto fail;
+    }
 
     sbfRefCount_increment (&tl->mRefCount);
     sbfQueue_enqueue (queue, sbfTcpListenerReadyQueueCb, tl);
@@ -104,7 +112,7 @@ fail:
 void
 sbfTcpListener_destroy (sbfTcpListener tl)
 {
-    sbfLog_debug ("destroying %p", tl);
+    sbfLog_debug (tl->mLog, "destroying TCP listener %p", tl);
 
     tl->mDestroyed = 1;
     if (tl->mListener != NULL)

@@ -16,7 +16,8 @@ typedef void (*sbfTcpListenerAcceptCb) (sbfTcpListener tl,
                                         struct sbfTcpConnectionImpl* tc,
                                         void* closure);
 
-sbfTcpListener sbfTcpListener_create (struct sbfMwThreadImpl* thread,
+sbfTcpListener sbfTcpListener_create (sbfLog log,
+                                      struct sbfMwThreadImpl* thread,
                                       struct sbfQueueImpl* queue,
                                       uint16_t port,
                                       sbfTcpListenerReadyCb readyCb,

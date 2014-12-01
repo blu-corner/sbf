@@ -4,12 +4,13 @@
 SBF_BEGIN_DECLS
 
 #include "sbfMw.h"
-#include "sbfMwInternal.h"
 #include "sbfMwPrivate.h"
 #include "sbfRefCount.h"
 
 struct sbfTcpListenerImpl
 {
+    sbfLog                 mLog;
+
     struct evconnlistener* mListener;
 
     sbfTcpListenerReadyCb  mReadyCb;
