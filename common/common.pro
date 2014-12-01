@@ -22,8 +22,11 @@ HEADERS += \
     sbfKeyValuePrivate.h \
     sbfLog.h \
     sbfLogPrivate.h \
+    sbfLogFile.h \
+    sbfLogFilePrivate.h \
     sbfMemory.h \
     sbfNumberString.h \
+    sbfPath.h \
     sbfPerfCounter.h \
     sbfPool.h \
     sbfPoolInline.h \
@@ -46,8 +49,10 @@ SOURCES += \
     sbfInterface.c \
     sbfKeyValue.c \
     sbfLog.c \
+    sbfLogFile.c \
     sbfMemory.c \
     sbfNumberString.c \
+    sbfPath.c \
     sbfPerfCounter.c \
     sbfPool.c \
     sbfTcpConnection.c \
@@ -95,8 +100,10 @@ install_headers.files = \
     sbfInterface.h \
     sbfKeyValue.h \
     sbfLog.h \
+    sbfLogFile.h \
     sbfMemory.h \
     sbfNumberString.h \
+    sbfPath.h \
     sbfPerfCounter.h \
     sbfPool.h \
     sbfPoolInline.h \

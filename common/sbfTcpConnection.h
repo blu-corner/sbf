@@ -20,10 +20,10 @@ typedef size_t (*sbfTcpConnectionReadCb) (sbfTcpConnection tc,
                                           size_t size,
                                           void* closure);
 
-sbfTcpConnection sbfTcpConnection_create (struct sbfMwThreadImpl* thread,
+sbfTcpConnection sbfTcpConnection_create (sbfLog log,
+                                          struct sbfMwThreadImpl* thread,
                                           struct sbfQueueImpl* queue,
-                                          const char* address,
-                                          uint16_t port,
+                                          struct sockaddr_in* sin,
                                           sbfTcpConnectionReadyCb readyCb,
                                           sbfTcpConnectionErrorCb errorCb,
                                           sbfTcpConnectionReadCb readCb,
@@ -38,7 +38,9 @@ sbfError sbfTcpConnection_accept (sbfTcpConnection tc,
                                   sbfTcpConnectionReadCb readCb,
                                   void* closure);
 
-void sbfTcpConnection_send (sbfTcpConnection tc, const void* data, size_t size);
+void sbfTcpConnection_send (sbfTcpConnection tc,
+                            const void* data,
+                            size_t size);
 void sbfTcpConnection_sendBuffer (sbfTcpConnection tc, sbfBuffer buffer);
 
 struct sockaddr_in* sbfTcpConnection_getPeer (sbfTcpConnection tc);

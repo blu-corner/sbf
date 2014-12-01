@@ -4,7 +4,6 @@
 SBF_BEGIN_DECLS
 
 #include "sbfMw.h"
-#include "sbfMwInternal.h"
 #include "sbfMwPrivate.h"
 #include "sbfRefCount.h"
 
@@ -12,6 +11,8 @@ struct sbfTcpListenerImpl;
 
 struct sbfTcpConnectionImpl
 {
+    sbfLog                     mLog;
+
     sbfSocket                  mSocket;
     struct bufferevent*        mEvent;
     int                        mQueued;
@@ -32,7 +33,9 @@ struct sbfTcpConnectionImpl
     struct sbfTcpListenerImpl* mListener;
 };
 
-sbfTcpConnection sbfTcpConnection_wrap (int socket, struct sockaddr_in* sin);
+sbfTcpConnection sbfTcpConnection_wrap (sbfLog log,
+                                        int socket,
+                                        struct sockaddr_in* sin);
 
 SBF_END_DECLS
 

@@ -2,9 +2,23 @@
 #include "sbfTcpConnectionPrivate.h"
 
 static void
+sbfTcpConnectionBufferFreeCb (const void *data, size_t datalen, void* closure)
+{
+    sbfBuffer_destroy (closure);
+}
+
+static void
 sbfTcpConnectionReadyQueueCb (sbfQueueItem item, void* closure)
 {
     sbfTcpConnection tc = closure;
+    char             tmp[INET_ADDRSTRLEN];
+
+    inet_ntop (AF_INET, &tc->mPeer.sin_addr, tmp, sizeof tmp);
+    sbfLog_debug (tc->mLog,
+                  "TCP connection %p (%s:%hu) ready",
+                  tc,
+                  tmp,
+                  ntohs (tc->mPeer.sin_port));
 
     if (tc->mReadyCb != NULL && !tc->mDestroyed)
         tc->mReadyCb (tc, tc->mClosure);
@@ -17,6 +31,14 @@ static void
 sbfTcpConnectionErrorQueueCb (sbfQueueItem item, void* closure)
 {
     sbfTcpConnection tc = closure;
+    char             tmp[INET_ADDRSTRLEN];
+
+    inet_ntop (AF_INET, &tc->mPeer.sin_addr, tmp, sizeof tmp);
+    sbfLog_debug (tc->mLog,
+                  "TCP connection %p (%s:%hu) error",
+                  tc,
+                  tmp,
+                  ntohs (tc->mPeer.sin_port));
 
     if (tc->mErrorCb != NULL && !tc->mDestroyed)
         tc->mErrorCb (tc, tc->mClosure);
@@ -135,7 +157,7 @@ sbfTcpConnectionSet (sbfTcpConnection tc,
 }
 
 sbfTcpConnection
-sbfTcpConnection_wrap (int s, struct sockaddr_in* sin)
+sbfTcpConnection_wrap (sbfLog log, int s, struct sockaddr_in* sin)
 {
     sbfTcpConnection tc;
 
@@ -143,6 +165,7 @@ sbfTcpConnection_wrap (int s, struct sockaddr_in* sin)
     evutil_make_socket_nonblocking (s);
 
     tc = xcalloc (1, sizeof *tc);
+    tc->mLog = log;
     tc->mSocket = s;
     memcpy (&tc->mPeer, sin, sizeof tc->mPeer);
 
@@ -150,67 +173,57 @@ sbfTcpConnection_wrap (int s, struct sockaddr_in* sin)
 }
 
 sbfTcpConnection
-sbfTcpConnection_create (sbfMwThread thread,
+sbfTcpConnection_create (sbfLog log,
+                         sbfMwThread thread,
                          sbfQueue queue,
-                         const char* address,
-                         uint16_t port,
+                         struct sockaddr_in* sin,
                          sbfTcpConnectionReadyCb readyCb,
                          sbfTcpConnectionErrorCb errorCb,
                          sbfTcpConnectionReadCb readCb,
                          void* closure)
 {
-    sbfTcpConnection   tc;
-    int                s;
-    struct addrinfo    hints, *res, *res0;
-    int                error;
-    char               port0[16];
-    struct sockaddr_in sin;
-    char               tmp[INET_ADDRSTRLEN];
+    sbfTcpConnection tc;
+    int              s;
+    char             tmp[INET_ADDRSTRLEN];
+    int              error;
 
-    memset (&hints, 0, sizeof hints);
-    hints.ai_family = AF_INET;
-    hints.ai_socktype = SOCK_STREAM;
-    hints.ai_protocol = IPPROTO_TCP;
-
-    snprintf (port0, sizeof port0, "%hu", port);
-    error = evutil_getaddrinfo (address, port0, &hints, &res0);
-    if (error != 0)
-        return NULL;
-    s = -1;
-    for (res = res0; res != NULL; res = res->ai_next) {
-        s = socket (res->ai_family, res->ai_socktype, res->ai_protocol);
-        if (s != -1)
-            break;
-    }
+    s = socket (AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (s == -1)
         return NULL;
-    memcpy (&sin, res->ai_addr, sizeof sin);
-    freeaddrinfo (res0);
-
-    tc = sbfTcpConnection_wrap (s, &sin);
+    tc = sbfTcpConnection_wrap (log, s, sin);
     if (tc == NULL)
         return NULL;
 
-    inet_ntop (AF_INET, &sin.sin_addr, tmp, sizeof tmp);
-    sbfLog_debug ("creating %p to %s:%hu", tc, tmp, ntohs (sin.sin_port));
+    inet_ntop (AF_INET, &sin->sin_addr, tmp, sizeof tmp);
+    sbfLog_debug (log,
+                  "creating TCP connection %p to %s:%hu",
+                  tc,
+                  tmp,
+                  ntohs (sin->sin_port));
 
-    if (sbfTcpConnectionSet (tc,
-                             thread,
-                             queue,
-                             readyCb,
-                             errorCb,
-                             readCb,
-                             closure) != 0)
+    error =  sbfTcpConnectionSet (tc,
+                                  thread,
+                                  queue,
+                                  readyCb,
+                                  errorCb,
+                                  readCb,
+                                  closure);
+    if (error != 0)
         goto fail;
 
-    if (bufferevent_socket_connect (tc->mEvent,
-                                    (struct sockaddr*)&sin,
-                                    sizeof sin) != 0)
+    error = bufferevent_socket_connect (tc->mEvent,
+                                        (struct sockaddr*)sin,
+                                        sizeof *sin);
+    if (error != 0)
         goto fail;
 
     return tc;
 
 fail:
+    sbfLog_err (tc->mLog,
+                "error creating TCP connection %p: %s",
+                tc,
+                strerror (error));
     sbfTcpConnection_destroy (tc);
     return NULL;
 }
@@ -218,12 +231,12 @@ fail:
 void
 sbfTcpConnection_destroy (sbfTcpConnection tc)
 {
-    sbfLog_debug ("destroying %p", tc);
+    sbfLog_debug (tc->mLog, "destroying TCP connection %p", tc);
 
     tc->mDestroyed = 1;
+    EVUTIL_CLOSESOCKET (tc->mSocket);
     if (tc->mEvent != NULL)
         bufferevent_free (tc->mEvent);
-    EVUTIL_CLOSESOCKET (tc->mSocket);
 
     if (sbfRefCount_decrement (&tc->mRefCount))
         free (tc);
@@ -242,7 +255,8 @@ sbfTcpConnection_accept (sbfTcpConnection tc,
     sbfError error;
 
     inet_ntop (AF_INET, &tc->mPeer.sin_addr, tmp, sizeof tmp);
-    sbfLog_debug ("accepting %p from %s:%hu",
+    sbfLog_debug (tc->mLog,
+                  "accepting TCP connection %p from %s:%hu",
                   tc,
                   tmp,
                   ntohs (tc->mPeer.sin_port));
@@ -256,6 +270,13 @@ sbfTcpConnection_accept (sbfTcpConnection tc,
                                   closure);
     if (error == 0)
         bufferevent_enable (tc->mEvent, EV_READ|EV_WRITE);
+    else
+    {
+        sbfLog_err (tc->mLog,
+                    "error accepting TCP connection %p: %s",
+                    tc,
+                    strerror (error));
+    }
     return error;
 }
 
@@ -268,9 +289,13 @@ sbfTcpConnection_send (sbfTcpConnection tc, const void* data, size_t size)
 void
 sbfTcpConnection_sendBuffer (sbfTcpConnection tc, sbfBuffer buffer)
 {
-    bufferevent_write (tc->mEvent,
-                       sbfBuffer_getData (buffer),
-                       sbfBuffer_getSize (buffer));
+    sbfBuffer_addRef (buffer);
+    if (evbuffer_add_reference (bufferevent_get_output (tc->mEvent),
+                                sbfBuffer_getData (buffer),
+                                sbfBuffer_getSize (buffer),
+                                sbfTcpConnectionBufferFreeCb,
+                                buffer) != 0)
+        sbfBuffer_destroy (buffer);
 }
 
 struct sockaddr_in*
