@@ -9,11 +9,14 @@ struct sbfBufferImpl
     size_t             mSize;
 
     sbfBufferDestroyCb mDestroyCb;
+    void*              mDestroyData;
     void*              mDestroyClosure;
 
     sbfRefCount        mRefCount;
+    int                mLocked;
 
     void*              mOwner;
+    void*              mHandlerData;
 };
 
 extern sbfPool gSbfBufferDefaultPool;
@@ -25,7 +28,11 @@ sbfBuffer_new (sbfPool pool, size_t size)
 
     if (pool == NULL)
     {
-        buffer = (sbfBuffer)sbfMemory_getGlobal ((sizeof *buffer) + size);
+#ifdef WIN32
+        buffer = (sbfBuffer)LocalAlloc (0, (sizeof *buffer) + size);
+#else
+        buffer = (sbfBuffer)xmalloc ((sizeof *buffer) + size);
+#endif
         buffer->mAllocated = 1;
     }
     else
@@ -35,12 +42,14 @@ sbfBuffer_new (sbfPool pool, size_t size)
     }
 
     buffer->mDestroyCb = NULL;
+    buffer->mDestroyData = NULL;
     buffer->mDestroyClosure = NULL;
 
     buffer->mData = buffer + 1;
     buffer->mSize = size;
 
     sbfRefCount_init (&buffer->mRefCount, 1);
+    buffer->mLocked = 0;
 
     buffer->mOwner = NULL;
 
@@ -53,32 +62,45 @@ sbfBuffer_newZero (sbfPool pool, size_t size)
     sbfBuffer buffer;
 
     buffer = sbfBuffer_new (pool, size);
-    memset (sbfBuffer_getData (buffer), 0, sbfBuffer_getSize (buffer));
+    memset (buffer->mData, 0, size);
 
     return buffer;
 }
 
 static SBF_INLINE sbfBuffer
-sbfBuffer_wrap (void* data,
-                size_t size,
-                sbfBufferDestroyCb cb,
-                void* closure)
+sbfBuffer_copy (sbfPool pool, void* data, size_t size)
+{
+    sbfBuffer buffer;
+
+    buffer = sbfBuffer_new (pool, size);
+    memcpy (buffer->mData, data, size);
+
+    return buffer;
+}
+
+static SBF_INLINE sbfBuffer
+sbfBuffer_wrap (void* data, size_t size, sbfBufferDestroyCb cb, void* closure)
 {
     sbfBuffer buffer;
 
     if (gSbfBufferDefaultPool == NULL)
+    {
         gSbfBufferDefaultPool = sbfPool_create (sizeof (struct sbfBufferImpl));
+        sbfPool_registerAtExit (gSbfBufferDefaultPool);
+    }
 
     buffer = (sbfBuffer)sbfPool_get (gSbfBufferDefaultPool);
     buffer->mAllocated = 0;
 
     buffer->mDestroyCb = cb;
+    buffer->mDestroyData = data;
     buffer->mDestroyClosure = closure;
 
     buffer->mData = data;
     buffer->mSize = size;
 
     sbfRefCount_init (&buffer->mRefCount, 1);
+    buffer->mLocked = 0;
 
     return buffer;
 }
@@ -90,16 +112,30 @@ sbfBuffer_addRef (sbfBuffer buffer)
 }
 
 static SBF_INLINE void
+sbfBuffer_lock (sbfBuffer buffer)
+{
+    buffer->mLocked = 1;
+}
+
+static SBF_INLINE void
 sbfBuffer_destroy (sbfBuffer buffer)
 {
     if (!sbfRefCount_decrement (&buffer->mRefCount))
         return;
 
     if (buffer->mDestroyCb != NULL)
-        buffer->mDestroyCb (buffer, buffer->mDestroyClosure);
+    {
+        buffer->mDestroyCb (buffer,
+                            buffer->mDestroyData,
+                            buffer->mDestroyClosure);
+    }
 
     if (buffer->mAllocated)
-        sbfMemory_freeGlobal (buffer);
+#ifdef WIN32
+        LocalFree (buffer);
+#else
+        free (buffer);
+#endif
     else
         sbfPool_put (buffer);
 }
@@ -113,6 +149,8 @@ sbfBuffer_getData (sbfBuffer buffer)
 static SBF_INLINE void
 sbfBuffer_setData (sbfBuffer buffer, void* data)
 {
+    if (SBF_UNLIKELY (buffer->mLocked))
+        SBF_FATAL ("data set on locked buffer");
     buffer->mData = data;
 }
 
@@ -125,5 +163,7 @@ sbfBuffer_getSize (sbfBuffer buffer)
 static SBF_INLINE void
 sbfBuffer_setSize (sbfBuffer buffer, size_t size)
 {
+    if (SBF_UNLIKELY (buffer->mLocked))
+        SBF_FATAL ("size set on locked buffer");
     buffer->mSize = size;
 }
