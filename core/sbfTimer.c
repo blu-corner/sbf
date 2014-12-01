@@ -40,6 +40,8 @@ sbfTimer_create (sbfMwThread thread,
     timer->mThread = thread;
     timer->mQueue = queue;
 
+    timer->mInterval = interval;
+
     timer->mCb = cb;
     timer->mClosure = closure;
 
@@ -50,7 +52,10 @@ sbfTimer_create (sbfMwThread thread,
     timer->mTime.tv_sec = (u_int)interval;
     timer->mTime.tv_usec = (u_int)((interval - timer->mTime.tv_sec) * 1000000);
 
-    sbfLog_debug ("creating %p: interval %.3f", timer, interval);
+    sbfLog_debug (timer->mThread->mParent->mLog,
+                  "creating timer %p: interval %.3f seconds",
+                  timer,
+                  timer->mInterval);
 
     event_assign (&timer->mEvent,
                   timer->mThread->mEventBase,
@@ -66,7 +71,7 @@ sbfTimer_create (sbfMwThread thread,
 void
 sbfTimer_destroy (sbfTimer timer)
 {
-    sbfLog_debug ("destroying %p", timer);
+    sbfLog_debug (timer->mThread->mParent->mLog, "destroying timer %p", timer);
 
     timer->mDestroyed = 1;
     event_del (&timer->mEvent);

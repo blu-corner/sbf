@@ -12,6 +12,9 @@ typedef struct sbfTimerImpl* sbfTimer;
 
 typedef void (*sbfTimerCb) (sbfTimer timer, void* closure);
 
+#define SBF_TIMER_MILLISECONDS(n) ((n)/1000.0)
+#define SBF_TIMER_MICROSECONDS(n) ((n)/1000000.0)
+
 sbfTimer sbfTimer_create (struct sbfMwThreadImpl* thread,
                           struct sbfQueueImpl* queue,
                           sbfTimerCb cb,

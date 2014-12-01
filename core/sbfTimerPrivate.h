@@ -2,7 +2,6 @@
 #define _SBF_TIMER_PRIVATE_H_
 
 #include "sbfMw.h"
-#include "sbfMwInternal.h"
 #include "sbfMwPrivate.h"
 #include "sbfRefCount.h"
 
