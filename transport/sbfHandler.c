@@ -87,7 +87,7 @@ sbfHandler_load (sbfLog log, const char* type)
     snprintf (path, sizeof path, "sbf%shandler.dll", type);
     handle = LoadLibrary (path);
 #else
-    snprintf (path, sizeof path, "libsbfmw%shandler" SBF_SHLIB_SUFFIX, type);
+    snprintf (path, sizeof path, "libsbf%shandler" SBF_SHLIB_SUFFIX, type);
     sbfLog_info (log, "loading %s transport handler (from %s)", type, path);
     handle = dlopen (path, RTLD_NOW|RTLD_LOCAL);
 #endif
