@@ -128,6 +128,8 @@ sbfUdpMulticast_read (sbfUdpMulticast s,
     int       used;
 
     error = 0;
+    buffer = NULL;
+
     for (i = 0; limit == 0 || i < limit; i++)
     {
         buffer = sbfBuffer_new (s->mPool, SBF_UDP_MULTICAST_SIZE_LIMIT);
@@ -145,8 +147,8 @@ sbfUdpMulticast_read (sbfUdpMulticast s,
             error = errno;
             break;
         }
-
         sbfBuffer_setSize (buffer, used);
+
         error = cb (s, buffer, closure);
         if (error != 0)
             break;
@@ -154,8 +156,7 @@ sbfUdpMulticast_read (sbfUdpMulticast s,
         sbfBuffer_destroy (buffer);
     }
 
-    if (i != 0)
+    if (buffer != NULL)
         sbfBuffer_destroy (buffer);
     return error;
 }
-

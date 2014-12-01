@@ -23,7 +23,6 @@ typedef sbfError (*sbfUdpMulticastReadCb) (sbfUdpMulticast s,
 sbfUdpMulticast sbfUdpMulticast_create (sbfUdpMulticastType type,
                                         uint32_t interf,
                                         struct sockaddr_in* address);
-
 void sbfUdpMulticast_destroy (sbfUdpMulticast s);
 
 sbfSocket sbfUdpMulticast_getSocket (sbfUdpMulticast s);
