@@ -11,16 +11,26 @@ static u_int         gSbfInterfacesSize;
 static sbfInterface* gSbfInterfaces;
 
 static void
-sbfInterfaceLog (sbfInterface* iff)
+sbfInterfaceLog (sbfLog log, sbfInterface* iff)
 {
     char tmp[INET_ADDRSTRLEN];
 
     inet_ntop (AF_INET, &iff->mAddress, tmp, sizeof tmp);
-    sbfLog_debug ("interface %s is %s", iff->mName, tmp);
+    sbfLog_debug (log, "interface %s is %s", iff->mName, tmp);
 }
 
 static void
-sbfInterfaceBuild (void)
+sbfInterfaceAtExit (void)
+{
+    u_int i;
+
+    for (i = 0; i < gSbfInterfacesSize; i++)
+        free ((void*)gSbfInterfaces[i].mName);
+    free (gSbfInterfaces);
+}
+
+static void
+sbfInterfaceBuild (sbfLog log)
 {
 #ifdef WIN32
     sbfInterface*         iff;
@@ -54,7 +64,7 @@ sbfInterfaceBuild (void)
 
         iff->mName = xstrdup (aa->AdapterName);
         iff->mAddress = sin->sin_addr.s_addr;
-        sbfInterfaceLog (iff);
+        sbfInterfaceLog (log, iff);
     }
 
     free (aa);
@@ -82,40 +92,19 @@ sbfInterfaceBuild (void)
 
         iff->mName = xstrdup (ifa->ifa_name);
         iff->mAddress = sin->sin_addr.s_addr;
-        sbfInterfaceLog (iff);
+        sbfInterfaceLog (log, iff);
     }
 
     freeifaddrs (ifa0);
 #endif
+
+    atexit (sbfInterfaceAtExit);
 }
 
-uint32_t
-sbfInterface_first (void)
+static uint32_t
+sbfInterfaceFind (sbfLog log, const char* name, sbfInterface** iffp)
 {
-    sbfInterface* iff;
-    u_int         i;
 
-    if (!gSbfInterfacesReady)
-    {
-        sbfInterfaceBuild ();
-        gSbfInterfacesReady = 1;
-    }
-
-    for (i = 0; i < gSbfInterfacesSize; i++)
-    {
-        iff = &gSbfInterfaces[i];
-        if (strcmp (iff->mName, "lo") == 0)
-            continue;
-        if ((ntohl (iff->mAddress) & 0xff000000U) == 127)
-            continue;
-        return iff->mAddress;
-    }
-    return 0;
-}
-
-uint32_t
-sbfInterface_find (const char* name)
-{
     sbfInterface* iff;
     uint32_t      mask;
     u_int         i;
@@ -128,7 +117,7 @@ sbfInterface_find (const char* name)
 
     if (!gSbfInterfacesReady)
     {
-        sbfInterfaceBuild ();
+        sbfInterfaceBuild (log);
         gSbfInterfacesReady = 1;
     }
 
@@ -190,7 +179,11 @@ sbfInterface_find (const char* name)
         {
             iff = &gSbfInterfaces[i];
             if ((iff->mAddress & mask) == (u.address & mask))
+            {
+                if (iffp != NULL)
+                    *iffp = iff;
                 return iff->mAddress;
+            }
         }
     }
 
@@ -198,8 +191,67 @@ sbfInterface_find (const char* name)
     {
         iff = &gSbfInterfaces[i];
         if (strcmp (iff->mName, name) == 0)
+        {
+            if (iffp != NULL)
+                *iffp = iff;
             return iff->mAddress;
+        }
     }
+    return 0;
+}
+
+uint32_t
+sbfInterface_first (sbfLog log)
+{
+    sbfInterface* iff;
+    u_int         i;
+
+    if (!gSbfInterfacesReady)
+    {
+        sbfInterfaceBuild (log);
+        gSbfInterfacesReady = 1;
+    }
+
+    for (i = 0; i < gSbfInterfacesSize; i++)
+    {
+        iff = &gSbfInterfaces[i];
+        if (strcmp (iff->mName, "lo") == 0)
+            continue;
+        if ((ntohl (iff->mAddress) & 0xff000000U) == 127)
+            continue;
+        return iff->mAddress;
+    }
+    return 0;
+}
+
+uint32_t
+sbfInterface_find (sbfLog log, const char* name)
+{
+    return sbfInterfaceFind (log, name, NULL);
+}
+
+uint32_t
+sbfInterface_findOne (sbfLog log, const char* names, const char** name)
+{
+    char*         copy;
+    char*         cp;
+    char*         next;
+    uint32_t      address;
+    sbfInterface* iff;
+
+    cp = copy = xstrdup (names);
+    while ((next = strsep (&cp, ",")) != NULL)
+    {
+        address = sbfInterfaceFind (log, next, &iff);
+        if (address != 0)
+        {
+            if (name != NULL)
+                *name = iff->mName;
+            free (copy);
+            return address;
+        }
+    }
+    free (copy);
     return 0;
 }
 
@@ -214,19 +266,88 @@ sbfInterface_parseAddress (const char* s, struct sockaddr_in* sin)
     copy = xstrdup (s);
 
     cp = strchr (copy, ':');
-    if (cp == NULL)
+    if (cp == NULL || cp[1] == '\0')
+    {
+        free (copy);
         return EINVAL;
+    }
 
     ul = strtoul (cp + 1, &endptr, 10);
     if (ul == 0 || ul > UINT16_MAX || *endptr != '\0')
+    {
+        free (copy);
         return ERANGE;
+    }
     sin->sin_port = ntohs ((u_short)ul);
 
     *cp = '\0';
     if (inet_pton (AF_INET, copy, &sin->sin_addr) == 0)
+    {
+        free (copy);
         return EINVAL;
+    }
     sin->sin_family = AF_INET;
 
     free (copy);
+    return 0;
+}
+
+sbfError
+sbfInterface_resolveAddress (const char* s,
+                             struct sockaddr_in* sin,
+                             const char** error)
+{
+    char*            copy;
+    char*            cp;
+    struct addrinfo  hints, *res, *res0;
+    int              retval;
+    struct sockaddr* sa;
+
+    copy = xstrdup (s);
+
+    cp = strchr (copy, ':');
+    if (cp == NULL || cp[1] == '\0')
+    {
+        free (copy);
+        if (error != NULL)
+            *error = strerror (EINVAL);
+        return EINVAL;
+    }
+    *cp++ = '\0';
+
+    memset (&hints, 0, sizeof hints);
+    hints.ai_family = AF_INET;
+    hints.ai_socktype = 0;
+    hints.ai_protocol = 0;
+
+    retval = evutil_getaddrinfo (copy, cp, &hints, &res0);
+    if (retval != 0)
+    {
+        if (error != NULL)
+            *error = gai_strerror (retval);
+        return EINVAL;
+    }
+    for (res = res0; res != NULL; res = res->ai_next)
+    {
+        if (res->ai_addrlen != sizeof (struct sockaddr_in))
+            continue;
+        sa = res->ai_addr;
+        if (sa->sa_family != AF_INET)
+            continue;
+        break;
+    }
+    if (res == NULL)
+    {
+        free (copy);
+        if (error != NULL)
+            *error = strerror (EADDRNOTAVAIL);
+        return EADDRNOTAVAIL;
+    }
+    memcpy (sin, res->ai_addr, sizeof *sin);
+    freeaddrinfo (res0);
+
+    free (copy);
+    if (error != NULL)
+            *error = NULL;
     return 0;
 }
