@@ -101,6 +101,7 @@ sbfLog_vlog (sbfLog log, sbfLogLevel level, const char* fmt, va_list ap)
     time_t          t;
     char            message[512];
     sbfLogFileEntry lfe;
+    int             skip;
 
     if (log->mLevel > level)
         return;
@@ -124,27 +125,31 @@ sbfLog_vlog (sbfLog log, sbfLogLevel level, const char* fmt, va_list ap)
 
     vsnprintf (message, sizeof message, fmt, ap);
 
-    fprintf (stderr,
-             "%04u-%02u-%02u %02u:%02u:%02u.%06u %-5s %s%s\n",
-             tm.tm_year + 1900,
-             tm.tm_mon + 1,
-             tm.tm_mday,
-             tm.tm_hour,
-             tm.tm_min,
-             tm.tm_sec,
-             (u_int)tv.tv_usec,
-             gSbfLogLevels[level],
-             log->mPrefix,
-             message);
-#ifdef WIN32
-    fflush (stderr);
-#endif
-
+    skip = 0;
     if (log->mHookCb != NULL && level >= log->mHookLevel && !log->mHookInside)
     {
         log->mHookInside = 1;
-        log->mHookCb (log, level, message, log->mHookClosure);
+        skip = log->mHookCb (log, level, message, log->mHookClosure);
         log->mHookInside = 0;
+    }
+
+    if (!skip)
+    {
+        fprintf (stderr,
+                 "%04u-%02u-%02u %02u:%02u:%02u.%06u %-5s %s%s\n",
+                 tm.tm_year + 1900,
+                 tm.tm_mon + 1,
+                 tm.tm_mday,
+                 tm.tm_hour,
+                 tm.tm_min,
+                 tm.tm_sec,
+                 (u_int)tv.tv_usec,
+                 gSbfLogLevels[level],
+                 log->mPrefix,
+                 message);
+#ifdef WIN32
+        fflush (stderr);
+#endif
     }
 }
 

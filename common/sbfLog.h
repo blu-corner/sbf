@@ -18,10 +18,11 @@ typedef enum
 
 typedef struct sbfLogImpl* sbfLog;
 
-typedef void (*sbfLogHookCb) (sbfLog log,
-                              sbfLogLevel level,
-                              const char* message,
-                              void* closure);
+/* Returns 1 to skip message. */
+typedef int (*sbfLogHookCb) (sbfLog log,
+                             sbfLogLevel level,
+                             const char* message,
+                             void* closure);
 
 sbfLog sbfLog_create (struct sbfLogFileImpl* lf,
                       const char* fmt,
