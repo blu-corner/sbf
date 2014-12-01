@@ -5,7 +5,7 @@
 
 SBF_BEGIN_DECLS
 
-void* sbfHugePages_allocate (size_t size);
+void* sbfHugePages_allocate (sbfLog log, size_t size);
 void sbfHugePages_free (void* block, size_t size);
 
 SBF_END_DECLS

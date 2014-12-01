@@ -1,28 +1,28 @@
-#include <sbfHugePages.h>
+#include "sbfHugePages.h"
 
 #ifndef MAP_HUGETLB
 #define MAP_HUGETLB 0x40000
 #endif
 
 void*
-sbfHugePages_allocate (size_t size)
+sbfHugePages_allocate (sbfLog log, size_t size)
 {
     void* block;
 
     block = mmap (NULL,
                   size,
                   PROT_READ|PROT_WRITE,
-                  MAP_PRIVATE|MAP_ANONYMOUS|MAP_HUGETLB,
+                  MAP_PRIVATE|MAP_ANON|MAP_HUGETLB,
                   -1,
                   0);
     if (block != MAP_FAILED)
         return block;
-    sbfLog_warn ("can't use MAP_HUGETLB; check /proc/sys/vm/nr_hugepages");
+    sbfLog_warn (log, "MAP_HUGETLB failed; check /proc/sys/vm/nr_hugepages");
 
     block = mmap (NULL,
                   size,
                   PROT_READ|PROT_WRITE,
-                  MAP_PRIVATE|MAP_ANONYMOUS,
+                  MAP_PRIVATE|MAP_ANON,
                   -1,
                   0);
     if (block != MAP_FAILED)
