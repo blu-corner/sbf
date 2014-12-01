@@ -1,4 +1,5 @@
 #include "sbfLog.h"
+#include "sbfLogPrivate.h"
 
 static const char* gSbfLogLevels[] = { "DEBUG",
                                        "INFO",
@@ -6,19 +7,125 @@ static const char* gSbfLogLevels[] = { "DEBUG",
                                        "ERROR",
                                        "OFF" };
 
-static void
-sbfDefaultLogCb (sbfLogLevel level, const char* message, void* closure)
+sbfLog
+sbfLog_create (sbfLogFile lf, const char* fmt, ...)
 {
-    struct timeval tv;
-    struct tm      tm;
-    time_t         t;
+    sbfLog  log;
+    va_list ap;
+    char*   tmp;
+
+    log = xcalloc (1, sizeof *log);
+    log->mFile = lf;
+    log->mLevel = SBF_LOG_INFO;
+
+    va_start (ap, fmt);
+    xvasprintf (&tmp, fmt, ap);
+    va_end (ap);
+
+    if (*tmp != '\0')
+        xasprintf (&log->mPrefix, "(%s) ", tmp);
+    else
+        log->mPrefix = xstrdup ("");
+    free (tmp);
+
+    return log;
+}
+
+void
+sbfLog_destroy (sbfLog log)
+{
+    free (log->mPrefix);
+
+    free (log);
+}
+
+sbfLogLevel
+sbfLog_getLevel (sbfLog log)
+{
+    return log->mLevel;
+}
+
+void
+sbfLog_setLevel (sbfLog log, sbfLogLevel level)
+{
+    log->mLevel = level;
+}
+
+sbfLogLevel
+sbfLog_levelFromString (const char* s, int* found)
+{
+    size_t slen;
+    u_int  i;
+
+    slen = strlen (s);
+    for (i = 0; i < SBF_ARRAYSIZE (gSbfLogLevels); i++)
+    {
+        if (strncasecmp (gSbfLogLevels[i], s, slen) == 0)
+        {
+            if (found != NULL)
+                *found = 1;
+            return i;
+        }
+    }
+    if (found != NULL)
+        *found = 0;
+    return SBF_LOG_OFF;
+}
+
+const char*
+sbfLog_levelToString (sbfLogLevel level)
+{
+    if ((u_int)level >= SBF_ARRAYSIZE (gSbfLogLevels))
+        return "UNKNOWN";
+    return gSbfLogLevels[(u_int)level];
+}
+
+void
+sbfLog_log (sbfLog log, sbfLogLevel level, const char* fmt, ...)
+{
+    va_list ap;
+
+    if (log->mLevel > level)
+        return;
+
+    va_start (ap, fmt);
+    sbfLog_vlog (log, level, fmt, ap);
+    va_end (ap);
+}
+
+void
+sbfLog_vlog (sbfLog log, sbfLogLevel level, const char* fmt, va_list ap)
+{
+    struct timeval  tv;
+    struct tm       tm;
+    time_t          t;
+    char            message[512];
+    sbfLogFileEntry lfe;
+
+    if (log->mLevel > level)
+        return;
+
+    if (log->mFile != NULL)
+    {
+        lfe = sbfLogFile_get (log->mFile);
+
+        gettimeofday (&lfe->mTime, NULL);
+        lfe->mLevel = level;
+        strlcpy (lfe->mPrefix, log->mPrefix, sizeof lfe->mPrefix);
+        vsnprintf (lfe->mMessage, sizeof lfe->mMessage, fmt, ap);
+
+        sbfLogFile_flush (log->mFile, lfe);
+        return;
+    }
 
     gettimeofday (&tv, NULL);
     t = tv.tv_sec;
-    gmtime_r (&t, &tm);
+    localtime_r (&t, &tm);
+
+    vsnprintf (message, sizeof message, fmt, ap);
 
     fprintf (stderr,
-             "%04u-%02u-%02u %02u:%02u:%02u.%06u %-5s %s" SBF_EOL,
+             "%04u-%02u-%02u %02u:%02u:%02u.%06u %-5s %s%s\n",
              tm.tm_year + 1900,
              tm.tm_mon + 1,
              tm.tm_mday,
@@ -27,83 +134,22 @@ sbfDefaultLogCb (sbfLogLevel level, const char* message, void* closure)
              tm.tm_sec,
              (u_int)tv.tv_usec,
              gSbfLogLevels[level],
+             log->mPrefix,
              message);
 #ifdef WIN32
     fflush (stderr);
 #endif
-}
 
-static sbfLogLevel gSbfLogLevel = SBF_LOG_DEBUG;
-static sbfLogCb    gSbfLogCb = sbfDefaultLogCb;
-static void*       gSbfLogClosure;
-
-void
-sbfLog_setLevel (sbfLogLevel level)
-{
-    gSbfLogLevel = level;
-}
-
-sbfLogLevel
-sbfLog_levelFromString (const char* s)
-{
-    size_t slen;
-    u_int  i;
-
-    slen = strlen (s);
-    for (i = 0; i < sizeof gSbfLogLevels / (sizeof gSbfLogLevels[0]); i++)
+    if (log->mHookCb != NULL && level >= log->mHookLevel && !log->mHookInside)
     {
-        if (strncasecmp (gSbfLogLevels[i], s, slen) == 0)
-            return i;
-    }
-    return gSbfLogLevel;
-}
-
-void
-sbfLog_setCallback (sbfLogCb cb, void* closure)
-{
-    if (cb == NULL)
-    {
-        gSbfLogCb = sbfDefaultLogCb;
-        gSbfLogClosure = NULL;
-    }
-    else
-    {
-        gSbfLogCb = cb;
-        gSbfLogClosure = closure;
+        log->mHookInside = 1;
+        log->mHookCb (log, level, message, log->mHookClosure);
+        log->mHookInside = 0;
     }
 }
 
 void
-sbfLog_log (sbfLogLevel level, const char* fmt, ...)
-{
-    char    tmp[BUFSIZ];
-    va_list ap;
-
-    if (gSbfLogLevel > level)
-        return;
-
-    va_start (ap, fmt);
-    vsnprintf (tmp, sizeof tmp, fmt, ap);
-    va_end (ap);
-
-    gSbfLogCb (level, tmp, gSbfLogClosure);
-}
-
-void
-sbfLog_vlog (sbfLogLevel level, const char* fmt, va_list ap)
-{
-    char tmp[BUFSIZ];
-
-    if (gSbfLogLevel > level)
-        return;
-
-    vsnprintf (tmp, sizeof tmp, fmt, ap);
-
-    gSbfLogCb (level, tmp, gSbfLogClosure);
-}
-
-void
-sbfLog_logData (sbfLogLevel level, void* buf, size_t len)
+sbfLog_logData (sbfLog log, sbfLogLevel level, void* buf, size_t len)
 {
     u_char* ptr;
     u_char* end;
@@ -112,7 +158,7 @@ sbfLog_logData (sbfLogLevel level, void* buf, size_t len)
     char    text[17];
     int     i;
 
-    if (gSbfLogLevel > level)
+    if (log->mLevel > level)
         return;
 
     end = (u_char*)buf + len;
@@ -141,6 +187,14 @@ sbfLog_logData (sbfLogLevel level, void* buf, size_t len)
         }
         sprintf (out, " |%s|", text);
 
-        sbfLog_log (level, "%s", line);
+        sbfLog_log (log, level, "%s", line);
     }
+}
+
+void
+sbfLog_setHook (sbfLog log, sbfLogLevel level, sbfLogHookCb cb, void* closure)
+{
+    log->mHookLevel = level;
+    log->mHookCb = cb;
+    log->mHookClosure = closure;
 }

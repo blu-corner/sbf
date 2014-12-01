@@ -5,6 +5,8 @@
 
 SBF_BEGIN_DECLS
 
+struct sbfLogFileImpl;
+
 typedef enum
 {
     SBF_LOG_DEBUG = 0,
@@ -14,26 +16,43 @@ typedef enum
     SBF_LOG_OFF
 } sbfLogLevel;
 
-typedef void (*sbfLogCb) (sbfLogLevel level,
-                          const char* message,
-                          void* closure);
+typedef struct sbfLogImpl* sbfLog;
 
-void sbfLog_setLevel (sbfLogLevel level);
-sbfLogLevel sbfLog_levelFromString (const char* s);
-void sbfLog_setCallback (sbfLogCb cb, void* closure);
+typedef void (*sbfLogHookCb) (sbfLog log,
+                              sbfLogLevel level,
+                              const char* message,
+                              void* closure);
 
-#define sbfLog_err(fmt, ...) \
-    sbfLog_log (SBF_LOG_ERROR, "%s: " fmt, __func__, ## __VA_ARGS__)
-#define sbfLog_warn(fmt, ...) \
-    sbfLog_log (SBF_LOG_WARN, "%s: " fmt, __func__, ## __VA_ARGS__)
-#define sbfLog_info(fmt, ...) \
-    sbfLog_log (SBF_LOG_INFO, "%s: " fmt, __func__, ## __VA_ARGS__)
-#define sbfLog_debug(fmt, ...) \
-    sbfLog_log (SBF_LOG_DEBUG, "%s: " fmt, __func__, ## __VA_ARGS__)
+sbfLog sbfLog_create (struct sbfLogFileImpl* lf,
+                      const char* fmt,
+                      ...) SBF_PRINTFLIKE(2, 3);
+void sbfLog_destroy (sbfLog log);
 
-void sbfLog_log (sbfLogLevel level, const char* fmt, ...) SBF_PRINTFLIKE(2, 3);
-void sbfLog_vlog (sbfLogLevel level, const char* fmt, va_list ap);
-void sbfLog_logData (sbfLogLevel level, void* buf, size_t len);
+sbfLogLevel sbfLog_getLevel (sbfLog log);
+void sbfLog_setLevel (sbfLog log, sbfLogLevel level);
+sbfLogLevel sbfLog_levelFromString (const char* s, int* found);
+const char* sbfLog_levelToString (sbfLogLevel level);
+
+#define sbfLog_err(log, fmt, ...) \
+    sbfLog_log (log, SBF_LOG_ERROR, fmt, ## __VA_ARGS__)
+#define sbfLog_warn(log, fmt, ...) \
+    sbfLog_log (log, SBF_LOG_WARN, fmt, ## __VA_ARGS__)
+#define sbfLog_info(log, fmt, ...) \
+    sbfLog_log (log, SBF_LOG_INFO, fmt, ## __VA_ARGS__)
+#define sbfLog_debug(log, fmt, ...) \
+    sbfLog_log (log, SBF_LOG_DEBUG, fmt, ## __VA_ARGS__)
+
+void sbfLog_log (sbfLog log,
+                 sbfLogLevel level,
+                 const char* fmt,
+                 ...) SBF_PRINTFLIKE(3, 4);
+void sbfLog_vlog (sbfLog log, sbfLogLevel level, const char* fmt, va_list ap);
+void sbfLog_logData (sbfLog log, sbfLogLevel level, void* buf, size_t len);
+
+void sbfLog_setHook (sbfLog log,
+                     sbfLogLevel level,
+                     sbfLogHookCb cb,
+                     void* closure);
 
 SBF_END_DECLS
 

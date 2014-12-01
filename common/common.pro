@@ -4,6 +4,7 @@ TARGET = sbfcommon
 include (../build.pri)
 
 HEADERS += \
+    sbfArguments.h \
     sbfAtomic.h \
     sbfBuffer.h \
     sbfBufferInline.h \
@@ -11,6 +12,8 @@ HEADERS += \
     sbfCacheFilePrivate.h \
     sbfCommon.h \
     sbfCsvParser.h \
+    sbfDeque.h \
+    sbfDequePrivate.h \
     sbfFatal.h \
     sbfGuid.h \
     sbfHugePages.h \
@@ -18,7 +21,9 @@ HEADERS += \
     sbfKeyValue.h \
     sbfKeyValuePrivate.h \
     sbfLog.h \
+    sbfLogPrivate.h \
     sbfMemory.h \
+    sbfNumberString.h \
     sbfPerfCounter.h \
     sbfPool.h \
     sbfPoolInline.h \
@@ -30,9 +35,11 @@ HEADERS += \
     sbfUdpMulticastPrivate.h \
     sbfVersion.h
 SOURCES += \
-    sbfBuffer.c \ 
+    sbfArguments.c \
+    sbfBuffer.c \
     sbfCacheFile.c \
     sbfCsvParser.c \
+    sbfDeque.c \
     sbfFatal.c \
     sbfGuid.c \
     sbfHugePages.c \
@@ -40,28 +47,48 @@ SOURCES += \
     sbfKeyValue.c \
     sbfLog.c \
     sbfMemory.c \
+    sbfNumberString.c \
     sbfPerfCounter.c \
     sbfPool.c \
     sbfTcpConnection.c \
     sbfTcpListener.c \
     sbfUdpMulticast.c
-unix {
-    HEADERS += sbfCommonLinux.h
-    SOURCES += sbfCommonLinux.c fgetln.c
+unix:!macx {
+HEADERS += \
+    sbfCommonLinux.h
+SOURCES += \
+    sbfCommonLinux.c \
+    fgetln.c \
+    strlcat.c \
+    strlcpy.c
+}
+macx {
+HEADERS += \
+    sbfCommonDarwin.h
+SOURCES += \
+    sbfCommonDarwin.c
 }
 windows {
-    HEADERS += sbfCommonWin32.h
-    SOURCES += sbfCommonWin32.c getopt.c fgetln.c
+HEADERS += \
+    sbfCommonWin32.h
+SOURCES += \
+    sbfCommonWin32.c \
+    getopt.c \
+    fgetln.c \
+    strlcat.c \
+    strlcpy.c
 }
 
 install_headers.path = $$top_build/include
 install_headers.files = \
+    sbfArguments.h \
     sbfAtomic.h \
     sbfBuffer.h \
     sbfBufferInline.h \
     sbfCacheFile.h \
     sbfCommon.h \
     sbfCsvParser.h \
+    sbfDeque.h \
     sbfFatal.h \
     sbfGuid.h \
     sbfHugePages.h \
@@ -69,6 +96,7 @@ install_headers.files = \
     sbfKeyValue.h \
     sbfLog.h \
     sbfMemory.h \
+    sbfNumberString.h \
     sbfPerfCounter.h \
     sbfPool.h \
     sbfPoolInline.h \
@@ -80,13 +108,18 @@ install_headers.files = \
     syshash.h \
     sysqueue.h \
     systree.h
-unix {
-    install_headers.files += sbfCommonLinux.h
+unix:!macx {
+install_headers.files += \
+    sbfCommonLinux.h
+}
+macx {
+install_headers.files += \
+    sbfCommonDarwin.h
 }
 windows {
-    install_headers.files += sbfCommonWin32.h
+install_headers.files += \
+    sbfCommonWin32.h
 }
 
 target.path = $$top_build/lib
-
 INSTALLS += install_headers target
