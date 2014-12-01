@@ -5,9 +5,9 @@
 
 SBF_BEGIN_DECLS
 
-double sbfPerfCounter_frequency (void); /* per microsecond */
+uint64_t sbfPerfCounter_frequency (void); /* per microsecond */
 
-double sbfPerfCounter_ticks (uint64_t microseconds);
+uint64_t sbfPerfCounter_ticks (double microseconds);
 double sbfPerfCounter_microseconds (uint64_t ticks);
 
 #ifdef WIN32

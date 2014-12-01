@@ -1,19 +1,37 @@
 #include "sbfPerfCounter.h"
 
 #ifdef WIN32
-double
+uint64_t
 sbfPerfCounter_frequency (void)
 {
     LARGE_INTEGER f;
 
     QueryPerformanceFrequency (&f);
-    return f.QuadPart / 1000000.0;
+    return f.QuadPart / 1000000;
 }
 #else
-double
+#ifdef __APPLE__
+uint64_t
 sbfPerfCounter_frequency (void)
 {
-    static double      frequency;
+    static uint64_t frequency;
+    int64_t         n;
+    size_t          nlen = sizeof n;
+
+    if (frequency > 0)
+        return frequency;
+
+    if (sysctlbyname("hw.cpufrequency", &n, &nlen, NULL, 0) != 0)
+        SBF_FATAL ("couldn't read CPU frequency");
+
+    frequency = n / 1000000;
+    return frequency;
+}
+#else
+uint64_t
+sbfPerfCounter_frequency (void)
+{
+    static uint64_t    frequency;
     FILE*              f;
     char*              line;
     size_t             size;
@@ -24,14 +42,13 @@ sbfPerfCounter_frequency (void)
 
     f = fopen ("/proc/cpuinfo", "r");
     if (f == NULL)
-        sbfFatal ("couldn't open /proc/cpuinfo");
+        SBF_FATAL ("couldn't open /proc/cpuinfo");
 
     line = NULL;
     while (getline (&line, &size, f) != -1)
     {
         if (sscanf (line, "cpu MHz         : %llu.", &n) == 1)
         {
-            sbfLog_debug ("got CPU frequency of %llu MHz", n);
             frequency = n;
             break;
         }
@@ -41,19 +58,26 @@ sbfPerfCounter_frequency (void)
     fclose (f);
 
     if (!(frequency > 0))
-        sbfFatal ("couldn't read CPU frequency");
+        SBF_FATAL ("couldn't read CPU frequency");
     return frequency;
 }
 #endif
+#endif
 
-double
-sbfPerfCounter_ticks (uint64_t microseconds)
+uint64_t
+sbfPerfCounter_ticks (double microseconds)
 {
-    return microseconds * sbfPerfCounter_frequency ();
+    uint64_t frequency;
+
+    frequency = sbfPerfCounter_frequency ();
+    return microseconds * (double)frequency;
 }
 
 double
 sbfPerfCounter_microseconds (uint64_t ticks)
 {
-    return ticks / sbfPerfCounter_frequency ();
+    uint64_t frequency;
+
+    frequency = sbfPerfCounter_frequency ();
+    return ticks / (double)frequency;
 }
