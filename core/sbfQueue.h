@@ -13,9 +13,7 @@ typedef struct sbfQueueItemImpl* sbfQueueItem;
 
 typedef void (*sbfQueueCb) (sbfQueueItem item, void* closure);
 
-sbfQueue sbfQueue_create (struct sbfMwImpl* mw,
-                          const char* name,
-                          void* closure);
+sbfQueue sbfQueue_create (struct sbfMwImpl* mw, const char* name);
 void sbfQueue_destroy (sbfQueue queue);
 
 const char* sbfQueue_getName (sbfQueue queue);

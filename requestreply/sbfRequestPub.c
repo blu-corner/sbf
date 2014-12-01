@@ -26,22 +26,23 @@ static void
 sbfRequestPubSubMessageCb (sbfSub sub, sbfBuffer buffer, void* closure)
 {
     sbfRequestPub         pub = closure;
-    sbfRequestHeader*     hdr;
+    sbfRequestHeader*     hdr = sbfBuffer_getData (buffer);
+    size_t                size = sbfBuffer_getSize (buffer);
+    sbfBuffer             new;
     struct sbfRequestImpl wanted;
     sbfRequest            req;
 
-    if (sbfBuffer_getSize (buffer) < sizeof *hdr)
+    if (size < sizeof *hdr)
         return;
 
-    hdr = sbfBuffer_getData (buffer);
     sbfGuid_copy (&wanted.mGuid, &hdr->mGuid);
 
     req = RB_FIND (sbfRequestTreeImpl, &pub->mRequests, &wanted);
     if (req != NULL && req->mReplyCb != NULL)
     {
-        sbfBuffer_setData (buffer, hdr + 1);
-        sbfBuffer_setSize (buffer, sbfBuffer_getSize (buffer) - sizeof *hdr);
-        req->mReplyCb (pub, req, buffer, req->mClosure);
+        new = sbfBuffer_wrap (hdr + 1, size - sizeof *hdr, NULL, NULL);
+        req->mReplyCb (pub, req, new, req->mClosure);
+        sbfBuffer_destroy (new);
     }
 }
 
@@ -53,26 +54,35 @@ sbfRequestPub_create (sbfTport tport,
                       void* closure)
 {
     sbfRequestPub pub;
+    char          requestTopic[SBF_TOPIC_SIZE_LIMIT];
     char          replyTopic[SBF_TOPIC_SIZE_LIMIT];
     int           used;
 
-    used = snprintf (replyTopic, sizeof replyTopic, "%s@", topic);
+    used = snprintf (requestTopic, sizeof requestTopic, "%s@request", topic);
+    if (used < 0 || (size_t)used >= sizeof requestTopic)
+        return NULL;
+    used = snprintf (replyTopic, sizeof replyTopic, "%s@reply", topic);
     if (used < 0 || (size_t)used >= sizeof replyTopic)
         return NULL;
 
     pub = xcalloc (1, sizeof *pub);
+    pub->mLog = sbfMw_getLog (sbfTport_getMw (tport));
+    pub->mTopic = xstrdup (topic);
 
-    sbfLog_debug ("creating %p: topic %s", pub, topic);
+    sbfLog_debug (pub->mLog,
+                  "creating request publisher %p: topic %s",
+                  pub,
+                  topic);
 
     pub->mReadyCb = readyCb;
     pub->mClosure = closure;
 
-    sbfGuid_new (&pub->mNext, (uint64_t)pub);
+    sbfGuid_new (pub->mLog, &pub->mNext);
     RB_INIT (&pub->mRequests);
 
     pub->mPub = sbfPub_create (tport,
                                queue,
-                               topic,
+                               requestTopic,
                                sbfRequestPubPubReadyCb,
                                pub);
     if (pub->mPub == NULL)
@@ -100,7 +110,7 @@ sbfRequestPub_destroy (sbfRequestPub pub)
     sbfRequest req;
     sbfRequest req1;
 
-    sbfLog_debug ("destroying %p", pub);
+    sbfLog_debug (pub->mLog, "destroying request publisher %p", pub);
 
     if (pub->mPub != NULL)
         sbfPub_destroy (pub->mPub);
@@ -110,6 +120,7 @@ sbfRequestPub_destroy (sbfRequestPub pub)
     RB_FOREACH_SAFE (req, sbfRequestTreeImpl, &pub->mRequests, req1)
         sbfRequest_destroy (req);
 
+    free ((void*)pub->mTopic);
     free (pub);
 }
 
@@ -151,8 +162,8 @@ sbfRequestPub_send (sbfRequestPub pub,
     return req;
 }
 
-sbfTopic
+const char*
 sbfRequestPub_getTopic (sbfRequestPub pub)
 {
-    return sbfPub_getTopic (pub->mPub);
+    return pub->mTopic;
 }

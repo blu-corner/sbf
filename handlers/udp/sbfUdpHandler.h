@@ -1,22 +1,22 @@
 #ifndef _SBF_UDP_HANDLER_H_
 #define _SBF_UDP_HANDLER_H_
 
-#include "sbfHandlerInternal.h"
+#include "sbfHandler.h"
 #include "sbfInterface.h"
 #include "sbfMw.h"
-#include "sbfMwInternal.h"
 #include "sbfTport.h"
 #include "sbfUdpMulticast.h"
+#include "sbfCommonHandler.h"
 
 SBF_BEGIN_DECLS
 
 /*
  * UDP handler. These may be specified in the properties:
  *
- * interface - interface name or address
+ * udp.interface - interface name or address
  *
- * range - as a CIDR address (239/8, 239.1/16, etc), at least eight bits must
- *         be available for the host portion
+ * udp. range - as a CIDR address (239/8, 239.1/16, etc), at least eight 
+ *              bits must be available for the host portion
  *
  * Multicast address is automatically allocated based on the topic.
  */
@@ -48,11 +48,7 @@ struct sbfUdpHandlerStreamImpl
 };
 typedef struct sbfUdpHandlerStreamImpl* sbfUdpHandlerStream;
 
-RB_HEAD (sbfUdpHandlerStreamTreeImpl, sbfUdpHandlerStreamImpl);
-typedef struct sbfUdpHandlerStreamTreeImpl sbfUdpHandlerStreamTree;
-
-static SBF_INLINE int
-sbfUdpHandlerStreamCmp (sbfUdpHandlerStream lhs, sbfUdpHandlerStream rhs)
+SBF_RB_TREE (sbfUdpHandlerStream, Tree, mTreeEntry,
 {
     if (lhs->mType != rhs->mType)
     {
@@ -66,24 +62,15 @@ sbfUdpHandlerStreamCmp (sbfUdpHandlerStream lhs, sbfUdpHandlerStream rhs)
     if (lhs->mAddress > rhs->mAddress)
         return 1;
     return 0;
-}
-RB_GENERATE_STATIC (sbfUdpHandlerStreamTreeImpl,
-                    sbfUdpHandlerStreamImpl,
-                    mTreeEntry,
-                    sbfUdpHandlerStreamCmp)
+})
 
 struct sbfUdpHandlerImpl
 {
+    sbfLog                  mLog;
+
     uint32_t                mInterface;
 
-    uint32_t                mBase;
-
-    u_int                   mFirstSize;
-    u_int                   mSecondSize;
-    u_int                   mThirdSize;
-
-    u_int                   mFirstShift;
-    u_int                   mSecondShift;
+    sbfMcastTopicResolver   mMtr;
 
     sbfPool                 mPool;
     sbfUdpHandlerStreamTree mTree;

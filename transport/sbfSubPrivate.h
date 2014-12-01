@@ -18,6 +18,7 @@ struct sbfSubImpl
     sbfRefCount                mRefCount;
 
     int                        mReady;
+    int                        mQueueBypass;
 
     struct sbfTportImpl*       mTport;
     struct sbfTportStreamImpl* mTportStream;

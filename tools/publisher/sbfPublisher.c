@@ -46,6 +46,7 @@ main (int argc, char** argv)
     sbfThread          t;
     sbfTport           tport;
     sbfKeyValue        properties;
+    sbfLog             log;
     sbfPub             pub;
     uint64_t           interval;
     uint64_t           until;
@@ -58,7 +59,8 @@ main (int argc, char** argv)
     size_t             size = 200;
     uint64_t*          payload;
 
-    sbfLog_setLevel (SBF_LOG_OFF);
+    log = sbfLog_create (NULL, "%s", "");
+    sbfLog_setLevel (log, SBF_LOG_OFF);
 
     while ((opt = getopt (argc, argv, "h:i:r:s:t:v:")) != -1) {
         switch (opt) {
@@ -81,7 +83,7 @@ main (int argc, char** argv)
             topic = optarg;
             break;
         case 'v':
-            sbfLog_setLevel (sbfLog_levelFromString (optarg));
+            sbfLog_setLevel (log, sbfLog_levelFromString (optarg, NULL));
             break;
         default:
             usage (argv0);
@@ -92,15 +94,16 @@ main (int argc, char** argv)
     if (argc != 0)
         usage (argv0);
 
-    mw = sbfMw_create (1);
+    properties = sbfKeyValue_create ();
+    sbfKeyValue_put (properties, "transport.default.type", handler);
+    sbfKeyValue_put (properties, "transport.default.udp.interface", interf);
 
-    queue = sbfQueue_create (0);
+    mw = sbfMw_create (log, properties);
+
+    queue = sbfQueue_create (mw, "default");
     sbfThread_create (&t, dispatchCb, queue);
 
-    properties = sbfKeyValue_create ();
-    sbfKeyValue_put (properties, "interface", interf);
-
-    tport = sbfTport_create (mw, SBF_MW_ALL_THREADS, handler, properties);
+    tport = sbfTport_create (mw, "default", SBF_MW_ALL_THREADS);
 
     sbfTimer_create (sbfMw_getDefaultThread (mw),
                      queue,

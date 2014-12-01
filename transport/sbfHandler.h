@@ -37,12 +37,15 @@ typedef sbfHandlerStream (*sbfHandlerAddStreamFn) (
 typedef void (*sbfHandlerRemoveStreamFn) (sbfHandlerStream stream);
 
 typedef sbfBuffer (*sbfHandlerGetBufferFn) (sbfHandlerStream stream,
-                                           size_t size);
+                                            size_t size);
 typedef void (*sbfHandlerSendBufferFn) (sbfHandlerStream stream,
                                         sbfBuffer buffer);
 
+/* Handler will never be given a packet bigger than mPacketSize. */
 typedef struct
 {
+    uint16_t                 mPacketSize;
+
     sbfHandlerCreateFn       mCreate;
     sbfHandlerDestroyFn      mDestroy;
 
@@ -54,9 +57,9 @@ typedef struct
     sbfHandlerSendBufferFn   mSendBuffer;
 } sbfHandlerTable;
 
-sbfHandlerTable* sbfHandler_load (const char* type);
+sbfHandlerTable* sbfHandler_load (sbfLog log, const char* type);
 
 size_t sbfHandler_size (void* data, size_t size);
-void sbfHandler_message (sbfHandlerHandle handle, sbfBuffer buffer);
+void sbfHandler_packet (sbfHandlerHandle handle, sbfBuffer buffer);
 
 #endif /* _SBF_HANDLER_H_ */

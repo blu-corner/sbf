@@ -1,10 +1,9 @@
 #ifndef _SBF_TCP_MESH_HANDLER_H_
 #define _SBF_TCP_MESH_HANDLER_H_
 
-#include "sbfHandlerInternal.h"
+#include "sbfHandler.h"
 #include "sbfInterface.h"
 #include "sbfMw.h"
-#include "sbfMwInternal.h"
 #include "sbfTport.h"
 
 SBF_BEGIN_DECLS
@@ -48,6 +47,8 @@ typedef struct sbfTcpMeshHandlerConnectionImpl* sbfTcpMeshHandlerConnection;
 
 struct sbfTcpMeshHandlerImpl
 {
+    sbfLog                                         mLog;
+
     sbfHandlerHandle                               mHandle;
     sbfMwThread                                    mThread;
     struct event_base*                             mEventBase;

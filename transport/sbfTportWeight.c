@@ -22,20 +22,29 @@ sbfTport_parseWeights (sbfTport tport)
         cp = strchr (value, ',');
         if (cp == NULL)
         {
-            sbfLog_warn ("missing comma in weight%u property (%s)", i, value);
+            sbfLog_warn (tport->mLog,
+                         "missing comma in weight%u property (%s)",
+                         i,
+                         value);
             continue;
         }
 
         ul = strtoul (cp + 1, &endptr, 10);
         if (ul > USHRT_MAX || (endptr != NULL && *endptr != '\0'))
         {
-            sbfLog_warn ("bad number in weight%u property (%s)", i, value);
+            sbfLog_warn (tport->mLog,
+                         "bad number in weight%u property (%s)",
+                         i,
+                         value);
             continue;
         }
 
         if ((size_t)(cp - value) > (sizeof pattern) - 1)
         {
-            sbfLog_warn ("weight%u pattern is too long (%s)", i, value);
+            sbfLog_warn (tport->mLog,
+                         "weight%u pattern is too long (%s)",
+                         i,
+                         value);
             continue;
         }
         memcpy (pattern, value, cp - value);
@@ -48,12 +57,18 @@ sbfTport_parseWeights (sbfTport tport)
 
         if (regcomp (&w->mPattern, pattern, REG_EXTENDED|REG_NOSUB) != 0)
         {
-            sbfLog_warn ("weight%u pattern is invalid (%s)", i, value);
+            sbfLog_warn (tport->mLog,
+                         "weight%u pattern is invalid (%s)",
+                         i,
+                         value);
             tport->mWeightsListSize--;
             continue;
         }
         w->mWeight = ul;
-        sbfLog_info ("weight pattern %s is %u", pattern, w->mWeight);
+        sbfLog_debug (tport->mLog,
+                      "weight pattern %s is %u",
+                      pattern,
+                      w->mWeight);
     }
 
 }
@@ -83,7 +98,8 @@ sbfTport_adjustWeight (sbfTport tport, sbfMwThread thread, int change)
     index = sbfMw_getThreadIndex (thread);
     tport->mWeights[index] += change;
 
-    sbfLog_debug ("thread %u weight is %u (%+d)",
+    sbfLog_debug (tport->mLog,
+                  "thread %u weight is %u (%+d)",
                   index,
                   tport->mWeights[index],
                   change);

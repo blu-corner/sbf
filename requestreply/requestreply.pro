@@ -19,5 +19,4 @@ install_headers.files = \
     sbfRequestSub.h
 
 target.path = $$top_build/lib
-
 INSTALLS += install_headers target

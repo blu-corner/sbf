@@ -4,9 +4,9 @@
 static void
 sbfPubMakeHeader (sbfPub pub)
 {
-    sbfTportHeader* hdr;
-    const char*     topic;
-    size_t          topicSize;
+    sbfTportHeader hdr;
+    const char*    topic;
+    size_t         topicSize;
 
     topic = sbfTopic_getTopic (pub->mTopic);
     topicSize = strlen (topic) + 1;
@@ -61,11 +61,18 @@ sbfPubRemoveEventCb (int fd, short events, void* closure)
     if (!pub0->mReady)
     {
         pub0->mRemoved = 1;
-        sbfLog_debug ("not removing %p; not ready", pub0);
+        sbfLog_debug (tport->mLog,
+                      "not removing publisher %p (%s); not ready",
+                      pub0,
+                      sbfTopic_getTopic (pub0->mTopic));
         return;
     }
 
-    sbfLog_debug ("removing %p", pub0);
+    sbfLog_debug (tport->mLog,
+                  "removing publisher %p (%s) (stream %p)",
+                  pub0,
+                  sbfTopic_getTopic (pub0->mTopic),
+                  tstream);
 
     TAILQ_REMOVE (&ttopic->mPubs, pub0, mEntry);
     if (TAILQ_EMPTY (&ttopic->mPubs) && sbfTport_removeTopic (tstream, ttopic))
@@ -92,12 +99,20 @@ sbfPubAddEventCb (int fd, short events, void* closure)
     sbfTportStream tstream = sbfPubEnsureStream (pub0);
     sbfTportTopic  ttopic;
 
-    sbfLog_debug ("adding %p", pub0);
+    sbfLog_debug (pub0->mTport->mLog,
+                  "adding publisher %p (%s)",
+                  pub0,
+                  sbfTopic_getTopic (pub0->mTopic));
 
     ttopic = sbfTport_findTopic (tstream, sbfTopic_getTopic (topic));
     if (ttopic == NULL)
         ttopic = sbfTport_addTopic (tstream, sbfTopic_getTopic (topic));
-    sbfLog_debug ("using topic %p (stream %p) for %p", ttopic, tstream, pub0);
+    sbfLog_debug (pub0->mTport->mLog,
+                  "using topic %p (stream %p) for publisher %p (%s)",
+                  ttopic,
+                  tstream,
+                  pub0,
+                  sbfTopic_getTopic (pub0->mTopic));
 
     TAILQ_INSERT_TAIL (&ttopic->mPubs, pub0, mEntry);
     pub0->mTportTopic = ttopic;
@@ -129,13 +144,20 @@ sbfPubAddStreamCompleteCb (sbfHandlerHandle handle,
          * If stream add fails, just return - pubs on this stream will never
          * become ready.
          */
-        sbfLog_err ("failed to add stream %p: %s", tstream, strerror (error));
+        sbfLog_err (pub0->mTport->mLog,
+                    "failed to add stream %p for publisher %p (%s): %s",
+                    tstream,
+                    pub0,
+                    sbfTopic_getTopic (pub0->mTopic),
+                    strerror (error));
         return;
     }
 
-    sbfLog_debug ("stream %p is ready (for %p): thread %u",
+    sbfLog_debug (pub0->mTport->mLog,
+                  "stream %p is ready (for publisher %p (%s)): thread %u",
                   tstream,
                   pub0,
+                  sbfTopic_getTopic (pub0->mTopic),
                   sbfMw_getThreadIndex (tstream->mThread));
 
     tstream->mReady = 1;
@@ -148,9 +170,11 @@ sbfPubAddStreamCompleteCb (sbfHandlerHandle handle,
          * have been deferred.
          */
         TAILQ_FOREACH (pub, &ttopic->mPubs, mEntry)
+        {
             sbfPub_ready (pub);
-        if (pub->mRemoved)
-            sbfPubRemoveEventCb (-1, 0, pub);
+            if (pub->mRemoved)
+                sbfPubRemoveEventCb (-1, 0, pub);
+        }
     }
 
     /*
@@ -177,10 +201,10 @@ sbfPubSetStream (sbfPub pub)
     if (tstream != NULL)
     {
         /* We know the thread so can queue the add callback directly. */
-        sbfMw_enqueue (tstream->mThread,
-                       &pub->mEventAdd,
-                       sbfPubAddEventCb,
-                       pub);
+        sbfMw_enqueueThread (tstream->mThread,
+                             &pub->mEventAdd,
+                             sbfPubAddEventCb,
+                             pub);
     }
     else
     {
@@ -220,7 +244,10 @@ sbfPubReadyQueueCb (sbfQueueItem item, void* closure)
 void
 sbfPub_ready (sbfPub pub)
 {
-    sbfLog_debug ("%p is ready", pub);
+    sbfLog_debug (pub->mTport->mLog,
+                  "publisher %p (%s) is ready",
+                  pub,
+                  sbfTopic_getTopic (pub->mTopic));
     pub->mReady = 1;
 
     if (!pub->mDestroyed && pub->mReadyCb != NULL)
@@ -256,7 +283,8 @@ sbfPub_create (sbfTport tport,
     pub->mTportStream = NULL;
     pub->mTportTopic = NULL;
 
-    sbfLog_debug ("creating %p: topic %s",
+    sbfLog_debug (tport->mLog,
+                  "creating publisher %p (%s)",
                   pub,
                   sbfTopic_getTopic (pub->mTopic));
 
@@ -277,10 +305,15 @@ sbfPub_destroy (sbfPub pub)
         return;
     pub->mDestroyed = 1;
 
-    sbfMw_enqueue (pub->mTportStream->mThread,
-                   &pub->mEventRemove,
-                   sbfPubRemoveEventCb,
-                   pub);
+    sbfLog_debug (pub->mTport->mLog,
+                  "queueing remove of publisher %p (%s)",
+                  pub,
+                  sbfTopic_getTopic (pub->mTopic));
+
+    sbfMw_enqueueThread (pub->mTportStream->mThread,
+                         &pub->mEventRemove,
+                         sbfPubRemoveEventCb,
+                         pub);
 }
 
 sbfBuffer
@@ -289,17 +322,24 @@ sbfPub_getBuffer (sbfPub pub, size_t size)
     sbfTport        tport = pub->mTport;
     sbfTportStream  tstream = pub->mTportStream;
     sbfBuffer       buffer;
-    size_t          wanted;
     sbfTportHeader* hdr;
 
-    if (pub->mDestroyed || !pub->mReady)
+    if (SBF_UNLIKELY (pub->mDestroyed || !pub->mReady))
         return sbfBuffer_new (NULL, size);
 
-    wanted = pub->mHeaderSize + size;
-    buffer = tport->mHandlerTable->mGetBuffer (tstream->mStream, wanted);
+    if (SBF_UNLIKELY (size > tport->mHandlerTable->mPacketSize))
+    {
+        /*
+         * This will need to be fragmented (copied) - no point in filling
+         * header now.
+         */
+        return sbfBuffer_new (NULL, size);
+    }
+    buffer = sbfTport_getBuffer (tstream, pub->mHeaderSize + size);
 
     hdr = sbfBuffer_getData (buffer);
     memcpy (hdr, pub->mHeader, pub->mHeaderSize);
+
     sbfBuffer_setData (buffer, (char*)hdr + pub->mHeaderSize);
     sbfBuffer_setSize (buffer, size);
 
@@ -310,37 +350,49 @@ sbfPub_getBuffer (sbfPub pub, size_t size)
 void
 sbfPub_sendBuffer (sbfPub pub, sbfBuffer buffer)
 {
-    sbfTportStream  tstream = pub->mTportStream;
-    sbfTportHeader* hdr;
-    size_t          size;
+    sbfTport       tport = pub->mTport;
+    sbfTportStream tstream = pub->mTportStream;
+    sbfTportHeader hdr;
+    size_t         size;
 
-    if (pub->mDestroyed || !pub->mReady)
+    SBF_ASSERT (sbfRefCount_get (&buffer->mRefCount) == 1);
+
+    if (!sbfTport_checkMessageSize (pub, sbfBuffer_getSize (buffer)))
+    {
+        sbfBuffer_destroy (buffer);
         return;
-
-    size = sbfBuffer_getSize (buffer);
-    if (size > SBF_MESSAGE_SIZE_LIMIT)
+    }
+    if (SBF_UNLIKELY (pub->mDestroyed || !pub->mReady))
     {
         sbfBuffer_destroy (buffer);
         return;
     }
 
-    if (buffer->mOwner != pub || sbfRefCount_get (&buffer->mRefCount) > 1)
+    size = sbfBuffer_getSize (buffer) + pub->mHeaderSize;
+    if (SBF_UNLIKELY (size > tport->mHandlerTable->mPacketSize))
     {
-        sbfPub_send (pub, sbfBuffer_getData (buffer), size);
+        sbfTport_fragment (tstream, buffer, pub->mHeader, pub->mHeaderSize);
+        sbfBuffer_destroy (buffer);
+        return;
+    }
+
+    if (SBF_UNLIKELY (buffer->mOwner != pub))
+    {
+        sbfPub_send (pub,
+                     sbfBuffer_getData (buffer),
+                     sbfBuffer_getSize (buffer));
         sbfBuffer_destroy (buffer);
         return;
     }
 
     hdr = (void*)((char*)sbfBuffer_getData (buffer) - pub->mHeaderSize);
     hdr->mSize = sbfBuffer_getSize (buffer);
+    hdr->mFlags = SBF_MESSAGE_FLAG_LAST_IN_PACKET;
 
     sbfBuffer_setData (buffer, hdr);
-    sbfBuffer_setSize (buffer, hdr->mSize + pub->mHeaderSize);
+    sbfBuffer_setSize (buffer, size);
 
-    sbfMutex_lock (&tstream->mSendLock);
-    pub->mTport->mHandlerTable->mSendBuffer (tstream->mStream, buffer);
-    sbfMutex_unlock (&tstream->mSendLock);
-
+    sbfTport_sendBuffer (tstream, buffer);
     sbfBuffer_destroy (buffer);
 }
 

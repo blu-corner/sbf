@@ -2,7 +2,7 @@
 #include "sbfQueuePrivate.h"
 
 sbfQueue
-sbfQueue_create (sbfMw mw, const char* name, void* closure)
+sbfQueue_create (sbfMw mw, const char* name)
 {
     sbfQueue    queue;
     const char* value;

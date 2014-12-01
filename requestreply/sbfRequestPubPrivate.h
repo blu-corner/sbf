@@ -5,6 +5,9 @@ SBF_BEGIN_DECLS
 
 struct sbfRequestPubImpl
 {
+    sbfLog                mLog;
+    const char*           mTopic;
+
     sbfRequestPubReadyCb  mReadyCb;
     void*                 mClosure;
 

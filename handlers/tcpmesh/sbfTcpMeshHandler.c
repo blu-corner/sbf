@@ -13,7 +13,11 @@ sbfTcpMeshHandlerConnectionTimerCb (int fd, short events, void* closure)
     struct timeval              tv = SBF_TCP_MESH_HANDLER_CONNECT_INTERVAL;
     evutil_socket_t             s;
 
-    sbfLog_info ("trying connection %p to %s:%hu", c, c->mHost, c->mPort);
+    sbfLog_info (c->mParent->mLog,
+                 "trying connection %p to %s:%hu",
+                 c,
+                 c->mHost,
+                 c->mPort);
 
     sbfTcpMeshHandlerCloseSocket (c);
 
@@ -33,7 +37,7 @@ sbfTcpMeshHandlerConnectionTimerCb (int fd, short events, void* closure)
     return;
 
 fail:
-    sbfLog_info ("connection %p failed", c);
+    sbfLog_info (c->mParent->mLog, "connection %p failed", c);
     event_add (&c->mTimer, &tv);
 }
 
@@ -55,7 +59,7 @@ sbfTcpMeshHandlerConnectionReadCb (struct bufferevent* bev, void* closure)
         buffer = sbfBuffer_new (c->mParent->mPool, size);
         memcpy (sbfBuffer_getData (buffer), data, size);
 
-        sbfHandler_message (c->mParent->mHandle, buffer);
+        sbfHandler_packet (c->mParent->mHandle, buffer);
         sbfBuffer_destroy (buffer);
     }
     evbuffer_drain (evb, size);
@@ -73,14 +77,14 @@ sbfTcpMeshHandlerConnectionEventCb (struct bufferevent* bev,
     {
         c->mConnected = 1;
         bufferevent_enable (c->mEvent, EV_READ|EV_WRITE);
-        sbfLog_info ("connection %p connected", c);
+        sbfLog_info (c->mParent->mLog, "connection %p connected", c);
     }
 
     if (events & (BEV_EVENT_ERROR|BEV_EVENT_TIMEOUT|BEV_EVENT_EOF))
     {
         c->mConnected = 0;
         bufferevent_disable (c->mEvent, EV_READ|EV_WRITE);
-        sbfLog_info ("connection %p failed", c);
+        sbfLog_info (c->mParent->mLog, "connection %p failed", c);
 
         if (c->mIncoming)
             sbfTcpMeshHandlerFreeConnection (c);
@@ -125,7 +129,7 @@ sbfTcpMeshHandlerSetSocket (sbfTcpMeshHandlerConnection c, evutil_socket_t s)
 
     c->mEvent = bufferevent_socket_new (tmh->mEventBase, s, BEV_OPT_THREADSAFE);
     if (c->mEvent == NULL)
-        sbfFatal ("couldn't allocate event");
+        SBF_FATAL ("couldn't allocate event");
     c->mSocket = s;
 
     bufferevent_setcb (c->mEvent,
@@ -138,13 +142,13 @@ sbfTcpMeshHandlerSetSocket (sbfTcpMeshHandlerConnection c, evutil_socket_t s)
 static void
 sbfTcpMeshHandlerCloseSocket (sbfTcpMeshHandlerConnection c)
 {
-    if (c->mEvent != NULL)
-        bufferevent_free (c->mEvent);
-    c->mEvent = NULL;
-
     if (c->mSocket != -1)
         EVUTIL_CLOSESOCKET (c->mSocket);
     c->mSocket = -1;
+
+    if (c->mEvent != NULL)
+        bufferevent_free (c->mEvent);
+    c->mEvent = NULL;
 }
 
 static void
@@ -184,7 +188,8 @@ sbfTcpMeshHandlerListenerAcceptCb (struct evconnlistener* listener,
     bufferevent_enable (c->mEvent, EV_READ|EV_WRITE);
 
     inet_ntop (AF_INET, &sin->sin_addr, tmp, sizeof tmp);
-    sbfLog_info ("incoming connection %p from %s:%hu",
+    sbfLog_info (c->mParent->mLog,
+                 "incoming connection %p from %s:%hu",
                  c,
                  tmp,
                  ntohs (sin->sin_port));
@@ -228,26 +233,23 @@ sbfTcpMeshHandlerCreate (sbfTport tport, sbfKeyValue properties)
     sbfTcpMeshHandlerConnection c;
     unsigned long               port;
 
-#ifdef WIN32
-    evthread_use_windows_threads ();
-#endif
-
     tmh = xcalloc (1, sizeof *tmh);
+    tmh->mLog = sbfMw_getLog (sbfTport_getMw (tport));
     sbfMutex_init (&tmh->mMutex, 0);
     TAILQ_INIT (&tmh->mConnections);
-    tmh->mPool = sbfPool_create (65536);
+    tmh->mPool = sbfBuffer_createPool (65536);
 
     tmh->mHandle = NULL;
     tmh->mThread = sbfMw_getDefaultThread (sbfTport_getMw (tport));
     tmh->mEventBase = sbfMw_getThreadEventBase (tmh->mThread);
 
     port = SBF_TCP_MESH_HANDLER_DEFAULT_PORT;
-    if ((value = sbfKeyValue_get (properties, "listen")) != NULL)
+    if ((value = sbfKeyValue_get (properties, "tcpmesh.listen")) != NULL)
     {
         port = strtoul (value, &endptr, 10);
         if (port > 65536 || *endptr != '\0')
         {
-            sbfLog_err ("invalid port in %s", value);
+            sbfLog_err (tmh->mLog, "invalid port in %s", value);
             goto fail;
         }
     }
@@ -270,14 +272,16 @@ sbfTcpMeshHandlerCreate (sbfTport tport, sbfKeyValue properties)
                                               sizeof sin);
         if (tmh->mListener == NULL)
         {
-            sbfLog_err ("failed to create listener: %s", strerror (errno));
+            sbfLog_err (tmh->mLog,
+                        "failed to create listener: %s",
+                        strerror (errno));
             goto fail;
         }
     }
 
     for (i = 0; i < USHRT_MAX; i++)
     {
-        host = sbfKeyValue_getV (properties, "connect%u", i);
+        host = sbfKeyValue_getV (properties, "tcpmesh.connect%u", i);
         if (host == NULL)
             continue;
 
@@ -293,7 +297,7 @@ sbfTcpMeshHandlerCreate (sbfTport tport, sbfKeyValue properties)
             port = strtoul (endptr, &endptr, 10);
             if (port == 0 || port > 65536 || *endptr != '\0')
             {
-                sbfLog_err ("invalid port in %s", host);
+                sbfLog_err (tmh->mLog, "invalid port in %s", host);
                 goto fail;
             }
             c->mPort = (uint16_t)port;
@@ -301,7 +305,11 @@ sbfTcpMeshHandlerCreate (sbfTport tport, sbfKeyValue properties)
         else
             c->mPort = SBF_TCP_MESH_HANDLER_DEFAULT_PORT;
 
-        sbfLog_info ("outgoing connection %p to %s:%hu", c, c->mHost, c->mPort);
+        sbfLog_info (tmh->mLog,
+                     "outgoing connection %p to %s:%hu",
+                     c,
+                     c->mHost,
+                     c->mPort);
         event_active (&c->mTimer, EV_TIMEOUT, 0);
     }
 
@@ -340,10 +348,10 @@ sbfTcpMeshHandlerAddStream (sbfHandler handler,
 
     if (cb != NULL)
     {
-        sbfMw_enqueue (tmh->mThread,
-                       &tmh->mEventAdd,
-                       sbfTcpMeshHandlerAddCompleteEventCb,
-                       tmh);
+        sbfMw_enqueueThread (tmh->mThread,
+                             &tmh->mEventAdd,
+                             sbfTcpMeshHandlerAddCompleteEventCb,
+                             tmh);
     }
 
     return tmh;
@@ -377,8 +385,9 @@ sbfTcpMeshHandlerSendBuffer (sbfHandlerStream stream, sbfBuffer buffer)
     sbfMutex_unlock (&tmh->mMutex);
 }
 
-SBF_DLLEXPORT sbfHandlerTable sbf_tcpmesh_handler =
+sbfHandlerTable sbf_tcpmesh_handler =
 {
+    65535,
     sbfTcpMeshHandlerCreate,
     sbfTcpMeshHandlerDestroy,
     sbfTcpMeshHandlerFindStream,

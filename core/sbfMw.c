@@ -59,7 +59,7 @@ sbfMw_create (sbfLog log, sbfKeyValue properties)
     mw->mNumThreads = threads;
     mw->mThreads = xcalloc (mw->mNumThreads, sizeof *mw->mThreads);
 
-    sbfLog_info ("this is version " SBF_VERSION);
+    sbfLog_info (mw->mLog, "this is version " SBF_VERSION);
     sbfLog_debug (mw->mLog,
                   "creating middleware %p, using %u threads",
                   mw,

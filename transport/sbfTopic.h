@@ -16,7 +16,6 @@ typedef enum
 } sbfTopicType;
 
 sbfTopic sbfTopic_create (sbfTopicType type, const char* string);
-
 void sbfTopic_destroy (sbfTopic topic);
 
 sbfTopic sbfTopic_copy (sbfTopic topic);

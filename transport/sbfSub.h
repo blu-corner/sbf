@@ -22,8 +22,9 @@ sbfSub sbfSub_create (struct sbfTportImpl* tport,
                       sbfSubReadyCb readyCb,
                       sbfSubMessageCb messageCb,
                       void* closure);
-
 void sbfSub_destroy (sbfSub sub);
+
+void sbfSub_setQueueBypass (sbfSub sub, int set);
 
 struct sbfTopicImpl* sbfSub_getTopic (sbfSub sub);
 

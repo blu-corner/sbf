@@ -23,7 +23,6 @@ sbfRequestPub sbfRequestPub_create (sbfTport tport,
                                     const char* topic,
                                     sbfRequestPubReadyCb readyCb,
                                     void* closure);
-
 void sbfRequestPub_destroy (sbfRequestPub pub);
 
 struct sbfRequestImpl* sbfRequestPub_send (sbfRequestPub pub,
@@ -32,7 +31,7 @@ struct sbfRequestImpl* sbfRequestPub_send (sbfRequestPub pub,
                                            sbfRequestPubReplyCb replyCb,
                                            void* closure);
 
-sbfTopic sbfRequestPub_getTopic (sbfRequestPub pub);
+const char* sbfRequestPub_getTopic (sbfRequestPub pub);
 
 SBF_END_DECLS
 

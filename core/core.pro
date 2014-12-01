@@ -32,5 +32,4 @@ install_headers.files = \
     sbfTimer.h
 
 target.path = $$top_build/lib
-
 INSTALLS += install_headers target

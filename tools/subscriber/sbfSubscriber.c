@@ -76,12 +76,14 @@ main (int argc, char** argv)
     sbfThread   t;
     sbfTport    tport;
     sbfKeyValue properties;
+    sbfLog      log;
     int         opt;
     const char* topic = "OUT";
     const char* handler = "udp";
     const char* interf = "eth0";
 
-    sbfLog_setLevel (SBF_LOG_OFF);
+    log = sbfLog_create (NULL, "%s", "");
+    sbfLog_setLevel (log, SBF_LOG_OFF);
 
     while ((opt = getopt (argc, argv, "h:i:t:v:")) != -1) {
         switch (opt) {
@@ -95,7 +97,7 @@ main (int argc, char** argv)
             topic = optarg;
             break;
         case 'v':
-            sbfLog_setLevel (sbfLog_levelFromString (optarg));
+            sbfLog_setLevel (log, sbfLog_levelFromString (optarg, NULL));
             break;
         default:
             usage (argv0);
@@ -106,18 +108,20 @@ main (int argc, char** argv)
     if (argc != 0)
         usage (argv0);
 
-    mw = sbfMw_create (1);
+    properties = sbfKeyValue_create ();
+    sbfKeyValue_put (properties, "transport.default.type", handler);
+    sbfKeyValue_put (properties, "transport.default.udp.interface", interf);
+    sbfKeyValue_put (properties, "transport.default.tcpmesh.listen", "0");
+    sbfKeyValue_put (properties,
+                     "transport.default.tcpmesh.connect0",
+                     "127.0.0.1");
 
-    queue = sbfQueue_create (0);
+    mw = sbfMw_create (log, properties);
+
+    queue = sbfQueue_create (mw, "default");
     sbfThread_create (&t, dispatchCb, queue);
 
-    properties = sbfKeyValue_create ();
-    sbfKeyValue_put (properties, "interface", interf);
-
-    sbfKeyValue_put (properties, "listen", "0");
-    sbfKeyValue_put (properties, "connect0", "127.0.0.1");
-
-    tport = sbfTport_create (mw, SBF_MW_ALL_THREADS, handler, properties);
+    tport = sbfTport_create (mw, "default", SBF_MW_ALL_THREADS);
 
     sbfTimer_create (sbfMw_getDefaultThread (mw),
                      queue,

@@ -19,13 +19,12 @@ sbfPub sbfPub_create (struct sbfTportImpl* tport,
                       const char* topic,
                       sbfPubReadyCb readyCb,
                       void* closure);
-
 void sbfPub_destroy (sbfPub pub);
 
 /*
- * sendBuffer will destroy the buffer unless it has multiple references in
- * which case it is copied. Messages that are too big and those sent before the
- * ready callback will be silently dropped.
+ * sendBuffer destroys the buffer. It must not have more than one reference.
+ * Messages that are too big and those sent before the ready callback are
+ * silently dropped.
  */
 sbfBuffer sbfPub_getBuffer (sbfPub pub, size_t size);
 void sbfPub_sendBuffer (sbfPub pub, sbfBuffer buffer);

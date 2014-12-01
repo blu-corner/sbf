@@ -29,18 +29,10 @@ struct sbfRequestImpl
     RB_ENTRY (sbfRequestImpl) mTreeEntry;
 };
 
-RB_HEAD (sbfRequestTreeImpl, sbfRequestImpl);
-typedef struct sbfRequestTreeImpl sbfRequestTree;
-
-static SBF_INLINE int
-sbfRequestCmp (sbfRequest lhs, sbfRequest rhs)
+SBF_RB_TREE (sbfRequest, Tree, mTreeEntry,
 {
     return sbfGuid_compare (&lhs->mGuid, &rhs->mGuid);
-}
-RB_GENERATE_STATIC (sbfRequestTreeImpl,
-                    sbfRequestImpl,
-                    mTreeEntry,
-                    sbfRequestCmp)
+})
 
 SBF_END_DECLS
 

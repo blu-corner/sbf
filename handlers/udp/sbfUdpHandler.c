@@ -1,104 +1,11 @@
 #include "sbfUdpHandler.h"
 
-static uint32_t
-sbfUdpHandlerParseRange (const char* s, u_int* bits)
-{
-    uint16_t     octets0[4];
-    union
-    {
-        uint32_t address;
-        uint8_t  octets[4];
-    } u = { 0 };
-
-    *bits = 0;
-
-    if (sscanf (s,
-                "%hu.%hu.%hu.%hu/%u",
-                &octets0[0],
-                &octets0[1],
-                &octets0[2],
-                &octets0[3],
-                bits) == 5 &&
-        octets0[0] < 256 &&
-        octets0[1] < 256 &&
-        octets0[2] < 256 &&
-        octets0[3] < 256)
-    {
-        u.octets[0] = (uint8_t)octets0[0];
-        u.octets[1] = (uint8_t)octets0[1];
-        u.octets[2] = (uint8_t)octets0[2];
-        u.octets[3] = (uint8_t)octets0[3];
-        return u.address;
-    }
-
-    if (sscanf (s,
-                "%hu.%hu.%hu/%u",
-                &octets0[0],
-                &octets0[1],
-                &octets0[2],
-                bits) == 4 &&
-        octets0[0] < 256 &&
-        octets0[1] < 256 &&
-        octets0[2] < 256)
-    {
-        u.octets[0] = (uint8_t)octets0[0];
-        u.octets[1] = (uint8_t)octets0[1];
-        u.octets[2] = (uint8_t)octets0[2];
-        return u.address;
-    }
-
-    if (sscanf (s,
-                "%hu.%hu/%u",
-                &octets0[0],
-                &octets0[1],
-                bits) == 3 &&
-        octets0[0] < 256 &&
-        octets0[1] < 256)
-    {
-        u.octets[0] = (uint8_t)octets0[0];
-        u.octets[1] = (uint8_t)octets0[1];
-        return u.address;
-    }
-
-    if (sscanf (s,
-                "%hu/%u",
-                &octets0[0],
-                bits) == 2 &&
-        octets0[0] < 256)
-    {
-        u.octets[0] = (uint8_t)octets0[0];
-        return u.address;
-    }
-
-    return 0;
-}
-
-static uint32_t
-sbfUdpHandlerMakeAddress (sbfUdpHandler uh, sbfTopic topic)
-{
-    uint32_t h;
-    uint32_t address;
-
-    address = ntohl (uh->mBase);
-
-    h = hash32_str (sbfTopic_getFirst (topic), HASHINIT);
-    address |= (h % uh->mFirstSize) << uh->mFirstShift;
-
-    h = hash32_str (sbfTopic_getSecond (topic), HASHINIT);
-    address |= (h % uh->mSecondSize) << uh->mSecondShift;
-
-    h = hash32_str (sbfTopic_getThird (topic), HASHINIT);
-    address |= 1 + (h % uh->mThirdSize);
-
-    return htonl (address);
-}
-
 static sbfError
 sbfUdpHandlerReadBufferCb (sbfUdpMulticast s, sbfBuffer buffer, void* closure)
 {
     sbfUdpHandlerStream uhs = closure;
 
-    sbfHandler_message (uhs->mHandle, buffer);
+    sbfHandler_packet (uhs->mHandle, buffer);
 
     return 0;
 }
@@ -158,73 +65,38 @@ sbfUdpHandlerAddCompleteEventCb (int fd, short events, void* closure)
 static sbfHandler
 sbfUdpHandlerCreate (sbfTport tport, sbfKeyValue properties)
 {
-    sbfUdpHandler uh;
-    const char*   s;
-    uint32_t      interf;
-    uint32_t      range;
-    u_int         bits;
-    u_int         first;
-    u_int         second;
-    u_int         third;
-    char          tmp[INET_ADDRSTRLEN];
+    sbfLog                log = sbfMw_getLog (sbfTport_getMw (tport));
+    sbfUdpHandler         uh;
+    sbfMcastTopicResolver mtr;
+    const char*           s;
+    uint32_t              interf;
 
-#ifdef WIN32
-    evthread_use_windows_threads ();
-#endif
-
-    s = sbfKeyValue_get (properties, "interface");
+    s = sbfKeyValue_get (properties, "udp.interface");
     if (s == NULL)
         s = "eth0";
-    interf = sbfInterface_find (s);
+    interf = sbfInterface_findOne (log, s, &s);
     if (interf == 0)
     {
-        sbfLog_err ("couldn't get interface: %s", s);
+        sbfLog_err (log, "couldn't get interface: %s", s);
         return NULL;
     }
 
-    s = sbfKeyValue_get (properties, "range");
-    if (s == NULL)
-        s = "239.100/16";
-    range = sbfUdpHandlerParseRange (s, &bits);
-    if (range == 0)
+    mtr = sbfMcastTopicResolver_create (sbfKeyValue_get (properties,
+                                                         "udp.range"),
+                                        log);
+    if (mtr == NULL)
     {
-        sbfLog_err ("couldn't get range: %s", s);
+        sbfLog_err (log, "couldn't get multicast topic resolver");
         return NULL;
     }
-    if (bits > 24)
-    {
-        sbfLog_err ("need at least eight bits: %s", s);
-        return NULL;
-    }
-    bits = 32 - bits;
-
-    first = (bits / 6) * 1;
-    second = (bits / 6) * 1;
-    third = bits - first - second;
 
     uh = xcalloc (1, sizeof *uh);
+    uh->mLog = log;
     RB_INIT (&uh->mTree);
-    uh->mPool = sbfPool_create (65536);
+    uh->mPool = sbfBuffer_createPool (65536);
 
     uh->mInterface = interf;
-    uh->mBase = range;
-
-    uh->mFirstSize = 1 + ~(0xffffffffU << first);
-    uh->mSecondSize = 1 + ~(0xffffffffU << second);
-    uh->mThirdSize = 1 + ~(0xffffffffU << third) - 2;
-
-    uh->mFirstShift = second + third;
-    uh->mSecondShift = third;
-
-    inet_ntop (AF_INET, &uh->mBase, tmp, sizeof tmp);
-    sbfLog_info ("range %s/%u: first %u<<%u, second %u<<%u, third %u",
-                 tmp,
-                 bits,
-                 uh->mFirstSize,
-                 uh->mFirstShift,
-                 uh->mSecondSize,
-                 uh->mSecondShift,
-                 uh->mThirdSize);
+    uh->mMtr = mtr;
 
     return uh;
 }
@@ -233,7 +105,7 @@ static void
 sbfUdpHandlerDestroy (sbfHandler handler)
 {
     sbfUdpHandler uh = handler;
-
+    sbfMcastTopicResolver_destroy (uh->mMtr);
     sbfPool_destroy (uh->mPool);
     free (uh);
 }
@@ -247,14 +119,15 @@ sbfUdpHandlerFindStream (sbfHandler handler, sbfTopic topic)
     char                           tmp[INET_ADDRSTRLEN];
 
     impl.mType = sbfTopic_getType (topic);
-    impl.mAddress = sbfUdpHandlerMakeAddress (uh, topic);
+    impl.mAddress = sbfMcastTopicResolver_makeAddress (uh->mMtr, topic);
 
     uhs = RB_FIND (sbfUdpHandlerStreamTreeImpl, &uh->mTree, &impl);
     if (uhs == NULL)
         return NULL;
 
     inet_ntop (AF_INET, &uhs->mAddress, tmp, sizeof tmp);
-    sbfLog_debug ("found stream %p, address %s (for topic %s)",
+    sbfLog_debug (uh->mLog,
+                  "found stream %p, address %s (for topic %s)",
                   uhs,
                   tmp,
                   sbfTopic_getTopic (topic));
@@ -281,10 +154,11 @@ sbfUdpHandlerAddStream (sbfHandler handler,
     uhs->mHandle = handle;
 
     uhs->mType = sbfTopic_getType (topic);
-    uhs->mAddress = sbfUdpHandlerMakeAddress (uh, topic);
+    uhs->mAddress = sbfMcastTopicResolver_makeAddress (uh->mMtr, topic);
 
     inet_ntop (AF_INET, &uhs->mAddress, tmp, sizeof tmp);
-    sbfLog_debug ("adding stream %p, address %s (for topic %s)",
+    sbfLog_debug (uh->mLog,
+                  "adding stream %p, address %s (for topic %s)",
                   uhs,
                   tmp,
                   sbfTopic_getTopic (topic));
@@ -296,10 +170,10 @@ sbfUdpHandlerAddStream (sbfHandler handler,
 
     if (cb != NULL)
     {
-        sbfMw_enqueue (uhs->mThread,
-                       &uhs->mEventAdd,
-                       sbfUdpHandlerAddCompleteEventCb,
-                       uhs);
+        sbfMw_enqueueThread (uhs->mThread,
+                             &uhs->mEventAdd,
+                             sbfUdpHandlerAddCompleteEventCb,
+                             uhs);
     }
 
     return uhs;
@@ -313,7 +187,7 @@ sbfUdpHandlerRemoveStream (sbfHandlerStream stream)
     char                tmp[INET_ADDRSTRLEN];
 
     inet_ntop (AF_INET, &uhs->mAddress, tmp, sizeof tmp);
-    sbfLog_debug ("removing stream %p, address %s", uhs, tmp);
+    sbfLog_debug (uh->mLog, "removing stream %p, address %s", uhs, tmp);
 
     if (uhs->mType == SBF_TOPIC_SUB)
         event_del (&uhs->mEventListen);
@@ -343,8 +217,9 @@ sbfUdpHandlerSendBuffer (sbfHandlerStream stream, sbfBuffer buffer)
     sbfUdpMulticast_sendBuffer (uhs->mSocket, buffer);
 }
 
-SBF_DLLEXPORT sbfHandlerTable sbf_udp_handler =
+sbfHandlerTable sbf_udp_handler =
 {
+    65507,
     sbfUdpHandlerCreate,
     sbfUdpHandlerDestroy,
     sbfUdpHandlerFindStream,

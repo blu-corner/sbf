@@ -9,6 +9,8 @@
 
 SBF_BEGIN_DECLS
 
+#define SBF_REQUEST_REPLY_HEADER_SIZE 64
+
 typedef struct sbfRequestImpl* sbfRequest;
 
 void sbfRequest_reply (sbfRequest req, void* data, size_t size);

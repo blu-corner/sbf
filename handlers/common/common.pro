@@ -1,17 +1,16 @@
 TEMPLATE = lib
-TARGET = sbfudphandler
+TARGET = sbfcommonhandler
 
 include (../../build.pri)
 
 HEADERS += \
-    sbfUdpHandler.h
+    sbfCommonHandler.h \
+    sbfCommonHandlerPrivate.h
 SOURCES += \
-    sbfUdpHandler.c
-
+    sbfCommonHandler.c
 LIBS += \
     -lsbfcore \
-    -lsbftransport \
-    -lsbfcommonhandler
+    -lsbftransport
 
 target.path = $$top_build/lib
 INSTALLS += target

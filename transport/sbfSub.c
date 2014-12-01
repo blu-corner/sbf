@@ -42,11 +42,18 @@ sbfSubRemoveEventCb (int fd, short events, void* closure)
     if (!sub0->mReady)
     {
         sub0->mRemoved = 1;
-        sbfLog_debug ("not removing %p; not ready", sub0);
+        sbfLog_debug (tport->mLog,
+                      "not removing subscription %p (%s); not ready",
+                      sub0,
+                      sbfTopic_getTopic (sub0->mTopic));
         return;
     }
 
-    sbfLog_debug ("removing %p", sub0);
+    sbfLog_debug (tport->mLog,
+                  "removing subscription %p (%s) (stream %p)",
+                  sub0,
+                  sbfTopic_getTopic (sub0->mTopic),
+                  tstream);
 
     sbfTport_adjustWeight (tport, tstream->mThread, -(int)sub0->mWeight);
 
@@ -77,12 +84,20 @@ sbfSubAddEventCb (int fd, short events, void* closure)
     sbfTportStream tstream = sbfSubEnsureStream (sub0);
     sbfTportTopic  ttopic;
 
-    sbfLog_debug ("adding %p", sub0);
+    sbfLog_debug (sub0->mTport->mLog,
+                  "adding subscription %p (%s)",
+                  sub0,
+                  sbfTopic_getTopic (sub0->mTopic));
 
     ttopic = sbfTport_findTopic (tstream, sbfTopic_getTopic (topic));
     if (ttopic == NULL)
         ttopic = sbfTport_addTopic (tstream, sbfTopic_getTopic (topic));
-    sbfLog_debug ("using topic %p (stream %p) for %p", ttopic, tstream, sub0);
+    sbfLog_debug (sub0->mTport->mLog,
+                  "using topic %p (stream %p) for subscription %p (%s)",
+                  ttopic,
+                  tstream,
+                  sub0,
+                  sbfTopic_getTopic (sub0->mTopic));
 
     TAILQ_INSERT_TAIL (&ttopic->mSubs, sub0, mEntry);
     sub0->mTportTopic = ttopic;
@@ -114,13 +129,20 @@ sbfSubAddStreamCompleteCb (sbfHandlerHandle handle,
          * If stream add fails, just return - subs on this stream will never
          * become ready.
          */
-        sbfLog_err ("failed to add stream %p: %s", tstream, strerror (error));
+        sbfLog_err (sub0->mTport->mLog,
+                    "failed to add stream %p for subscription %p (%s): %s",
+                    tstream,
+                    sub0,
+                    sbfTopic_getTopic (sub0->mTopic),
+                    strerror (error));
         return;
     }
 
-    sbfLog_debug ("stream %p is ready (for %p): thread %u",
+    sbfLog_debug (sub0->mTport->mLog,
+                  "stream %p is ready (for subscription %p (%s)): thread %u",
                   tstream,
                   sub0,
+                  sbfTopic_getTopic (sub0->mTopic),
                   sbfMw_getThreadIndex (tstream->mThread));
 
     tstream->mReady = 1;
@@ -133,9 +155,11 @@ sbfSubAddStreamCompleteCb (sbfHandlerHandle handle,
          * have been deferred.
          */
         TAILQ_FOREACH (sub, &ttopic->mSubs, mEntry)
+        {
             sbfSub_ready (sub);
-        if (sub->mRemoved)
-            sbfSubRemoveEventCb (-1, 0, sub);
+            if (sub->mRemoved)
+                sbfSubRemoveEventCb (-1, 0, sub);
+        }
     }
 
     /*
@@ -162,10 +186,10 @@ sbfSubSetStream (sbfSub sub)
     if (tstream != NULL)
     {
         /* We know the thread so can queue the add callback directly. */
-        sbfMw_enqueue (tstream->mThread,
-                       &sub->mEventAdd,
-                       sbfSubAddEventCb,
-                       sub);
+        sbfMw_enqueueThread (tstream->mThread,
+                             &sub->mEventAdd,
+                             sbfSubAddEventCb,
+                             sub);
     }
     else
     {
@@ -206,7 +230,10 @@ sbfSubReadyQueueCb (sbfQueueItem item, void* closure)
 void
 sbfSub_ready (sbfSub sub)
 {
-    sbfLog_debug ("%p is ready", sub);
+    sbfLog_debug (sub->mTport->mLog,
+                  "subscription %p (%s) is ready",
+                  sub,
+                  sbfTopic_getTopic (sub->mTopic));
     sub->mReady = 1;
 
     if (!sub->mDestroyed && sub->mReadyCb != NULL)
@@ -237,13 +264,18 @@ sbfSub_message (sbfSub sub, sbfBuffer buffer)
 
     if (!sub->mDestroyed && sub->mMessageCb != NULL)
     {
-        item = sbfQueue_getItem (sub->mQueue, sbfSubMessageQueueCb, sub);
+        if (sub->mQueueBypass)
+            sub->mMessageCb (sub, buffer, sub->mClosure);
+        else
+        {
+            item = sbfQueue_getItem (sub->mQueue, sbfSubMessageQueueCb, sub);
 
-        *(sbfBuffer*)sbfQueue_getItemData (item) = buffer;
-        sbfBuffer_addRef (buffer);
+            *(sbfBuffer*)sbfQueue_getItemData (item) = buffer;
+            sbfBuffer_addRef (buffer);
 
-        sbfRefCount_increment (&sub->mRefCount);
-        sbfQueue_enqueueItem (sub->mQueue, item);
+            sbfRefCount_increment (&sub->mRefCount);
+            sbfQueue_enqueueItem (sub->mQueue, item);
+        }
     }
 }
 
@@ -274,7 +306,8 @@ sbfSub_create (sbfTport tport,
     sub->mTportStream = NULL;
     sub->mTportTopic = NULL;
 
-    sbfLog_debug ("creating %p: topic %s",
+    sbfLog_debug (tport->mLog,
+                  "creating subscription %p (%s)",
                   sub,
                   sbfTopic_getTopic (sub->mTopic));
 
@@ -296,14 +329,29 @@ sbfSub_destroy (sbfSub sub)
         return;
     sub->mDestroyed = 1;
 
-    sbfMw_enqueue (sub->mTportStream->mThread,
-                   &sub->mEventRemove,
-                   sbfSubRemoveEventCb,
-                   sub);
+    sbfLog_debug (sub->mTport->mLog,
+                  "queueing remove of subscription %p (%s)",
+                  sub,
+                  sbfTopic_getTopic (sub->mTopic));
+    sbfMw_enqueueThread (sub->mTportStream->mThread,
+                         &sub->mEventRemove,
+                         sbfSubRemoveEventCb,
+                         sub);
 }
 
 sbfTopic
 sbfSub_getTopic (sbfSub sub)
 {
     return sub->mTopic;
+}
+
+void
+sbfSub_setQueueBypass (sbfSub sub, int set)
+{
+    sbfLog_debug (sub->mTport->mLog,
+                  "queue bypass %s for subscription %p (%s)",
+                  set ? "ON" : "OFF",
+                  sub,
+                  sbfTopic_getTopic (sub->mTopic));
+    sub->mQueueBypass = set;
 }

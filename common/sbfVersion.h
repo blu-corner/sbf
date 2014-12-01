@@ -3,8 +3,8 @@
 
 #define SBF_MAJOR_VERSION 0
 #define SBF_MINOR_VERSION 0
-#define SBF_PATCH_LEVEL 1
+#define SBF_PATCH_LEVEL 2
 
-#define SBF_VERSION "0.0.1"
+#define SBF_VERSION "0.0.2"
 
 #endif /* _SBF_VERSION_H_ */

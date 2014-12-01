@@ -26,24 +26,25 @@ static void
 sbfRequestSubSubMessageCb (sbfSub sub0, sbfBuffer buffer, void* closure)
 {
     sbfRequestSub     sub = closure;
-    sbfRequestHeader* hdr;
+    sbfRequestHeader* hdr = sbfBuffer_getData (buffer);
+    size_t            size = sbfBuffer_getSize (buffer);
+    sbfBuffer         new;
     sbfRequest        req;
 
-    if (sbfBuffer_getSize (buffer) < sizeof *hdr)
+    if (size < sizeof *hdr)
         return;
 
     req = xcalloc (1, sizeof *req);
     req->mSub = sub;
     sbfRefCount_init (&req->mRefCount, 1);
 
-    hdr = sbfBuffer_getData (buffer);
     sbfGuid_copy (&req->mGuid, &hdr->mGuid);
 
     if (sub->mRequestCb != NULL)
     {
-        sbfBuffer_setData (buffer, hdr + 1);
-        sbfBuffer_setSize (buffer, sbfBuffer_getSize (buffer) - sizeof *hdr);
-        sub->mRequestCb (sub, req, buffer, sub->mClosure);
+        new = sbfBuffer_wrap (hdr + 1, size - sizeof *hdr, NULL, NULL);
+        sub->mRequestCb (sub, req, new, sub->mClosure);
+        sbfBuffer_destroy (new);
     }
 
     sbfRequest_destroy (req);
@@ -58,16 +59,25 @@ sbfRequestSub_create (sbfTport tport,
                       void* closure)
 {
     sbfRequestSub sub;
+    char          requestTopic[SBF_TOPIC_SIZE_LIMIT];
     char          replyTopic[SBF_TOPIC_SIZE_LIMIT];
     int           used;
 
-    used = snprintf (replyTopic, sizeof replyTopic, "%s@", topic);
+    used = snprintf (requestTopic, sizeof requestTopic, "%s@request", topic);
+    if (used < 0 || (size_t)used >= sizeof requestTopic)
+        return NULL;
+    used = snprintf (replyTopic, sizeof replyTopic, "%s@reply", topic);
     if (used < 0 || (size_t)used >= sizeof replyTopic)
         return NULL;
 
     sub = xcalloc (1, sizeof *sub);
+    sub->mLog = sbfMw_getLog (sbfTport_getMw (tport));
+    sub->mTopic = xstrdup (topic);
 
-    sbfLog_debug ("creating %p: topic %s", sub, topic);
+    sbfLog_debug (sub->mLog,
+                  "creating request subscription %p: topic %s",
+                  sub,
+                  topic);
 
     sub->mReadyCb = readyCb;
     sub->mRequestCb = requestCb;
@@ -83,7 +93,7 @@ sbfRequestSub_create (sbfTport tport,
 
     sub->mSub = sbfSub_create (tport,
                                queue,
-                               topic,
+                               requestTopic,
                                sbfRequestSubSubReadyCb,
                                sbfRequestSubSubMessageCb,
                                sub);
@@ -100,20 +110,21 @@ fail:
 void
 sbfRequestSub_destroy (sbfRequestSub sub)
 {
-    sbfLog_debug ("destroying %p", sub);
+    sbfLog_debug (sub->mLog, "destroying request subscription %p", sub);
 
     if (sub->mPub != NULL)
         sbfPub_destroy (sub->mPub);
     if (sub->mSub != NULL)
         sbfSub_destroy (sub->mSub);
 
+    free ((void*)sub->mTopic);
     free (sub);
 }
 
-sbfTopic
+const char*
 sbfRequestSub_getTopic (sbfRequestSub sub)
 {
-    return sbfSub_getTopic (sub->mSub);
+    return sub->mTopic;
 }
 
 void

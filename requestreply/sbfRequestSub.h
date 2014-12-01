@@ -25,10 +25,9 @@ sbfRequestSub sbfRequestSub_create (sbfTport tport,
                                     sbfRequestSubReadyCb readyCb,
                                     sbfRequestSubRequestCb requestCb,
                                     void* closure);
-
 void sbfRequestSub_destroy (sbfRequestSub sub);
 
-sbfTopic sbfRequestSub_getTopic (sbfRequestSub sub);
+const char* sbfRequestSub_getTopic (sbfRequestSub sub);
 
 void sbfRequestSub_reply (sbfRequestSub sub,
                           struct sbfRequestImpl* req,

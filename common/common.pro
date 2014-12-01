@@ -30,6 +30,8 @@ HEADERS += \
     sbfPerfCounter.h \
     sbfPool.h \
     sbfPoolInline.h \
+    sbfProperties.h \
+    sbfPropertiesPrivate.h \
     sbfTcpConnection.h \
     sbfTcpConnectionPrivate.h \
     sbfTcpListener.h \
@@ -55,6 +57,7 @@ SOURCES += \
     sbfPath.c \
     sbfPerfCounter.c \
     sbfPool.c \
+    sbfProperties.c \
     sbfTcpConnection.c \
     sbfTcpListener.c \
     sbfUdpMulticast.c
@@ -107,6 +110,7 @@ install_headers.files = \
     sbfPerfCounter.h \
     sbfPool.h \
     sbfPoolInline.h \
+    sbfProperties.h \
     sbfRefCount.h \
     sbfTcpConnection.h \
     sbfTcpListener.h \

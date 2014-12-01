@@ -5,6 +5,9 @@ SBF_BEGIN_DECLS
 
 struct sbfRequestSubImpl
 {
+    sbfLog                 mLog;
+    const char*            mTopic;
+
     sbfRequestSubReadyCb   mReadyCb;
     sbfRequestSubRequestCb mRequestCb;
     void*                  mClosure;

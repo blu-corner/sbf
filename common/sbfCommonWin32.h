@@ -39,7 +39,7 @@ typedef intptr_t sbfSocket;
 #endif
 
 #define SBF_EOL "\r\n"
-#define SBF_SHLIB_SUFFIX ".lib"
+#define SBF_SHLIB_SUFFIX /* not used */
 
 #define SBF_PACKED(d) \
     __pragma(pack(push, 1)) \
