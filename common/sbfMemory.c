@@ -7,7 +7,7 @@ sbfMemory_asprintf (char** ret, const char* fmt, ...)
 
     va_start (ap, fmt);
     if (vasprintf (ret, fmt, ap) == -1)
-        sbfFatal ("out of memory");
+        SBF_FATAL ("out of memory");
     va_end (ap);
 }
 
@@ -15,7 +15,7 @@ void
 sbfMemory_vasprintf (char** ret, const char* fmt, va_list ap)
 {
     if (vasprintf (ret, fmt, ap) == -1)
-        sbfFatal ("out of memory");
+        SBF_FATAL ("out of memory");
 }
 
 void*
@@ -74,29 +74,4 @@ sbfMemory_strdup (const char* s)
     if (ss == NULL)
         SBF_FATAL ("out of memory");
     return ss;
-}
-
-void*
-sbfMemory_getGlobal (size_t size)
-{
-    void* ptr;
-
-#ifdef WIN32
-    ptr = LocalAlloc (0, size);
-#else
-    ptr = malloc (size);
-#endif
-    if (ptr == NULL)
-        SBF_FATAL ("out of memory");
-    return ptr;
-}
-
-void
-sbfMemory_freeGlobal (void* ptr)
-{
-#ifdef WIN32
-    LocalFree (ptr);
-#else
-    free (ptr);
-#endif
 }
