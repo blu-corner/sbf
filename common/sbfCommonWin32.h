@@ -39,6 +39,7 @@ typedef intptr_t sbfSocket;
 #endif
 
 #define SBF_EOL "\r\n"
+#define SBF_SHLIB_SUFFIX ".lib"
 
 #define SBF_PACKED(d) \
     __pragma(pack(push, 1)) \
@@ -47,6 +48,9 @@ typedef intptr_t sbfSocket;
 #define SBF_PRINTFLIKE(a, b)
 #define SBF_UNUSED
 #define SBF_INLINE _forceinline
+#define SBF_PURE
+#define SBF_CONST
+#define SBF_DEAD
 
 #define SBF_LIKELY(e)
 #define SBF_UNLIKELY(e)
@@ -104,6 +108,9 @@ basename (char* path)
 #define fstat _fstat
 
 char* fgetln(FILE* fp, size_t* len);
+
+size_t strlcat (char *dst, const char *src, size_t siz);
+size_t strlcpy (char *dst, const char *src, size_t siz);
 
 int gettimeofday (struct timeval* tv, struct timezone* tz);
 #define gmtime_r(tp, tm) gmtime_s (tm, tp)

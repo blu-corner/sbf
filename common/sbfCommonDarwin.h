@@ -1,12 +1,11 @@
-#ifndef _SBF_COMMON_LINUX_H_
-#define _SBF_COMMON_LINUX_H_
+#ifndef _SBF_COMMON_DARWIN_H_
+#define _SBF_COMMON_DARWIN_H_
 
 #ifndef _GNU_SOURCE
 #define _GNU_SOURCE
 #endif
 
 #include <sys/types.h>
-#include <sys/inotify.h>
 #include <sys/ioctl.h>
 #include <sys/mman.h>
 #include <sys/socket.h>
@@ -17,8 +16,6 @@
 #include <arpa/inet.h>
 
 #include <netinet/in.h>
-
-#include <linux/futex.h>
 
 #include <assert.h>
 #include <ctype.h>
@@ -45,12 +42,20 @@
 #include <time.h>
 #include <unistd.h>
 
+#include <libkern/OSAtomic.h>
+
 SBF_BEGIN_DECLS
+
+#define __thread /* XXX */
+
+#define O_NOATIME 0
+#define MAP_POPULATE 0
+#define HOST_NAME_MAX 255
 
 typedef int sbfSocket;
 
 #define SBF_EOL "\n"
-#define SBF_SHLIB_SUFFIX ".so"
+#define SBF_SHLIB_SUFFIX ".dylib"
 
 #define SBF_PACKED(d) d __attribute__ ((__packed__))
 #define SBF_PRINTFLIKE(a, b) __attribute__ ((format (printf, a, b)))
@@ -84,28 +89,13 @@ int sbfMutex_init (pthread_mutex_t* m, int recursive);
 #define sbfMutex_lock(m) pthread_mutex_lock (m)
 #define sbfMutex_unlock(m) pthread_mutex_unlock (m)
 
-typedef pthread_spinlock_t sbfSpinLock;
-#define sbfSpinLock_init(s) pthread_spin_init (s, 0)
-#define sbfSpinLock_destroy(s) pthread_spin_destroy (s)
-#define sbfSpinLock_lock(s) pthread_spin_lock (s)
-#define sbfSpinLock_unlock(s) pthread_spin_unlock (s)
-
-char* fgetln (FILE* fp, size_t* len);
-
-size_t strlcat (char *dst, const char *src, size_t siz);
-size_t strlcpy (char *dst, const char *src, size_t siz);
-
-static SBF_INLINE long futex (volatile void* addr1,
-                              int op,
-                              int val1,
-                              struct timespec* timeout,
-                              void *addr2,
-                              int val3)
-{
-    return syscall (SYS_futex, addr1, op, val1, timeout, addr2, val3);
-}
+typedef OSSpinLock sbfSpinLock;
+#define sbfSpinLock_init(s) do { *s = 0; } while (0)
+#define sbfSpinLock_destroy(s)
+#define sbfSpinLock_lock(s) OSSpinLockLock (s)
+#define sbfSpinLock_unlock(s) OSSpinLockUnlock (s)
 
 SBF_END_DECLS
 
-#endif /* _SBF_COMMON_LINUX_H_ */
+#endif /* _SBF_COMMON_DARWIN_H_ */
 
