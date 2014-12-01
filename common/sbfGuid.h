@@ -11,13 +11,22 @@ SBF_PACKED(struct sbfGuidImpl
 });
 typedef struct sbfGuidImpl sbfGuid;
 
-#define SBF_GUID_STRING_SIZE 64
+#define SBF_GUID_STRING_SIZE 68
 
-void sbfGuid_new (sbfGuid* g, uint64_t seed);
+void sbfGuid_new (sbfLog log, sbfGuid* g);
 int sbfGuid_compare (const sbfGuid* g1, const sbfGuid* g2);
+int sbfGuid_compareFixed (const sbfGuid* g1, const sbfGuid* g2);
 void sbfGuid_copy (sbfGuid* to, const sbfGuid* from);
-sbfGuid* sbfGuid_increment (sbfGuid* g, u_int n);
-char* sbfGuid_toString (const sbfGuid* g, char* buf, size_t len);
+
+uint64_t sbfGuid_get (sbfGuid* g);
+void sbfGuid_set (sbfGuid* g, uint64_t to);
+uint64_t sbfGuid_increment (sbfGuid* g, uint64_t by);
+
+int sbfGuid_fromString (sbfGuid* g, const char* s);
+const char* sbfGuid_toString (const sbfGuid* g);
+char* sbfGuid_toStringBuffer (const sbfGuid* g, char* buf, size_t len);
+const char* sbfGuid_toStringFixed (const sbfGuid* g);
+char* sbfGuid_toStringFixedBuffer (const sbfGuid* g, char* buf, size_t len);
 
 SBF_END_DECLS
 
