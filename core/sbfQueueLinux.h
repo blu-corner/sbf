@@ -10,7 +10,7 @@
 #ifndef SBF_QUEUE_FUNCTIONS
 
 #define SBF_QUEUE_DECL                            \
-    int                               mSemaphore; \
+    volatile int                      mWaiting;   \
     struct sbfQueueItemImpl* volatile mHead;      \
     struct sbfQueueItemImpl*          mTail;      \
     struct sbfQueueItemImpl           mEmpty;
@@ -23,17 +23,10 @@
 static SBF_INLINE void
 sbfQueueCreate (sbfQueue queue)
 {
-    queue->mSemaphore = 0; /* 0 empty, -1 empty with waiter, >0 not empty */
+    queue->mWaiting = 0;
     queue->mHead = &queue->mEmpty;
     queue->mTail = &queue->mEmpty;
     queue->mEmpty.mNext = NULL;
-}
-
-static SBF_INLINE void
-sbfQueueWake (sbfQueue queue)
-{
-    if (SBF_QUEUE_BLOCKING (queue))
-        futex (&queue->mSemaphore, FUTEX_WAKE, INT_MAX, NULL, NULL, 0);
 }
 
 static SBF_INLINE void
@@ -43,7 +36,7 @@ sbfQueueDestroy (sbfQueue queue)
     sbfQueueItem next;
 
     item = queue->mHead;
-    while (item != NULL)
+    while (item != NULL && item != &queue->mEmpty)
     {
         next = item->mNext;
         sbfPool_put (item);
@@ -52,20 +45,28 @@ sbfQueueDestroy (sbfQueue queue)
 }
 
 static SBF_INLINE void
-sbfQueueEnqueue (sbfQueue queue, sbfQueueItem item)
+sbfQueueEnqueue1 (sbfQueue queue, sbfQueueItem item)
 {
     sbfQueueItem last;
 
     item->mNext = NULL;
     last = __sync_lock_test_and_set (&queue->mHead, item);
     last->mNext = item;
+}
+
+static SBF_INLINE void
+sbfQueueEnqueue (sbfQueue queue, sbfQueueItem item)
+{
+    sbfQueueEnqueue1 (queue, item);
 
     if (SBF_UNLIKELY (SBF_QUEUE_BLOCKING (queue)))
     {
-        if (__sync_bool_compare_and_swap (&queue->mSemaphore, -1, 1))
-            futex (&queue->mSemaphore, FUTEX_WAKE, INT_MAX, NULL, NULL, 0);
-        else
-            __sync_fetch_and_add (&queue->mSemaphore, 1);
+        /*
+         * If we manage to set the waiting flag from 1 to 0, then the queue is
+         * waiting and we are elected to wake it up.
+         */
+        if (__sync_bool_compare_and_swap (&queue->mWaiting, 1, 0))
+            futex (&queue->mWaiting, FUTEX_WAKE, INT_MAX, NULL, NULL, 0);
     }
 }
 
@@ -95,7 +96,7 @@ sbfQueueNext (sbfQueue queue)
     head = queue->mHead;
     if (tail != head)
         return NULL;
-    sbfQueueEnqueue (queue, &queue->mEmpty);
+    sbfQueueEnqueue1 (queue, &queue->mEmpty);
 
     next = tail->mNext;
     if (next)
@@ -110,32 +111,41 @@ static SBF_INLINE sbfQueueItem
 sbfQueueDequeue (sbfQueue queue)
 {
     sbfQueueItem item;
-    int          s;
 
     if (SBF_LIKELY (!SBF_QUEUE_BLOCKING (queue)))
         return sbfQueueNext (queue);
 
-    while (SBF_UNLIKELY (!queue->mDestroyed))
+    for (;;)
     {
-        s = __sync_sub_and_fetch (&queue->mSemaphore, 1);
-        SBF_ASSERT (s >= -1);
-        if (SBF_LIKELY (s != -1))
-            break;
-        while (futex (&queue->mSemaphore, FUTEX_WAIT, -1, NULL, NULL, 0) != 0)
+        item = sbfQueueNext (queue);
+        if (SBF_LIKELY (item != NULL))
+            return item;
+
+        /* Set the waiting flag, using an atomic to get a barrier. */
+        __sync_lock_test_and_set (&queue->mWaiting, 1);
+
+        /*
+         * Another thread could have added an item and tested the waiting flag
+         * before we set it to 1. So check again before we actually sleep.
+         */
+        item = sbfQueueNext (queue);
+        if (SBF_UNLIKELY (item != NULL))
+        {
+            /* No point in a wakeup now so set the flag back. */
+            __sync_lock_test_and_set (&queue->mWaiting, 0);
+            return item;
+        }
+
+        /*
+         * If another thread changed the waiting flag after we set it to 1 then
+         * it'll be 0 now and futex will return EWOULDBLOCK.
+         */
+        while (futex (&queue->mWaiting, FUTEX_WAIT, 1, NULL, NULL, 0) != 0)
         {
             if (errno == EWOULDBLOCK)
                 break;
         }
     }
-
-    /*
-     * If the semaphore was raised, an item should be removed, so wait until it
-     * is there. This is alright because there can only be one consumer, so
-     * nobody else can remove from the queue.
-     */
-    while ((item = sbfQueueNext (queue)) == NULL && !queue->mDestroyed)
-        ;
-    return item;
 }
 
 #endif /* SBF_QUEUE_FUNCTIONS */

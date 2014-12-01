@@ -2,20 +2,25 @@
 #define _SBF_QUEUE_PRIVATE_H_
 
 #include "sbfMw.h"
-#include "sbfMwInternal.h"
 #include "sbfMwPrivate.h"
 #include "sbfPool.h"
+#include "sbfProperties.h"
 #include "sbfRefCount.h"
+#include "sbfHiResTimerPrivate.h"
 
 SBF_BEGIN_DECLS
 
 #define SBF_QUEUE_ITEM_DATA_SIZE 32
-#define SBF_QUEUE_BLOCKING(queue) (!((queue)->mFlags & SBF_QUEUE_NONBLOCK))
 
-#ifdef WIN32
-#include "sbfQueueWin32.h"
-#else
+#define SBF_QUEUE_NONBLOCK 0x1
+
+#define SBF_QUEUE_BLOCKING(queue) \
+    (!((queue)->mFlags & SBF_QUEUE_NONBLOCK) && RB_EMPTY (&queue->mHiResTimers))
+
+#ifdef linux
 #include "sbfQueueLinux.h"
+#else
+#include "sbfQueueDarwin.h"
 #endif
 
 struct sbfQueueItemImpl
@@ -30,21 +35,27 @@ struct sbfQueueItemImpl
 
 struct sbfQueueImpl
 {
-    int         mFlags;
+    const char*       mName;
+    sbfLog            mLog;
+    sbfKeyValue       mProperties;
+    int               mFlags;
 
-    int         mDestroyed;
-    sbfRefCount mRefCount;
+    int               mExited;
+    int               mDestroyed;
+    sbfRefCount       mRefCount;
 
-    sbfPool     mPool;
+    sbfPool           mPool;
+
+    sbfHiResTimerTree mHiResTimers;
 
     SBF_QUEUE_DECL;
 };
 
 #define SBF_QUEUE_FUNCTIONS
-#ifdef WIN32
-#include "sbfQueueWin32.h"
-#else
+#ifdef linux
 #include "sbfQueueLinux.h"
+#else
+#include "sbfQueueDarwin.h"
 #endif
 #undef SBF_QUEUE_FUNCTIONS
 

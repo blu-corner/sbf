@@ -1,13 +1,12 @@
 #ifndef _SBF_MW_PRIVATE_H_
 #define _SBF_MW_PRIVATE_H_
 
-#include "sbfMw.h"
-#include "sbfMwInternal.h"
-
 SBF_BEGIN_DECLS
 
 struct sbfMwImpl
 {
+    sbfLog      mLog;
+    sbfKeyValue mProperties;
     int         mStop;
 
     u_int       mNumThreads;

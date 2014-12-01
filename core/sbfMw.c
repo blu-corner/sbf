@@ -18,20 +18,22 @@ sbfMwEventBaseThreadCb (void* closure)
 {
     sbfMwThread thread = closure;
 
-    sbfLog_debug ("thread %u entered", thread->mIndex);
+    sbfLog_debug (thread->mParent->mLog, "thread %u entered", thread->mIndex);
 
     while (!thread->mParent->mStop)
         event_base_loop (thread->mEventBase, 0);
 
-    sbfLog_debug ("thread %u exited", thread->mIndex);
+    sbfLog_debug (thread->mParent->mLog, "thread %u exited", thread->mIndex);
 
     return NULL;
 }
 
 sbfMw
-sbfMw_create (u_int threads)
+sbfMw_create (sbfLog log, sbfKeyValue properties)
 {
     sbfMw                mw;
+    const char*          value;
+    int                  threads;
     u_int                i;
     sbfMwThread          thread;
     struct event_config* ec;
@@ -39,19 +41,29 @@ sbfMw_create (u_int threads)
     WSADATA              wsd;
 #endif
 
-    if (threads == 0 || threads > SBF_MW_THREAD_LIMIT)
+    value = sbfKeyValue_get (properties, "threads");
+    if (value == NULL)
+        threads = 1;
+    else
+        threads = atoi (value);
+    if (threads <= 0 || threads > SBF_MW_THREAD_LIMIT)
         return NULL;
 
-#ifdef linux
+#ifndef WIN32
     signal (SIGPIPE, SIG_IGN);
 #endif
 
     mw = xcalloc (1, sizeof *mw);
+    mw->mProperties = sbfKeyValue_copy (properties);
+    mw->mLog = log;
     mw->mNumThreads = threads;
     mw->mThreads = xcalloc (mw->mNumThreads, sizeof *mw->mThreads);
 
     sbfLog_info ("this is version " SBF_VERSION);
-    sbfLog_debug ("creating %p, using %u threads", mw, threads);
+    sbfLog_debug (mw->mLog,
+                  "creating middleware %p, using %u threads",
+                  mw,
+                  threads);
 
 #ifdef WIN32
     if (WSAStartup(MAKEWORD (2, 2), &wsd) != 0)
@@ -90,6 +102,7 @@ sbfMw_create (u_int threads)
             SBF_FATAL ("sbfThread_create failed");
     }
 
+    event_config_free (ec);
     return mw;
 }
 
@@ -98,7 +111,7 @@ sbfMw_destroy (sbfMw mw)
 {
     u_int i;
 
-    sbfLog_debug ("destroying %p", mw);
+    sbfLog_debug (mw->mLog, "destroying middleware %p", mw);
 
     mw->mStop = 1;
     for (i = 0; i < mw->mNumThreads; i++)
@@ -113,6 +126,7 @@ sbfMw_destroy (sbfMw mw)
     }
     free (mw->mThreads);
 
+    sbfKeyValue_destroy (mw->mProperties);
     free (mw);
 }
 
@@ -146,4 +160,31 @@ struct event_base*
 sbfMw_getThreadEventBase (sbfMwThread thread)
 {
     return thread->mEventBase;
+}
+
+void
+sbfMw_enqueueThread (sbfMwThread thread,
+                     struct event* event,
+                     event_callback_fn cb,
+                     void* closure)
+{
+    event_assign (event,
+                  sbfMw_getThreadEventBase (thread),
+                  -1,
+                  EV_TIMEOUT,
+                  cb,
+                  closure);
+    event_active (event, EV_TIMEOUT, 1);
+}
+
+sbfLog
+sbfMw_getLog (sbfMw mw)
+{
+    return mw->mLog;
+}
+
+sbfKeyValue
+sbfMw_getProperties (sbfMw mw)
+{
+    return mw->mProperties;
 }

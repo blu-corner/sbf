@@ -5,7 +5,7 @@
 
 SBF_BEGIN_DECLS
 
-#define SBF_QUEUE_NONBLOCK 0x1
+struct sbfMwImpl;
 
 typedef struct sbfQueueImpl* sbfQueue;
 
@@ -13,11 +13,14 @@ typedef struct sbfQueueItemImpl* sbfQueueItem;
 
 typedef void (*sbfQueueCb) (sbfQueueItem item, void* closure);
 
-sbfQueue sbfQueue_create (int flags);
+sbfQueue sbfQueue_create (struct sbfMwImpl* mw,
+                          const char* name,
+                          void* closure);
 void sbfQueue_destroy (sbfQueue queue);
 
-void sbfQueue_enqueue (sbfQueue queue, sbfQueueCb cb, void* closure);
+const char* sbfQueue_getName (sbfQueue queue);
 
+void sbfQueue_enqueue (sbfQueue queue, sbfQueueCb cb, void* closure);
 void sbfQueue_dispatch (sbfQueue queue);
 
 sbfQueueItem sbfQueue_getItem (sbfQueue queue, sbfQueueCb cb, void* closure);

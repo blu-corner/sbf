@@ -2,12 +2,26 @@
 #include "sbfQueuePrivate.h"
 
 sbfQueue
-sbfQueue_create (int flags)
+sbfQueue_create (sbfMw mw, const char* name, void* closure)
 {
-    sbfQueue queue;
+    sbfQueue    queue;
+    const char* value;
 
     queue = xcalloc (1, sizeof *queue);
-    queue->mFlags = flags;
+    queue->mName = xstrdup (name);
+    queue->mLog = sbfMw_getLog (mw);
+
+    queue->mProperties = sbfProperties_filterN (sbfMw_getProperties (mw),
+                                                "queue",
+                                                name,
+                                                NULL);
+
+    value = sbfKeyValue_get (queue->mProperties, "blocking");
+    if (value == NULL || atoi (value) != 0)
+        queue->mFlags = 0;
+    else
+        queue->mFlags = SBF_QUEUE_NONBLOCK;
+
     queue->mPool = sbfPool_create (sizeof (struct sbfQueueItemImpl));
 
     queue->mDestroyed = 0;
@@ -15,7 +29,7 @@ sbfQueue_create (int flags)
 
     sbfQueueCreate (queue);
 
-    sbfLog_debug ("creating %p", queue);
+    sbfLog_debug (queue->mLog, "creating queue %p", queue);
 
     return queue;
 }
@@ -23,12 +37,21 @@ sbfQueue_create (int flags)
 void
 sbfQueue_destroy (sbfQueue queue)
 {
-    sbfLog_debug ("destroying %p", queue);
+    sbfLog_debug (queue->mLog, "destroying queue %p", queue);
+
+    sbfHiResTimer_queueDestroy (queue);
 
     queue->mDestroyed = 1;
-    sbfQueueWake (queue);
+    sbfQueue_enqueue (queue, NULL, NULL);
+    queue->mExited = 1;
 
     sbfQueue_removeRef (queue);
+}
+
+const char*
+sbfQueue_getName (sbfQueue queue)
+{
+    return queue->mName;
 }
 
 void
@@ -43,9 +66,15 @@ sbfQueue_removeRef (sbfQueue queue)
     if (!sbfRefCount_decrement (&queue->mRefCount))
         return;
 
+    sbfLog_debug (queue->mLog, "freeing queue %p", queue);
+
     sbfQueueDestroy (queue);
 
     sbfPool_destroy (queue->mPool);
+
+    sbfKeyValue_destroy (queue->mProperties);
+
+    free ((void*)queue->mName);
     free (queue);
 }
 
@@ -53,9 +82,6 @@ void
 sbfQueue_enqueue (sbfQueue queue, sbfQueueCb cb, void* closure)
 {
     sbfQueueItem item;
-
-    if (queue->mDestroyed)
-        return;
 
     item = sbfQueue_getItem (queue, cb, closure);
     sbfQueue_enqueueItem (queue, item);
@@ -69,21 +95,25 @@ sbfQueue_dispatch (sbfQueue queue)
     if (queue->mDestroyed)
         return;
 
-    sbfLog_debug ("%p entered", queue);
     sbfQueue_addRef (queue);
+    sbfLog_debug (queue->mLog, "queue %p entered", queue);
 
-    while (!queue->mDestroyed)
+    for (;;)
     {
         item = sbfQueueDequeue (queue);
-        if (item != NULL)
+        if (SBF_LIKELY (item != NULL))
         {
-            item->mCb (item, item->mClosure);
+            if (SBF_LIKELY (item->mCb != NULL))
+                item->mCb (item, item->mClosure);
             sbfPool_put (item);
+            if (SBF_UNLIKELY (item->mCb == NULL))
+                break; /* NULL callback means destroyed */
         }
+        sbfHiResTimer_queueDispatch (queue);
     }
 
+    sbfLog_debug (queue->mLog, "queue %p exited", queue);
     sbfQueue_removeRef (queue);
-    sbfLog_debug ("%p exited", queue);
 }
 
 sbfQueueItem
@@ -100,6 +130,7 @@ sbfQueue_getItem (sbfQueue queue, sbfQueueCb cb, void* closure)
 void
 sbfQueue_enqueueItem (sbfQueue queue, sbfQueueItem item)
 {
+    SBF_ASSERT (!queue->mExited);
     sbfQueueEnqueue (queue, item);
 }
 

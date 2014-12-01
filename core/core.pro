@@ -6,8 +6,9 @@ include (../build.pri)
 HEADERS += \
     sbfEvent.h \
     sbfEventPrivate.h \
+    sbfHiResTimer.h \
+    sbfHiResTimerPrivate.h \
     sbfMw.h \
-    sbfMwInternal.h \
     sbfMwPrivate.h \
     sbfQueue.h \
     sbfQueuePrivate.h \
@@ -17,6 +18,7 @@ HEADERS += \
     sbfTimerPrivate.h
 SOURCES += \
     sbfEvent.c \
+    sbfHiResTimer.c \
     sbfMw.c \
     sbfQueue.c \
     sbfTimer.c
@@ -24,6 +26,7 @@ SOURCES += \
 install_headers.path = $$top_build/include
 install_headers.files = \
     sbfEvent.h \
+    sbfHiResTimer.h \
     sbfMw.h \
     sbfQueue.h \
     sbfTimer.h
