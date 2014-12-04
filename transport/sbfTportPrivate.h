@@ -4,6 +4,7 @@
 #include "sbfBatchPrivate.h"
 #include "sbfHandler.h"
 #include "sbfKeyValue.h"
+#include "sbfMwPrivate.h"
 #include "sbfProperties.h"
 #include "sbfPubPrivate.h"
 #include "sbfSubPrivate.h"

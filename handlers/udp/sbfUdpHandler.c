@@ -1,4 +1,5 @@
 #include "sbfUdpHandler.h"
+#include "sbfMwPrivate.h"
 
 static sbfError
 sbfUdpHandlerReadBufferCb (sbfUdpMulticast s, sbfBuffer buffer, void* closure)

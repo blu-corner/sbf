@@ -1,4 +1,5 @@
 #include "sbfTcpMeshHandler.h"
+#include "sbfMwPrivate.h"
 
 static void sbfTcpMeshHandlerFreeConnection (sbfTcpMeshHandlerConnection c);
 static void sbfTcpMeshHandlerSetSocket (sbfTcpMeshHandlerConnection c,

@@ -8,10 +8,6 @@
 #include "sbfQueue.h"
 #include "sbfTimer.h"
 
-#include <event.h>
-#include <event2/thread.h>
-#include <event2/listener.h>
-
 SBF_BEGIN_DECLS
 
 typedef struct sbfMwImpl* sbfMw;
@@ -30,10 +26,6 @@ sbfMwThread sbfMw_getThread (sbfMw mw, u_int index);
 u_int sbfMw_getThreadIndex (sbfMwThread thread);
 uint64_t sbfMw_getThreadMask (sbfMwThread thread);
 struct event_base* sbfMw_getThreadEventBase (sbfMwThread thread);
-void sbfMw_enqueueThread (sbfMwThread thread,
-                          struct event* event,
-                          event_callback_fn cb,
-                          void* closure);
 
 sbfLog sbfMw_getLog (sbfMw mw);
 sbfKeyValue sbfMw_getProperties (sbfMw mw);
