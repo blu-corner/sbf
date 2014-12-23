@@ -25,6 +25,10 @@ SOURCES += \
     sbfTportWeight.c \
     sbfTopic.c
 
+LIBS += \
+    -lsbfcommon \
+    -lsbfcore
+
 install_headers.path = $$top_build/include
 install_headers.files = \
     sbfBatch.h \

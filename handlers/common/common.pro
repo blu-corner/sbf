@@ -8,7 +8,9 @@ HEADERS += \
     sbfCommonHandlerPrivate.h
 SOURCES += \
     sbfCommonHandler.c
+
 LIBS += \
+    -lsbfcommon \
     -lsbfcore \
     -lsbftransport
 

@@ -9,6 +9,7 @@ SOURCES += \
     sbfTcpMeshHandler.c
 
 LIBS += \
+    -lsbfcommon \
     -lsbfcore \
     -lsbftransport
 

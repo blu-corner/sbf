@@ -9,9 +9,10 @@ SOURCES += \
     sbfUdpHandler.c
 
 LIBS += \
+    -lsbfcommon \
+    -lsbfcommonhandler \
     -lsbfcore \
-    -lsbftransport \
-    -lsbfcommonhandler
+    -lsbftransport
 
 target.path = $$top_build/lib
 INSTALLS += target

@@ -23,6 +23,9 @@ SOURCES += \
     sbfQueue.c \
     sbfTimer.c
 
+LIBS += \
+    -lsbfcommon
+
 install_headers.path = $$top_build/include
 install_headers.files = \
     sbfEvent.h \
