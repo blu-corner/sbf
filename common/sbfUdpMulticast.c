@@ -154,6 +154,7 @@ sbfUdpMulticast_read (sbfUdpMulticast s,
             break;
 
         sbfBuffer_destroy (buffer);
+        buffer = NULL;
     }
 
     if (buffer != NULL)
