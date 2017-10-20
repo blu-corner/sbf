@@ -29,6 +29,13 @@ if (UNIX)
         endif()
     endmacro()
 
+    macro (add_library _name)
+        _add_library(${ARGV})
+        if (TARGET ${_name})
+            target_link_libraries(${_name} dl event event_pthreads rt)
+        endif()
+    endmacro()
+
     set (LINKER_FLAGS "-pthread -Wl,--no-as-needed")
     set (CMAKE_SHARED_LINKER_FLAGS ${LINKER_FLAGS})
     set (CMAKE_EXE_LINKER_FLAGS ${LINKER_FLAGS})
