@@ -64,7 +64,7 @@ if (UNIX)
 endif (UNIX)
 
 add_library (sbfcommon SHARED ${SOURCES})
+
 install (TARGETS sbfcommon
          LIBRARY DESTINATION lib)
-
 install (FILES ${INSTALL_HEADERS} DESTINATION include)
