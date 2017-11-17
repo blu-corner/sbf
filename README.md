@@ -108,9 +108,13 @@ timerCb (sbfTimer timer, void* closure)
             gTimeLow == UINT64_MAX ? 0 : (unsigned long long)gTimeLow,
             gMessages == 0 ? 0 : (unsigned long long)gTimeTotal / gMessages,
             (unsigned long long)gTimeHigh);
-    fflush (stdout);
 }
 
+static void
+messageCb (sbfSub sub, sbfBuffer buffer, void* closure)
+{
+    uint64_t* payload = sbfBuffer_getData (buffer);
+}
 ...
 
 sbfTimer_create (sbfMw_getDefaultThread (mw),
