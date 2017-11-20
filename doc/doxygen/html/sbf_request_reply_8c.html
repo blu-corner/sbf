@@ -96,10 +96,13 @@ $(document).ready(function(){initNavTree('sbf_request_reply_8c.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aed25e8d1a7ca6692c4a9d7d1a0dffa32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_reply_8c.html#aed25e8d1a7ca6692c4a9d7d1a0dffa32">sbfRequest_reply</a> (<a class="el" href="sbf_request_reply_8h.html#a73616a24e829d8ac5400e7f2986036ae">sbfRequest</a> req, void *data, size_t size)</td></tr>
+<tr class="memdesc:aed25e8d1a7ca6692c4a9d7d1a0dffa32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replies to a given requester with a given message.  <a href="#aed25e8d1a7ca6692c4a9d7d1a0dffa32">More...</a><br /></td></tr>
 <tr class="separator:aed25e8d1a7ca6692c4a9d7d1a0dffa32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f3bc2485806f8174bf2f2e2f443e6af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_reply_8c.html#a6f3bc2485806f8174bf2f2e2f443e6af">sbfRequest_detach</a> (<a class="el" href="sbf_request_reply_8h.html#a73616a24e829d8ac5400e7f2986036ae">sbfRequest</a> req)</td></tr>
+<tr class="memdesc:a6f3bc2485806f8174bf2f2e2f443e6af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches a request so it can be used outside callback.  <a href="#a6f3bc2485806f8174bf2f2e2f443e6af">More...</a><br /></td></tr>
 <tr class="separator:a6f3bc2485806f8174bf2f2e2f443e6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaa6ac8247a2a4a849015ea0b2517228"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_reply_8c.html#acaa6ac8247a2a4a849015ea0b2517228">sbfRequest_destroy</a> (<a class="el" href="sbf_request_reply_8h.html#a73616a24e829d8ac5400e7f2986036ae">sbfRequest</a> req)</td></tr>
+<tr class="memdesc:acaa6ac8247a2a4a849015ea0b2517228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release all the resources allocated by the request handler.  <a href="#acaa6ac8247a2a4a849015ea0b2517228">More...</a><br /></td></tr>
 <tr class="separator:acaa6ac8247a2a4a849015ea0b2517228"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -118,6 +121,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Release all the resources allocated by the request handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>the request handler. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="sbf_request_reply_8c_source.html#l00021">21</a> of file <a class="el" href="sbf_request_reply_8c_source.html">sbfRequestReply.c</a>.</p>
 
@@ -138,6 +149,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Detaches a request so it can be used outside callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>the request handler. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="sbf_request_reply_8c_source.html#l00015">15</a> of file <a class="el" href="sbf_request_reply_8c_source.html">sbfRequestReply.c</a>.</p>
 
@@ -174,6 +193,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Replies to a given requester with a given message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>the request handler. </td></tr>
+    <tr><td class="paramname">data</td><td>message payload in raw byte array. </td></tr>
+    <tr><td class="paramname">size</td><td>the size of the payload. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="sbf_request_reply_8c_source.html#l00007">7</a> of file <a class="el" href="sbf_request_reply_8c_source.html">sbfRequestReply.c</a>.</p>
 
