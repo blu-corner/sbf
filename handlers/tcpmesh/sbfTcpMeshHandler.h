@@ -1,3 +1,9 @@
+/*!
+   \file sbfTcpMeshHandler.h
+   \brief This file declares the structures and functions to handle TCP
+   connections.
+   \copyright © Copyright 2016 Neueda all rights reserved.
+*/
 #ifndef _SBF_TCP_MESH_HANDLER_H_
 #define _SBF_TCP_MESH_HANDLER_H_
 
@@ -23,10 +29,13 @@ SBF_BEGIN_DECLS
 
 struct sbfTcpMeshHandlerImpl;
 
+/** \brief Defautl TCP port */
 #define SBF_TCP_MESH_HANDLER_DEFAULT_PORT 12222
 
+/** \brief TCP Mesh connection interval */
 #define SBF_TCP_MESH_HANDLER_CONNECT_INTERVAL { 3, 0 }
 
+/** \brief TCP mesh connection definition */
 struct sbfTcpMeshHandlerConnectionImpl
 {
     struct sbfTcpMeshHandlerImpl*                 mParent;
@@ -43,8 +52,11 @@ struct sbfTcpMeshHandlerConnectionImpl
 
     TAILQ_ENTRY (sbfTcpMeshHandlerConnectionImpl) mEntry;
 };
+
+/** \brief TCP mesh declaration. */
 typedef struct sbfTcpMeshHandlerConnectionImpl* sbfTcpMeshHandlerConnection;
 
+/** \brief TCP mesh handler definition. */
 struct sbfTcpMeshHandlerImpl
 {
     sbfLog                                         mLog;
@@ -62,6 +74,8 @@ struct sbfTcpMeshHandlerImpl
     TAILQ_HEAD (, sbfTcpMeshHandlerConnectionImpl) mConnections;
     sbfPool                                        mPool;
 };
+
+/** \brief TCP mesh handler declaration. */
 typedef struct sbfTcpMeshHandlerImpl* sbfTcpMeshHandler;
 
 SBF_END_DECLS

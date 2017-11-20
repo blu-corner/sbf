@@ -1,3 +1,9 @@
+/*!
+   \file sbfUdpHandler.h
+   \brief This file declares the structures and functions to provide high
+   resolution timers.
+   \copyright © Copyright 2016 Neueda all rights reserved.
+*/
 #ifndef _SBF_UDP_HANDLER_H_
 #define _SBF_UDP_HANDLER_H_
 
@@ -15,7 +21,7 @@ SBF_BEGIN_DECLS
  *
  * udp.interface - interface name or address
  *
- * udp. range - as a CIDR address (239/8, 239.1/16, etc), at least eight 
+ * udp. range - as a CIDR address (239/8, 239.1/16, etc), at least eight
  *              bits must be available for the host portion
  *
  * Multicast address is automatically allocated based on the topic.
@@ -23,10 +29,13 @@ SBF_BEGIN_DECLS
 
 struct sbfUdpHandlerImpl;
 
+/** \brief Default port for the UDP handler */
 #define SBF_UDP_HANDLER_DEFAULT_PORT 33333
 
+/** \brief maximum number of bytes to read */
 #define SBF_UDP_HANDLER_READ_LIMIT 64
 
+/** \brief UDP stream definition */
 struct sbfUdpHandlerStreamImpl
 {
     struct sbfUdpHandlerImpl*          mParent;
@@ -46,8 +55,11 @@ struct sbfUdpHandlerStreamImpl
 
     RB_ENTRY (sbfUdpHandlerStreamImpl) mTreeEntry;
 };
+
+/** \brief UDP handler stream */
 typedef struct sbfUdpHandlerStreamImpl* sbfUdpHandlerStream;
 
+/** \brief RB Tree storing the streams */
 SBF_RB_TREE (sbfUdpHandlerStream, Tree, mTreeEntry,
 {
     if (lhs->mType != rhs->mType)
@@ -64,6 +76,7 @@ SBF_RB_TREE (sbfUdpHandlerStream, Tree, mTreeEntry,
     return 0;
 })
 
+/** \brief UPD handler definition */
 struct sbfUdpHandlerImpl
 {
     sbfLog                  mLog;
@@ -75,6 +88,8 @@ struct sbfUdpHandlerImpl
     sbfPool                 mPool;
     sbfUdpHandlerStreamTree mTree;
 };
+
+/** \brief The UDP handler. */
 typedef struct sbfUdpHandlerImpl* sbfUdpHandler;
 
 SBF_END_DECLS

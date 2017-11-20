@@ -1,8 +1,18 @@
+/*!
+   \file sbfRequester.c
+   \brief TBD
+   \copyright © Copyright 2016 Neueda all rights reserved.
+*/
 #include "sbfCommon.h"
 #include "sbfMw.h"
 #include "sbfRequestReply.h"
 #include "sbfTport.h"
 
+/*!
+   \brief Callback that will dispatch queue items.
+   \param closure data containing the queue.
+   \return pointer to data, in this case .
+*/
 static void*
 dispatchCb (void* closure)
 {
@@ -10,6 +20,14 @@ dispatchCb (void* closure)
     return NULL;
 }
 
+/*!
+   \brief Callback that receives replier responses.
+   \param sub  pointer to subscriber.
+   \param req pointer to request.
+   \param buffer data being requested.
+   \param closure the data linked to this callback.
+   \return "Return of the function"
+*/
 static void
 replyCb (sbfRequestPub pub, sbfRequest req, sbfBuffer buffer, void* closure)
 {
@@ -21,6 +39,11 @@ replyCb (sbfRequestPub pub, sbfRequest req, sbfBuffer buffer, void* closure)
     printf ("<-- reply %llu\n", (unsigned long long)*value);
 }
 
+/*!
+   \brief Timer callback to process a request.
+   \param timer callback fired by timer.
+   \param closure the publisher.
+*/
 static void
 timerCb (sbfTimer timer, void* closure)
 {
@@ -31,6 +54,10 @@ timerCb (sbfTimer timer, void* closure)
     printf ("--> request %llu\n", (unsigned long long)next);
 }
 
+/*!
+   \brief Print out the description of this command.
+   \param argv0 the name of the command.
+*/
 static void
 usage (const char* argv0)
 {
@@ -45,6 +72,18 @@ usage (const char* argv0)
     exit (1);
 }
 
+/*!
+   \brief This function is the main entry point for the requester command.
+   You can specify the following parameters to run the requester:
+   "[-h handler] " the type of connection handler: tcp or udp.
+   "[-i interface] " the connection interface e.g. eth0.
+   "[-t topic] " the name of the topic where messages are published.
+   "[-v level]\n" log severity level.
+   \param argc The number of arguments passed to the command.
+   \param argv array of null terminated strings.
+   \return Error status: 0 for Successfull another indicates an error code.
+   \return "Return of the function"
+*/
 int
 main (int argc, char** argv)
 {
