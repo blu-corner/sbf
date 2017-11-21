@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_log_file_8h" kind="file" language="C++">
+    <compoundname>sbfLogFile.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_log_private_8h" local="yes">common/sbfLogPrivate.h</includedby>
+    <includedby refid="sbf_log_file_8c" local="yes">common/sbfLogFile.c</includedby>
+    <incdepgraph>
+      <node id="1007">
+        <label>event.h</label>
+      </node>
+      <node id="1006">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="1008">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="1009" relation="include">
+        </childnode>
+      </node>
+      <node id="1012">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="1005" relation="include">
+        </childnode>
+      </node>
+      <node id="1009">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1005">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="1006" relation="include">
+        </childnode>
+        <childnode refid="1007" relation="include">
+        </childnode>
+        <childnode refid="1008" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="1011" relation="include">
+        </childnode>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1014" relation="include">
+        </childnode>
+      </node>
+      <node id="1011">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="1010">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="1013">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="1005" relation="include">
+        </childnode>
+      </node>
+      <node id="1014">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="1005" relation="include">
+        </childnode>
+      </node>
+      <node id="1004">
+        <label>common/sbfLogFile.h</label>
+        <link refid="sbf_log_file_8h"/>
+        <childnode refid="1005" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1016">
+        <label>common/sbfLogPrivate.h</label>
+        <link refid="sbf_log_private_8h"/>
+        <childnode refid="1017" relation="include">
+        </childnode>
+      </node>
+      <node id="1017">
+        <label>common/sbfLog.c</label>
+        <link refid="sbf_log_8c"/>
+      </node>
+      <node id="1018">
+        <label>common/sbfLogFile.c</label>
+        <link refid="sbf_log_file_8c"/>
+      </node>
+      <node id="1015">
+        <label>common/sbfLogFile.h</label>
+        <link refid="sbf_log_file_8h"/>
+        <childnode refid="1016" relation="include">
+        </childnode>
+        <childnode refid="1018" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_log_file_8h_1a570f1f78d9299409bc43340078f691d6" prot="public" static="no">
+        <name>SBF_LOG_FILE_ENTRIES</name>
+        <initializer>200000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFile.h" line="10" column="9" bodyfile="common/sbfLogFile.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" prot="public" static="no">
+        <type>typedefSBF_BEGIN_DECLS struct <ref refid="structsbf_log_file_impl" kindref="compound">sbfLogFileImpl</ref> *</type>
+        <definition>typedef typedefSBF_BEGIN_DECLS struct sbfLogFileImpl* sbfLogFile</definition>
+        <argsstring></argsstring>
+        <name>sbfLogFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFile.h" line="8" column="1" bodyfile="common/sbfLogFile.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_log_file_8h_1a7cb00db30f3f48da671c46f75d2216ae" prot="public" static="no">
+        <type>struct sbfLogFileEntryImpl *</type>
+        <definition>typedef struct sbfLogFileEntryImpl* sbfLogFileEntry</definition>
+        <argsstring></argsstring>
+        <name>sbfLogFileEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFile.h" line="20" column="1" bodyfile="common/sbfLogFile.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_log_file_8h_1a5a1ff1c790505fb839f1a4ca7b4e8d4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SBF_PACKED</definition>
+        <argsstring>(struct sbfLogFileEntryImpl { u_int mNumber;struct timeval mTime;uint8_t mLevel;char mPrefix[24];char mMessage[512];})</argsstring>
+        <name>SBF_PACKED</name>
+        <param>
+          <type>struct sbfLogFileEntryImpl { u_int mNumber;struct timeval mTime;uint8_t mLevel;char mPrefix[24];char mMessage[512];}</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFile.h" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_file_8h_1a1a5a7a9f4dc09cd916b49d6d21da37b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t sbfLogFile_size</definition>
+        <argsstring>(void)</argsstring>
+        <name>sbfLogFile_size</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFile.h" line="22" column="1" bodyfile="common/sbfLogFile.c" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_file_8h_1ab0454cf44b044b75d246f389408ab863" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref></type>
+        <definition>sbfLogFile sbfLogFile_create</definition>
+        <argsstring>(char **error, const char *root, const char *fmt,...) SBF_PRINTFLIKE(3</argsstring>
+        <name>sbfLogFile_create</name>
+        <param>
+          <type>char **</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>root</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFile.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_file_8h_1a5577010f4dca0af96e3b670d216933f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref> <ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref></type>
+        <definition>sbfLogFile sbfLogFile sbfLogFile_open</definition>
+        <argsstring>(char **error, const char *root, const char *fmt,...) SBF_PRINTFLIKE(3</argsstring>
+        <name>sbfLogFile_open</name>
+        <param>
+          <type>char **</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>root</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFile.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_file_8h_1ac9f01be8bb13bf161ff90f6d4f0bf127" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref> <ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref> void</type>
+        <definition>sbfLogFile sbfLogFile void sbfLogFile_close</definition>
+        <argsstring>(sbfLogFile lf)</argsstring>
+        <name>sbfLogFile_close</name>
+        <param>
+          <type><ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref></type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFile.h" line="32" column="1" bodyfile="common/sbfLogFile.c" bodystart="165" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_file_8h_1a2d36e319fcd325e78f91efa4a4e57a72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_log_file_8h_1a7cb00db30f3f48da671c46f75d2216ae" kindref="member">sbfLogFileEntry</ref></type>
+        <definition>sbfLogFileEntry sbfLogFile_get</definition>
+        <argsstring>(sbfLogFile lf)</argsstring>
+        <name>sbfLogFile_get</name>
+        <param>
+          <type><ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref></type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFile.h" line="34" column="1" bodyfile="common/sbfLogFile.c" bodystart="175" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_file_8h_1a8e6795b00df36fdc5ddc1008161f7367" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfLogFile_flush</definition>
+        <argsstring>(sbfLogFile lf, sbfLogFileEntry lfe)</argsstring>
+        <name>sbfLogFile_flush</name>
+        <param>
+          <type><ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_log_file_8h_1a7cb00db30f3f48da671c46f75d2216ae" kindref="member">sbfLogFileEntry</ref></type>
+          <declname>lfe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFile.h" line="35" column="1" bodyfile="common/sbfLogFile.c" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_file_8h_1a417a42fe0df8aa54c8e9ee35d46c5289" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_log_file_8h_1a7cb00db30f3f48da671c46f75d2216ae" kindref="member">sbfLogFileEntry</ref></type>
+        <definition>sbfLogFileEntry sbfLogFile_read</definition>
+        <argsstring>(sbfLogFile lf, u_int *number)</argsstring>
+        <name>sbfLogFile_read</name>
+        <param>
+          <type><ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>u_int *</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFile.h" line="36" column="1" bodyfile="common/sbfLogFile.c" bodystart="194" bodyend="205"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_LOG_FILE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_LOG_FILE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_log_file_impl" kindref="compound">sbfLogFileImpl</ref>*<sp/><ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="sbf_log_file_8h_1a570f1f78d9299409bc43340078f691d6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_LOG_FILE_ENTRIES<sp/>200000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="sbf_log_file_8h_1a5a1ff1c790505fb839f1a4ca7b4e8d4d" kindref="member">SBF_PACKED</ref><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sbfLogFileEntryImpl</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mNumber;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>mTime;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mLevel;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mPrefix[24];</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mMessage[512];</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">});</highlight></codeline>
+<codeline lineno="20" refid="sbf_log_file_8h_1a7cb00db30f3f48da671c46f75d2216ae" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfLogFileEntryImpl*<sp/><ref refid="sbf_log_file_8h_1a7cb00db30f3f48da671c46f75d2216ae" kindref="member">sbfLogFileEntry</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="sbf_log_file_8h_1a1a5a7a9f4dc09cd916b49d6d21da37b6" kindref="member">sbfLogFile_size</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">sbfLogFile<sp/><ref refid="sbf_log_file_8h_1ab0454cf44b044b75d246f389408ab863" kindref="member">sbfLogFile_create</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>error,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>root,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...)<sp/><ref refid="sbf_common_darwin_8h_1abcc9ea27d2fa4fc4b2b51bbdf96fb03d" kindref="member">SBF_PRINTFLIKE</ref><sp/>(3,<sp/>4);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">sbfLogFile<sp/><ref refid="sbf_log_file_8h_1a5577010f4dca0af96e3b670d216933f5" kindref="member">sbfLogFile_open</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>error,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>root,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...)<sp/><ref refid="sbf_common_darwin_8h_1abcc9ea27d2fa4fc4b2b51bbdf96fb03d" kindref="member">SBF_PRINTFLIKE</ref><sp/>(3,<sp/>4);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_log_file_8h_1ac9f01be8bb13bf161ff90f6d4f0bf127" kindref="member">sbfLogFile_close</ref><sp/>(sbfLogFile<sp/>lf);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">sbfLogFileEntry<sp/><ref refid="sbf_log_file_8h_1a2d36e319fcd325e78f91efa4a4e57a72" kindref="member">sbfLogFile_get</ref><sp/>(sbfLogFile<sp/>lf);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_file_8h_1a8e6795b00df36fdc5ddc1008161f7367" kindref="member">sbfLogFile_flush</ref><sp/>(sbfLogFile<sp/>lf,<sp/>sbfLogFileEntry<sp/>lfe);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">sbfLogFileEntry<sp/><ref refid="sbf_log_file_8h_1a417a42fe0df8aa54c8e9ee35d46c5289" kindref="member">sbfLogFile_read</ref><sp/>(sbfLogFile<sp/>lf,<sp/>u_int*<sp/>number);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_LOG_FILE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfLogFile.h"/>
+  </compounddef>
+</doxygen>

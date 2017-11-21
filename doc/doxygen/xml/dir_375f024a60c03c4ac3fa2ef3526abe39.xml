@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_375f024a60c03c4ac3fa2ef3526abe39" kind="dir">
+    <compoundname>tools/publisher</compoundname>
+    <innerfile refid="sbf_publisher_8c">sbfPublisher.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tools/publisher/"/>
+  </compounddef>
+</doxygen>

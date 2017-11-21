@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_csv_parser_8h" kind="file" language="C++">
+    <compoundname>sbfCsvParser.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_csv_parser_8c" local="yes">common/sbfCsvParser.c</includedby>
+    <incdepgraph>
+      <node id="508">
+        <label>event.h</label>
+      </node>
+      <node id="507">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="509">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="510" relation="include">
+        </childnode>
+      </node>
+      <node id="513">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="506" relation="include">
+        </childnode>
+      </node>
+      <node id="510">
+        <label>sys/types.h</label>
+      </node>
+      <node id="506">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="507" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="509" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+        <childnode refid="512" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="514" relation="include">
+        </childnode>
+        <childnode refid="515" relation="include">
+        </childnode>
+      </node>
+      <node id="512">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="505">
+        <label>common/sbfCsvParser.h</label>
+        <link refid="sbf_csv_parser_8h"/>
+        <childnode refid="506" relation="include">
+        </childnode>
+      </node>
+      <node id="511">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="514">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="506" relation="include">
+        </childnode>
+      </node>
+      <node id="515">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="506" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="517">
+        <label>common/sbfCsvParser.c</label>
+        <link refid="sbf_csv_parser_8c"/>
+      </node>
+      <node id="516">
+        <label>common/sbfCsvParser.h</label>
+        <link refid="sbf_csv_parser_8h"/>
+        <childnode refid="517" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_csv_parser_8h_1a1686fd99f2f3fbf8559d6098ade6b532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref> <ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref></type>
+        <definition>SBF_BEGIN_DECLS sbfError sbfCsvParser_next</definition>
+        <argsstring>(FILE *f, char ***fields, u_int *nfields, u_char separator, u_int *line)</argsstring>
+        <name>sbfCsvParser_next</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>char ***</type>
+          <declname>fields</declname>
+        </param>
+        <param>
+          <type>u_int *</type>
+          <declname>nfields</declname>
+        </param>
+        <param>
+          <type>u_char</type>
+          <declname>separator</declname>
+        </param>
+        <param>
+          <type>u_int *</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCsvParser.h" line="8" column="1" bodyfile="common/sbfCsvParser.c" bodystart="19" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_csv_parser_8h_1afbafa5443bf9d594e69b6b62cbcaa5fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfCsvParser_free</definition>
+        <argsstring>(char **fields, u_int nfields)</argsstring>
+        <name>sbfCsvParser_free</name>
+        <param>
+          <type>char **</type>
+          <declname>fields</declname>
+        </param>
+        <param>
+          <type>u_int</type>
+          <declname>nfields</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCsvParser.h" line="13" column="1" bodyfile="common/sbfCsvParser.c" bodystart="131" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_CSV_PARSER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_CSV_PARSER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref><sp/><ref refid="sbf_csv_parser_8h_1a1686fd99f2f3fbf8559d6098ade6b532" kindref="member">sbfCsvParser_next</ref><sp/>(FILE*<sp/>f,</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">***<sp/>fields,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u_int*<sp/>nfields,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u_char<sp/>separator,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u_int*<sp/>line);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_csv_parser_8h_1afbafa5443bf9d594e69b6b62cbcaa5fb" kindref="member">sbfCsvParser_free</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>fields,<sp/>u_int<sp/>nfields);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="common/sbfCsvParser.h"/>
+  </compounddef>
+</doxygen>

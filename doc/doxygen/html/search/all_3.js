@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['callout_5fdata',['callout_data',['../structpcre__extra.html#aef88fa059796850ca7f00842f5d88e8c',1,'pcre_extra::callout_data()'],['../structpcre16__extra.html#a540b8cdd0f2a907c333819a787ad0984',1,'pcre16_extra::callout_data()'],['../structpcre32__extra.html#ab9710dc6a854e5d2a4dc8738bee5a3ff',1,'pcre32_extra::callout_data()'],['../structpcre__callout__block.html#a45304eee0f48c835714a82fa762bab1c',1,'pcre_callout_block::callout_data()'],['../structpcre16__callout__block.html#a0711798f2c67d269dbed800444da600a',1,'pcre16_callout_block::callout_data()'],['../structpcre32__callout__block.html#a7033e3ae6fa58f514fceddcf76937d47',1,'pcre32_callout_block::callout_data()']]],
-  ['callout_5fnumber',['callout_number',['../structpcre__callout__block.html#ae6cd8e933475a4262a84f048b26a6fae',1,'pcre_callout_block::callout_number()'],['../structpcre16__callout__block.html#a7da55c509c5f819d28f4ed8d5e875aaa',1,'pcre16_callout_block::callout_number()'],['../structpcre32__callout__block.html#a10d83cab186da2833e2139e8a171fa93',1,'pcre32_callout_block::callout_number()']]],
-  ['capture_5flast',['capture_last',['../structpcre__callout__block.html#a989a280260effb9bf1521046a2507643',1,'pcre_callout_block::capture_last()'],['../structpcre16__callout__block.html#ab57e268907481b75fc41649b9da41785',1,'pcre16_callout_block::capture_last()'],['../structpcre32__callout__block.html#aa6161117d8d385521c429ff171dc86c7',1,'pcre32_callout_block::capture_last()']]],
-  ['capture_5ftop',['capture_top',['../structpcre__callout__block.html#a7c73d01fc698e0a05699fa4ef4e5b48a',1,'pcre_callout_block::capture_top()'],['../structpcre16__callout__block.html#a2008c4ff244514e1ddc18e6993ac8aff',1,'pcre16_callout_block::capture_top()'],['../structpcre32__callout__block.html#acd2657dd5d38d41026deb532278fe6f2',1,'pcre32_callout_block::capture_top()']]],
   ['circleq_5fempty',['CIRCLEQ_EMPTY',['../sysqueue_8h.html#a5612649227a37a22f0b8b6420d5f2c92',1,'sysqueue.h']]],
   ['circleq_5fend',['CIRCLEQ_END',['../sysqueue_8h.html#ad5e0f98453ebaf5e7435b3cd393b8e36',1,'sysqueue.h']]],
   ['circleq_5fentry',['CIRCLEQ_ENTRY',['../sysqueue_8h.html#abc5774651e7db6bcecf18d2b92259707',1,'sysqueue.h']]],
@@ -25,6 +21,5 @@ var searchData=
   ['circleq_5fremove',['CIRCLEQ_REMOVE',['../sysqueue_8h.html#ae1b066e803ee2f2a3ead6e4c632b7e49',1,'sysqueue.h']]],
   ['circleq_5freplace',['CIRCLEQ_REPLACE',['../sysqueue_8h.html#a64b29c5e5070783142981b1e364a3c80',1,'sysqueue.h']]],
   ['clock_5frealtime',['CLOCK_REALTIME',['../sbf_common_win32_8h.html#a2f9c761af656069fe6fc3df81fa4331aa3225196686ced5a2732f8030a10c5b98',1,'sbfCommonWin32.h']]],
-  ['clockid_5ft',['clockid_t',['../sbf_common_win32_8h.html#a2f9c761af656069fe6fc3df81fa4331a',1,'sbfCommonWin32.h']]],
-  ['current_5fposition',['current_position',['../structpcre__callout__block.html#a0472db6a3cc0bb069ee8e4acf36da8b5',1,'pcre_callout_block::current_position()'],['../structpcre16__callout__block.html#a64f344f1d59dd597a6e6dd975ee98f60',1,'pcre16_callout_block::current_position()'],['../structpcre32__callout__block.html#a2810379db3cdc7b322c37a1fc6d9933a',1,'pcre32_callout_block::current_position()']]]
+  ['clockid_5ft',['clockid_t',['../sbf_common_win32_8h.html#a2f9c761af656069fe6fc3df81fa4331a',1,'sbfCommonWin32.h']]]
 ];

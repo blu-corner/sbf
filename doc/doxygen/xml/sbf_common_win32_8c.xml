@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_common_win32_8c" kind="file" language="C++">
+    <compoundname>sbfCommonWin32.c</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includes local="no">evutil.h</includes>
+    <incdepgraph>
+      <node id="463">
+        <label>event.h</label>
+      </node>
+      <node id="462">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="460">
+        <label>common/sbfCommonWin32.c</label>
+        <link refid="sbf_common_win32_8c"/>
+        <childnode refid="461" relation="include">
+        </childnode>
+        <childnode refid="471" relation="include">
+        </childnode>
+      </node>
+      <node id="464">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="465" relation="include">
+        </childnode>
+      </node>
+      <node id="468">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="461" relation="include">
+        </childnode>
+      </node>
+      <node id="465">
+        <label>sys/types.h</label>
+      </node>
+      <node id="461">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="462" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="467" relation="include">
+        </childnode>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+      </node>
+      <node id="467">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="466">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="471">
+        <label>evutil.h</label>
+      </node>
+      <node id="469">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="461" relation="include">
+        </childnode>
+      </node>
+      <node id="470">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="461" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structsbf_common_thread_closure" prot="public">sbfCommonThreadClosure</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_common_win32_8c_1aa624ce26e690a928cfd4c57914f05142" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DWORD __stdcall</type>
+        <definition>static DWORD __stdcall sbfCommonThreadEntry</definition>
+        <argsstring>(LPVOID closure)</argsstring>
+        <name>sbfCommonThreadEntry</name>
+        <param>
+          <type>LPVOID</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.c" line="12" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="12" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8c_1aaf2d0a99430a6d5253b8c395c30ca7e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gettimeofday</definition>
+        <argsstring>(struct timeval *tv, struct timezone *tz)</argsstring>
+        <name>gettimeofday</name>
+        <param>
+          <type>struct timeval *</type>
+          <declname>tv</declname>
+        </param>
+        <param>
+          <type>struct timezone *</type>
+          <declname>tz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.c" line="23" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8c_1ad62f9a0a81b9ea2001da4b62158c873b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sbfThread_create</definition>
+        <argsstring>(sbfThread *thread, void *(*cb)(void *), void *closure)</argsstring>
+        <name>sbfThread_create</name>
+        <param>
+          <type><ref refid="sbf_common_darwin_8h_1afbf7dc0a8bbd900f63f4bf4ec58c80f2" kindref="member">sbfThread</ref> *</type>
+          <declname>thread</declname>
+        </param>
+        <param>
+          <type>void *(*)(void *)</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.c" line="29" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="29" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8c_1aac4b1d7707d03271e198e29e8375345d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int asprintf</definition>
+        <argsstring>(char **ret, const char *fmt,...)</argsstring>
+        <name>asprintf</name>
+        <param>
+          <type>char **</type>
+          <declname>ret</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.c" line="51" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8c_1a54b6dd2c589426c8c2f2036f3342423e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vasprintf</definition>
+        <argsstring>(char **ret, const char *fmt, va_list ap)</argsstring>
+        <name>vasprintf</name>
+        <param>
+          <type>char **</type>
+          <declname>ret</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.c" line="64" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="64" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8c_1adcdc6990a7641f7ba05f5dd2a603b992" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* mmap</definition>
+        <argsstring>(void *addr, size_t length, int prot, int flags, int fd, off_t offset)</argsstring>
+        <name>mmap</name>
+        <param>
+          <type>void *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prot</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>off_t</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.c" line="88" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="88" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8c_1a7d888f95854ef9b7a9990f3b513bfef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void munmap</definition>
+        <argsstring>(void *addr, size_t length)</argsstring>
+        <name>munmap</name>
+        <param>
+          <type>void *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.c" line="128" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="128" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evutil.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="structsbf_common_thread_closure" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="structsbf_common_thread_closure_1a79a1944c586450efa39e2ae9d2faeee1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>(*mCb)<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="8" refid="structsbf_common_thread_closure_1af0b6e0f39649111802888a4fee18f2b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="structsbf_common_thread_closure_1af0b6e0f39649111802888a4fee18f2b7" kindref="member">mClosure</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}<sp/><ref refid="structsbf_common_thread_closure" kindref="compound">sbfCommonThreadClosure</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>DWORD<sp/>__stdcall</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">sbfCommonThreadEntry<sp/>(LPVOID<sp/>closure)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_common_thread_closure" kindref="compound">sbfCommonThreadClosure</ref>*<sp/>tc<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_common_thread_closure_1a79a1944c586450efa39e2ae9d2faeee1" kindref="member">mCb</ref><sp/>(tc-&gt;<ref refid="structsbf_common_thread_closure_1af0b6e0f39649111802888a4fee18f2b7" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(tc);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="sbf_common_win32_8h_1aaf2d0a99430a6d5253b8c395c30ca7e3" refkind="member"><highlight class="normal"><ref refid="sbf_common_win32_8c_1aaf2d0a99430a6d5253b8c395c30ca7e3" kindref="member">gettimeofday</ref><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timeval*<sp/>tv,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timezone*<sp/>tz)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>evutil_gettimeofday<sp/>(tv,<sp/>tz);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="sbf_common_win32_8h_1ad62f9a0a81b9ea2001da4b62158c873b" refkind="member"><highlight class="normal"><ref refid="sbf_common_win32_8c_1ad62f9a0a81b9ea2001da4b62158c873b" kindref="member">sbfThread_create</ref><sp/>(<ref refid="sbf_common_darwin_8h_1afbf7dc0a8bbd900f63f4bf4ec58c80f2" kindref="member">sbfThread</ref>*<sp/>thread,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>(*cb)<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_common_thread_closure" kindref="compound">sbfCommonThreadClosure</ref>*<sp/>tc;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>tc<sp/>=<sp/><ref refid="sbf_memory_8h_1a6af5faec3f9662b20ffc9903f923dec0" kindref="member">xmalloc</ref><sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*tc);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_common_thread_closure_1a79a1944c586450efa39e2ae9d2faeee1" kindref="member">mCb</ref><sp/>=<sp/>cb;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_common_thread_closure_1af0b6e0f39649111802888a4fee18f2b7" kindref="member">mClosure</ref><sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>h<sp/>=<sp/>CreateThread<sp/>(NULL,<sp/>0,<sp/>sbfCommonThreadEntry,<sp/>tc,<sp/>0,<sp/>NULL);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(h<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(tc);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errno<sp/>=<sp/>EIO;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>*thread<sp/>=<sp/>h;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="sbf_common_win32_8h_1aac4b1d7707d03271e198e29e8375345d" refkind="member"><highlight class="normal"><ref refid="sbf_common_win32_8c_1aac4b1d7707d03271e198e29e8375345d" kindref="member">asprintf</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>ret,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,<sp/>...)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>va_list<sp/>ap;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>n;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>va_start<sp/>(ap,<sp/>fmt);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/><ref refid="sbf_common_win32_8c_1a54b6dd2c589426c8c2f2036f3342423e" kindref="member">vasprintf</ref><sp/>(ret,<sp/>fmt,<sp/>ap);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>va_end<sp/>(ap);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(n);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="sbf_common_win32_8h_1a54b6dd2c589426c8c2f2036f3342423e" refkind="member"><highlight class="normal"><ref refid="sbf_common_win32_8c_1a54b6dd2c589426c8c2f2036f3342423e" kindref="member">vasprintf</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>ret,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,<sp/>va_list<sp/>ap)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>n;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>va_list<sp/><sp/>ap2;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>ap2<sp/>=<sp/>ap;<sp/></highlight><highlight class="comment">/*<sp/>va_copy<sp/>(ap2,<sp/>ap);<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((n<sp/>=<sp/><ref refid="sbf_common_win32_8h_1a00ba2ca988495904efc418acbf0627d7" kindref="member">vsnprintf</ref><sp/>(NULL,<sp/>0,<sp/>fmt,<sp/>ap))<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>error;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>*ret<sp/>=<sp/><ref refid="sbf_memory_8h_1a6af5faec3f9662b20ffc9903f923dec0" kindref="member">xmalloc</ref><sp/>(n<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((n<sp/>=<sp/><ref refid="sbf_common_win32_8h_1a00ba2ca988495904efc418acbf0627d7" kindref="member">vsnprintf</ref><sp/>(*ret,<sp/>n<sp/>+<sp/>1,<sp/>fmt,<sp/>ap2))<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(*ret);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>error;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(n);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">error:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>*ret<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(-1);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="88" refid="sbf_common_win32_8h_1adcdc6990a7641f7ba05f5dd2a603b992" refkind="member"><highlight class="normal"><ref refid="sbf_common_win32_8c_1adcdc6990a7641f7ba05f5dd2a603b992" kindref="member">mmap</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>addr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prot,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/>off_t<sp/>offset)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE<sp/>mapping;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE<sp/>handle;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/>vp;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>DWORD<sp/><sp/>type;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(addr<sp/>!=<sp/>NULL<sp/>||<sp/>flags<sp/>!=<sp/>0<sp/>||<sp/>offset<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prot<sp/>!=<sp/><ref refid="sbf_common_win32_8h_1a15bf68ce8b590838b3a5c0b639d8d519" kindref="member">PROT_READ</ref><sp/>&amp;&amp;<sp/>prot<sp/>!=<sp/>(<ref refid="sbf_common_win32_8h_1a15bf68ce8b590838b3a5c0b639d8d519" kindref="member">PROT_READ</ref>|<ref refid="sbf_common_win32_8h_1a2a79c8ceefb8fc25a940ae07a3d94429" kindref="member">PROT_WRITE</ref>))</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>handle<sp/>=<sp/>(HANDLE)_get_osfhandle<sp/>(fd);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(handle<sp/>==<sp/>INVALID_HANDLE_VALUE)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prot<sp/>==<sp/>(<ref refid="sbf_common_win32_8h_1a15bf68ce8b590838b3a5c0b639d8d519" kindref="member">PROT_READ</ref>|<ref refid="sbf_common_win32_8h_1a2a79c8ceefb8fc25a940ae07a3d94429" kindref="member">PROT_WRITE</ref>))</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/>PAGE_READWRITE;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prot<sp/>==<sp/><ref refid="sbf_common_win32_8h_1a15bf68ce8b590838b3a5c0b639d8d519" kindref="member">PROT_READ</ref>)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/>PAGE_READONLY;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>mapping<sp/>=<sp/>CreateFileMapping<sp/>(handle,<sp/>NULL,<sp/>type,<sp/>0,<sp/>0,<sp/>NULL);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mapping<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prot<sp/>==<sp/>(<ref refid="sbf_common_win32_8h_1a15bf68ce8b590838b3a5c0b639d8d519" kindref="member">PROT_READ</ref>|<ref refid="sbf_common_win32_8h_1a2a79c8ceefb8fc25a940ae07a3d94429" kindref="member">PROT_WRITE</ref>))</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/>FILE_MAP_ALL_ACCESS;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prot<sp/>==<sp/><ref refid="sbf_common_win32_8h_1a15bf68ce8b590838b3a5c0b639d8d519" kindref="member">PROT_READ</ref>)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/>FILE_MAP_READ;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>vp<sp/>=<sp/>MapViewOfFile<sp/>(mapping,<sp/>type,<sp/>0,<sp/>0,<sp/>length);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vp<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vp;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">fail:</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>errno<sp/>=<sp/>EINVAL;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="sbf_common_win32_8h_1a8523dcf952f6ff059a3bed717e4f1296" kindref="member">MAP_FAILED</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="sbf_common_win32_8h_1a7d888f95854ef9b7a9990f3b513bfef2" refkind="member"><highlight class="normal"><ref refid="sbf_common_win32_8c_1a7d888f95854ef9b7a9990f3b513bfef2" kindref="member">munmap</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>addr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>UnmapViewOfFile<sp/>(addr);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="common/sbfCommonWin32.c"/>
+  </compounddef>
+</doxygen>

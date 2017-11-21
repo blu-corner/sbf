@@ -1,0 +1,492 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_batch_8h" kind="file" language="C++">
+    <compoundname>sbfBatch.h</compoundname>
+    <includes refid="sbf_buffer_8h" local="yes">sbfBuffer.h</includes>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_tport_8h" local="yes">transport/sbfTport.h</includedby>
+    <incdepgraph>
+      <node id="3308">
+        <label>sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="3298" relation="include">
+        </childnode>
+        <childnode refid="3309" relation="include">
+        </childnode>
+        <childnode refid="3310" relation="include">
+        </childnode>
+      </node>
+      <node id="3300">
+        <label>event.h</label>
+      </node>
+      <node id="3309">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="3298" relation="include">
+        </childnode>
+      </node>
+      <node id="3299">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="3301">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="3302" relation="include">
+        </childnode>
+      </node>
+      <node id="3296">
+        <label>transport/sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="3297" relation="include">
+        </childnode>
+        <childnode refid="3298" relation="include">
+        </childnode>
+      </node>
+      <node id="3305">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="3298" relation="include">
+        </childnode>
+      </node>
+      <node id="3297">
+        <label>sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="3298" relation="include">
+        </childnode>
+        <childnode refid="3308" relation="include">
+        </childnode>
+        <childnode refid="3311" relation="include">
+        </childnode>
+        <childnode refid="3312" relation="include">
+        </childnode>
+      </node>
+      <node id="3302">
+        <label>sys/types.h</label>
+      </node>
+      <node id="3312">
+        <label>sbfBufferInline.h</label>
+        <link refid="sbf_buffer_inline_8h"/>
+      </node>
+      <node id="3311">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="3298" relation="include">
+        </childnode>
+      </node>
+      <node id="3298">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="3299" relation="include">
+        </childnode>
+        <childnode refid="3300" relation="include">
+        </childnode>
+        <childnode refid="3301" relation="include">
+        </childnode>
+        <childnode refid="3303" relation="include">
+        </childnode>
+        <childnode refid="3304" relation="include">
+        </childnode>
+        <childnode refid="3305" relation="include">
+        </childnode>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3307" relation="include">
+        </childnode>
+      </node>
+      <node id="3304">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="3303">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="3306">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="3298" relation="include">
+        </childnode>
+      </node>
+      <node id="3307">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="3298" relation="include">
+        </childnode>
+      </node>
+      <node id="3310">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3316">
+        <label>handlers/common/sbfCommonHandler.c</label>
+        <link refid="sbf_common_handler_8c"/>
+      </node>
+      <node id="3315">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="3316" relation="include">
+        </childnode>
+        <childnode refid="3317" relation="include">
+        </childnode>
+      </node>
+      <node id="3341">
+        <label>transport/sbfTportWeight.c</label>
+        <link refid="sbf_tport_weight_8c"/>
+      </node>
+      <node id="3326">
+        <label>requestreply/sbfRequestSub.c</label>
+        <link refid="sbf_request_sub_8c"/>
+      </node>
+      <node id="3322">
+        <label>requestreply/sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="3323" relation="include">
+        </childnode>
+      </node>
+      <node id="3327">
+        <label>tools/replier/sbfReplier.c</label>
+        <link refid="sbf_replier_8c"/>
+      </node>
+      <node id="3337">
+        <label>transport/sbfSub.c</label>
+        <link refid="sbf_sub_8c"/>
+      </node>
+      <node id="3338">
+        <label>transport/sbfTopic.c</label>
+        <link refid="sbf_topic_8c"/>
+      </node>
+      <node id="3319">
+        <label>handlers/common/sbfCommonHandlerPrivate.h</label>
+        <link refid="sbf_common_handler_private_8h"/>
+        <childnode refid="3316" relation="include">
+        </childnode>
+      </node>
+      <node id="3318">
+        <label>handlers/udp/sbfUdpHandler.c</label>
+        <link refid="sbf_udp_handler_8c"/>
+      </node>
+      <node id="3317">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+        <childnode refid="3318" relation="include">
+        </childnode>
+      </node>
+      <node id="3330">
+        <label>tools/publisher/sbfPublisher.c</label>
+        <link refid="sbf_publisher_8c"/>
+      </node>
+      <node id="3332">
+        <label>transport/sbfBatch.c</label>
+        <link refid="sbf_batch_8c"/>
+      </node>
+      <node id="3313">
+        <label>transport/sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="3314" relation="include">
+        </childnode>
+      </node>
+      <node id="3328">
+        <label>tools/requester/sbfRequester.c</label>
+        <link refid="sbf_requester_8c"/>
+      </node>
+      <node id="3331">
+        <label>tools/subscriber/sbfSubscriber.c</label>
+        <link refid="sbf_subscriber_8c"/>
+      </node>
+      <node id="3321">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.c</label>
+        <link refid="sbf_tcp_mesh_handler_8c"/>
+      </node>
+      <node id="3320">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+        <childnode refid="3321" relation="include">
+        </childnode>
+      </node>
+      <node id="3336">
+        <label>transport/sbfPub.c</label>
+        <link refid="sbf_pub_8c"/>
+      </node>
+      <node id="3325">
+        <label>requestreply/sbfRequestReply.c</label>
+        <link refid="sbf_request_reply_8c"/>
+      </node>
+      <node id="3323">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+        <childnode refid="3324" relation="include">
+        </childnode>
+        <childnode refid="3325" relation="include">
+        </childnode>
+        <childnode refid="3326" relation="include">
+        </childnode>
+        <childnode refid="3327" relation="include">
+        </childnode>
+        <childnode refid="3328" relation="include">
+        </childnode>
+      </node>
+      <node id="3335">
+        <label>transport/sbfHandler.c</label>
+        <link refid="sbf_handler_8c"/>
+      </node>
+      <node id="3333">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="3319" relation="include">
+        </childnode>
+        <childnode refid="3320" relation="include">
+        </childnode>
+        <childnode refid="3317" relation="include">
+        </childnode>
+        <childnode refid="3334" relation="include">
+        </childnode>
+      </node>
+      <node id="3334">
+        <label>transport/sbfTportPrivate.h</label>
+        <link refid="sbf_tport_private_8h"/>
+        <childnode refid="3332" relation="include">
+        </childnode>
+        <childnode refid="3335" relation="include">
+        </childnode>
+        <childnode refid="3336" relation="include">
+        </childnode>
+        <childnode refid="3337" relation="include">
+        </childnode>
+        <childnode refid="3338" relation="include">
+        </childnode>
+        <childnode refid="3339" relation="include">
+        </childnode>
+        <childnode refid="3340" relation="include">
+        </childnode>
+        <childnode refid="3341" relation="include">
+        </childnode>
+      </node>
+      <node id="3340">
+        <label>transport/sbfTportFragments.c</label>
+        <link refid="sbf_tport_fragments_8c"/>
+      </node>
+      <node id="3339">
+        <label>transport/sbfTport.c</label>
+        <link refid="sbf_tport_8c"/>
+      </node>
+      <node id="3314">
+        <label>transport/sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="3315" relation="include">
+        </childnode>
+        <childnode refid="3319" relation="include">
+        </childnode>
+        <childnode refid="3320" relation="include">
+        </childnode>
+        <childnode refid="3317" relation="include">
+        </childnode>
+        <childnode refid="3322" relation="include">
+        </childnode>
+        <childnode refid="3329" relation="include">
+        </childnode>
+        <childnode refid="3330" relation="include">
+        </childnode>
+        <childnode refid="3327" relation="include">
+        </childnode>
+        <childnode refid="3328" relation="include">
+        </childnode>
+        <childnode refid="3331" relation="include">
+        </childnode>
+        <childnode refid="3332" relation="include">
+        </childnode>
+        <childnode refid="3333" relation="include">
+        </childnode>
+        <childnode refid="3335" relation="include">
+        </childnode>
+        <childnode refid="3336" relation="include">
+        </childnode>
+        <childnode refid="3337" relation="include">
+        </childnode>
+        <childnode refid="3338" relation="include">
+        </childnode>
+        <childnode refid="3339" relation="include">
+        </childnode>
+        <childnode refid="3340" relation="include">
+        </childnode>
+        <childnode refid="3341" relation="include">
+        </childnode>
+      </node>
+      <node id="3324">
+        <label>requestreply/sbfRequestPub.c</label>
+        <link refid="sbf_request_pub_8c"/>
+      </node>
+      <node id="3329">
+        <label>requestreply/sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="3323" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" prot="public" static="no">
+        <type>struct sbfBatchImpl *</type>
+        <definition>typedef struct sbfBatchImpl* sbfBatch</definition>
+        <argsstring></argsstring>
+        <name>sbfBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.h" line="12" column="1" bodyfile="transport/sbfBatch.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_batch_8h_1ad239ff81cb67675c0464fd2856f406b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref></type>
+        <definition>sbfBatch sbfBatch_create</definition>
+        <argsstring>(struct sbfTportImpl *tport)</argsstring>
+        <name>sbfBatch_create</name>
+        <param>
+          <type>struct <ref refid="structsbf_tport_impl" kindref="compound">sbfTportImpl</ref> *</type>
+          <declname>tport</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.h" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_batch_8h_1a1d05a4efd61f6fd5947004753df83864" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfBatch_destroy</definition>
+        <argsstring>(sbfBatch batch)</argsstring>
+        <name>sbfBatch_destroy</name>
+        <param>
+          <type><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref></type>
+          <declname>batch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.h" line="15" column="1" bodyfile="transport/sbfBatch.c" bodystart="83" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_batch_8h_1a677109688014dff1446a0ba3296bcdb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfBatch_addBuffer</definition>
+        <argsstring>(sbfBatch batch, struct sbfPubImpl *pub, sbfBuffer buffer)</argsstring>
+        <name>sbfBatch_addBuffer</name>
+        <param>
+          <type><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref></type>
+          <declname>batch</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structsbf_pub_impl" kindref="compound">sbfPubImpl</ref> *</type>
+          <declname>pub</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_batch_8h_1a26884737e20371ef250968f22a224efb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfBatch_add</definition>
+        <argsstring>(sbfBatch batch, struct sbfPubImpl *pub, void *data, size_t size)</argsstring>
+        <name>sbfBatch_add</name>
+        <param>
+          <type><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref></type>
+          <declname>batch</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structsbf_pub_impl" kindref="compound">sbfPubImpl</ref> *</type>
+          <declname>pub</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_batch_8h_1af4a728ef717d3db06b70bb5c1bd00d9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfBatch_send</definition>
+        <argsstring>(sbfBatch batch)</argsstring>
+        <name>sbfBatch_send</name>
+        <param>
+          <type><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref></type>
+          <declname>batch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.h" line="30" column="1" bodyfile="transport/sbfBatch.c" bodystart="162" bodyend="190"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_BATCH_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_BATCH_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_buffer_8h" kindref="compound">sbfBuffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_tport_impl" kindref="compound">sbfTportImpl</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_pub_impl" kindref="compound">sbfPubImpl</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfBatchImpl*<sp/><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref><sp/><ref refid="sbf_batch_8h_1ad239ff81cb67675c0464fd2856f406b5" kindref="member">sbfBatch_create</ref><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsbf_tport_impl" kindref="compound">sbfTportImpl</ref>*<sp/>tport);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_batch_8h_1a1d05a4efd61f6fd5947004753df83864" kindref="member">sbfBatch_destroy</ref><sp/>(<ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref><sp/>batch);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>A<sp/>pointer<sp/>to<sp/>the<sp/>publisher<sp/>is<sp/>kept<sp/>in<sp/>the<sp/>batch<sp/>until<sp/>it<sp/>is<sp/>destroyed<sp/>so</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>care<sp/>must<sp/>be<sp/>taken<sp/>not<sp/>to<sp/>destroy<sp/>the<sp/>publishers<sp/>used<sp/>with<sp/>a<sp/>batch<sp/>efore<sp/>the</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>batch<sp/>itself.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_batch_8h_1a677109688014dff1446a0ba3296bcdb0" kindref="member">sbfBatch_addBuffer</ref><sp/>(<ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref><sp/>batch,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsbf_pub_impl" kindref="compound">sbfPubImpl</ref>*<sp/>pub,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_batch_8h_1a26884737e20371ef250968f22a224efb" kindref="member">sbfBatch_add</ref><sp/>(<ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref><sp/>batch,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsbf_pub_impl" kindref="compound">sbfPubImpl</ref>*<sp/>pub,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_batch_8h_1af4a728ef717d3db06b70bb5c1bd00d9e" kindref="member">sbfBatch_send</ref><sp/>(<ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref><sp/>batch);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_BATCH_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="transport/sbfBatch.h"/>
+  </compounddef>
+</doxygen>

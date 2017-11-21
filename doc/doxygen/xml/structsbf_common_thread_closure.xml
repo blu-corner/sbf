@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsbf_common_thread_closure" kind="struct" language="C++" prot="public">
+    <compoundname>sbfCommonThreadClosure</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsbf_common_thread_closure_1a79a1944c586450efa39e2ae9d2faeee1" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* sbfCommonThreadClosure::mCb) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>mCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.c" line="7" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_common_thread_closure_1af0b6e0f39649111802888a4fee18f2b7" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* sbfCommonThreadClosure::mClosure</definition>
+        <argsstring></argsstring>
+        <name>mClosure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.c" line="8" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="common/sbfCommonWin32.c" line="6" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="5" bodyend="9"/>
+    <listofallmembers>
+      <member refid="structsbf_common_thread_closure_1a79a1944c586450efa39e2ae9d2faeee1" prot="public" virt="non-virtual"><scope>sbfCommonThreadClosure</scope><name>mCb</name></member>
+      <member refid="structsbf_common_thread_closure_1af0b6e0f39649111802888a4fee18f2b7" prot="public" virt="non-virtual"><scope>sbfCommonThreadClosure</scope><name>mClosure</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

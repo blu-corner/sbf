@@ -1,0 +1,584 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_hi_res_timer_8h" kind="file" language="C++">
+    <compoundname>sbfHiResTimer.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_mw_8h" local="yes">core/sbfMw.h</includedby>
+    <includedby refid="sbf_hi_res_timer_8c" local="yes">core/sbfHiResTimer.c</includedby>
+    <incdepgraph>
+      <node id="2241">
+        <label>event.h</label>
+      </node>
+      <node id="2240">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="2242">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="2243" relation="include">
+        </childnode>
+      </node>
+      <node id="2246">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="2239" relation="include">
+        </childnode>
+      </node>
+      <node id="2238">
+        <label>core/sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="2239" relation="include">
+        </childnode>
+      </node>
+      <node id="2243">
+        <label>sys/types.h</label>
+      </node>
+      <node id="2239">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="2240" relation="include">
+        </childnode>
+        <childnode refid="2241" relation="include">
+        </childnode>
+        <childnode refid="2242" relation="include">
+        </childnode>
+        <childnode refid="2244" relation="include">
+        </childnode>
+        <childnode refid="2245" relation="include">
+        </childnode>
+        <childnode refid="2246" relation="include">
+        </childnode>
+        <childnode refid="2247" relation="include">
+        </childnode>
+        <childnode refid="2248" relation="include">
+        </childnode>
+      </node>
+      <node id="2245">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="2244">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="2247">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="2239" relation="include">
+        </childnode>
+      </node>
+      <node id="2248">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="2239" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2257">
+        <label>core/sbfHiResTimerPrivate.h</label>
+        <link refid="sbf_hi_res_timer_private_8h"/>
+        <childnode refid="2258" relation="include">
+        </childnode>
+        <childnode refid="2259" relation="include">
+        </childnode>
+      </node>
+      <node id="2259">
+        <label>core/sbfQueuePrivate.h</label>
+        <link refid="sbf_queue_private_8h"/>
+        <childnode refid="2258" relation="include">
+        </childnode>
+        <childnode refid="2260" relation="include">
+        </childnode>
+      </node>
+      <node id="2265">
+        <label>handlers/common/sbfCommonHandler.c</label>
+        <link refid="sbf_common_handler_8c"/>
+      </node>
+      <node id="2264">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="2265" relation="include">
+        </childnode>
+        <childnode refid="2266" relation="include">
+        </childnode>
+      </node>
+      <node id="2291">
+        <label>transport/sbfTportWeight.c</label>
+        <link refid="sbf_tport_weight_8c"/>
+      </node>
+      <node id="2274">
+        <label>requestreply/sbfRequestSub.c</label>
+        <link refid="sbf_request_sub_8c"/>
+      </node>
+      <node id="2280">
+        <label>requestreply/sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="2271" relation="include">
+        </childnode>
+      </node>
+      <node id="2275">
+        <label>tools/replier/sbfReplier.c</label>
+        <link refid="sbf_replier_8c"/>
+      </node>
+      <node id="2287">
+        <label>transport/sbfSub.c</label>
+        <link refid="sbf_sub_8c"/>
+      </node>
+      <node id="2288">
+        <label>transport/sbfTopic.c</label>
+        <link refid="sbf_topic_8c"/>
+      </node>
+      <node id="2268">
+        <label>handlers/common/sbfCommonHandlerPrivate.h</label>
+        <link refid="sbf_common_handler_private_8h"/>
+        <childnode refid="2265" relation="include">
+        </childnode>
+      </node>
+      <node id="2254">
+        <label>common/sbfTcpListenerPrivate.h</label>
+        <link refid="sbf_tcp_listener_private_8h"/>
+        <childnode refid="2253" relation="include">
+        </childnode>
+      </node>
+      <node id="2267">
+        <label>handlers/udp/sbfUdpHandler.c</label>
+        <link refid="sbf_udp_handler_8c"/>
+      </node>
+      <node id="2266">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+        <childnode refid="2267" relation="include">
+        </childnode>
+      </node>
+      <node id="2255">
+        <label>core/sbfEventPrivate.h</label>
+        <link refid="sbf_event_private_8h"/>
+        <childnode refid="2256" relation="include">
+        </childnode>
+      </node>
+      <node id="2277">
+        <label>tools/publisher/sbfPublisher.c</label>
+        <link refid="sbf_publisher_8c"/>
+      </node>
+      <node id="2256">
+        <label>core/sbfEvent.c</label>
+        <link refid="sbf_event_8c"/>
+      </node>
+      <node id="2282">
+        <label>transport/sbfBatch.c</label>
+        <link refid="sbf_batch_8c"/>
+      </node>
+      <node id="2276">
+        <label>tools/requester/sbfRequester.c</label>
+        <link refid="sbf_requester_8c"/>
+      </node>
+      <node id="2258">
+        <label>core/sbfHiResTimer.c</label>
+        <link refid="sbf_hi_res_timer_8c"/>
+      </node>
+      <node id="2249">
+        <label>core/sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="2250" relation="include">
+        </childnode>
+        <childnode refid="2258" relation="include">
+        </childnode>
+      </node>
+      <node id="2251">
+        <label>common/sbfTcpConnectionPrivate.h</label>
+        <link refid="sbf_tcp_connection_private_8h"/>
+        <childnode refid="2252" relation="include">
+        </childnode>
+        <childnode refid="2253" relation="include">
+        </childnode>
+      </node>
+      <node id="2278">
+        <label>tools/subscriber/sbfSubscriber.c</label>
+        <link refid="sbf_subscriber_8c"/>
+      </node>
+      <node id="2270">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.c</label>
+        <link refid="sbf_tcp_mesh_handler_8c"/>
+      </node>
+      <node id="2269">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+        <childnode refid="2270" relation="include">
+        </childnode>
+      </node>
+      <node id="2286">
+        <label>transport/sbfPub.c</label>
+        <link refid="sbf_pub_8c"/>
+      </node>
+      <node id="2252">
+        <label>common/sbfTcpConnection.c</label>
+        <link refid="sbf_tcp_connection_8c"/>
+      </node>
+      <node id="2262">
+        <label>core/sbfTimerPrivate.h</label>
+        <link refid="sbf_timer_private_8h"/>
+        <childnode refid="2263" relation="include">
+        </childnode>
+      </node>
+      <node id="2273">
+        <label>requestreply/sbfRequestReply.c</label>
+        <link refid="sbf_request_reply_8c"/>
+      </node>
+      <node id="2271">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+        <childnode refid="2272" relation="include">
+        </childnode>
+        <childnode refid="2273" relation="include">
+        </childnode>
+        <childnode refid="2274" relation="include">
+        </childnode>
+        <childnode refid="2275" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+      </node>
+      <node id="2285">
+        <label>transport/sbfHandler.c</label>
+        <link refid="sbf_handler_8c"/>
+      </node>
+      <node id="2283">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="2268" relation="include">
+        </childnode>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2266" relation="include">
+        </childnode>
+        <childnode refid="2284" relation="include">
+        </childnode>
+      </node>
+      <node id="2263">
+        <label>core/sbfTimer.c</label>
+        <link refid="sbf_timer_8c"/>
+      </node>
+      <node id="2284">
+        <label>transport/sbfTportPrivate.h</label>
+        <link refid="sbf_tport_private_8h"/>
+        <childnode refid="2282" relation="include">
+        </childnode>
+        <childnode refid="2285" relation="include">
+        </childnode>
+        <childnode refid="2286" relation="include">
+        </childnode>
+        <childnode refid="2287" relation="include">
+        </childnode>
+        <childnode refid="2288" relation="include">
+        </childnode>
+        <childnode refid="2289" relation="include">
+        </childnode>
+        <childnode refid="2290" relation="include">
+        </childnode>
+        <childnode refid="2291" relation="include">
+        </childnode>
+      </node>
+      <node id="2290">
+        <label>transport/sbfTportFragments.c</label>
+        <link refid="sbf_tport_fragments_8c"/>
+      </node>
+      <node id="2289">
+        <label>transport/sbfTport.c</label>
+        <link refid="sbf_tport_8c"/>
+      </node>
+      <node id="2279">
+        <label>transport/sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="2264" relation="include">
+        </childnode>
+        <childnode refid="2268" relation="include">
+        </childnode>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2266" relation="include">
+        </childnode>
+        <childnode refid="2280" relation="include">
+        </childnode>
+        <childnode refid="2281" relation="include">
+        </childnode>
+        <childnode refid="2277" relation="include">
+        </childnode>
+        <childnode refid="2275" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2278" relation="include">
+        </childnode>
+        <childnode refid="2282" relation="include">
+        </childnode>
+        <childnode refid="2283" relation="include">
+        </childnode>
+        <childnode refid="2285" relation="include">
+        </childnode>
+        <childnode refid="2286" relation="include">
+        </childnode>
+        <childnode refid="2287" relation="include">
+        </childnode>
+        <childnode refid="2288" relation="include">
+        </childnode>
+        <childnode refid="2289" relation="include">
+        </childnode>
+        <childnode refid="2290" relation="include">
+        </childnode>
+        <childnode refid="2291" relation="include">
+        </childnode>
+      </node>
+      <node id="2261">
+        <label>core/sbfMw.c</label>
+        <link refid="sbf_mw_8c"/>
+      </node>
+      <node id="2250">
+        <label>core/sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="2251" relation="include">
+        </childnode>
+        <childnode refid="2254" relation="include">
+        </childnode>
+        <childnode refid="2255" relation="include">
+        </childnode>
+        <childnode refid="2257" relation="include">
+        </childnode>
+        <childnode refid="2259" relation="include">
+        </childnode>
+        <childnode refid="2261" relation="include">
+        </childnode>
+        <childnode refid="2262" relation="include">
+        </childnode>
+        <childnode refid="2264" relation="include">
+        </childnode>
+        <childnode refid="2268" relation="include">
+        </childnode>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2266" relation="include">
+        </childnode>
+        <childnode refid="2271" relation="include">
+        </childnode>
+        <childnode refid="2277" relation="include">
+        </childnode>
+        <childnode refid="2275" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2278" relation="include">
+        </childnode>
+        <childnode refid="2279" relation="include">
+        </childnode>
+      </node>
+      <node id="2253">
+        <label>common/sbfTcpListener.c</label>
+        <link refid="sbf_tcp_listener_8c"/>
+      </node>
+      <node id="2260">
+        <label>core/sbfQueue.c</label>
+        <link refid="sbf_queue_8c"/>
+      </node>
+      <node id="2272">
+        <label>requestreply/sbfRequestPub.c</label>
+        <link refid="sbf_request_pub_8c"/>
+      </node>
+      <node id="2281">
+        <label>requestreply/sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="2271" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" prot="public" static="no">
+        <type>struct <ref refid="structsbf_hi_res_timer_impl" kindref="compound">sbfHiResTimerImpl</ref> *</type>
+        <definition>typedef struct sbfHiResTimerImpl* sbfHiResTimer</definition>
+        <argsstring></argsstring>
+        <name>sbfHiResTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.h" line="16" column="1" bodyfile="core/sbfHiResTimer.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* sbfHiResTimerCb) (sbfHiResTimer timer, void *closure)</definition>
+        <argsstring>)(sbfHiResTimer timer, void *closure)</argsstring>
+        <name>sbfHiResTimerCb</name>
+        <briefdescription>
+<para>Callback invoked when timer expires. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timer handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user data associated to the timer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.h" line="23" column="1" bodyfile="core/sbfHiResTimer.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_hi_res_timer_8h_1a4ed03ee88c4a1387158659a1f4b0066f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref></type>
+        <definition>sbfHiResTimer sbfHiResTimer_create</definition>
+        <argsstring>(struct sbfQueueImpl *queue, sbfHiResTimerCb cb, void *closure, u_int microseconds)</argsstring>
+        <name>sbfHiResTimer_create</name>
+        <param>
+          <type>struct <ref refid="structsbf_queue_impl" kindref="compound">sbfQueueImpl</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" kindref="member">sbfHiResTimerCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <param>
+          <type>u_int</type>
+          <declname>microseconds</declname>
+        </param>
+        <briefdescription>
+<para>Returns a high resolution timer handler initialised with the given data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a queue. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>High resolution timer callback. It will be invoked when the timer expires. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user data associated to this high resolution timer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>microseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the microseconds to fire the timer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a high resolution timer handler. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_hi_res_timer_8h_1a89282fbee3f560a4111eac6ae2b3ea1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfHiResTimer_destroy</definition>
+        <argsstring>(sbfHiResTimer timer)</argsstring>
+        <name>sbfHiResTimer_destroy</name>
+        <param>
+          <type><ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref></type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para>Release the memory allocated by the high resolution timer. This also stops the timer so no callback will be raised. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timer handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.h" line="45" column="1" bodyfile="core/sbfHiResTimer.c" bodystart="102" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_hi_res_timer_8h_1a3d4d0b158165c2b16431cadaa73a7822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u_int</type>
+        <definition>u_int sbfHiResTimer_getInterval</definition>
+        <argsstring>(sbfHiResTimer timer)</argsstring>
+        <name>sbfHiResTimer_getInterval</name>
+        <param>
+          <type><ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref></type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para>&quot;Description&quot; </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timer handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&quot;Return of the function&quot; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.h" line="52" column="1" bodyfile="core/sbfHiResTimer.c" bodystart="112" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file declares the structures and functions to provide high resolution timers. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>_SBF_HI_RES_TIMER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_HI_RES_TIMER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_queue_impl" kindref="compound">sbfQueueImpl</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_hi_res_timer_impl" kindref="compound">sbfHiResTimerImpl</ref>*<sp/><ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" kindref="member">sbfHiResTimerCb</ref>)<sp/>(sbfHiResTimer<sp/>timer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">sbfHiResTimer<sp/><ref refid="sbf_hi_res_timer_8h_1a4ed03ee88c4a1387158659a1f4b0066f" kindref="member">sbfHiResTimer_create</ref><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsbf_queue_impl" kindref="compound">sbfQueueImpl</ref>*<sp/>queue,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" kindref="member">sbfHiResTimerCb</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u_int<sp/>microseconds);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_hi_res_timer_8h_1a89282fbee3f560a4111eac6ae2b3ea1f" kindref="member">sbfHiResTimer_destroy</ref><sp/>(sbfHiResTimer<sp/>timer);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">u_int<sp/><ref refid="sbf_hi_res_timer_8h_1a3d4d0b158165c2b16431cadaa73a7822" kindref="member">sbfHiResTimer_getInterval</ref><sp/>(sbfHiResTimer<sp/>timer);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_HI_RES_TIMER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="core/sbfHiResTimer.h"/>
+  </compounddef>
+</doxygen>

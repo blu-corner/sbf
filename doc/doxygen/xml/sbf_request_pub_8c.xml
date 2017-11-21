@@ -1,0 +1,709 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_request_pub_8c" kind="file" language="C++">
+    <compoundname>sbfRequestPub.c</compoundname>
+    <includes refid="sbf_request_reply_8h" local="yes">sbfRequestReply.h</includes>
+    <includes refid="sbf_request_reply_private_8h" local="yes">sbfRequestReplyPrivate.h</includes>
+    <includes refid="sbf_request_pub_private_8h" local="yes">sbfRequestPubPrivate.h</includes>
+    <incdepgraph>
+      <node id="2910">
+        <label>sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2911" relation="include">
+        </childnode>
+        <childnode refid="2912" relation="include">
+        </childnode>
+      </node>
+      <node id="2898">
+        <label>event.h</label>
+      </node>
+      <node id="2925">
+        <label>sbfRequestReplyPrivate.h</label>
+        <link refid="sbf_request_reply_private_8h"/>
+        <childnode refid="2926" relation="include">
+        </childnode>
+        <childnode refid="2913" relation="include">
+        </childnode>
+      </node>
+      <node id="2927">
+        <label>sbfRequestPubPrivate.h</label>
+        <link refid="sbf_request_pub_private_8h"/>
+      </node>
+      <node id="2906">
+        <label>sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2907" relation="include">
+        </childnode>
+        <childnode refid="2919" relation="include">
+        </childnode>
+      </node>
+      <node id="2911">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2922">
+        <label>sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="2909" relation="include">
+        </childnode>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2919" relation="include">
+        </childnode>
+      </node>
+      <node id="2923">
+        <label>sbfTopic.h</label>
+        <link refid="sbf_topic_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2897">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="2899">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="2900" relation="include">
+        </childnode>
+      </node>
+      <node id="2916">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2908">
+        <label>sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="2909" relation="include">
+        </childnode>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2903">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2918">
+        <label>sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2909">
+        <label>sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2910" relation="include">
+        </childnode>
+        <childnode refid="2913" relation="include">
+        </childnode>
+        <childnode refid="2914" relation="include">
+        </childnode>
+      </node>
+      <node id="2917">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2900">
+        <label>sys/types.h</label>
+      </node>
+      <node id="2921">
+        <label>sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="2909" relation="include">
+        </childnode>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2919" relation="include">
+        </childnode>
+      </node>
+      <node id="2914">
+        <label>sbfBufferInline.h</label>
+        <link refid="sbf_buffer_inline_8h"/>
+      </node>
+      <node id="2913">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2895">
+        <label>sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2906" relation="include">
+        </childnode>
+        <childnode refid="2924" relation="include">
+        </childnode>
+        <childnode refid="2915" relation="include">
+        </childnode>
+        <childnode refid="2923" relation="include">
+        </childnode>
+      </node>
+      <node id="2920">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2896">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="2897" relation="include">
+        </childnode>
+        <childnode refid="2898" relation="include">
+        </childnode>
+        <childnode refid="2899" relation="include">
+        </childnode>
+        <childnode refid="2901" relation="include">
+        </childnode>
+        <childnode refid="2902" relation="include">
+        </childnode>
+        <childnode refid="2903" relation="include">
+        </childnode>
+        <childnode refid="2904" relation="include">
+        </childnode>
+        <childnode refid="2905" relation="include">
+        </childnode>
+      </node>
+      <node id="2902">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="2907">
+        <label>sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="2908" relation="include">
+        </childnode>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2915" relation="include">
+        </childnode>
+        <childnode refid="2921" relation="include">
+        </childnode>
+        <childnode refid="2922" relation="include">
+        </childnode>
+        <childnode refid="2923" relation="include">
+        </childnode>
+      </node>
+      <node id="2926">
+        <label>sbfGuid.h</label>
+        <link refid="sbf_guid_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2901">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="2915">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2916" relation="include">
+        </childnode>
+        <childnode refid="2917" relation="include">
+        </childnode>
+        <childnode refid="2918" relation="include">
+        </childnode>
+        <childnode refid="2919" relation="include">
+        </childnode>
+        <childnode refid="2920" relation="include">
+        </childnode>
+      </node>
+      <node id="2904">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2919">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2905">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2912">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+      <node id="2894">
+        <label>requestreply/sbfRequestPub.c</label>
+        <link refid="sbf_request_pub_8c"/>
+        <childnode refid="2895" relation="include">
+        </childnode>
+        <childnode refid="2925" relation="include">
+        </childnode>
+        <childnode refid="2927" relation="include">
+        </childnode>
+      </node>
+      <node id="2924">
+        <label>sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="2896" relation="include">
+        </childnode>
+        <childnode refid="2907" relation="include">
+        </childnode>
+        <childnode refid="2919" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_request_pub_8c_1ad2774bf694eda1ef203951c97cdd6dcd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfRequestPubPubReadyCb</definition>
+        <argsstring>(sbfPub pub0, void *closure)</argsstring>
+        <name>sbfRequestPubPubReadyCb</name>
+        <param>
+          <type><ref refid="sbf_pub_8h_1aa23045dc7b9f1d04b6dee3bb3ffe63a8" kindref="member">sbfPub</ref></type>
+          <declname>pub0</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestPub.c" line="6" column="1" bodyfile="requestreply/sbfRequestPub.c" bodystart="6" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_pub_8c_1afd55bb298c291702894ef7bfe0ca2856" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfRequestPubSubReadyCb</definition>
+        <argsstring>(sbfSub sub, void *closure)</argsstring>
+        <name>sbfRequestPubSubReadyCb</name>
+        <param>
+          <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestPub.c" line="16" column="1" bodyfile="requestreply/sbfRequestPub.c" bodystart="16" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_pub_8c_1a6a5b9b61df6a973e91ee73797a655f0c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfRequestPubSubMessageCb</definition>
+        <argsstring>(sbfSub sub, sbfBuffer buffer, void *closure)</argsstring>
+        <name>sbfRequestPubSubMessageCb</name>
+        <param>
+          <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestPub.c" line="26" column="1" bodyfile="requestreply/sbfRequestPub.c" bodystart="26" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_pub_8c_1ab20628164dcae6d44a4a985599403a2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_request_pub_8h_1a9bcb13977342f28786f635e341e29ad4" kindref="member">sbfRequestPub</ref></type>
+        <definition>sbfRequestPub sbfRequestPub_create</definition>
+        <argsstring>(sbfTport tport, sbfQueue queue, const char *topic, sbfRequestPubReadyCb readyCb, void *closure)</argsstring>
+        <name>sbfRequestPub_create</name>
+        <param>
+          <type><ref refid="sbf_tport_8h_1acbaf9d451442abe85c18e3583d746181" kindref="member">sbfTport</ref></type>
+          <declname>tport</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_request_pub_8h_1a906a2e4613ca59e07e2f4d6fa8d4e92e" kindref="member">sbfRequestPubReadyCb</ref></type>
+          <declname>readyCb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+<para>Creates a publisher configured with the given parameters. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tport</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the port to initialise the communications. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue to publish the messages. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the logical channel name for the messages. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>readyCb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the callback indicating that the channel is ready. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user data linked to the publisher handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a publisher configured with the given parameters. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestPub.c" line="50" column="1" bodyfile="requestreply/sbfRequestPub.c" bodystart="50" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_pub_8c_1a608a5445ee3a1d7390e4fd41e72bb806" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfRequestPub_destroy</definition>
+        <argsstring>(sbfRequestPub pub)</argsstring>
+        <name>sbfRequestPub_destroy</name>
+        <param>
+          <type><ref refid="sbf_request_pub_8h_1a9bcb13977342f28786f635e341e29ad4" kindref="member">sbfRequestPub</ref></type>
+          <declname>pub</declname>
+        </param>
+        <briefdescription>
+<para>Release all the resources allocated by the publisher. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the publisher handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestPub.c" line="108" column="1" bodyfile="requestreply/sbfRequestPub.c" bodystart="108" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_pub_8c_1a2f6c33da6865e134e5e19ebca47948b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae" kindref="member">sbfRequest</ref></type>
+        <definition>sbfRequest sbfRequestPub_send</definition>
+        <argsstring>(sbfRequestPub pub, void *data, size_t size, sbfRequestPubReplyCb replyCb, void *closure)</argsstring>
+        <name>sbfRequestPub_send</name>
+        <param>
+          <type><ref refid="sbf_request_pub_8h_1a9bcb13977342f28786f635e341e29ad4" kindref="member">sbfRequestPub</ref></type>
+          <declname>pub</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_request_pub_8h_1a204000cf1d1fd85c729701e42ca0504e" kindref="member">sbfRequestPubReplyCb</ref></type>
+          <declname>replyCb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+<para>Sends a message with the given subscriber. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the publisher handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of bytes to be sent. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the length in bytes of the data previously defined. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replyCb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the reply callback to call when the request is done. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user data linked to the publisher handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the request handler. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestPub.c" line="128" column="1" bodyfile="requestreply/sbfRequestPub.c" bodystart="128" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_pub_8c_1a4fb1ec7c72757ca669a923570a914668" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfRequestPub_getTopic</definition>
+        <argsstring>(sbfRequestPub pub)</argsstring>
+        <name>sbfRequestPub_getTopic</name>
+        <param>
+          <type><ref refid="sbf_request_pub_8h_1a9bcb13977342f28786f635e341e29ad4" kindref="member">sbfRequestPub</ref></type>
+          <declname>pub</declname>
+        </param>
+        <briefdescription>
+<para>returns the name of the topic associated with the given publisher. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the publisher handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null terminated string containing the name of the topic associated with the given publisher. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestPub.c" line="166" column="1" bodyfile="requestreply/sbfRequestPub.c" bodystart="166" bodyend="169"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_request_reply_8h" kindref="compound">sbfRequestReply.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_request_reply_private_8h" kindref="compound">sbfRequestReplyPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_request_pub_private_8h" kindref="compound">sbfRequestPubPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">sbfRequestPubPubReadyCb<sp/>(<ref refid="structsbf_pub_impl" kindref="compound">sbfPub</ref><sp/>pub0,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl" kindref="compound">sbfRequestPub</ref><sp/>pub<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1a14c9337cf89d9177e8b13c732cc71804" kindref="member">mPubReady</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1afbbdc4e5bc22df5eec802ece93e7e189" kindref="member">mSubReady</ref><sp/>&amp;&amp;<sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1a27b0811844ab71cd18bd1a3aa994d7c6" kindref="member">mReadyCb</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1a27b0811844ab71cd18bd1a3aa994d7c6" kindref="member">mReadyCb</ref><sp/>(pub,<sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1a6097d8140219a9d06846faec4e846892" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">sbfRequestPubSubReadyCb<sp/>(<ref refid="structsbf_sub_impl" kindref="compound">sbfSub</ref><sp/>sub,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl" kindref="compound">sbfRequestPub</ref><sp/>pub<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1afbbdc4e5bc22df5eec802ece93e7e189" kindref="member">mSubReady</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1a14c9337cf89d9177e8b13c732cc71804" kindref="member">mPubReady</ref><sp/>&amp;&amp;<sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1a27b0811844ab71cd18bd1a3aa994d7c6" kindref="member">mReadyCb</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1a27b0811844ab71cd18bd1a3aa994d7c6" kindref="member">mReadyCb</ref><sp/>(pub,<sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1a6097d8140219a9d06846faec4e846892" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">sbfRequestPubSubMessageCb<sp/>(<ref refid="structsbf_sub_impl" kindref="compound">sbfSub</ref><sp/>sub,<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl" kindref="compound">sbfRequestPub</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pub<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_request_reply_private_8h_1a287ef027733349451b0cb2ea13292e59" kindref="member">sbfRequestHeader</ref>*<sp/><sp/><sp/><sp/><sp/>hdr<sp/>=<sp/>sbfBuffer_getData<sp/>(buffer);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/>sbfBuffer_getSize<sp/>(buffer);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_request_impl" kindref="compound">sbfRequestImpl</ref><sp/>wanted;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_impl" kindref="compound">sbfRequest</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>req;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*hdr)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_guid_8c_1a7867ed4656ece458087f09fc58c91445" kindref="member">sbfGuid_copy</ref><sp/>(&amp;wanted.mGuid,<sp/>&amp;hdr-&gt;mGuid);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>req<sp/>=<sp/><ref refid="systree_8h_1af0ae89dc9239fbe8c056eeed595cedac" kindref="member">RB_FIND</ref><sp/>(sbfRequestTreeImpl,<sp/>&amp;pub-&gt;<ref refid="structsbf_request_pub_impl_1a7246763e00431bd92f0da3fa34524070" kindref="member">mRequests</ref>,<sp/>&amp;wanted);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(req<sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>req-&gt;mReplyCb<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>=<sp/>sbfBuffer_wrap<sp/>(hdr<sp/>+<sp/>1,<sp/>size<sp/>-<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*hdr,<sp/>NULL,<sp/>NULL);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>req-&gt;mReplyCb<sp/>(pub,<sp/>req,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">,<sp/>req-&gt;<ref refid="structsbf_request_pub_impl_1a6097d8140219a9d06846faec4e846892" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfBuffer_destroy<sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="structsbf_request_pub_impl" kindref="compound">sbfRequestPub</ref></highlight></codeline>
+<codeline lineno="50" refid="sbf_request_pub_8h_1ab20628164dcae6d44a4a985599403a2b" refkind="member"><highlight class="normal"><ref refid="sbf_request_pub_8c_1ab20628164dcae6d44a4a985599403a2b" kindref="member">sbfRequestPub_create</ref><sp/>(<ref refid="sbf_tport_8h_1acbaf9d451442abe85c18e3583d746181" kindref="member">sbfTport</ref><sp/>tport,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>topic,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_request_pub_8h_1a906a2e4613ca59e07e2f4d6fa8d4e92e" kindref="member">sbfRequestPubReadyCb</ref><sp/>readyCb,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl" kindref="compound">sbfRequestPub</ref><sp/>pub;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestTopic[<ref refid="sbf_topic_8h_1aa9f435bc8956a8d5d5e7e32e3d3e3e45" kindref="member">SBF_TOPIC_SIZE_LIMIT</ref>];</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>replyTopic[<ref refid="sbf_topic_8h_1aa9f435bc8956a8d5d5e7e32e3d3e3e45" kindref="member">SBF_TOPIC_SIZE_LIMIT</ref>];</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>used;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>used<sp/>=<sp/><ref refid="sbf_common_win32_8h_1aa367b75c5aed883fef5befbdf04835a4" kindref="member">snprintf</ref><sp/>(requestTopic,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>requestTopic,<sp/></highlight><highlight class="stringliteral">&quot;%s@request&quot;</highlight><highlight class="normal">,<sp/>topic);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(used<sp/>&lt;<sp/>0<sp/>||<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)used<sp/>&gt;=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>requestTopic)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>used<sp/>=<sp/><ref refid="sbf_common_win32_8h_1aa367b75c5aed883fef5befbdf04835a4" kindref="member">snprintf</ref><sp/>(replyTopic,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>replyTopic,<sp/></highlight><highlight class="stringliteral">&quot;%s@reply&quot;</highlight><highlight class="normal">,<sp/>topic);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(used<sp/>&lt;<sp/>0<sp/>||<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)used<sp/>&gt;=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>replyTopic)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>pub<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*pub);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1a841ee0a516db377942f735791ccecd11" kindref="member">mLog</ref><sp/>=<sp/><ref refid="sbf_mw_8c_1aa7e45fc4943d4080534faf9d4b2f394f" kindref="member">sbfMw_getLog</ref><sp/>(<ref refid="sbf_tport_8c_1aa923af23b38a07524d327dea78fba30b" kindref="member">sbfTport_getMw</ref><sp/>(tport));</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1aaf270a468697962f335f4a1b16f8259b" kindref="member">mTopic</ref><sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(topic);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1a841ee0a516db377942f735791ccecd11" kindref="member">mLog</ref>,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;creating<sp/>request<sp/>publisher<sp/>%p:<sp/>topic<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pub,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topic);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1a27b0811844ab71cd18bd1a3aa994d7c6" kindref="member">mReadyCb</ref><sp/>=<sp/>readyCb;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1a6097d8140219a9d06846faec4e846892" kindref="member">mClosure</ref><sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_guid_8c_1a496cdec479c65623e1b38226db8dd018" kindref="member">sbfGuid_new</ref><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1a841ee0a516db377942f735791ccecd11" kindref="member">mLog</ref>,<sp/>&amp;pub-&gt;<ref refid="structsbf_request_pub_impl_1ab0cfbaf17b980b58cba1287729824e44" kindref="member">mNext</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1aeebbb1dbfd0312bdf51a4b3a44eaa525" kindref="member">RB_INIT</ref><sp/>(&amp;pub-&gt;<ref refid="structsbf_request_pub_impl_1a7246763e00431bd92f0da3fa34524070" kindref="member">mRequests</ref>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1a2d1bea84e7effcd412fd0020b601d11e" kindref="member">mPub</ref><sp/>=<sp/><ref refid="sbf_pub_8c_1a340ea1e9612e4ac3f1160c37af117564" kindref="member">sbfPub_create</ref><sp/>(tport,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestTopic,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfRequestPubPubReadyCb,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pub);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1a2d1bea84e7effcd412fd0020b601d11e" kindref="member">mPub</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1af059cd9caeaa78b6be14da8ef0dd9037" kindref="member">mSub</ref><sp/>=<sp/><ref refid="sbf_sub_8c_1ad3c0b1c131bc201d4c0a960877ddba16" kindref="member">sbfSub_create</ref><sp/>(tport,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>replyTopic,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfRequestPubSubReadyCb,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfRequestPubSubMessageCb,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pub);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1af059cd9caeaa78b6be14da8ef0dd9037" kindref="member">mSub</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pub;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">fail:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_request_pub_8c_1a608a5445ee3a1d7390e4fd41e72bb806" kindref="member">sbfRequestPub_destroy</ref><sp/>(pub);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="sbf_request_pub_8h_1a608a5445ee3a1d7390e4fd41e72bb806" refkind="member"><highlight class="normal"><ref refid="sbf_request_pub_8c_1a608a5445ee3a1d7390e4fd41e72bb806" kindref="member">sbfRequestPub_destroy</ref><sp/>(<ref refid="structsbf_request_pub_impl" kindref="compound">sbfRequestPub</ref><sp/>pub)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_impl" kindref="compound">sbfRequest</ref><sp/>req;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_impl" kindref="compound">sbfRequest</ref><sp/>req1;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1a841ee0a516db377942f735791ccecd11" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;destroying<sp/>request<sp/>publisher<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>pub);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1a2d1bea84e7effcd412fd0020b601d11e" kindref="member">mPub</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_pub_8c_1a8b8b7ce4c048e15570a9de1f723ab8c5" kindref="member">sbfPub_destroy</ref><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1a2d1bea84e7effcd412fd0020b601d11e" kindref="member">mPub</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1af059cd9caeaa78b6be14da8ef0dd9037" kindref="member">mSub</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_sub_8c_1a52ee27e0190a813dad71e9b89573a74d" kindref="member">sbfSub_destroy</ref><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1af059cd9caeaa78b6be14da8ef0dd9037" kindref="member">mSub</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1aabadd40831e862632d55eb8c867fd258" kindref="member">RB_FOREACH_SAFE</ref><sp/>(req,<sp/>sbfRequestTreeImpl,<sp/>&amp;pub-&gt;<ref refid="structsbf_request_pub_impl_1a7246763e00431bd92f0da3fa34524070" kindref="member">mRequests</ref>,<sp/>req1)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_request_reply_8c_1acaa6ac8247a2a4a849015ea0b2517228" kindref="member">sbfRequest_destroy</ref><sp/>(req);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)pub-&gt;<ref refid="structsbf_request_pub_impl_1aaf270a468697962f335f4a1b16f8259b" kindref="member">mTopic</ref>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(pub);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><ref refid="structsbf_request_impl" kindref="compound">sbfRequest</ref></highlight></codeline>
+<codeline lineno="128" refid="sbf_request_pub_8h_1a012294d9f4dc9b15be7fdb8df4a5cf93" refkind="member"><highlight class="normal"><ref refid="sbf_request_pub_8c_1a2f6c33da6865e134e5e19ebca47948b1" kindref="member">sbfRequestPub_send</ref><sp/>(<ref refid="structsbf_request_pub_impl" kindref="compound">sbfRequestPub</ref><sp/>pub,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_request_pub_8h_1a204000cf1d1fd85c729701e42ca0504e" kindref="member">sbfRequestPubReplyCb</ref><sp/>replyCb,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_impl" kindref="compound">sbfRequest</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>req;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_request_reply_private_8h_1a287ef027733349451b0cb2ea13292e59" kindref="member">sbfRequestHeader</ref>*<sp/>hdr;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!pub-&gt;<ref refid="structsbf_request_pub_impl_1a14c9337cf89d9177e8b13c732cc71804" kindref="member">mPubReady</ref><sp/>||<sp/>!pub-&gt;<ref refid="structsbf_request_pub_impl_1afbbdc4e5bc22df5eec802ece93e7e189" kindref="member">mSubReady</ref>)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>req<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*req);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>req-&gt;<ref refid="structsbf_request_impl_1a8e890d3d468b15a51bc77ff9019b6171" kindref="member">mPub</ref><sp/>=<sp/>pub;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfRefCount_init<sp/>(&amp;req-&gt;<ref refid="structsbf_request_impl_1a1f3880465bd350b59a46bef7659853d8" kindref="member">mRefCount</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>req-&gt;<ref refid="structsbf_request_impl_1a4040a19e0cb3d585933cadf5d1c6e9bf" kindref="member">mReplyCb</ref><sp/>=<sp/>replyCb;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>req-&gt;<ref refid="structsbf_request_impl_1ac1dc73a69c9dadf12e741c67a4fbe97c" kindref="member">mClosure</ref><sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_guid_8c_1ad443d462762bf972aaf6947a45da225e" kindref="member">sbfGuid_increment</ref><sp/>(&amp;pub-&gt;<ref refid="structsbf_request_pub_impl_1ab0cfbaf17b980b58cba1287729824e44" kindref="member">mNext</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_guid_8c_1a7867ed4656ece458087f09fc58c91445" kindref="member">sbfGuid_copy</ref><sp/>(&amp;req-&gt;<ref refid="structsbf_request_impl_1acabc53e59f8c406fe52faedbb193e44d" kindref="member">mGuid</ref>,<sp/>&amp;pub-&gt;<ref refid="structsbf_request_pub_impl_1ab0cfbaf17b980b58cba1287729824e44" kindref="member">mNext</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1a5b9861a8925c953340e483ae0a0f5120" kindref="member">RB_INSERT</ref><sp/>(sbfRequestTreeImpl,<sp/>&amp;pub-&gt;<ref refid="structsbf_request_pub_impl_1a7246763e00431bd92f0da3fa34524070" kindref="member">mRequests</ref>,<sp/>req);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer<sp/>=<sp/><ref refid="sbf_pub_8c_1a8e3599d3fd6e997eab721abd36fe2ba4" kindref="member">sbfPub_getBuffer</ref><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1a2d1bea84e7effcd412fd0020b601d11e" kindref="member">mPub</ref>,<sp/>size<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*hdr);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>hdr<sp/>=<sp/>sbfBuffer_getData<sp/>(buffer);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_guid_8c_1a7867ed4656ece458087f09fc58c91445" kindref="member">sbfGuid_copy</ref><sp/>(&amp;hdr-&gt;mGuid,<sp/>&amp;req-&gt;<ref refid="structsbf_request_impl_1acabc53e59f8c406fe52faedbb193e44d" kindref="member">mGuid</ref>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>memset<sp/>(hdr-&gt;mSpace,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>hdr-&gt;mSpace);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy<sp/>(hdr<sp/>+<sp/>1,<sp/>data,<sp/>size);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_pub_8c_1ab1291857bc5359bc4f05482df4ba8279" kindref="member">sbfPub_sendBuffer</ref><sp/>(pub-&gt;<ref refid="structsbf_request_pub_impl_1a2d1bea84e7effcd412fd0020b601d11e" kindref="member">mPub</ref>,<sp/>buffer);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>req;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="166" refid="sbf_request_pub_8h_1a4fb1ec7c72757ca669a923570a914668" refkind="member"><highlight class="normal"><ref refid="sbf_request_pub_8c_1a4fb1ec7c72757ca669a923570a914668" kindref="member">sbfRequestPub_getTopic</ref><sp/>(<ref refid="structsbf_request_pub_impl" kindref="compound">sbfRequestPub</ref><sp/>pub)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pub-&gt;<ref refid="structsbf_request_pub_impl_1aaf270a468697962f335f4a1b16f8259b" kindref="member">mTopic</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="requestreply/sbfRequestPub.c"/>
+  </compounddef>
+</doxygen>

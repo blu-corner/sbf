@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_sub_private_8h" kind="file" language="C++">
+    <compoundname>sbfSubPrivate.h</compoundname>
+    <includedby refid="sbf_tport_private_8h" local="yes">transport/sbfTportPrivate.h</includedby>
+    <invincdepgraph>
+      <node id="3646">
+        <label>transport/sbfTportWeight.c</label>
+        <link refid="sbf_tport_weight_8c"/>
+      </node>
+      <node id="3642">
+        <label>transport/sbfSub.c</label>
+        <link refid="sbf_sub_8c"/>
+      </node>
+      <node id="3643">
+        <label>transport/sbfTopic.c</label>
+        <link refid="sbf_topic_8c"/>
+      </node>
+      <node id="3639">
+        <label>transport/sbfBatch.c</label>
+        <link refid="sbf_batch_8c"/>
+      </node>
+      <node id="3641">
+        <label>transport/sbfPub.c</label>
+        <link refid="sbf_pub_8c"/>
+      </node>
+      <node id="3640">
+        <label>transport/sbfHandler.c</label>
+        <link refid="sbf_handler_8c"/>
+      </node>
+      <node id="3638">
+        <label>transport/sbfTportPrivate.h</label>
+        <link refid="sbf_tport_private_8h"/>
+        <childnode refid="3639" relation="include">
+        </childnode>
+        <childnode refid="3640" relation="include">
+        </childnode>
+        <childnode refid="3641" relation="include">
+        </childnode>
+        <childnode refid="3642" relation="include">
+        </childnode>
+        <childnode refid="3643" relation="include">
+        </childnode>
+        <childnode refid="3644" relation="include">
+        </childnode>
+        <childnode refid="3645" relation="include">
+        </childnode>
+        <childnode refid="3646" relation="include">
+        </childnode>
+      </node>
+      <node id="3645">
+        <label>transport/sbfTportFragments.c</label>
+        <link refid="sbf_tport_fragments_8c"/>
+      </node>
+      <node id="3644">
+        <label>transport/sbfTport.c</label>
+        <link refid="sbf_tport_8c"/>
+      </node>
+      <node id="3637">
+        <label>transport/sbfSubPrivate.h</label>
+        <link refid="sbf_sub_private_8h"/>
+        <childnode refid="3638" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structsbf_sub_impl" prot="public">sbfSubImpl</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_sub_private_8h_1a8bc33e4d154dc5cdb4c9d2d4e8bc1639" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfSub_ready</definition>
+        <argsstring>(sbfSub sub)</argsstring>
+        <name>sbfSub_ready</name>
+        <param>
+          <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="38" column="1" bodyfile="transport/sbfSub.c" bodystart="231" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_sub_private_8h_1a3c875c2961ee1921708b14d32fa208d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfSub_message</definition>
+        <argsstring>(sbfSub sub, sbfBuffer buffer)</argsstring>
+        <name>sbfSub_message</name>
+        <param>
+          <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="39" column="1" bodyfile="transport/sbfSub.c" bodystart="261" bodyend="280"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_SUB_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_SUB_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_tport_impl" kindref="compound">sbfTportImpl</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfTportStreamImpl;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_tport_topic_impl" kindref="compound">sbfTportTopicImpl</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfTportHeaderImpl;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="structsbf_sub_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_sub_impl" kindref="compound">sbfSubImpl</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13" refid="structsbf_sub_impl_1af1b1bd3d24a3dd12288f535f959cd308" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1af1b1bd3d24a3dd12288f535f959cd308" kindref="member">mTopic</ref>;</highlight></codeline>
+<codeline lineno="14" refid="structsbf_sub_impl_1a801681af8cba9443567ccc9299349b8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1a801681af8cba9443567ccc9299349b8b" kindref="member">mWeight</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="structsbf_sub_impl_1a7bee7e5ab4ab8a7a0a998187a3cd5f1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1a7bee7e5ab4ab8a7a0a998187a3cd5f1e" kindref="member">mDestroyed</ref>;</highlight></codeline>
+<codeline lineno="17" refid="structsbf_sub_impl_1aa5b08ad5aede06fecc266545bed3c798" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1aa5b08ad5aede06fecc266545bed3c798" kindref="member">mRemoved</ref>;</highlight></codeline>
+<codeline lineno="18" refid="structsbf_sub_impl_1ad3ed819340d471f1ba88977c893b2e8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1ad3ed819340d471f1ba88977c893b2e8b" kindref="member">mRefCount</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="structsbf_sub_impl_1aa9136a43819a4f9c1644672553368ab4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1aa9136a43819a4f9c1644672553368ab4" kindref="member">mReady</ref>;</highlight></codeline>
+<codeline lineno="21" refid="structsbf_sub_impl_1a1ba4f56a9d23b0ff27f0a11fa861adb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1a1ba4f56a9d23b0ff27f0a11fa861adb9" kindref="member">mQueueBypass</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="structsbf_sub_impl_1a2f00fbeb6b4454bd171614d5dd3789c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_tport_impl" kindref="compound">sbfTportImpl</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1a2f00fbeb6b4454bd171614d5dd3789c1" kindref="member">mTport</ref>;</highlight></codeline>
+<codeline lineno="24" refid="structsbf_sub_impl_1a04edbd44efe29aa974958584577070a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfTportStreamImpl*<sp/><ref refid="structsbf_sub_impl_1a04edbd44efe29aa974958584577070a0" kindref="member">mTportStream</ref>;</highlight></codeline>
+<codeline lineno="25" refid="structsbf_sub_impl_1a20f3c4cbff205f7f68ddc3fa00327313" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_tport_topic_impl" kindref="compound">sbfTportTopicImpl</ref>*<sp/><sp/><ref refid="structsbf_sub_impl_1a20f3c4cbff205f7f68ddc3fa00327313" kindref="member">mTportTopic</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="structsbf_sub_impl_1a08131e49008f226f68013439884b2ab9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1a08131e49008f226f68013439884b2ab9" kindref="member">mQueue</ref>;</highlight></codeline>
+<codeline lineno="28" refid="structsbf_sub_impl_1a4b79d9b15aec85084167b5e75e7c2130" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_sub_8h_1a21874f3f038f352bd283fc2dffff1c2c" kindref="member">sbfSubReadyCb</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1a4b79d9b15aec85084167b5e75e7c2130" kindref="member">mReadyCb</ref>;</highlight></codeline>
+<codeline lineno="29" refid="structsbf_sub_impl_1a1e2f278d1c2f85a9d6b3d8868e2d7500" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_sub_8h_1a2f0fc2e02f85c60bea98943659ccbb4d" kindref="member">sbfSubMessageCb</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1a1e2f278d1c2f85a9d6b3d8868e2d7500" kindref="member">mMessageCb</ref>;</highlight></codeline>
+<codeline lineno="30" refid="structsbf_sub_impl_1af7bd2bcf5712363a4116737ab494261f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1af7bd2bcf5712363a4116737ab494261f" kindref="member">mClosure</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="structsbf_sub_impl_1ac5877d202959012641c633f568165ebb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">event<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1ac5877d202959012641c633f568165ebb" kindref="member">mEventAdd</ref>;</highlight></codeline>
+<codeline lineno="33" refid="structsbf_sub_impl_1adb38254be5e015b3f2e22b40abaeba24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">event<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1adb38254be5e015b3f2e22b40abaeba24" kindref="member">mEventRemove</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl_1a44c75ff67874943827c868e842430303" kindref="member">TAILQ_ENTRY</ref><sp/>(<ref refid="structsbf_sub_impl" kindref="compound">sbfSubImpl</ref>)<sp/><sp/><sp/>mEntry;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_sub_private_8h_1a8bc33e4d154dc5cdb4c9d2d4e8bc1639" kindref="member">sbfSub_ready</ref><sp/>(<ref refid="structsbf_sub_impl" kindref="compound">sbfSub</ref><sp/>sub);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_sub_private_8h_1a3c875c2961ee1921708b14d32fa208d3" kindref="member">sbfSub_message</ref><sp/>(<ref refid="structsbf_sub_impl" kindref="compound">sbfSub</ref><sp/>sub,<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_SUB_PRIVATE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="transport/sbfSubPrivate.h"/>
+  </compounddef>
+</doxygen>

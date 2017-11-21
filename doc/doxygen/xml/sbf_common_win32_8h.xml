@@ -1,0 +1,1348 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_common_win32_8h" kind="file" language="C++">
+    <compoundname>sbfCommonWin32.h</compoundname>
+    <includes local="no">assert.h</includes>
+    <includes local="no">errno.h</includes>
+    <includes local="no">regex.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">wchar.h</includes>
+    <includes local="no">process.h</includes>
+    <includes local="no">winsock2.h</includes>
+    <includes local="no">io.h</includes>
+    <includes local="no">iphlpapi.h</includes>
+    <includes local="no">ws2tcpip.h</includes>
+    <includes local="no">windows.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">sys/stat.h</includes>
+    <incdepgraph>
+      <node id="490">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="483">
+        <label>process.h</label>
+      </node>
+      <node id="488">
+        <label>windows.h</label>
+      </node>
+      <node id="474">
+        <label>assert.h</label>
+      </node>
+      <node id="487">
+        <label>ws2tcpip.h</label>
+      </node>
+      <node id="477">
+        <label>stdint.h</label>
+      </node>
+      <node id="479">
+        <label>stdlib.h</label>
+      </node>
+      <node id="475">
+        <label>errno.h</label>
+      </node>
+      <node id="485">
+        <label>io.h</label>
+      </node>
+      <node id="473">
+        <label>common/sbfCommonWin32.h</label>
+        <link refid="sbf_common_win32_8h"/>
+        <childnode refid="474" relation="include">
+        </childnode>
+        <childnode refid="475" relation="include">
+        </childnode>
+        <childnode refid="476" relation="include">
+        </childnode>
+        <childnode refid="477" relation="include">
+        </childnode>
+        <childnode refid="478" relation="include">
+        </childnode>
+        <childnode refid="479" relation="include">
+        </childnode>
+        <childnode refid="480" relation="include">
+        </childnode>
+        <childnode refid="481" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+        <childnode refid="483" relation="include">
+        </childnode>
+        <childnode refid="484" relation="include">
+        </childnode>
+        <childnode refid="485" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+        <childnode refid="487" relation="include">
+        </childnode>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+      </node>
+      <node id="486">
+        <label>iphlpapi.h</label>
+      </node>
+      <node id="484">
+        <label>winsock2.h</label>
+      </node>
+      <node id="482">
+        <label>wchar.h</label>
+      </node>
+      <node id="489">
+        <label>sys/types.h</label>
+      </node>
+      <node id="480">
+        <label>string.h</label>
+      </node>
+      <node id="481">
+        <label>time.h</label>
+      </node>
+      <node id="476">
+        <label>regex.h</label>
+      </node>
+      <node id="478">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structtimespec" prot="public">timespec</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_common_win32_8h_1aaadb6bb41668f554b12ee12829110cf7" prot="public" static="no">
+        <name>_CRT_NONSTDC_NO_WARNINGS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="5" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1af08ec37a8c99d747fb60fa15bc28678b" prot="public" static="no">
+        <name>_CRT_SECURE_NO_WARNINGS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="8" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1ae688d728e1acdfe5988c7db45d6f0166" prot="public" static="no">
+        <name>PATH_MAX</name>
+        <initializer>MAX_PATH</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="35" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a7d6e1cf1a8d53f38471e9e9db3faf740" prot="public" static="no">
+        <name>__func__</name>
+        <initializer>__FUNCTION__</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="38" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1ae3192df127a8ec551c64402669381f59" prot="public" static="no">
+        <name>SBF_EOL</name>
+        <initializer>&quot;\r\n&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="41" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a07d717b6b79aca40485910f7d4d278aa" prot="public" static="no">
+        <name>SBF_SHLIB_SUFFIX</name>
+        <initializer>/* not used */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="42" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1ae24ddcf80a3f76e535d9bf3a7f758b04" prot="public" static="no">
+        <name>SBF_PACKED</name>
+        <param><defname>d</defname></param>
+        <initializer>__pragma(pack(push, 1)) \
+    d \
+    __pragma(pack(pop))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="44" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1abcc9ea27d2fa4fc4b2b51bbdf96fb03d" prot="public" static="no">
+        <name>SBF_PRINTFLIKE</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="48" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a789fcd195035787245e7734413e9b5a2" prot="public" static="no">
+        <name>SBF_UNUSED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="49" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" prot="public" static="no">
+        <name>SBF_INLINE</name>
+        <initializer>_forceinline</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="50" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a6fc993d4b00d3799765f781b94543845" prot="public" static="no">
+        <name>SBF_PURE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="51" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1ac76a00346f1087c98e3af12caed55ebe" prot="public" static="no">
+        <name>SBF_CONST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="52" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a6ee02b35494da215f5fa30f1c64d5598" prot="public" static="no">
+        <name>SBF_DEAD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="53" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1aa4c0463d5143c422ff33e19f6bbd6764" prot="public" static="no">
+        <name>SBF_LIKELY</name>
+        <param><defname>e</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="55" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a270c0e11fe2fac830447b85580475bb9" prot="public" static="no">
+        <name>SBF_UNLIKELY</name>
+        <param><defname>e</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="56" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a9494b177643e1271eeb943d1dd3e9dbb" prot="public" static="no">
+        <name>SBF_ASSERT</name>
+        <param><defname>x</defname></param>
+        <initializer>assert (x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="58" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a2990854b08d77f3bbd332b8174604b01" prot="public" static="no">
+        <name>SBF_DLLEXPORT</name>
+        <initializer>__declspec (dllexport)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="60" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a05d4d9d0ff6dfcd043fef5990f4c03a2" prot="public" static="no">
+        <name>sbfThread_join</name>
+        <param><defname>t</defname></param>
+        <initializer>WaitForSingleObject (t, INFINITE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="64" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1ac4461ac56f70b819e85ab353ff052c27" prot="public" static="no">
+        <name>sbfCondVar_init</name>
+        <param><defname>c</defname></param>
+        <initializer>InitializeConditionVariable (c)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="67" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1aee816bafc4e98628a6be5e910fac2fb7" prot="public" static="no">
+        <name>sbfCondVar_destroy</name>
+        <param><defname>c</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="68" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a294ec73d6c256d0ab0d3cce320bdff44" prot="public" static="no">
+        <name>sbfCondVar_wait</name>
+        <param><defname>c</defname></param>
+        <param><defname>m</defname></param>
+        <initializer>SleepConditionVariableCS (c, m, INFINITE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="69" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a58cd7395d3682e48c52b5cb1d96c3d5e" prot="public" static="no">
+        <name>sbfCondVar_broadcast</name>
+        <param><defname>c</defname></param>
+        <initializer>WakeAllConditionVariable (c)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="70" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a1c1fe46b5cd2ee83b67395c6e24a086c" prot="public" static="no">
+        <name>sbfCondVar_signal</name>
+        <param><defname>c</defname></param>
+        <initializer>WakeConditionVariable (c)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="71" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a0f0968bebfa055ca5bc7ef552a0f7306" prot="public" static="no">
+        <name>sbfMutex_init</name>
+        <param><defname>m</defname></param>
+        <param><defname>recursive</defname></param>
+        <initializer>InitializeCriticalSection (m)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="74" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a696ae52b59c8ee67b0792cf793ca07c3" prot="public" static="no">
+        <name>sbfMutex_destroy</name>
+        <param><defname>m</defname></param>
+        <initializer>DeleteCriticalSection (m)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="75" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1afe21416b021add1d039070372b28c2b7" prot="public" static="no">
+        <name>sbfMutex_lock</name>
+        <param><defname>m</defname></param>
+        <initializer>EnterCriticalSection (m)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="76" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1ae9f52fb356fee346369a22cfef0def73" prot="public" static="no">
+        <name>sbfMutex_unlock</name>
+        <param><defname>m</defname></param>
+        <initializer>LeaveCriticalSection (m)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="77" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1aa4c4cdb3faf35a33070cb32b2d07fc02" prot="public" static="no">
+        <name>sbfSpinLock</name>
+        <initializer><ref refid="sbf_common_darwin_8h_1ae8e30512fa920f7ed878fc63307e7f97" kindref="member">sbfMutex</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="79" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a17322bf0a00b6f8c25d4ddaf8d8be5a3" prot="public" static="no">
+        <name>sbfSpinLock_init</name>
+        <param><defname>l</defname></param>
+        <initializer><ref refid="sbf_common_linux_8h_1a312c2c94c64b2ee6964edd6830e4862f" kindref="member">sbfMutex_init</ref> (l, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="80" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a03c68dcb3ba1974fecf82b5c5677df06" prot="public" static="no">
+        <name>sbfSpinLock_destroy</name>
+        <initializer><ref refid="sbf_common_win32_8h_1a696ae52b59c8ee67b0792cf793ca07c3" kindref="member">sbfMutex_destroy</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="81" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a994e66cd6be2970f50d9590b3769ee19" prot="public" static="no">
+        <name>sbfSpinLock_lock</name>
+        <initializer><ref refid="sbf_common_win32_8h_1afe21416b021add1d039070372b28c2b7" kindref="member">sbfMutex_lock</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="82" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a73c526a871a4a075bac2b9c3c3ce17d0" prot="public" static="no">
+        <name>sbfSpinLock_unlock</name>
+        <initializer><ref refid="sbf_common_win32_8h_1ae9f52fb356fee346369a22cfef0def73" kindref="member">sbfMutex_unlock</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="83" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1aa367b75c5aed883fef5befbdf04835a4" prot="public" static="no">
+        <name>snprintf</name>
+        <initializer>_snprintf</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="100" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1ac99ec3f1036620727a68aa8c25a8963c" prot="public" static="no">
+        <name>strcasecmp</name>
+        <initializer>_stricmp</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="101" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1aba00036f71bb67f8600b239a39cf5ec9" prot="public" static="no">
+        <name>strncasecmp</name>
+        <initializer>_strnicmp</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="102" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a3b96deb1c5b8e33fe2274b4578687e72" prot="public" static="no">
+        <name>strtoll</name>
+        <initializer>_strtoi64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="103" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1acbc25345a39784031ea891c317ab6f4e" prot="public" static="no">
+        <name>strtoull</name>
+        <initializer>_strtoui64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="104" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a00ba2ca988495904efc418acbf0627d7" prot="public" static="no">
+        <name>vsnprintf</name>
+        <initializer>_vsnprintf</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="105" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a227875b8399b0589b1124555d3ae4007" prot="public" static="no">
+        <name>fseeko</name>
+        <initializer>_fseeki64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="106" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a149da0702b060478da4d59ffe807adac" prot="public" static="no">
+        <name>stat</name>
+        <initializer>_stat</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="107" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1aa84a9ac582a3b7d9a0dea52e851855ea" prot="public" static="no">
+        <name>fstat</name>
+        <initializer>_fstat</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="108" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a9bed4137a0c686f73fdb3310b1dd9f30" prot="public" static="no">
+        <name>gmtime_r</name>
+        <param><defname>tp</defname></param>
+        <param><defname>tm</defname></param>
+        <initializer>gmtime_s (tm, tp)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="116" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a7e4ac7ec95919b38e71518cd6573f007" prot="public" static="no">
+        <name>localtime_r</name>
+        <param><defname>tp</defname></param>
+        <param><defname>tm</defname></param>
+        <initializer>localtime_s (tm, tp)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="117" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a631e8252798c4ede857d00d1cede6f0f" prot="public" static="no">
+        <name>getopt</name>
+        <param><defname>ac</defname></param>
+        <param><defname>av</defname></param>
+        <param><defname>o</defname></param>
+        <initializer><ref refid="sbf_common_win32_8h_1a9def4d0e84afd76da036d8c68172a5ec" kindref="member">BSDgetopt</ref> (ac, av, o)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="128" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a3d0369446ac39ee644edc472d24cfa5f" prot="public" static="no">
+        <name>opterr</name>
+        <initializer><ref refid="sbf_common_win32_8h_1a8badfe9f04be07862558f98f6a522e97" kindref="member">BSDopterr</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="129" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1afa9437ffe2a670485f18f082213533f8" prot="public" static="no">
+        <name>optind</name>
+        <initializer><ref refid="sbf_common_win32_8h_1a669d725531e2c2a52f60347ff33fed0e" kindref="member">BSDoptind</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="130" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a9b3c9beb2078394a97f009c54e93ce05" prot="public" static="no">
+        <name>optopt</name>
+        <initializer><ref refid="sbf_common_win32_8h_1a231a38fb4aeed51c5f37a47680781868" kindref="member">BSDoptopt</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="131" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1ab95d1b25e0c8b7aa1c5c1b427d3c1c0a" prot="public" static="no">
+        <name>optreset</name>
+        <initializer><ref refid="sbf_common_win32_8h_1a5fd40e912d8f11da30c167d75b228f32" kindref="member">BSDoptreset</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="132" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a9227b18da5777b0578ef7376ad78b649" prot="public" static="no">
+        <name>optarg</name>
+        <initializer><ref refid="sbf_common_win32_8h_1a2d25bab23ebf87160582f11391983c93" kindref="member">BSDoptarg</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="133" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a15bf68ce8b590838b3a5c0b639d8d519" prot="public" static="no">
+        <name>PROT_READ</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="163" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a2a79c8ceefb8fc25a940ae07a3d94429" prot="public" static="no">
+        <name>PROT_WRITE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="164" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a398ef47a991a44389aa9818c98a28d24" prot="public" static="no">
+        <name>MAP_PRIVATE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="166" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_win32_8h_1a8523dcf952f6ff059a3bed717e4f1296" prot="public" static="no">
+        <name>MAP_FAILED</name>
+        <initializer>((void*)-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="168" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="sbf_common_win32_8h_1a2f9c761af656069fe6fc3df81fa4331a" prot="public" static="no">
+        <name>clockid_t</name>
+        <enumvalue id="sbf_common_win32_8h_1a2f9c761af656069fe6fc3df81fa4331aa3225196686ced5a2732f8030a10c5b98" prot="public">
+          <name>CLOCK_REALTIME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="141" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="140" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sbf_common_win32_8h_1a66c32ad3b7c0b7b2a85d60b01749d0d5" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref> typedef intptr_t</type>
+        <definition>SBF_BEGIN_DECLS typedef intptr_t sbfSocket</definition>
+        <argsstring></argsstring>
+        <name>sbfSocket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="32" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sbf_common_win32_8h_1a8badfe9f04be07862558f98f6a522e97" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BSDopterr</definition>
+        <argsstring></argsstring>
+        <name>BSDopterr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="122" column="1" bodyfile="common/getopt.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sbf_common_win32_8h_1a669d725531e2c2a52f60347ff33fed0e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BSDoptind</definition>
+        <argsstring></argsstring>
+        <name>BSDoptind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="123" column="1" bodyfile="common/getopt.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sbf_common_win32_8h_1a231a38fb4aeed51c5f37a47680781868" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BSDoptopt</definition>
+        <argsstring></argsstring>
+        <name>BSDoptopt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="124" column="1" bodyfile="common/getopt.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sbf_common_win32_8h_1a5fd40e912d8f11da30c167d75b228f32" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BSDoptreset</definition>
+        <argsstring></argsstring>
+        <name>BSDoptreset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="125" column="1" bodyfile="common/getopt.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sbf_common_win32_8h_1a2d25bab23ebf87160582f11391983c93" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* BSDoptarg</definition>
+        <argsstring></argsstring>
+        <name>BSDoptarg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="126" column="1" bodyfile="common/getopt.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_common_win32_8h_1a0c262d35484effdf11451763a5e849f2" prot="public" static="no">
+        <type>HANDLE</type>
+        <definition>typedef HANDLE sbfThread</definition>
+        <argsstring></argsstring>
+        <name>sbfThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="62" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_common_win32_8h_1abbc78052b6315ac63b31b64988e4fc07" prot="public" static="no">
+        <type>CONDITION_VARIABLE</type>
+        <definition>typedef CONDITION_VARIABLE sbfCondVar</definition>
+        <argsstring></argsstring>
+        <name>sbfCondVar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="66" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_common_win32_8h_1a6be932d07a7433a88756a2f8584b09ca" prot="public" static="no">
+        <type>CRITICAL_SECTION</type>
+        <definition>typedef CRITICAL_SECTION sbfMutex</definition>
+        <argsstring></argsstring>
+        <name>sbfMutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="73" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_common_win32_8h_1ad62f9a0a81b9ea2001da4b62158c873b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sbfThread_create</definition>
+        <argsstring>(sbfThread *thread, void *(*cb)(void *), void *closure)</argsstring>
+        <name>sbfThread_create</name>
+        <param>
+          <type><ref refid="sbf_common_darwin_8h_1afbf7dc0a8bbd900f63f4bf4ec58c80f2" kindref="member">sbfThread</ref> *</type>
+          <declname>thread</declname>
+        </param>
+        <param>
+          <type>void *(*)(void *)</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="63" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="29" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8h_1aee5e1a2e9a4b32a52b3a44b9c83f4ba9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> void</type>
+        <definition>static SBF_INLINE void sleep</definition>
+        <argsstring>(u_int seconds)</argsstring>
+        <name>sleep</name>
+        <param>
+          <type>u_int</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="86" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8h_1a67e8c02fbbb0e466facdb5c879076191" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> char *</type>
+        <definition>static SBF_INLINE char* basename</definition>
+        <argsstring>(char *path)</argsstring>
+        <name>basename</name>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="92" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="92" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8h_1afe1d973411ec6554e24bae11e58612a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* fgetln</definition>
+        <argsstring>(FILE *fp, size_t *len)</argsstring>
+        <name>fgetln</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="110" column="1" bodyfile="common/fgetln.c" bodystart="43" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8h_1ae85b825a7f3d4dcf136b85949b646a46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t strlcat</definition>
+        <argsstring>(char *dst, const char *src, size_t siz)</argsstring>
+        <name>strlcat</name>
+        <param>
+          <type>char *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>siz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="112" column="1" bodyfile="common/strlcat.c" bodystart="30" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8h_1aeb79f86261de904967d433c1b5e9a1de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t strlcpy</definition>
+        <argsstring>(char *dst, const char *src, size_t siz)</argsstring>
+        <name>strlcpy</name>
+        <param>
+          <type>char *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>siz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="113" column="1" bodyfile="common/strlcpy.c" bodystart="28" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8h_1aaf2d0a99430a6d5253b8c395c30ca7e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gettimeofday</definition>
+        <argsstring>(struct timeval *tv, struct timezone *tz)</argsstring>
+        <name>gettimeofday</name>
+        <param>
+          <type>struct timeval *</type>
+          <declname>tv</declname>
+        </param>
+        <param>
+          <type>struct timezone *</type>
+          <declname>tz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="115" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8h_1aac4b1d7707d03271e198e29e8375345d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int asprintf</definition>
+        <argsstring>(char **ret, const char *fmt,...)</argsstring>
+        <name>asprintf</name>
+        <param>
+          <type>char **</type>
+          <declname>ret</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="119" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8h_1a54b6dd2c589426c8c2f2036f3342423e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vasprintf</definition>
+        <argsstring>(char **ret, const char *fmt, va_list ap)</argsstring>
+        <name>vasprintf</name>
+        <param>
+          <type>char **</type>
+          <declname>ret</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="120" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="64" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8h_1a9def4d0e84afd76da036d8c68172a5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BSDgetopt</definition>
+        <argsstring>(int, char *const *, const char *)</argsstring>
+        <name>BSDgetopt</name>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>char *const *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="127" column="1" bodyfile="common/getopt.c" bodystart="56" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8h_1a16e9146066526237e175565edb3c5a0d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> int</type>
+        <definition>static SBF_INLINE int clock_gettime</definition>
+        <argsstring>(clockid_t clock_id, struct timespec *tp)</argsstring>
+        <name>clock_gettime</name>
+        <param>
+          <type><ref refid="sbf_common_win32_8h_1a2f9c761af656069fe6fc3df81fa4331a" kindref="member">clockid_t</ref></type>
+          <declname>clock_id</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structtimespec" kindref="compound">timespec</ref> *</type>
+          <declname>tp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="145" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="145" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8h_1adcdc6990a7641f7ba05f5dd2a603b992" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* mmap</definition>
+        <argsstring>(void *addr, size_t length, int prot, int flags, int fd, off_t offset)</argsstring>
+        <name>mmap</name>
+        <param>
+          <type>void *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prot</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>off_t</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="170" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="88" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_win32_8h_1a7d888f95854ef9b7a9990f3b513bfef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void munmap</definition>
+        <argsstring>(void *addr, size_t length)</argsstring>
+        <name>munmap</name>
+        <param>
+          <type>void *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonWin32.h" line="176" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="128" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_COMMON_WIN32_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_COMMON_WIN32_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_CRT_NONSTDC_NO_WARNINGS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="sbf_common_win32_8h_1aaadb6bb41668f554b12ee12829110cf7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_CRT_NONSTDC_NO_WARNINGS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_CRT_SECURE_NO_WARNINGS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="sbf_common_win32_8h_1af08ec37a8c99d747fb60fa15bc28678b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_CRT_SECURE_NO_WARNINGS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wchar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;process.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;winsock2.h&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>must<sp/>be<sp/>before<sp/>windows.h<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;io.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iphlpapi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ws2tcpip.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="sbf_common_win32_8h_1a66c32ad3b7c0b7b2a85d60b01749d0d5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>intptr_t<sp/><ref refid="sbf_common_win32_8h_1a66c32ad3b7c0b7b2a85d60b01749d0d5" kindref="member">sbfSocket</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PATH_MAX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="sbf_common_win32_8h_1ae688d728e1acdfe5988c7db45d6f0166" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PATH_MAX<sp/>MAX_PATH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__func__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="sbf_common_win32_8h_1a7d6e1cf1a8d53f38471e9e9db3faf740" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__func__<sp/>__FUNCTION__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="sbf_common_win32_8h_1ae3192df127a8ec551c64402669381f59" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_EOL<sp/>&quot;\r\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="sbf_common_win32_8h_1a07d717b6b79aca40485910f7d4d278aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_SHLIB_SUFFIX<sp/></highlight><highlight class="comment">/*<sp/>not<sp/>used<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="sbf_common_win32_8h_1ae24ddcf80a3f76e535d9bf3a7f758b04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_PACKED(d)<sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>__pragma(pack(push,<sp/>1))<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>d<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>__pragma(pack(pop))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="sbf_common_win32_8h_1abcc9ea27d2fa4fc4b2b51bbdf96fb03d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_PRINTFLIKE(a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="sbf_common_win32_8h_1a789fcd195035787245e7734413e9b5a2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_UNUSED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_INLINE<sp/>_forceinline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="sbf_common_win32_8h_1a6fc993d4b00d3799765f781b94543845" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_PURE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="sbf_common_win32_8h_1ac76a00346f1087c98e3af12caed55ebe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_CONST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="sbf_common_win32_8h_1a6ee02b35494da215f5fa30f1c64d5598" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_DEAD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="sbf_common_win32_8h_1aa4c0463d5143c422ff33e19f6bbd6764" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_LIKELY(e)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="sbf_common_win32_8h_1a270c0e11fe2fac830447b85580475bb9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_UNLIKELY(e)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="sbf_common_win32_8h_1a9494b177643e1271eeb943d1dd3e9dbb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_ASSERT(x)<sp/>assert<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="sbf_common_win32_8h_1a2990854b08d77f3bbd332b8174604b01" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_DLLEXPORT<sp/>__declspec<sp/>(dllexport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="sbf_common_win32_8h_1a0c262d35484effdf11451763a5e849f2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>HANDLE<sp/><ref refid="sbf_common_win32_8h_1a0c262d35484effdf11451763a5e849f2" kindref="member">sbfThread</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sbf_common_win32_8h_1ad62f9a0a81b9ea2001da4b62158c873b" kindref="member">sbfThread_create</ref><sp/>(<ref refid="sbf_common_darwin_8h_1afbf7dc0a8bbd900f63f4bf4ec58c80f2" kindref="member">sbfThread</ref>*<sp/>thread,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>(*cb)<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="64" refid="sbf_common_win32_8h_1a05d4d9d0ff6dfcd043fef5990f4c03a2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfThread_join(t)<sp/>WaitForSingleObject<sp/>(t,<sp/>INFINITE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="sbf_common_win32_8h_1abbc78052b6315ac63b31b64988e4fc07" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>CONDITION_VARIABLE<sp/><ref refid="sbf_common_win32_8h_1abbc78052b6315ac63b31b64988e4fc07" kindref="member">sbfCondVar</ref>;</highlight></codeline>
+<codeline lineno="67" refid="sbf_common_win32_8h_1ac4461ac56f70b819e85ab353ff052c27" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfCondVar_init(c)<sp/>InitializeConditionVariable<sp/>(c)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="sbf_common_win32_8h_1aee816bafc4e98628a6be5e910fac2fb7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfCondVar_destroy(c)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="sbf_common_win32_8h_1a294ec73d6c256d0ab0d3cce320bdff44" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfCondVar_wait(c,<sp/>m)<sp/>SleepConditionVariableCS<sp/>(c,<sp/>m,<sp/>INFINITE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="sbf_common_win32_8h_1a58cd7395d3682e48c52b5cb1d96c3d5e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfCondVar_broadcast(c)<sp/>WakeAllConditionVariable<sp/>(c)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="sbf_common_win32_8h_1a1c1fe46b5cd2ee83b67395c6e24a086c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfCondVar_signal(c)<sp/>WakeConditionVariable<sp/>(c)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="sbf_common_win32_8h_1a6be932d07a7433a88756a2f8584b09ca" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>CRITICAL_SECTION<sp/><ref refid="sbf_common_win32_8h_1a6be932d07a7433a88756a2f8584b09ca" kindref="member">sbfMutex</ref>;</highlight></codeline>
+<codeline lineno="74" refid="sbf_common_win32_8h_1a0f0968bebfa055ca5bc7ef552a0f7306" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfMutex_init(m,<sp/>recursive)<sp/>InitializeCriticalSection<sp/>(m)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="sbf_common_win32_8h_1a696ae52b59c8ee67b0792cf793ca07c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfMutex_destroy(m)<sp/>DeleteCriticalSection<sp/>(m)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="sbf_common_win32_8h_1afe21416b021add1d039070372b28c2b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfMutex_lock(m)<sp/>EnterCriticalSection<sp/>(m)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="sbf_common_win32_8h_1ae9f52fb356fee346369a22cfef0def73" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfMutex_unlock(m)<sp/>LeaveCriticalSection<sp/>(m)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="sbf_common_win32_8h_1aa4c4cdb3faf35a33070cb32b2d07fc02" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfSpinLock<sp/>sbfMutex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="sbf_common_win32_8h_1a17322bf0a00b6f8c25d4ddaf8d8be5a3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfSpinLock_init(l)<sp/>sbfMutex_init<sp/>(l,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="sbf_common_win32_8h_1a03c68dcb3ba1974fecf82b5c5677df06" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfSpinLock_destroy<sp/>sbfMutex_destroy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="sbf_common_win32_8h_1a994e66cd6be2970f50d9590b3769ee19" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfSpinLock_lock<sp/>sbfMutex_lock</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="sbf_common_win32_8h_1a73c526a871a4a075bac2b9c3c3ce17d0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfSpinLock_unlock<sp/>sbfMutex_unlock</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">sleep<sp/>(u_int<sp/>seconds)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>Sleep<sp/>(seconds<sp/>*<sp/>1000U);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">basename<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[_MAX_FNAME];</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>_splitpath<sp/>(path,<sp/>NULL,<sp/>NULL,<sp/>name,<sp/>NULL);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy<sp/>(path,<sp/>name,<sp/>strlen<sp/>(name)<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="sbf_common_win32_8h_1aa367b75c5aed883fef5befbdf04835a4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>snprintf<sp/>_snprintf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="sbf_common_win32_8h_1ac99ec3f1036620727a68aa8c25a8963c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>strcasecmp<sp/>_stricmp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="sbf_common_win32_8h_1aba00036f71bb67f8600b239a39cf5ec9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>strncasecmp<sp/>_strnicmp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="sbf_common_win32_8h_1a3b96deb1c5b8e33fe2274b4578687e72" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>strtoll<sp/>_strtoi64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="sbf_common_win32_8h_1acbc25345a39784031ea891c317ab6f4e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>strtoull<sp/>_strtoui64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="sbf_common_win32_8h_1a00ba2ca988495904efc418acbf0627d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>vsnprintf<sp/>_vsnprintf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="sbf_common_win32_8h_1a227875b8399b0589b1124555d3ae4007" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fseeko<sp/>_fseeki64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="sbf_common_win32_8h_1a149da0702b060478da4d59ffe807adac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>stat<sp/>_stat</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="sbf_common_win32_8h_1aa84a9ac582a3b7d9a0dea52e851855ea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fstat<sp/>_fstat</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_common_win32_8h_1afe1d973411ec6554e24bae11e58612a9" kindref="member">fgetln</ref>(FILE*<sp/>fp,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>len);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="sbf_common_win32_8h_1ae85b825a7f3d4dcf136b85949b646a46" kindref="member">strlcat</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>siz);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="sbf_common_win32_8h_1aeb79f86261de904967d433c1b5e9a1de" kindref="member">strlcpy</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>siz);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sbf_common_win32_8h_1aaf2d0a99430a6d5253b8c395c30ca7e3" kindref="member">gettimeofday</ref><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timeval*<sp/>tv,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timezone*<sp/>tz);</highlight></codeline>
+<codeline lineno="116" refid="sbf_common_win32_8h_1a9bed4137a0c686f73fdb3310b1dd9f30" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>gmtime_r(tp,<sp/>tm)<sp/>gmtime_s<sp/>(tm,<sp/>tp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="sbf_common_win32_8h_1a7e4ac7ec95919b38e71518cd6573f007" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>localtime_r(tp,<sp/>tm)<sp/>localtime_s<sp/>(tm,<sp/>tp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sbf_common_win32_8h_1aac4b1d7707d03271e198e29e8375345d" kindref="member">asprintf</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>ret,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,<sp/>...);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sbf_common_win32_8h_1a54b6dd2c589426c8c2f2036f3342423e" kindref="member">vasprintf</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>ret,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,<sp/>va_list<sp/>ap);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a8badfe9f04be07862558f98f6a522e97" kindref="member">BSDopterr</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a669d725531e2c2a52f60347ff33fed0e" kindref="member">BSDoptind</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a231a38fb4aeed51c5f37a47680781868" kindref="member">BSDoptopt</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a5fd40e912d8f11da30c167d75b228f32" kindref="member">BSDoptreset</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_common_win32_8h_1a2d25bab23ebf87160582f11391983c93" kindref="member">BSDoptarg</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a9def4d0e84afd76da036d8c68172a5ec" kindref="member">BSDgetopt</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="128" refid="sbf_common_win32_8h_1a631e8252798c4ede857d00d1cede6f0f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>getopt(ac,<sp/>av,<sp/>o)<sp/>BSDgetopt<sp/>(ac,<sp/>av,<sp/>o)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="sbf_common_win32_8h_1a3d0369446ac39ee644edc472d24cfa5f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>opterr<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BSDopterr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="sbf_common_win32_8h_1afa9437ffe2a670485f18f082213533f8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>optind<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BSDoptind</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="sbf_common_win32_8h_1a9b3c9beb2078394a97f009c54e93ce05" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>optopt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BSDoptopt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="sbf_common_win32_8h_1ab95d1b25e0c8b7aa1c5c1b427d3c1c0a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>optreset<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BSDoptreset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="sbf_common_win32_8h_1a9227b18da5777b0578ef7376ad78b649" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>optarg<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BSDoptarg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="structtimespec" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtimespec" kindref="compound">timespec</ref></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137" refid="structtimespec_1afc3302668d7cb5952f590da69fdd4955" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/><ref refid="structtimespec_1afc3302668d7cb5952f590da69fdd4955" kindref="member">tv_sec</ref>;</highlight></codeline>
+<codeline lineno="138" refid="structtimespec_1ae3c7510dafa8cbcaede866ed13c99683" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="structtimespec_1ae3c7510dafa8cbcaede866ed13c99683" kindref="member">tv_nsec</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="140" refid="sbf_common_win32_8h_1a2f9c761af656069fe6fc3df81fa4331a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142" refid="sbf_common_win32_8h_1a2f9c761af656069fe6fc3df81fa4331aa3225196686ced5a2732f8030a10c5b98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a2f9c761af656069fe6fc3df81fa4331aa3225196686ced5a2732f8030a10c5b98" kindref="member">CLOCK_REALTIME</ref>,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}<sp/><ref refid="sbf_common_win32_8h_1a2f9c761af656069fe6fc3df81fa4331a" kindref="member">clockid_t</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">clock_gettime<sp/>(clockid_t<sp/>clock_id,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structtimespec" kindref="compound">timespec</ref>*<sp/>tp)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>tv;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(clock_id<sp/>!=<sp/><ref refid="sbf_common_win32_8h_1a2f9c761af656069fe6fc3df81fa4331aa3225196686ced5a2732f8030a10c5b98" kindref="member">CLOCK_REALTIME</ref>)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errno<sp/>=<sp/>EINVAL;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="sbf_common_win32_8h_1aaf2d0a99430a6d5253b8c395c30ca7e3" kindref="member">gettimeofday</ref><sp/>(&amp;tv,<sp/>NULL)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>tp-&gt;<ref refid="structtimespec_1afc3302668d7cb5952f590da69fdd4955" kindref="member">tv_sec</ref><sp/>=<sp/>tv.tv_sec;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>tp-&gt;<ref refid="structtimespec_1ae3c7510dafa8cbcaede866ed13c99683" kindref="member">tv_nsec</ref><sp/>=<sp/>tv.tv_usec<sp/>*<sp/>1000U;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="sbf_common_win32_8h_1a15bf68ce8b590838b3a5c0b639d8d519" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROT_READ<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="sbf_common_win32_8h_1a2a79c8ceefb8fc25a940ae07a3d94429" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROT_WRITE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="sbf_common_win32_8h_1a398ef47a991a44389aa9818c98a28d24" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP_PRIVATE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="sbf_common_win32_8h_1a8523dcf952f6ff059a3bed717e4f1296" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP_FAILED<sp/>((void*)-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="sbf_common_win32_8h_1adcdc6990a7641f7ba05f5dd2a603b992" kindref="member">mmap</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>addr,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prot,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>off_t<sp/>offset);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_common_win32_8h_1a7d888f95854ef9b7a9990f3b513bfef2" kindref="member">munmap</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>addr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_COMMON_WIN32_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfCommonWin32.h"/>
+  </compounddef>
+</doxygen>

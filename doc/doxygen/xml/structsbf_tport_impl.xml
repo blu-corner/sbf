@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsbf_tport_impl" kind="struct" language="C++" prot="public">
+    <compoundname>sbfTportImpl</compoundname>
+    <includes refid="sbf_tport_private_8h" local="no">sbfTportPrivate.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsbf_tport_impl_1a479a53f600c798bac8ec39d763606e3b" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* sbfTportImpl::mName</definition>
+        <argsstring></argsstring>
+        <name>mName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="87" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1a0284b04207007b25a00f4e3105f53671" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+        <definition>sbfLog sbfTportImpl::mLog</definition>
+        <argsstring></argsstring>
+        <name>mLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="88" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1ab8677b4ccf6d50fb13b2d8ee1941189e" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref></type>
+        <definition>sbfMw sbfTportImpl::mMw</definition>
+        <argsstring></argsstring>
+        <name>mMw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="89" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1ae762a1282783e4c4cec497fca0bd66bf" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+        <definition>sbfKeyValue sbfTportImpl::mProperties</definition>
+        <argsstring></argsstring>
+        <name>mProperties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="91" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1afeeb5e1f4c292f89e7afb156937f7318" prot="public" static="no" mutable="no">
+        <type><ref refid="structsbf_handler_table" kindref="compound">sbfHandlerTable</ref> *</type>
+        <definition>sbfHandlerTable* sbfTportImpl::mHandlerTable</definition>
+        <argsstring></argsstring>
+        <name>mHandlerTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="93" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1a06b6537236f3b03f3c50ebb9c001d2eb" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref></type>
+        <definition>sbfHandler sbfTportImpl::mHandler</definition>
+        <argsstring></argsstring>
+        <name>mHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="94" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1abaeab5cdded63e886405d7e4b1f99740" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t sbfTportImpl::mThreads</definition>
+        <argsstring></argsstring>
+        <name>mThreads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="96" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1a08c6c768ccbbd55eae49d22ce0b87361" prot="public" static="no" mutable="no">
+        <type>u_int</type>
+        <definition>u_int sbfTportImpl::mWeights[SBF_MW_THREAD_LIMIT]</definition>
+        <argsstring>[SBF_MW_THREAD_LIMIT]</argsstring>
+        <name>mWeights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="98" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1a62de8a78dcf727513660d5376a1bdb22" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_common_darwin_8h_1ae8e30512fa920f7ed878fc63307e7f97" kindref="member">sbfMutex</ref></type>
+        <definition>sbfMutex sbfTportImpl::mWeightsLock</definition>
+        <argsstring></argsstring>
+        <name>mWeightsLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="99" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1aff5190b2790b8b36b1d869709ce6df7f" prot="public" static="no" mutable="no">
+        <type>u_int</type>
+        <definition>u_int sbfTportImpl::mWeightsListSize</definition>
+        <argsstring></argsstring>
+        <name>mWeightsListSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="100" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1a8bb6814d325f710d22d451574581dd70" prot="public" static="no" mutable="no">
+        <type><ref refid="structsbf_tport_weight" kindref="compound">sbfTportWeight</ref> *</type>
+        <definition>sbfTportWeight* sbfTportImpl::mWeightsList</definition>
+        <argsstring></argsstring>
+        <name>mWeightsList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="101" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1a1b0612e3f6c505dd3cc400d02bf84a45" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_common_darwin_8h_1ae8e30512fa920f7ed878fc63307e7f97" kindref="member">sbfMutex</ref></type>
+        <definition>sbfMutex sbfTportImpl::mStreamsLock</definition>
+        <argsstring></argsstring>
+        <name>mStreamsLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="104" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1a14e04d76d23b05760a3503c1926eed12" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_common_darwin_8h_1a27e225ff8446b4974be1e839d59f6a46" kindref="member">sbfCondVar</ref></type>
+        <definition>sbfCondVar sbfTportImpl::mStreamsCondVar</definition>
+        <argsstring></argsstring>
+        <name>mStreamsCondVar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="105" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tport_impl_1a26722ead7451c6b40939a08e9778eec0" prot="public" static="no" mutable="no">
+        <type>u_int</type>
+        <definition>u_int sbfTportImpl::mStreamsWaiting</definition>
+        <argsstring></argsstring>
+        <name>mStreamsWaiting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="106" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsbf_tport_impl_1a7eec783373990224f4015ebbaecb28fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sbfTportImpl::TAILQ_HEAD</definition>
+        <argsstring>(, sbfTportStreamImpl) mStreams</argsstring>
+        <name>TAILQ_HEAD</name>
+        <param>
+          <type>sbfTportStreamImpl</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTportPrivate.h" line="103" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="254">
+        <label>sbfMwThreadImpl</label>
+        <link refid="structsbf_mw_thread_impl"/>
+        <childnode refid="253" relation="usage">
+          <edgelabel>mParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="257">
+        <label>sbfTportWeight</label>
+        <link refid="structsbf_tport_weight"/>
+      </node>
+      <node id="253">
+        <label>sbfMwImpl</label>
+        <link refid="structsbf_mw_impl"/>
+        <childnode refid="254" relation="usage">
+          <edgelabel>mThreads</edgelabel>
+        </childnode>
+        <childnode refid="255" relation="usage">
+          <edgelabel>mLog</edgelabel>
+        </childnode>
+      </node>
+      <node id="252">
+        <label>sbfTportImpl</label>
+        <link refid="structsbf_tport_impl"/>
+        <childnode refid="253" relation="usage">
+          <edgelabel>mMw</edgelabel>
+        </childnode>
+        <childnode refid="257" relation="usage">
+          <edgelabel>mWeightsList</edgelabel>
+        </childnode>
+        <childnode refid="258" relation="usage">
+          <edgelabel>mHandlerTable</edgelabel>
+        </childnode>
+        <childnode refid="255" relation="usage">
+          <edgelabel>mLog</edgelabel>
+        </childnode>
+      </node>
+      <node id="256">
+        <label>sbfLogFileImpl</label>
+        <link refid="structsbf_log_file_impl"/>
+      </node>
+      <node id="255">
+        <label>sbfLogImpl</label>
+        <link refid="structsbf_log_impl"/>
+        <childnode refid="255" relation="usage">
+          <edgelabel>mHookCb</edgelabel>
+        </childnode>
+        <childnode refid="256" relation="usage">
+          <edgelabel>mFile</edgelabel>
+        </childnode>
+      </node>
+      <node id="258">
+        <label>sbfHandlerTable</label>
+        <link refid="structsbf_handler_table"/>
+        <childnode refid="254" relation="usage">
+          <edgelabel>mAddStream</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="transport/sbfTportPrivate.h" line="86" column="1" bodyfile="transport/sbfTportPrivate.h" bodystart="85" bodyend="107"/>
+    <listofallmembers>
+      <member refid="structsbf_tport_impl_1a06b6537236f3b03f3c50ebb9c001d2eb" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mHandler</name></member>
+      <member refid="structsbf_tport_impl_1afeeb5e1f4c292f89e7afb156937f7318" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mHandlerTable</name></member>
+      <member refid="structsbf_tport_impl_1a0284b04207007b25a00f4e3105f53671" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mLog</name></member>
+      <member refid="structsbf_tport_impl_1ab8677b4ccf6d50fb13b2d8ee1941189e" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mMw</name></member>
+      <member refid="structsbf_tport_impl_1a479a53f600c798bac8ec39d763606e3b" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mName</name></member>
+      <member refid="structsbf_tport_impl_1ae762a1282783e4c4cec497fca0bd66bf" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mProperties</name></member>
+      <member refid="structsbf_tport_impl_1a14e04d76d23b05760a3503c1926eed12" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mStreamsCondVar</name></member>
+      <member refid="structsbf_tport_impl_1a1b0612e3f6c505dd3cc400d02bf84a45" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mStreamsLock</name></member>
+      <member refid="structsbf_tport_impl_1a26722ead7451c6b40939a08e9778eec0" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mStreamsWaiting</name></member>
+      <member refid="structsbf_tport_impl_1abaeab5cdded63e886405d7e4b1f99740" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mThreads</name></member>
+      <member refid="structsbf_tport_impl_1a08c6c768ccbbd55eae49d22ce0b87361" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mWeights</name></member>
+      <member refid="structsbf_tport_impl_1a8bb6814d325f710d22d451574581dd70" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mWeightsList</name></member>
+      <member refid="structsbf_tport_impl_1aff5190b2790b8b36b1d869709ce6df7f" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mWeightsListSize</name></member>
+      <member refid="structsbf_tport_impl_1a62de8a78dcf727513660d5376a1bdb22" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>mWeightsLock</name></member>
+      <member refid="structsbf_tport_impl_1a7eec783373990224f4015ebbaecb28fc" prot="public" virt="non-virtual"><scope>sbfTportImpl</scope><name>TAILQ_HEAD</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

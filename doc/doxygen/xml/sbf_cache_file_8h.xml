@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_cache_file_8h" kind="file" language="C++">
+    <compoundname>sbfCacheFile.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_cache_file_8c" local="yes">common/sbfCacheFile.c</includedby>
+    <incdepgraph>
+      <node id="238">
+        <label>event.h</label>
+      </node>
+      <node id="235">
+        <label>common/sbfCacheFile.h</label>
+        <link refid="sbf_cache_file_8h"/>
+        <childnode refid="236" relation="include">
+        </childnode>
+      </node>
+      <node id="237">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="239">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="243">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="236" relation="include">
+        </childnode>
+      </node>
+      <node id="240">
+        <label>sys/types.h</label>
+      </node>
+      <node id="236">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+      </node>
+      <node id="242">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="241">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="244">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="236" relation="include">
+        </childnode>
+      </node>
+      <node id="245">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="236" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="247">
+        <label>common/sbfCacheFile.c</label>
+        <link refid="sbf_cache_file_8c"/>
+      </node>
+      <node id="246">
+        <label>common/sbfCacheFile.h</label>
+        <link refid="sbf_cache_file_8h"/>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_cache_file_8h_1a2ad4f3345eb66c3a92cb89941d813a0f" prot="public" static="no">
+        <type>typedefSBF_BEGIN_DECLS struct <ref refid="structsbf_cache_file_impl" kindref="compound">sbfCacheFileImpl</ref> *</type>
+        <definition>typedef typedefSBF_BEGIN_DECLS struct sbfCacheFileImpl* sbfCacheFile</definition>
+        <argsstring></argsstring>
+        <name>sbfCacheFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFile.h" line="8" column="1" bodyfile="common/sbfCacheFile.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_cache_file_8h_1aad399e05f69629ae8b82cd766e7d1dd0" prot="public" static="no">
+        <type>struct <ref refid="structsbf_cache_file_item_impl" kindref="compound">sbfCacheFileItemImpl</ref> *</type>
+        <definition>typedef struct sbfCacheFileItemImpl* sbfCacheFileItem</definition>
+        <argsstring></argsstring>
+        <name>sbfCacheFileItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFile.h" line="9" column="1" bodyfile="common/sbfCacheFile.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_cache_file_8h_1a14e01efd738983536133d1578ed20206" prot="public" static="no">
+        <type><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref>(*</type>
+        <definition>typedef sbfError(* sbfCacheFileItemCb) (sbfCacheFile file, sbfCacheFileItem item, void *itemData, size_t itemSize, void *closure)</definition>
+        <argsstring>)(sbfCacheFile file, sbfCacheFileItem item, void *itemData, size_t itemSize, void *closure)</argsstring>
+        <name>sbfCacheFileItemCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFile.h" line="11" column="1" bodyfile="common/sbfCacheFile.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_cache_file_8h_1a6ff6e582b3ebeb8b2d125552eee49bb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_cache_file_8h_1a2ad4f3345eb66c3a92cb89941d813a0f" kindref="member">sbfCacheFile</ref></type>
+        <definition>sbfCacheFile sbfCacheFile_open</definition>
+        <argsstring>(const char *path, size_t itemSize, int always_create, int *created, sbfCacheFileItemCb cb, void *closure)</argsstring>
+        <name>sbfCacheFile_open</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>itemSize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>always_create</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>created</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_cache_file_8h_1a14e01efd738983536133d1578ed20206" kindref="member">sbfCacheFileItemCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFile.h" line="17" column="1" bodyfile="common/sbfCacheFile.c" bodystart="17" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_cache_file_8h_1ae3199d8d410343dca6c92e0fc12d3bcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfCacheFile_close</definition>
+        <argsstring>(sbfCacheFile file)</argsstring>
+        <name>sbfCacheFile_close</name>
+        <param>
+          <type><ref refid="sbf_cache_file_8h_1a2ad4f3345eb66c3a92cb89941d813a0f" kindref="member">sbfCacheFile</ref></type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFile.h" line="23" column="1" bodyfile="common/sbfCacheFile.c" bodystart="86" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_cache_file_8h_1a8a11bafc40a7045ab7e05311eb9e0684" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_cache_file_8h_1aad399e05f69629ae8b82cd766e7d1dd0" kindref="member">sbfCacheFileItem</ref></type>
+        <definition>sbfCacheFileItem sbfCacheFile_add</definition>
+        <argsstring>(sbfCacheFile file, void *itemData)</argsstring>
+        <name>sbfCacheFile_add</name>
+        <param>
+          <type><ref refid="sbf_cache_file_8h_1a2ad4f3345eb66c3a92cb89941d813a0f" kindref="member">sbfCacheFile</ref></type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>itemData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFile.h" line="25" column="1" bodyfile="common/sbfCacheFile.c" bodystart="102" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_cache_file_8h_1a647e0a35e84e0a92ef180154c5d4c0f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref></type>
+        <definition>sbfError sbfCacheFile_write</definition>
+        <argsstring>(sbfCacheFileItem item, void *itemData)</argsstring>
+        <name>sbfCacheFile_write</name>
+        <param>
+          <type><ref refid="sbf_cache_file_8h_1aad399e05f69629ae8b82cd766e7d1dd0" kindref="member">sbfCacheFileItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>itemData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFile.h" line="26" column="1" bodyfile="common/sbfCacheFile.c" bodystart="117" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_cache_file_8h_1a5c0746c9ab8e903fbdbb83f964698713" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref></type>
+        <definition>sbfError sbfCacheFile_writeOffset</definition>
+        <argsstring>(sbfCacheFileItem item, size_t offset, void *data, size_t size)</argsstring>
+        <name>sbfCacheFile_writeOffset</name>
+        <param>
+          <type><ref refid="sbf_cache_file_8h_1aad399e05f69629ae8b82cd766e7d1dd0" kindref="member">sbfCacheFileItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFile.h" line="27" column="1" bodyfile="common/sbfCacheFile.c" bodystart="129" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_cache_file_8h_1a577be5a835fb3e1b5ca3b11f2a67711e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfCacheFile_flush</definition>
+        <argsstring>(sbfCacheFile file)</argsstring>
+        <name>sbfCacheFile_flush</name>
+        <param>
+          <type><ref refid="sbf_cache_file_8h_1a2ad4f3345eb66c3a92cb89941d813a0f" kindref="member">sbfCacheFile</ref></type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFile.h" line="32" column="1" bodyfile="common/sbfCacheFile.c" bodystart="147" bodyend="150"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_CACHE_FILE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_CACHE_FILE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="sbf_cache_file_8h_1a2ad4f3345eb66c3a92cb89941d813a0f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_cache_file_impl" kindref="compound">sbfCacheFileImpl</ref>*<sp/><ref refid="sbf_cache_file_8h_1a2ad4f3345eb66c3a92cb89941d813a0f" kindref="member">sbfCacheFile</ref>;</highlight></codeline>
+<codeline lineno="9" refid="sbf_cache_file_8h_1aad399e05f69629ae8b82cd766e7d1dd0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_cache_file_item_impl" kindref="compound">sbfCacheFileItemImpl</ref>*<sp/><ref refid="sbf_cache_file_8h_1aad399e05f69629ae8b82cd766e7d1dd0" kindref="member">sbfCacheFileItem</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="sbf_cache_file_8h_1a14e01efd738983536133d1578ed20206" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref><sp/>(*<ref refid="sbf_cache_file_8h_1a14e01efd738983536133d1578ed20206" kindref="member">sbfCacheFileItemCb</ref>)<sp/>(sbfCacheFile<sp/>file,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfCacheFileItem<sp/>item,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itemData,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>itemSize,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">sbfCacheFile<sp/><ref refid="sbf_cache_file_8h_1a6ff6e582b3ebeb8b2d125552eee49bb8" kindref="member">sbfCacheFile_open</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>itemSize,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>always_create,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>created,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_cache_file_8h_1a14e01efd738983536133d1578ed20206" kindref="member">sbfCacheFileItemCb</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_cache_file_8h_1ae3199d8d410343dca6c92e0fc12d3bcb" kindref="member">sbfCacheFile_close</ref><sp/>(sbfCacheFile<sp/>file);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">sbfCacheFileItem<sp/><ref refid="sbf_cache_file_8h_1a8a11bafc40a7045ab7e05311eb9e0684" kindref="member">sbfCacheFile_add</ref><sp/>(sbfCacheFile<sp/>file,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itemData);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref><sp/><ref refid="sbf_cache_file_8h_1a647e0a35e84e0a92ef180154c5d4c0f0" kindref="member">sbfCacheFile_write</ref><sp/>(sbfCacheFileItem<sp/>item,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itemData);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref><sp/><ref refid="sbf_cache_file_8h_1a5c0746c9ab8e903fbdbb83f964698713" kindref="member">sbfCacheFile_writeOffset</ref><sp/>(sbfCacheFileItem<sp/>item,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>offset,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_cache_file_8h_1a577be5a835fb3e1b5ca3b11f2a67711e" kindref="member">sbfCacheFile_flush</ref><sp/>(sbfCacheFile<sp/>file);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_CACHE_FILE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfCacheFile.h"/>
+  </compounddef>
+</doxygen>

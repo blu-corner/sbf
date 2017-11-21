@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['version',['version',['../structpcre__callout__block.html#ab8744d79c7a630e6edc959c0448dd6c6',1,'pcre_callout_block::version()'],['../structpcre16__callout__block.html#a5b442eb1497b0b109598a4229a13ce49',1,'pcre16_callout_block::version()'],['../structpcre32__callout__block.html#a7c45f6537d446ae91695d370a1a175b6',1,'pcre32_callout_block::version()']]]
+  ['re_5ferroffset',['re_erroffset',['../structregex__t.html#a4ca064e058d5340df658822637ecba06',1,'regex_t']]],
+  ['re_5fnsub',['re_nsub',['../structregex__t.html#a4dfc1ce26c896695b77854da7d607ec8',1,'regex_t']]],
+  ['re_5fpcre',['re_pcre',['../structregex__t.html#ab3694f54105f125bc239be955f54143e',1,'regex_t']]],
+  ['release',['release',['../namespaceconf.html#a325dc746d8bf05c54d26351c35a21d90',1,'conf']]],
+  ['rm_5feo',['rm_eo',['../structregmatch__t.html#a728c28b9b23fa28c4e0b90e3a1a29efc',1,'regmatch_t']]],
+  ['rm_5fso',['rm_so',['../structregmatch__t.html#a90ac8973d256eaffdbb20de676ff45a4',1,'regmatch_t']]]
 ];

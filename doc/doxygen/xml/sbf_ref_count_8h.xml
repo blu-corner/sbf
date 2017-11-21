@@ -1,0 +1,560 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_ref_count_8h" kind="file" language="C++">
+    <compoundname>sbfRefCount.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_buffer_8h" local="yes">common/sbfBuffer.h</includedby>
+    <includedby refid="sbf_tcp_connection_private_8h" local="yes">common/sbfTcpConnectionPrivate.h</includedby>
+    <includedby refid="sbf_tcp_listener_private_8h" local="yes">common/sbfTcpListenerPrivate.h</includedby>
+    <includedby refid="sbf_event_private_8h" local="yes">core/sbfEventPrivate.h</includedby>
+    <includedby refid="sbf_hi_res_timer_private_8h" local="yes">core/sbfHiResTimerPrivate.h</includedby>
+    <includedby refid="sbf_queue_private_8h" local="yes">core/sbfQueuePrivate.h</includedby>
+    <includedby refid="sbf_timer_private_8h" local="yes">core/sbfTimerPrivate.h</includedby>
+    <includedby refid="sbf_request_reply_private_8h" local="yes">requestreply/sbfRequestReplyPrivate.h</includedby>
+    <incdepgraph>
+      <node id="1436">
+        <label>event.h</label>
+      </node>
+      <node id="1435">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="1437">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="1438" relation="include">
+        </childnode>
+      </node>
+      <node id="1441">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="1434" relation="include">
+        </childnode>
+      </node>
+      <node id="1438">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1433">
+        <label>common/sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="1434" relation="include">
+        </childnode>
+      </node>
+      <node id="1434">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="1435" relation="include">
+        </childnode>
+        <childnode refid="1436" relation="include">
+        </childnode>
+        <childnode refid="1437" relation="include">
+        </childnode>
+        <childnode refid="1439" relation="include">
+        </childnode>
+        <childnode refid="1440" relation="include">
+        </childnode>
+        <childnode refid="1441" relation="include">
+        </childnode>
+        <childnode refid="1442" relation="include">
+        </childnode>
+        <childnode refid="1443" relation="include">
+        </childnode>
+      </node>
+      <node id="1440">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="1439">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="1442">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="1434" relation="include">
+        </childnode>
+      </node>
+      <node id="1443">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="1434" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1487">
+        <label>core/sbfHiResTimerPrivate.h</label>
+        <link refid="sbf_hi_res_timer_private_8h"/>
+        <childnode refid="1488" relation="include">
+        </childnode>
+        <childnode refid="1489" relation="include">
+        </childnode>
+      </node>
+      <node id="1493">
+        <label>requestreply/sbfRequestReplyPrivate.h</label>
+        <link refid="sbf_request_reply_private_8h"/>
+        <childnode refid="1463" relation="include">
+        </childnode>
+        <childnode refid="1464" relation="include">
+        </childnode>
+        <childnode refid="1465" relation="include">
+        </childnode>
+      </node>
+      <node id="1489">
+        <label>core/sbfQueuePrivate.h</label>
+        <link refid="sbf_queue_private_8h"/>
+        <childnode refid="1488" relation="include">
+        </childnode>
+        <childnode refid="1490" relation="include">
+        </childnode>
+      </node>
+      <node id="1453">
+        <label>handlers/common/sbfCommonHandler.c</label>
+        <link refid="sbf_common_handler_8c"/>
+      </node>
+      <node id="1458">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="1453" relation="include">
+        </childnode>
+        <childnode refid="1454" relation="include">
+        </childnode>
+      </node>
+      <node id="1480">
+        <label>transport/sbfTportWeight.c</label>
+        <link refid="sbf_tport_weight_8c"/>
+      </node>
+      <node id="1465">
+        <label>requestreply/sbfRequestSub.c</label>
+        <link refid="sbf_request_sub_8c"/>
+      </node>
+      <node id="1461">
+        <label>requestreply/sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="1462" relation="include">
+        </childnode>
+      </node>
+      <node id="1466">
+        <label>tools/replier/sbfReplier.c</label>
+        <link refid="sbf_replier_8c"/>
+      </node>
+      <node id="1476">
+        <label>transport/sbfSub.c</label>
+        <link refid="sbf_sub_8c"/>
+      </node>
+      <node id="1482">
+        <label>transport/sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="1457" relation="include">
+        </childnode>
+      </node>
+      <node id="1477">
+        <label>transport/sbfTopic.c</label>
+        <link refid="sbf_topic_8c"/>
+      </node>
+      <node id="1452">
+        <label>handlers/common/sbfCommonHandlerPrivate.h</label>
+        <link refid="sbf_common_handler_private_8h"/>
+        <childnode refid="1453" relation="include">
+        </childnode>
+      </node>
+      <node id="1484">
+        <label>common/sbfTcpListenerPrivate.h</label>
+        <link refid="sbf_tcp_listener_private_8h"/>
+        <childnode refid="1449" relation="include">
+        </childnode>
+      </node>
+      <node id="1455">
+        <label>handlers/udp/sbfUdpHandler.c</label>
+        <link refid="sbf_udp_handler_8c"/>
+      </node>
+      <node id="1454">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+        <childnode refid="1455" relation="include">
+        </childnode>
+      </node>
+      <node id="1485">
+        <label>core/sbfEventPrivate.h</label>
+        <link refid="sbf_event_private_8h"/>
+        <childnode refid="1486" relation="include">
+        </childnode>
+      </node>
+      <node id="1469">
+        <label>tools/publisher/sbfPublisher.c</label>
+        <link refid="sbf_publisher_8c"/>
+      </node>
+      <node id="1486">
+        <label>core/sbfEvent.c</label>
+        <link refid="sbf_event_8c"/>
+      </node>
+      <node id="1471">
+        <label>transport/sbfBatch.c</label>
+        <link refid="sbf_batch_8c"/>
+      </node>
+      <node id="1456">
+        <label>transport/sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="1457" relation="include">
+        </childnode>
+      </node>
+      <node id="1467">
+        <label>tools/requester/sbfRequester.c</label>
+        <link refid="sbf_requester_8c"/>
+      </node>
+      <node id="1446">
+        <label>common/sbfBuffer.c</label>
+        <link refid="sbf_buffer_8c"/>
+      </node>
+      <node id="1445">
+        <label>common/sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="1446" relation="include">
+        </childnode>
+        <childnode refid="1447" relation="include">
+        </childnode>
+        <childnode refid="1450" relation="include">
+        </childnode>
+        <childnode refid="1456" relation="include">
+        </childnode>
+        <childnode refid="1481" relation="include">
+        </childnode>
+        <childnode refid="1482" relation="include">
+        </childnode>
+      </node>
+      <node id="1488">
+        <label>core/sbfHiResTimer.c</label>
+        <link refid="sbf_hi_res_timer_8c"/>
+      </node>
+      <node id="1483">
+        <label>common/sbfTcpConnectionPrivate.h</label>
+        <link refid="sbf_tcp_connection_private_8h"/>
+        <childnode refid="1448" relation="include">
+        </childnode>
+        <childnode refid="1449" relation="include">
+        </childnode>
+      </node>
+      <node id="1470">
+        <label>tools/subscriber/sbfSubscriber.c</label>
+        <link refid="sbf_subscriber_8c"/>
+      </node>
+      <node id="1460">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.c</label>
+        <link refid="sbf_tcp_mesh_handler_8c"/>
+      </node>
+      <node id="1459">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+        <childnode refid="1460" relation="include">
+        </childnode>
+      </node>
+      <node id="1475">
+        <label>transport/sbfPub.c</label>
+        <link refid="sbf_pub_8c"/>
+      </node>
+      <node id="1481">
+        <label>transport/sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="1457" relation="include">
+        </childnode>
+      </node>
+      <node id="1448">
+        <label>common/sbfTcpConnection.c</label>
+        <link refid="sbf_tcp_connection_8c"/>
+      </node>
+      <node id="1491">
+        <label>core/sbfTimerPrivate.h</label>
+        <link refid="sbf_timer_private_8h"/>
+        <childnode refid="1492" relation="include">
+        </childnode>
+      </node>
+      <node id="1447">
+        <label>common/sbfTcpConnection.h</label>
+        <link refid="sbf_tcp_connection_8h"/>
+        <childnode refid="1448" relation="include">
+        </childnode>
+        <childnode refid="1449" relation="include">
+        </childnode>
+      </node>
+      <node id="1464">
+        <label>requestreply/sbfRequestReply.c</label>
+        <link refid="sbf_request_reply_8c"/>
+      </node>
+      <node id="1444">
+        <label>common/sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="1445" relation="include">
+        </childnode>
+        <childnode refid="1483" relation="include">
+        </childnode>
+        <childnode refid="1484" relation="include">
+        </childnode>
+        <childnode refid="1485" relation="include">
+        </childnode>
+        <childnode refid="1487" relation="include">
+        </childnode>
+        <childnode refid="1489" relation="include">
+        </childnode>
+        <childnode refid="1491" relation="include">
+        </childnode>
+        <childnode refid="1493" relation="include">
+        </childnode>
+      </node>
+      <node id="1462">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+        <childnode refid="1463" relation="include">
+        </childnode>
+        <childnode refid="1464" relation="include">
+        </childnode>
+        <childnode refid="1465" relation="include">
+        </childnode>
+        <childnode refid="1466" relation="include">
+        </childnode>
+        <childnode refid="1467" relation="include">
+        </childnode>
+      </node>
+      <node id="1474">
+        <label>transport/sbfHandler.c</label>
+        <link refid="sbf_handler_8c"/>
+      </node>
+      <node id="1472">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="1452" relation="include">
+        </childnode>
+        <childnode refid="1459" relation="include">
+        </childnode>
+        <childnode refid="1454" relation="include">
+        </childnode>
+        <childnode refid="1473" relation="include">
+        </childnode>
+      </node>
+      <node id="1492">
+        <label>core/sbfTimer.c</label>
+        <link refid="sbf_timer_8c"/>
+      </node>
+      <node id="1451">
+        <label>common/sbfUdpMulticast.c</label>
+        <link refid="sbf_udp_multicast_8c"/>
+      </node>
+      <node id="1473">
+        <label>transport/sbfTportPrivate.h</label>
+        <link refid="sbf_tport_private_8h"/>
+        <childnode refid="1471" relation="include">
+        </childnode>
+        <childnode refid="1474" relation="include">
+        </childnode>
+        <childnode refid="1475" relation="include">
+        </childnode>
+        <childnode refid="1476" relation="include">
+        </childnode>
+        <childnode refid="1477" relation="include">
+        </childnode>
+        <childnode refid="1478" relation="include">
+        </childnode>
+        <childnode refid="1479" relation="include">
+        </childnode>
+        <childnode refid="1480" relation="include">
+        </childnode>
+      </node>
+      <node id="1450">
+        <label>common/sbfUdpMulticast.h</label>
+        <link refid="sbf_udp_multicast_8h"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1452" relation="include">
+        </childnode>
+        <childnode refid="1454" relation="include">
+        </childnode>
+      </node>
+      <node id="1479">
+        <label>transport/sbfTportFragments.c</label>
+        <link refid="sbf_tport_fragments_8c"/>
+      </node>
+      <node id="1478">
+        <label>transport/sbfTport.c</label>
+        <link refid="sbf_tport_8c"/>
+      </node>
+      <node id="1457">
+        <label>transport/sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="1458" relation="include">
+        </childnode>
+        <childnode refid="1452" relation="include">
+        </childnode>
+        <childnode refid="1459" relation="include">
+        </childnode>
+        <childnode refid="1454" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1468" relation="include">
+        </childnode>
+        <childnode refid="1469" relation="include">
+        </childnode>
+        <childnode refid="1466" relation="include">
+        </childnode>
+        <childnode refid="1467" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+        <childnode refid="1471" relation="include">
+        </childnode>
+        <childnode refid="1472" relation="include">
+        </childnode>
+        <childnode refid="1474" relation="include">
+        </childnode>
+        <childnode refid="1475" relation="include">
+        </childnode>
+        <childnode refid="1476" relation="include">
+        </childnode>
+        <childnode refid="1477" relation="include">
+        </childnode>
+        <childnode refid="1478" relation="include">
+        </childnode>
+        <childnode refid="1479" relation="include">
+        </childnode>
+        <childnode refid="1480" relation="include">
+        </childnode>
+      </node>
+      <node id="1449">
+        <label>common/sbfTcpListener.c</label>
+        <link refid="sbf_tcp_listener_8c"/>
+      </node>
+      <node id="1490">
+        <label>core/sbfQueue.c</label>
+        <link refid="sbf_queue_8c"/>
+      </node>
+      <node id="1463">
+        <label>requestreply/sbfRequestPub.c</label>
+        <link refid="sbf_request_pub_8c"/>
+      </node>
+      <node id="1468">
+        <label>requestreply/sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="1462" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structsbf_ref_count" prot="public">sbfRefCount</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_ref_count_8h_1ae39dd5c31f09ec9d9e26b22088edfeaa" prot="public" static="no">
+        <name>sbfRefCount_get</name>
+        <param><defname>r</defname></param>
+        <initializer>((r)-&gt;mRefCount)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfRefCount.h" line="10" column="9" bodyfile="common/sbfRefCount.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_ref_count_8h_1ac5b200765f35a175c038674a2167b52b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> void</type>
+        <definition>static SBF_INLINE void sbfRefCount_init</definition>
+        <argsstring>(sbfRefCount *r, u_short n)</argsstring>
+        <name>sbfRefCount_init</name>
+        <param>
+          <type><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>u_short</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfRefCount.h" line="13" column="1" bodyfile="common/sbfRefCount.h" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_ref_count_8h_1a300932b3c2f9d26b09a5cc2933ff1dc2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> void</type>
+        <definition>static SBF_INLINE void sbfRefCount_increment</definition>
+        <argsstring>(sbfRefCount *r)</argsstring>
+        <name>sbfRefCount_increment</name>
+        <param>
+          <type><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfRefCount.h" line="19" column="1" bodyfile="common/sbfRefCount.h" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_ref_count_8h_1a04bbbe29b9183744a20232e9939b0f25" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> int</type>
+        <definition>static SBF_INLINE int sbfRefCount_decrement</definition>
+        <argsstring>(sbfRefCount *r)</argsstring>
+        <name>sbfRefCount_decrement</name>
+        <param>
+          <type><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfRefCount.h" line="29" column="1" bodyfile="common/sbfRefCount.h" bodystart="29" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_REFCOUNT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_REFCOUNT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="structsbf_ref_count_1a026cd62c504c5de9c67ff67f7f2e9b09" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/>uint32_t<sp/><ref refid="structsbf_ref_count_1a026cd62c504c5de9c67ff67f7f2e9b09" kindref="member">mRefCount</ref>;<sp/>}<sp/><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="sbf_ref_count_8h_1ae39dd5c31f09ec9d9e26b22088edfeaa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfRefCount_get(r)<sp/>((r)-&gt;mRefCount)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_darwin_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">sbfRefCount_init<sp/>(<ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref>*<sp/>r,<sp/>u_short<sp/>n)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>r-&gt;<ref refid="structsbf_ref_count_1a026cd62c504c5de9c67ff67f7f2e9b09" kindref="member">mRefCount</ref><sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_darwin_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">sbfRefCount_increment<sp/>(<ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref>*<sp/>r)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>InterlockedIncrement<sp/>(&amp;r-&gt;<ref refid="structsbf_ref_count_1a026cd62c504c5de9c67ff67f7f2e9b09" kindref="member">mRefCount</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>__sync_fetch_and_add<sp/>(&amp;r-&gt;<ref refid="structsbf_ref_count_1a026cd62c504c5de9c67ff67f7f2e9b09" kindref="member">mRefCount</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_darwin_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">sbfRefCount_decrement<sp/>(<ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref>*<sp/>r)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>InterlockedDecrement<sp/>(&amp;r-&gt;<ref refid="structsbf_ref_count_1a026cd62c504c5de9c67ff67f7f2e9b09" kindref="member">mRefCount</ref>)<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>__sync_sub_and_fetch<sp/>(&amp;r-&gt;<ref refid="structsbf_ref_count_1a026cd62c504c5de9c67ff67f7f2e9b09" kindref="member">mRefCount</ref>,<sp/>1)<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_REFCOUNT_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfRefCount.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsbf_cache_file_impl" kind="struct" language="C++" prot="public">
+    <compoundname>sbfCacheFileImpl</compoundname>
+    <includes refid="sbf_cache_file_private_8h" local="no">sbfCacheFilePrivate.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsbf_cache_file_impl_1a184fb6a3ccefec7c26312f83bcedaccd" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* sbfCacheFileImpl::mFile</definition>
+        <argsstring></argsstring>
+        <name>mFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFilePrivate.h" line="16" column="1" bodyfile="common/sbfCacheFilePrivate.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_cache_file_impl_1aedfee69719d0a291b304f3809c1c6689" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t sbfCacheFileImpl::mUsed</definition>
+        <argsstring></argsstring>
+        <name>mUsed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFilePrivate.h" line="17" column="1" bodyfile="common/sbfCacheFilePrivate.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_cache_file_impl_1ac97daeaf47be5854cd270f2071ba1614" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t sbfCacheFileImpl::mItemSize</definition>
+        <argsstring></argsstring>
+        <name>mItemSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFilePrivate.h" line="19" column="1" bodyfile="common/sbfCacheFilePrivate.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsbf_cache_file_impl_1aa3a53cc2dc6a7e2efeafec022dbfa066" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sbfCacheFileImpl::TAILQ_HEAD</definition>
+        <argsstring>(, sbfCacheFileItemImpl) mItems</argsstring>
+        <name>TAILQ_HEAD</name>
+        <param>
+          <type><ref refid="structsbf_cache_file_item_impl" kindref="compound">sbfCacheFileItemImpl</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCacheFilePrivate.h" line="20" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="common/sbfCacheFilePrivate.h" line="15" column="1" bodyfile="common/sbfCacheFilePrivate.h" bodystart="14" bodyend="21"/>
+    <listofallmembers>
+      <member refid="structsbf_cache_file_impl_1a184fb6a3ccefec7c26312f83bcedaccd" prot="public" virt="non-virtual"><scope>sbfCacheFileImpl</scope><name>mFile</name></member>
+      <member refid="structsbf_cache_file_impl_1ac97daeaf47be5854cd270f2071ba1614" prot="public" virt="non-virtual"><scope>sbfCacheFileImpl</scope><name>mItemSize</name></member>
+      <member refid="structsbf_cache_file_impl_1aedfee69719d0a291b304f3809c1c6689" prot="public" virt="non-virtual"><scope>sbfCacheFileImpl</scope><name>mUsed</name></member>
+      <member refid="structsbf_cache_file_impl_1aa3a53cc2dc6a7e2efeafec022dbfa066" prot="public" virt="non-virtual"><scope>sbfCacheFileImpl</scope><name>TAILQ_HEAD</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

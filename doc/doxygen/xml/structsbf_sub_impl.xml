@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsbf_sub_impl" kind="struct" language="C++" prot="public">
+    <compoundname>sbfSubImpl</compoundname>
+    <includes refid="sbf_sub_private_8h" local="no">sbfSubPrivate.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsbf_sub_impl_1af1b1bd3d24a3dd12288f535f959cd308" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+        <definition>sbfTopic sbfSubImpl::mTopic</definition>
+        <argsstring></argsstring>
+        <name>mTopic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="13" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1a801681af8cba9443567ccc9299349b8b" prot="public" static="no" mutable="no">
+        <type>u_int</type>
+        <definition>u_int sbfSubImpl::mWeight</definition>
+        <argsstring></argsstring>
+        <name>mWeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="14" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1a7bee7e5ab4ab8a7a0a998187a3cd5f1e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sbfSubImpl::mDestroyed</definition>
+        <argsstring></argsstring>
+        <name>mDestroyed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="16" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1aa5b08ad5aede06fecc266545bed3c798" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sbfSubImpl::mRemoved</definition>
+        <argsstring></argsstring>
+        <name>mRemoved</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="17" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1ad3ed819340d471f1ba88977c893b2e8b" prot="public" static="no" mutable="no">
+        <type><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref></type>
+        <definition>sbfRefCount sbfSubImpl::mRefCount</definition>
+        <argsstring></argsstring>
+        <name>mRefCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="18" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1aa9136a43819a4f9c1644672553368ab4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sbfSubImpl::mReady</definition>
+        <argsstring></argsstring>
+        <name>mReady</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="20" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1a1ba4f56a9d23b0ff27f0a11fa861adb9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sbfSubImpl::mQueueBypass</definition>
+        <argsstring></argsstring>
+        <name>mQueueBypass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="21" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1a2f00fbeb6b4454bd171614d5dd3789c1" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsbf_tport_impl" kindref="compound">sbfTportImpl</ref> *</type>
+        <definition>struct sbfTportImpl* sbfSubImpl::mTport</definition>
+        <argsstring></argsstring>
+        <name>mTport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="23" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1a04edbd44efe29aa974958584577070a0" prot="public" static="no" mutable="no">
+        <type>struct sbfTportStreamImpl *</type>
+        <definition>struct sbfTportStreamImpl* sbfSubImpl::mTportStream</definition>
+        <argsstring></argsstring>
+        <name>mTportStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="24" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1a20f3c4cbff205f7f68ddc3fa00327313" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsbf_tport_topic_impl" kindref="compound">sbfTportTopicImpl</ref> *</type>
+        <definition>struct sbfTportTopicImpl* sbfSubImpl::mTportTopic</definition>
+        <argsstring></argsstring>
+        <name>mTportTopic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="25" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1a08131e49008f226f68013439884b2ab9" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+        <definition>sbfQueue sbfSubImpl::mQueue</definition>
+        <argsstring></argsstring>
+        <name>mQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="27" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1a4b79d9b15aec85084167b5e75e7c2130" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_sub_8h_1a21874f3f038f352bd283fc2dffff1c2c" kindref="member">sbfSubReadyCb</ref></type>
+        <definition>sbfSubReadyCb sbfSubImpl::mReadyCb</definition>
+        <argsstring></argsstring>
+        <name>mReadyCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="28" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1a1e2f278d1c2f85a9d6b3d8868e2d7500" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_sub_8h_1a2f0fc2e02f85c60bea98943659ccbb4d" kindref="member">sbfSubMessageCb</ref></type>
+        <definition>sbfSubMessageCb sbfSubImpl::mMessageCb</definition>
+        <argsstring></argsstring>
+        <name>mMessageCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="29" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1af7bd2bcf5712363a4116737ab494261f" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* sbfSubImpl::mClosure</definition>
+        <argsstring></argsstring>
+        <name>mClosure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="30" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1ac5877d202959012641c633f568165ebb" prot="public" static="no" mutable="no">
+        <type>struct event</type>
+        <definition>struct event sbfSubImpl::mEventAdd</definition>
+        <argsstring></argsstring>
+        <name>mEventAdd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="30" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_sub_impl_1adb38254be5e015b3f2e22b40abaeba24" prot="public" static="no" mutable="no">
+        <type>struct event</type>
+        <definition>struct event sbfSubImpl::mEventRemove</definition>
+        <argsstring></argsstring>
+        <name>mEventRemove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="30" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsbf_sub_impl_1a44c75ff67874943827c868e842430303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sbfSubImpl::TAILQ_ENTRY</definition>
+        <argsstring>(sbfSubImpl) mEntry</argsstring>
+        <name>TAILQ_ENTRY</name>
+        <param>
+          <type><ref refid="structsbf_sub_impl" kindref="compound">sbfSubImpl</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSubPrivate.h" line="35" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="183">
+        <label>sbfQueueImpl</label>
+        <link refid="structsbf_queue_impl"/>
+        <childnode refid="181" relation="usage">
+          <edgelabel>mRefCount</edgelabel>
+        </childnode>
+        <childnode refid="184" relation="usage">
+          <edgelabel>mPool</edgelabel>
+        </childnode>
+        <childnode refid="177" relation="usage">
+          <edgelabel>mLog</edgelabel>
+        </childnode>
+      </node>
+      <node id="176">
+        <label>sbfMwThreadImpl</label>
+        <link refid="structsbf_mw_thread_impl"/>
+        <childnode refid="175" relation="usage">
+          <edgelabel>mParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="182">
+        <label>sbfTopicImpl</label>
+        <link refid="structsbf_topic_impl"/>
+      </node>
+      <node id="181">
+        <label>sbfRefCount</label>
+        <link refid="structsbf_ref_count"/>
+      </node>
+      <node id="185">
+        <label>sbfPoolCountImpl</label>
+        <link refid="structsbf_pool_count_impl"/>
+      </node>
+      <node id="179">
+        <label>sbfTportWeight</label>
+        <link refid="structsbf_tport_weight"/>
+      </node>
+      <node id="175">
+        <label>sbfMwImpl</label>
+        <link refid="structsbf_mw_impl"/>
+        <childnode refid="176" relation="usage">
+          <edgelabel>mThreads</edgelabel>
+        </childnode>
+        <childnode refid="177" relation="usage">
+          <edgelabel>mLog</edgelabel>
+        </childnode>
+      </node>
+      <node id="186">
+        <label>sbfPoolItemImpl</label>
+        <link refid="structsbf_pool_item_impl"/>
+        <childnode refid="186" relation="usage">
+          <edgelabel>mNext</edgelabel>
+        </childnode>
+        <childnode refid="184" relation="usage">
+          <edgelabel>mPool</edgelabel>
+        </childnode>
+      </node>
+      <node id="174">
+        <label>sbfTportImpl</label>
+        <link refid="structsbf_tport_impl"/>
+        <childnode refid="175" relation="usage">
+          <edgelabel>mMw</edgelabel>
+        </childnode>
+        <childnode refid="179" relation="usage">
+          <edgelabel>mWeightsList</edgelabel>
+        </childnode>
+        <childnode refid="180" relation="usage">
+          <edgelabel>mHandlerTable</edgelabel>
+        </childnode>
+        <childnode refid="177" relation="usage">
+          <edgelabel>mLog</edgelabel>
+        </childnode>
+      </node>
+      <node id="172">
+        <label>sbfSubImpl</label>
+        <link refid="structsbf_sub_impl"/>
+        <childnode refid="173" relation="usage">
+          <edgelabel>mTportTopic</edgelabel>
+        </childnode>
+        <childnode refid="172" relation="usage">
+          <edgelabel>mMessageCb</edgelabel>
+          <edgelabel>mReadyCb</edgelabel>
+        </childnode>
+        <childnode refid="174" relation="usage">
+          <edgelabel>mTport</edgelabel>
+        </childnode>
+        <childnode refid="181" relation="usage">
+          <edgelabel>mRefCount</edgelabel>
+        </childnode>
+        <childnode refid="182" relation="usage">
+          <edgelabel>mTopic</edgelabel>
+        </childnode>
+        <childnode refid="183" relation="usage">
+          <edgelabel>mQueue</edgelabel>
+        </childnode>
+      </node>
+      <node id="178">
+        <label>sbfLogFileImpl</label>
+        <link refid="structsbf_log_file_impl"/>
+      </node>
+      <node id="177">
+        <label>sbfLogImpl</label>
+        <link refid="structsbf_log_impl"/>
+        <childnode refid="177" relation="usage">
+          <edgelabel>mHookCb</edgelabel>
+        </childnode>
+        <childnode refid="178" relation="usage">
+          <edgelabel>mFile</edgelabel>
+        </childnode>
+      </node>
+      <node id="184">
+        <label>sbfPoolImpl</label>
+        <link refid="structsbf_pool_impl"/>
+        <childnode refid="185" relation="usage">
+          <edgelabel>mCount</edgelabel>
+        </childnode>
+        <childnode refid="186" relation="usage">
+          <edgelabel>mFree</edgelabel>
+          <edgelabel>mAvailable</edgelabel>
+        </childnode>
+      </node>
+      <node id="173">
+        <label>sbfTportTopicImpl</label>
+        <link refid="structsbf_tport_topic_impl"/>
+        <childnode refid="172" relation="usage">
+          <edgelabel>mNext</edgelabel>
+        </childnode>
+      </node>
+      <node id="180">
+        <label>sbfHandlerTable</label>
+        <link refid="structsbf_handler_table"/>
+        <childnode refid="176" relation="usage">
+          <edgelabel>mAddStream</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="transport/sbfSubPrivate.h" line="12" column="1" bodyfile="transport/sbfSubPrivate.h" bodystart="11" bodyend="36"/>
+    <listofallmembers>
+      <member refid="structsbf_sub_impl_1af7bd2bcf5712363a4116737ab494261f" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mClosure</name></member>
+      <member refid="structsbf_sub_impl_1a7bee7e5ab4ab8a7a0a998187a3cd5f1e" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mDestroyed</name></member>
+      <member refid="structsbf_sub_impl_1ac5877d202959012641c633f568165ebb" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mEventAdd</name></member>
+      <member refid="structsbf_sub_impl_1adb38254be5e015b3f2e22b40abaeba24" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mEventRemove</name></member>
+      <member refid="structsbf_sub_impl_1a1e2f278d1c2f85a9d6b3d8868e2d7500" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mMessageCb</name></member>
+      <member refid="structsbf_sub_impl_1a08131e49008f226f68013439884b2ab9" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mQueue</name></member>
+      <member refid="structsbf_sub_impl_1a1ba4f56a9d23b0ff27f0a11fa861adb9" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mQueueBypass</name></member>
+      <member refid="structsbf_sub_impl_1aa9136a43819a4f9c1644672553368ab4" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mReady</name></member>
+      <member refid="structsbf_sub_impl_1a4b79d9b15aec85084167b5e75e7c2130" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mReadyCb</name></member>
+      <member refid="structsbf_sub_impl_1ad3ed819340d471f1ba88977c893b2e8b" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mRefCount</name></member>
+      <member refid="structsbf_sub_impl_1aa5b08ad5aede06fecc266545bed3c798" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mRemoved</name></member>
+      <member refid="structsbf_sub_impl_1af1b1bd3d24a3dd12288f535f959cd308" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mTopic</name></member>
+      <member refid="structsbf_sub_impl_1a2f00fbeb6b4454bd171614d5dd3789c1" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mTport</name></member>
+      <member refid="structsbf_sub_impl_1a04edbd44efe29aa974958584577070a0" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mTportStream</name></member>
+      <member refid="structsbf_sub_impl_1a20f3c4cbff205f7f68ddc3fa00327313" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mTportTopic</name></member>
+      <member refid="structsbf_sub_impl_1a801681af8cba9443567ccc9299349b8b" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>mWeight</name></member>
+      <member refid="structsbf_sub_impl_1a44c75ff67874943827c868e842430303" prot="public" virt="non-virtual"><scope>sbfSubImpl</scope><name>TAILQ_ENTRY</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

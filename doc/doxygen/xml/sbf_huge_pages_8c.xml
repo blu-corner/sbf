@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_huge_pages_8c" kind="file" language="C++">
+    <compoundname>sbfHugePages.c</compoundname>
+    <includes refid="sbf_huge_pages_8h" local="yes">sbfHugePages.h</includes>
+    <incdepgraph>
+      <node id="733">
+        <label>event.h</label>
+      </node>
+      <node id="732">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="734">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="735" relation="include">
+        </childnode>
+      </node>
+      <node id="738">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="731" relation="include">
+        </childnode>
+      </node>
+      <node id="729">
+        <label>common/sbfHugePages.c</label>
+        <link refid="sbf_huge_pages_8c"/>
+        <childnode refid="730" relation="include">
+        </childnode>
+      </node>
+      <node id="730">
+        <label>sbfHugePages.h</label>
+        <link refid="sbf_huge_pages_8h"/>
+        <childnode refid="731" relation="include">
+        </childnode>
+      </node>
+      <node id="735">
+        <label>sys/types.h</label>
+      </node>
+      <node id="731">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="732" relation="include">
+        </childnode>
+        <childnode refid="733" relation="include">
+        </childnode>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="736" relation="include">
+        </childnode>
+        <childnode refid="737" relation="include">
+        </childnode>
+        <childnode refid="738" relation="include">
+        </childnode>
+        <childnode refid="739" relation="include">
+        </childnode>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="737">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="736">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="739">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="731" relation="include">
+        </childnode>
+      </node>
+      <node id="740">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="731" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_huge_pages_8c_1a965bf45190323481c4a9d3256db5bd16" prot="public" static="no">
+        <name>MAP_HUGETLB</name>
+        <initializer>0x40000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfHugePages.c" line="4" column="9" bodyfile="common/sbfHugePages.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_huge_pages_8c_1ae8d9a234a260726969f875791ce6b6dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sbfHugePages_allocate</definition>
+        <argsstring>(sbfLog log, size_t size)</argsstring>
+        <name>sbfHugePages_allocate</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfHugePages.c" line="8" column="1" bodyfile="common/sbfHugePages.c" bodystart="8" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_huge_pages_8c_1a8959d974d6753bf07a9b6c8e70e395a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfHugePages_free</definition>
+        <argsstring>(void *block, size_t size)</argsstring>
+        <name>sbfHugePages_free</name>
+        <param>
+          <type>void *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfHugePages.c" line="34" column="1" bodyfile="common/sbfHugePages.c" bodystart="34" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_huge_pages_8h" kindref="compound">sbfHugePages.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MAP_HUGETLB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="sbf_huge_pages_8c_1a965bf45190323481c4a9d3256db5bd16" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP_HUGETLB<sp/>0x40000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="8" refid="sbf_huge_pages_8h_1af79c6626100dc787686e52a57164bbed" refkind="member"><highlight class="normal"><ref refid="sbf_huge_pages_8c_1ae8d9a234a260726969f875791ce6b6dd" kindref="member">sbfHugePages_allocate</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>block;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>block<sp/>=<sp/><ref refid="sbf_common_win32_8c_1adcdc6990a7641f7ba05f5dd2a603b992" kindref="member">mmap</ref><sp/>(NULL,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a15bf68ce8b590838b3a5c0b639d8d519" kindref="member">PROT_READ</ref>|<ref refid="sbf_common_win32_8h_1a2a79c8ceefb8fc25a940ae07a3d94429" kindref="member">PROT_WRITE</ref>,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a398ef47a991a44389aa9818c98a28d24" kindref="member">MAP_PRIVATE</ref>|MAP_ANON|<ref refid="sbf_huge_pages_8c_1a965bf45190323481c4a9d3256db5bd16" kindref="member">MAP_HUGETLB</ref>,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(block<sp/>!=<sp/><ref refid="sbf_common_win32_8h_1a8523dcf952f6ff059a3bed717e4f1296" kindref="member">MAP_FAILED</ref>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>block;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1ad8f8ac2bf4c7e8d6dd30107362e46bb5" kindref="member">sbfLog_warn</ref><sp/>(log,<sp/></highlight><highlight class="stringliteral">&quot;MAP_HUGETLB<sp/>failed;<sp/>check<sp/>/proc/sys/vm/nr_hugepages&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>block<sp/>=<sp/><ref refid="sbf_common_win32_8c_1adcdc6990a7641f7ba05f5dd2a603b992" kindref="member">mmap</ref><sp/>(NULL,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a15bf68ce8b590838b3a5c0b639d8d519" kindref="member">PROT_READ</ref>|<ref refid="sbf_common_win32_8h_1a2a79c8ceefb8fc25a940ae07a3d94429" kindref="member">PROT_WRITE</ref>,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a398ef47a991a44389aa9818c98a28d24" kindref="member">MAP_PRIVATE</ref>|MAP_ANON,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(block<sp/>!=<sp/><ref refid="sbf_common_win32_8h_1a8523dcf952f6ff059a3bed717e4f1296" kindref="member">MAP_FAILED</ref>)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>block;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="sbf_huge_pages_8h_1a8959d974d6753bf07a9b6c8e70e395a7" refkind="member"><highlight class="normal"><ref refid="sbf_huge_pages_8c_1a8959d974d6753bf07a9b6c8e70e395a7" kindref="member">sbfHugePages_free</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>block,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8c_1a7d888f95854ef9b7a9990f3b513bfef2" kindref="member">munmap</ref><sp/>(block,<sp/>size);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="common/sbfHugePages.c"/>
+  </compounddef>
+</doxygen>

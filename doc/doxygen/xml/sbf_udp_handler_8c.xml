@@ -1,0 +1,778 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_udp_handler_8c" kind="file" language="C++">
+    <compoundname>sbfUdpHandler.c</compoundname>
+    <includes refid="sbf_udp_handler_8h" local="yes">sbfUdpHandler.h</includes>
+    <includes refid="sbf_mw_private_8h" local="yes">sbfMwPrivate.h</includes>
+    <incdepgraph>
+      <node id="2837">
+        <label>sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+        <childnode refid="2838" relation="include">
+        </childnode>
+        <childnode refid="2839" relation="include">
+        </childnode>
+      </node>
+      <node id="2826">
+        <label>event.h</label>
+      </node>
+      <node id="2853">
+        <label>sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="2851" relation="include">
+        </childnode>
+        <childnode refid="2842" relation="include">
+        </childnode>
+        <childnode refid="2834" relation="include">
+        </childnode>
+      </node>
+      <node id="2838">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2849">
+        <label>sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="2836" relation="include">
+        </childnode>
+        <childnode refid="2824" relation="include">
+        </childnode>
+        <childnode refid="2846" relation="include">
+        </childnode>
+      </node>
+      <node id="2850">
+        <label>sbfTopic.h</label>
+        <link refid="sbf_topic_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2825">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="2821">
+        <label>handlers/udp/sbfUdpHandler.c</label>
+        <link refid="sbf_udp_handler_8c"/>
+        <childnode refid="2822" relation="include">
+        </childnode>
+        <childnode refid="2854" relation="include">
+        </childnode>
+      </node>
+      <node id="2822">
+        <label>sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+        <childnode refid="2823" relation="include">
+        </childnode>
+        <childnode refid="2851" relation="include">
+        </childnode>
+        <childnode refid="2842" relation="include">
+        </childnode>
+        <childnode refid="2834" relation="include">
+        </childnode>
+        <childnode refid="2852" relation="include">
+        </childnode>
+        <childnode refid="2853" relation="include">
+        </childnode>
+      </node>
+      <node id="2827">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="2828" relation="include">
+        </childnode>
+      </node>
+      <node id="2843">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2835">
+        <label>sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="2836" relation="include">
+        </childnode>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2831">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2856">
+        <label>event2/listener.h</label>
+      </node>
+      <node id="2845">
+        <label>sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2836">
+        <label>sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+        <childnode refid="2837" relation="include">
+        </childnode>
+        <childnode refid="2840" relation="include">
+        </childnode>
+        <childnode refid="2841" relation="include">
+        </childnode>
+      </node>
+      <node id="2844">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2828">
+        <label>sys/types.h</label>
+      </node>
+      <node id="2848">
+        <label>sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="2836" relation="include">
+        </childnode>
+        <childnode refid="2824" relation="include">
+        </childnode>
+        <childnode refid="2846" relation="include">
+        </childnode>
+      </node>
+      <node id="2855">
+        <label>event2/thread.h</label>
+      </node>
+      <node id="2841">
+        <label>sbfBufferInline.h</label>
+        <link refid="sbf_buffer_inline_8h"/>
+      </node>
+      <node id="2854">
+        <label>sbfMwPrivate.h</label>
+        <link refid="sbf_mw_private_8h"/>
+        <childnode refid="2826" relation="include">
+        </childnode>
+        <childnode refid="2855" relation="include">
+        </childnode>
+        <childnode refid="2856" relation="include">
+        </childnode>
+      </node>
+      <node id="2851">
+        <label>sbfInterface.h</label>
+        <link refid="sbf_interface_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2840">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2823">
+        <label>sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+        <childnode refid="2834" relation="include">
+        </childnode>
+      </node>
+      <node id="2847">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2824">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="2825" relation="include">
+        </childnode>
+        <childnode refid="2826" relation="include">
+        </childnode>
+        <childnode refid="2827" relation="include">
+        </childnode>
+        <childnode refid="2829" relation="include">
+        </childnode>
+        <childnode refid="2830" relation="include">
+        </childnode>
+        <childnode refid="2831" relation="include">
+        </childnode>
+        <childnode refid="2832" relation="include">
+        </childnode>
+        <childnode refid="2833" relation="include">
+        </childnode>
+      </node>
+      <node id="2852">
+        <label>sbfUdpMulticast.h</label>
+        <link refid="sbf_udp_multicast_8h"/>
+        <childnode refid="2836" relation="include">
+        </childnode>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2830">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="2834">
+        <label>sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="2835" relation="include">
+        </childnode>
+        <childnode refid="2824" relation="include">
+        </childnode>
+        <childnode refid="2842" relation="include">
+        </childnode>
+        <childnode refid="2848" relation="include">
+        </childnode>
+        <childnode refid="2849" relation="include">
+        </childnode>
+        <childnode refid="2850" relation="include">
+        </childnode>
+      </node>
+      <node id="2829">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="2842">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+        <childnode refid="2843" relation="include">
+        </childnode>
+        <childnode refid="2844" relation="include">
+        </childnode>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2846" relation="include">
+        </childnode>
+        <childnode refid="2847" relation="include">
+        </childnode>
+      </node>
+      <node id="2832">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2846">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2833">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="2824" relation="include">
+        </childnode>
+      </node>
+      <node id="2839">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sbf_udp_handler_8c_1a1920a3dcf64e9edffcc0227b4e46591f" prot="public" static="no" mutable="no">
+        <type><ref refid="structsbf_handler_table" kindref="compound">sbfHandlerTable</ref></type>
+        <definition>sbfHandlerTable sbf_udp_handler</definition>
+        <argsstring></argsstring>
+        <name>sbf_udp_handler</name>
+        <initializer>=
+{
+    65507,
+    sbfUdpHandlerCreate,
+    sbfUdpHandlerDestroy,
+    sbfUdpHandlerFindStream,
+    sbfUdpHandlerAddStream,
+    sbfUdpHandlerRemoveStream,
+    sbfUdpHandlerGetBuffer,
+    sbfUdpHandlerSendBuffer
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.c" line="221" column="1" bodyfile="handlers/udp/sbfUdpHandler.c" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_udp_handler_8c_1aacb31ab2666b90cdcbbbd9fcd8282bfd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref></type>
+        <definition>static sbfError sbfUdpHandlerReadBufferCb</definition>
+        <argsstring>(sbfUdpMulticast s, sbfBuffer buffer, void *closure)</argsstring>
+        <name>sbfUdpHandlerReadBufferCb</name>
+        <param>
+          <type><ref refid="sbf_udp_multicast_8h_1ae52e3c214bf4f6bd5af4e2df923de670" kindref="member">sbfUdpMulticast</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.c" line="5" column="1" bodyfile="handlers/udp/sbfUdpHandler.c" bodystart="5" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_udp_handler_8c_1a931c08617124237a078544a6d11bebc2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfUdpHandlerReadEventCb</definition>
+        <argsstring>(int fd, short events, void *closure)</argsstring>
+        <name>sbfUdpHandlerReadEventCb</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>events</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.c" line="15" column="1" bodyfile="handlers/udp/sbfUdpHandler.c" bodystart="15" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_udp_handler_8c_1ac9c9efe7890bda0ba896536adb63873c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfUdpHandlerAddCompleteEventCb</definition>
+        <argsstring>(int fd, short events, void *closure)</argsstring>
+        <name>sbfUdpHandlerAddCompleteEventCb</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>events</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.c" line="26" column="1" bodyfile="handlers/udp/sbfUdpHandler.c" bodystart="26" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_udp_handler_8c_1a659dbabc4852c435f38d6dc5cc38bdd2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref></type>
+        <definition>static sbfHandler sbfUdpHandlerCreate</definition>
+        <argsstring>(sbfTport tport, sbfKeyValue properties)</argsstring>
+        <name>sbfUdpHandlerCreate</name>
+        <param>
+          <type><ref refid="sbf_tport_8h_1acbaf9d451442abe85c18e3583d746181" kindref="member">sbfTport</ref></type>
+          <declname>tport</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.c" line="67" column="1" bodyfile="handlers/udp/sbfUdpHandler.c" bodystart="67" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_udp_handler_8c_1af2cfdc9b62ab934a0fb884cbd1f5a08f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfUdpHandlerDestroy</definition>
+        <argsstring>(sbfHandler handler)</argsstring>
+        <name>sbfUdpHandlerDestroy</name>
+        <param>
+          <type><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref></type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.c" line="106" column="1" bodyfile="handlers/udp/sbfUdpHandler.c" bodystart="106" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_udp_handler_8c_1a1eaabe5d16b64a5c77567b736e53485e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref></type>
+        <definition>static sbfHandlerHandle sbfUdpHandlerFindStream</definition>
+        <argsstring>(sbfHandler handler, sbfTopic topic)</argsstring>
+        <name>sbfUdpHandlerFindStream</name>
+        <param>
+          <type><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref></type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.c" line="115" column="1" bodyfile="handlers/udp/sbfUdpHandler.c" bodystart="115" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_udp_handler_8c_1a0d8dbdb0483c0dd6689c69222fa84a9a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref></type>
+        <definition>static sbfHandlerStream sbfUdpHandlerAddStream</definition>
+        <argsstring>(sbfHandler handler, sbfTopic topic, sbfMwThread thread, sbfHandlerHandle handle, sbfHandlerAddStreamCompleteCb cb, void *closure)</argsstring>
+        <name>sbfUdpHandlerAddStream</name>
+        <param>
+          <type><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref></type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref></type>
+          <declname>thread</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_handler_8h_1a5b047b3b44834708064523d3f20ae4c5" kindref="member">sbfHandlerAddStreamCompleteCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.c" line="140" column="1" bodyfile="handlers/udp/sbfUdpHandler.c" bodystart="140" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_udp_handler_8c_1a9c9b386dfa0a983667b0e2f65c5ac2a1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfUdpHandlerRemoveStream</definition>
+        <argsstring>(sbfHandlerStream stream)</argsstring>
+        <name>sbfUdpHandlerRemoveStream</name>
+        <param>
+          <type><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref></type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.c" line="184" column="1" bodyfile="handlers/udp/sbfUdpHandler.c" bodystart="184" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_udp_handler_8c_1a82f12baddf2b484a8533a7eb7e84eebe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+        <definition>static sbfBuffer sbfUdpHandlerGetBuffer</definition>
+        <argsstring>(sbfHandlerStream stream, size_t size)</argsstring>
+        <name>sbfUdpHandlerGetBuffer</name>
+        <param>
+          <type><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref></type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.c" line="205" column="1" bodyfile="handlers/udp/sbfUdpHandler.c" bodystart="205" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_udp_handler_8c_1a5d926f6fb53730367c2cf256cc405eed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfUdpHandlerSendBuffer</definition>
+        <argsstring>(sbfHandlerStream stream, sbfBuffer buffer)</argsstring>
+        <name>sbfUdpHandlerSendBuffer</name>
+        <param>
+          <type><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref></type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.c" line="214" column="1" bodyfile="handlers/udp/sbfUdpHandler.c" bodystart="214" bodyend="219"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_udp_handler_8h" kindref="compound">sbfUdpHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_mw_private_8h" kindref="compound">sbfMwPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">sbfUdpHandlerReadBufferCb<sp/>(<ref refid="sbf_udp_multicast_8h_1ae52e3c214bf4f6bd5af4e2df923de670" kindref="member">sbfUdpMulticast</ref><sp/>s,<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_udp_handler_stream_impl" kindref="compound">sbfUdpHandlerStream</ref><sp/>uhs<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8c_1a715719602106304462b6d493c29c78c9" kindref="member">sbfHandler_packet</ref><sp/>(uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a02bad5461dc1c3a6696cc4616b53a2ce" kindref="member">mHandle</ref>,<sp/>buffer);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">sbfUdpHandlerReadEventCb<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>events,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_udp_handler_stream_impl" kindref="compound">sbfUdpHandlerStream</ref><sp/>uhs<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_udp_multicast_8c_1a66a03ee47bdd40974036537c9fc07f61" kindref="member">sbfUdpMulticast_read</ref><sp/>(uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ace225d5735994b40a6eb7be91aef1695" kindref="member">mSocket</ref>,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfUdpHandlerReadBufferCb,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uhs,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_udp_handler_8h_1ad3b14f99908bed2f13126adf05e237bf" kindref="member">SBF_UDP_HANDLER_READ_LIMIT</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">sbfUdpHandlerAddCompleteEventCb<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>events,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_udp_handler_stream_impl" kindref="compound">sbfUdpHandlerStream</ref><sp/>uhs<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_udp_handler_8h_1a826119cf714b6cc3ff3dcab73a9837b1" kindref="member">sbfUdpHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uh<sp/>=<sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a13cdd51b0b77531a1c4b0d1b9fa97c5e" kindref="member">mParent</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_udp_multicast_8h_1a8a83068bb5028fd6e20779318692a1bb" kindref="member">sbfUdpMulticastType</ref><sp/>type;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in<sp/><sp/>address;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ab75edc6bfcfc5b90fdac134d2c522a64" kindref="member">mType</ref><sp/>==<sp/><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cfaba1674380fb33d7f6a138d4f9ebacfb2" kindref="member">SBF_TOPIC_PUB</ref>)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/><ref refid="sbf_udp_multicast_8h_1a8a83068bb5028fd6e20779318692a1bba01f0e778e85433b2fda359550e42034a" kindref="member">SBF_UDP_MULTICAST_SEND</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/><ref refid="sbf_udp_multicast_8h_1a8a83068bb5028fd6e20779318692a1bba0ed4d05a238bba43d093d272fbd93926" kindref="member">SBF_UDP_MULTICAST_LISTEN</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>memset<sp/>(&amp;address,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>address);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>address.sin_family<sp/>=<sp/>AF_INET;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>address.sin_addr.s_addr<sp/>=<sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a7d1f9a52d602b39bf31b0b7ca5ee9a08" kindref="member">mAddress</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>address.sin_port<sp/>=<sp/>htons<sp/>(<ref refid="sbf_udp_handler_8h_1ae190d65949a60790c60525e14f61c3d3" kindref="member">SBF_UDP_HANDLER_DEFAULT_PORT</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ace225d5735994b40a6eb7be91aef1695" kindref="member">mSocket</ref><sp/>=<sp/><ref refid="sbf_udp_multicast_8c_1a49891e1c11e8be33bb87d06c935a863a" kindref="member">sbfUdpMulticast_create</ref><sp/>(type,<sp/>uh-&gt;mInterface,<sp/>&amp;address);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ace225d5735994b40a6eb7be91aef1695" kindref="member">mSocket</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/>=<sp/>errno;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="sbf_udp_multicast_8h_1a8a83068bb5028fd6e20779318692a1bba0ed4d05a238bba43d093d272fbd93926" kindref="member">SBF_UDP_MULTICAST_LISTEN</ref>)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_assign<sp/>(&amp;uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a47dba28a89b23264c1c0b7cc0638c58c" kindref="member">mEventListen</ref>,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8c_1a49eee9c382b8543bbb6e5822b6c7d554" kindref="member">sbfMw_getThreadEventBase</ref><sp/>(uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ac49a003d2b6e6ae5bf978934d5125936" kindref="member">mThread</ref>),</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_udp_multicast_8c_1aa1b75ea0729146756bdac90cdd0994e7" kindref="member">sbfUdpMulticast_getSocket</ref><sp/>(uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ace225d5735994b40a6eb7be91aef1695" kindref="member">mSocket</ref>),</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EV_READ|EV_PERSIST,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfUdpHandlerReadEventCb,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uhs);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_add<sp/>(&amp;uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a47dba28a89b23264c1c0b7cc0638c58c" kindref="member">mEventListen</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ad5f048c088f2443eea9d25503aec2ad8" kindref="member">mAddStreamCompleteCb</ref><sp/>(uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a02bad5461dc1c3a6696cc4616b53a2ce" kindref="member">mHandle</ref>,<sp/>error,<sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1afebb4021976bc1eee32977284d1bda13" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">sbfUdpHandlerCreate<sp/>(<ref refid="sbf_tport_8h_1acbaf9d451442abe85c18e3583d746181" kindref="member">sbfTport</ref><sp/>tport,<sp/><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/>properties)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log<sp/>=<sp/><ref refid="sbf_mw_8c_1aa7e45fc4943d4080534faf9d4b2f394f" kindref="member">sbfMw_getLog</ref><sp/>(<ref refid="sbf_tport_8c_1aa923af23b38a07524d327dea78fba30b" kindref="member">sbfTport_getMw</ref><sp/>(tport));</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_udp_handler_8h_1a826119cf714b6cc3ff3dcab73a9837b1" kindref="member">sbfUdpHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uh;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14" kindref="member">sbfMcastTopicResolver</ref><sp/>mtr;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interf;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>s<sp/>=<sp/><ref refid="sbf_key_value_8c_1a5bf2be4a5e087f042234f99b57dd2504" kindref="member">sbfKeyValue_get</ref><sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;udp.interface&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(s<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;eth0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>interf<sp/>=<sp/><ref refid="sbf_interface_8c_1adbbee4518363492052f3e794b5be6d59" kindref="member">sbfInterface_findOne</ref><sp/>(log,<sp/>s,<sp/>&amp;s);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(interf<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a623a831041e812e33a41439b449d740d" kindref="member">sbfLog_err</ref><sp/>(log,<sp/></highlight><highlight class="stringliteral">&quot;couldn&apos;t<sp/>get<sp/>interface:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>s);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>mtr<sp/>=<sp/><ref refid="sbf_common_handler_8c_1a4e3ac1f4227d17c997a31c515c6ddd9c" kindref="member">sbfMcastTopicResolver_create</ref><sp/>(<ref refid="sbf_key_value_8c_1a5bf2be4a5e087f042234f99b57dd2504" kindref="member">sbfKeyValue_get</ref><sp/>(properties,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;udp.range&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mtr<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a623a831041e812e33a41439b449d740d" kindref="member">sbfLog_err</ref><sp/>(log,<sp/></highlight><highlight class="stringliteral">&quot;couldn&apos;t<sp/>get<sp/>multicast<sp/>topic<sp/>resolver&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>uh<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*uh);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>uh-&gt;mLog<sp/>=<sp/>log;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1aeebbb1dbfd0312bdf51a4b3a44eaa525" kindref="member">RB_INIT</ref><sp/>(&amp;uh-&gt;mTree);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>uh-&gt;mPool<sp/>=<sp/><ref refid="sbf_buffer_8h_1aa4e1e3381a982ca38035fc6a73824a91" kindref="member">sbfBuffer_createPool</ref><sp/>(65536);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>uh-&gt;mInterface<sp/>=<sp/>interf;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>uh-&gt;mMtr<sp/>=<sp/>mtr;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>uh;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">sbfUdpHandlerDestroy<sp/>(<ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref><sp/>handler)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_udp_handler_8h_1a826119cf714b6cc3ff3dcab73a9837b1" kindref="member">sbfUdpHandler</ref><sp/>uh<sp/>=<sp/>handler;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_handler_8c_1a30b747a308778de0050c3569b6a72cd2" kindref="member">sbfMcastTopicResolver_destroy</ref><sp/>(uh-&gt;mMtr);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_pool_8c_1aa642928717354dd1f50a38ef13d92c3a" kindref="member">sbfPool_destroy</ref><sp/>(uh-&gt;mPool);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(uh);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">sbfUdpHandlerFindStream<sp/>(<ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref><sp/>handler,<sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_udp_handler_8h_1a826119cf714b6cc3ff3dcab73a9837b1" kindref="member">sbfUdpHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uh<sp/>=<sp/>handler;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_udp_handler_stream_impl" kindref="compound">sbfUdpHandlerStreamImpl</ref><sp/>impl;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_udp_handler_stream_impl" kindref="compound">sbfUdpHandlerStream</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uhs;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp[INET_ADDRSTRLEN];</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>impl.<ref refid="structsbf_udp_handler_stream_impl_1ab75edc6bfcfc5b90fdac134d2c522a64" kindref="member">mType</ref><sp/>=<sp/><ref refid="sbf_topic_8c_1a17610769aed59c45ea07fa4b89651bbc" kindref="member">sbfTopic_getType</ref><sp/>(topic);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>impl.mAddress<sp/>=<sp/><ref refid="sbf_common_handler_8c_1a83c67b0c8070436da88f38a9e592ef5b" kindref="member">sbfMcastTopicResolver_makeAddress</ref><sp/>(uh-&gt;mMtr,<sp/>topic);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>uhs<sp/>=<sp/><ref refid="systree_8h_1af0ae89dc9239fbe8c056eeed595cedac" kindref="member">RB_FIND</ref><sp/>(sbfUdpHandlerStreamTreeImpl,<sp/>&amp;uh-&gt;mTree,<sp/>&amp;impl);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(uhs<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>inet_ntop<sp/>(AF_INET,<sp/>&amp;uhs-&gt;mAddress,<sp/>tmp,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>tmp);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(uh-&gt;mLog,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;found<sp/>stream<sp/>%p,<sp/>address<sp/>%s<sp/>(for<sp/>topic<sp/>%s)&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uhs,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8c_1ab0f153a4579b16f243f1b946068e95c9" kindref="member">sbfTopic_getTopic</ref><sp/>(topic));</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>uhs-&gt;mHandle;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">sbfUdpHandlerAddStream<sp/>(<ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref><sp/>handler,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/>thread,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1a5b047b3b44834708064523d3f20ae4c5" kindref="member">sbfHandlerAddStreamCompleteCb</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_udp_handler_8h_1a826119cf714b6cc3ff3dcab73a9837b1" kindref="member">sbfUdpHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uh<sp/>=<sp/>handler;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_udp_handler_stream_impl" kindref="compound">sbfUdpHandlerStream</ref><sp/>uhs;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp[INET_ADDRSTRLEN];</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>uhs<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*uhs);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a13cdd51b0b77531a1c4b0d1b9fa97c5e" kindref="member">mParent</ref><sp/>=<sp/>uh;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ac49a003d2b6e6ae5bf978934d5125936" kindref="member">mThread</ref><sp/>=<sp/>thread;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a02bad5461dc1c3a6696cc4616b53a2ce" kindref="member">mHandle</ref><sp/>=<sp/>handle;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ab75edc6bfcfc5b90fdac134d2c522a64" kindref="member">mType</ref><sp/>=<sp/><ref refid="sbf_topic_8c_1a17610769aed59c45ea07fa4b89651bbc" kindref="member">sbfTopic_getType</ref><sp/>(topic);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a7d1f9a52d602b39bf31b0b7ca5ee9a08" kindref="member">mAddress</ref><sp/>=<sp/><ref refid="sbf_common_handler_8c_1a83c67b0c8070436da88f38a9e592ef5b" kindref="member">sbfMcastTopicResolver_makeAddress</ref><sp/>(uh-&gt;mMtr,<sp/>topic);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>inet_ntop<sp/>(AF_INET,<sp/>&amp;uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a7d1f9a52d602b39bf31b0b7ca5ee9a08" kindref="member">mAddress</ref>,<sp/>tmp,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>tmp);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(uh-&gt;mLog,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;adding<sp/>stream<sp/>%p,<sp/>address<sp/>%s<sp/>(for<sp/>topic<sp/>%s)&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uhs,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8c_1ab0f153a4579b16f243f1b946068e95c9" kindref="member">sbfTopic_getTopic</ref><sp/>(topic));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1a5b9861a8925c953340e483ae0a0f5120" kindref="member">RB_INSERT</ref><sp/>(sbfUdpHandlerStreamTreeImpl,<sp/>&amp;uh-&gt;mTree,<sp/>uhs);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ad5f048c088f2443eea9d25503aec2ad8" kindref="member">mAddStreamCompleteCb</ref><sp/>=<sp/>cb;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1afebb4021976bc1eee32977284d1bda13" kindref="member">mClosure</ref><sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cb<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8c_1ae30e3fd3f462247eb140805b083d83c6" kindref="member">sbfMw_enqueueThread</ref><sp/>(uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ac49a003d2b6e6ae5bf978934d5125936" kindref="member">mThread</ref>,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1af8152ff7512f835ad666f9b6342b598f" kindref="member">mEventAdd</ref>,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfUdpHandlerAddCompleteEventCb,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uhs);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>uhs;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal">sbfUdpHandlerRemoveStream<sp/>(<ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref><sp/>stream)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_udp_handler_stream_impl" kindref="compound">sbfUdpHandlerStream</ref><sp/>uhs<sp/>=<sp/>stream;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_udp_handler_8h_1a826119cf714b6cc3ff3dcab73a9837b1" kindref="member">sbfUdpHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uh<sp/>=<sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a13cdd51b0b77531a1c4b0d1b9fa97c5e" kindref="member">mParent</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp[INET_ADDRSTRLEN];</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>inet_ntop<sp/>(AF_INET,<sp/>&amp;uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a7d1f9a52d602b39bf31b0b7ca5ee9a08" kindref="member">mAddress</ref>,<sp/>tmp,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>tmp);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(uh-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;removing<sp/>stream<sp/>%p,<sp/>address<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>uhs,<sp/>tmp);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ab75edc6bfcfc5b90fdac134d2c522a64" kindref="member">mType</ref><sp/>==<sp/><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cfa5c80119f0bb1907166badfec7d3f09da" kindref="member">SBF_TOPIC_SUB</ref>)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_del<sp/>(&amp;uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a47dba28a89b23264c1c0b7cc0638c58c" kindref="member">mEventListen</ref>);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>event_del<sp/>(&amp;uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1af8152ff7512f835ad666f9b6342b598f" kindref="member">mEventAdd</ref>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_udp_multicast_8c_1a3b47a5eaad0ac54b8ec2ce84a0576b37" kindref="member">sbfUdpMulticast_destroy</ref><sp/>(uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ace225d5735994b40a6eb7be91aef1695" kindref="member">mSocket</ref>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1ad97eb44d2c39debda8cfbbbbcb354cce" kindref="member">RB_REMOVE</ref><sp/>(sbfUdpHandlerStreamTreeImpl,<sp/>&amp;uh-&gt;mTree,<sp/>uhs);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(uhs);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></highlight></codeline>
+<codeline lineno="205"><highlight class="normal">sbfUdpHandlerGetBuffer<sp/>(<ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref><sp/>stream,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_udp_handler_stream_impl" kindref="compound">sbfUdpHandlerStream</ref><sp/>uhs<sp/>=<sp/>stream;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_udp_handler_8h_1a826119cf714b6cc3ff3dcab73a9837b1" kindref="member">sbfUdpHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uh<sp/>=<sp/>uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1a13cdd51b0b77531a1c4b0d1b9fa97c5e" kindref="member">mParent</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sbfBuffer_new<sp/>(uh-&gt;mPool,<sp/>size);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal">sbfUdpHandlerSendBuffer<sp/>(<ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref><sp/>stream,<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer)</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_udp_handler_stream_impl" kindref="compound">sbfUdpHandlerStream</ref><sp/>uhs<sp/>=<sp/>stream;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_udp_multicast_8h_1a2a2f5f2b7ca527875eb7bc72c3cbb230" kindref="member">sbfUdpMulticast_sendBuffer</ref><sp/>(uhs-&gt;<ref refid="structsbf_udp_handler_stream_impl_1ace225d5735994b40a6eb7be91aef1695" kindref="member">mSocket</ref>,<sp/>buffer);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="sbf_udp_handler_8c_1a1920a3dcf64e9edffcc0227b4e46591f" refkind="member"><highlight class="normal"><ref refid="structsbf_handler_table" kindref="compound">sbfHandlerTable</ref><sp/><ref refid="sbf_udp_handler_8c_1a1920a3dcf64e9edffcc0227b4e46591f" kindref="member">sbf_udp_handler</ref><sp/>=</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>65507,</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfUdpHandlerCreate,</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfUdpHandlerDestroy,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfUdpHandlerFindStream,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfUdpHandlerAddStream,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfUdpHandlerRemoveStream,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfUdpHandlerGetBuffer,</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfUdpHandlerSendBuffer</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="handlers/udp/sbfUdpHandler.c"/>
+  </compounddef>
+</doxygen>

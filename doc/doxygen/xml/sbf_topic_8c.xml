@@ -1,0 +1,601 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_topic_8c" kind="file" language="C++">
+    <compoundname>sbfTopic.c</compoundname>
+    <includes refid="sbf_tport_8h" local="yes">sbfTport.h</includes>
+    <includes refid="sbf_tport_private_8h" local="yes">sbfTportPrivate.h</includes>
+    <incdepgraph>
+      <node id="3661">
+        <label>sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+        <childnode refid="3662" relation="include">
+        </childnode>
+        <childnode refid="3663" relation="include">
+        </childnode>
+      </node>
+      <node id="3653">
+        <label>event.h</label>
+      </node>
+      <node id="3684">
+        <label>sbfPubPrivate.h</label>
+        <link refid="sbf_pub_private_8h"/>
+      </node>
+      <node id="3682">
+        <label>sbfProperties.h</label>
+        <link refid="sbf_properties_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+        <childnode refid="3669" relation="include">
+        </childnode>
+        <childnode refid="3659" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+      </node>
+      <node id="3662">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3673">
+        <label>sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="3650" relation="include">
+        </childnode>
+        <childnode refid="3651" relation="include">
+        </childnode>
+        <childnode refid="3670" relation="include">
+        </childnode>
+      </node>
+      <node id="3647">
+        <label>transport/sbfTopic.c</label>
+        <link refid="sbf_topic_8c"/>
+        <childnode refid="3648" relation="include">
+        </childnode>
+        <childnode refid="3675" relation="include">
+        </childnode>
+      </node>
+      <node id="3674">
+        <label>sbfTopic.h</label>
+        <link refid="sbf_topic_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3652">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="3654">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="3655" relation="include">
+        </childnode>
+      </node>
+      <node id="3667">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3649">
+        <label>sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="3650" relation="include">
+        </childnode>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3686">
+        <label>sbfTopicPrivate.h</label>
+        <link refid="sbf_topic_private_8h"/>
+      </node>
+      <node id="3658">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3681">
+        <label>event2/listener.h</label>
+      </node>
+      <node id="3669">
+        <label>sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3677">
+        <label>sbfDeque.h</label>
+        <link refid="sbf_deque_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3650">
+        <label>sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3664" relation="include">
+        </childnode>
+        <childnode refid="3665" relation="include">
+        </childnode>
+      </node>
+      <node id="3668">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3655">
+        <label>sys/types.h</label>
+      </node>
+      <node id="3672">
+        <label>sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="3650" relation="include">
+        </childnode>
+        <childnode refid="3651" relation="include">
+        </childnode>
+        <childnode refid="3670" relation="include">
+        </childnode>
+      </node>
+      <node id="3680">
+        <label>event2/thread.h</label>
+      </node>
+      <node id="3665">
+        <label>sbfBufferInline.h</label>
+        <link refid="sbf_buffer_inline_8h"/>
+      </node>
+      <node id="3679">
+        <label>sbfMwPrivate.h</label>
+        <link refid="sbf_mw_private_8h"/>
+        <childnode refid="3653" relation="include">
+        </childnode>
+        <childnode refid="3680" relation="include">
+        </childnode>
+        <childnode refid="3681" relation="include">
+        </childnode>
+      </node>
+      <node id="3683">
+        <label>sbfPath.h</label>
+        <link refid="sbf_path_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3664">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3678">
+        <label>sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+        <childnode refid="3648" relation="include">
+        </childnode>
+      </node>
+      <node id="3671">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3651">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="3652" relation="include">
+        </childnode>
+        <childnode refid="3653" relation="include">
+        </childnode>
+        <childnode refid="3654" relation="include">
+        </childnode>
+        <childnode refid="3656" relation="include">
+        </childnode>
+        <childnode refid="3657" relation="include">
+        </childnode>
+        <childnode refid="3658" relation="include">
+        </childnode>
+        <childnode refid="3659" relation="include">
+        </childnode>
+        <childnode refid="3660" relation="include">
+        </childnode>
+      </node>
+      <node id="3675">
+        <label>sbfTportPrivate.h</label>
+        <link refid="sbf_tport_private_8h"/>
+        <childnode refid="3676" relation="include">
+        </childnode>
+        <childnode refid="3678" relation="include">
+        </childnode>
+        <childnode refid="3669" relation="include">
+        </childnode>
+        <childnode refid="3679" relation="include">
+        </childnode>
+        <childnode refid="3682" relation="include">
+        </childnode>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3685" relation="include">
+        </childnode>
+        <childnode refid="3686" relation="include">
+        </childnode>
+      </node>
+      <node id="3657">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="3648">
+        <label>sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="3649" relation="include">
+        </childnode>
+        <childnode refid="3651" relation="include">
+        </childnode>
+        <childnode refid="3666" relation="include">
+        </childnode>
+        <childnode refid="3672" relation="include">
+        </childnode>
+        <childnode refid="3673" relation="include">
+        </childnode>
+        <childnode refid="3674" relation="include">
+        </childnode>
+      </node>
+      <node id="3656">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="3666">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+        <childnode refid="3667" relation="include">
+        </childnode>
+        <childnode refid="3668" relation="include">
+        </childnode>
+        <childnode refid="3669" relation="include">
+        </childnode>
+        <childnode refid="3670" relation="include">
+        </childnode>
+        <childnode refid="3671" relation="include">
+        </childnode>
+      </node>
+      <node id="3659">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3676">
+        <label>sbfBatchPrivate.h</label>
+        <link refid="sbf_batch_private_8h"/>
+        <childnode refid="3677" relation="include">
+        </childnode>
+      </node>
+      <node id="3670">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3660">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="3651" relation="include">
+        </childnode>
+      </node>
+      <node id="3685">
+        <label>sbfSubPrivate.h</label>
+        <link refid="sbf_sub_private_8h"/>
+      </node>
+      <node id="3663">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_topic_8c_1a9672cf4f3a60f28d226b45f7a1721679" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+        <definition>sbfTopic sbfTopic_create</definition>
+        <argsstring>(sbfTopicType type, const char *string)</argsstring>
+        <name>sbfTopic_create</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.c" line="5" column="1" bodyfile="transport/sbfTopic.c" bodystart="5" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8c_1a154e4f4857a66c1e372281ce493ece99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfTopic_destroy</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_destroy</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.c" line="61" column="1" bodyfile="transport/sbfTopic.c" bodystart="61" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8c_1a3d96e97c321ba2ffce13f89eb0a84d86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+        <definition>sbfTopic sbfTopic_copy</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_copy</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.c" line="72" column="1" bodyfile="transport/sbfTopic.c" bodystart="72" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8c_1a1b9121e3bf33ef3e0552f11ff72c6553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sbfTopic_compare</definition>
+        <argsstring>(sbfTopic lhs, sbfTopic rhs)</argsstring>
+        <name>sbfTopic_compare</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.c" line="88" column="1" bodyfile="transport/sbfTopic.c" bodystart="88" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8c_1a17610769aed59c45ea07fa4b89651bbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref></type>
+        <definition>sbfTopicType sbfTopic_getType</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_getType</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.c" line="100" column="1" bodyfile="transport/sbfTopic.c" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8c_1ab0f153a4579b16f243f1b946068e95c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfTopic_getTopic</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_getTopic</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.c" line="106" column="1" bodyfile="transport/sbfTopic.c" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8c_1a7c42b4986cfdfcd6b9dfaef882bea027" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfTopic_getFirst</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_getFirst</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.c" line="112" column="1" bodyfile="transport/sbfTopic.c" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8c_1a7f6f6aef75d127ae65b00a566ab24647" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfTopic_getSecond</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_getSecond</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.c" line="118" column="1" bodyfile="transport/sbfTopic.c" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8c_1a15bcfc641e9f5996ac12a41f81ab38ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfTopic_getThird</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_getThird</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.c" line="124" column="1" bodyfile="transport/sbfTopic.c" bodystart="124" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_tport_8h" kindref="compound">sbfTport.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_tport_private_8h" kindref="compound">sbfTportPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></highlight></codeline>
+<codeline lineno="5" refid="sbf_topic_8h_1a9672cf4f3a60f28d226b45f7a1721679" refkind="member"><highlight class="normal"><ref refid="sbf_topic_8c_1a9672cf4f3a60f28d226b45f7a1721679" kindref="member">sbfTopic_create</ref><sp/>(<ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref><sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/>size;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/>first;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/>second;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/>cp;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>size<sp/>=<sp/>strlen<sp/>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">)<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>topic<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*topic);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>topic-&gt;mType<sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>cp<sp/>=<sp/>first<sp/>=<sp/><ref refid="sbf_memory_8h_1a6af5faec3f9662b20ffc9903f923dec0" kindref="member">xmalloc</ref><sp/>(size);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>!=<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*cp++<sp/>=<sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">++;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>*cp<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>==<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topic-&gt;mFirst<sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topic-&gt;mSecond<sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topic-&gt;mThird<sp/>=<sp/>first;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">++;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>cp<sp/>=<sp/>second<sp/>=<sp/><ref refid="sbf_memory_8h_1a6af5faec3f9662b20ffc9903f923dec0" kindref="member">xmalloc</ref><sp/>(size);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>!=<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*cp++<sp/>=<sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">++;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>*cp<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>==<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topic-&gt;mFirst<sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topic-&gt;mSecond<sp/>=<sp/>first;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topic-&gt;mThird<sp/>=<sp/>second;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">++;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>topic-&gt;mFirst<sp/>=<sp/>first;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>topic-&gt;mSecond<sp/>=<sp/>second;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>topic-&gt;mThird<sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">out:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_memory_8h_1a01a498148ebe0f21be370f06f2ec84f7" kindref="member">xasprintf</ref><sp/>(&amp;cp,<sp/></highlight><highlight class="stringliteral">&quot;%s/%s/%s&quot;</highlight><highlight class="normal">,<sp/>topic-&gt;mFirst,<sp/>topic-&gt;mSecond,<sp/>topic-&gt;mThird);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>topic-&gt;mTopic<sp/>=<sp/>cp;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strlen<sp/>(topic-&gt;mTopic)<sp/>&gt;<sp/><ref refid="sbf_topic_8h_1aa9f435bc8956a8d5d5e7e32e3d3e3e45" kindref="member">SBF_TOPIC_SIZE_LIMIT</ref>)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8c_1a154e4f4857a66c1e372281ce493ece99" kindref="member">sbfTopic_destroy</ref><sp/>(topic);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>topic;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="sbf_topic_8h_1a154e4f4857a66c1e372281ce493ece99" refkind="member"><highlight class="normal"><ref refid="sbf_topic_8c_1a154e4f4857a66c1e372281ce493ece99" kindref="member">sbfTopic_destroy</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)topic-&gt;mThird);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)topic-&gt;mSecond);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)topic-&gt;mFirst);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)topic-&gt;mTopic);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(topic);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></highlight></codeline>
+<codeline lineno="72" refid="sbf_topic_8h_1a3d96e97c321ba2ffce13f89eb0a84d86" refkind="member"><highlight class="normal"><ref refid="sbf_topic_8c_1a3d96e97c321ba2ffce13f89eb0a84d86" kindref="member">sbfTopic_copy</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>copy;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>copy<sp/>=<sp/>calloc<sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*copy);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>copy-&gt;mType<sp/>=<sp/>topic-&gt;mType;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>copy-&gt;mTopic<sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(topic-&gt;mTopic);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>copy-&gt;mFirst<sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(topic-&gt;mFirst);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>copy-&gt;mSecond<sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(topic-&gt;mSecond);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>copy-&gt;mThird<sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(topic-&gt;mThird);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>copy;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="sbf_topic_8h_1a1b9121e3bf33ef3e0552f11ff72c6553" refkind="member"><highlight class="normal"><ref refid="sbf_topic_8c_1a1b9121e3bf33ef3e0552f11ff72c6553" kindref="member">sbfTopic_compare</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>lhs,<sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>rhs)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lhs-&gt;mType<sp/>!=<sp/>rhs-&gt;mType)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lhs-&gt;mType<sp/>==<sp/><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cfaba1674380fb33d7f6a138d4f9ebacfb2" kindref="member">SBF_TOPIC_PUB</ref>)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>strcmp<sp/>(lhs-&gt;mTopic,<sp/>rhs-&gt;mTopic);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref></highlight></codeline>
+<codeline lineno="100" refid="sbf_topic_8h_1a17610769aed59c45ea07fa4b89651bbc" refkind="member"><highlight class="normal"><ref refid="sbf_topic_8c_1a17610769aed59c45ea07fa4b89651bbc" kindref="member">sbfTopic_getType</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>topic-&gt;mType;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="106" refid="sbf_topic_8h_1ab0f153a4579b16f243f1b946068e95c9" refkind="member"><highlight class="normal"><ref refid="sbf_topic_8c_1ab0f153a4579b16f243f1b946068e95c9" kindref="member">sbfTopic_getTopic</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>topic-&gt;mTopic;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="112" refid="sbf_topic_8h_1a7c42b4986cfdfcd6b9dfaef882bea027" refkind="member"><highlight class="normal"><ref refid="sbf_topic_8c_1a7c42b4986cfdfcd6b9dfaef882bea027" kindref="member">sbfTopic_getFirst</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>topic-&gt;mFirst;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="118" refid="sbf_topic_8h_1a7f6f6aef75d127ae65b00a566ab24647" refkind="member"><highlight class="normal"><ref refid="sbf_topic_8c_1a7f6f6aef75d127ae65b00a566ab24647" kindref="member">sbfTopic_getSecond</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>topic-&gt;mSecond;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="124" refid="sbf_topic_8h_1a15bcfc641e9f5996ac12a41f81ab38ff" refkind="member"><highlight class="normal"><ref refid="sbf_topic_8c_1a15bcfc641e9f5996ac12a41f81ab38ff" kindref="member">sbfTopic_getThird</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>topic-&gt;mThird;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="transport/sbfTopic.c"/>
+  </compounddef>
+</doxygen>

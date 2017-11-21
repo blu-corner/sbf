@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_arguments_8h" kind="file" language="C++">
+    <compoundname>sbfArguments.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_arguments_8c" local="yes">common/sbfArguments.c</includedby>
+    <incdepgraph>
+      <node id="39">
+        <label>event.h</label>
+      </node>
+      <node id="38">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="36">
+        <label>common/sbfArguments.h</label>
+        <link refid="sbf_arguments_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>sys/types.h</label>
+      </node>
+      <node id="37">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="42">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="45">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="48">
+        <label>common/sbfArguments.c</label>
+        <link refid="sbf_arguments_8c"/>
+      </node>
+      <node id="47">
+        <label>common/sbfArguments.h</label>
+        <link refid="sbf_arguments_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" prot="public" static="no">
+        <type>typedefSBF_BEGIN_DECLS struct <ref refid="structsbf_arguments_impl" kindref="compound">sbfArgumentsImpl</ref> *</type>
+        <definition>typedef typedefSBF_BEGIN_DECLS struct sbfArgumentsImpl* sbfArguments</definition>
+        <argsstring></argsstring>
+        <name>sbfArguments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="8" column="1" bodyfile="common/sbfArguments.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_arguments_8h_1ac1986c7309b61b9a9f7e6f14f01bb7c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+        <definition>sbfArguments sbfArguments_create</definition>
+        <argsstring>(const char *options, int argc, char **argv)</argsstring>
+        <name>sbfArguments_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="17" column="1" bodyfile="common/sbfArguments.c" bodystart="5" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a043f0d8e11876f5fa6f41fe729a2ee4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfArguments_destroy</definition>
+        <argsstring>(sbfArguments a)</argsstring>
+        <name>sbfArguments_destroy</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="18" column="1" bodyfile="common/sbfArguments.c" bodystart="46" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a4ac84c86ebe2952d2addfeb56d0f0477" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sbfArguments_hasOption</definition>
+        <argsstring>(sbfArguments a, u_char c)</argsstring>
+        <name>sbfArguments_hasOption</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>u_char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="20" column="1" bodyfile="common/sbfArguments.c" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a8ccd15ea062da97bed5b5f1d322d67d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfArguments_optionValue</definition>
+        <argsstring>(sbfArguments a, u_char c)</argsstring>
+        <name>sbfArguments_optionValue</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>u_char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="21" column="1" bodyfile="common/sbfArguments.c" bodystart="67" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a1a590904a2fb4676df9fcd3c4bc7b86f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u_int</type>
+        <definition>u_int sbfArguments_size</definition>
+        <argsstring>(sbfArguments a)</argsstring>
+        <name>sbfArguments_size</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="23" column="1" bodyfile="common/sbfArguments.c" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a34b7bcb6c4c94fbe3106a2067d3ba6d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfArguments_get</definition>
+        <argsstring>(sbfArguments a, u_int idx)</argsstring>
+        <name>sbfArguments_get</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>u_int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="24" column="1" bodyfile="common/sbfArguments.c" bodystart="81" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1ae1eed5bd8672bb68284e91e5bfb25697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfArguments_pack</definition>
+        <argsstring>(int argc, char **argv, char **buf, size_t *len)</argsstring>
+        <name>sbfArguments_pack</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="26" column="1" bodyfile="common/sbfArguments.c" bodystart="89" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a4bbc42a59ab8146b5d07ce42a4df28b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfArguments_unpack</definition>
+        <argsstring>(char *buf, size_t len, int *argc, char ***argv)</argsstring>
+        <name>sbfArguments_unpack</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char ***</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="27" column="1" bodyfile="common/sbfArguments.c" bodystart="112" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a12b685719f71d0cdfcc73f0520260b1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfArguments_free</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>sbfArguments_free</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="28" column="1" bodyfile="common/sbfArguments.c" bodystart="135" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_ARGUMENTS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_ARGUMENTS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_arguments_impl" kindref="compound">sbfArgumentsImpl</ref>*<sp/><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>An<sp/>argc<sp/>and<sp/>argv<sp/>is<sp/>passed<sp/>to<sp/>getopt.<sp/>Option<sp/>presence<sp/>is<sp/>then<sp/>available<sp/>from</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>sbfArguments_hasOption,<sp/>option<sp/>arguments<sp/>from<sp/>_optionValue<sp/>and<sp/>the<sp/>remaining</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>positional<sp/>arguments<sp/>from<sp/>_get.<sp/>_toNumber<sp/>may<sp/>be<sp/>used<sp/>to<sp/>convert<sp/>string<sp/>to<sp/>a</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>number.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">sbfArguments<sp/><ref refid="sbf_arguments_8h_1ac1986c7309b61b9a9f7e6f14f01bb7c6" kindref="member">sbfArguments_create</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>options,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_arguments_8h_1a043f0d8e11876f5fa6f41fe729a2ee4c" kindref="member">sbfArguments_destroy</ref><sp/>(sbfArguments<sp/>a);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sbf_arguments_8h_1a4ac84c86ebe2952d2addfeb56d0f0477" kindref="member">sbfArguments_hasOption</ref><sp/>(sbfArguments<sp/>a,<sp/>u_char<sp/>c);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_arguments_8h_1a8ccd15ea062da97bed5b5f1d322d67d7" kindref="member">sbfArguments_optionValue</ref><sp/>(sbfArguments<sp/>a,<sp/>u_char<sp/>c);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">u_int<sp/><ref refid="sbf_arguments_8h_1a1a590904a2fb4676df9fcd3c4bc7b86f" kindref="member">sbfArguments_size</ref><sp/>(sbfArguments<sp/>a);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_arguments_8h_1a34b7bcb6c4c94fbe3106a2067d3ba6d3" kindref="member">sbfArguments_get</ref><sp/>(sbfArguments<sp/>a,<sp/>u_int<sp/>idx);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_arguments_8h_1ae1eed5bd8672bb68284e91e5bfb25697" kindref="member">sbfArguments_pack</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>len);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_arguments_8h_1a4bbc42a59ab8146b5d07ce42a4df28b9" kindref="member">sbfArguments_unpack</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">***<sp/>argv);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_arguments_8h_1a12b685719f71d0cdfcc73f0520260b1c" kindref="member">sbfArguments_free</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_ARGUMENTS_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfArguments.h"/>
+  </compounddef>
+</doxygen>

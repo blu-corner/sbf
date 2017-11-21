@@ -1,0 +1,679 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_batch_8c" kind="file" language="C++">
+    <compoundname>sbfBatch.c</compoundname>
+    <includes refid="sbf_tport_8h" local="yes">sbfTport.h</includes>
+    <includes refid="sbf_tport_private_8h" local="yes">sbfTportPrivate.h</includes>
+    <incdepgraph>
+      <node id="3269">
+        <label>sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+        <childnode refid="3270" relation="include">
+        </childnode>
+        <childnode refid="3271" relation="include">
+        </childnode>
+      </node>
+      <node id="3261">
+        <label>event.h</label>
+      </node>
+      <node id="3292">
+        <label>sbfPubPrivate.h</label>
+        <link refid="sbf_pub_private_8h"/>
+      </node>
+      <node id="3290">
+        <label>sbfProperties.h</label>
+        <link refid="sbf_properties_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3291" relation="include">
+        </childnode>
+      </node>
+      <node id="3270">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3281">
+        <label>sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3259" relation="include">
+        </childnode>
+        <childnode refid="3278" relation="include">
+        </childnode>
+      </node>
+      <node id="3282">
+        <label>sbfTopic.h</label>
+        <link refid="sbf_topic_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3260">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="3262">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="3263" relation="include">
+        </childnode>
+      </node>
+      <node id="3275">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3255">
+        <label>transport/sbfBatch.c</label>
+        <link refid="sbf_batch_8c"/>
+        <childnode refid="3256" relation="include">
+        </childnode>
+        <childnode refid="3283" relation="include">
+        </childnode>
+      </node>
+      <node id="3257">
+        <label>sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3294">
+        <label>sbfTopicPrivate.h</label>
+        <link refid="sbf_topic_private_8h"/>
+      </node>
+      <node id="3266">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3289">
+        <label>event2/listener.h</label>
+      </node>
+      <node id="3277">
+        <label>sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3285">
+        <label>sbfDeque.h</label>
+        <link refid="sbf_deque_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3258">
+        <label>sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+        <childnode refid="3269" relation="include">
+        </childnode>
+        <childnode refid="3272" relation="include">
+        </childnode>
+        <childnode refid="3273" relation="include">
+        </childnode>
+      </node>
+      <node id="3276">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3263">
+        <label>sys/types.h</label>
+      </node>
+      <node id="3280">
+        <label>sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3259" relation="include">
+        </childnode>
+        <childnode refid="3278" relation="include">
+        </childnode>
+      </node>
+      <node id="3288">
+        <label>event2/thread.h</label>
+      </node>
+      <node id="3273">
+        <label>sbfBufferInline.h</label>
+        <link refid="sbf_buffer_inline_8h"/>
+      </node>
+      <node id="3287">
+        <label>sbfMwPrivate.h</label>
+        <link refid="sbf_mw_private_8h"/>
+        <childnode refid="3261" relation="include">
+        </childnode>
+        <childnode refid="3288" relation="include">
+        </childnode>
+        <childnode refid="3289" relation="include">
+        </childnode>
+      </node>
+      <node id="3291">
+        <label>sbfPath.h</label>
+        <link refid="sbf_path_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3272">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3286">
+        <label>sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+        <childnode refid="3256" relation="include">
+        </childnode>
+      </node>
+      <node id="3279">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3259">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="3260" relation="include">
+        </childnode>
+        <childnode refid="3261" relation="include">
+        </childnode>
+        <childnode refid="3262" relation="include">
+        </childnode>
+        <childnode refid="3264" relation="include">
+        </childnode>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3268" relation="include">
+        </childnode>
+      </node>
+      <node id="3283">
+        <label>sbfTportPrivate.h</label>
+        <link refid="sbf_tport_private_8h"/>
+        <childnode refid="3284" relation="include">
+        </childnode>
+        <childnode refid="3286" relation="include">
+        </childnode>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3287" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+        <childnode refid="3292" relation="include">
+        </childnode>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3294" relation="include">
+        </childnode>
+      </node>
+      <node id="3265">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="3256">
+        <label>sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3259" relation="include">
+        </childnode>
+        <childnode refid="3274" relation="include">
+        </childnode>
+        <childnode refid="3280" relation="include">
+        </childnode>
+        <childnode refid="3281" relation="include">
+        </childnode>
+        <childnode refid="3282" relation="include">
+        </childnode>
+      </node>
+      <node id="3264">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="3274">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+        <childnode refid="3275" relation="include">
+        </childnode>
+        <childnode refid="3276" relation="include">
+        </childnode>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3278" relation="include">
+        </childnode>
+        <childnode refid="3279" relation="include">
+        </childnode>
+      </node>
+      <node id="3267">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3284">
+        <label>sbfBatchPrivate.h</label>
+        <link refid="sbf_batch_private_8h"/>
+        <childnode refid="3285" relation="include">
+        </childnode>
+      </node>
+      <node id="3278">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3268">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+      <node id="3293">
+        <label>sbfSubPrivate.h</label>
+        <link refid="sbf_sub_private_8h"/>
+      </node>
+      <node id="3271">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_batch_8c_1a89b68f6858c5ca5614145f9ff8ebeb22" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>static size_t sbfBatchNextBuffer</definition>
+        <argsstring>(sbfBatchItem item, sbfPub pub)</argsstring>
+        <name>sbfBatchNextBuffer</name>
+        <param>
+          <type><ref refid="sbf_batch_private_8h_1a87fa4535d9dc6baa97376df9cd323aea" kindref="member">sbfBatchItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_pub_8h_1aa23045dc7b9f1d04b6dee3bb3ffe63a8" kindref="member">sbfPub</ref></type>
+          <declname>pub</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.c" line="5" column="1" bodyfile="transport/sbfBatch.c" bodystart="5" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_batch_8c_1a1abce5b25d91348f8f5eb36f9a0b89e1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_tport_private_8h_1ad8ace553b6281bea199212ce9c89ea5e" kindref="member">sbfTportHeader</ref></type>
+        <definition>static sbfTportHeader sbfBatchUpdateBuffer</definition>
+        <argsstring>(sbfBatchItem item, sbfPub pub, void *data, size_t size)</argsstring>
+        <name>sbfBatchUpdateBuffer</name>
+        <param>
+          <type><ref refid="sbf_batch_private_8h_1a87fa4535d9dc6baa97376df9cd323aea" kindref="member">sbfBatchItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_pub_8h_1aa23045dc7b9f1d04b6dee3bb3ffe63a8" kindref="member">sbfPub</ref></type>
+          <declname>pub</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.c" line="33" column="1" bodyfile="transport/sbfBatch.c" bodystart="33" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_batch_8c_1a815b816781029832140e002183de2d6b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfBatchRemoveItem</definition>
+        <argsstring>(sbfBatch batch, sbfBatchItem item)</argsstring>
+        <name>sbfBatchRemoveItem</name>
+        <param>
+          <type><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref></type>
+          <declname>batch</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_batch_private_8h_1a87fa4535d9dc6baa97376df9cd323aea" kindref="member">sbfBatchItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.c" line="55" column="1" bodyfile="transport/sbfBatch.c" bodystart="55" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_batch_8c_1a4ec44dcd4aa2a10cd3b378db41cff7ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref></type>
+        <definition>sbfBatch sbfBatch_create</definition>
+        <argsstring>(sbfTport tport)</argsstring>
+        <name>sbfBatch_create</name>
+        <param>
+          <type><ref refid="sbf_tport_8h_1acbaf9d451442abe85c18e3583d746181" kindref="member">sbfTport</ref></type>
+          <declname>tport</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.c" line="68" column="1" bodyfile="transport/sbfBatch.c" bodystart="68" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_batch_8c_1a1d05a4efd61f6fd5947004753df83864" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfBatch_destroy</definition>
+        <argsstring>(sbfBatch batch)</argsstring>
+        <name>sbfBatch_destroy</name>
+        <param>
+          <type><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref></type>
+          <declname>batch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.c" line="83" column="1" bodyfile="transport/sbfBatch.c" bodystart="83" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_batch_8c_1ab7c4e2444e1818bca452e965dfbea1a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfBatch_add</definition>
+        <argsstring>(sbfBatch batch, sbfPub pub, void *data, size_t size)</argsstring>
+        <name>sbfBatch_add</name>
+        <param>
+          <type><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref></type>
+          <declname>batch</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_pub_8h_1aa23045dc7b9f1d04b6dee3bb3ffe63a8" kindref="member">sbfPub</ref></type>
+          <declname>pub</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.c" line="97" column="1" bodyfile="transport/sbfBatch.c" bodystart="97" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_batch_8c_1a737c6f5741b96307764be35747e03c77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfBatch_addBuffer</definition>
+        <argsstring>(sbfBatch batch, sbfPub pub, sbfBuffer buffer)</argsstring>
+        <name>sbfBatch_addBuffer</name>
+        <param>
+          <type><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref></type>
+          <declname>batch</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_pub_8h_1aa23045dc7b9f1d04b6dee3bb3ffe63a8" kindref="member">sbfPub</ref></type>
+          <declname>pub</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.c" line="153" column="1" bodyfile="transport/sbfBatch.c" bodystart="153" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_batch_8c_1af4a728ef717d3db06b70bb5c1bd00d9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfBatch_send</definition>
+        <argsstring>(sbfBatch batch)</argsstring>
+        <name>sbfBatch_send</name>
+        <param>
+          <type><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref></type>
+          <declname>batch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfBatch.c" line="162" column="1" bodyfile="transport/sbfBatch.c" bodystart="162" bodyend="190"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_tport_8h" kindref="compound">sbfTport.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_tport_private_8h" kindref="compound">sbfTportPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">sbfBatchNextBuffer<sp/>(<ref refid="structsbf_batch_item_impl" kindref="compound">sbfBatchItem</ref><sp/>item,<sp/><ref refid="structsbf_pub_impl" kindref="compound">sbfPub</ref><sp/>pub)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tport_private_8h_1aba7fa8ef9bc17e1823a977f6b467a1fd" kindref="member">sbfTportStream</ref><sp/><sp/><sp/>tstream<sp/>=<sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a4f807a66831a34b65ead7c2222960e49" kindref="member">mTportStream</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_handler_table" kindref="compound">sbfHandlerTable</ref>*<sp/>table<sp/>=<sp/>tstream-&gt;mTport-&gt;mHandlerTable;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>left;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a7c469cdaa4793b8b533367c3964f04a1" kindref="member">mCurrent</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>left<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>left<sp/>=<sp/>table-&gt;<ref refid="structsbf_handler_table_1afd3283f1d899bc9ad7b1fa47aac2433d" kindref="member">mPacketSize</ref><sp/>-<sp/>sbfBuffer_getSize<sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a7c469cdaa4793b8b533367c3964f04a1" kindref="member">mCurrent</ref>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(left<sp/>&lt;=<sp/>pub-&gt;mHeaderSize)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a9494b177643e1271eeb943d1dd3e9dbb" kindref="member">SBF_ASSERT</ref><sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a171e570c29aa6431d922a47663d7b68b" kindref="member">mLast</ref><sp/>!=<sp/>NULL<sp/>||<sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a7c469cdaa4793b8b533367c3964f04a1" kindref="member">mCurrent</ref><sp/>==<sp/>NULL);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a171e570c29aa6431d922a47663d7b68b" kindref="member">mLast</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a171e570c29aa6431d922a47663d7b68b" kindref="member">mLast</ref>-&gt;mFlags<sp/>|=<sp/><ref refid="sbf_tport_private_8h_1a6465f6e050bfabd18dd4bf2c6ddbe53b" kindref="member">SBF_MESSAGE_FLAG_LAST_IN_PACKET</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a171e570c29aa6431d922a47663d7b68b" kindref="member">mLast</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a7c469cdaa4793b8b533367c3964f04a1" kindref="member">mCurrent</ref><sp/>=<sp/>sbfTport_getBuffer<sp/>(tstream,<sp/>table-&gt;<ref refid="structsbf_handler_table_1afd3283f1d899bc9ad7b1fa47aac2433d" kindref="member">mPacketSize</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_deque_8c_1a930e84316ec17a80ce06143280df0c4a" kindref="member">sbfDeque_pushBack</ref><sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a6f7323ff543023a7f122c894340984d7" kindref="member">mBuffers</ref>,<sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a7c469cdaa4793b8b533367c3964f04a1" kindref="member">mCurrent</ref>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfBuffer_setSize<sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a7c469cdaa4793b8b533367c3964f04a1" kindref="member">mCurrent</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>table-&gt;<ref refid="structsbf_handler_table_1afd3283f1d899bc9ad7b1fa47aac2433d" kindref="member">mPacketSize</ref><sp/>-<sp/>sbfBuffer_getSize<sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a7c469cdaa4793b8b533367c3964f04a1" kindref="member">mCurrent</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_tport_private_8h_1ad8ace553b6281bea199212ce9c89ea5e" kindref="member">sbfTportHeader</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">sbfBatchUpdateBuffer<sp/>(<ref refid="structsbf_batch_item_impl" kindref="compound">sbfBatchItem</ref><sp/>item,<sp/><ref refid="structsbf_pub_impl" kindref="compound">sbfPub</ref><sp/>pub,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tport_private_8h_1aba7fa8ef9bc17e1823a977f6b467a1fd" kindref="member">sbfTportStream</ref><sp/><sp/><sp/>tstream<sp/>=<sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a4f807a66831a34b65ead7c2222960e49" kindref="member">mTportStream</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_handler_table" kindref="compound">sbfHandlerTable</ref>*<sp/>table<sp/>=<sp/>tstream-&gt;mTport-&gt;mHandlerTable;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tport_private_8h_1ad8ace553b6281bea199212ce9c89ea5e" kindref="member">sbfTportHeader</ref><sp/><sp/><sp/>hdr;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>used<sp/>=<sp/>sbfBuffer_getSize<sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a7c469cdaa4793b8b533367c3964f04a1" kindref="member">mCurrent</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a9494b177643e1271eeb943d1dd3e9dbb" kindref="member">SBF_ASSERT</ref><sp/>(used<sp/>+<sp/>pub-&gt;<ref refid="structsbf_pub_impl_1a8dd1045878b81f7e6746e83afac96269" kindref="member">mHeaderSize</ref><sp/>+<sp/>size<sp/>&lt;=<sp/>table-&gt;mPacketSize);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>hdr<sp/>=<sp/>(<ref refid="sbf_tport_private_8h_1ad8ace553b6281bea199212ce9c89ea5e" kindref="member">sbfTportHeader</ref>)((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)sbfBuffer_getData<sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a7c469cdaa4793b8b533367c3964f04a1" kindref="member">mCurrent</ref>)<sp/>+<sp/>used);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy<sp/>(hdr,<sp/>pub-&gt;<ref refid="structsbf_pub_impl_1a411c35e5a2bc31befef092be708e3f55" kindref="member">mHeader</ref>,<sp/>pub-&gt;<ref refid="structsbf_pub_impl_1a8dd1045878b81f7e6746e83afac96269" kindref="member">mHeaderSize</ref>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>hdr-&gt;mSize<sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>hdr-&gt;mFlags<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy<sp/>((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)hdr<sp/>+<sp/>pub-&gt;<ref refid="structsbf_pub_impl_1a8dd1045878b81f7e6746e83afac96269" kindref="member">mHeaderSize</ref>,<sp/>data,<sp/>size);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfBuffer_setSize<sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a7c469cdaa4793b8b533367c3964f04a1" kindref="member">mCurrent</ref>,<sp/>used<sp/>+<sp/>pub-&gt;<ref refid="structsbf_pub_impl_1a8dd1045878b81f7e6746e83afac96269" kindref="member">mHeaderSize</ref><sp/>+<sp/>size);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a171e570c29aa6431d922a47663d7b68b" kindref="member">mLast</ref><sp/>=<sp/>hdr;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hdr;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">sbfBatchRemoveItem<sp/>(<ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref><sp/>batch,<sp/><ref refid="structsbf_batch_item_impl" kindref="compound">sbfBatchItem</ref><sp/>item)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((buffer<sp/>=<sp/><ref refid="sbf_deque_8c_1aebba170a8ca8e2228bda5a27419e8616" kindref="member">sbfDeque_popFront</ref><sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a6f7323ff543023a7f122c894340984d7" kindref="member">mBuffers</ref>))<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfBuffer_destroy<sp/>(buffer);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_deque_8c_1afe27711d3c7feb5c35bb09af6f460b89" kindref="member">sbfDeque_destroy</ref><sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a6f7323ff543023a7f122c894340984d7" kindref="member">mBuffers</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1ad97eb44d2c39debda8cfbbbbcb354cce" kindref="member">RB_REMOVE</ref><sp/>(sbfBatchItemTreeImpl,<sp/>&amp;batch-&gt;mTree,<sp/>item);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfPool_put<sp/>(item);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref></highlight></codeline>
+<codeline lineno="68" refid="sbf_batch_8c_1a4ec44dcd4aa2a10cd3b378db41cff7ce" refkind="member"><highlight class="normal"><ref refid="sbf_batch_8c_1a4ec44dcd4aa2a10cd3b378db41cff7ce" kindref="member">sbfBatch_create</ref><sp/>(<ref refid="sbf_tport_8h_1acbaf9d451442abe85c18e3583d746181" kindref="member">sbfTport</ref><sp/>tport)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref><sp/>batch;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>batch<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*batch);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>batch-&gt;mTport<sp/>=<sp/>tport;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a0f0968bebfa055ca5bc7ef552a0f7306" kindref="member">sbfMutex_init</ref><sp/>(&amp;batch-&gt;mMutex,<sp/>0);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>batch-&gt;mPool<sp/>=<sp/><ref refid="sbf_pool_8h_1af6cdf81e4347a1af78ce801f7e8def71" kindref="member">sbfPool_create</ref><sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsbf_batch_item_impl" kindref="compound">sbfBatchItemImpl</ref>));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1aeebbb1dbfd0312bdf51a4b3a44eaa525" kindref="member">RB_INIT</ref><sp/>(&amp;batch-&gt;mTree);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>batch;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="sbf_batch_8h_1a1d05a4efd61f6fd5947004753df83864" refkind="member"><highlight class="normal"><ref refid="sbf_batch_8c_1a1d05a4efd61f6fd5947004753df83864" kindref="member">sbfBatch_destroy</ref><sp/>(<ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref><sp/>batch)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_batch_item_impl" kindref="compound">sbfBatchItem</ref><sp/>item;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_batch_item_impl" kindref="compound">sbfBatchItem</ref><sp/>item1;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1aabadd40831e862632d55eb8c867fd258" kindref="member">RB_FOREACH_SAFE</ref><sp/>(item,<sp/>sbfBatchItemTreeImpl,<sp/>&amp;batch-&gt;mTree,<sp/>item1)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfBatchRemoveItem<sp/>(batch,<sp/>item);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_pool_8c_1aa642928717354dd1f50a38ef13d92c3a" kindref="member">sbfPool_destroy</ref><sp/>(batch-&gt;mPool);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a696ae52b59c8ee67b0792cf793ca07c3" kindref="member">sbfMutex_destroy</ref><sp/>(&amp;batch-&gt;mMutex);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(batch);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="sbf_batch_8c_1ab7c4e2444e1818bca452e965dfbea1a5" refkind="member"><highlight class="normal"><ref refid="sbf_batch_8c_1ab7c4e2444e1818bca452e965dfbea1a5" kindref="member">sbfBatch_add</ref><sp/>(<ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref><sp/>batch,<sp/><ref refid="structsbf_pub_impl" kindref="compound">sbfPub</ref><sp/>pub,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tport_private_8h_1aba7fa8ef9bc17e1823a977f6b467a1fd" kindref="member">sbfTportStream</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tstream<sp/>=<sp/>pub-&gt;<ref refid="structsbf_pub_impl_1ac955a1bdbcdd4fda239bff341570575f" kindref="member">mTportStream</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_batch_item_impl" kindref="compound">sbfBatchItem</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_batch_item_impl" kindref="compound">sbfBatchItemImpl</ref><sp/>impl;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tport_private_8h_1ad8ace553b6281bea199212ce9c89ea5e" kindref="member">sbfTportHeader</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hdr;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wanted;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>left;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>number;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!sbfTport_checkMessageSize<sp/>(pub,<sp/>size))</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="sbf_common_darwin_8h_1a270c0e11fe2fac830447b85580475bb9" kindref="member">SBF_UNLIKELY</ref><sp/>(size<sp/>==<sp/>0<sp/>||<sp/>pub-&gt;<ref refid="structsbf_pub_impl_1a7d23f8536f18343f3ff59e503ac7fd1c" kindref="member">mDestroyed</ref><sp/>||<sp/>!pub-&gt;<ref refid="structsbf_pub_impl_1aa1601b312b340bba0982ddc08ecaf3d8" kindref="member">mReady</ref>))</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1afe21416b021add1d039070372b28c2b7" kindref="member">sbfMutex_lock</ref><sp/>(&amp;batch-&gt;mMutex);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>impl.<ref refid="structsbf_batch_item_impl_1a4f807a66831a34b65ead7c2222960e49" kindref="member">mTportStream</ref><sp/>=<sp/>tstream;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((item<sp/>=<sp/><ref refid="systree_8h_1af0ae89dc9239fbe8c056eeed595cedac" kindref="member">RB_FIND</ref><sp/>(sbfBatchItemTreeImpl,<sp/>&amp;batch-&gt;mTree,<sp/>&amp;impl))<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item<sp/>=<sp/>sbfPool_getZero<sp/>(batch-&gt;mPool);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a4f807a66831a34b65ead7c2222960e49" kindref="member">mTportStream</ref><sp/>=<sp/>tstream;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="systree_8h_1a5b9861a8925c953340e483ae0a0f5120" kindref="member">RB_INSERT</ref><sp/>(sbfBatchItemTreeImpl,<sp/>&amp;batch-&gt;mTree,<sp/>item);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a7c469cdaa4793b8b533367c3964f04a1" kindref="member">mCurrent</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a6f7323ff543023a7f122c894340984d7" kindref="member">mBuffers</ref><sp/>=<sp/><ref refid="sbf_deque_8c_1a5afb200f08bb44f3a3190848405d7501" kindref="member">sbfDeque_create</ref><sp/>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1adfd66d33765f5cf3ecc8d0af8c0e4309" kindref="member">mMessages</ref>++;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>left<sp/>=<sp/>sbfBatchNextBuffer<sp/>(item,<sp/>pub);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(left<sp/>&gt;<sp/>pub-&gt;<ref refid="structsbf_pub_impl_1a8dd1045878b81f7e6746e83afac96269" kindref="member">mHeaderSize</ref><sp/>+<sp/>size)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hdr<sp/>=<sp/>sbfBatchUpdateBuffer<sp/>(item,<sp/>pub,<sp/>data,<sp/>size);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>number<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(size<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wanted<sp/>=<sp/><ref refid="sbf_common_8h_1a54ce656281e5eaed9432a9ae836d0b67" kindref="member">SBF_MIN</ref><sp/>(size,<sp/>left<sp/>-<sp/>pub-&gt;<ref refid="structsbf_pub_impl_1a8dd1045878b81f7e6746e83afac96269" kindref="member">mHeaderSize</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hdr<sp/>=<sp/>sbfBatchUpdateBuffer<sp/>(item,<sp/>pub,<sp/>data,<sp/>wanted);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hdr-&gt;mFragNum<sp/>=<sp/>number++;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)data<sp/>+<sp/>wanted;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>-=<sp/>wanted;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>left<sp/>=<sp/>sbfBatchNextBuffer<sp/>(item,<sp/>pub);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hdr-&gt;mFragNum<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hdr-&gt;mFlags<sp/>|=<sp/><ref refid="sbf_tport_private_8h_1a21e7eb1c6080cd45e307ecc2fa072fac" kindref="member">SBF_MESSAGE_FLAG_LAST_FRAGMENT</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1ae9f52fb356fee346369a22cfef0def73" kindref="member">sbfMutex_unlock</ref><sp/>(&amp;batch-&gt;mMutex);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="sbf_batch_8c_1a737c6f5741b96307764be35747e03c77" refkind="member"><highlight class="normal"><ref refid="sbf_batch_8c_1a737c6f5741b96307764be35747e03c77" kindref="member">sbfBatch_addBuffer</ref><sp/>(<ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref><sp/>batch,<sp/><ref refid="structsbf_pub_impl" kindref="compound">sbfPub</ref><sp/>pub,<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_batch_8c_1ab7c4e2444e1818bca452e965dfbea1a5" kindref="member">sbfBatch_add</ref><sp/>(batch,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pub,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfBuffer_getData<sp/>(buffer),</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfBuffer_getSize<sp/>(buffer));</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="sbf_batch_8h_1af4a728ef717d3db06b70bb5c1bd00d9e" refkind="member"><highlight class="normal"><ref refid="sbf_batch_8c_1af4a728ef717d3db06b70bb5c1bd00d9e" kindref="member">sbfBatch_send</ref><sp/>(<ref refid="sbf_batch_8h_1a2fb29835b3711b44c9e8394ee5ab805b" kindref="member">sbfBatch</ref><sp/>batch)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_batch_item_impl" kindref="compound">sbfBatchItem</ref><sp/>item;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_batch_item_impl" kindref="compound">sbfBatchItem</ref><sp/>item1;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/><sp/><sp/><sp/>buffer;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1afe21416b021add1d039070372b28c2b7" kindref="member">sbfMutex_lock</ref><sp/>(&amp;batch-&gt;mMutex);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1aabadd40831e862632d55eb8c867fd258" kindref="member">RB_FOREACH_SAFE</ref><sp/>(item,<sp/>sbfBatchItemTreeImpl,<sp/>&amp;batch-&gt;mTree,<sp/>item1)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a171e570c29aa6431d922a47663d7b68b" kindref="member">mLast</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a171e570c29aa6431d922a47663d7b68b" kindref="member">mLast</ref>-&gt;mFlags<sp/>|=<sp/><ref refid="sbf_tport_private_8h_1a6465f6e050bfabd18dd4bf2c6ddbe53b" kindref="member">SBF_MESSAGE_FLAG_LAST_IN_PACKET</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1adfd66d33765f5cf3ecc8d0af8c0e4309" kindref="member">mMessages</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((buffer<sp/>=<sp/><ref refid="sbf_deque_8c_1aebba170a8ca8e2228bda5a27419e8616" kindref="member">sbfDeque_popFront</ref><sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a6f7323ff543023a7f122c894340984d7" kindref="member">mBuffers</ref>))<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1afe21416b021add1d039070372b28c2b7" kindref="member">sbfMutex_lock</ref><sp/>(&amp;item-&gt;<ref refid="structsbf_batch_item_impl_1a4f807a66831a34b65ead7c2222960e49" kindref="member">mTportStream</ref>-&gt;mSendLock);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTport_sendBufferLocked<sp/>(item-&gt;<ref refid="structsbf_batch_item_impl_1a4f807a66831a34b65ead7c2222960e49" kindref="member">mTportStream</ref>,<sp/>buffer);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1ae9f52fb356fee346369a22cfef0def73" kindref="member">sbfMutex_unlock</ref><sp/>(&amp;item-&gt;<ref refid="structsbf_batch_item_impl_1a4f807a66831a34b65ead7c2222960e49" kindref="member">mTportStream</ref>-&gt;mSendLock);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfBuffer_destroy<sp/>(buffer);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a7c469cdaa4793b8b533367c3964f04a1" kindref="member">mCurrent</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_batch_item_impl_1a171e570c29aa6431d922a47663d7b68b" kindref="member">mLast</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1ae9f52fb356fee346369a22cfef0def73" kindref="member">sbfMutex_unlock</ref><sp/>(&amp;batch-&gt;mMutex);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="transport/sbfBatch.c"/>
+  </compounddef>
+</doxygen>

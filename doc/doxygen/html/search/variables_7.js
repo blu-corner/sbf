@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['offset_5fvector',['offset_vector',['../structpcre__callout__block.html#a2a64212ed5b5d1038f763afe719af193',1,'pcre_callout_block::offset_vector()'],['../structpcre16__callout__block.html#a07644e759ff3cd24fcc4ac9246abe095',1,'pcre16_callout_block::offset_vector()'],['../structpcre32__callout__block.html#a2099073a6b677633f5e1e47fefd12d9c',1,'pcre32_callout_block::offset_vector()']]]
+  ['language',['language',['../namespaceconf.html#ad76a2e6d7bfa880ebb4042c08e8b4e12',1,'conf']]],
+  ['latex_5fdocuments',['latex_documents',['../namespaceconf.html#a7812f49970f3de0d15dd7b9b9a10e3a1',1,'conf']]],
+  ['latex_5felements',['latex_elements',['../namespaceconf.html#a33619d385ad23765ac6ebb58bf82d43d',1,'conf']]]
 ];

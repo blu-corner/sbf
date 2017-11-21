@@ -1,0 +1,657 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_request_sub_8c" kind="file" language="C++">
+    <compoundname>sbfRequestSub.c</compoundname>
+    <includes refid="sbf_request_reply_8h" local="yes">sbfRequestReply.h</includes>
+    <includes refid="sbf_request_reply_private_8h" local="yes">sbfRequestReplyPrivate.h</includes>
+    <includes refid="sbf_request_sub_private_8h" local="yes">sbfRequestSubPrivate.h</includes>
+    <incdepgraph>
+      <node id="3073">
+        <label>sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3074" relation="include">
+        </childnode>
+        <childnode refid="3075" relation="include">
+        </childnode>
+      </node>
+      <node id="3061">
+        <label>event.h</label>
+      </node>
+      <node id="3088">
+        <label>sbfRequestReplyPrivate.h</label>
+        <link refid="sbf_request_reply_private_8h"/>
+        <childnode refid="3089" relation="include">
+        </childnode>
+        <childnode refid="3076" relation="include">
+        </childnode>
+      </node>
+      <node id="3057">
+        <label>requestreply/sbfRequestSub.c</label>
+        <link refid="sbf_request_sub_8c"/>
+        <childnode refid="3058" relation="include">
+        </childnode>
+        <childnode refid="3088" relation="include">
+        </childnode>
+        <childnode refid="3090" relation="include">
+        </childnode>
+      </node>
+      <node id="3069">
+        <label>sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3070" relation="include">
+        </childnode>
+        <childnode refid="3082" relation="include">
+        </childnode>
+      </node>
+      <node id="3074">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3085">
+        <label>sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="3072" relation="include">
+        </childnode>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3082" relation="include">
+        </childnode>
+      </node>
+      <node id="3086">
+        <label>sbfTopic.h</label>
+        <link refid="sbf_topic_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3060">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="3090">
+        <label>sbfRequestSubPrivate.h</label>
+        <link refid="sbf_request_sub_private_8h"/>
+      </node>
+      <node id="3062">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="3063" relation="include">
+        </childnode>
+      </node>
+      <node id="3079">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3071">
+        <label>sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="3072" relation="include">
+        </childnode>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3066">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3081">
+        <label>sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3072">
+        <label>sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3073" relation="include">
+        </childnode>
+        <childnode refid="3076" relation="include">
+        </childnode>
+        <childnode refid="3077" relation="include">
+        </childnode>
+      </node>
+      <node id="3080">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3063">
+        <label>sys/types.h</label>
+      </node>
+      <node id="3084">
+        <label>sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="3072" relation="include">
+        </childnode>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3082" relation="include">
+        </childnode>
+      </node>
+      <node id="3077">
+        <label>sbfBufferInline.h</label>
+        <link refid="sbf_buffer_inline_8h"/>
+      </node>
+      <node id="3076">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3058">
+        <label>sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3069" relation="include">
+        </childnode>
+        <childnode refid="3087" relation="include">
+        </childnode>
+        <childnode refid="3078" relation="include">
+        </childnode>
+        <childnode refid="3086" relation="include">
+        </childnode>
+      </node>
+      <node id="3083">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3059">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="3060" relation="include">
+        </childnode>
+        <childnode refid="3061" relation="include">
+        </childnode>
+        <childnode refid="3062" relation="include">
+        </childnode>
+        <childnode refid="3064" relation="include">
+        </childnode>
+        <childnode refid="3065" relation="include">
+        </childnode>
+        <childnode refid="3066" relation="include">
+        </childnode>
+        <childnode refid="3067" relation="include">
+        </childnode>
+        <childnode refid="3068" relation="include">
+        </childnode>
+      </node>
+      <node id="3065">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="3070">
+        <label>sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="3071" relation="include">
+        </childnode>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3078" relation="include">
+        </childnode>
+        <childnode refid="3084" relation="include">
+        </childnode>
+        <childnode refid="3085" relation="include">
+        </childnode>
+        <childnode refid="3086" relation="include">
+        </childnode>
+      </node>
+      <node id="3089">
+        <label>sbfGuid.h</label>
+        <link refid="sbf_guid_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3064">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="3078">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3079" relation="include">
+        </childnode>
+        <childnode refid="3080" relation="include">
+        </childnode>
+        <childnode refid="3081" relation="include">
+        </childnode>
+        <childnode refid="3082" relation="include">
+        </childnode>
+        <childnode refid="3083" relation="include">
+        </childnode>
+      </node>
+      <node id="3067">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3082">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3068">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+      </node>
+      <node id="3075">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+      <node id="3087">
+        <label>sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3070" relation="include">
+        </childnode>
+        <childnode refid="3082" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_request_sub_8c_1a831bec32603235eaf6228528bd797512" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfRequestSubPubReadyCb</definition>
+        <argsstring>(sbfPub pub, void *closure)</argsstring>
+        <name>sbfRequestSubPubReadyCb</name>
+        <param>
+          <type><ref refid="sbf_pub_8h_1aa23045dc7b9f1d04b6dee3bb3ffe63a8" kindref="member">sbfPub</ref></type>
+          <declname>pub</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSub.c" line="6" column="1" bodyfile="requestreply/sbfRequestSub.c" bodystart="6" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_sub_8c_1a931c304846c84fda4b9683e6ed849b3e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfRequestSubSubReadyCb</definition>
+        <argsstring>(sbfSub sub0, void *closure)</argsstring>
+        <name>sbfRequestSubSubReadyCb</name>
+        <param>
+          <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+          <declname>sub0</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSub.c" line="16" column="1" bodyfile="requestreply/sbfRequestSub.c" bodystart="16" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_sub_8c_1a012074b3bb58d96507d5f5435ce24adc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfRequestSubSubMessageCb</definition>
+        <argsstring>(sbfSub sub0, sbfBuffer buffer, void *closure)</argsstring>
+        <name>sbfRequestSubSubMessageCb</name>
+        <param>
+          <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+          <declname>sub0</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSub.c" line="26" column="1" bodyfile="requestreply/sbfRequestSub.c" bodystart="26" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_sub_8c_1ad3d0a9ad4edaf098f039f7a3a6b3b862" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_request_sub_8h_1a6f43898e8b9affe12bb6c378cd5c08b3" kindref="member">sbfRequestSub</ref></type>
+        <definition>sbfRequestSub sbfRequestSub_create</definition>
+        <argsstring>(sbfTport tport, sbfQueue queue, const char *topic, sbfRequestSubReadyCb readyCb, sbfRequestSubRequestCb requestCb, void *closure)</argsstring>
+        <name>sbfRequestSub_create</name>
+        <param>
+          <type><ref refid="sbf_tport_8h_1acbaf9d451442abe85c18e3583d746181" kindref="member">sbfTport</ref></type>
+          <declname>tport</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_request_sub_8h_1ae72f14267ed690077474259f953bad41" kindref="member">sbfRequestSubReadyCb</ref></type>
+          <declname>readyCb</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_request_sub_8h_1a0e6a16a7431befbcbd2eda1c7ac826ff" kindref="member">sbfRequestSubRequestCb</ref></type>
+          <declname>requestCb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+<para>Creates a subscriber configured with the given parameters. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tport</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the port to initialise the communications. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue to sublish the messages. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the logical channel name for the messages. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>readyCb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the callback indicating that the channel is ready. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>requestCb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the callback indicating that the channel is ready. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user data linked to the subscriber handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a subscriber configured with the given parameters. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSub.c" line="54" column="1" bodyfile="requestreply/sbfRequestSub.c" bodystart="54" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_sub_8c_1ab30d78106273929f9b4096bdfb876ec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfRequestSub_destroy</definition>
+        <argsstring>(sbfRequestSub sub)</argsstring>
+        <name>sbfRequestSub_destroy</name>
+        <param>
+          <type><ref refid="sbf_request_sub_8h_1a6f43898e8b9affe12bb6c378cd5c08b3" kindref="member">sbfRequestSub</ref></type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+<para>Release all the resources allocated by the subscriber. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subscriber handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSub.c" line="111" column="1" bodyfile="requestreply/sbfRequestSub.c" bodystart="111" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_sub_8c_1a76545074d59af600ec9f6dd312151dad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfRequestSub_getTopic</definition>
+        <argsstring>(sbfRequestSub sub)</argsstring>
+        <name>sbfRequestSub_getTopic</name>
+        <param>
+          <type><ref refid="sbf_request_sub_8h_1a6f43898e8b9affe12bb6c378cd5c08b3" kindref="member">sbfRequestSub</ref></type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+<para>returns the name of the topic associated with the given subscriber. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subscriber handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null terminated string containing the name of the topic associated with the given subscriber. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSub.c" line="125" column="1" bodyfile="requestreply/sbfRequestSub.c" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_sub_8c_1a2062243d09a930f28564d0462b9a4241" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfRequestSub_reply</definition>
+        <argsstring>(sbfRequestSub sub, sbfRequest req, void *data, size_t size)</argsstring>
+        <name>sbfRequestSub_reply</name>
+        <param>
+          <type><ref refid="sbf_request_sub_8h_1a6f43898e8b9affe12bb6c378cd5c08b3" kindref="member">sbfRequestSub</ref></type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae" kindref="member">sbfRequest</ref></type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSub.c" line="131" column="1" bodyfile="requestreply/sbfRequestSub.c" bodystart="131" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_request_reply_8h" kindref="compound">sbfRequestReply.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_request_reply_private_8h" kindref="compound">sbfRequestReplyPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_request_sub_private_8h" kindref="compound">sbfRequestSubPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">sbfRequestSubPubReadyCb<sp/>(<ref refid="structsbf_pub_impl" kindref="compound">sbfPub</ref><sp/>pub,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_sub_impl" kindref="compound">sbfRequestSub</ref><sp/>sub<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1afa3baba18e4f1e128d745168049a44d6" kindref="member">mPubReady</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1a39d77a5823ea66910bebf9c30500a1fe" kindref="member">mSubReady</ref><sp/>&amp;&amp;<sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1a932c492d0dd51a78d209447786997ee6" kindref="member">mReadyCb</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1a932c492d0dd51a78d209447786997ee6" kindref="member">mReadyCb</ref><sp/>(sub,<sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1ab0f76e91b9d5d4d53fdae94257af4cfc" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">sbfRequestSubSubReadyCb<sp/>(<ref refid="structsbf_sub_impl" kindref="compound">sbfSub</ref><sp/>sub0,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_sub_impl" kindref="compound">sbfRequestSub</ref><sp/>sub<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1a39d77a5823ea66910bebf9c30500a1fe" kindref="member">mSubReady</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1afa3baba18e4f1e128d745168049a44d6" kindref="member">mPubReady</ref><sp/>&amp;&amp;<sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1a932c492d0dd51a78d209447786997ee6" kindref="member">mReadyCb</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1a932c492d0dd51a78d209447786997ee6" kindref="member">mReadyCb</ref><sp/>(sub,<sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1ab0f76e91b9d5d4d53fdae94257af4cfc" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">sbfRequestSubSubMessageCb<sp/>(<ref refid="structsbf_sub_impl" kindref="compound">sbfSub</ref><sp/>sub0,<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_sub_impl" kindref="compound">sbfRequestSub</ref><sp/><sp/><sp/><sp/><sp/>sub<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_request_reply_private_8h_1a287ef027733349451b0cb2ea13292e59" kindref="member">sbfRequestHeader</ref>*<sp/>hdr<sp/>=<sp/>sbfBuffer_getData<sp/>(buffer);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/>sbfBuffer_getSize<sp/>(buffer);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_impl" kindref="compound">sbfRequest</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>req;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*hdr)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>req<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*req);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>req-&gt;<ref refid="structsbf_request_impl_1a511ff07c4c2e225fa50d68aff6eb7cb9" kindref="member">mSub</ref><sp/>=<sp/>sub;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfRefCount_init<sp/>(&amp;req-&gt;<ref refid="structsbf_request_impl_1a1f3880465bd350b59a46bef7659853d8" kindref="member">mRefCount</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_guid_8c_1a7867ed4656ece458087f09fc58c91445" kindref="member">sbfGuid_copy</ref><sp/>(&amp;req-&gt;<ref refid="structsbf_request_impl_1acabc53e59f8c406fe52faedbb193e44d" kindref="member">mGuid</ref>,<sp/>&amp;hdr-&gt;mGuid);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1ae2809d770dad0d3a23aac48fd9eaa300" kindref="member">mRequestCb</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>=<sp/>sbfBuffer_wrap<sp/>(hdr<sp/>+<sp/>1,<sp/>size<sp/>-<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*hdr,<sp/>NULL,<sp/>NULL);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1ae2809d770dad0d3a23aac48fd9eaa300" kindref="member">mRequestCb</ref><sp/>(sub,<sp/>req,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">,<sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1ab0f76e91b9d5d4d53fdae94257af4cfc" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfBuffer_destroy<sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_request_reply_8c_1acaa6ac8247a2a4a849015ea0b2517228" kindref="member">sbfRequest_destroy</ref><sp/>(req);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><ref refid="structsbf_request_sub_impl" kindref="compound">sbfRequestSub</ref></highlight></codeline>
+<codeline lineno="54" refid="sbf_request_sub_8h_1ad3d0a9ad4edaf098f039f7a3a6b3b862" refkind="member"><highlight class="normal"><ref refid="sbf_request_sub_8c_1ad3d0a9ad4edaf098f039f7a3a6b3b862" kindref="member">sbfRequestSub_create</ref><sp/>(<ref refid="sbf_tport_8h_1acbaf9d451442abe85c18e3583d746181" kindref="member">sbfTport</ref><sp/>tport,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>topic,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_request_sub_8h_1ae72f14267ed690077474259f953bad41" kindref="member">sbfRequestSubReadyCb</ref><sp/>readyCb,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_request_sub_8h_1a0e6a16a7431befbcbd2eda1c7ac826ff" kindref="member">sbfRequestSubRequestCb</ref><sp/>requestCb,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_request_sub_impl" kindref="compound">sbfRequestSub</ref><sp/>sub;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestTopic[<ref refid="sbf_topic_8h_1aa9f435bc8956a8d5d5e7e32e3d3e3e45" kindref="member">SBF_TOPIC_SIZE_LIMIT</ref>];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>replyTopic[<ref refid="sbf_topic_8h_1aa9f435bc8956a8d5d5e7e32e3d3e3e45" kindref="member">SBF_TOPIC_SIZE_LIMIT</ref>];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>used;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>used<sp/>=<sp/><ref refid="sbf_common_win32_8h_1aa367b75c5aed883fef5befbdf04835a4" kindref="member">snprintf</ref><sp/>(requestTopic,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>requestTopic,<sp/></highlight><highlight class="stringliteral">&quot;%s@request&quot;</highlight><highlight class="normal">,<sp/>topic);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(used<sp/>&lt;<sp/>0<sp/>||<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)used<sp/>&gt;=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>requestTopic)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>used<sp/>=<sp/><ref refid="sbf_common_win32_8h_1aa367b75c5aed883fef5befbdf04835a4" kindref="member">snprintf</ref><sp/>(replyTopic,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>replyTopic,<sp/></highlight><highlight class="stringliteral">&quot;%s@reply&quot;</highlight><highlight class="normal">,<sp/>topic);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(used<sp/>&lt;<sp/>0<sp/>||<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)used<sp/>&gt;=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>replyTopic)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>sub<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*sub);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1adbc58e04d88b3f3120c2b7a54dabef84" kindref="member">mLog</ref><sp/>=<sp/><ref refid="sbf_mw_8c_1aa7e45fc4943d4080534faf9d4b2f394f" kindref="member">sbfMw_getLog</ref><sp/>(<ref refid="sbf_tport_8c_1aa923af23b38a07524d327dea78fba30b" kindref="member">sbfTport_getMw</ref><sp/>(tport));</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1ab2d1a8a8d828c3e1ad3dff3fcbd9199d" kindref="member">mTopic</ref><sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(topic);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1adbc58e04d88b3f3120c2b7a54dabef84" kindref="member">mLog</ref>,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;creating<sp/>request<sp/>subscription<sp/>%p:<sp/>topic<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sub,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topic);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1a932c492d0dd51a78d209447786997ee6" kindref="member">mReadyCb</ref><sp/>=<sp/>readyCb;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1ae2809d770dad0d3a23aac48fd9eaa300" kindref="member">mRequestCb</ref><sp/>=<sp/>requestCb;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1ab0f76e91b9d5d4d53fdae94257af4cfc" kindref="member">mClosure</ref><sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1a210905e9f8bfeec5546c82c26952ee9f" kindref="member">mPub</ref><sp/>=<sp/><ref refid="sbf_pub_8c_1a340ea1e9612e4ac3f1160c37af117564" kindref="member">sbfPub_create</ref><sp/>(tport,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>replyTopic,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfRequestSubPubReadyCb,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sub);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1a210905e9f8bfeec5546c82c26952ee9f" kindref="member">mPub</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1a96f57a958c10ce6556def2b08c31c357" kindref="member">mSub</ref><sp/>=<sp/><ref refid="sbf_sub_8c_1ad3c0b1c131bc201d4c0a960877ddba16" kindref="member">sbfSub_create</ref><sp/>(tport,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestTopic,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfRequestSubSubReadyCb,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfRequestSubSubMessageCb,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sub);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1a96f57a958c10ce6556def2b08c31c357" kindref="member">mSub</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sub;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">fail:</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_request_sub_8c_1ab30d78106273929f9b4096bdfb876ec5" kindref="member">sbfRequestSub_destroy</ref><sp/>(sub);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="sbf_request_sub_8h_1ab30d78106273929f9b4096bdfb876ec5" refkind="member"><highlight class="normal"><ref refid="sbf_request_sub_8c_1ab30d78106273929f9b4096bdfb876ec5" kindref="member">sbfRequestSub_destroy</ref><sp/>(<ref refid="structsbf_request_sub_impl" kindref="compound">sbfRequestSub</ref><sp/>sub)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1adbc58e04d88b3f3120c2b7a54dabef84" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;destroying<sp/>request<sp/>subscription<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>sub);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1a210905e9f8bfeec5546c82c26952ee9f" kindref="member">mPub</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_pub_8c_1a8b8b7ce4c048e15570a9de1f723ab8c5" kindref="member">sbfPub_destroy</ref><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1a210905e9f8bfeec5546c82c26952ee9f" kindref="member">mPub</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1a96f57a958c10ce6556def2b08c31c357" kindref="member">mSub</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_sub_8c_1a52ee27e0190a813dad71e9b89573a74d" kindref="member">sbfSub_destroy</ref><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1a96f57a958c10ce6556def2b08c31c357" kindref="member">mSub</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)sub-&gt;<ref refid="structsbf_request_sub_impl_1ab2d1a8a8d828c3e1ad3dff3fcbd9199d" kindref="member">mTopic</ref>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(sub);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="125" refid="sbf_request_sub_8h_1a76545074d59af600ec9f6dd312151dad" refkind="member"><highlight class="normal"><ref refid="sbf_request_sub_8c_1a76545074d59af600ec9f6dd312151dad" kindref="member">sbfRequestSub_getTopic</ref><sp/>(<ref refid="structsbf_request_sub_impl" kindref="compound">sbfRequestSub</ref><sp/>sub)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sub-&gt;<ref refid="structsbf_request_sub_impl_1ab2d1a8a8d828c3e1ad3dff3fcbd9199d" kindref="member">mTopic</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="sbf_request_sub_8c_1a2062243d09a930f28564d0462b9a4241" refkind="member"><highlight class="normal"><ref refid="sbf_request_sub_8c_1a2062243d09a930f28564d0462b9a4241" kindref="member">sbfRequestSub_reply</ref><sp/>(<ref refid="structsbf_request_sub_impl" kindref="compound">sbfRequestSub</ref><sp/>sub,<sp/><ref refid="structsbf_request_impl" kindref="compound">sbfRequest</ref><sp/>req,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_request_reply_private_8h_1a287ef027733349451b0cb2ea13292e59" kindref="member">sbfRequestHeader</ref>*<sp/>hdr;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(req-&gt;<ref refid="structsbf_request_impl_1a511ff07c4c2e225fa50d68aff6eb7cb9" kindref="member">mSub</ref><sp/>!=<sp/>sub)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_fatal_8h_1a8ae1d367ee2c1922adb415aa8c1972b9" kindref="member">SBF_FATAL</ref><sp/>(</highlight><highlight class="stringliteral">&quot;request<sp/>reply<sp/>on<sp/>wrong<sp/>subscription&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer<sp/>=<sp/><ref refid="sbf_pub_8c_1a8e3599d3fd6e997eab721abd36fe2ba4" kindref="member">sbfPub_getBuffer</ref><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1a210905e9f8bfeec5546c82c26952ee9f" kindref="member">mPub</ref>,<sp/>size<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*hdr);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>hdr<sp/>=<sp/>sbfBuffer_getData<sp/>(buffer);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_guid_8c_1a7867ed4656ece458087f09fc58c91445" kindref="member">sbfGuid_copy</ref><sp/>(&amp;hdr-&gt;mGuid,<sp/>&amp;req-&gt;<ref refid="structsbf_request_impl_1acabc53e59f8c406fe52faedbb193e44d" kindref="member">mGuid</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>memset<sp/>(hdr-&gt;mSpace,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>hdr-&gt;mSpace);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy<sp/>(hdr<sp/>+<sp/>1,<sp/>data,<sp/>size);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_pub_8c_1ab1291857bc5359bc4f05482df4ba8279" kindref="member">sbfPub_sendBuffer</ref><sp/>(sub-&gt;<ref refid="structsbf_request_sub_impl_1a210905e9f8bfeec5546c82c26952ee9f" kindref="member">mPub</ref>,<sp/>buffer);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="requestreply/sbfRequestSub.c"/>
+  </compounddef>
+</doxygen>

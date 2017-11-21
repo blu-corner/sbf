@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsbf_log_file_impl" kind="struct" language="C++" prot="public">
+    <compoundname>sbfLogFileImpl</compoundname>
+    <includes refid="sbf_log_file_private_8h" local="no">sbfLogFilePrivate.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsbf_log_file_impl_1ac9630480fc4155fdf3055c609789eb14" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* sbfLogFileImpl::mPath</definition>
+        <argsstring></argsstring>
+        <name>mPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFilePrivate.h" line="11" column="1" bodyfile="common/sbfLogFilePrivate.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_log_file_impl_1a1706040d1a775705d3c5fec870e23dba" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_log_file_8h_1a7cb00db30f3f48da671c46f75d2216ae" kindref="member">sbfLogFileEntry</ref></type>
+        <definition>sbfLogFileEntry sbfLogFileImpl::mBase</definition>
+        <argsstring></argsstring>
+        <name>mBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFilePrivate.h" line="13" column="1" bodyfile="common/sbfLogFilePrivate.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_log_file_impl_1a4730dff99aee5710576f12820dd0f79a" prot="public" static="no" mutable="no">
+        <type>u_int</type>
+        <definition>u_int sbfLogFileImpl::mNext</definition>
+        <argsstring></argsstring>
+        <name>mNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLogFilePrivate.h" line="14" column="1" bodyfile="common/sbfLogFilePrivate.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="common/sbfLogFilePrivate.h" line="10" column="1" bodyfile="common/sbfLogFilePrivate.h" bodystart="9" bodyend="15"/>
+    <listofallmembers>
+      <member refid="structsbf_log_file_impl_1a1706040d1a775705d3c5fec870e23dba" prot="public" virt="non-virtual"><scope>sbfLogFileImpl</scope><name>mBase</name></member>
+      <member refid="structsbf_log_file_impl_1a4730dff99aee5710576f12820dd0f79a" prot="public" virt="non-virtual"><scope>sbfLogFileImpl</scope><name>mNext</name></member>
+      <member refid="structsbf_log_file_impl_1ac9630480fc4155fdf3055c609789eb14" prot="public" virt="non-virtual"><scope>sbfLogFileImpl</scope><name>mPath</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

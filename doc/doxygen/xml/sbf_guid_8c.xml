@@ -1,0 +1,479 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_guid_8c" kind="file" language="C++">
+    <compoundname>sbfGuid.c</compoundname>
+    <includes refid="sbf_guid_8h" local="yes">sbfGuid.h</includes>
+    <includes refid="sbf_interface_8h" local="yes">sbfInterface.h</includes>
+    <incdepgraph>
+      <node id="702">
+        <label>event.h</label>
+      </node>
+      <node id="701">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="703">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="704" relation="include">
+        </childnode>
+      </node>
+      <node id="707">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="704">
+        <label>sys/types.h</label>
+      </node>
+      <node id="710">
+        <label>sbfInterface.h</label>
+        <link refid="sbf_interface_8h"/>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="700">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="701" relation="include">
+        </childnode>
+        <childnode refid="702" relation="include">
+        </childnode>
+        <childnode refid="703" relation="include">
+        </childnode>
+        <childnode refid="705" relation="include">
+        </childnode>
+        <childnode refid="706" relation="include">
+        </childnode>
+        <childnode refid="707" relation="include">
+        </childnode>
+        <childnode refid="708" relation="include">
+        </childnode>
+        <childnode refid="709" relation="include">
+        </childnode>
+      </node>
+      <node id="706">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="698">
+        <label>common/sbfGuid.c</label>
+        <link refid="sbf_guid_8c"/>
+        <childnode refid="699" relation="include">
+        </childnode>
+        <childnode refid="710" relation="include">
+        </childnode>
+      </node>
+      <node id="699">
+        <label>sbfGuid.h</label>
+        <link refid="sbf_guid_8h"/>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="705">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="708">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="709">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sbf_guid_8c_1a25213281fa7d7e26696de78bc9fe39f5" prot="public" static="yes" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t gSbfGuidSeed</definition>
+        <argsstring></argsstring>
+        <name>gSbfGuidSeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="4" column="1" bodyfile="common/sbfGuid.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_guid_8c_1a496cdec479c65623e1b38226db8dd018" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfGuid_new</definition>
+        <argsstring>(sbfLog log, sbfGuid *g)</argsstring>
+        <name>sbfGuid_new</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="7" column="1" bodyfile="common/sbfGuid.c" bodystart="7" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_guid_8c_1a17f5f6228c0b6a7d4334a650f9e19150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sbfGuid_compare</definition>
+        <argsstring>(const sbfGuid *g1, const sbfGuid *g2)</argsstring>
+        <name>sbfGuid_compare</name>
+        <param>
+          <type>const <ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="27" column="1" bodyfile="common/sbfGuid.c" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_guid_8c_1af4671e2d60327e9a1b5f01a3b5e766fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sbfGuid_compareFixed</definition>
+        <argsstring>(const sbfGuid *g1, const sbfGuid *g2)</argsstring>
+        <name>sbfGuid_compareFixed</name>
+        <param>
+          <type>const <ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="33" column="1" bodyfile="common/sbfGuid.c" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_guid_8c_1a7867ed4656ece458087f09fc58c91445" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfGuid_copy</definition>
+        <argsstring>(sbfGuid *to, const sbfGuid *from)</argsstring>
+        <name>sbfGuid_copy</name>
+        <param>
+          <type><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>const <ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="39" column="1" bodyfile="common/sbfGuid.c" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_guid_8c_1a62b8e1e15ce72e483c983f207b6b6071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t sbfGuid_get</definition>
+        <argsstring>(sbfGuid *g)</argsstring>
+        <name>sbfGuid_get</name>
+        <param>
+          <type><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="45" column="1" bodyfile="common/sbfGuid.c" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_guid_8c_1a8e383f9ed18fc2c1ea88478cbc06473d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfGuid_set</definition>
+        <argsstring>(sbfGuid *g, uint64_t to)</argsstring>
+        <name>sbfGuid_set</name>
+        <param>
+          <type><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="51" column="1" bodyfile="common/sbfGuid.c" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_guid_8c_1ad443d462762bf972aaf6947a45da225e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t sbfGuid_increment</definition>
+        <argsstring>(sbfGuid *g, uint64_t by)</argsstring>
+        <name>sbfGuid_increment</name>
+        <param>
+          <type><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>by</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="57" column="1" bodyfile="common/sbfGuid.c" bodystart="57" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_guid_8c_1a57d3e99400cfbcc3cb2c5a400acb6d6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sbfGuid_fromString</definition>
+        <argsstring>(sbfGuid *g, const char *s)</argsstring>
+        <name>sbfGuid_fromString</name>
+        <param>
+          <type><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="64" column="1" bodyfile="common/sbfGuid.c" bodystart="64" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_guid_8c_1a917e40347da313e2e3679524e20d38bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfGuid_toString</definition>
+        <argsstring>(const sbfGuid *g)</argsstring>
+        <name>sbfGuid_toString</name>
+        <param>
+          <type>const <ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="77" column="1" bodyfile="common/sbfGuid.c" bodystart="77" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_guid_8c_1a234988149532885cac7fbfe9cd2b9279" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* sbfGuid_toStringBuffer</definition>
+        <argsstring>(const sbfGuid *g, char *buf, size_t len)</argsstring>
+        <name>sbfGuid_toStringBuffer</name>
+        <param>
+          <type>const <ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="85" column="1" bodyfile="common/sbfGuid.c" bodystart="85" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_guid_8c_1ae39fc7bae3cc1bda929b7d7bb8d2d8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfGuid_toStringFixed</definition>
+        <argsstring>(const sbfGuid *g)</argsstring>
+        <name>sbfGuid_toStringFixed</name>
+        <param>
+          <type>const <ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="98" column="1" bodyfile="common/sbfGuid.c" bodystart="98" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_guid_8c_1a7e224270a3c2d6f5a59d994ade421a6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* sbfGuid_toStringFixedBuffer</definition>
+        <argsstring>(const sbfGuid *g, char *buf, size_t len)</argsstring>
+        <name>sbfGuid_toStringFixedBuffer</name>
+        <param>
+          <type>const <ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfGuid.c" line="106" column="1" bodyfile="common/sbfGuid.c" bodystart="106" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_guid_8h" kindref="compound">sbfGuid.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_interface_8h" kindref="compound">sbfInterface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint64_t<sp/>gSbfGuidSeed;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="sbf_guid_8h_1a496cdec479c65623e1b38226db8dd018" refkind="member"><highlight class="normal"><ref refid="sbf_guid_8c_1a496cdec479c65623e1b38226db8dd018" kindref="member">sbfGuid_new</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,<sp/><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/><sp/>tv;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pid;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>host;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8c_1aaf2d0a99430a6d5253b8c395c30ca7e3" kindref="member">gettimeofday</ref><sp/>(&amp;tv,<sp/>NULL);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>pid<sp/>=<sp/>getpid<sp/>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>host<sp/>=<sp/><ref refid="sbf_interface_8c_1abb2c0bbd28f20ab0a331836de37d8202" kindref="member">sbfInterface_first</ref><sp/>(log);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(host<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_fatal_8h_1a8ae1d367ee2c1922adb415aa8c1972b9" kindref="member">SBF_FATAL</ref><sp/>(</highlight><highlight class="stringliteral">&quot;can&apos;t<sp/>find<sp/>machine<sp/>host&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;mParts[0]<sp/>=<sp/>ntohl<sp/>(host);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;mParts[1]<sp/>=<sp/>((uint64_t)tv.tv_sec<sp/>&lt;&lt;<sp/>32)<sp/>|<sp/>pid;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;mParts[2]<sp/>=<sp/>gSbfGuidSeed++;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;mParts[3]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="sbf_guid_8h_1a17f5f6228c0b6a7d4334a650f9e19150" refkind="member"><highlight class="normal"><ref refid="sbf_guid_8c_1a17f5f6228c0b6a7d4334a650f9e19150" kindref="member">sbfGuid_compare</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g2)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>memcmp<sp/>(g1,<sp/>g2,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*g1);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="sbf_guid_8h_1af4671e2d60327e9a1b5f01a3b5e766fe" refkind="member"><highlight class="normal"><ref refid="sbf_guid_8c_1af4671e2d60327e9a1b5f01a3b5e766fe" kindref="member">sbfGuid_compareFixed</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g2)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>memcmp<sp/>(g1,<sp/>g2,<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*g1)<sp/>-<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>g1-&gt;mParts[3]);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="sbf_guid_8h_1a7867ed4656ece458087f09fc58c91445" refkind="member"><highlight class="normal"><ref refid="sbf_guid_8c_1a7867ed4656ece458087f09fc58c91445" kindref="member">sbfGuid_copy</ref><sp/>(<ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>to,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>from)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy<sp/>(to,<sp/>from,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*to);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">uint64_t</highlight></codeline>
+<codeline lineno="45" refid="sbf_guid_8h_1a62b8e1e15ce72e483c983f207b6b6071" refkind="member"><highlight class="normal"><ref refid="sbf_guid_8c_1a62b8e1e15ce72e483c983f207b6b6071" kindref="member">sbfGuid_get</ref><sp/>(<ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>g-&gt;mParts[3];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="sbf_guid_8h_1a8e383f9ed18fc2c1ea88478cbc06473d" refkind="member"><highlight class="normal"><ref refid="sbf_guid_8c_1a8e383f9ed18fc2c1ea88478cbc06473d" kindref="member">sbfGuid_set</ref><sp/>(<ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g,<sp/>uint64_t<sp/>to)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;mParts[3]<sp/>=<sp/>to;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">uint64_t</highlight></codeline>
+<codeline lineno="57" refid="sbf_guid_8h_1ad443d462762bf972aaf6947a45da225e" refkind="member"><highlight class="normal"><ref refid="sbf_guid_8c_1ad443d462762bf972aaf6947a45da225e" kindref="member">sbfGuid_increment</ref><sp/>(<ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g,<sp/>uint64_t<sp/>by)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;mParts[3]<sp/>+=<sp/>by;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>g-&gt;mParts[3];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="sbf_guid_8h_1a57d3e99400cfbcc3cb2c5a400acb6d6b" refkind="member"><highlight class="normal"><ref refid="sbf_guid_8c_1a57d3e99400cfbcc3cb2c5a400acb6d6b" kindref="member">sbfGuid_fromString</ref><sp/>(<ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>s)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sscanf<sp/>(s,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;%llx/%llx/%llx/%llx&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)&amp;g-&gt;mParts[0],</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)&amp;g-&gt;mParts[1],</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)&amp;g-&gt;mParts[2],</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)&amp;g-&gt;mParts[3])<sp/>!=<sp/>4)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="77" refid="sbf_guid_8h_1a917e40347da313e2e3679524e20d38bb" refkind="member"><highlight class="normal"><ref refid="sbf_guid_8c_1a917e40347da313e2e3679524e20d38bb" kindref="member">sbfGuid_toString</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_darwin_8h_1a520a93730da646b0fbee09d441c8549e" kindref="member">__thread</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>s[<ref refid="sbf_guid_8h_1ac24ffe50abc3d1a1bb31ca706d75691c" kindref="member">SBF_GUID_STRING_SIZE</ref>];</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="sbf_guid_8c_1a234988149532885cac7fbfe9cd2b9279" kindref="member">sbfGuid_toStringBuffer</ref><sp/>(g,<sp/>s,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>s);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="85" refid="sbf_guid_8h_1a234988149532885cac7fbfe9cd2b9279" refkind="member"><highlight class="normal"><ref refid="sbf_guid_8c_1a234988149532885cac7fbfe9cd2b9279" kindref="member">sbfGuid_toStringBuffer</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1aa367b75c5aed883fef5befbdf04835a4" kindref="member">snprintf</ref><sp/>(buf,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;%016llx/%016llx/%llx/%llx&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)g-&gt;mParts[0],</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)g-&gt;mParts[1],</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)g-&gt;mParts[2],</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)g-&gt;mParts[3]);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buf;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="98" refid="sbf_guid_8h_1ae39fc7bae3cc1bda929b7d7bb8d2d8be" refkind="member"><highlight class="normal"><ref refid="sbf_guid_8c_1ae39fc7bae3cc1bda929b7d7bb8d2d8be" kindref="member">sbfGuid_toStringFixed</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_darwin_8h_1a520a93730da646b0fbee09d441c8549e" kindref="member">__thread</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>s[<ref refid="sbf_guid_8h_1ac24ffe50abc3d1a1bb31ca706d75691c" kindref="member">SBF_GUID_STRING_SIZE</ref>];</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="sbf_guid_8c_1a7e224270a3c2d6f5a59d994ade421a6d" kindref="member">sbfGuid_toStringFixedBuffer</ref><sp/>(g,<sp/>s,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>s);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="106" refid="sbf_guid_8h_1a7e224270a3c2d6f5a59d994ade421a6d" refkind="member"><highlight class="normal"><ref refid="sbf_guid_8c_1a7e224270a3c2d6f5a59d994ade421a6d" kindref="member">sbfGuid_toStringFixedBuffer</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref>*<sp/>g,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1aa367b75c5aed883fef5befbdf04835a4" kindref="member">snprintf</ref><sp/>(buf,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;%016llx/%016llx/%llx&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)g-&gt;mParts[0],</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)g-&gt;mParts[1],</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)g-&gt;mParts[2]);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buf;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="common/sbfGuid.c"/>
+  </compounddef>
+</doxygen>

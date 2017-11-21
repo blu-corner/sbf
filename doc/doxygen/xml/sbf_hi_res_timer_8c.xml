@@ -1,0 +1,488 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_hi_res_timer_8c" kind="file" language="C++">
+    <compoundname>sbfHiResTimer.c</compoundname>
+    <includes refid="sbf_hi_res_timer_8h" local="yes">sbfHiResTimer.h</includes>
+    <includes refid="sbf_hi_res_timer_private_8h" local="yes">sbfHiResTimerPrivate.h</includes>
+    <includes refid="sbf_queue_private_8h" local="yes">sbfQueuePrivate.h</includes>
+    <incdepgraph>
+      <node id="2231">
+        <label>sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+        <childnode refid="2232" relation="include">
+        </childnode>
+        <childnode refid="2233" relation="include">
+        </childnode>
+      </node>
+      <node id="2211">
+        <label>event.h</label>
+      </node>
+      <node id="2234">
+        <label>sbfProperties.h</label>
+        <link refid="sbf_properties_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+        <childnode refid="2222" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+        <childnode refid="2235" relation="include">
+        </childnode>
+      </node>
+      <node id="2219">
+        <label>sbfHiResTimerPrivate.h</label>
+        <link refid="sbf_hi_res_timer_private_8h"/>
+        <childnode refid="2220" relation="include">
+        </childnode>
+        <childnode refid="2225" relation="include">
+        </childnode>
+        <childnode refid="2228" relation="include">
+        </childnode>
+        <childnode refid="2229" relation="include">
+        </childnode>
+      </node>
+      <node id="2230">
+        <label>sbfQueuePrivate.h</label>
+        <link refid="sbf_queue_private_8h"/>
+        <childnode refid="2220" relation="include">
+        </childnode>
+        <childnode refid="2225" relation="include">
+        </childnode>
+        <childnode refid="2231" relation="include">
+        </childnode>
+        <childnode refid="2234" relation="include">
+        </childnode>
+        <childnode refid="2229" relation="include">
+        </childnode>
+        <childnode refid="2219" relation="include">
+        </childnode>
+        <childnode refid="2236" relation="include">
+        </childnode>
+      </node>
+      <node id="2232">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2210">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="2236">
+        <label>sbfQueueDarwin.h</label>
+        <link refid="sbf_queue_darwin_8h"/>
+      </node>
+      <node id="2212">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2221">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2216">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2227">
+        <label>event2/listener.h</label>
+      </node>
+      <node id="2222">
+        <label>sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2207">
+        <label>core/sbfHiResTimer.c</label>
+        <link refid="sbf_hi_res_timer_8c"/>
+        <childnode refid="2208" relation="include">
+        </childnode>
+        <childnode refid="2219" relation="include">
+        </childnode>
+        <childnode refid="2230" relation="include">
+        </childnode>
+      </node>
+      <node id="2208">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2213">
+        <label>sys/types.h</label>
+      </node>
+      <node id="2226">
+        <label>event2/thread.h</label>
+      </node>
+      <node id="2225">
+        <label>sbfMwPrivate.h</label>
+        <link refid="sbf_mw_private_8h"/>
+        <childnode refid="2211" relation="include">
+        </childnode>
+        <childnode refid="2226" relation="include">
+        </childnode>
+        <childnode refid="2227" relation="include">
+        </childnode>
+      </node>
+      <node id="2235">
+        <label>sbfPath.h</label>
+        <link refid="sbf_path_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2229">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2224">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2209">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="2210" relation="include">
+        </childnode>
+        <childnode refid="2211" relation="include">
+        </childnode>
+        <childnode refid="2212" relation="include">
+        </childnode>
+        <childnode refid="2214" relation="include">
+        </childnode>
+        <childnode refid="2215" relation="include">
+        </childnode>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+        <childnode refid="2218" relation="include">
+        </childnode>
+      </node>
+      <node id="2215">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="2214">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="2220">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+        <childnode refid="2221" relation="include">
+        </childnode>
+        <childnode refid="2208" relation="include">
+        </childnode>
+        <childnode refid="2222" relation="include">
+        </childnode>
+        <childnode refid="2223" relation="include">
+        </childnode>
+        <childnode refid="2224" relation="include">
+        </childnode>
+      </node>
+      <node id="2228">
+        <label>sbfPerfCounter.h</label>
+        <link refid="sbf_perf_counter_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2217">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2223">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2218">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="2209" relation="include">
+        </childnode>
+      </node>
+      <node id="2233">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_hi_res_timer_8c_1a9fcfd871e5499bde567825ea5e916f2d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfHiResTimerQueueCb</definition>
+        <argsstring>(sbfQueueItem item, void *closure)</argsstring>
+        <name>sbfHiResTimerQueueCb</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.c" line="6" column="1" bodyfile="core/sbfHiResTimer.c" bodystart="6" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_hi_res_timer_8c_1ab3bc24ba8916071fd450aa096b78a8e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfHiResTimer_queueDispatch</definition>
+        <argsstring>(sbfQueue queue)</argsstring>
+        <name>sbfHiResTimer_queueDispatch</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.c" line="18" column="1" bodyfile="core/sbfHiResTimer.c" bodystart="18" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_hi_res_timer_8c_1af00ad256a0e4d29594109b755b73c31d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfHiResTimer_queueDestroy</definition>
+        <argsstring>(sbfQueue queue)</argsstring>
+        <name>sbfHiResTimer_queueDestroy</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.c" line="52" column="1" bodyfile="core/sbfHiResTimer.c" bodystart="52" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_hi_res_timer_8c_1a0a49c3161b01b5fac58533cc2d13aeb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref></type>
+        <definition>sbfHiResTimer sbfHiResTimer_create</definition>
+        <argsstring>(sbfQueue queue, sbfHiResTimerCb cb, void *closure, u_int interval)</argsstring>
+        <name>sbfHiResTimer_create</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" kindref="member">sbfHiResTimerCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <param>
+          <type>u_int</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.c" line="70" column="1" bodyfile="core/sbfHiResTimer.c" bodystart="70" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_hi_res_timer_8c_1a89282fbee3f560a4111eac6ae2b3ea1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfHiResTimer_destroy</definition>
+        <argsstring>(sbfHiResTimer timer)</argsstring>
+        <name>sbfHiResTimer_destroy</name>
+        <param>
+          <type><ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref></type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para>Release the memory allocated by the high resolution timer. This also stops the timer so no callback will be raised. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timer handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.c" line="102" column="1" bodyfile="core/sbfHiResTimer.c" bodystart="102" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_hi_res_timer_8c_1a3d4d0b158165c2b16431cadaa73a7822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u_int</type>
+        <definition>u_int sbfHiResTimer_getInterval</definition>
+        <argsstring>(sbfHiResTimer timer)</argsstring>
+        <name>sbfHiResTimer_getInterval</name>
+        <param>
+          <type><ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref></type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para>&quot;Description&quot; </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timer handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&quot;Return of the function&quot; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.c" line="112" column="1" bodyfile="core/sbfHiResTimer.c" bodystart="112" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_hi_res_timer_8h" kindref="compound">sbfHiResTimer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_hi_res_timer_private_8h" kindref="compound">sbfHiResTimerPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_queue_private_8h" kindref="compound">sbfQueuePrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">sbfHiResTimerQueueCb<sp/>(<ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_hi_res_timer_impl" kindref="compound">sbfHiResTimer</ref><sp/>timer<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1ab6698529d5a6259ab80edc5a5934782c" kindref="member">mDestroyed</ref>)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a5277fad4e5c28e5aa108623c23dc29a6" kindref="member">mCb</ref><sp/>(timer,<sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1ab19cff0de5531ecc59f2afb516fcb953" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sbfRefCount_decrement<sp/>(&amp;timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a7c0910145cec4e526706e5788db1ac53" kindref="member">mRefCount</ref>))</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(timer);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="sbf_hi_res_timer_private_8h_1ab3bc24ba8916071fd450aa096b78a8e4" refkind="member"><highlight class="normal"><ref refid="sbf_hi_res_timer_8c_1ab3bc24ba8916071fd450aa096b78a8e4" kindref="member">sbfHiResTimer_queueDispatch</ref><sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_hi_res_timer_impl" kindref="compound">sbfHiResTimer</ref><sp/>timer;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><sp/><sp/><sp/><sp/><sp/>now;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="sbf_common_darwin_8h_1a270c0e11fe2fac830447b85580475bb9" kindref="member">SBF_UNLIKELY</ref><sp/>(<ref refid="systree_8h_1a0d85aa035345c2d3f890bf6bc602c068" kindref="member">RB_EMPTY</ref><sp/>(&amp;queue-&gt;<ref refid="structsbf_queue_impl_1a63db615f48eb76992e83a3f47a20fcb6" kindref="member">mHiResTimers</ref>)))</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>now<sp/>=<sp/>sbfPerfCounter_get<sp/>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timer<sp/>=<sp/><ref refid="systree_8h_1a0827c86d4c8c63495f665141d857f380" kindref="member">RB_MIN</ref><sp/>(sbfHiResTimerTreeImpl,<sp/>&amp;queue-&gt;<ref refid="structsbf_queue_impl_1a63db615f48eb76992e83a3f47a20fcb6" kindref="member">mHiResTimers</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(timer<sp/>==<sp/>NULL<sp/>||<sp/>now<sp/>&lt;<sp/>timer-&gt;mNext)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="systree_8h_1ad97eb44d2c39debda8cfbbbbcb354cce" kindref="member">RB_REMOVE</ref><sp/>(sbfHiResTimerTreeImpl,<sp/>&amp;queue-&gt;<ref refid="structsbf_queue_impl_1a63db615f48eb76992e83a3f47a20fcb6" kindref="member">mHiResTimers</ref>,<sp/>timer);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1ab6698529d5a6259ab80edc5a5934782c" kindref="member">mDestroyed</ref>)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfRefCount_increment<sp/>(&amp;timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a7c0910145cec4e526706e5788db1ac53" kindref="member">mRefCount</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8c_1a4a0a1c5ebaca33ef41cfc984c536bf01" kindref="member">sbfQueue_enqueue</ref><sp/>(timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a28c01ba8c1f8a43533af8f894dff9961" kindref="member">mQueue</ref>,<sp/>sbfHiResTimerQueueCb,<sp/>timer);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a2a42b41b8518b04a7a2ae50bcc2eec7a" kindref="member">mNext</ref><sp/>=<sp/>now<sp/>+<sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a827299bcceb493eb0b059494e6699ef7" kindref="member">mTicks</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="systree_8h_1a5b9861a8925c953340e483ae0a0f5120" kindref="member">RB_INSERT</ref><sp/>(sbfHiResTimerTreeImpl,<sp/>&amp;queue-&gt;<ref refid="structsbf_queue_impl_1a63db615f48eb76992e83a3f47a20fcb6" kindref="member">mHiResTimers</ref>,<sp/>timer);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sbfRefCount_decrement<sp/>(&amp;timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a7c0910145cec4e526706e5788db1ac53" kindref="member">mRefCount</ref>))</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(timer);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="sbf_hi_res_timer_private_8h_1af00ad256a0e4d29594109b755b73c31d" refkind="member"><highlight class="normal"><ref refid="sbf_hi_res_timer_8c_1af00ad256a0e4d29594109b755b73c31d" kindref="member">sbfHiResTimer_queueDestroy</ref><sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_hi_res_timer_impl" kindref="compound">sbfHiResTimer</ref><sp/>timer;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_hi_res_timer_impl" kindref="compound">sbfHiResTimer</ref><sp/>timer1;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1aabadd40831e862632d55eb8c867fd258" kindref="member">RB_FOREACH_SAFE</ref><sp/>(timer,<sp/>sbfHiResTimerTreeImpl,<sp/>&amp;queue-&gt;<ref refid="structsbf_queue_impl_1a63db615f48eb76992e83a3f47a20fcb6" kindref="member">mHiResTimers</ref>,<sp/>timer1)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a28c01ba8c1f8a43533af8f894dff9961" kindref="member">mQueue</ref>-&gt;<ref refid="structsbf_queue_impl_1a0602ffea41c077b0596650504be3af84" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;destroying<sp/>hi-res<sp/>timer<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>timer);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="systree_8h_1ad97eb44d2c39debda8cfbbbbcb354cce" kindref="member">RB_REMOVE</ref><sp/>(sbfHiResTimerTreeImpl,<sp/>&amp;queue-&gt;<ref refid="structsbf_queue_impl_1a63db615f48eb76992e83a3f47a20fcb6" kindref="member">mHiResTimers</ref>,<sp/>timer);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1ab6698529d5a6259ab80edc5a5934782c" kindref="member">mDestroyed</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sbfRefCount_decrement<sp/>(&amp;timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a7c0910145cec4e526706e5788db1ac53" kindref="member">mRefCount</ref>))</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(timer);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="structsbf_hi_res_timer_impl" kindref="compound">sbfHiResTimer</ref></highlight></codeline>
+<codeline lineno="70" refid="sbf_hi_res_timer_8c_1a0a49c3161b01b5fac58533cc2d13aeb0" refkind="member"><highlight class="normal"><ref refid="sbf_hi_res_timer_8c_1a0a49c3161b01b5fac58533cc2d13aeb0" kindref="member">sbfHiResTimer_create</ref><sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" kindref="member">sbfHiResTimerCb</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u_int<sp/>interval)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_hi_res_timer_impl" kindref="compound">sbfHiResTimer</ref><sp/>timer;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>timer<sp/>=<sp/><ref refid="sbf_memory_8h_1a6af5faec3f9662b20ffc9903f923dec0" kindref="member">xmalloc</ref><sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*timer);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a28c01ba8c1f8a43533af8f894dff9961" kindref="member">mQueue</ref><sp/>=<sp/>queue;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1aaed9a95d835a337ed4c5faf58311d8e4" kindref="member">mInterval</ref><sp/>=<sp/>interval;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a827299bcceb493eb0b059494e6699ef7" kindref="member">mTicks</ref><sp/>=<sp/><ref refid="sbf_perf_counter_8c_1a4d8c605c4a8cfe71e07299029389e292" kindref="member">sbfPerfCounter_ticks</ref><sp/>(timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1aaed9a95d835a337ed4c5faf58311d8e4" kindref="member">mInterval</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a2a42b41b8518b04a7a2ae50bcc2eec7a" kindref="member">mNext</ref><sp/>=<sp/>sbfPerfCounter_get<sp/>()<sp/>+<sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a827299bcceb493eb0b059494e6699ef7" kindref="member">mTicks</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a5277fad4e5c28e5aa108623c23dc29a6" kindref="member">mCb</ref><sp/>=<sp/>cb;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1ab19cff0de5531ecc59f2afb516fcb953" kindref="member">mClosure</ref><sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1ab6698529d5a6259ab80edc5a5934782c" kindref="member">mDestroyed</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfRefCount_init<sp/>(&amp;timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a7c0910145cec4e526706e5788db1ac53" kindref="member">mRefCount</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a28c01ba8c1f8a43533af8f894dff9961" kindref="member">mQueue</ref>-&gt;<ref refid="structsbf_queue_impl_1a0602ffea41c077b0596650504be3af84" kindref="member">mLog</ref>,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;creating<sp/>hi-res<sp/>timer<sp/>%p:<sp/>interval<sp/>%u<sp/>microseconds&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timer,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1aaed9a95d835a337ed4c5faf58311d8e4" kindref="member">mInterval</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1a5b9861a8925c953340e483ae0a0f5120" kindref="member">RB_INSERT</ref><sp/>(sbfHiResTimerTreeImpl,<sp/>&amp;queue-&gt;<ref refid="structsbf_queue_impl_1a63db615f48eb76992e83a3f47a20fcb6" kindref="member">mHiResTimers</ref>,<sp/>timer);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>timer;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="sbf_hi_res_timer_8h_1a89282fbee3f560a4111eac6ae2b3ea1f" refkind="member"><highlight class="normal"><ref refid="sbf_hi_res_timer_8c_1a89282fbee3f560a4111eac6ae2b3ea1f" kindref="member">sbfHiResTimer_destroy</ref><sp/>(<ref refid="structsbf_hi_res_timer_impl" kindref="compound">sbfHiResTimer</ref><sp/>timer)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a9494b177643e1271eeb943d1dd3e9dbb" kindref="member">SBF_ASSERT</ref><sp/>(!timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1ab6698529d5a6259ab80edc5a5934782c" kindref="member">mDestroyed</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1a28c01ba8c1f8a43533af8f894dff9961" kindref="member">mQueue</ref>-&gt;<ref refid="structsbf_queue_impl_1a0602ffea41c077b0596650504be3af84" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;destroying<sp/>hi-res<sp/>timer<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>timer);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1ab6698529d5a6259ab80edc5a5934782c" kindref="member">mDestroyed</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">u_int</highlight></codeline>
+<codeline lineno="112" refid="sbf_hi_res_timer_8h_1a3d4d0b158165c2b16431cadaa73a7822" refkind="member"><highlight class="normal"><ref refid="sbf_hi_res_timer_8c_1a3d4d0b158165c2b16431cadaa73a7822" kindref="member">sbfHiResTimer_getInterval</ref><sp/>(<ref refid="structsbf_hi_res_timer_impl" kindref="compound">sbfHiResTimer</ref><sp/>timer)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>timer-&gt;<ref refid="structsbf_hi_res_timer_impl_1aaed9a95d835a337ed4c5faf58311d8e4" kindref="member">mInterval</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="core/sbfHiResTimer.c"/>
+  </compounddef>
+</doxygen>

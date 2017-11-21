@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsbf_pool_count_impl" kind="struct" language="C++" prot="public">
+    <compoundname>sbfPoolCountImpl</compoundname>
+    <includes refid="sbf_pool_inline_8h" local="no">sbfPoolInline.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsbf_pool_count_impl_1a3f620f85d9c9f73c1cc7038a37f09883" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* sbfPoolCountImpl::mFunction</definition>
+        <argsstring></argsstring>
+        <name>mFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="7" column="1" bodyfile="common/sbfPoolInline.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_pool_count_impl_1af601317fe4f101f30b7894c2fe7feb8b" prot="public" static="no" mutable="no">
+        <type>u_int</type>
+        <definition>u_int sbfPoolCountImpl::mLine</definition>
+        <argsstring></argsstring>
+        <name>mLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="8" column="1" bodyfile="common/sbfPoolInline.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_pool_count_impl_1abf1b08e4acde9b8a309c58bae3b394b0" prot="public" static="no" mutable="no">
+        <type>u_int</type>
+        <definition>u_int sbfPoolCountImpl::mPools</definition>
+        <argsstring></argsstring>
+        <name>mPools</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="9" column="1" bodyfile="common/sbfPoolInline.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_pool_count_impl_1a92f5a4f9748b1b3905126bdf9507bb64" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t sbfPoolCountImpl::mSize</definition>
+        <argsstring></argsstring>
+        <name>mSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="10" column="1" bodyfile="common/sbfPoolInline.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_pool_count_impl_1a616af8922f0d530ca33106b2e3028475" prot="public" static="no" mutable="no">
+        <type>u_int</type>
+        <definition>u_int sbfPoolCountImpl::mGets</definition>
+        <argsstring></argsstring>
+        <name>mGets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="12" column="1" bodyfile="common/sbfPoolInline.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_pool_count_impl_1a2804c7e09e38c0a31e56c9aaf517309f" prot="public" static="no" mutable="no">
+        <type>u_int</type>
+        <definition>u_int sbfPoolCountImpl::mPuts</definition>
+        <argsstring></argsstring>
+        <name>mPuts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="13" column="1" bodyfile="common/sbfPoolInline.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_pool_count_impl_1afdaabef4da9accd66ba125a62c81fa2c" prot="public" static="no" mutable="no">
+        <type>u_int</type>
+        <definition>u_int sbfPoolCountImpl::mNews</definition>
+        <argsstring></argsstring>
+        <name>mNews</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="14" column="1" bodyfile="common/sbfPoolInline.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsbf_pool_count_impl_1a2917c07e007a8e0ef5fa7252f9b637d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sbfPoolCountImpl::RB_ENTRY</definition>
+        <argsstring>(sbfPoolCountImpl) mTreeEntry</argsstring>
+        <name>RB_ENTRY</name>
+        <param>
+          <type><ref refid="structsbf_pool_count_impl" kindref="compound">sbfPoolCountImpl</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="16" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="common/sbfPoolInline.h" line="6" column="1" bodyfile="common/sbfPoolInline.h" bodystart="5" bodyend="17"/>
+    <listofallmembers>
+      <member refid="structsbf_pool_count_impl_1a3f620f85d9c9f73c1cc7038a37f09883" prot="public" virt="non-virtual"><scope>sbfPoolCountImpl</scope><name>mFunction</name></member>
+      <member refid="structsbf_pool_count_impl_1a616af8922f0d530ca33106b2e3028475" prot="public" virt="non-virtual"><scope>sbfPoolCountImpl</scope><name>mGets</name></member>
+      <member refid="structsbf_pool_count_impl_1af601317fe4f101f30b7894c2fe7feb8b" prot="public" virt="non-virtual"><scope>sbfPoolCountImpl</scope><name>mLine</name></member>
+      <member refid="structsbf_pool_count_impl_1afdaabef4da9accd66ba125a62c81fa2c" prot="public" virt="non-virtual"><scope>sbfPoolCountImpl</scope><name>mNews</name></member>
+      <member refid="structsbf_pool_count_impl_1abf1b08e4acde9b8a309c58bae3b394b0" prot="public" virt="non-virtual"><scope>sbfPoolCountImpl</scope><name>mPools</name></member>
+      <member refid="structsbf_pool_count_impl_1a2804c7e09e38c0a31e56c9aaf517309f" prot="public" virt="non-virtual"><scope>sbfPoolCountImpl</scope><name>mPuts</name></member>
+      <member refid="structsbf_pool_count_impl_1a92f5a4f9748b1b3905126bdf9507bb64" prot="public" virt="non-virtual"><scope>sbfPoolCountImpl</scope><name>mSize</name></member>
+      <member refid="structsbf_pool_count_impl_1a2917c07e007a8e0ef5fa7252f9b637d4" prot="public" virt="non-virtual"><scope>sbfPoolCountImpl</scope><name>RB_ENTRY</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

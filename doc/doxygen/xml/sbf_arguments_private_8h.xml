@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_arguments_private_8h" kind="file" language="C++">
+    <compoundname>sbfArgumentsPrivate.h</compoundname>
+    <includedby refid="sbf_arguments_8c" local="yes">common/sbfArguments.c</includedby>
+    <invincdepgraph>
+      <node id="51">
+        <label>common/sbfArguments.c</label>
+        <link refid="sbf_arguments_8c"/>
+      </node>
+      <node id="50">
+        <label>common/sbfArgumentsPrivate.h</label>
+        <link refid="sbf_arguments_private_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structsbf_arguments_impl" prot="public">sbfArgumentsImpl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_ARGUMENTS_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_ARGUMENTS_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="structsbf_arguments_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_arguments_impl" kindref="compound">sbfArgumentsImpl</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="structsbf_arguments_impl_1ab047e7cbc76d5ca353b53898946a8161" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_arguments_impl_1ab047e7cbc76d5ca353b53898946a8161" kindref="member">mOptions</ref>[UCHAR_MAX];</highlight></codeline>
+<codeline lineno="9" refid="structsbf_arguments_impl_1a8d01ef8d579580e830a12313a910ea10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><ref refid="structsbf_arguments_impl_1a8d01ef8d579580e830a12313a910ea10" kindref="member">mValues</ref>[UCHAR_MAX];</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="structsbf_arguments_impl_1a4d6411eb9da1347cb9663321eb370622" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/><ref refid="structsbf_arguments_impl_1a4d6411eb9da1347cb9663321eb370622" kindref="member">mArguments</ref>;</highlight></codeline>
+<codeline lineno="12" refid="structsbf_arguments_impl_1a48222fba2c3b58ab265fca25c7ba4801" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_arguments_impl_1a48222fba2c3b58ab265fca25c7ba4801" kindref="member">mArgumentsSize</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_ARGUMENTS_PRIVATE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfArgumentsPrivate.h"/>
+  </compounddef>
+</doxygen>

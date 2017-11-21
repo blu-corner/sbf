@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsbf_ref_count" kind="struct" language="C++" prot="public">
+    <compoundname>sbfRefCount</compoundname>
+    <includes refid="sbf_ref_count_8h" local="no">sbfRefCount.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsbf_ref_count_1a026cd62c504c5de9c67ff67f7f2e9b09" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t sbfRefCount::mRefCount</definition>
+        <argsstring></argsstring>
+        <name>mRefCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfRefCount.h" line="8" column="1" bodyfile="common/sbfRefCount.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="common/sbfRefCount.h" line="8" column="1" bodyfile="common/sbfRefCount.h" bodystart="8" bodyend="8"/>
+    <listofallmembers>
+      <member refid="structsbf_ref_count_1a026cd62c504c5de9c67ff67f7f2e9b09" prot="public" virt="non-virtual"><scope>sbfRefCount</scope><name>mRefCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

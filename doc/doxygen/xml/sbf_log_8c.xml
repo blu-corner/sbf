@@ -1,0 +1,560 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_log_8c" kind="file" language="C++">
+    <compoundname>sbfLog.c</compoundname>
+    <includes refid="sbf_log_8h" local="yes">sbfLog.h</includes>
+    <includes refid="sbf_log_private_8h" local="yes">sbfLogPrivate.h</includes>
+    <incdepgraph>
+      <node id="867">
+        <label>event.h</label>
+      </node>
+      <node id="866">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="868">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="869" relation="include">
+        </childnode>
+      </node>
+      <node id="872">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="865" relation="include">
+        </childnode>
+      </node>
+      <node id="869">
+        <label>sys/types.h</label>
+      </node>
+      <node id="874">
+        <label>sbfLogPrivate.h</label>
+        <link refid="sbf_log_private_8h"/>
+        <childnode refid="865" relation="include">
+        </childnode>
+        <childnode refid="875" relation="include">
+        </childnode>
+      </node>
+      <node id="865">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="866" relation="include">
+        </childnode>
+        <childnode refid="867" relation="include">
+        </childnode>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="870" relation="include">
+        </childnode>
+        <childnode refid="871" relation="include">
+        </childnode>
+        <childnode refid="872" relation="include">
+        </childnode>
+        <childnode refid="864" relation="include">
+        </childnode>
+        <childnode refid="873" relation="include">
+        </childnode>
+      </node>
+      <node id="871">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="870">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="863">
+        <label>common/sbfLog.c</label>
+        <link refid="sbf_log_8c"/>
+        <childnode refid="864" relation="include">
+        </childnode>
+        <childnode refid="874" relation="include">
+        </childnode>
+      </node>
+      <node id="864">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="865" relation="include">
+        </childnode>
+      </node>
+      <node id="873">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="865" relation="include">
+        </childnode>
+      </node>
+      <node id="875">
+        <label>sbfLogFile.h</label>
+        <link refid="sbf_log_file_8h"/>
+        <childnode refid="865" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sbf_log_8c_1ad958ce57eb39d6c7986d7d11966a5a51" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* gSbfLogLevels[]</definition>
+        <argsstring>[]</argsstring>
+        <name>gSbfLogLevels</name>
+        <initializer>= { &quot;DEBUG&quot;,
+                                       &quot;INFO&quot;,
+                                       &quot;WARN&quot;,
+                                       &quot;ERROR&quot;,
+                                       &quot;OFF&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLog.c" line="4" column="1" bodyfile="common/sbfLog.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_log_8c_1a3bd2dd7ade41efb36ae92bb650482cf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+        <definition>sbfLog sbfLog_create</definition>
+        <argsstring>(sbfLogFile lf, const char *fmt,...)</argsstring>
+        <name>sbfLog_create</name>
+        <param>
+          <type><ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLog.c" line="11" column="1" bodyfile="common/sbfLog.c" bodystart="11" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_8c_1ab0f7be5867f7002bd55490f9353515e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfLog_destroy</definition>
+        <argsstring>(sbfLog log)</argsstring>
+        <name>sbfLog_destroy</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLog.c" line="35" column="1" bodyfile="common/sbfLog.c" bodystart="35" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_8c_1adbf42cf617525406e9063084031912dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref></type>
+        <definition>sbfLogLevel sbfLog_getLevel</definition>
+        <argsstring>(sbfLog log)</argsstring>
+        <name>sbfLog_getLevel</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLog.c" line="43" column="1" bodyfile="common/sbfLog.c" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_8c_1af2c6d0b112df7a5b7fab1012ddee6798" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfLog_setLevel</definition>
+        <argsstring>(sbfLog log, sbfLogLevel level)</argsstring>
+        <name>sbfLog_setLevel</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLog.c" line="49" column="1" bodyfile="common/sbfLog.c" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_8c_1af7f50ca9acb4f2d158f7f994063672dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref></type>
+        <definition>sbfLogLevel sbfLog_levelFromString</definition>
+        <argsstring>(const char *s, int *found)</argsstring>
+        <name>sbfLog_levelFromString</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>found</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLog.c" line="55" column="1" bodyfile="common/sbfLog.c" bodystart="55" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_8c_1a9f7fdfac6b62c24d413959c578de6d41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfLog_levelToString</definition>
+        <argsstring>(sbfLogLevel level)</argsstring>
+        <name>sbfLog_levelToString</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLog.c" line="76" column="1" bodyfile="common/sbfLog.c" bodystart="76" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_8c_1a79c9947f52aa6a6bf701ee48b2a3e693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfLog_log</definition>
+        <argsstring>(sbfLog log, sbfLogLevel level, const char *fmt,...)</argsstring>
+        <name>sbfLog_log</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLog.c" line="84" column="1" bodyfile="common/sbfLog.c" bodystart="84" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_8c_1a482a105936b2e7eba072bb525b53b0b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfLog_vlog</definition>
+        <argsstring>(sbfLog log, sbfLogLevel level, const char *fmt, va_list ap)</argsstring>
+        <name>sbfLog_vlog</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLog.c" line="97" column="1" bodyfile="common/sbfLog.c" bodystart="97" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_8c_1aea6a66d1d9fc9209adcf8996c9079841" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfLog_logData</definition>
+        <argsstring>(sbfLog log, sbfLogLevel level, void *buf, size_t len)</argsstring>
+        <name>sbfLog_logData</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLog.c" line="157" column="1" bodyfile="common/sbfLog.c" bodystart="157" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_log_8c_1aa5414f66ed3a1feaba5017b2c0e804d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfLog_setHook</definition>
+        <argsstring>(sbfLog log, sbfLogLevel level, sbfLogHookCb cb, void *closure)</argsstring>
+        <name>sbfLog_setHook</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_log_8h_1a765cab47397f491727fe408d9ee0fa1b" kindref="member">sbfLogHookCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfLog.c" line="200" column="1" bodyfile="common/sbfLog.c" bodystart="200" bodyend="205"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_log_8h" kindref="compound">sbfLog.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_log_private_8h" kindref="compound">sbfLogPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>gSbfLogLevels[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;DEBUG&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;INFO&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;WARN&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;ERROR&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;OFF&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref></highlight></codeline>
+<codeline lineno="11" refid="sbf_log_8c_1a3bd2dd7ade41efb36ae92bb650482cf0" refkind="member"><highlight class="normal"><ref refid="sbf_log_8c_1a3bd2dd7ade41efb36ae92bb650482cf0" kindref="member">sbfLog_create</ref><sp/>(<ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref><sp/>lf,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,<sp/>...)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/><sp/>log;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>va_list<sp/>ap;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/>tmp;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>log<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*log);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>log-&gt;<ref refid="structsbf_log_impl_1a2a0ef81221ff4d5be69673e7ee58059f" kindref="member">mFile</ref><sp/>=<sp/>lf;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>log-&gt;<ref refid="structsbf_log_impl_1a335bb037734289c01d9d3c061669ae03" kindref="member">mLevel</ref><sp/>=<sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540aa7c8cf3be99db58ea0f93825940c2b68f" kindref="member">SBF_LOG_INFO</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>va_start<sp/>(ap,<sp/>fmt);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_memory_8h_1af5d74576e3ce200262430d8075c2648b" kindref="member">xvasprintf</ref><sp/>(&amp;tmp,<sp/>fmt,<sp/>ap);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>va_end<sp/>(ap);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*tmp<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_memory_8h_1a01a498148ebe0f21be370f06f2ec84f7" kindref="member">xasprintf</ref><sp/>(&amp;log-&gt;<ref refid="structsbf_log_impl_1a9ac6803065836a07754e048545cccdf6" kindref="member">mPrefix</ref>,<sp/></highlight><highlight class="stringliteral">&quot;(%s)<sp/>&quot;</highlight><highlight class="normal">,<sp/>tmp);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log-&gt;<ref refid="structsbf_log_impl_1a9ac6803065836a07754e048545cccdf6" kindref="member">mPrefix</ref><sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(tmp);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="sbf_log_8h_1a568c738e7aa35b98b16940cd4b4fc791" refkind="member"><highlight class="normal"><ref refid="sbf_log_8c_1ab0f7be5867f7002bd55490f9353515e6" kindref="member">sbfLog_destroy</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(log-&gt;<ref refid="structsbf_log_impl_1a9ac6803065836a07754e048545cccdf6" kindref="member">mPrefix</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(log);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref></highlight></codeline>
+<codeline lineno="43" refid="sbf_log_8h_1adbf42cf617525406e9063084031912dd" refkind="member"><highlight class="normal"><ref refid="sbf_log_8c_1adbf42cf617525406e9063084031912dd" kindref="member">sbfLog_getLevel</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>log-&gt;<ref refid="structsbf_log_impl_1a335bb037734289c01d9d3c061669ae03" kindref="member">mLevel</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="sbf_log_8h_1af2c6d0b112df7a5b7fab1012ddee6798" refkind="member"><highlight class="normal"><ref refid="sbf_log_8c_1af2c6d0b112df7a5b7fab1012ddee6798" kindref="member">sbfLog_setLevel</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,<sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref><sp/>level)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>log-&gt;<ref refid="structsbf_log_impl_1a335bb037734289c01d9d3c061669ae03" kindref="member">mLevel</ref><sp/>=<sp/>level;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref></highlight></codeline>
+<codeline lineno="55" refid="sbf_log_8h_1af7f50ca9acb4f2d158f7f994063672dd" refkind="member"><highlight class="normal"><ref refid="sbf_log_8c_1af7f50ca9acb4f2d158f7f994063672dd" kindref="member">sbfLog_levelFromString</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>found)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>slen;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/><sp/>i;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>slen<sp/>=<sp/>strlen<sp/>(s);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="sbf_common_8h_1aae913d81ea568402111eccddb0724cb0" kindref="member">SBF_ARRAYSIZE</ref><sp/>(gSbfLogLevels);<sp/>i++)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="sbf_common_win32_8h_1aba00036f71bb67f8600b239a39cf5ec9" kindref="member">strncasecmp</ref><sp/>(gSbfLogLevels[i],<sp/>s,<sp/>slen)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(found<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*found<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(found<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*found<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540aad24448569b0eef884d43e6ad8b2c1550" kindref="member">SBF_LOG_OFF</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="76" refid="sbf_log_8h_1a9f7fdfac6b62c24d413959c578de6d41" refkind="member"><highlight class="normal"><ref refid="sbf_log_8c_1a9f7fdfac6b62c24d413959c578de6d41" kindref="member">sbfLog_levelToString</ref><sp/>(<ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref><sp/>level)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((u_int)level<sp/>&gt;=<sp/><ref refid="sbf_common_8h_1aae913d81ea568402111eccddb0724cb0" kindref="member">SBF_ARRAYSIZE</ref><sp/>(gSbfLogLevels))</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;UNKNOWN&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gSbfLogLevels[(u_int)level];</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="sbf_log_8c_1a79c9947f52aa6a6bf701ee48b2a3e693" refkind="member"><highlight class="normal"><ref refid="sbf_log_8c_1a79c9947f52aa6a6bf701ee48b2a3e693" kindref="member">sbfLog_log</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,<sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref><sp/>level,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,<sp/>...)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>va_list<sp/>ap;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(log-&gt;<ref refid="structsbf_log_impl_1a335bb037734289c01d9d3c061669ae03" kindref="member">mLevel</ref><sp/>&gt;<sp/>level)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>va_start<sp/>(ap,<sp/>fmt);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8c_1a482a105936b2e7eba072bb525b53b0b9" kindref="member">sbfLog_vlog</ref><sp/>(log,<sp/>level,<sp/>fmt,<sp/>ap);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>va_end<sp/>(ap);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="sbf_log_8h_1af85dfb12efb0b1943d63630e8d9586fc" refkind="member"><highlight class="normal"><ref refid="sbf_log_8c_1a482a105936b2e7eba072bb525b53b0b9" kindref="member">sbfLog_vlog</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,<sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref><sp/>level,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,<sp/>va_list<sp/>ap)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/><sp/>tv;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/><sp/><sp/><sp/><sp/><sp/><sp/>tm;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message[512];</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_file_8h_1a7cb00db30f3f48da671c46f75d2216ae" kindref="member">sbfLogFileEntry</ref><sp/>lfe;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>skip;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(log-&gt;<ref refid="structsbf_log_impl_1a335bb037734289c01d9d3c061669ae03" kindref="member">mLevel</ref><sp/>&gt;<sp/>level)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(log-&gt;<ref refid="structsbf_log_impl_1a2a0ef81221ff4d5be69673e7ee58059f" kindref="member">mFile</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lfe<sp/>=<sp/><ref refid="sbf_log_file_8c_1a2d36e319fcd325e78f91efa4a4e57a72" kindref="member">sbfLogFile_get</ref><sp/>(log-&gt;<ref refid="structsbf_log_impl_1a2a0ef81221ff4d5be69673e7ee58059f" kindref="member">mFile</ref>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8c_1aaf2d0a99430a6d5253b8c395c30ca7e3" kindref="member">gettimeofday</ref><sp/>(&amp;lfe-&gt;mTime,<sp/>NULL);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lfe-&gt;mLevel<sp/>=<sp/>level;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_linux_8h_1aeb79f86261de904967d433c1b5e9a1de" kindref="member">strlcpy</ref><sp/>(lfe-&gt;mPrefix,<sp/>log-&gt;<ref refid="structsbf_log_impl_1a9ac6803065836a07754e048545cccdf6" kindref="member">mPrefix</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>lfe-&gt;mPrefix);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a00ba2ca988495904efc418acbf0627d7" kindref="member">vsnprintf</ref><sp/>(lfe-&gt;mMessage,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>lfe-&gt;mMessage,<sp/>fmt,<sp/>ap);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_file_8c_1a8e6795b00df36fdc5ddc1008161f7367" kindref="member">sbfLogFile_flush</ref><sp/>(log-&gt;<ref refid="structsbf_log_impl_1a2a0ef81221ff4d5be69673e7ee58059f" kindref="member">mFile</ref>,<sp/>lfe);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8c_1aaf2d0a99430a6d5253b8c395c30ca7e3" kindref="member">gettimeofday</ref><sp/>(&amp;tv,<sp/>NULL);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>t<sp/>=<sp/>tv.tv_sec;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a7e4ac7ec95919b38e71518cd6573f007" kindref="member">localtime_r</ref><sp/>(&amp;t,<sp/>&amp;tm);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a00ba2ca988495904efc418acbf0627d7" kindref="member">vsnprintf</ref><sp/>(message,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>message,<sp/>fmt,<sp/>ap);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>skip<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(log-&gt;<ref refid="structsbf_log_impl_1adc4b5dee2760e51dd58b081677504d8d" kindref="member">mHookCb</ref><sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>level<sp/>&gt;=<sp/>log-&gt;<ref refid="structsbf_log_impl_1a76389663aa146431d043813561d4ecd0" kindref="member">mHookLevel</ref><sp/>&amp;&amp;<sp/>!log-&gt;<ref refid="structsbf_log_impl_1adaa676ed99227fdb161d764076dab3c1" kindref="member">mHookInside</ref>)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log-&gt;<ref refid="structsbf_log_impl_1adaa676ed99227fdb161d764076dab3c1" kindref="member">mHookInside</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>skip<sp/>=<sp/>log-&gt;<ref refid="structsbf_log_impl_1adc4b5dee2760e51dd58b081677504d8d" kindref="member">mHookCb</ref><sp/>(log,<sp/>level,<sp/>message,<sp/>log-&gt;<ref refid="structsbf_log_impl_1a2e9263fc09d5558f06a503bb28880694" kindref="member">mHookClosure</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log-&gt;<ref refid="structsbf_log_impl_1adaa676ed99227fdb161d764076dab3c1" kindref="member">mHookInside</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!skip)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf<sp/>(stderr,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;%04u-%02u-%02u<sp/>%02u:%02u:%02u.%06u<sp/>%-5s<sp/>%s%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tm.tm_year<sp/>+<sp/>1900,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tm.tm_mon<sp/>+<sp/>1,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tm.tm_mday,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tm.tm_hour,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tm.tm_min,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tm.tm_sec,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(u_int)tv.tv_usec,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gSbfLogLevels[level],</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log-&gt;<ref refid="structsbf_log_impl_1a9ac6803065836a07754e048545cccdf6" kindref="member">mPrefix</ref>,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fflush<sp/>(stderr);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="sbf_log_8h_1aea6a66d1d9fc9209adcf8996c9079841" refkind="member"><highlight class="normal"><ref refid="sbf_log_8c_1aea6a66d1d9fc9209adcf8996c9079841" kindref="member">sbfLog_logData</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,<sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref><sp/>level,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>u_char*<sp/>ptr;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>u_char*<sp/>end;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>line[79];</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/>out;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>text[17];</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>i;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(log-&gt;<ref refid="structsbf_log_impl_1a335bb037734289c01d9d3c061669ae03" kindref="member">mLevel</ref><sp/>&gt;<sp/>level)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>end<sp/>=<sp/>(u_char*)buf<sp/>+<sp/>len;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(ptr<sp/>=<sp/>buf;<sp/>ptr<sp/>&lt;<sp/>end;<sp/>ptr<sp/>+=<sp/>16)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>16;<sp/>i++)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr<sp/>+<sp/>i<sp/>==<sp/>end)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isprint<sp/>(ptr[i]))</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>text[i]<sp/>=<sp/>ptr[i];</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>text[i]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>text[i]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>=<sp/>line<sp/>+<sp/>sprintf<sp/>(line,<sp/></highlight><highlight class="stringliteral">&quot;%08tx<sp/><sp/>&quot;</highlight><highlight class="normal">,<sp/>ptr<sp/>-<sp/>(u_char*)buf);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>16;<sp/>i++)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>8)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>+=<sp/>sprintf<sp/>(out,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr<sp/>+<sp/>i<sp/>&gt;=<sp/>end)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>+=<sp/>sprintf<sp/>(out,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>+=<sp/>sprintf<sp/>(out,<sp/></highlight><highlight class="stringliteral">&quot;%02hhx<sp/>&quot;</highlight><highlight class="normal">,<sp/>ptr[i]);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf<sp/>(out,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>|%s|&quot;</highlight><highlight class="normal">,<sp/>text);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8c_1a79c9947f52aa6a6bf701ee48b2a3e693" kindref="member">sbfLog_log</ref><sp/>(log,<sp/>level,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>line);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="sbf_log_8h_1aa5414f66ed3a1feaba5017b2c0e804d1" refkind="member"><highlight class="normal"><ref refid="sbf_log_8c_1aa5414f66ed3a1feaba5017b2c0e804d1" kindref="member">sbfLog_setHook</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,<sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref><sp/>level,<sp/><ref refid="sbf_log_8h_1a765cab47397f491727fe408d9ee0fa1b" kindref="member">sbfLogHookCb</ref><sp/>cb,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>log-&gt;<ref refid="structsbf_log_impl_1a76389663aa146431d043813561d4ecd0" kindref="member">mHookLevel</ref><sp/>=<sp/>level;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>log-&gt;<ref refid="structsbf_log_impl_1adc4b5dee2760e51dd58b081677504d8d" kindref="member">mHookCb</ref><sp/>=<sp/>cb;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>log-&gt;<ref refid="structsbf_log_impl_1a2e9263fc09d5558f06a503bb28880694" kindref="member">mHookClosure</ref><sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="common/sbfLog.c"/>
+  </compounddef>
+</doxygen>

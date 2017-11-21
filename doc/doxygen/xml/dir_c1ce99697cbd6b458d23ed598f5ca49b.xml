@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_c1ce99697cbd6b458d23ed598f5ca49b" kind="dir">
+    <compoundname>transport</compoundname>
+    <innerfile refid="sbf_batch_8c">sbfBatch.c</innerfile>
+    <innerfile refid="sbf_batch_8h">sbfBatch.h</innerfile>
+    <innerfile refid="sbf_batch_private_8h">sbfBatchPrivate.h</innerfile>
+    <innerfile refid="sbf_handler_8c">sbfHandler.c</innerfile>
+    <innerfile refid="sbf_handler_8h">sbfHandler.h</innerfile>
+    <innerfile refid="sbf_pub_8c">sbfPub.c</innerfile>
+    <innerfile refid="sbf_pub_8h">sbfPub.h</innerfile>
+    <innerfile refid="sbf_pub_private_8h">sbfPubPrivate.h</innerfile>
+    <innerfile refid="sbf_sub_8c">sbfSub.c</innerfile>
+    <innerfile refid="sbf_sub_8h">sbfSub.h</innerfile>
+    <innerfile refid="sbf_sub_private_8h">sbfSubPrivate.h</innerfile>
+    <innerfile refid="sbf_topic_8c">sbfTopic.c</innerfile>
+    <innerfile refid="sbf_topic_8h">sbfTopic.h</innerfile>
+    <innerfile refid="sbf_topic_private_8h">sbfTopicPrivate.h</innerfile>
+    <innerfile refid="sbf_tport_8c">sbfTport.c</innerfile>
+    <innerfile refid="sbf_tport_8h">sbfTport.h</innerfile>
+    <innerfile refid="sbf_tport_fragments_8c">sbfTportFragments.c</innerfile>
+    <innerfile refid="sbf_tport_private_8h">sbfTportPrivate.h</innerfile>
+    <innerfile refid="sbf_tport_weight_8c">sbfTportWeight.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="transport/"/>
+  </compounddef>
+</doxygen>

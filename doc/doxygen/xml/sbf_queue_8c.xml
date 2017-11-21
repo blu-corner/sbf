@@ -1,0 +1,683 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_queue_8c" kind="file" language="C++">
+    <compoundname>sbfQueue.c</compoundname>
+    <includes refid="sbf_queue_8h" local="yes">sbfQueue.h</includes>
+    <includes refid="sbf_queue_private_8h" local="yes">sbfQueuePrivate.h</includes>
+    <incdepgraph>
+      <node id="2447">
+        <label>sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2448" relation="include">
+        </childnode>
+        <childnode refid="2449" relation="include">
+        </childnode>
+      </node>
+      <node id="2430">
+        <label>event.h</label>
+      </node>
+      <node id="2450">
+        <label>sbfProperties.h</label>
+        <link refid="sbf_properties_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2442" relation="include">
+        </childnode>
+        <childnode refid="2436" relation="include">
+        </childnode>
+        <childnode refid="2451" relation="include">
+        </childnode>
+      </node>
+      <node id="2453">
+        <label>sbfHiResTimerPrivate.h</label>
+        <link refid="sbf_hi_res_timer_private_8h"/>
+        <childnode refid="2439" relation="include">
+        </childnode>
+        <childnode refid="2444" relation="include">
+        </childnode>
+        <childnode refid="2454" relation="include">
+        </childnode>
+        <childnode refid="2452" relation="include">
+        </childnode>
+      </node>
+      <node id="2438">
+        <label>sbfQueuePrivate.h</label>
+        <link refid="sbf_queue_private_8h"/>
+        <childnode refid="2439" relation="include">
+        </childnode>
+        <childnode refid="2444" relation="include">
+        </childnode>
+        <childnode refid="2447" relation="include">
+        </childnode>
+        <childnode refid="2450" relation="include">
+        </childnode>
+        <childnode refid="2452" relation="include">
+        </childnode>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2455" relation="include">
+        </childnode>
+      </node>
+      <node id="2448">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2429">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="2455">
+        <label>sbfQueueDarwin.h</label>
+        <link refid="sbf_queue_darwin_8h"/>
+      </node>
+      <node id="2431">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="2432" relation="include">
+        </childnode>
+      </node>
+      <node id="2440">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2435">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2446">
+        <label>event2/listener.h</label>
+      </node>
+      <node id="2442">
+        <label>sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2441">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2432">
+        <label>sys/types.h</label>
+      </node>
+      <node id="2445">
+        <label>event2/thread.h</label>
+      </node>
+      <node id="2444">
+        <label>sbfMwPrivate.h</label>
+        <link refid="sbf_mw_private_8h"/>
+        <childnode refid="2430" relation="include">
+        </childnode>
+        <childnode refid="2445" relation="include">
+        </childnode>
+        <childnode refid="2446" relation="include">
+        </childnode>
+      </node>
+      <node id="2451">
+        <label>sbfPath.h</label>
+        <link refid="sbf_path_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2452">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2443">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2428">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2430" relation="include">
+        </childnode>
+        <childnode refid="2431" relation="include">
+        </childnode>
+        <childnode refid="2433" relation="include">
+        </childnode>
+        <childnode refid="2434" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+        <childnode refid="2436" relation="include">
+        </childnode>
+        <childnode refid="2437" relation="include">
+        </childnode>
+      </node>
+      <node id="2434">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="2433">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="2439">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2440" relation="include">
+        </childnode>
+        <childnode refid="2441" relation="include">
+        </childnode>
+        <childnode refid="2442" relation="include">
+        </childnode>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2443" relation="include">
+        </childnode>
+      </node>
+      <node id="2454">
+        <label>sbfPerfCounter.h</label>
+        <link refid="sbf_perf_counter_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2436">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2426">
+        <label>core/sbfQueue.c</label>
+        <link refid="sbf_queue_8c"/>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2438" relation="include">
+        </childnode>
+      </node>
+      <node id="2427">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2437">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2449">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_queue_8c_1a46db8e909ba6e1f1091f8e886c512743" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+        <definition>sbfQueue sbfQueue_create</definition>
+        <argsstring>(sbfMw mw, const char *name)</argsstring>
+        <name>sbfQueue_create</name>
+        <param>
+          <type><ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref></type>
+          <declname>mw</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.c" line="5" column="1" bodyfile="core/sbfQueue.c" bodystart="5" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8c_1addab7a91fca88250c4ce64cfd5183d78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfQueue_destroy</definition>
+        <argsstring>(sbfQueue queue)</argsstring>
+        <name>sbfQueue_destroy</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Releases the memory allocated to the given queue handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.c" line="38" column="1" bodyfile="core/sbfQueue.c" bodystart="38" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8c_1a2f1e3e58b4b9cea02ff5fa808a8703f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfQueue_getName</definition>
+        <argsstring>(sbfQueue queue)</argsstring>
+        <name>sbfQueue_getName</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Returns the name of the topic assigned to the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null terminated string containing the name of the queue (topic). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.c" line="52" column="1" bodyfile="core/sbfQueue.c" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8c_1ae496ac2c82ab4fb4a640fa404b7c7624" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfQueue_addRef</definition>
+        <argsstring>(sbfQueue queue)</argsstring>
+        <name>sbfQueue_addRef</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.c" line="58" column="1" bodyfile="core/sbfQueue.c" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8c_1abef4c8004b90db6771d30ca33d23dde8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfQueue_removeRef</definition>
+        <argsstring>(sbfQueue queue)</argsstring>
+        <name>sbfQueue_removeRef</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.c" line="64" column="1" bodyfile="core/sbfQueue.c" bodystart="64" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8c_1a4a0a1c5ebaca33ef41cfc984c536bf01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfQueue_enqueue</definition>
+        <argsstring>(sbfQueue queue, sbfQueueCb cb, void *closure)</argsstring>
+        <name>sbfQueue_enqueue</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1a734fa954aded6cb14781887fdcb4c15b" kindref="member">sbfQueueCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+<para>Adds an item to the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the callback indicating the item has been queued. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user data associated to the queue item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.c" line="82" column="1" bodyfile="core/sbfQueue.c" bodystart="82" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8c_1a92ae3820cd4fb1b634b638c727e5d79c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfQueue_dispatch</definition>
+        <argsstring>(sbfQueue queue)</argsstring>
+        <name>sbfQueue_dispatch</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Dispatch all of the items that belongs to the given queue handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.c" line="91" column="1" bodyfile="core/sbfQueue.c" bodystart="91" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8c_1a1ce1d1238f830f6f9e0032d3572036c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+        <definition>sbfQueueItem sbfQueue_getItem</definition>
+        <argsstring>(sbfQueue queue, sbfQueueCb cb, void *closure)</argsstring>
+        <name>sbfQueue_getItem</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1a734fa954aded6cb14781887fdcb4c15b" kindref="member">sbfQueueCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+<para>returns the item from the queue by adding the callback and user data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the callback indicating the item has been queued. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user data associated to the queue item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the item from the queue. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.c" line="120" column="1" bodyfile="core/sbfQueue.c" bodystart="120" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8c_1a041be175afa83868ffd3ad53638aa073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfQueue_enqueueItem</definition>
+        <argsstring>(sbfQueue queue, sbfQueueItem item)</argsstring>
+        <name>sbfQueue_enqueueItem</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.c" line="131" column="1" bodyfile="core/sbfQueue.c" bodystart="131" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8c_1a3a47a4e3a01ddecb9d5c49b0fab74609" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sbfQueue_getItemData</definition>
+        <argsstring>(sbfQueueItem item)</argsstring>
+        <name>sbfQueue_getItemData</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Returns the data associated to the given queue item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue item handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the data associated to a queue item. </para></simplesect>
+<simplesect kind="see"><para><ref refid="sbf_queue_8h_1ae5a1e7b31459264e4a5940976cfa0641" kindref="member">sbfQueue_getItemDataSize</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.c" line="138" column="1" bodyfile="core/sbfQueue.c" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8c_1ae5a1e7b31459264e4a5940976cfa0641" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t sbfQueue_getItemDataSize</definition>
+        <argsstring>(sbfQueueItem item)</argsstring>
+        <name>sbfQueue_getItemDataSize</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Returns the size of the given queue item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue item handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the size of the given queue item. </para></simplesect>
+<simplesect kind="see"><para><ref refid="sbf_queue_8h_1a3a47a4e3a01ddecb9d5c49b0fab74609" kindref="member">sbfQueue_getItemData</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.c" line="144" column="1" bodyfile="core/sbfQueue.c" bodystart="144" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_queue_8h" kindref="compound">sbfQueue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_queue_private_8h" kindref="compound">sbfQueuePrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref></highlight></codeline>
+<codeline lineno="5" refid="sbf_queue_8c_1a46db8e909ba6e1f1091f8e886c512743" refkind="member"><highlight class="normal"><ref refid="sbf_queue_8c_1a46db8e909ba6e1f1091f8e886c512743" kindref="member">sbfQueue_create</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/><sp/><sp/><sp/>queue;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>value;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>queue<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*queue);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="structsbf_queue_impl_1af492979151baa0257bc62741c776f075" kindref="member">mName</ref><sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(name);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="structsbf_queue_impl_1a0602ffea41c077b0596650504be3af84" kindref="member">mLog</ref><sp/>=<sp/><ref refid="sbf_mw_8c_1aa7e45fc4943d4080534faf9d4b2f394f" kindref="member">sbfMw_getLog</ref><sp/>(mw);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="structsbf_queue_impl_1a1452d57baf76122a36a9e53f637c9aae" kindref="member">mProperties</ref><sp/>=<sp/><ref refid="sbf_properties_8c_1a655ba96a7ea0ead4e8d0d667d8415533" kindref="member">sbfProperties_filterN</ref><sp/>(<ref refid="sbf_mw_8c_1a655078066f200c13dfa63a1bdd650f5e" kindref="member">sbfMw_getProperties</ref><sp/>(mw),</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;queue&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/><ref refid="sbf_key_value_8c_1a5bf2be4a5e087f042234f99b57dd2504" kindref="member">sbfKeyValue_get</ref><sp/>(queue-&gt;<ref refid="structsbf_queue_impl_1a1452d57baf76122a36a9e53f637c9aae" kindref="member">mProperties</ref>,<sp/></highlight><highlight class="stringliteral">&quot;blocking&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>==<sp/>NULL<sp/>||<sp/>atoi<sp/>(value)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="structsbf_queue_impl_1a8746f68bdcfabc4583d9c6628f12c8bb" kindref="member">mFlags</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="structsbf_queue_impl_1a8746f68bdcfabc4583d9c6628f12c8bb" kindref="member">mFlags</ref><sp/>=<sp/><ref refid="sbf_queue_private_8h_1a8a2d2874e516558470a073b42c8e124b" kindref="member">SBF_QUEUE_NONBLOCK</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="structsbf_queue_impl_1a55c473b6e5ce5300c4539002201e6e5c" kindref="member">mPool</ref><sp/>=<sp/><ref refid="sbf_pool_8h_1af6cdf81e4347a1af78ce801f7e8def71" kindref="member">sbfPool_create</ref><sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItemImpl</ref>));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="structsbf_queue_impl_1ad4c4efb77df3d3f8a0bfed4f27a03f92" kindref="member">mDestroyed</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfRefCount_init<sp/>(&amp;queue-&gt;<ref refid="structsbf_queue_impl_1a1cb6fe75dc69c173285575b6c6322592" kindref="member">mRefCount</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfQueueCreate<sp/>(queue);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(queue-&gt;<ref refid="structsbf_queue_impl_1a0602ffea41c077b0596650504be3af84" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;creating<sp/>queue<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>queue);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>queue;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="sbf_queue_8h_1addab7a91fca88250c4ce64cfd5183d78" refkind="member"><highlight class="normal"><ref refid="sbf_queue_8c_1addab7a91fca88250c4ce64cfd5183d78" kindref="member">sbfQueue_destroy</ref><sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(queue-&gt;<ref refid="structsbf_queue_impl_1a0602ffea41c077b0596650504be3af84" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;destroying<sp/>queue<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>queue);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_hi_res_timer_8c_1af00ad256a0e4d29594109b755b73c31d" kindref="member">sbfHiResTimer_queueDestroy</ref><sp/>(queue);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="structsbf_queue_impl_1ad4c4efb77df3d3f8a0bfed4f27a03f92" kindref="member">mDestroyed</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8c_1a4a0a1c5ebaca33ef41cfc984c536bf01" kindref="member">sbfQueue_enqueue</ref><sp/>(queue,<sp/>NULL,<sp/>NULL);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>queue-&gt;<ref refid="structsbf_queue_impl_1ac56be313f9c2f1a2d2374146ed7bd3cc" kindref="member">mExited</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8c_1abef4c8004b90db6771d30ca33d23dde8" kindref="member">sbfQueue_removeRef</ref><sp/>(queue);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="52" refid="sbf_queue_8h_1a2f1e3e58b4b9cea02ff5fa808a8703f2" refkind="member"><highlight class="normal"><ref refid="sbf_queue_8c_1a2f1e3e58b4b9cea02ff5fa808a8703f2" kindref="member">sbfQueue_getName</ref><sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>queue-&gt;<ref refid="structsbf_queue_impl_1af492979151baa0257bc62741c776f075" kindref="member">mName</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="sbf_queue_private_8h_1ae496ac2c82ab4fb4a640fa404b7c7624" refkind="member"><highlight class="normal"><ref refid="sbf_queue_8c_1ae496ac2c82ab4fb4a640fa404b7c7624" kindref="member">sbfQueue_addRef</ref><sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfRefCount_increment<sp/>(&amp;queue-&gt;<ref refid="structsbf_queue_impl_1a1cb6fe75dc69c173285575b6c6322592" kindref="member">mRefCount</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="sbf_queue_private_8h_1abef4c8004b90db6771d30ca33d23dde8" refkind="member"><highlight class="normal"><ref refid="sbf_queue_8c_1abef4c8004b90db6771d30ca33d23dde8" kindref="member">sbfQueue_removeRef</ref><sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!sbfRefCount_decrement<sp/>(&amp;queue-&gt;<ref refid="structsbf_queue_impl_1a1cb6fe75dc69c173285575b6c6322592" kindref="member">mRefCount</ref>))</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(queue-&gt;<ref refid="structsbf_queue_impl_1a0602ffea41c077b0596650504be3af84" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;freeing<sp/>queue<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>queue);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfQueueDestroy<sp/>(queue);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_pool_8c_1aa642928717354dd1f50a38ef13d92c3a" kindref="member">sbfPool_destroy</ref><sp/>(queue-&gt;<ref refid="structsbf_queue_impl_1a55c473b6e5ce5300c4539002201e6e5c" kindref="member">mPool</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_key_value_8c_1af04cf659e336c325822508eb5065b2b9" kindref="member">sbfKeyValue_destroy</ref><sp/>(queue-&gt;<ref refid="structsbf_queue_impl_1a1452d57baf76122a36a9e53f637c9aae" kindref="member">mProperties</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)queue-&gt;<ref refid="structsbf_queue_impl_1af492979151baa0257bc62741c776f075" kindref="member">mName</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(queue);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="sbf_queue_8h_1a4a0a1c5ebaca33ef41cfc984c536bf01" refkind="member"><highlight class="normal"><ref refid="sbf_queue_8c_1a4a0a1c5ebaca33ef41cfc984c536bf01" kindref="member">sbfQueue_enqueue</ref><sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue,<sp/><ref refid="sbf_queue_8h_1a734fa954aded6cb14781887fdcb4c15b" kindref="member">sbfQueueCb</ref><sp/>cb,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>item<sp/>=<sp/><ref refid="sbf_queue_8c_1a1ce1d1238f830f6f9e0032d3572036c2" kindref="member">sbfQueue_getItem</ref><sp/>(queue,<sp/>cb,<sp/>closure);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8c_1a041be175afa83868ffd3ad53638aa073" kindref="member">sbfQueue_enqueueItem</ref><sp/>(queue,<sp/>item);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="sbf_queue_8h_1a92ae3820cd4fb1b634b638c727e5d79c" refkind="member"><highlight class="normal"><ref refid="sbf_queue_8c_1a92ae3820cd4fb1b634b638c727e5d79c" kindref="member">sbfQueue_dispatch</ref><sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(queue-&gt;<ref refid="structsbf_queue_impl_1ad4c4efb77df3d3f8a0bfed4f27a03f92" kindref="member">mDestroyed</ref>)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8c_1ae496ac2c82ab4fb4a640fa404b7c7624" kindref="member">sbfQueue_addRef</ref><sp/>(queue);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(queue-&gt;<ref refid="structsbf_queue_impl_1a0602ffea41c077b0596650504be3af84" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;queue<sp/>%p<sp/>entered&quot;</highlight><highlight class="normal">,<sp/>queue);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item<sp/>=<sp/>sbfQueueDequeue<sp/>(queue);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="sbf_common_darwin_8h_1aa4c0463d5143c422ff33e19f6bbd6764" kindref="member">SBF_LIKELY</ref><sp/>(item<sp/>!=<sp/>NULL))</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="sbf_common_darwin_8h_1aa4c0463d5143c422ff33e19f6bbd6764" kindref="member">SBF_LIKELY</ref><sp/>(item-&gt;<ref refid="structsbf_queue_item_impl_1a7e258e19d871165abbbffb8e5304f217" kindref="member">mCb</ref><sp/>!=<sp/>NULL))</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_queue_item_impl_1a7e258e19d871165abbbffb8e5304f217" kindref="member">mCb</ref><sp/>(item,<sp/>item-&gt;<ref refid="structsbf_queue_item_impl_1aa79318a32cc7e8b38883ffc09a3c0ce0" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfPool_put<sp/>(item);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="sbf_common_darwin_8h_1a270c0e11fe2fac830447b85580475bb9" kindref="member">SBF_UNLIKELY</ref><sp/>(item-&gt;<ref refid="structsbf_queue_item_impl_1a7e258e19d871165abbbffb8e5304f217" kindref="member">mCb</ref><sp/>==<sp/>NULL))</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">/*<sp/>NULL<sp/>callback<sp/>means<sp/>destroyed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_hi_res_timer_8c_1ab3bc24ba8916071fd450aa096b78a8e4" kindref="member">sbfHiResTimer_queueDispatch</ref><sp/>(queue);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(queue-&gt;<ref refid="structsbf_queue_impl_1a0602ffea41c077b0596650504be3af84" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;queue<sp/>%p<sp/>exited&quot;</highlight><highlight class="normal">,<sp/>queue);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8c_1abef4c8004b90db6771d30ca33d23dde8" kindref="member">sbfQueue_removeRef</ref><sp/>(queue);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref></highlight></codeline>
+<codeline lineno="120" refid="sbf_queue_8h_1a1ce1d1238f830f6f9e0032d3572036c2" refkind="member"><highlight class="normal"><ref refid="sbf_queue_8c_1a1ce1d1238f830f6f9e0032d3572036c2" kindref="member">sbfQueue_getItem</ref><sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue,<sp/><ref refid="sbf_queue_8h_1a734fa954aded6cb14781887fdcb4c15b" kindref="member">sbfQueueCb</ref><sp/>cb,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>item<sp/>=<sp/>sbfPool_get<sp/>(queue-&gt;<ref refid="structsbf_queue_impl_1a55c473b6e5ce5300c4539002201e6e5c" kindref="member">mPool</ref>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_queue_item_impl_1a7e258e19d871165abbbffb8e5304f217" kindref="member">mCb</ref><sp/>=<sp/>cb;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>item-&gt;<ref refid="structsbf_queue_item_impl_1aa79318a32cc7e8b38883ffc09a3c0ce0" kindref="member">mClosure</ref><sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>item;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="sbf_queue_8h_1a041be175afa83868ffd3ad53638aa073" refkind="member"><highlight class="normal"><ref refid="sbf_queue_8c_1a041be175afa83868ffd3ad53638aa073" kindref="member">sbfQueue_enqueueItem</ref><sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue,<sp/><ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a9494b177643e1271eeb943d1dd3e9dbb" kindref="member">SBF_ASSERT</ref><sp/>(!queue-&gt;<ref refid="structsbf_queue_impl_1ac56be313f9c2f1a2d2374146ed7bd3cc" kindref="member">mExited</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfQueueEnqueue<sp/>(queue,<sp/>item);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="138" refid="sbf_queue_8h_1a3a47a4e3a01ddecb9d5c49b0fab74609" refkind="member"><highlight class="normal"><ref refid="sbf_queue_8c_1a3a47a4e3a01ddecb9d5c49b0fab74609" kindref="member">sbfQueue_getItemData</ref><sp/>(<ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>item-&gt;<ref refid="structsbf_queue_item_impl_1ab4bfa85abb475bccecb3479a49cec831" kindref="member">mData</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="sbf_queue_8h_1ae5a1e7b31459264e4a5940976cfa0641" refkind="member"><highlight class="normal"><ref refid="sbf_queue_8c_1ae5a1e7b31459264e4a5940976cfa0641" kindref="member">sbfQueue_getItemDataSize</ref><sp/>(<ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>item-&gt;<ref refid="structsbf_queue_item_impl_1ab4bfa85abb475bccecb3479a49cec831" kindref="member">mData</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="core/sbfQueue.c"/>
+  </compounddef>
+</doxygen>

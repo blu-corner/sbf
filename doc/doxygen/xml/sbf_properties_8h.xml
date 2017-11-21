@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_properties_8h" kind="file" language="C++">
+    <compoundname>sbfProperties.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includes refid="sbf_key_value_8h" local="yes">sbfKeyValue.h</includes>
+    <includes refid="sbf_log_8h" local="yes">sbfLog.h</includes>
+    <includes refid="sbf_path_8h" local="yes">sbfPath.h</includes>
+    <includedby refid="sbf_properties_8c" local="yes">common/sbfProperties.c</includedby>
+    <includedby refid="sbf_queue_private_8h" local="yes">core/sbfQueuePrivate.h</includedby>
+    <includedby refid="sbf_tport_private_8h" local="yes">transport/sbfTportPrivate.h</includedby>
+    <incdepgraph>
+      <node id="1409">
+        <label>event.h</label>
+      </node>
+      <node id="1406">
+        <label>common/sbfProperties.h</label>
+        <link refid="sbf_properties_8h"/>
+        <childnode refid="1407" relation="include">
+        </childnode>
+        <childnode refid="1417" relation="include">
+        </childnode>
+        <childnode refid="1415" relation="include">
+        </childnode>
+        <childnode refid="1418" relation="include">
+        </childnode>
+      </node>
+      <node id="1408">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="1410">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="1411" relation="include">
+        </childnode>
+      </node>
+      <node id="1414">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="1407" relation="include">
+        </childnode>
+      </node>
+      <node id="1417">
+        <label>sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="1407" relation="include">
+        </childnode>
+      </node>
+      <node id="1411">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1418">
+        <label>sbfPath.h</label>
+        <link refid="sbf_path_8h"/>
+        <childnode refid="1407" relation="include">
+        </childnode>
+      </node>
+      <node id="1407">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="1408" relation="include">
+        </childnode>
+        <childnode refid="1409" relation="include">
+        </childnode>
+        <childnode refid="1410" relation="include">
+        </childnode>
+        <childnode refid="1412" relation="include">
+        </childnode>
+        <childnode refid="1413" relation="include">
+        </childnode>
+        <childnode refid="1414" relation="include">
+        </childnode>
+        <childnode refid="1415" relation="include">
+        </childnode>
+        <childnode refid="1416" relation="include">
+        </childnode>
+      </node>
+      <node id="1413">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="1412">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="1415">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="1407" relation="include">
+        </childnode>
+      </node>
+      <node id="1416">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="1407" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1420">
+        <label>common/sbfProperties.c</label>
+        <link refid="sbf_properties_8c"/>
+      </node>
+      <node id="1419">
+        <label>common/sbfProperties.h</label>
+        <link refid="sbf_properties_8h"/>
+        <childnode refid="1420" relation="include">
+        </childnode>
+        <childnode refid="1421" relation="include">
+        </childnode>
+        <childnode refid="1424" relation="include">
+        </childnode>
+      </node>
+      <node id="1421">
+        <label>core/sbfQueuePrivate.h</label>
+        <link refid="sbf_queue_private_8h"/>
+        <childnode refid="1422" relation="include">
+        </childnode>
+        <childnode refid="1423" relation="include">
+        </childnode>
+      </node>
+      <node id="1432">
+        <label>transport/sbfTportWeight.c</label>
+        <link refid="sbf_tport_weight_8c"/>
+      </node>
+      <node id="1428">
+        <label>transport/sbfSub.c</label>
+        <link refid="sbf_sub_8c"/>
+      </node>
+      <node id="1429">
+        <label>transport/sbfTopic.c</label>
+        <link refid="sbf_topic_8c"/>
+      </node>
+      <node id="1425">
+        <label>transport/sbfBatch.c</label>
+        <link refid="sbf_batch_8c"/>
+      </node>
+      <node id="1422">
+        <label>core/sbfHiResTimer.c</label>
+        <link refid="sbf_hi_res_timer_8c"/>
+      </node>
+      <node id="1427">
+        <label>transport/sbfPub.c</label>
+        <link refid="sbf_pub_8c"/>
+      </node>
+      <node id="1426">
+        <label>transport/sbfHandler.c</label>
+        <link refid="sbf_handler_8c"/>
+      </node>
+      <node id="1424">
+        <label>transport/sbfTportPrivate.h</label>
+        <link refid="sbf_tport_private_8h"/>
+        <childnode refid="1425" relation="include">
+        </childnode>
+        <childnode refid="1426" relation="include">
+        </childnode>
+        <childnode refid="1427" relation="include">
+        </childnode>
+        <childnode refid="1428" relation="include">
+        </childnode>
+        <childnode refid="1429" relation="include">
+        </childnode>
+        <childnode refid="1430" relation="include">
+        </childnode>
+        <childnode refid="1431" relation="include">
+        </childnode>
+        <childnode refid="1432" relation="include">
+        </childnode>
+      </node>
+      <node id="1431">
+        <label>transport/sbfTportFragments.c</label>
+        <link refid="sbf_tport_fragments_8c"/>
+      </node>
+      <node id="1430">
+        <label>transport/sbfTport.c</label>
+        <link refid="sbf_tport_8c"/>
+      </node>
+      <node id="1423">
+        <label>core/sbfQueue.c</label>
+        <link refid="sbf_queue_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sbf_properties_8h_1adcc564334387746b220b40fda43cc48c" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref> typedef <ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref>(*</type>
+        <definition>SBF_BEGIN_DECLS typedef sbfError(* sbfPropertiesGroupCb) (const char *name, sbfKeyValue table, void *closure)</definition>
+        <argsstring>)(const char *name, sbfKeyValue table, void *closure)</argsstring>
+        <name>sbfPropertiesGroupCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfProperties.h" line="11" column="1" bodyfile="common/sbfProperties.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_properties_8h_1acb5d83c797149144312ad8a900382b54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+        <definition>sbfKeyValue sbfProperties_loadDefault</definition>
+        <argsstring>(char **error)</argsstring>
+        <name>sbfProperties_loadDefault</name>
+        <param>
+          <type>char **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfProperties.h" line="15" column="1" bodyfile="common/sbfProperties.c" bodystart="97" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_properties_8h_1aa5c3db32a7710a5259e23725d43f83ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+        <definition>sbfKeyValue sbfProperties_load</definition>
+        <argsstring>(const char *file, char **error)</argsstring>
+        <name>sbfProperties_load</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfProperties.h" line="16" column="1" bodyfile="common/sbfProperties.c" bodystart="109" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_properties_8h_1a35d7bc92bee28da59a2469b0dcb1e8aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+        <definition>sbfKeyValue sbfProperties_filter</definition>
+        <argsstring>(sbfKeyValue table, const char *prefix)</argsstring>
+        <name>sbfProperties_filter</name>
+        <param>
+          <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>prefix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfProperties.h" line="18" column="1" bodyfile="common/sbfProperties.c" bodystart="123" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_properties_8h_1a191af5360a0ecb86bd131b5d144a83d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+        <definition>sbfKeyValue sbfProperties_filterV</definition>
+        <argsstring>(sbfKeyValue table, const char *fmt,...) SBF_PRINTFLIKE(2</argsstring>
+        <name>sbfProperties_filterV</name>
+        <param>
+          <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfProperties.h" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_properties_8h_1a3d36b873304eaea2100180b907201dc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref> <ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+        <definition>sbfKeyValue sbfKeyValue sbfProperties_filterN</definition>
+        <argsstring>(sbfKeyValue table,...)</argsstring>
+        <name>sbfProperties_filterN</name>
+        <param>
+          <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfProperties.h" line="21" column="1" bodyfile="common/sbfProperties.c" bodystart="165" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_properties_8h_1a9708be6ad146b54ce11cce3a9c842ee7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref></type>
+        <definition>sbfError sbfProperties_getGroup</definition>
+        <argsstring>(sbfKeyValue table, const char *group, sbfPropertiesGroupCb cb, void *closure)</argsstring>
+        <name>sbfProperties_getGroup</name>
+        <param>
+          <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_properties_8h_1adcc564334387746b220b40fda43cc48c" kindref="member">sbfPropertiesGroupCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfProperties.h" line="32" column="1" bodyfile="common/sbfProperties.c" bodystart="190" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_properties_8h_1a41e25d531470486cc49259a7283befee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfProperties_log</definition>
+        <argsstring>(sbfLog log, sbfLogLevel level, const char *prefix, sbfKeyValue table)</argsstring>
+        <name>sbfProperties_log</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfProperties.h" line="37" column="1" bodyfile="common/sbfProperties.c" bodystart="252" bodyend="271"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_PROPERTIES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_PROPERTIES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_key_value_8h" kindref="compound">sbfKeyValue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_log_8h" kindref="compound">sbfLog.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_path_8h" kindref="compound">sbfPath.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="sbf_properties_8h_1adcc564334387746b220b40fda43cc48c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref><sp/>(*<ref refid="sbf_properties_8h_1adcc564334387746b220b40fda43cc48c" kindref="member">sbfPropertiesGroupCb</ref>)<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/>table,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/><ref refid="sbf_properties_8h_1acb5d83c797149144312ad8a900382b54" kindref="member">sbfProperties_loadDefault</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>error);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/><ref refid="sbf_properties_8h_1aa5c3db32a7710a5259e23725d43f83ff" kindref="member">sbfProperties_load</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>error);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/><ref refid="sbf_properties_8h_1a35d7bc92bee28da59a2469b0dcb1e8aa" kindref="member">sbfProperties_filter</ref><sp/>(<ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/>table,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>prefix);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/><ref refid="sbf_properties_8h_1a191af5360a0ecb86bd131b5d144a83d4" kindref="member">sbfProperties_filterV</ref><sp/>(<ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/>table,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,<sp/>...)<sp/><ref refid="sbf_common_darwin_8h_1abcc9ea27d2fa4fc4b2b51bbdf96fb03d" kindref="member">SBF_PRINTFLIKE</ref>(2,<sp/>3);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/><ref refid="sbf_properties_8h_1a3d36b873304eaea2100180b907201dc7" kindref="member">sbfProperties_filterN</ref><sp/>(<ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/>table,<sp/>...);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Given<sp/>properties<sp/>like:</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>groups.a.foo=1</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>groups.a.bar=2</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>groups.b.foo=3</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>Fire<sp/>the<sp/>callback<sp/>once<sp/>for<sp/>a<sp/>and<sp/>once<sp/>for<sp/>b.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref><sp/><ref refid="sbf_properties_8h_1a9708be6ad146b54ce11cce3a9c842ee7" kindref="member">sbfProperties_getGroup</ref><sp/>(<ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/>table,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>group,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_properties_8h_1adcc564334387746b220b40fda43cc48c" kindref="member">sbfPropertiesGroupCb</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_properties_8h_1a41e25d531470486cc49259a7283befee" kindref="member">sbfProperties_log</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref><sp/>level,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>prefix,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/>table);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_PROPERTIES_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfProperties.h"/>
+  </compounddef>
+</doxygen>

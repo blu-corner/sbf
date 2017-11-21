@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsbf_tcp_mesh_handler_connection_impl" kind="struct" language="C++" prot="public">
+    <compoundname>sbfTcpMeshHandlerConnectionImpl</compoundname>
+    <includes refid="sbf_tcp_mesh_handler_8h" local="no">sbfTcpMeshHandler.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsbf_tcp_mesh_handler_impl" kindref="compound">sbfTcpMeshHandlerImpl</ref> *</type>
+        <definition>struct sbfTcpMeshHandlerImpl* sbfTcpMeshHandlerConnectionImpl::mParent</definition>
+        <argsstring></argsstring>
+        <name>mParent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/tcpmesh/sbfTcpMeshHandler.h" line="41" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tcp_mesh_handler_connection_impl_1a026b6b69db318ba27bdb53eed56d675b" prot="public" static="no" mutable="no">
+        <type>struct event</type>
+        <definition>struct event sbfTcpMeshHandlerConnectionImpl::mTimer</definition>
+        <argsstring></argsstring>
+        <name>mTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/tcpmesh/sbfTcpMeshHandler.h" line="41" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tcp_mesh_handler_connection_impl_1aaf3589f58de78a9726e41099815ca11a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sbfTcpMeshHandlerConnectionImpl::mIncoming</definition>
+        <argsstring></argsstring>
+        <name>mIncoming</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/tcpmesh/sbfTcpMeshHandler.h" line="44" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tcp_mesh_handler_connection_impl_1a3339ba92ac0fb6252dc4708f082d7f64" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* sbfTcpMeshHandlerConnectionImpl::mHost</definition>
+        <argsstring></argsstring>
+        <name>mHost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/tcpmesh/sbfTcpMeshHandler.h" line="46" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tcp_mesh_handler_connection_impl_1a4edeeeb98debc477a65da5781c18cb89" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t sbfTcpMeshHandlerConnectionImpl::mPort</definition>
+        <argsstring></argsstring>
+        <name>mPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/tcpmesh/sbfTcpMeshHandler.h" line="47" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tcp_mesh_handler_connection_impl_1a7cf632762b21e1456fb572f4a807a4e2" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_common_darwin_8h_1a810b076a4ef5bd325cee986d4c993be6" kindref="member">sbfSocket</ref></type>
+        <definition>sbfSocket sbfTcpMeshHandlerConnectionImpl::mSocket</definition>
+        <argsstring></argsstring>
+        <name>mSocket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/tcpmesh/sbfTcpMeshHandler.h" line="49" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" prot="public" static="no" mutable="no">
+        <type>struct bufferevent *</type>
+        <definition>struct bufferevent* sbfTcpMeshHandlerConnectionImpl::mEvent</definition>
+        <argsstring></argsstring>
+        <name>mEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/tcpmesh/sbfTcpMeshHandler.h" line="50" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_tcp_mesh_handler_connection_impl_1ae52a584543b12cfa68130aed9c5a166c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sbfTcpMeshHandlerConnectionImpl::mConnected</definition>
+        <argsstring></argsstring>
+        <name>mConnected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/tcpmesh/sbfTcpMeshHandler.h" line="51" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsbf_tcp_mesh_handler_connection_impl_1a5dae689439a44e7aa8e3fa38393f334e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sbfTcpMeshHandlerConnectionImpl::TAILQ_ENTRY</definition>
+        <argsstring>(sbfTcpMeshHandlerConnectionImpl) mEntry</argsstring>
+        <name>TAILQ_ENTRY</name>
+        <param>
+          <type><ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnectionImpl</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/tcpmesh/sbfTcpMeshHandler.h" line="53" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TCP mesh connection definition. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="211">
+        <label>sbfTcpMeshHandlerConnectionImpl</label>
+        <link refid="structsbf_tcp_mesh_handler_connection_impl"/>
+        <childnode refid="212" relation="usage">
+          <edgelabel>mParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="213">
+        <label>sbfMwThreadImpl</label>
+        <link refid="structsbf_mw_thread_impl"/>
+        <childnode refid="214" relation="usage">
+          <edgelabel>mParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="212">
+        <label>sbfTcpMeshHandlerImpl</label>
+        <link refid="structsbf_tcp_mesh_handler_impl"/>
+        <childnode refid="213" relation="usage">
+          <edgelabel>mThread</edgelabel>
+        </childnode>
+        <childnode refid="217" relation="usage">
+          <edgelabel>mPool</edgelabel>
+        </childnode>
+        <childnode refid="215" relation="usage">
+          <edgelabel>mLog</edgelabel>
+        </childnode>
+      </node>
+      <node id="218">
+        <label>sbfPoolCountImpl</label>
+        <link refid="structsbf_pool_count_impl"/>
+      </node>
+      <node id="214">
+        <label>sbfMwImpl</label>
+        <link refid="structsbf_mw_impl"/>
+        <childnode refid="213" relation="usage">
+          <edgelabel>mThreads</edgelabel>
+        </childnode>
+        <childnode refid="215" relation="usage">
+          <edgelabel>mLog</edgelabel>
+        </childnode>
+      </node>
+      <node id="219">
+        <label>sbfPoolItemImpl</label>
+        <link refid="structsbf_pool_item_impl"/>
+        <childnode refid="219" relation="usage">
+          <edgelabel>mNext</edgelabel>
+        </childnode>
+        <childnode refid="217" relation="usage">
+          <edgelabel>mPool</edgelabel>
+        </childnode>
+      </node>
+      <node id="216">
+        <label>sbfLogFileImpl</label>
+        <link refid="structsbf_log_file_impl"/>
+      </node>
+      <node id="215">
+        <label>sbfLogImpl</label>
+        <link refid="structsbf_log_impl"/>
+        <childnode refid="215" relation="usage">
+          <edgelabel>mHookCb</edgelabel>
+        </childnode>
+        <childnode refid="216" relation="usage">
+          <edgelabel>mFile</edgelabel>
+        </childnode>
+      </node>
+      <node id="217">
+        <label>sbfPoolImpl</label>
+        <link refid="structsbf_pool_impl"/>
+        <childnode refid="218" relation="usage">
+          <edgelabel>mCount</edgelabel>
+        </childnode>
+        <childnode refid="219" relation="usage">
+          <edgelabel>mFree</edgelabel>
+          <edgelabel>mAvailable</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="handlers/tcpmesh/sbfTcpMeshHandler.h" line="40" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.h" bodystart="39" bodyend="54"/>
+    <listofallmembers>
+      <member refid="structsbf_tcp_mesh_handler_connection_impl_1ae52a584543b12cfa68130aed9c5a166c" prot="public" virt="non-virtual"><scope>sbfTcpMeshHandlerConnectionImpl</scope><name>mConnected</name></member>
+      <member refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" prot="public" virt="non-virtual"><scope>sbfTcpMeshHandlerConnectionImpl</scope><name>mEvent</name></member>
+      <member refid="structsbf_tcp_mesh_handler_connection_impl_1a3339ba92ac0fb6252dc4708f082d7f64" prot="public" virt="non-virtual"><scope>sbfTcpMeshHandlerConnectionImpl</scope><name>mHost</name></member>
+      <member refid="structsbf_tcp_mesh_handler_connection_impl_1aaf3589f58de78a9726e41099815ca11a" prot="public" virt="non-virtual"><scope>sbfTcpMeshHandlerConnectionImpl</scope><name>mIncoming</name></member>
+      <member refid="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" prot="public" virt="non-virtual"><scope>sbfTcpMeshHandlerConnectionImpl</scope><name>mParent</name></member>
+      <member refid="structsbf_tcp_mesh_handler_connection_impl_1a4edeeeb98debc477a65da5781c18cb89" prot="public" virt="non-virtual"><scope>sbfTcpMeshHandlerConnectionImpl</scope><name>mPort</name></member>
+      <member refid="structsbf_tcp_mesh_handler_connection_impl_1a7cf632762b21e1456fb572f4a807a4e2" prot="public" virt="non-virtual"><scope>sbfTcpMeshHandlerConnectionImpl</scope><name>mSocket</name></member>
+      <member refid="structsbf_tcp_mesh_handler_connection_impl_1a026b6b69db318ba27bdb53eed56d675b" prot="public" virt="non-virtual"><scope>sbfTcpMeshHandlerConnectionImpl</scope><name>mTimer</name></member>
+      <member refid="structsbf_tcp_mesh_handler_connection_impl_1a5dae689439a44e7aa8e3fa38393f334e" prot="public" virt="non-virtual"><scope>sbfTcpMeshHandlerConnectionImpl</scope><name>TAILQ_ENTRY</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

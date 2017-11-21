@@ -1,13 +1,5 @@
 var annotated_dup =
 [
-    [ "pcre16_callout_block", "structpcre16__callout__block.html", "structpcre16__callout__block" ],
-    [ "pcre16_extra", "structpcre16__extra.html", "structpcre16__extra" ],
-    [ "pcre32_callout_block", "structpcre32__callout__block.html", "structpcre32__callout__block" ],
-    [ "pcre32_extra", "structpcre32__extra.html", "structpcre32__extra" ],
-    [ "pcre_callout_block", "structpcre__callout__block.html", "structpcre__callout__block" ],
-    [ "pcre_extra", "structpcre__extra.html", "structpcre__extra" ],
-    [ "regex_t", "structregex__t.html", "structregex__t" ],
-    [ "regmatch_t", "structregmatch__t.html", "structregmatch__t" ],
     [ "sbfArgumentsImpl", "structsbf_arguments_impl.html", "structsbf_arguments_impl" ],
     [ "sbfBatchItemImpl", "structsbf_batch_item_impl.html", "structsbf_batch_item_impl" ],
     [ "sbfBufferImpl", "structsbf_buffer_impl.html", "structsbf_buffer_impl" ],

@@ -1,0 +1,440 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_arguments_8c" kind="file" language="C++">
+    <compoundname>sbfArguments.c</compoundname>
+    <includes refid="sbf_arguments_8h" local="yes">sbfArguments.h</includes>
+    <includes refid="sbf_arguments_private_8h" local="yes">sbfArgumentsPrivate.h</includes>
+    <incdepgraph>
+      <node id="26">
+        <label>event.h</label>
+      </node>
+      <node id="25">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="22">
+        <label>common/sbfArguments.c</label>
+        <link refid="sbf_arguments_8c"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>sbfArguments.h</label>
+        <link refid="sbf_arguments_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>sbfArgumentsPrivate.h</label>
+        <link refid="sbf_arguments_private_8h"/>
+      </node>
+      <node id="28">
+        <label>sys/types.h</label>
+      </node>
+      <node id="24">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="29">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="32">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_arguments_8c_1ac1986c7309b61b9a9f7e6f14f01bb7c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+        <definition>sbfArguments sbfArguments_create</definition>
+        <argsstring>(const char *options, int argc, char **argv)</argsstring>
+        <name>sbfArguments_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.c" line="5" column="1" bodyfile="common/sbfArguments.c" bodystart="5" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8c_1a043f0d8e11876f5fa6f41fe729a2ee4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfArguments_destroy</definition>
+        <argsstring>(sbfArguments a)</argsstring>
+        <name>sbfArguments_destroy</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.c" line="46" column="1" bodyfile="common/sbfArguments.c" bodystart="46" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8c_1a4ac84c86ebe2952d2addfeb56d0f0477" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sbfArguments_hasOption</definition>
+        <argsstring>(sbfArguments a, u_char c)</argsstring>
+        <name>sbfArguments_hasOption</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>u_char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.c" line="61" column="1" bodyfile="common/sbfArguments.c" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8c_1a8ccd15ea062da97bed5b5f1d322d67d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfArguments_optionValue</definition>
+        <argsstring>(sbfArguments a, u_char c)</argsstring>
+        <name>sbfArguments_optionValue</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>u_char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.c" line="67" column="1" bodyfile="common/sbfArguments.c" bodystart="67" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8c_1a1a590904a2fb4676df9fcd3c4bc7b86f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u_int</type>
+        <definition>u_int sbfArguments_size</definition>
+        <argsstring>(sbfArguments a)</argsstring>
+        <name>sbfArguments_size</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.c" line="75" column="1" bodyfile="common/sbfArguments.c" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8c_1a34b7bcb6c4c94fbe3106a2067d3ba6d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfArguments_get</definition>
+        <argsstring>(sbfArguments a, u_int idx)</argsstring>
+        <name>sbfArguments_get</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>u_int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.c" line="81" column="1" bodyfile="common/sbfArguments.c" bodystart="81" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8c_1ae1eed5bd8672bb68284e91e5bfb25697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfArguments_pack</definition>
+        <argsstring>(int argc, char **argv, char **buf, size_t *len)</argsstring>
+        <name>sbfArguments_pack</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.c" line="89" column="1" bodyfile="common/sbfArguments.c" bodystart="89" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8c_1a4bbc42a59ab8146b5d07ce42a4df28b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfArguments_unpack</definition>
+        <argsstring>(char *buf, size_t len, int *argc, char ***argv)</argsstring>
+        <name>sbfArguments_unpack</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char ***</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.c" line="112" column="1" bodyfile="common/sbfArguments.c" bodystart="112" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8c_1a12b685719f71d0cdfcc73f0520260b1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfArguments_free</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>sbfArguments_free</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.c" line="135" column="1" bodyfile="common/sbfArguments.c" bodystart="135" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_arguments_8h" kindref="compound">sbfArguments.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_arguments_private_8h" kindref="compound">sbfArgumentsPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></highlight></codeline>
+<codeline lineno="5" refid="sbf_arguments_8h_1ac1986c7309b61b9a9f7e6f14f01bb7c6" refkind="member"><highlight class="normal"><ref refid="sbf_arguments_8c_1ac1986c7309b61b9a9f7e6f14f01bb7c6" kindref="member">sbfArguments_create</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>options,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref><sp/>a;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>opt;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options0;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_memory_8h_1a01a498148ebe0f21be370f06f2ec84f7" kindref="member">xasprintf</ref><sp/>(&amp;options0,<sp/></highlight><highlight class="stringliteral">&quot;+%s&quot;</highlight><highlight class="normal">,<sp/>options);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>a<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*a);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a3d0369446ac39ee644edc472d24cfa5f" kindref="member">opterr</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1afa9437ffe2a670485f18f082213533f8" kindref="member">optind</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((opt<sp/>=<sp/><ref refid="sbf_common_win32_8h_1a631e8252798c4ede857d00d1cede6f0f" kindref="member">getopt</ref><sp/>(argc,<sp/>argv,<sp/>options0))<sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(opt<sp/>==<sp/></highlight><highlight class="charliteral">&apos;?&apos;</highlight><highlight class="normal"><sp/>||<sp/>opt<sp/>&gt;<sp/>UCHAR_MAX)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;mOptions[(u_char)opt]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="sbf_common_win32_8h_1a9227b18da5777b0578ef7376ad78b649" kindref="member">optarg</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;mValues[(u_char)opt]<sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(<ref refid="sbf_common_win32_8h_1a9227b18da5777b0578ef7376ad78b649" kindref="member">optarg</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>argc<sp/>-=<sp/><ref refid="sbf_common_win32_8h_1afa9437ffe2a670485f18f082213533f8" kindref="member">optind</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>argv<sp/>+=<sp/><ref refid="sbf_common_win32_8h_1afa9437ffe2a670485f18f082213533f8" kindref="member">optind</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>a-&gt;mArgumentsSize<sp/>=<sp/>argc;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;mArguments<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(argc,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*a-&gt;mArguments);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>(u_int)argc;<sp/>i++)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a-&gt;mArguments[i]<sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(argv[i]);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(options0);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">fail:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_arguments_8c_1a043f0d8e11876f5fa6f41fe729a2ee4c" kindref="member">sbfArguments_destroy</ref><sp/>(a);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="sbf_arguments_8h_1a043f0d8e11876f5fa6f41fe729a2ee4c" refkind="member"><highlight class="normal"><ref refid="sbf_arguments_8c_1a043f0d8e11876f5fa6f41fe729a2ee4c" kindref="member">sbfArguments_destroy</ref><sp/>(<ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref><sp/>a)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/>i;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="sbf_common_8h_1aae913d81ea568402111eccddb0724cb0" kindref="member">SBF_ARRAYSIZE</ref><sp/>(a-&gt;mOptions);<sp/>i++)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)a-&gt;mValues[i]);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>a-&gt;mArgumentsSize;<sp/>i++)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)a-&gt;mArguments[i]);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(a-&gt;mArguments);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(a);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="sbf_arguments_8h_1a4ac84c86ebe2952d2addfeb56d0f0477" refkind="member"><highlight class="normal"><ref refid="sbf_arguments_8c_1a4ac84c86ebe2952d2addfeb56d0f0477" kindref="member">sbfArguments_hasOption</ref><sp/>(<ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref><sp/>a,<sp/>u_char<sp/>c)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a-&gt;mOptions[c];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="67" refid="sbf_arguments_8h_1a8ccd15ea062da97bed5b5f1d322d67d7" refkind="member"><highlight class="normal"><ref refid="sbf_arguments_8c_1a8ccd15ea062da97bed5b5f1d322d67d7" kindref="member">sbfArguments_optionValue</ref><sp/>(<ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref><sp/>a,<sp/>u_char<sp/>c)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!a-&gt;mOptions[c])</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a-&gt;mValues[c];</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">u_int</highlight></codeline>
+<codeline lineno="75" refid="sbf_arguments_8h_1a1a590904a2fb4676df9fcd3c4bc7b86f" refkind="member"><highlight class="normal"><ref refid="sbf_arguments_8c_1a1a590904a2fb4676df9fcd3c4bc7b86f" kindref="member">sbfArguments_size</ref><sp/>(<ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref><sp/>a)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a-&gt;mArgumentsSize;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="81" refid="sbf_arguments_8h_1a34b7bcb6c4c94fbe3106a2067d3ba6d3" refkind="member"><highlight class="normal"><ref refid="sbf_arguments_8c_1a34b7bcb6c4c94fbe3106a2067d3ba6d3" kindref="member">sbfArguments_get</ref><sp/>(<ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref><sp/>a,<sp/>u_int<sp/>idx)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx<sp/>&gt;=<sp/>a-&gt;mArgumentsSize)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a-&gt;mArguments[idx];</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="sbf_arguments_8h_1ae1eed5bd8672bb68284e91e5bfb25697" refkind="member"><highlight class="normal"><ref refid="sbf_arguments_8c_1ae1eed5bd8672bb68284e91e5bfb25697" kindref="member">sbfArguments_pack</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>len)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>i;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>*buf<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>*len<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>argc;<sp/>i++)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/>strlen<sp/>(argv[i])<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*buf<sp/>=<sp/><ref refid="sbf_memory_8h_1a40740062faf2d95d4935112447c464ef" kindref="member">xrealloc</ref><sp/>(*buf,<sp/>1,<sp/>*len<sp/>+<sp/>size);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy<sp/>(*buf<sp/>+<sp/>*len,<sp/>argv[i],<sp/>size);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*len<sp/>+=<sp/>size;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="sbf_arguments_8h_1a4bbc42a59ab8146b5d07ce42a4df28b9" refkind="member"><highlight class="normal"><ref refid="sbf_arguments_8c_1a4bbc42a59ab8146b5d07ce42a4df28b9" kindref="member">sbfArguments_unpack</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">***<sp/>argv)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>*argc<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>*argv<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(buf[len<sp/>-<sp/>1]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/>strlen<sp/>(buf)<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*argc)++;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*argv<sp/>=<sp/><ref refid="sbf_memory_8h_1a40740062faf2d95d4935112447c464ef" kindref="member">xrealloc</ref><sp/>(*argv,<sp/>*argc,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>**argv);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*argv)[(*argc)<sp/>-<sp/>1]<sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(buf);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>+=<sp/>size;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>-=<sp/>size;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="sbf_arguments_8h_1a12b685719f71d0cdfcc73f0520260b1c" refkind="member"><highlight class="normal"><ref refid="sbf_arguments_8c_1a12b685719f71d0cdfcc73f0520260b1c" kindref="member">sbfArguments_free</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(argc<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(argv[--argc]);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(argv);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="common/sbfArguments.c"/>
+  </compounddef>
+</doxygen>

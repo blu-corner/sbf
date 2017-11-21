@@ -1,0 +1,882 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_tcp_connection_8c" kind="file" language="C++">
+    <compoundname>sbfTcpConnection.c</compoundname>
+    <includes refid="sbf_tcp_connection_8h" local="yes">sbfTcpConnection.h</includes>
+    <includes refid="sbf_tcp_connection_private_8h" local="yes">sbfTcpConnectionPrivate.h</includes>
+    <incdepgraph>
+      <node id="1507">
+        <label>sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+        <childnode refid="1508" relation="include">
+        </childnode>
+        <childnode refid="1509" relation="include">
+        </childnode>
+      </node>
+      <node id="1499">
+        <label>event.h</label>
+      </node>
+      <node id="1508">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1498">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="1500">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="1501" relation="include">
+        </childnode>
+      </node>
+      <node id="1514">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1504">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1521">
+        <label>event2/listener.h</label>
+      </node>
+      <node id="1516">
+        <label>sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1496">
+        <label>sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+        <childnode refid="1507" relation="include">
+        </childnode>
+        <childnode refid="1510" relation="include">
+        </childnode>
+        <childnode refid="1511" relation="include">
+        </childnode>
+      </node>
+      <node id="1515">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1512">
+        <label>sbfTcpConnectionPrivate.h</label>
+        <link refid="sbf_tcp_connection_private_8h"/>
+        <childnode refid="1513" relation="include">
+        </childnode>
+        <childnode refid="1519" relation="include">
+        </childnode>
+        <childnode refid="1510" relation="include">
+        </childnode>
+      </node>
+      <node id="1501">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1520">
+        <label>event2/thread.h</label>
+      </node>
+      <node id="1511">
+        <label>sbfBufferInline.h</label>
+        <link refid="sbf_buffer_inline_8h"/>
+      </node>
+      <node id="1519">
+        <label>sbfMwPrivate.h</label>
+        <link refid="sbf_mw_private_8h"/>
+        <childnode refid="1499" relation="include">
+        </childnode>
+        <childnode refid="1520" relation="include">
+        </childnode>
+        <childnode refid="1521" relation="include">
+        </childnode>
+      </node>
+      <node id="1494">
+        <label>common/sbfTcpConnection.c</label>
+        <link refid="sbf_tcp_connection_8c"/>
+        <childnode refid="1495" relation="include">
+        </childnode>
+        <childnode refid="1512" relation="include">
+        </childnode>
+      </node>
+      <node id="1495">
+        <label>sbfTcpConnection.h</label>
+        <link refid="sbf_tcp_connection_8h"/>
+        <childnode refid="1496" relation="include">
+        </childnode>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1510">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1518">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1497">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="1498" relation="include">
+        </childnode>
+        <childnode refid="1499" relation="include">
+        </childnode>
+        <childnode refid="1500" relation="include">
+        </childnode>
+        <childnode refid="1502" relation="include">
+        </childnode>
+        <childnode refid="1503" relation="include">
+        </childnode>
+        <childnode refid="1504" relation="include">
+        </childnode>
+        <childnode refid="1505" relation="include">
+        </childnode>
+        <childnode refid="1506" relation="include">
+        </childnode>
+      </node>
+      <node id="1503">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="1502">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="1513">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+        <childnode refid="1514" relation="include">
+        </childnode>
+        <childnode refid="1515" relation="include">
+        </childnode>
+        <childnode refid="1516" relation="include">
+        </childnode>
+        <childnode refid="1517" relation="include">
+        </childnode>
+        <childnode refid="1518" relation="include">
+        </childnode>
+      </node>
+      <node id="1505">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1517">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1506">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1509">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1a61a889598c3e4331f5e1233d6a038068" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfTcpConnectionBufferFreeCb</definition>
+        <argsstring>(const void *data, size_t datalen, void *closure)</argsstring>
+        <name>sbfTcpConnectionBufferFreeCb</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>datalen</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="5" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="5" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1ae9a317dcb00d88e1fcba26e0869abb11" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfTcpConnectionReadyQueueCb</definition>
+        <argsstring>(sbfQueueItem item, void *closure)</argsstring>
+        <name>sbfTcpConnectionReadyQueueCb</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="11" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="11" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1a5da03bef839338d1153c8b172e465dde" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfTcpConnectionErrorQueueCb</definition>
+        <argsstring>(sbfQueueItem item, void *closure)</argsstring>
+        <name>sbfTcpConnectionErrorQueueCb</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="31" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="31" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1ac0bf91222f33d1e920b5be562989a315" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfTcpConnectionReadQueueCb</definition>
+        <argsstring>(sbfQueueItem item, void *closure)</argsstring>
+        <name>sbfTcpConnectionReadQueueCb</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="51" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="51" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1a229cf434745a919f40ee1c452493d85b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfTcpConnectionEventReadCb</definition>
+        <argsstring>(struct bufferevent *bev, void *closure)</argsstring>
+        <name>sbfTcpConnectionEventReadCb</name>
+        <param>
+          <type>struct bufferevent *</type>
+          <declname>bev</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="83" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="83" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1a11fa114be9703c636963489f86056324" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfTcpConnectionEventEventCb</definition>
+        <argsstring>(struct bufferevent *bev, short events, void *closure)</argsstring>
+        <name>sbfTcpConnectionEventEventCb</name>
+        <param>
+          <type>struct bufferevent *</type>
+          <declname>bev</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>events</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="98" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="98" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1ad8da8f8cdd47901fca836002a3e6f742" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref></type>
+        <definition>static sbfError sbfTcpConnectionSet</definition>
+        <argsstring>(sbfTcpConnection tc, sbfMwThread thread, sbfQueue queue, sbfTcpConnectionReadyCb readyCb, sbfTcpConnectionErrorCb errorCb, sbfTcpConnectionReadCb readCb, void *closure)</argsstring>
+        <name>sbfTcpConnectionSet</name>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1a53a1045ff30759b8b00d4d0449a325d6" kindref="member">sbfTcpConnection</ref></type>
+          <declname>tc</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref></type>
+          <declname>thread</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1ae204a24bb024d4047c38b1c40f9a46fb" kindref="member">sbfTcpConnectionReadyCb</ref></type>
+          <declname>readyCb</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1a889c83f2386f8caf26449ea8777e43a0" kindref="member">sbfTcpConnectionErrorCb</ref></type>
+          <declname>errorCb</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1aea1b0b9f9203fa9f5681271b5e0e2ca4" kindref="member">sbfTcpConnectionReadCb</ref></type>
+          <declname>readCb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="125" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="125" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1aa54f65b63c00a1f2ac03f0660b3a9bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_tcp_connection_8h_1a53a1045ff30759b8b00d4d0449a325d6" kindref="member">sbfTcpConnection</ref></type>
+        <definition>sbfTcpConnection sbfTcpConnection_wrap</definition>
+        <argsstring>(sbfLog log, int s, struct sockaddr_in *sin)</argsstring>
+        <name>sbfTcpConnection_wrap</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>struct sockaddr_in *</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="160" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="160" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1a0e8d76ff4652472f3d7f39336bfdc53f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_tcp_connection_8h_1a53a1045ff30759b8b00d4d0449a325d6" kindref="member">sbfTcpConnection</ref></type>
+        <definition>sbfTcpConnection sbfTcpConnection_create</definition>
+        <argsstring>(sbfLog log, sbfMwThread thread, sbfQueue queue, struct sockaddr_in *sin, sbfTcpConnectionReadyCb readyCb, sbfTcpConnectionErrorCb errorCb, sbfTcpConnectionReadCb readCb, void *closure)</argsstring>
+        <name>sbfTcpConnection_create</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref></type>
+          <declname>thread</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type>struct sockaddr_in *</type>
+          <declname>sin</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1ae204a24bb024d4047c38b1c40f9a46fb" kindref="member">sbfTcpConnectionReadyCb</ref></type>
+          <declname>readyCb</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1a889c83f2386f8caf26449ea8777e43a0" kindref="member">sbfTcpConnectionErrorCb</ref></type>
+          <declname>errorCb</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1aea1b0b9f9203fa9f5681271b5e0e2ca4" kindref="member">sbfTcpConnectionReadCb</ref></type>
+          <declname>readCb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="176" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="176" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1ad28df3d489618e8bbdae2473c46185c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfTcpConnection_destroy</definition>
+        <argsstring>(sbfTcpConnection tc)</argsstring>
+        <name>sbfTcpConnection_destroy</name>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1a53a1045ff30759b8b00d4d0449a325d6" kindref="member">sbfTcpConnection</ref></type>
+          <declname>tc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="232" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="232" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1a8a4684bd03c3f0bbf989daff5c080af6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref></type>
+        <definition>sbfError sbfTcpConnection_accept</definition>
+        <argsstring>(sbfTcpConnection tc, sbfMwThread thread, sbfQueue queue, sbfTcpConnectionReadyCb readyCb, sbfTcpConnectionErrorCb errorCb, sbfTcpConnectionReadCb readCb, void *closure)</argsstring>
+        <name>sbfTcpConnection_accept</name>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1a53a1045ff30759b8b00d4d0449a325d6" kindref="member">sbfTcpConnection</ref></type>
+          <declname>tc</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref></type>
+          <declname>thread</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1ae204a24bb024d4047c38b1c40f9a46fb" kindref="member">sbfTcpConnectionReadyCb</ref></type>
+          <declname>readyCb</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1a889c83f2386f8caf26449ea8777e43a0" kindref="member">sbfTcpConnectionErrorCb</ref></type>
+          <declname>errorCb</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1aea1b0b9f9203fa9f5681271b5e0e2ca4" kindref="member">sbfTcpConnectionReadCb</ref></type>
+          <declname>readCb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="246" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="246" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1afa66b62f0e78721f20f853501d975bed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfTcpConnection_send</definition>
+        <argsstring>(sbfTcpConnection tc, const void *data, size_t size)</argsstring>
+        <name>sbfTcpConnection_send</name>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1a53a1045ff30759b8b00d4d0449a325d6" kindref="member">sbfTcpConnection</ref></type>
+          <declname>tc</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="284" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="284" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1a36bb97a18db6b8f2fb94b5ee954b7617" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfTcpConnection_sendBuffer</definition>
+        <argsstring>(sbfTcpConnection tc, sbfBuffer buffer)</argsstring>
+        <name>sbfTcpConnection_sendBuffer</name>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1a53a1045ff30759b8b00d4d0449a325d6" kindref="member">sbfTcpConnection</ref></type>
+          <declname>tc</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="290" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="290" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_tcp_connection_8c_1a3df96e0249d292935e801545ac450a86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct sockaddr_in *</type>
+        <definition>struct sockaddr_in* sbfTcpConnection_getPeer</definition>
+        <argsstring>(sbfTcpConnection tc)</argsstring>
+        <name>sbfTcpConnection_getPeer</name>
+        <param>
+          <type><ref refid="sbf_tcp_connection_8h_1a53a1045ff30759b8b00d4d0449a325d6" kindref="member">sbfTcpConnection</ref></type>
+          <declname>tc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfTcpConnection.c" line="302" column="1" bodyfile="common/sbfTcpConnection.c" bodystart="302" bodyend="305"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_tcp_connection_8h" kindref="compound">sbfTcpConnection.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_tcp_connection_private_8h" kindref="compound">sbfTcpConnectionPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">sbfTcpConnectionBufferFreeCb<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>datalen,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfBuffer_destroy<sp/>(closure);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">sbfTcpConnectionReadyQueueCb<sp/>(<ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp[INET_ADDRSTRLEN];</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>inet_ntop<sp/>(AF_INET,<sp/>&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a00d62240e7192d6b4d2c44b9caac49ae" kindref="member">mPeer</ref>.sin_addr,<sp/>tmp,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>tmp);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1af68ca75152c81bbb25c82bff125b616e" kindref="member">mLog</ref>,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;TCP<sp/>connection<sp/>%p<sp/>(%s:%hu)<sp/>ready&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ntohs<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a00d62240e7192d6b4d2c44b9caac49ae" kindref="member">mPeer</ref>.sin_port));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a7257ae2f39491d07ff13183426709388" kindref="member">mReadyCb</ref><sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>!tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a7db00d68d9c18138cbe62d94808778ef" kindref="member">mDestroyed</ref>)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a7257ae2f39491d07ff13183426709388" kindref="member">mReadyCb</ref><sp/>(tc,<sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1ad206497979cd11169354fce8256a78ca" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sbfRefCount_decrement<sp/>(&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a051dcbc878fb03d9d5a321beeb4ed40a" kindref="member">mRefCount</ref>))</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(tc);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">sbfTcpConnectionErrorQueueCb<sp/>(<ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp[INET_ADDRSTRLEN];</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>inet_ntop<sp/>(AF_INET,<sp/>&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a00d62240e7192d6b4d2c44b9caac49ae" kindref="member">mPeer</ref>.sin_addr,<sp/>tmp,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>tmp);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1af68ca75152c81bbb25c82bff125b616e" kindref="member">mLog</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;TCP<sp/>connection<sp/>%p<sp/>(%s:%hu)<sp/>error&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ntohs<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a00d62240e7192d6b4d2c44b9caac49ae" kindref="member">mPeer</ref>.sin_port));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1ad4e139366d91f7615ee3b84626ece9a0" kindref="member">mErrorCb</ref><sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>!tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a7db00d68d9c18138cbe62d94808778ef" kindref="member">mDestroyed</ref>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1ad4e139366d91f7615ee3b84626ece9a0" kindref="member">mErrorCb</ref><sp/>(tc,<sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1ad206497979cd11169354fce8256a78ca" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sbfRefCount_decrement<sp/>(&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a051dcbc878fb03d9d5a321beeb4ed40a" kindref="member">mRefCount</ref>))</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(tc);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">sbfTcpConnectionReadQueueCb<sp/>(<ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">evbuffer*<sp/>evb<sp/>=<sp/>bufferevent_get_input<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>used;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a7db00d68d9c18138cbe62d94808778ef" kindref="member">mDestroyed</ref>)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/>evbuffer_get_length<sp/>(evb);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>used<sp/>=<sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1ac77a37a7fe5d6321a24e0528b240ae3e" kindref="member">mReadCb</ref><sp/>(tc,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evbuffer_pullup<sp/>(evb,<sp/>-1),</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1ad206497979cd11169354fce8256a78ca" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a7db00d68d9c18138cbe62d94808778ef" kindref="member">mDestroyed</ref>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evbuffer_drain<sp/>(evb,<sp/>used);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a7db00d68d9c18138cbe62d94808778ef" kindref="member">mDestroyed</ref>)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a5c3b665579e2fff19c375f0d844d31e4" kindref="member">mQueued</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bufferevent_enable<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref>,<sp/>EV_READ);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sbfRefCount_decrement<sp/>(&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a051dcbc878fb03d9d5a321beeb4ed40a" kindref="member">mRefCount</ref>))</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(tc);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">sbfTcpConnectionEventReadCb<sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>bufferevent*<sp/>bev,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a5c3b665579e2fff19c375f0d844d31e4" kindref="member">mQueued</ref>)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a5c3b665579e2fff19c375f0d844d31e4" kindref="member">mQueued</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>bufferevent_disable<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref>,<sp/>EV_READ);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfRefCount_increment<sp/>(&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a051dcbc878fb03d9d5a321beeb4ed40a" kindref="member">mRefCount</ref>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8c_1a4a0a1c5ebaca33ef41cfc984c536bf01" kindref="member">sbfQueue_enqueue</ref><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a68e87fcb5ebc159e0c11ac2d6b58ed70" kindref="member">mQueue</ref>,<sp/>sbfTcpConnectionReadQueueCb,<sp/>tc);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">sbfTcpConnectionEventEventCb<sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>bufferevent*<sp/>bev,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>events,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(events<sp/>&amp;<sp/>BEV_EVENT_CONNECTED)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bufferevent_enable<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref>,<sp/>EV_READ|EV_WRITE);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfRefCount_increment<sp/>(&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a051dcbc878fb03d9d5a321beeb4ed40a" kindref="member">mRefCount</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8c_1a4a0a1c5ebaca33ef41cfc984c536bf01" kindref="member">sbfQueue_enqueue</ref><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a68e87fcb5ebc159e0c11ac2d6b58ed70" kindref="member">mQueue</ref>,<sp/>sbfTcpConnectionReadyQueueCb,<sp/>tc);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(events<sp/>&amp;<sp/>(BEV_EVENT_ERROR|BEV_EVENT_TIMEOUT|BEV_EVENT_EOF))</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bufferevent_free<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfRefCount_increment<sp/>(&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a051dcbc878fb03d9d5a321beeb4ed40a" kindref="member">mRefCount</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8c_1a4a0a1c5ebaca33ef41cfc984c536bf01" kindref="member">sbfQueue_enqueue</ref><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a68e87fcb5ebc159e0c11ac2d6b58ed70" kindref="member">mQueue</ref>,<sp/>sbfTcpConnectionErrorQueueCb,<sp/>tc);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">sbfTcpConnectionSet<sp/>(<ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/>thread,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_connection_8h_1ae204a24bb024d4047c38b1c40f9a46fb" kindref="member">sbfTcpConnectionReadyCb</ref><sp/>readyCb,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_connection_8h_1a889c83f2386f8caf26449ea8777e43a0" kindref="member">sbfTcpConnectionErrorCb</ref><sp/>errorCb,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_connection_8h_1aea1b0b9f9203fa9f5681271b5e0e2ca4" kindref="member">sbfTcpConnectionReadCb</ref><sp/>readCb,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a2b0bb621a5d3ac304eb61570f74c71a6" kindref="member">mThread</ref><sp/>=<sp/>thread;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a68e87fcb5ebc159e0c11ac2d6b58ed70" kindref="member">mQueue</ref><sp/>=<sp/>queue;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a7257ae2f39491d07ff13183426709388" kindref="member">mReadyCb</ref><sp/>=<sp/>readyCb;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1ad4e139366d91f7615ee3b84626ece9a0" kindref="member">mErrorCb</ref><sp/>=<sp/>errorCb;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1ac77a37a7fe5d6321a24e0528b240ae3e" kindref="member">mReadCb</ref><sp/>=<sp/>readCb;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1ad206497979cd11169354fce8256a78ca" kindref="member">mClosure</ref><sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a7db00d68d9c18138cbe62d94808778ef" kindref="member">mDestroyed</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfRefCount_init<sp/>(&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a051dcbc878fb03d9d5a321beeb4ed40a" kindref="member">mRefCount</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a5c3b665579e2fff19c375f0d844d31e4" kindref="member">mQueued</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref><sp/>=<sp/>bufferevent_socket_new<sp/>(<ref refid="sbf_mw_8c_1a49eee9c382b8543bbb6e5822b6c7d554" kindref="member">sbfMw_getThreadEventBase</ref><sp/>(thread),</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1ad4a74db706ebb41692166410ec1dcb94" kindref="member">mSocket</ref>,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BEV_OPT_THREADSAFE);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EIO;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>bufferevent_setcb<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref>,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTcpConnectionEventReadCb,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTcpConnectionEventEventCb,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref></highlight></codeline>
+<codeline lineno="160" refid="sbf_tcp_connection_private_8h_1a2426f5b62fafceb71bf41cda7f7eb8cc" refkind="member"><highlight class="normal"><ref refid="sbf_tcp_connection_8c_1aa54f65b63c00a1f2ac03f0660b3a9bd4" kindref="member">sbfTcpConnection_wrap</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr_in*<sp/>sin)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>evutil_make_socket_closeonexec<sp/>(s);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>evutil_make_socket_nonblocking<sp/>(s);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>tc<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*tc);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1af68ca75152c81bbb25c82bff125b616e" kindref="member">mLog</ref><sp/>=<sp/>log;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1ad4a74db706ebb41692166410ec1dcb94" kindref="member">mSocket</ref><sp/>=<sp/>s;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy<sp/>(&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a00d62240e7192d6b4d2c44b9caac49ae" kindref="member">mPeer</ref>,<sp/>sin,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a00d62240e7192d6b4d2c44b9caac49ae" kindref="member">mPeer</ref>);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tc;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref></highlight></codeline>
+<codeline lineno="176" refid="sbf_tcp_connection_8c_1a0e8d76ff4652472f3d7f39336bfdc53f" refkind="member"><highlight class="normal"><ref refid="sbf_tcp_connection_8c_1a0e8d76ff4652472f3d7f39336bfdc53f" kindref="member">sbfTcpConnection_create</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/>thread,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr_in*<sp/>sin,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_connection_8h_1ae204a24bb024d4047c38b1c40f9a46fb" kindref="member">sbfTcpConnectionReadyCb</ref><sp/>readyCb,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_connection_8h_1a889c83f2386f8caf26449ea8777e43a0" kindref="member">sbfTcpConnectionErrorCb</ref><sp/>errorCb,</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_connection_8h_1aea1b0b9f9203fa9f5681271b5e0e2ca4" kindref="member">sbfTcpConnectionReadCb</ref><sp/>readCb,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp[INET_ADDRSTRLEN];</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>s<sp/>=<sp/>socket<sp/>(AF_INET,<sp/>SOCK_STREAM,<sp/>IPPROTO_TCP);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(s<sp/>==<sp/>-1)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>tc<sp/>=<sp/><ref refid="sbf_tcp_connection_8c_1aa54f65b63c00a1f2ac03f0660b3a9bd4" kindref="member">sbfTcpConnection_wrap</ref><sp/>(log,<sp/>s,<sp/>sin);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tc<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>inet_ntop<sp/>(AF_INET,<sp/>&amp;sin-&gt;sin_addr,<sp/>tmp,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>tmp);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(log,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;creating<sp/>TCP<sp/>connection<sp/>%p<sp/>to<sp/>%s:%hu&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc,</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ntohs<sp/>(sin-&gt;sin_port));</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>error<sp/>=<sp/><sp/>sbfTcpConnectionSet<sp/>(tc,</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue,</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readyCb,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errorCb,</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readCb,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>closure);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(error<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>error<sp/>=<sp/>bufferevent_socket_connect<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref>,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr*)sin,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*sin);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(error<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tc;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">fail:</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a623a831041e812e33a41439b449d740d" kindref="member">sbfLog_err</ref><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1af68ca75152c81bbb25c82bff125b616e" kindref="member">mLog</ref>,</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;error<sp/>creating<sp/>TCP<sp/>connection<sp/>%p:<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror<sp/>(error));</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_connection_8c_1ad28df3d489618e8bbdae2473c46185c6" kindref="member">sbfTcpConnection_destroy</ref><sp/>(tc);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="sbf_tcp_connection_8h_1ad28df3d489618e8bbdae2473c46185c6" refkind="member"><highlight class="normal"><ref refid="sbf_tcp_connection_8c_1ad28df3d489618e8bbdae2473c46185c6" kindref="member">sbfTcpConnection_destroy</ref><sp/>(<ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1af68ca75152c81bbb25c82bff125b616e" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;destroying<sp/>TCP<sp/>connection<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>tc);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a7db00d68d9c18138cbe62d94808778ef" kindref="member">mDestroyed</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>EVUTIL_CLOSESOCKET<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1ad4a74db706ebb41692166410ec1dcb94" kindref="member">mSocket</ref>);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bufferevent_free<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sbfRefCount_decrement<sp/>(&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a051dcbc878fb03d9d5a321beeb4ed40a" kindref="member">mRefCount</ref>))</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(tc);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref></highlight></codeline>
+<codeline lineno="246" refid="sbf_tcp_connection_8c_1a8a4684bd03c3f0bbf989daff5c080af6" refkind="member"><highlight class="normal"><ref refid="sbf_tcp_connection_8c_1a8a4684bd03c3f0bbf989daff5c080af6" kindref="member">sbfTcpConnection_accept</ref><sp/>(<ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc,</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/>thread,</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_connection_8h_1ae204a24bb024d4047c38b1c40f9a46fb" kindref="member">sbfTcpConnectionReadyCb</ref><sp/>readyCb,</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_connection_8h_1a889c83f2386f8caf26449ea8777e43a0" kindref="member">sbfTcpConnectionErrorCb</ref><sp/>errorCb,</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_connection_8h_1aea1b0b9f9203fa9f5681271b5e0e2ca4" kindref="member">sbfTcpConnectionReadCb</ref><sp/>readCb,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>tmp[INET_ADDRSTRLEN];</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref><sp/>error;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>inet_ntop<sp/>(AF_INET,<sp/>&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a00d62240e7192d6b4d2c44b9caac49ae" kindref="member">mPeer</ref>.sin_addr,<sp/>tmp,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>tmp);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1af68ca75152c81bbb25c82bff125b616e" kindref="member">mLog</ref>,</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;accepting<sp/>TCP<sp/>connection<sp/>%p<sp/>from<sp/>%s:%hu&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc,</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp,</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ntohs<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a00d62240e7192d6b4d2c44b9caac49ae" kindref="member">mPeer</ref>.sin_port));</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>error<sp/>=<sp/>sbfTcpConnectionSet<sp/>(tc,</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue,</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readyCb,</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errorCb,</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readCb,</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>closure);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(error<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bufferevent_enable<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref>,<sp/>EV_READ|EV_WRITE);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a623a831041e812e33a41439b449d740d" kindref="member">sbfLog_err</ref><sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1af68ca75152c81bbb25c82bff125b616e" kindref="member">mLog</ref>,</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;error<sp/>accepting<sp/>TCP<sp/>connection<sp/>%p:<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tc,</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror<sp/>(error));</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>error;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="sbf_tcp_connection_8h_1afa66b62f0e78721f20f853501d975bed" refkind="member"><highlight class="normal"><ref refid="sbf_tcp_connection_8c_1afa66b62f0e78721f20f853501d975bed" kindref="member">sbfTcpConnection_send</ref><sp/>(<ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>bufferevent_write<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref>,<sp/>data,<sp/>size);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="sbf_tcp_connection_8h_1a36bb97a18db6b8f2fb94b5ee954b7617" refkind="member"><highlight class="normal"><ref refid="sbf_tcp_connection_8c_1a36bb97a18db6b8f2fb94b5ee954b7617" kindref="member">sbfTcpConnection_sendBuffer</ref><sp/>(<ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc,<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer)</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfBuffer_addRef<sp/>(buffer);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(evbuffer_add_reference<sp/>(bufferevent_get_output<sp/>(tc-&gt;<ref refid="structsbf_tcp_connection_impl_1aa2871b50c8c949d8535ad4a370579a93" kindref="member">mEvent</ref>),</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfBuffer_getData<sp/>(buffer),</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfBuffer_getSize<sp/>(buffer),</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTcpConnectionBufferFreeCb,</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfBuffer_destroy<sp/>(buffer);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in*</highlight></codeline>
+<codeline lineno="302" refid="sbf_tcp_connection_8h_1a3df96e0249d292935e801545ac450a86" refkind="member"><highlight class="normal"><ref refid="sbf_tcp_connection_8c_1a3df96e0249d292935e801545ac450a86" kindref="member">sbfTcpConnection_getPeer</ref><sp/>(<ref refid="structsbf_tcp_connection_impl" kindref="compound">sbfTcpConnection</ref><sp/>tc)</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;tc-&gt;<ref refid="structsbf_tcp_connection_impl_1a00d62240e7192d6b4d2c44b9caac49ae" kindref="member">mPeer</ref>;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="common/sbfTcpConnection.c"/>
+  </compounddef>
+</doxygen>

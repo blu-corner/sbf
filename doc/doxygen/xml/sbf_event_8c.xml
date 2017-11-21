@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_event_8c" kind="file" language="C++">
+    <compoundname>sbfEvent.c</compoundname>
+    <includes refid="sbf_event_8h" local="yes">sbfEvent.h</includes>
+    <includes refid="sbf_event_private_8h" local="yes">sbfEventPrivate.h</includes>
+    <incdepgraph>
+      <node id="2111">
+        <label>event.h</label>
+      </node>
+      <node id="2110">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="2112">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="2113" relation="include">
+        </childnode>
+      </node>
+      <node id="2119">
+        <label>sbfEventPrivate.h</label>
+        <link refid="sbf_event_private_8h"/>
+        <childnode refid="2120" relation="include">
+        </childnode>
+        <childnode refid="2125" relation="include">
+        </childnode>
+        <childnode refid="2128" relation="include">
+        </childnode>
+      </node>
+      <node id="2107">
+        <label>core/sbfEvent.c</label>
+        <link refid="sbf_event_8c"/>
+        <childnode refid="2108" relation="include">
+        </childnode>
+        <childnode refid="2119" relation="include">
+        </childnode>
+      </node>
+      <node id="2108">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="2109" relation="include">
+        </childnode>
+      </node>
+      <node id="2116">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="2109" relation="include">
+        </childnode>
+      </node>
+      <node id="2127">
+        <label>event2/listener.h</label>
+      </node>
+      <node id="2122">
+        <label>sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="2109" relation="include">
+        </childnode>
+      </node>
+      <node id="2121">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="2109" relation="include">
+        </childnode>
+      </node>
+      <node id="2113">
+        <label>sys/types.h</label>
+      </node>
+      <node id="2126">
+        <label>event2/thread.h</label>
+      </node>
+      <node id="2125">
+        <label>sbfMwPrivate.h</label>
+        <link refid="sbf_mw_private_8h"/>
+        <childnode refid="2111" relation="include">
+        </childnode>
+        <childnode refid="2126" relation="include">
+        </childnode>
+        <childnode refid="2127" relation="include">
+        </childnode>
+      </node>
+      <node id="2128">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="2109" relation="include">
+        </childnode>
+      </node>
+      <node id="2124">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="2109" relation="include">
+        </childnode>
+      </node>
+      <node id="2109">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="2110" relation="include">
+        </childnode>
+        <childnode refid="2111" relation="include">
+        </childnode>
+        <childnode refid="2112" relation="include">
+        </childnode>
+        <childnode refid="2114" relation="include">
+        </childnode>
+        <childnode refid="2115" relation="include">
+        </childnode>
+        <childnode refid="2116" relation="include">
+        </childnode>
+        <childnode refid="2117" relation="include">
+        </childnode>
+        <childnode refid="2118" relation="include">
+        </childnode>
+      </node>
+      <node id="2115">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="2114">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="2120">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="2109" relation="include">
+        </childnode>
+        <childnode refid="2108" relation="include">
+        </childnode>
+        <childnode refid="2121" relation="include">
+        </childnode>
+        <childnode refid="2122" relation="include">
+        </childnode>
+        <childnode refid="2123" relation="include">
+        </childnode>
+        <childnode refid="2124" relation="include">
+        </childnode>
+      </node>
+      <node id="2117">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="2109" relation="include">
+        </childnode>
+      </node>
+      <node id="2123">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="2109" relation="include">
+        </childnode>
+      </node>
+      <node id="2118">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="2109" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_event_8c_1a4427567f2195b6affdd194026fbb97ca" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfEventQueueCb</definition>
+        <argsstring>(sbfQueueItem item, void *closure)</argsstring>
+        <name>sbfEventQueueCb</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfEvent.c" line="9" column="1" bodyfile="core/sbfEvent.c" bodystart="9" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_event_8c_1ad82ce2a3f9e11a7166066ed2121cc21c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sbfEventEventCb</definition>
+        <argsstring>(int fd, short events, void *closure)</argsstring>
+        <name>sbfEventEventCb</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>events</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfEvent.c" line="25" column="1" bodyfile="core/sbfEvent.c" bodystart="25" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_event_8c_1a5b5d8233853b4b95972462e5d3e63728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_event_8h_1a24da4e6ee40913a2f525332dd05c69e8" kindref="member">sbfEvent</ref></type>
+        <definition>sbfEvent sbfEvent_create</definition>
+        <argsstring>(sbfMwThread thread, sbfQueue queue, sbfEventCb cb, void *closure, int descriptor, int events)</argsstring>
+        <name>sbfEvent_create</name>
+        <param>
+          <type><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref></type>
+          <declname>thread</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_event_8h_1a6e3644b66167f52db7691dcd1d152c21" kindref="member">sbfEventCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>descriptor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>events</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfEvent.c" line="42" column="1" bodyfile="core/sbfEvent.c" bodystart="42" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_event_8c_1aec0d16c84dded19519f2eaf3f8ca8c40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfEvent_destroy</definition>
+        <argsstring>(sbfEvent event)</argsstring>
+        <name>sbfEvent_destroy</name>
+        <param>
+          <type><ref refid="sbf_event_8h_1a24da4e6ee40913a2f525332dd05c69e8" kindref="member">sbfEvent</ref></type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Releases the memory allocated by the given memory handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the event handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfEvent.c" line="80" column="1" bodyfile="core/sbfEvent.c" bodystart="80" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_event_8h" kindref="compound">sbfEvent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_event_private_8h" kindref="compound">sbfEventPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>SBF_EVENT_READ<sp/>!=<sp/>EV_READ<sp/>||<sp/>SBF_EVENT_WRITE<sp/>!=<sp/>EV_WRITE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;event<sp/>numbers<sp/>do<sp/>not<sp/>match&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">sbfEventQueueCb<sp/>(<ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_event_impl" kindref="compound">sbfEvent</ref><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>events;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!event-&gt;mDestroyed)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>events<sp/>=<sp/>*(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)<ref refid="sbf_queue_8c_1a3a47a4e3a01ddecb9d5c49b0fab74609" kindref="member">sbfQueue_getItemData</ref><sp/>(item);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;mCb<sp/>(event,<sp/>events,<sp/>event-&gt;mClosure);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sbfRefCount_decrement<sp/>(&amp;event-&gt;mRefCount))</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(event);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">sbfEventEventCb<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>events,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_event_impl" kindref="compound">sbfEvent</ref><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>event_add<sp/>(&amp;event-&gt;mEvent,<sp/>NULL);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!event-&gt;mDestroyed)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfRefCount_increment<sp/>(&amp;event-&gt;mRefCount);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item<sp/>=<sp/><ref refid="sbf_queue_8c_1a1ce1d1238f830f6f9e0032d3572036c2" kindref="member">sbfQueue_getItem</ref><sp/>(event-&gt;mQueue,<sp/>sbfEventQueueCb,<sp/>event);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)<ref refid="sbf_queue_8c_1a3a47a4e3a01ddecb9d5c49b0fab74609" kindref="member">sbfQueue_getItemData</ref><sp/>(item)<sp/>=<sp/>events;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8c_1a041be175afa83868ffd3ad53638aa073" kindref="member">sbfQueue_enqueueItem</ref><sp/>(event-&gt;mQueue,<sp/>item);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="structsbf_event_impl" kindref="compound">sbfEvent</ref></highlight></codeline>
+<codeline lineno="42" refid="sbf_event_8c_1a5b5d8233853b4b95972462e5d3e63728" refkind="member"><highlight class="normal"><ref refid="sbf_event_8c_1a5b5d8233853b4b95972462e5d3e63728" kindref="member">sbfEvent_create</ref><sp/>(<ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/>thread,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_event_8h_1a6e3644b66167f52db7691dcd1d152c21" kindref="member">sbfEventCb</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>descriptor,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>events)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_event_impl" kindref="compound">sbfEvent</ref><sp/>event;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=<sp/><ref refid="sbf_memory_8h_1a6af5faec3f9662b20ffc9903f923dec0" kindref="member">xmalloc</ref><sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*event);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;mThread<sp/>=<sp/>thread;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;mQueue<sp/>=<sp/>queue;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;mCb<sp/>=<sp/>cb;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;mClosure<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;<ref refid="structsbf_queue_impl_1ad4c4efb77df3d3f8a0bfed4f27a03f92" kindref="member">mDestroyed</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfRefCount_init<sp/>(&amp;event-&gt;<ref refid="structsbf_event_impl_1a3c621d15079d81b7c63f8faba12b9730" kindref="member">mRefCount</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(thread-&gt;<ref refid="structsbf_mw_thread_impl_1a18ff87866b3d61e1772e92945d1ab8a1" kindref="member">mParent</ref>-&gt;mLog,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;creating<sp/>event<sp/>%p:<sp/>descriptor<sp/>%d,<sp/>events<sp/>%s%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>descriptor,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>events<sp/>&amp;<sp/><ref refid="sbf_event_8h_1a494548cb11d745b8f5425840061d09ba" kindref="member">SBF_EVENT_READ</ref><sp/>?<sp/></highlight><highlight class="stringliteral">&quot;R&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>events<sp/>&amp;<sp/><ref refid="sbf_event_8h_1a21f4a3663ea050be7419c3f7cdeaf006" kindref="member">SBF_EVENT_WRITE</ref><sp/>?<sp/></highlight><highlight class="stringliteral">&quot;W&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>event_assign<sp/>(&amp;event-&gt;<ref refid="structsbf_event_impl_1a7aa26799914dcc3d6700bc45767815ba" kindref="member">mEvent</ref>,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event-&gt;<ref refid="structsbf_event_impl_1a002f6b12625b2d86782bb7f49d3a9ebf" kindref="member">mThread</ref>-&gt;<ref refid="structsbf_mw_thread_impl_1a626a5a2cdfd9561709c69669d337d0ec" kindref="member">mEventBase</ref>,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>descriptor,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>events,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfEventEventCb,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>event_add<sp/>(&amp;event-&gt;<ref refid="structsbf_event_impl_1a7aa26799914dcc3d6700bc45767815ba" kindref="member">mEvent</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>event;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="sbf_event_8h_1aec0d16c84dded19519f2eaf3f8ca8c40" refkind="member"><highlight class="normal"><ref refid="sbf_event_8c_1aec0d16c84dded19519f2eaf3f8ca8c40" kindref="member">sbfEvent_destroy</ref><sp/>(<ref refid="structsbf_event_impl" kindref="compound">sbfEvent</ref><sp/>event)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(event-&gt;<ref refid="structsbf_event_impl_1a002f6b12625b2d86782bb7f49d3a9ebf" kindref="member">mThread</ref>-&gt;<ref refid="structsbf_mw_thread_impl_1a18ff87866b3d61e1772e92945d1ab8a1" kindref="member">mParent</ref>-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;destroying<sp/>event<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>event);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;mDestroyed<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>event_del<sp/>(&amp;event-&gt;<ref refid="structsbf_event_impl_1a7aa26799914dcc3d6700bc45767815ba" kindref="member">mEvent</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sbfRefCount_decrement<sp/>(&amp;event-&gt;<ref refid="structsbf_event_impl_1a3c621d15079d81b7c63f8faba12b9730" kindref="member">mRefCount</ref>))</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(event);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="core/sbfEvent.c"/>
+  </compounddef>
+</doxygen>

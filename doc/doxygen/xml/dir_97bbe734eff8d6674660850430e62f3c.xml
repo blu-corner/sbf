@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_97bbe734eff8d6674660850430e62f3c" kind="dir">
+    <compoundname>handlers</compoundname>
+    <innerdir refid="dir_52ff2686f796482dae89c725c32853bb">handlers/common</innerdir>
+    <innerdir refid="dir_c1c544dc0257fe85be803ea2c3194677">handlers/tcpmesh</innerdir>
+    <innerdir refid="dir_518e61d9c51ec1569183e3d6232a948a">handlers/udp</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="handlers/"/>
+  </compounddef>
+</doxygen>

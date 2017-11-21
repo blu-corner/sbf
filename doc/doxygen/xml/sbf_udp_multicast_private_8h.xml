@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_udp_multicast_private_8h" kind="file" language="C++">
+    <compoundname>sbfUdpMulticastPrivate.h</compoundname>
+    <includes local="no">evutil.h</includes>
+    <includedby refid="sbf_udp_multicast_8c" local="yes">common/sbfUdpMulticast.c</includedby>
+    <incdepgraph>
+      <node id="1678">
+        <label>common/sbfUdpMulticastPrivate.h</label>
+        <link refid="sbf_udp_multicast_private_8h"/>
+        <childnode refid="1679" relation="include">
+        </childnode>
+      </node>
+      <node id="1679">
+        <label>evutil.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1681">
+        <label>common/sbfUdpMulticast.c</label>
+        <link refid="sbf_udp_multicast_8c"/>
+      </node>
+      <node id="1680">
+        <label>common/sbfUdpMulticastPrivate.h</label>
+        <link refid="sbf_udp_multicast_private_8h"/>
+        <childnode refid="1681" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structsbf_udp_multicast_impl" prot="public">sbfUdpMulticastImpl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_UDP_MULTICAST_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_UDP_MULTICAST_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evutil.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="structsbf_udp_multicast_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_udp_multicast_impl" kindref="compound">sbfUdpMulticastImpl</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="structsbf_udp_multicast_impl_1a73a31823eeea80e2764a1cc909f80512" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_udp_multicast_8h_1a8a83068bb5028fd6e20779318692a1bb" kindref="member">sbfUdpMulticastType</ref><sp/><ref refid="structsbf_udp_multicast_impl_1a73a31823eeea80e2764a1cc909f80512" kindref="member">mType</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="structsbf_udp_multicast_impl_1ae8cfbb74c96daf9731cdd1afdd74e7ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a810b076a4ef5bd325cee986d4c993be6" kindref="member">sbfSocket</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_udp_multicast_impl_1ae8cfbb74c96daf9731cdd1afdd74e7ec" kindref="member">mSocket</ref>;</highlight></codeline>
+<codeline lineno="13" refid="structsbf_udp_multicast_impl_1a6790d568ba67b49799cd68a9a58d4c60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in<sp/><sp/><ref refid="structsbf_udp_multicast_impl_1a6790d568ba67b49799cd68a9a58d4c60" kindref="member">mAddress</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="structsbf_udp_multicast_impl_1a90e3862c496d559157e35232514e3f53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_udp_multicast_impl_1a90e3862c496d559157e35232514e3f53" kindref="member">mPool</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_UDP_MULTICAST_PRIVATE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfUdpMulticastPrivate.h"/>
+  </compounddef>
+</doxygen>

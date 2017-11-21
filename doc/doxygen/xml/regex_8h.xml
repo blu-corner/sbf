@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="regex_8h" kind="file" language="C++">
+    <compoundname>regex.h</compoundname>
+    <includes refid="pcre_8h" local="no">pcre.h</includes>
+    <includes refid="pcreposix_8h" local="no">pcreposix.h</includes>
+    <includedby refid="sbf_common_darwin_8h" local="no">common/sbfCommonDarwin.h</includedby>
+    <includedby refid="sbf_common_linux_8h" local="no">common/sbfCommonLinux.h</includedby>
+    <includedby refid="sbf_common_win32_8h" local="no">common/sbfCommonWin32.h</includedby>
+    <incdepgraph>
+      <node id="3156">
+        <label>pcreposix.h</label>
+        <link refid="pcreposix_8h"/>
+        <childnode refid="3155" relation="include">
+        </childnode>
+      </node>
+      <node id="3155">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3153">
+        <label>thirdparty/pcre/win32/include/regex.h</label>
+        <link refid="regex_8h"/>
+        <childnode refid="3154" relation="include">
+        </childnode>
+        <childnode refid="3156" relation="include">
+        </childnode>
+      </node>
+      <node id="3154">
+        <label>pcre.h</label>
+        <link refid="pcre_8h"/>
+        <childnode refid="3155" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3160">
+        <label>common/sbfCommonWin32.h</label>
+        <link refid="sbf_common_win32_8h"/>
+      </node>
+      <node id="3157">
+        <label>thirdparty/pcre/win32/include/regex.h</label>
+        <link refid="regex_8h"/>
+        <childnode refid="3158" relation="include">
+        </childnode>
+        <childnode refid="3159" relation="include">
+        </childnode>
+        <childnode refid="3160" relation="include">
+        </childnode>
+      </node>
+      <node id="3159">
+        <label>common/sbfCommonLinux.h</label>
+        <link refid="sbf_common_linux_8h"/>
+      </node>
+      <node id="3158">
+        <label>common/sbfCommonDarwin.h</label>
+        <link refid="sbf_common_darwin_8h"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_REGEX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_REGEX_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>include<sp/>&lt;<ref refid="pcre_8h" kindref="compound">pcre.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>include<sp/>&lt;<ref refid="pcreposix_8h" kindref="compound">pcreposix.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_REGEX_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="thirdparty/pcre/win32/include/regex.h"/>
+  </compounddef>
+</doxygen>

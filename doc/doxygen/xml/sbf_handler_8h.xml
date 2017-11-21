@@ -1,0 +1,603 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_handler_8h" kind="file" language="C++">
+    <compoundname>sbfHandler.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includes refid="sbf_tport_8h" local="yes">sbfTport.h</includes>
+    <includedby refid="sbf_common_handler_private_8h" local="yes">handlers/common/sbfCommonHandlerPrivate.h</includedby>
+    <includedby refid="sbf_tcp_mesh_handler_8h" local="yes">handlers/tcpmesh/sbfTcpMeshHandler.h</includedby>
+    <includedby refid="sbf_udp_handler_8h" local="yes">handlers/udp/sbfUdpHandler.h</includedby>
+    <includedby refid="sbf_tport_private_8h" local="yes">transport/sbfTportPrivate.h</includedby>
+    <incdepgraph>
+      <node id="3419">
+        <label>sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3420" relation="include">
+        </childnode>
+        <childnode refid="3421" relation="include">
+        </childnode>
+      </node>
+      <node id="3408">
+        <label>event.h</label>
+      </node>
+      <node id="3420">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3431">
+        <label>sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="3418" relation="include">
+        </childnode>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3428" relation="include">
+        </childnode>
+      </node>
+      <node id="3432">
+        <label>sbfTopic.h</label>
+        <link refid="sbf_topic_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3407">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="3409">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="3410" relation="include">
+        </childnode>
+      </node>
+      <node id="3425">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3417">
+        <label>sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="3418" relation="include">
+        </childnode>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3413">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3427">
+        <label>sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3418">
+        <label>sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3419" relation="include">
+        </childnode>
+        <childnode refid="3422" relation="include">
+        </childnode>
+        <childnode refid="3423" relation="include">
+        </childnode>
+      </node>
+      <node id="3426">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3410">
+        <label>sys/types.h</label>
+      </node>
+      <node id="3430">
+        <label>sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="3418" relation="include">
+        </childnode>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3428" relation="include">
+        </childnode>
+      </node>
+      <node id="3423">
+        <label>sbfBufferInline.h</label>
+        <link refid="sbf_buffer_inline_8h"/>
+      </node>
+      <node id="3422">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3405">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3416" relation="include">
+        </childnode>
+      </node>
+      <node id="3429">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3406">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="3407" relation="include">
+        </childnode>
+        <childnode refid="3408" relation="include">
+        </childnode>
+        <childnode refid="3409" relation="include">
+        </childnode>
+        <childnode refid="3411" relation="include">
+        </childnode>
+        <childnode refid="3412" relation="include">
+        </childnode>
+        <childnode refid="3413" relation="include">
+        </childnode>
+        <childnode refid="3414" relation="include">
+        </childnode>
+        <childnode refid="3415" relation="include">
+        </childnode>
+      </node>
+      <node id="3412">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="3416">
+        <label>sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="3417" relation="include">
+        </childnode>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3424" relation="include">
+        </childnode>
+        <childnode refid="3430" relation="include">
+        </childnode>
+        <childnode refid="3431" relation="include">
+        </childnode>
+        <childnode refid="3432" relation="include">
+        </childnode>
+      </node>
+      <node id="3411">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="3424">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3425" relation="include">
+        </childnode>
+        <childnode refid="3426" relation="include">
+        </childnode>
+        <childnode refid="3427" relation="include">
+        </childnode>
+        <childnode refid="3428" relation="include">
+        </childnode>
+        <childnode refid="3429" relation="include">
+        </childnode>
+      </node>
+      <node id="3414">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3428">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3415">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3421">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3435">
+        <label>handlers/common/sbfCommonHandler.c</label>
+        <link refid="sbf_common_handler_8c"/>
+      </node>
+      <node id="3448">
+        <label>transport/sbfTportWeight.c</label>
+        <link refid="sbf_tport_weight_8c"/>
+      </node>
+      <node id="3444">
+        <label>transport/sbfSub.c</label>
+        <link refid="sbf_sub_8c"/>
+      </node>
+      <node id="3445">
+        <label>transport/sbfTopic.c</label>
+        <link refid="sbf_topic_8c"/>
+      </node>
+      <node id="3434">
+        <label>handlers/common/sbfCommonHandlerPrivate.h</label>
+        <link refid="sbf_common_handler_private_8h"/>
+        <childnode refid="3435" relation="include">
+        </childnode>
+      </node>
+      <node id="3439">
+        <label>handlers/udp/sbfUdpHandler.c</label>
+        <link refid="sbf_udp_handler_8c"/>
+      </node>
+      <node id="3438">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+        <childnode refid="3439" relation="include">
+        </childnode>
+      </node>
+      <node id="3441">
+        <label>transport/sbfBatch.c</label>
+        <link refid="sbf_batch_8c"/>
+      </node>
+      <node id="3437">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.c</label>
+        <link refid="sbf_tcp_mesh_handler_8c"/>
+      </node>
+      <node id="3436">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+        <childnode refid="3437" relation="include">
+        </childnode>
+      </node>
+      <node id="3443">
+        <label>transport/sbfPub.c</label>
+        <link refid="sbf_pub_8c"/>
+      </node>
+      <node id="3442">
+        <label>transport/sbfHandler.c</label>
+        <link refid="sbf_handler_8c"/>
+      </node>
+      <node id="3433">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="3434" relation="include">
+        </childnode>
+        <childnode refid="3436" relation="include">
+        </childnode>
+        <childnode refid="3438" relation="include">
+        </childnode>
+        <childnode refid="3440" relation="include">
+        </childnode>
+      </node>
+      <node id="3440">
+        <label>transport/sbfTportPrivate.h</label>
+        <link refid="sbf_tport_private_8h"/>
+        <childnode refid="3441" relation="include">
+        </childnode>
+        <childnode refid="3442" relation="include">
+        </childnode>
+        <childnode refid="3443" relation="include">
+        </childnode>
+        <childnode refid="3444" relation="include">
+        </childnode>
+        <childnode refid="3445" relation="include">
+        </childnode>
+        <childnode refid="3446" relation="include">
+        </childnode>
+        <childnode refid="3447" relation="include">
+        </childnode>
+        <childnode refid="3448" relation="include">
+        </childnode>
+      </node>
+      <node id="3447">
+        <label>transport/sbfTportFragments.c</label>
+        <link refid="sbf_tport_fragments_8c"/>
+      </node>
+      <node id="3446">
+        <label>transport/sbfTport.c</label>
+        <link refid="sbf_tport_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structsbf_handler_table" prot="public">sbfHandlerTable</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref> typedef void *</type>
+        <definition>SBF_BEGIN_DECLS typedef void* sbfHandler</definition>
+        <argsstring></argsstring>
+        <name>sbfHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="9" column="1" bodyfile="transport/sbfHandler.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* sbfHandlerStream</definition>
+        <argsstring></argsstring>
+        <name>sbfHandlerStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="10" column="1" bodyfile="transport/sbfHandler.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* sbfHandlerHandle</definition>
+        <argsstring></argsstring>
+        <name>sbfHandlerHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="11" column="1" bodyfile="transport/sbfHandler.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_handler_8h_1a5b047b3b44834708064523d3f20ae4c5" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* sbfHandlerAddStreamCompleteCb) (sbfHandlerHandle handle, sbfError error, void *closure)</definition>
+        <argsstring>)(sbfHandlerHandle handle, sbfError error, void *closure)</argsstring>
+        <name>sbfHandlerAddStreamCompleteCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="14" column="1" bodyfile="transport/sbfHandler.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_handler_8h_1a9807fc2c0e4095ee110af36653bdf88f" prot="public" static="no">
+        <type><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref>(*</type>
+        <definition>typedef sbfHandler(* sbfHandlerCreateFn) (sbfTport tport, sbfKeyValue properties)</definition>
+        <argsstring>)(sbfTport tport, sbfKeyValue properties)</argsstring>
+        <name>sbfHandlerCreateFn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="18" column="1" bodyfile="transport/sbfHandler.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_handler_8h_1af34440a3ea5da006565c681c5a363378" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* sbfHandlerDestroyFn) (sbfHandler handler)</definition>
+        <argsstring>)(sbfHandler handler)</argsstring>
+        <name>sbfHandlerDestroyFn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="20" column="1" bodyfile="transport/sbfHandler.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_handler_8h_1afe2e653b58f3168780e9e592d33caa22" prot="public" static="no">
+        <type><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref>(*</type>
+        <definition>typedef sbfHandlerHandle(* sbfHandlerFindStreamFn) (sbfHandler handler, sbfTopic topic)</definition>
+        <argsstring>)(sbfHandler handler, sbfTopic topic)</argsstring>
+        <name>sbfHandlerFindStreamFn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="28" column="1" bodyfile="transport/sbfHandler.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_handler_8h_1ac27fb6df67acb007f460ff1a361df8c0" prot="public" static="no">
+        <type><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref>(*</type>
+        <definition>typedef sbfHandlerStream(* sbfHandlerAddStreamFn) (sbfHandler handler, sbfTopic topic, sbfMwThread thread, sbfHandlerHandle handle, sbfHandlerAddStreamCompleteCb cb, void *closure)</definition>
+        <argsstring>)(sbfHandler handler, sbfTopic topic, sbfMwThread thread, sbfHandlerHandle handle, sbfHandlerAddStreamCompleteCb cb, void *closure)</argsstring>
+        <name>sbfHandlerAddStreamFn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="30" column="1" bodyfile="transport/sbfHandler.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_handler_8h_1aa8d7d120f70f028e72e2f2ce51518a3c" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* sbfHandlerRemoveStreamFn) (sbfHandlerStream stream)</definition>
+        <argsstring>)(sbfHandlerStream stream)</argsstring>
+        <name>sbfHandlerRemoveStreamFn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="37" column="1" bodyfile="transport/sbfHandler.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_handler_8h_1ad0064fd4d91a1cd37c1be20eb953b6c9" prot="public" static="no">
+        <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref>(*</type>
+        <definition>typedef sbfBuffer(* sbfHandlerGetBufferFn) (sbfHandlerStream stream, size_t size)</definition>
+        <argsstring>)(sbfHandlerStream stream, size_t size)</argsstring>
+        <name>sbfHandlerGetBufferFn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="39" column="1" bodyfile="transport/sbfHandler.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_handler_8h_1a5cbfeb57eb9d817d78522ded62079b36" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* sbfHandlerSendBufferFn) (sbfHandlerStream stream, sbfBuffer buffer)</definition>
+        <argsstring>)(sbfHandlerStream stream, sbfBuffer buffer)</argsstring>
+        <name>sbfHandlerSendBufferFn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="41" column="1" bodyfile="transport/sbfHandler.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_handler_8h_1a24c0618c6c73167661852a9b0e27a3c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structsbf_handler_table" kindref="compound">sbfHandlerTable</ref> *</type>
+        <definition>sbfHandlerTable* sbfHandler_load</definition>
+        <argsstring>(sbfLog log, const char *type)</argsstring>
+        <name>sbfHandler_load</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="60" column="1" bodyfile="transport/sbfHandler.c" bodystart="74" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_handler_8h_1a9f5cff6a4fa8c8cb0fec7ab404b09fc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t sbfHandler_size</definition>
+        <argsstring>(void *data, size_t size)</argsstring>
+        <name>sbfHandler_size</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="62" column="1" bodyfile="transport/sbfHandler.c" bodystart="128" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_handler_8h_1a715719602106304462b6d493c29c78c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfHandler_packet</definition>
+        <argsstring>(sbfHandlerHandle handle, sbfBuffer buffer)</argsstring>
+        <name>sbfHandler_packet</name>
+        <param>
+          <type><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="63" column="1" bodyfile="transport/sbfHandler.c" bodystart="143" bodyend="209"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_HANDLER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_HANDLER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_tport_8h" kindref="compound">sbfTport.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref>;</highlight></codeline>
+<codeline lineno="10" refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref>;</highlight></codeline>
+<codeline lineno="11" refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Must<sp/>be<sp/>fired<sp/>by<sp/>the<sp/>handler<sp/>on<sp/>the<sp/>event<sp/>thread<sp/>given<sp/>to<sp/>AddStream.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="sbf_handler_8h_1a5b047b3b44834708064523d3f20ae4c5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="sbf_handler_8h_1a5b047b3b44834708064523d3f20ae4c5" kindref="member">sbfHandlerAddStreamCompleteCb</ref>)<sp/>(<ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref><sp/>error,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="sbf_handler_8h_1a9807fc2c0e4095ee110af36653bdf88f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref><sp/>(*<ref refid="sbf_handler_8h_1a9807fc2c0e4095ee110af36653bdf88f" kindref="member">sbfHandlerCreateFn</ref>)<sp/>(<ref refid="sbf_tport_8h_1acbaf9d451442abe85c18e3583d746181" kindref="member">sbfTport</ref><sp/>tport,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/>properties);</highlight></codeline>
+<codeline lineno="20" refid="sbf_handler_8h_1af34440a3ea5da006565c681c5a363378" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="sbf_handler_8h_1af34440a3ea5da006565c681c5a363378" kindref="member">sbfHandlerDestroyFn</ref>)<sp/>(<ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref><sp/>handler);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>FindStream<sp/>and<sp/>AddStream<sp/>can<sp/>come<sp/>off<sp/>any<sp/>thread,<sp/>RemoveStream<sp/>off<sp/>the<sp/>event</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>thread.<sp/>All<sp/>three<sp/>are<sp/>synchronized<sp/>by<sp/>the<sp/>caller,<sp/>but<sp/>the<sp/>handler<sp/>must</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>guarantee<sp/>that<sp/>the<sp/>handle<sp/>given<sp/>to<sp/>AddStream<sp/>is<sp/>available<sp/>immediately<sp/>from</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>FindStream,<sp/>even<sp/>if<sp/>the<sp/>AddStreamComplete<sp/>callback<sp/>has<sp/>not<sp/>yet<sp/>been<sp/>fired.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="sbf_handler_8h_1afe2e653b58f3168780e9e592d33caa22" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref><sp/>(*<ref refid="sbf_handler_8h_1afe2e653b58f3168780e9e592d33caa22" kindref="member">sbfHandlerFindStreamFn</ref>)<sp/>(<ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref><sp/>handler,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
+<codeline lineno="30" refid="sbf_handler_8h_1ac27fb6df67acb007f460ff1a361df8c0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref><sp/>(*<ref refid="sbf_handler_8h_1ac27fb6df67acb007f460ff1a361df8c0" kindref="member">sbfHandlerAddStreamFn</ref>)<sp/>(</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref><sp/>handler,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/>thread,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1a5b047b3b44834708064523d3f20ae4c5" kindref="member">sbfHandlerAddStreamCompleteCb</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="37" refid="sbf_handler_8h_1aa8d7d120f70f028e72e2f2ce51518a3c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="sbf_handler_8h_1aa8d7d120f70f028e72e2f2ce51518a3c" kindref="member">sbfHandlerRemoveStreamFn</ref>)<sp/>(<ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref><sp/>stream);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="sbf_handler_8h_1ad0064fd4d91a1cd37c1be20eb953b6c9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>(*<ref refid="sbf_handler_8h_1ad0064fd4d91a1cd37c1be20eb953b6c9" kindref="member">sbfHandlerGetBufferFn</ref>)<sp/>(<ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref><sp/>stream,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="41" refid="sbf_handler_8h_1a5cbfeb57eb9d817d78522ded62079b36" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="sbf_handler_8h_1a5cbfeb57eb9d817d78522ded62079b36" kindref="member">sbfHandlerSendBufferFn</ref>)<sp/>(<ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref><sp/>stream,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Handler<sp/>will<sp/>never<sp/>be<sp/>given<sp/>a<sp/>packet<sp/>bigger<sp/>than<sp/>mPacketSize.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="structsbf_handler_table" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47" refid="structsbf_handler_table_1afd3283f1d899bc9ad7b1fa47aac2433d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_handler_table_1afd3283f1d899bc9ad7b1fa47aac2433d" kindref="member">mPacketSize</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structsbf_handler_table_1aaa4887afcd5ea5e098456969c872cf87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1a9807fc2c0e4095ee110af36653bdf88f" kindref="member">sbfHandlerCreateFn</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_handler_table_1aaa4887afcd5ea5e098456969c872cf87" kindref="member">mCreate</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structsbf_handler_table_1aba14b9c93de7cee554fc0574cd0aebea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1af34440a3ea5da006565c681c5a363378" kindref="member">sbfHandlerDestroyFn</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_handler_table_1aba14b9c93de7cee554fc0574cd0aebea" kindref="member">mDestroy</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="structsbf_handler_table_1af94f27799d27f8d232324402186c78a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1afe2e653b58f3168780e9e592d33caa22" kindref="member">sbfHandlerFindStreamFn</ref><sp/><sp/><sp/><ref refid="structsbf_handler_table_1af94f27799d27f8d232324402186c78a8" kindref="member">mFindStream</ref>;</highlight></codeline>
+<codeline lineno="53" refid="structsbf_handler_table_1a7854e41f179522aa0e34076d5379c4bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1ac27fb6df67acb007f460ff1a361df8c0" kindref="member">sbfHandlerAddStreamFn</ref><sp/><sp/><sp/><sp/><ref refid="structsbf_handler_table_1a7854e41f179522aa0e34076d5379c4bb" kindref="member">mAddStream</ref>;</highlight></codeline>
+<codeline lineno="54" refid="structsbf_handler_table_1a54e4ae99bdf581b2d7f4f6eb3d0972e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1aa8d7d120f70f028e72e2f2ce51518a3c" kindref="member">sbfHandlerRemoveStreamFn</ref><sp/><ref refid="structsbf_handler_table_1a54e4ae99bdf581b2d7f4f6eb3d0972e5" kindref="member">mRemoveStream</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="structsbf_handler_table_1acd88c2ddb444b1416a9c4c4ef519b115" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1ad0064fd4d91a1cd37c1be20eb953b6c9" kindref="member">sbfHandlerGetBufferFn</ref><sp/><sp/><sp/><sp/><ref refid="structsbf_handler_table_1acd88c2ddb444b1416a9c4c4ef519b115" kindref="member">mGetBuffer</ref>;</highlight></codeline>
+<codeline lineno="57" refid="structsbf_handler_table_1ad36659c8c1d4a33ff7e04ebeb23855c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1a5cbfeb57eb9d817d78522ded62079b36" kindref="member">sbfHandlerSendBufferFn</ref><sp/><sp/><sp/><ref refid="structsbf_handler_table_1ad36659c8c1d4a33ff7e04ebeb23855c0" kindref="member">mSendBuffer</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}<sp/><ref refid="structsbf_handler_table" kindref="compound">sbfHandlerTable</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="structsbf_handler_table" kindref="compound">sbfHandlerTable</ref>*<sp/><ref refid="sbf_handler_8h_1a24c0618c6c73167661852a9b0e27a3c8" kindref="member">sbfHandler_load</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>type);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="sbf_handler_8h_1a9f5cff6a4fa8c8cb0fec7ab404b09fc6" kindref="member">sbfHandler_size</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_handler_8h_1a715719602106304462b6d493c29c78c9" kindref="member">sbfHandler_packet</ref><sp/>(<ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref><sp/>handle,<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_HANDLER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="transport/sbfHandler.h"/>
+  </compounddef>
+</doxygen>

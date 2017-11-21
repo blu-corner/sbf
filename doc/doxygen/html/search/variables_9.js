@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['re_5ferroffset',['re_erroffset',['../structregex__t.html#a4ca064e058d5340df658822637ecba06',1,'regex_t']]],
-  ['re_5fnsub',['re_nsub',['../structregex__t.html#a4dfc1ce26c896695b77854da7d607ec8',1,'regex_t']]],
-  ['re_5fpcre',['re_pcre',['../structregex__t.html#ab3694f54105f125bc239be955f54143e',1,'regex_t']]],
-  ['rm_5feo',['rm_eo',['../structregmatch__t.html#a728c28b9b23fa28c4e0b90e3a1a29efc',1,'regmatch_t']]],
-  ['rm_5fso',['rm_so',['../structregmatch__t.html#a90ac8973d256eaffdbb20de676ff45a4',1,'regmatch_t']]]
+  ['next_5fitem_5flength',['next_item_length',['../structpcre__callout__block.html#a9360879d608b622daef0c7d1cf2606be',1,'pcre_callout_block::next_item_length()'],['../structpcre16__callout__block.html#a09683a5313dea9f7b5210e0eceedc9e0',1,'pcre16_callout_block::next_item_length()'],['../structpcre32__callout__block.html#ab2d8b9572e049322937403fb0b228174',1,'pcre32_callout_block::next_item_length()']]]
 ];

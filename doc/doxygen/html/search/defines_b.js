@@ -36,17 +36,5 @@ var searchData=
   ['rb_5frotate_5fleft',['RB_ROTATE_LEFT',['../systree_8h.html#a3d320c9b1b009d30ea8bbeae6d2cb738',1,'systree.h']]],
   ['rb_5frotate_5fright',['RB_ROTATE_RIGHT',['../systree_8h.html#a08ae7198a66e4d3548016cf07ca1c0fb',1,'systree.h']]],
   ['rb_5fset',['RB_SET',['../systree_8h.html#a22ac8df3f28664e8d6bc70032eb32380',1,'systree.h']]],
-  ['rb_5fset_5fblackred',['RB_SET_BLACKRED',['../systree_8h.html#ae18c494fbc0b1f9331f35d585078d10d',1,'systree.h']]],
-  ['reg_5fdotall',['REG_DOTALL',['../pcreposix_8h.html#afaf44d80c708ae3deffaeeda14ff5637',1,'pcreposix.h']]],
-  ['reg_5fextended',['REG_EXTENDED',['../pcreposix_8h.html#a5fc31e6da9b77e09ea62b4544ac4767f',1,'pcreposix.h']]],
-  ['reg_5ficase',['REG_ICASE',['../pcreposix_8h.html#a0c3e7b1d5bc9c2d278a544fe9b61b67a',1,'pcreposix.h']]],
-  ['reg_5fnewline',['REG_NEWLINE',['../pcreposix_8h.html#ab678ef3b27bf7de2fb82c79cb2cd9d8a',1,'pcreposix.h']]],
-  ['reg_5fnosub',['REG_NOSUB',['../pcreposix_8h.html#abb835c7fe6f1673fc0efeff0064510ab',1,'pcreposix.h']]],
-  ['reg_5fnotbol',['REG_NOTBOL',['../pcreposix_8h.html#aa0ca15a79530976f6d4ef90326c46858',1,'pcreposix.h']]],
-  ['reg_5fnotempty',['REG_NOTEMPTY',['../pcreposix_8h.html#ae880a6d5c6df1c0b286efa8cfa0811c8',1,'pcreposix.h']]],
-  ['reg_5fnoteol',['REG_NOTEOL',['../pcreposix_8h.html#a9d97d85ef86123060a845723d28a92cb',1,'pcreposix.h']]],
-  ['reg_5fstartend',['REG_STARTEND',['../pcreposix_8h.html#a343ef97b721e94f5cb1a8d2e742132b1',1,'pcreposix.h']]],
-  ['reg_5fucp',['REG_UCP',['../pcreposix_8h.html#af6bee5ae43d2bd3da47bb73453a4c7e6',1,'pcreposix.h']]],
-  ['reg_5fungreedy',['REG_UNGREEDY',['../pcreposix_8h.html#ae38b15387ce5f73d486ddecc66af02dc',1,'pcreposix.h']]],
-  ['reg_5futf8',['REG_UTF8',['../pcreposix_8h.html#a8c1205d34d63255d71ad98d297867cf8',1,'pcreposix.h']]]
+  ['rb_5fset_5fblackred',['RB_SET_BLACKRED',['../systree_8h.html#ae18c494fbc0b1f9331f35d585078d10d',1,'systree.h']]]
 ];

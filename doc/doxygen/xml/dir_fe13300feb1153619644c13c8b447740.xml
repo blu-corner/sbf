@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_fe13300feb1153619644c13c8b447740" kind="dir">
+    <compoundname>tools/replier</compoundname>
+    <innerfile refid="sbf_replier_8c">sbfReplier.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tools/replier/"/>
+  </compounddef>
+</doxygen>

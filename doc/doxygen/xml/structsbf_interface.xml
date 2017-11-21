@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsbf_interface" kind="struct" language="C++" prot="public">
+    <compoundname>sbfInterface</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsbf_interface_1aac99c8a93660c182f903532d7cf32113" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* sbfInterface::mName</definition>
+        <argsstring></argsstring>
+        <name>mName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfInterface.c" line="5" column="1" bodyfile="common/sbfInterface.c" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_interface_1a4b6a2d3ebfdb638d1c5e5045abc65289" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t sbfInterface::mAddress</definition>
+        <argsstring></argsstring>
+        <name>mAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfInterface.c" line="6" column="1" bodyfile="common/sbfInterface.c" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="common/sbfInterface.c" line="4" column="1" bodyfile="common/sbfInterface.c" bodystart="3" bodyend="7"/>
+    <listofallmembers>
+      <member refid="structsbf_interface_1a4b6a2d3ebfdb638d1c5e5045abc65289" prot="public" virt="non-virtual"><scope>sbfInterface</scope><name>mAddress</name></member>
+      <member refid="structsbf_interface_1aac99c8a93660c182f903532d7cf32113" prot="public" virt="non-virtual"><scope>sbfInterface</scope><name>mName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

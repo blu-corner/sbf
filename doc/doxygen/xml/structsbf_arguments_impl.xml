@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsbf_arguments_impl" kind="struct" language="C++" prot="public">
+    <compoundname>sbfArgumentsImpl</compoundname>
+    <includes refid="sbf_arguments_private_8h" local="no">sbfArgumentsPrivate.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsbf_arguments_impl_1ab047e7cbc76d5ca353b53898946a8161" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char sbfArgumentsImpl::mOptions[UCHAR_MAX]</definition>
+        <argsstring>[UCHAR_MAX]</argsstring>
+        <name>mOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArgumentsPrivate.h" line="8" column="1" bodyfile="common/sbfArgumentsPrivate.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_arguments_impl_1a8d01ef8d579580e830a12313a910ea10" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* sbfArgumentsImpl::mValues[UCHAR_MAX]</definition>
+        <argsstring>[UCHAR_MAX]</argsstring>
+        <name>mValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArgumentsPrivate.h" line="9" column="1" bodyfile="common/sbfArgumentsPrivate.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_arguments_impl_1a4d6411eb9da1347cb9663321eb370622" prot="public" static="no" mutable="no">
+        <type>const char **</type>
+        <definition>const char** sbfArgumentsImpl::mArguments</definition>
+        <argsstring></argsstring>
+        <name>mArguments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArgumentsPrivate.h" line="11" column="1" bodyfile="common/sbfArgumentsPrivate.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_arguments_impl_1a48222fba2c3b58ab265fca25c7ba4801" prot="public" static="no" mutable="no">
+        <type>u_int</type>
+        <definition>u_int sbfArgumentsImpl::mArgumentsSize</definition>
+        <argsstring></argsstring>
+        <name>mArgumentsSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArgumentsPrivate.h" line="12" column="1" bodyfile="common/sbfArgumentsPrivate.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="common/sbfArgumentsPrivate.h" line="7" column="1" bodyfile="common/sbfArgumentsPrivate.h" bodystart="6" bodyend="13"/>
+    <listofallmembers>
+      <member refid="structsbf_arguments_impl_1a4d6411eb9da1347cb9663321eb370622" prot="public" virt="non-virtual"><scope>sbfArgumentsImpl</scope><name>mArguments</name></member>
+      <member refid="structsbf_arguments_impl_1a48222fba2c3b58ab265fca25c7ba4801" prot="public" virt="non-virtual"><scope>sbfArgumentsImpl</scope><name>mArgumentsSize</name></member>
+      <member refid="structsbf_arguments_impl_1ab047e7cbc76d5ca353b53898946a8161" prot="public" virt="non-virtual"><scope>sbfArgumentsImpl</scope><name>mOptions</name></member>
+      <member refid="structsbf_arguments_impl_1a8d01ef8d579580e830a12313a910ea10" prot="public" virt="non-virtual"><scope>sbfArgumentsImpl</scope><name>mValues</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

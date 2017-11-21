@@ -1,0 +1,788 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_common_darwin_8h" kind="file" language="C++">
+    <compoundname>sbfCommonDarwin.h</compoundname>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">sys/ioctl.h</includes>
+    <includes local="no">sys/mman.h</includes>
+    <includes local="no">sys/socket.h</includes>
+    <includes local="no">sys/stat.h</includes>
+    <includes local="no">sys/time.h</includes>
+    <includes local="no">sys/syscall.h</includes>
+    <includes local="no">arpa/inet.h</includes>
+    <includes local="no">netinet/in.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">ctype.h</includes>
+    <includes local="no">dlfcn.h</includes>
+    <includes local="no">err.h</includes>
+    <includes local="no">errno.h</includes>
+    <includes local="no">fcntl.h</includes>
+    <includes local="no">fnmatch.h</includes>
+    <includes local="no">glob.h</includes>
+    <includes local="no">ifaddrs.h</includes>
+    <includes local="no">libgen.h</includes>
+    <includes local="no">limits.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">netdb.h</includes>
+    <includes local="no">pthread.h</includes>
+    <includes local="no">regex.h</includes>
+    <includes local="no">signal.h</includes>
+    <includes local="no">stdarg.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">libkern/OSAtomic.h</includes>
+    <incdepgraph>
+      <node id="380">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="392">
+        <label>glob.h</label>
+      </node>
+      <node id="401">
+        <label>stdarg.h</label>
+      </node>
+      <node id="384">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="383">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="385">
+        <label>assert.h</label>
+      </node>
+      <node id="403">
+        <label>stdint.h</label>
+      </node>
+      <node id="405">
+        <label>stdlib.h</label>
+      </node>
+      <node id="378">
+        <label>sys/mman.h</label>
+      </node>
+      <node id="389">
+        <label>errno.h</label>
+      </node>
+      <node id="390">
+        <label>fcntl.h</label>
+      </node>
+      <node id="409">
+        <label>libkern/OSAtomic.h</label>
+      </node>
+      <node id="377">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="402">
+        <label>stddef.h</label>
+      </node>
+      <node id="397">
+        <label>netdb.h</label>
+      </node>
+      <node id="395">
+        <label>limits.h</label>
+      </node>
+      <node id="393">
+        <label>ifaddrs.h</label>
+      </node>
+      <node id="398">
+        <label>pthread.h</label>
+      </node>
+      <node id="376">
+        <label>sys/types.h</label>
+      </node>
+      <node id="394">
+        <label>libgen.h</label>
+      </node>
+      <node id="406">
+        <label>string.h</label>
+      </node>
+      <node id="408">
+        <label>unistd.h</label>
+      </node>
+      <node id="400">
+        <label>signal.h</label>
+      </node>
+      <node id="388">
+        <label>err.h</label>
+      </node>
+      <node id="407">
+        <label>time.h</label>
+      </node>
+      <node id="396">
+        <label>math.h</label>
+      </node>
+      <node id="381">
+        <label>sys/time.h</label>
+      </node>
+      <node id="386">
+        <label>ctype.h</label>
+      </node>
+      <node id="379">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="382">
+        <label>sys/syscall.h</label>
+      </node>
+      <node id="375">
+        <label>common/sbfCommonDarwin.h</label>
+        <link refid="sbf_common_darwin_8h"/>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+        <childnode refid="378" relation="include">
+        </childnode>
+        <childnode refid="379" relation="include">
+        </childnode>
+        <childnode refid="380" relation="include">
+        </childnode>
+        <childnode refid="381" relation="include">
+        </childnode>
+        <childnode refid="382" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="384" relation="include">
+        </childnode>
+        <childnode refid="385" relation="include">
+        </childnode>
+        <childnode refid="386" relation="include">
+        </childnode>
+        <childnode refid="387" relation="include">
+        </childnode>
+        <childnode refid="388" relation="include">
+        </childnode>
+        <childnode refid="389" relation="include">
+        </childnode>
+        <childnode refid="390" relation="include">
+        </childnode>
+        <childnode refid="391" relation="include">
+        </childnode>
+        <childnode refid="392" relation="include">
+        </childnode>
+        <childnode refid="393" relation="include">
+        </childnode>
+        <childnode refid="394" relation="include">
+        </childnode>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="396" relation="include">
+        </childnode>
+        <childnode refid="397" relation="include">
+        </childnode>
+        <childnode refid="398" relation="include">
+        </childnode>
+        <childnode refid="399" relation="include">
+        </childnode>
+        <childnode refid="400" relation="include">
+        </childnode>
+        <childnode refid="401" relation="include">
+        </childnode>
+        <childnode refid="402" relation="include">
+        </childnode>
+        <childnode refid="403" relation="include">
+        </childnode>
+        <childnode refid="404" relation="include">
+        </childnode>
+        <childnode refid="405" relation="include">
+        </childnode>
+        <childnode refid="406" relation="include">
+        </childnode>
+        <childnode refid="407" relation="include">
+        </childnode>
+        <childnode refid="408" relation="include">
+        </childnode>
+        <childnode refid="409" relation="include">
+        </childnode>
+      </node>
+      <node id="399">
+        <label>regex.h</label>
+      </node>
+      <node id="404">
+        <label>stdio.h</label>
+      </node>
+      <node id="391">
+        <label>fnmatch.h</label>
+      </node>
+      <node id="387">
+        <label>dlfcn.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a369266c24eacffb87046522897a570d5" prot="public" static="no">
+        <name>_GNU_SOURCE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="5" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a520a93730da646b0fbee09d441c8549e" prot="public" static="no">
+        <name>__thread</name>
+        <initializer>/* XXX */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="49" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a476bb0c47c4ceb1669c15c2635c94300" prot="public" static="no">
+        <name>O_NOATIME</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="51" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1aa798680682fd4abb5a1ddd7c36ecad70" prot="public" static="no">
+        <name>MAP_POPULATE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="52" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1ac956117a90023ec0971b8f9fce9dec75" prot="public" static="no">
+        <name>HOST_NAME_MAX</name>
+        <initializer>255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="53" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1ae3192df127a8ec551c64402669381f59" prot="public" static="no">
+        <name>SBF_EOL</name>
+        <initializer>&quot;\n&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="57" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a07d717b6b79aca40485910f7d4d278aa" prot="public" static="no">
+        <name>SBF_SHLIB_SUFFIX</name>
+        <initializer>&quot;.dylib&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="58" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1ae24ddcf80a3f76e535d9bf3a7f758b04" prot="public" static="no">
+        <name>SBF_PACKED</name>
+        <param><defname>d</defname></param>
+        <initializer>d __attribute__ ((__packed__))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="60" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1abcc9ea27d2fa4fc4b2b51bbdf96fb03d" prot="public" static="no">
+        <name>SBF_PRINTFLIKE</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>__attribute__ ((format (printf, a, b)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="61" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a789fcd195035787245e7734413e9b5a2" prot="public" static="no">
+        <name>SBF_UNUSED</name>
+        <initializer>__attribute__ ((__unused__))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="62" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" prot="public" static="no">
+        <name>SBF_INLINE</name>
+        <initializer>__inline</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="63" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a6fc993d4b00d3799765f781b94543845" prot="public" static="no">
+        <name>SBF_PURE</name>
+        <initializer>__attribute__ ((pure))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="64" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1ac76a00346f1087c98e3af12caed55ebe" prot="public" static="no">
+        <name>SBF_CONST</name>
+        <initializer>__attribute__ ((const))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="65" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a6ee02b35494da215f5fa30f1c64d5598" prot="public" static="no">
+        <name>SBF_DEAD</name>
+        <initializer>__attribute__ ((noreturn))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="66" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1aa4c0463d5143c422ff33e19f6bbd6764" prot="public" static="no">
+        <name>SBF_LIKELY</name>
+        <param><defname>e</defname></param>
+        <initializer>__builtin_expect (!!(e), 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="68" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a270c0e11fe2fac830447b85580475bb9" prot="public" static="no">
+        <name>SBF_UNLIKELY</name>
+        <param><defname>e</defname></param>
+        <initializer>__builtin_expect (!!(e), 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="69" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a9494b177643e1271eeb943d1dd3e9dbb" prot="public" static="no">
+        <name>SBF_ASSERT</name>
+        <param><defname>x</defname></param>
+        <initializer>assert (x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="71" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a2990854b08d77f3bbd332b8174604b01" prot="public" static="no">
+        <name>SBF_DLLEXPORT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="73" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1ae7f48f80d02515dc515a99d935ba0212" prot="public" static="no">
+        <name>sbfThread_create</name>
+        <param><defname>t</defname></param>
+        <param><defname>cb</defname></param>
+        <param><defname>closure</defname></param>
+        <initializer>pthread_create (t, NULL, cb, closure)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="76" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a05d4d9d0ff6dfcd043fef5990f4c03a2" prot="public" static="no">
+        <name>sbfThread_join</name>
+        <param><defname>t</defname></param>
+        <initializer>pthread_join (t, NULL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="77" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1ac4461ac56f70b819e85ab353ff052c27" prot="public" static="no">
+        <name>sbfCondVar_init</name>
+        <param><defname>c</defname></param>
+        <initializer>pthread_cond_init (c, NULL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="80" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1aee816bafc4e98628a6be5e910fac2fb7" prot="public" static="no">
+        <name>sbfCondVar_destroy</name>
+        <param><defname>c</defname></param>
+        <initializer>pthread_cond_destroy (c)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="81" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a294ec73d6c256d0ab0d3cce320bdff44" prot="public" static="no">
+        <name>sbfCondVar_wait</name>
+        <param><defname>c</defname></param>
+        <param><defname>m</defname></param>
+        <initializer>pthread_cond_wait (c, m)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="82" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a58cd7395d3682e48c52b5cb1d96c3d5e" prot="public" static="no">
+        <name>sbfCondVar_broadcast</name>
+        <param><defname>c</defname></param>
+        <initializer>pthread_cond_broadcast (c)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="83" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a1c1fe46b5cd2ee83b67395c6e24a086c" prot="public" static="no">
+        <name>sbfCondVar_signal</name>
+        <param><defname>c</defname></param>
+        <initializer>pthread_cond_signal (c)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="84" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a696ae52b59c8ee67b0792cf793ca07c3" prot="public" static="no">
+        <name>sbfMutex_destroy</name>
+        <param><defname>m</defname></param>
+        <initializer>pthread_mutex_destroy (m)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="88" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1afe21416b021add1d039070372b28c2b7" prot="public" static="no">
+        <name>sbfMutex_lock</name>
+        <param><defname>m</defname></param>
+        <initializer>pthread_mutex_lock (m)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="89" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1ae9f52fb356fee346369a22cfef0def73" prot="public" static="no">
+        <name>sbfMutex_unlock</name>
+        <param><defname>m</defname></param>
+        <initializer>pthread_mutex_unlock (m)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="90" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a18eb0e66d15262469832f65365ca7acf" prot="public" static="no">
+        <name>sbfSpinLock_init</name>
+        <param><defname>s</defname></param>
+        <initializer>do { *s = 0; } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="93" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a0e531e4bc5cd94dfc0ca53b77ef3c4e7" prot="public" static="no">
+        <name>sbfSpinLock_destroy</name>
+        <param><defname>s</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="94" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1aa933b8808fbcd8ee224c1f1eb748dffd" prot="public" static="no">
+        <name>sbfSpinLock_lock</name>
+        <param><defname>s</defname></param>
+        <initializer>OSSpinLockLock (s)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="95" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_common_darwin_8h_1a91c84ef009ce03cef5e03370bf674217" prot="public" static="no">
+        <name>sbfSpinLock_unlock</name>
+        <param><defname>s</defname></param>
+        <initializer>OSSpinLockUnlock (s)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="96" column="9" bodyfile="common/sbfCommonDarwin.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_common_darwin_8h_1a810b076a4ef5bd325cee986d4c993be6" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int sbfSocket</definition>
+        <argsstring></argsstring>
+        <name>sbfSocket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="55" column="1" bodyfile="common/sbfCommonDarwin.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_common_darwin_8h_1afbf7dc0a8bbd900f63f4bf4ec58c80f2" prot="public" static="no">
+        <type>pthread_t</type>
+        <definition>typedef pthread_t sbfThread</definition>
+        <argsstring></argsstring>
+        <name>sbfThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="75" column="1" bodyfile="common/sbfCommonDarwin.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_common_darwin_8h_1a27e225ff8446b4974be1e839d59f6a46" prot="public" static="no">
+        <type>pthread_cond_t</type>
+        <definition>typedef pthread_cond_t sbfCondVar</definition>
+        <argsstring></argsstring>
+        <name>sbfCondVar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="79" column="1" bodyfile="common/sbfCommonDarwin.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_common_darwin_8h_1ae8e30512fa920f7ed878fc63307e7f97" prot="public" static="no">
+        <type>pthread_mutex_t</type>
+        <definition>typedef pthread_mutex_t sbfMutex</definition>
+        <argsstring></argsstring>
+        <name>sbfMutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="86" column="1" bodyfile="common/sbfCommonDarwin.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_common_darwin_8h_1abec418ac4ae7d965f5d1196a4acd5067" prot="public" static="no">
+        <type>OSSpinLock</type>
+        <definition>typedef OSSpinLock sbfSpinLock</definition>
+        <argsstring></argsstring>
+        <name>sbfSpinLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="92" column="1" bodyfile="common/sbfCommonDarwin.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_common_darwin_8h_1a312c2c94c64b2ee6964edd6830e4862f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sbfMutex_init</definition>
+        <argsstring>(pthread_mutex_t *m, int recursive)</argsstring>
+        <name>sbfMutex_init</name>
+        <param>
+          <type>pthread_mutex_t *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>recursive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfCommonDarwin.h" line="87" column="1" bodyfile="common/sbfCommonDarwin.c" bodystart="4" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_COMMON_DARWIN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_COMMON_DARWIN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_GNU_SOURCE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="sbf_common_darwin_8h_1a369266c24eacffb87046522897a570d5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GNU_SOURCE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/ioctl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/mman.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/socket.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/syscall.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arpa/inet.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;netinet/in.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctype.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dlfcn.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;err.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fcntl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fnmatch.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glob.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ifaddrs.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libgen.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;netdb.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;signal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libkern/OSAtomic.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="sbf_common_darwin_8h_1a520a93730da646b0fbee09d441c8549e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__thread<sp/></highlight><highlight class="comment">/*<sp/>XXX<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="sbf_common_darwin_8h_1a476bb0c47c4ceb1669c15c2635c94300" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>O_NOATIME<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="sbf_common_darwin_8h_1aa798680682fd4abb5a1ddd7c36ecad70" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP_POPULATE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="sbf_common_darwin_8h_1ac956117a90023ec0971b8f9fce9dec75" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HOST_NAME_MAX<sp/>255</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="sbf_common_darwin_8h_1a810b076a4ef5bd325cee986d4c993be6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sbf_common_darwin_8h_1a810b076a4ef5bd325cee986d4c993be6" kindref="member">sbfSocket</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="sbf_common_darwin_8h_1ae3192df127a8ec551c64402669381f59" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_EOL<sp/>&quot;\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="sbf_common_darwin_8h_1a07d717b6b79aca40485910f7d4d278aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_SHLIB_SUFFIX<sp/>&quot;.dylib&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="sbf_common_darwin_8h_1ae24ddcf80a3f76e535d9bf3a7f758b04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_PACKED(d)<sp/>d<sp/>__attribute__<sp/>((__packed__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="sbf_common_darwin_8h_1abcc9ea27d2fa4fc4b2b51bbdf96fb03d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_PRINTFLIKE(a,<sp/>b)<sp/>__attribute__<sp/>((format<sp/>(printf,<sp/>a,<sp/>b)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="sbf_common_darwin_8h_1a789fcd195035787245e7734413e9b5a2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_UNUSED<sp/>__attribute__<sp/>((__unused__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="sbf_common_darwin_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_INLINE<sp/>__inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="sbf_common_darwin_8h_1a6fc993d4b00d3799765f781b94543845" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_PURE<sp/>__attribute__<sp/>((pure))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="sbf_common_darwin_8h_1ac76a00346f1087c98e3af12caed55ebe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_CONST<sp/>__attribute__<sp/>((const))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="sbf_common_darwin_8h_1a6ee02b35494da215f5fa30f1c64d5598" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_DEAD<sp/>__attribute__<sp/>((noreturn))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="sbf_common_darwin_8h_1aa4c0463d5143c422ff33e19f6bbd6764" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_LIKELY(e)<sp/>__builtin_expect<sp/>(!!(e),<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="sbf_common_darwin_8h_1a270c0e11fe2fac830447b85580475bb9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_UNLIKELY(e)<sp/>__builtin_expect<sp/>(!!(e),<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="sbf_common_darwin_8h_1a9494b177643e1271eeb943d1dd3e9dbb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_ASSERT(x)<sp/>assert<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="sbf_common_darwin_8h_1a2990854b08d77f3bbd332b8174604b01" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_DLLEXPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="sbf_common_darwin_8h_1afbf7dc0a8bbd900f63f4bf4ec58c80f2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>pthread_t<sp/><ref refid="sbf_common_darwin_8h_1afbf7dc0a8bbd900f63f4bf4ec58c80f2" kindref="member">sbfThread</ref>;</highlight></codeline>
+<codeline lineno="76" refid="sbf_common_darwin_8h_1ae7f48f80d02515dc515a99d935ba0212" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfThread_create(t,<sp/>cb,<sp/>closure)<sp/>pthread_create<sp/>(t,<sp/>NULL,<sp/>cb,<sp/>closure)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="sbf_common_darwin_8h_1a05d4d9d0ff6dfcd043fef5990f4c03a2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfThread_join(t)<sp/>pthread_join<sp/>(t,<sp/>NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="sbf_common_darwin_8h_1a27e225ff8446b4974be1e839d59f6a46" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>pthread_cond_t<sp/><ref refid="sbf_common_darwin_8h_1a27e225ff8446b4974be1e839d59f6a46" kindref="member">sbfCondVar</ref>;</highlight></codeline>
+<codeline lineno="80" refid="sbf_common_darwin_8h_1ac4461ac56f70b819e85ab353ff052c27" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfCondVar_init(c)<sp/>pthread_cond_init<sp/>(c,<sp/>NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="sbf_common_darwin_8h_1aee816bafc4e98628a6be5e910fac2fb7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfCondVar_destroy(c)<sp/>pthread_cond_destroy<sp/>(c)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="sbf_common_darwin_8h_1a294ec73d6c256d0ab0d3cce320bdff44" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfCondVar_wait(c,<sp/>m)<sp/>pthread_cond_wait<sp/>(c,<sp/>m)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="sbf_common_darwin_8h_1a58cd7395d3682e48c52b5cb1d96c3d5e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfCondVar_broadcast(c)<sp/>pthread_cond_broadcast<sp/>(c)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="sbf_common_darwin_8h_1a1c1fe46b5cd2ee83b67395c6e24a086c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfCondVar_signal(c)<sp/>pthread_cond_signal<sp/>(c)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="sbf_common_darwin_8h_1ae8e30512fa920f7ed878fc63307e7f97" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>pthread_mutex_t<sp/><ref refid="sbf_common_darwin_8h_1ae8e30512fa920f7ed878fc63307e7f97" kindref="member">sbfMutex</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sbf_common_darwin_8h_1a312c2c94c64b2ee6964edd6830e4862f" kindref="member">sbfMutex_init</ref><sp/>(pthread_mutex_t*<sp/>m,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recursive);</highlight></codeline>
+<codeline lineno="88" refid="sbf_common_darwin_8h_1a696ae52b59c8ee67b0792cf793ca07c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfMutex_destroy(m)<sp/>pthread_mutex_destroy<sp/>(m)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="sbf_common_darwin_8h_1afe21416b021add1d039070372b28c2b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfMutex_lock(m)<sp/>pthread_mutex_lock<sp/>(m)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="sbf_common_darwin_8h_1ae9f52fb356fee346369a22cfef0def73" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfMutex_unlock(m)<sp/>pthread_mutex_unlock<sp/>(m)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="sbf_common_darwin_8h_1abec418ac4ae7d965f5d1196a4acd5067" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>OSSpinLock<sp/><ref refid="sbf_common_darwin_8h_1abec418ac4ae7d965f5d1196a4acd5067" kindref="member">sbfSpinLock</ref>;</highlight></codeline>
+<codeline lineno="93" refid="sbf_common_darwin_8h_1a18eb0e66d15262469832f65365ca7acf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfSpinLock_init(s)<sp/>do<sp/>{<sp/>*s<sp/>=<sp/>0;<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="sbf_common_darwin_8h_1a0e531e4bc5cd94dfc0ca53b77ef3c4e7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfSpinLock_destroy(s)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="sbf_common_darwin_8h_1aa933b8808fbcd8ee224c1f1eb748dffd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfSpinLock_lock(s)<sp/>OSSpinLockLock<sp/>(s)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="sbf_common_darwin_8h_1a91c84ef009ce03cef5e03370bf674217" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sbfSpinLock_unlock(s)<sp/>OSSpinLockUnlock<sp/>(s)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_COMMON_DARWIN_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfCommonDarwin.h"/>
+  </compounddef>
+</doxygen>

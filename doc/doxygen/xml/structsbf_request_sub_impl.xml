@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsbf_request_sub_impl" kind="struct" language="C++" prot="public">
+    <compoundname>sbfRequestSubImpl</compoundname>
+    <includes refid="sbf_request_sub_private_8h" local="no">sbfRequestSubPrivate.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsbf_request_sub_impl_1adbc58e04d88b3f3120c2b7a54dabef84" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+        <definition>sbfLog sbfRequestSubImpl::mLog</definition>
+        <argsstring></argsstring>
+        <name>mLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSubPrivate.h" line="8" column="1" bodyfile="requestreply/sbfRequestSubPrivate.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_request_sub_impl_1ab2d1a8a8d828c3e1ad3dff3fcbd9199d" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* sbfRequestSubImpl::mTopic</definition>
+        <argsstring></argsstring>
+        <name>mTopic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSubPrivate.h" line="9" column="1" bodyfile="requestreply/sbfRequestSubPrivate.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_request_sub_impl_1a932c492d0dd51a78d209447786997ee6" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_request_sub_8h_1ae72f14267ed690077474259f953bad41" kindref="member">sbfRequestSubReadyCb</ref></type>
+        <definition>sbfRequestSubReadyCb sbfRequestSubImpl::mReadyCb</definition>
+        <argsstring></argsstring>
+        <name>mReadyCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSubPrivate.h" line="11" column="1" bodyfile="requestreply/sbfRequestSubPrivate.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_request_sub_impl_1ae2809d770dad0d3a23aac48fd9eaa300" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_request_sub_8h_1a0e6a16a7431befbcbd2eda1c7ac826ff" kindref="member">sbfRequestSubRequestCb</ref></type>
+        <definition>sbfRequestSubRequestCb sbfRequestSubImpl::mRequestCb</definition>
+        <argsstring></argsstring>
+        <name>mRequestCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSubPrivate.h" line="12" column="1" bodyfile="requestreply/sbfRequestSubPrivate.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_request_sub_impl_1ab0f76e91b9d5d4d53fdae94257af4cfc" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* sbfRequestSubImpl::mClosure</definition>
+        <argsstring></argsstring>
+        <name>mClosure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSubPrivate.h" line="13" column="1" bodyfile="requestreply/sbfRequestSubPrivate.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_request_sub_impl_1a210905e9f8bfeec5546c82c26952ee9f" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_pub_8h_1aa23045dc7b9f1d04b6dee3bb3ffe63a8" kindref="member">sbfPub</ref></type>
+        <definition>sbfPub sbfRequestSubImpl::mPub</definition>
+        <argsstring></argsstring>
+        <name>mPub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSubPrivate.h" line="15" column="1" bodyfile="requestreply/sbfRequestSubPrivate.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_request_sub_impl_1afa3baba18e4f1e128d745168049a44d6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sbfRequestSubImpl::mPubReady</definition>
+        <argsstring></argsstring>
+        <name>mPubReady</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSubPrivate.h" line="16" column="1" bodyfile="requestreply/sbfRequestSubPrivate.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_request_sub_impl_1a96f57a958c10ce6556def2b08c31c357" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+        <definition>sbfSub sbfRequestSubImpl::mSub</definition>
+        <argsstring></argsstring>
+        <name>mSub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSubPrivate.h" line="17" column="1" bodyfile="requestreply/sbfRequestSubPrivate.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_request_sub_impl_1a39d77a5823ea66910bebf9c30500a1fe" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sbfRequestSubImpl::mSubReady</definition>
+        <argsstring></argsstring>
+        <name>mSubReady</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSubPrivate.h" line="18" column="1" bodyfile="requestreply/sbfRequestSubPrivate.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_request_sub_impl_1a81ca3890c7d9507b6fda71a79dd6a867" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref></type>
+        <definition>sbfGuid sbfRequestSubImpl::mNext</definition>
+        <argsstring></argsstring>
+        <name>mNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSubPrivate.h" line="20" column="1" bodyfile="requestreply/sbfRequestSubPrivate.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_request_sub_impl_1aa6e79e3e124b9b409f62a23242803da7" prot="public" static="no" mutable="no">
+        <type>sbfRequestTree</type>
+        <definition>sbfRequestTree sbfRequestSubImpl::mRequests</definition>
+        <argsstring></argsstring>
+        <name>mRequests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestSubPrivate.h" line="21" column="1" bodyfile="requestreply/sbfRequestSubPrivate.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="155">
+        <label>sbfPubImpl</label>
+        <link refid="structsbf_pub_impl"/>
+        <childnode refid="155" relation="usage">
+          <edgelabel>mReadyCb</edgelabel>
+        </childnode>
+        <childnode refid="156" relation="usage">
+          <edgelabel>mTportTopic</edgelabel>
+        </childnode>
+        <childnode refid="158" relation="usage">
+          <edgelabel>mTport</edgelabel>
+        </childnode>
+        <childnode refid="165" relation="usage">
+          <edgelabel>mRefCount</edgelabel>
+        </childnode>
+        <childnode refid="166" relation="usage">
+          <edgelabel>mTopic</edgelabel>
+        </childnode>
+        <childnode refid="167" relation="usage">
+          <edgelabel>mQueue</edgelabel>
+        </childnode>
+      </node>
+      <node id="167">
+        <label>sbfQueueImpl</label>
+        <link refid="structsbf_queue_impl"/>
+        <childnode refid="165" relation="usage">
+          <edgelabel>mRefCount</edgelabel>
+        </childnode>
+        <childnode refid="168" relation="usage">
+          <edgelabel>mPool</edgelabel>
+        </childnode>
+        <childnode refid="161" relation="usage">
+          <edgelabel>mLog</edgelabel>
+        </childnode>
+      </node>
+      <node id="154">
+        <label>sbfRequestSubImpl</label>
+        <link refid="structsbf_request_sub_impl"/>
+        <childnode refid="155" relation="usage">
+          <edgelabel>mPub</edgelabel>
+        </childnode>
+        <childnode refid="157" relation="usage">
+          <edgelabel>mSub</edgelabel>
+        </childnode>
+        <childnode refid="154" relation="usage">
+          <edgelabel>mReadyCb</edgelabel>
+          <edgelabel>mRequestCb</edgelabel>
+        </childnode>
+        <childnode refid="161" relation="usage">
+          <edgelabel>mLog</edgelabel>
+        </childnode>
+      </node>
+      <node id="160">
+        <label>sbfMwThreadImpl</label>
+        <link refid="structsbf_mw_thread_impl"/>
+        <childnode refid="159" relation="usage">
+          <edgelabel>mParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="166">
+        <label>sbfTopicImpl</label>
+        <link refid="structsbf_topic_impl"/>
+      </node>
+      <node id="165">
+        <label>sbfRefCount</label>
+        <link refid="structsbf_ref_count"/>
+      </node>
+      <node id="169">
+        <label>sbfPoolCountImpl</label>
+        <link refid="structsbf_pool_count_impl"/>
+      </node>
+      <node id="163">
+        <label>sbfTportWeight</label>
+        <link refid="structsbf_tport_weight"/>
+      </node>
+      <node id="159">
+        <label>sbfMwImpl</label>
+        <link refid="structsbf_mw_impl"/>
+        <childnode refid="160" relation="usage">
+          <edgelabel>mThreads</edgelabel>
+        </childnode>
+        <childnode refid="161" relation="usage">
+          <edgelabel>mLog</edgelabel>
+        </childnode>
+      </node>
+      <node id="170">
+        <label>sbfPoolItemImpl</label>
+        <link refid="structsbf_pool_item_impl"/>
+        <childnode refid="170" relation="usage">
+          <edgelabel>mNext</edgelabel>
+        </childnode>
+        <childnode refid="168" relation="usage">
+          <edgelabel>mPool</edgelabel>
+        </childnode>
+      </node>
+      <node id="158">
+        <label>sbfTportImpl</label>
+        <link refid="structsbf_tport_impl"/>
+        <childnode refid="159" relation="usage">
+          <edgelabel>mMw</edgelabel>
+        </childnode>
+        <childnode refid="163" relation="usage">
+          <edgelabel>mWeightsList</edgelabel>
+        </childnode>
+        <childnode refid="164" relation="usage">
+          <edgelabel>mHandlerTable</edgelabel>
+        </childnode>
+        <childnode refid="161" relation="usage">
+          <edgelabel>mLog</edgelabel>
+        </childnode>
+      </node>
+      <node id="157">
+        <label>sbfSubImpl</label>
+        <link refid="structsbf_sub_impl"/>
+        <childnode refid="156" relation="usage">
+          <edgelabel>mTportTopic</edgelabel>
+        </childnode>
+        <childnode refid="157" relation="usage">
+          <edgelabel>mMessageCb</edgelabel>
+          <edgelabel>mReadyCb</edgelabel>
+        </childnode>
+        <childnode refid="158" relation="usage">
+          <edgelabel>mTport</edgelabel>
+        </childnode>
+        <childnode refid="165" relation="usage">
+          <edgelabel>mRefCount</edgelabel>
+        </childnode>
+        <childnode refid="166" relation="usage">
+          <edgelabel>mTopic</edgelabel>
+        </childnode>
+        <childnode refid="167" relation="usage">
+          <edgelabel>mQueue</edgelabel>
+        </childnode>
+      </node>
+      <node id="162">
+        <label>sbfLogFileImpl</label>
+        <link refid="structsbf_log_file_impl"/>
+      </node>
+      <node id="161">
+        <label>sbfLogImpl</label>
+        <link refid="structsbf_log_impl"/>
+        <childnode refid="161" relation="usage">
+          <edgelabel>mHookCb</edgelabel>
+        </childnode>
+        <childnode refid="162" relation="usage">
+          <edgelabel>mFile</edgelabel>
+        </childnode>
+      </node>
+      <node id="168">
+        <label>sbfPoolImpl</label>
+        <link refid="structsbf_pool_impl"/>
+        <childnode refid="169" relation="usage">
+          <edgelabel>mCount</edgelabel>
+        </childnode>
+        <childnode refid="170" relation="usage">
+          <edgelabel>mFree</edgelabel>
+          <edgelabel>mAvailable</edgelabel>
+        </childnode>
+      </node>
+      <node id="156">
+        <label>sbfTportTopicImpl</label>
+        <link refid="structsbf_tport_topic_impl"/>
+        <childnode refid="157" relation="usage">
+          <edgelabel>mNext</edgelabel>
+        </childnode>
+      </node>
+      <node id="164">
+        <label>sbfHandlerTable</label>
+        <link refid="structsbf_handler_table"/>
+        <childnode refid="160" relation="usage">
+          <edgelabel>mAddStream</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="requestreply/sbfRequestSubPrivate.h" line="7" column="1" bodyfile="requestreply/sbfRequestSubPrivate.h" bodystart="6" bodyend="22"/>
+    <listofallmembers>
+      <member refid="structsbf_request_sub_impl_1ab0f76e91b9d5d4d53fdae94257af4cfc" prot="public" virt="non-virtual"><scope>sbfRequestSubImpl</scope><name>mClosure</name></member>
+      <member refid="structsbf_request_sub_impl_1adbc58e04d88b3f3120c2b7a54dabef84" prot="public" virt="non-virtual"><scope>sbfRequestSubImpl</scope><name>mLog</name></member>
+      <member refid="structsbf_request_sub_impl_1a81ca3890c7d9507b6fda71a79dd6a867" prot="public" virt="non-virtual"><scope>sbfRequestSubImpl</scope><name>mNext</name></member>
+      <member refid="structsbf_request_sub_impl_1a210905e9f8bfeec5546c82c26952ee9f" prot="public" virt="non-virtual"><scope>sbfRequestSubImpl</scope><name>mPub</name></member>
+      <member refid="structsbf_request_sub_impl_1afa3baba18e4f1e128d745168049a44d6" prot="public" virt="non-virtual"><scope>sbfRequestSubImpl</scope><name>mPubReady</name></member>
+      <member refid="structsbf_request_sub_impl_1a932c492d0dd51a78d209447786997ee6" prot="public" virt="non-virtual"><scope>sbfRequestSubImpl</scope><name>mReadyCb</name></member>
+      <member refid="structsbf_request_sub_impl_1ae2809d770dad0d3a23aac48fd9eaa300" prot="public" virt="non-virtual"><scope>sbfRequestSubImpl</scope><name>mRequestCb</name></member>
+      <member refid="structsbf_request_sub_impl_1aa6e79e3e124b9b409f62a23242803da7" prot="public" virt="non-virtual"><scope>sbfRequestSubImpl</scope><name>mRequests</name></member>
+      <member refid="structsbf_request_sub_impl_1a96f57a958c10ce6556def2b08c31c357" prot="public" virt="non-virtual"><scope>sbfRequestSubImpl</scope><name>mSub</name></member>
+      <member refid="structsbf_request_sub_impl_1a39d77a5823ea66910bebf9c30500a1fe" prot="public" virt="non-virtual"><scope>sbfRequestSubImpl</scope><name>mSubReady</name></member>
+      <member refid="structsbf_request_sub_impl_1ab2d1a8a8d828c3e1ad3dff3fcbd9199d" prot="public" virt="non-virtual"><scope>sbfRequestSubImpl</scope><name>mTopic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
