@@ -22,7 +22,7 @@ dispatchCb (void* closure)
 
 /*!
    \brief Callback that receives replier responses.
-   \param sub  pointer to subscriber.
+   \param pub  pointer to publisher.
    \param req pointer to request.
    \param buffer data being requested.
    \param closure the data linked to this callback.

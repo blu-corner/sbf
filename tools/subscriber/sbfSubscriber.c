@@ -48,7 +48,9 @@ timerCb (sbfTimer timer, void* closure)
 
 /*!
    \brief Callback processing
-   \param "Param description"
+   \param sub the subscriber handler.
+   \param buffer the received buffer.
+   \param closure data linked to the callback.
 */
 static void
 messageCb (sbfSub sub, sbfBuffer buffer, void* closure)

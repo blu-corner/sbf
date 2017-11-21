@@ -24,7 +24,7 @@ dispatchCb (void* closure)
 
 /*!
    \brief This is a callback raised by the timer.
-   \param sbfTimer the timer invokign this callback.
+   \param timer the timer invokign this callback.
    \param closure the data linked to the timer callback.
 */
 static void
