@@ -164,5 +164,8 @@ texinfo_documents = [
      author, 'SBF', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+html_theme = "sphinx_rtd_theme"
+
 breathe_projects = { "sbf":"../doxygen/xml/" }
 breathe_default_project = "sbf"
