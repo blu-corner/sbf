@@ -6,7 +6,18 @@
     <detaileddescription>
 <para>SBF is a message transport system that allows inter app communication in two different flavours:<itemizedlist>
 <listitem><para>Publisher - Subscriber</para></listitem><listitem><para>Requester - Replier</para></listitem></itemizedlist>
-</para><para>The <computeroutput>publisher-subscriber</computeroutput> consists of publishers defining topics where messages are placed. Then one or more subscribers might register to a concrete topic to read the messages that were delivered (one to many communication). On the other hand, the <computeroutput>requester-replier</computeroutput> communication is about defining a channel where messages are sent from one requester to one publisher (one to one communication).</para><para><blockquote><para>TBD </para></blockquote></para><para><heading level="2">Publisher - subscriber example</heading>
+</para><para>The <computeroutput>publisher-subscriber</computeroutput> consists of publishers defining topics where messages are placed. Then one or more subscribers might register to a concrete topic to read the messages that were delivered (one to many communication). On the other hand, the <computeroutput>requester-replier</computeroutput> communication is about defining a channel where messages are sent from one requester to one publisher (one to one communication).</para><para><blockquote><para>TBD </para></blockquote></para><para><heading level="2">API</heading>
+</para><para>Here you are the list of modules the API offers to build your transport<itemizedlist>
+<listitem><para>Core<itemizedlist>
+<listitem><para><ref refid="sbf_event_8h" kindref="compound">Event</ref></para></listitem><listitem><para>Timers<itemizedlist>
+<listitem><para><ref refid="sbf_timer_8h" kindref="compound">Timer</ref></para></listitem><listitem><para><ref refid="sbf_hi_res_timer_8h" kindref="compound">Hi resolution timer</ref></para></listitem></itemizedlist>
+</para></listitem><listitem><para><ref refid="sbf_queue_8h" kindref="compound">Queue</ref></para></listitem><listitem><para><ref refid="sbf_mw_8h" kindref="compound">Middleware</ref></para></listitem></itemizedlist>
+</para></listitem><listitem><para>Handlers<itemizedlist>
+<listitem><para><ref refid="sbf_common_handler_8h" kindref="compound">Common handler</ref></para></listitem><listitem><para><ref refid="sbf_tcp_mesh_handler_8h" kindref="compound">TCP mesh handler</ref></para></listitem><listitem><para><ref refid="sbf_udp_handler_8h" kindref="compound">UDP handler</ref></para></listitem></itemizedlist>
+</para></listitem><listitem><para>Request / reply<itemizedlist>
+<listitem><para><ref refid="sbf_request_pub_8h" kindref="compound">Request publisher</ref></para></listitem><listitem><para><ref refid="sbf_request_sub_8h" kindref="compound">Request subscriber</ref></para></listitem><listitem><para><ref refid="sbf_request_reply_8h" kindref="compound">Request reply</ref></para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para><para><heading level="2">Publisher - subscriber example</heading>
 </para><para>Let&apos;s see how to create a publisher-subscriber communication.</para><para><heading level="3">Publisher code</heading>
 </para><para>Here are the first lines you will need to create your publisher: #### Create the middleware <programlisting><codeline><highlight class="preprocessor">#include<sp/>&quot;sbfCommon.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Common<sp/>stuff<sp/>such<sp/>as<sp/>queues,<sp/>threading,<sp/>...</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_mw_8h" kindref="compound">sbfMw.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>The<sp/>middleware<sp/>API</highlight><highlight class="normal"></highlight></codeline>
@@ -48,7 +59,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
 <codeline><highlight class="normal">sbfPub<sp/>pub<sp/>=<sp/>sbfPub_create<sp/>(tport,<sp/>queue,<sp/></highlight><highlight class="stringliteral">&quot;topic&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/>NULL);</highlight></codeline>
-</programlisting></para><para>You can find the whole example of the publisher <ulink url="./tools/publisher">here</ulink> <heading level="3">Subscriber code</heading>
+</programlisting></para><para>You can find the whole example of the publisher <ulink url="https://gitlab.com/neueda/sbf/tree/master/tools/publisher">here</ulink> <heading level="3">Subscriber code</heading>
 </para><para>Now let&apos;s see how the subscriber works.</para><para>#### Create the middleware <programlisting><codeline><highlight class="preprocessor">#include<sp/>&quot;sbfCommon.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Common<sp/>stuff<sp/>such<sp/>as<sp/>queues,<sp/>threading,<sp/>...</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_mw_8h" kindref="compound">sbfMw.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>The<sp/>middleware<sp/>API</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
@@ -97,7 +108,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
 <codeline><highlight class="normal">sbfPub<sp/>pub<sp/>=<sp/>sbfPub_create<sp/>(tport,<sp/>queue,<sp/></highlight><highlight class="stringliteral">&quot;topic&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/>NULL);</highlight></codeline>
-</programlisting></para><para>You can find the whole example of the subscriber <ulink url="./tools/subscriber">here</ulink>.</para><para><heading level="2">Requester replier example</heading>
+</programlisting></para><para>You can find the whole example of the subscriber <ulink url="https://gitlab.com/neueda/sbf/tree/master/tools/subscriber">here</ulink>.</para><para><heading level="2">Requester replier example</heading>
 </para><para><blockquote><para>TBD </para></blockquote></para><para><heading level="1">Download</heading>
 </para><para>Download the source code from GitLab at <ulink url="https://gitlab.com/neueda/sbf">https://gitlab.com/neueda/sbf</ulink>. SBT run under Linux OS (Debian, Ubuntu, Centos distros are highly recommended).</para><para><heading level="2">Vagrant</heading>
 </para><para>If you are running on OS X or Windows don&apos;t worry, we provide a vagrant file to create a VirtualBox ubuntu image including all the necessary stuff to run. You will need to download <ulink url="https://www.virtualbox.org/">VirtualBox</ulink> and <ulink url="https://www.vagrantup.com/">Vagrant</ulink>.<orderedlist>
@@ -112,18 +123,7 @@
 <codeline><highlight class="normal">sbf-requester</highlight></codeline>
 <codeline><highlight class="normal">sbf-publisher</highlight></codeline>
 <codeline><highlight class="normal">sbf-subscriber</highlight></codeline>
-</programlisting> The requester sends messages and the replier reads the message and replies. Something similar for the publisher and subscriber.</para><para><heading level="1">API</heading>
-</para><para>Here you are the list of modules the API offers to build your transport<itemizedlist>
-<listitem><para>Core<itemizedlist>
-<listitem><para><ref refid="sbf_event_8h" kindref="compound">Event</ref></para></listitem><listitem><para>Timers<itemizedlist>
-<listitem><para><ref refid="sbf_timer_8h" kindref="compound">Timer</ref></para></listitem><listitem><para><ref refid="sbf_hi_res_timer_8h" kindref="compound">Hi resolution timer</ref></para></listitem></itemizedlist>
-</para></listitem><listitem><para><ref refid="sbf_queue_8h" kindref="compound">Queue</ref></para></listitem><listitem><para><ref refid="sbf_mw_8h" kindref="compound">Middleware</ref></para></listitem></itemizedlist>
-</para></listitem><listitem><para>Handlers<itemizedlist>
-<listitem><para><ref refid="sbf_common_handler_8h" kindref="compound">Common handler</ref></para></listitem><listitem><para><ref refid="sbf_tcp_mesh_handler_8h" kindref="compound">TCP mesh handler</ref></para></listitem><listitem><para><ref refid="sbf_udp_handler_8h" kindref="compound">UDP handler</ref></para></listitem></itemizedlist>
-</para></listitem><listitem><para>Request / reply<itemizedlist>
-<listitem><para><ref refid="sbf_request_pub_8h" kindref="compound">Request publisher</ref></para></listitem><listitem><para><ref refid="sbf_request_sub_8h" kindref="compound">Request subscriber</ref></para></listitem><listitem><para><ref refid="sbf_request_reply_8h" kindref="compound">Request reply</ref></para></listitem></itemizedlist>
-</para></listitem></itemizedlist>
-</para><para><heading level="1">Contribute</heading>
+</programlisting> The requester sends messages and the replier reads the message and replies. Something similar for the publisher and subscriber.</para><para><heading level="1">Contribute</heading>
 </para><para><blockquote><para>TBD </para></blockquote></para><para><heading level="1">License</heading>
 </para><para><blockquote><para>TBD</para></blockquote></para>    </detaileddescription>
   </compounddef>
