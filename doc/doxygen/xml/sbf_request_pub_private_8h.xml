@@ -2,27 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="sbf_request_pub_private_8h" kind="file" language="C++">
     <compoundname>sbfRequestPubPrivate.h</compoundname>
-    <includedby refid="sbf_request_pub_8c" local="yes">requestreply/sbfRequestPub.c</includedby>
-    <includedby refid="sbf_request_reply_8c" local="yes">requestreply/sbfRequestReply.c</includedby>
-    <invincdepgraph>
-      <node id="2965">
-        <label>requestreply/sbfRequestPubPrivate.h</label>
-        <link refid="sbf_request_pub_private_8h"/>
-        <childnode refid="2966" relation="include">
-        </childnode>
-        <childnode refid="2967" relation="include">
-        </childnode>
-      </node>
-      <node id="2967">
-        <label>requestreply/sbfRequestReply.c</label>
-        <link refid="sbf_request_reply_8c"/>
-      </node>
-      <node id="2966">
-        <label>requestreply/sbfRequestPub.c</label>
-        <link refid="sbf_request_pub_8c"/>
-      </node>
-    </invincdepgraph>
-    <innerclass refid="structsbf_request_pub_impl" prot="public">sbfRequestPubImpl</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -31,26 +10,26 @@
 <codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_REQUEST_PUB_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_REQUEST_PUB_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">SBF_BEGIN_DECLS</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="structsbf_request_pub_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_request_pub_impl" kindref="compound">sbfRequestPubImpl</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfRequestPubImpl</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8" refid="structsbf_request_pub_impl_1a841ee0a516db377942f735791ccecd11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl_1a841ee0a516db377942f735791ccecd11" kindref="member">mLog</ref>;</highlight></codeline>
-<codeline lineno="9" refid="structsbf_request_pub_impl_1aaf270a468697962f335f4a1b16f8259b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl_1aaf270a468697962f335f4a1b16f8259b" kindref="member">mTopic</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfLog<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mLog;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mTopic;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="structsbf_request_pub_impl_1a27b0811844ab71cd18bd1a3aa994d7c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_request_pub_8h_1a906a2e4613ca59e07e2f4d6fa8d4e92e" kindref="member">sbfRequestPubReadyCb</ref><sp/><sp/><ref refid="structsbf_request_pub_impl_1a27b0811844ab71cd18bd1a3aa994d7c6" kindref="member">mReadyCb</ref>;</highlight></codeline>
-<codeline lineno="12" refid="structsbf_request_pub_impl_1a6097d8140219a9d06846faec4e846892" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl_1a6097d8140219a9d06846faec4e846892" kindref="member">mClosure</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_request_pub_8h_1a906a2e4613ca59e07e2f4d6fa8d4e92e" kindref="member">sbfRequestPubReadyCb</ref><sp/><sp/>mReadyCb;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mClosure;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="structsbf_request_pub_impl_1a2d1bea84e7effcd412fd0020b601d11e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_pub_impl" kindref="compound">sbfPub</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl_1a2d1bea84e7effcd412fd0020b601d11e" kindref="member">mPub</ref>;</highlight></codeline>
-<codeline lineno="15" refid="structsbf_request_pub_impl_1a14c9337cf89d9177e8b13c732cc71804" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl_1a14c9337cf89d9177e8b13c732cc71804" kindref="member">mPubReady</ref>;</highlight></codeline>
-<codeline lineno="16" refid="structsbf_request_pub_impl_1af059cd9caeaa78b6be14da8ef0dd9037" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_sub_impl" kindref="compound">sbfSub</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl_1af059cd9caeaa78b6be14da8ef0dd9037" kindref="member">mSub</ref>;</highlight></codeline>
-<codeline lineno="17" refid="structsbf_request_pub_impl_1afbbdc4e5bc22df5eec802ece93e7e189" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl_1afbbdc4e5bc22df5eec802ece93e7e189" kindref="member">mSubReady</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfPub<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mPub;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mPubReady;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfSub<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mSub;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mSubReady;</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="structsbf_request_pub_impl_1ab0cfbaf17b980b58cba1287729824e44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl_1ab0cfbaf17b980b58cba1287729824e44" kindref="member">mNext</ref>;</highlight></codeline>
-<codeline lineno="20" refid="structsbf_request_pub_impl_1a7246763e00431bd92f0da3fa34524070" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfRequestTree<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_request_pub_impl_1a7246763e00431bd92f0da3fa34524070" kindref="member">mRequests</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfGuid<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mNext;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfRequestTree<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mRequests;</highlight></codeline>
 <codeline lineno="21"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">SBF_END_DECLS</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_REQUEST_PUB_PRIVATE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>

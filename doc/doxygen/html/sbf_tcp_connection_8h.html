@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SBF: common/sbfTcpConnection.h File Reference</title>
+<title>SBF: C:/Users/Neueda/Documents/workspace/sbf/common/sbfTcpConnection.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('sbf_tcp_connection_8h.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a53a1045ff30759b8b00d4d0449a325d6"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structsbf_tcp_connection_impl.html">sbfTcpConnectionImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_connection_8h.html#a53a1045ff30759b8b00d4d0449a325d6">sbfTcpConnection</a></td></tr>
+<tr class="memitem:a53a1045ff30759b8b00d4d0449a325d6"><td class="memItemLeft" align="right" valign="top">typedef struct sbfTcpConnectionImpl *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_connection_8h.html#a53a1045ff30759b8b00d4d0449a325d6">sbfTcpConnection</a></td></tr>
 <tr class="separator:a53a1045ff30759b8b00d4d0449a325d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae204a24bb024d4047c38b1c40f9a46fb"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_connection_8h.html#ae204a24bb024d4047c38b1c40f9a46fb">sbfTcpConnectionReadyCb</a>) (<a class="el" href="sbf_tcp_connection_8h.html#a53a1045ff30759b8b00d4d0449a325d6">sbfTcpConnection</a> tc, void *closure)</td></tr>
 <tr class="separator:ae204a24bb024d4047c38b1c40f9a46fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,11 +105,11 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad2f6cdc25efcb87c6a48cc305ea4398a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_tcp_connection_8h.html#a53a1045ff30759b8b00d4d0449a325d6">sbfTcpConnection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_connection_8h.html#ad2f6cdc25efcb87c6a48cc305ea4398a">sbfTcpConnection_create</a> (<a class="el" href="sbf_log_8h.html#af52e123ee70a148a5492a53d34c16c37">sbfLog</a> log, struct <a class="el" href="structsbf_mw_thread_impl.html">sbfMwThreadImpl</a> *thread, struct <a class="el" href="structsbf_queue_impl.html">sbfQueueImpl</a> *queue, struct sockaddr_in *sin, <a class="el" href="sbf_tcp_connection_8h.html#ae204a24bb024d4047c38b1c40f9a46fb">sbfTcpConnectionReadyCb</a> readyCb, <a class="el" href="sbf_tcp_connection_8h.html#a889c83f2386f8caf26449ea8777e43a0">sbfTcpConnectionErrorCb</a> errorCb, <a class="el" href="sbf_tcp_connection_8h.html#aea1b0b9f9203fa9f5681271b5e0e2ca4">sbfTcpConnectionReadCb</a> readCb, void *closure)</td></tr>
+<tr class="memitem:ad2f6cdc25efcb87c6a48cc305ea4398a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_tcp_connection_8h.html#a53a1045ff30759b8b00d4d0449a325d6">sbfTcpConnection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_connection_8h.html#ad2f6cdc25efcb87c6a48cc305ea4398a">sbfTcpConnection_create</a> (<a class="el" href="sbf_log_8h.html#af52e123ee70a148a5492a53d34c16c37">sbfLog</a> log, struct sbfMwThreadImpl *thread, struct sbfQueueImpl *queue, struct sockaddr_in *sin, <a class="el" href="sbf_tcp_connection_8h.html#ae204a24bb024d4047c38b1c40f9a46fb">sbfTcpConnectionReadyCb</a> readyCb, <a class="el" href="sbf_tcp_connection_8h.html#a889c83f2386f8caf26449ea8777e43a0">sbfTcpConnectionErrorCb</a> errorCb, <a class="el" href="sbf_tcp_connection_8h.html#aea1b0b9f9203fa9f5681271b5e0e2ca4">sbfTcpConnectionReadCb</a> readCb, void *closure)</td></tr>
 <tr class="separator:ad2f6cdc25efcb87c6a48cc305ea4398a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad28df3d489618e8bbdae2473c46185c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_connection_8h.html#ad28df3d489618e8bbdae2473c46185c6">sbfTcpConnection_destroy</a> (<a class="el" href="sbf_tcp_connection_8h.html#a53a1045ff30759b8b00d4d0449a325d6">sbfTcpConnection</a> tc)</td></tr>
 <tr class="separator:ad28df3d489618e8bbdae2473c46185c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef10e695b3090c63e62060881c36b95d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_common_8h.html#a55668977c9501578c245e806c1212de9">sbfError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_connection_8h.html#aef10e695b3090c63e62060881c36b95d">sbfTcpConnection_accept</a> (<a class="el" href="sbf_tcp_connection_8h.html#a53a1045ff30759b8b00d4d0449a325d6">sbfTcpConnection</a> tc, struct <a class="el" href="structsbf_mw_thread_impl.html">sbfMwThreadImpl</a> *thread, struct <a class="el" href="structsbf_queue_impl.html">sbfQueueImpl</a> *queue, <a class="el" href="sbf_tcp_connection_8h.html#ae204a24bb024d4047c38b1c40f9a46fb">sbfTcpConnectionReadyCb</a> readyCb, <a class="el" href="sbf_tcp_connection_8h.html#a889c83f2386f8caf26449ea8777e43a0">sbfTcpConnectionErrorCb</a> errorCb, <a class="el" href="sbf_tcp_connection_8h.html#aea1b0b9f9203fa9f5681271b5e0e2ca4">sbfTcpConnectionReadCb</a> readCb, void *closure)</td></tr>
+<tr class="memitem:aef10e695b3090c63e62060881c36b95d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_common_8h.html#a55668977c9501578c245e806c1212de9">sbfError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_connection_8h.html#aef10e695b3090c63e62060881c36b95d">sbfTcpConnection_accept</a> (<a class="el" href="sbf_tcp_connection_8h.html#a53a1045ff30759b8b00d4d0449a325d6">sbfTcpConnection</a> tc, struct sbfMwThreadImpl *thread, struct sbfQueueImpl *queue, <a class="el" href="sbf_tcp_connection_8h.html#ae204a24bb024d4047c38b1c40f9a46fb">sbfTcpConnectionReadyCb</a> readyCb, <a class="el" href="sbf_tcp_connection_8h.html#a889c83f2386f8caf26449ea8777e43a0">sbfTcpConnectionErrorCb</a> errorCb, <a class="el" href="sbf_tcp_connection_8h.html#aea1b0b9f9203fa9f5681271b5e0e2ca4">sbfTcpConnectionReadCb</a> readCb, void *closure)</td></tr>
 <tr class="separator:aef10e695b3090c63e62060881c36b95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa66b62f0e78721f20f853501d975bed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_connection_8h.html#afa66b62f0e78721f20f853501d975bed">sbfTcpConnection_send</a> (<a class="el" href="sbf_tcp_connection_8h.html#a53a1045ff30759b8b00d4d0449a325d6">sbfTcpConnection</a> tc, const void *data, size_t size)</td></tr>
 <tr class="separator:afa66b62f0e78721f20f853501d975bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,7 +126,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structsbf_tcp_connection_impl.html">sbfTcpConnectionImpl</a>* <a class="el" href="sbf_tcp_connection_8h.html#a53a1045ff30759b8b00d4d0449a325d6">sbfTcpConnection</a></td>
+          <td class="memname">typedef struct sbfTcpConnectionImpl* <a class="el" href="sbf_tcp_connection_8h.html#a53a1045ff30759b8b00d4d0449a325d6">sbfTcpConnection</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -199,13 +199,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structsbf_mw_thread_impl.html">sbfMwThreadImpl</a> *&#160;</td>
+          <td class="paramtype">struct sbfMwThreadImpl *&#160;</td>
           <td class="paramname"><em>thread</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structsbf_queue_impl.html">sbfQueueImpl</a> *&#160;</td>
+          <td class="paramtype">struct sbfQueueImpl *&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
         </tr>
         <tr>
@@ -257,13 +257,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structsbf_mw_thread_impl.html">sbfMwThreadImpl</a> *&#160;</td>
+          <td class="paramtype">struct sbfMwThreadImpl *&#160;</td>
           <td class="paramname"><em>thread</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structsbf_queue_impl.html">sbfQueueImpl</a> *&#160;</td>
+          <td class="paramtype">struct sbfQueueImpl *&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
         </tr>
         <tr>
@@ -322,8 +322,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sbf_tcp_connection_8c_source.html#l00232">232</a> of file <a class="el" href="sbf_tcp_connection_8c_source.html">sbfTcpConnection.c</a>.</p>
-
 </div>
 </div>
 <a id="a3df96e0249d292935e801545ac450a86"></a>
@@ -341,8 +339,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sbf_tcp_connection_8c_source.html#l00302">302</a> of file <a class="el" href="sbf_tcp_connection_8c_source.html">sbfTcpConnection.c</a>.</p>
 
 </div>
 </div>
@@ -378,8 +374,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sbf_tcp_connection_8c_source.html#l00284">284</a> of file <a class="el" href="sbf_tcp_connection_8c_source.html">sbfTcpConnection.c</a>.</p>
-
 </div>
 </div>
 <a id="a36bb97a18db6b8f2fb94b5ee954b7617"></a>
@@ -407,8 +401,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sbf_tcp_connection_8c_source.html#l00290">290</a> of file <a class="el" href="sbf_tcp_connection_8c_source.html">sbfTcpConnection.c</a>.</p>
 
 </div>
 </div>

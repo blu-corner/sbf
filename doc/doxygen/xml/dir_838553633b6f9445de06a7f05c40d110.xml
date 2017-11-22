@@ -2,13 +2,10 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="dir_838553633b6f9445de06a7f05c40d110" kind="dir">
     <compoundname>requestreply</compoundname>
-    <innerfile refid="sbf_request_pub_8c">sbfRequestPub.c</innerfile>
     <innerfile refid="sbf_request_pub_8h">sbfRequestPub.h</innerfile>
     <innerfile refid="sbf_request_pub_private_8h">sbfRequestPubPrivate.h</innerfile>
-    <innerfile refid="sbf_request_reply_8c">sbfRequestReply.c</innerfile>
     <innerfile refid="sbf_request_reply_8h">sbfRequestReply.h</innerfile>
     <innerfile refid="sbf_request_reply_private_8h">sbfRequestReplyPrivate.h</innerfile>
-    <innerfile refid="sbf_request_sub_8c">sbfRequestSub.c</innerfile>
     <innerfile refid="sbf_request_sub_8h">sbfRequestSub.h</innerfile>
     <innerfile refid="sbf_request_sub_private_8h">sbfRequestSubPrivate.h</innerfile>
     <briefdescription>

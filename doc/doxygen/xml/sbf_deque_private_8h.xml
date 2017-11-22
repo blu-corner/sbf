@@ -3,114 +3,99 @@
   <compounddef id="sbf_deque_private_8h" kind="file" language="C++">
     <compoundname>sbfDequePrivate.h</compoundname>
     <includes refid="sbf_pool_8h" local="yes">sbfPool.h</includes>
-    <includedby refid="sbf_deque_8c" local="yes">common/sbfDeque.c</includedby>
     <incdepgraph>
-      <node id="559">
+      <node id="298">
         <label>sbfPool.h</label>
         <link refid="sbf_pool_8h"/>
-        <childnode refid="560" relation="include">
+        <childnode refid="299" relation="include">
         </childnode>
-        <childnode refid="570" relation="include">
+        <childnode refid="309" relation="include">
         </childnode>
-        <childnode refid="571" relation="include">
+        <childnode refid="310" relation="include">
         </childnode>
       </node>
-      <node id="562">
+      <node id="301">
         <label>event.h</label>
       </node>
-      <node id="570">
+      <node id="309">
         <label>sbfAtomic.h</label>
         <link refid="sbf_atomic_8h"/>
-        <childnode refid="560" relation="include">
+        <childnode refid="299" relation="include">
         </childnode>
       </node>
-      <node id="561">
+      <node id="300">
         <label>sbfVersion.h</label>
         <link refid="sbf_version_8h"/>
       </node>
-      <node id="563">
+      <node id="302">
         <label>syshash.h</label>
         <link refid="syshash_8h"/>
-        <childnode refid="564" relation="include">
+        <childnode refid="303" relation="include">
         </childnode>
       </node>
-      <node id="567">
+      <node id="306">
         <label>sbfFatal.h</label>
         <link refid="sbf_fatal_8h"/>
-        <childnode refid="560" relation="include">
+        <childnode refid="299" relation="include">
         </childnode>
       </node>
-      <node id="558">
-        <label>common/sbfDequePrivate.h</label>
+      <node id="297">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfDequePrivate.h</label>
         <link refid="sbf_deque_private_8h"/>
-        <childnode refid="559" relation="include">
+        <childnode refid="298" relation="include">
         </childnode>
       </node>
-      <node id="564">
+      <node id="303">
         <label>sys/types.h</label>
       </node>
-      <node id="560">
+      <node id="299">
         <label>sbfCommon.h</label>
         <link refid="sbf_common_8h"/>
-        <childnode refid="561" relation="include">
+        <childnode refid="300" relation="include">
         </childnode>
-        <childnode refid="562" relation="include">
+        <childnode refid="301" relation="include">
         </childnode>
-        <childnode refid="563" relation="include">
+        <childnode refid="302" relation="include">
         </childnode>
-        <childnode refid="565" relation="include">
+        <childnode refid="304" relation="include">
         </childnode>
-        <childnode refid="566" relation="include">
+        <childnode refid="305" relation="include">
         </childnode>
-        <childnode refid="567" relation="include">
+        <childnode refid="306" relation="include">
         </childnode>
-        <childnode refid="568" relation="include">
+        <childnode refid="307" relation="include">
         </childnode>
-        <childnode refid="569" relation="include">
+        <childnode refid="308" relation="include">
         </childnode>
       </node>
-      <node id="566">
+      <node id="305">
         <label>systree.h</label>
         <link refid="systree_8h"/>
       </node>
-      <node id="565">
+      <node id="304">
         <label>sysqueue.h</label>
         <link refid="sysqueue_8h"/>
       </node>
-      <node id="568">
+      <node id="307">
         <label>sbfLog.h</label>
         <link refid="sbf_log_8h"/>
-        <childnode refid="560" relation="include">
+        <childnode refid="299" relation="include">
         </childnode>
       </node>
-      <node id="569">
+      <node id="308">
         <label>sbfMemory.h</label>
         <link refid="sbf_memory_8h"/>
-        <childnode refid="560" relation="include">
+        <childnode refid="299" relation="include">
         </childnode>
       </node>
-      <node id="571">
+      <node id="310">
         <label>sbfPoolInline.h</label>
         <link refid="sbf_pool_inline_8h"/>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="573">
-        <label>common/sbfDeque.c</label>
-        <link refid="sbf_deque_8c"/>
-      </node>
-      <node id="572">
-        <label>common/sbfDequePrivate.h</label>
-        <link refid="sbf_deque_private_8h"/>
-        <childnode refid="573" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
-    <innerclass refid="structsbf_deque_item_impl" prot="public">sbfDequeItemImpl</innerclass>
-    <innerclass refid="structsbf_deque_impl" prot="public">sbfDequeImpl</innerclass>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="sbf_deque_private_8h_1afb7b5b107af9e46ddf1b3cdb3c53e70f" prot="public" static="no">
-        <type>struct <ref refid="structsbf_deque_item_impl" kindref="compound">sbfDequeItemImpl</ref> *</type>
+        <type>struct sbfDequeItemImpl *</type>
         <definition>typedef struct sbfDequeItemImpl* sbfDequeItem</definition>
         <argsstring></argsstring>
         <name>sbfDequeItem</name>
@@ -120,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfDequePrivate.h" line="13" column="1" bodyfile="common/sbfDequePrivate.h" bodystart="13" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfDequePrivate.h" line="13" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfDequePrivate.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -133,7 +118,7 @@
           <type>sbfDequeItemListImpl</type>
         </param>
         <param>
-          <type><ref refid="structsbf_deque_item_impl" kindref="compound">sbfDequeItemImpl</ref></type>
+          <type>sbfDequeItemImpl</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -141,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfDequePrivate.h" line="14" column="1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfDequePrivate.h" line="14" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -156,24 +141,24 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8" refid="structsbf_deque_item_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_deque_item_impl" kindref="compound">sbfDequeItemImpl</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfDequeItemImpl</highlight></codeline>
 <codeline lineno="9"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="10" refid="structsbf_deque_item_impl_1a9d9b888919e154fe1cfccaeee1ef2e5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_deque_item_impl_1a9d9b888919e154fe1cfccaeee1ef2e5b" kindref="member">mPointer</ref>;</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_deque_item_impl_1afb191455354a11ffcf1ff31f5e5246e7" kindref="member">TAILQ_ENTRY</ref><sp/>(<ref refid="structsbf_deque_item_impl" kindref="compound">sbfDequeItemImpl</ref>)<sp/>mListEntry;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mPointer;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sysqueue_8h_1af71bfd90dc9d00fb03545fe66c67d673" kindref="member">TAILQ_ENTRY</ref><sp/>(sbfDequeItemImpl)<sp/>mListEntry;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="13" refid="sbf_deque_private_8h_1afb7b5b107af9e46ddf1b3cdb3c53e70f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_deque_item_impl" kindref="compound">sbfDequeItemImpl</ref>*<sp/><ref refid="sbf_deque_private_8h_1afb7b5b107af9e46ddf1b3cdb3c53e70f" kindref="member">sbfDequeItem</ref>;</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="sbf_deque_private_8h_1a2db60b284121f13391c36c450db70df6" kindref="member">TAILQ_HEAD</ref><sp/>(sbfDequeItemListImpl,<sp/><ref refid="structsbf_deque_item_impl" kindref="compound">sbfDequeItemImpl</ref>)<sp/>sbfDequeItemList;</highlight></codeline>
+<codeline lineno="13" refid="sbf_deque_private_8h_1afb7b5b107af9e46ddf1b3cdb3c53e70f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfDequeItemImpl*<sp/><ref refid="sbf_deque_private_8h_1afb7b5b107af9e46ddf1b3cdb3c53e70f" kindref="member">sbfDequeItem</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="sbf_deque_private_8h_1a2db60b284121f13391c36c450db70df6" kindref="member">TAILQ_HEAD</ref><sp/>(sbfDequeItemListImpl,<sp/>sbfDequeItemImpl)<sp/>sbfDequeItemList;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="structsbf_deque_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_deque_impl" kindref="compound">sbfDequeImpl</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfDequeImpl</highlight></codeline>
 <codeline lineno="17"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="18" refid="structsbf_deque_impl_1a00494edaae188fb063e23c663030f192" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_deque_impl_1a00494edaae188fb063e23c663030f192" kindref="member">mPool</ref>;</highlight></codeline>
-<codeline lineno="19" refid="structsbf_deque_impl_1a2a95493d626dcb25264950ed00e0c62a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfDequeItemList<sp/><ref refid="structsbf_deque_impl_1a2a95493d626dcb25264950ed00e0c62a" kindref="member">mList</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mPool;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfDequeItemList<sp/>mList;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_DEQUE_PRIVATE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="common/sbfDequePrivate.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfDequePrivate.h"/>
   </compounddef>
 </doxygen>

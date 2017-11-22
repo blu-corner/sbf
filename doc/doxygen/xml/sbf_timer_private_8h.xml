@@ -4,163 +4,87 @@
     <compoundname>sbfTimerPrivate.h</compoundname>
     <includes refid="sbf_mw_8h" local="yes">sbfMw.h</includes>
     <includes refid="sbf_mw_private_8h" local="yes">sbfMwPrivate.h</includes>
-    <includes refid="sbf_ref_count_8h" local="yes">sbfRefCount.h</includes>
-    <includedby refid="sbf_timer_8c" local="yes">core/sbfTimer.c</includedby>
+    <includes local="yes">sbfRefCount.h</includes>
     <incdepgraph>
-      <node id="2635">
+      <node id="145">
         <label>event.h</label>
       </node>
-      <node id="2634">
-        <label>sbfVersion.h</label>
-        <link refid="sbf_version_8h"/>
+      <node id="148">
+        <label>sbfRefCount.h</label>
       </node>
-      <node id="2636">
-        <label>syshash.h</label>
-        <link refid="syshash_8h"/>
-        <childnode refid="2637" relation="include">
-        </childnode>
-      </node>
-      <node id="2643">
+      <node id="139">
         <label>sbfEvent.h</label>
         <link refid="sbf_event_8h"/>
-        <childnode refid="2633" relation="include">
+        <childnode refid="138" relation="include">
         </childnode>
       </node>
-      <node id="2640">
-        <label>sbfFatal.h</label>
-        <link refid="sbf_fatal_8h"/>
-        <childnode refid="2633" relation="include">
-        </childnode>
-      </node>
-      <node id="2650">
+      <node id="147">
         <label>event2/listener.h</label>
       </node>
-      <node id="2645">
-        <label>sbfKeyValue.h</label>
-        <link refid="sbf_key_value_8h"/>
-        <childnode refid="2633" relation="include">
-        </childnode>
-      </node>
-      <node id="2644">
+      <node id="140">
         <label>sbfHiResTimer.h</label>
         <link refid="sbf_hi_res_timer_8h"/>
-        <childnode refid="2633" relation="include">
+        <childnode refid="138" relation="include">
         </childnode>
       </node>
-      <node id="2637">
-        <label>sys/types.h</label>
-      </node>
-      <node id="2649">
+      <node id="146">
         <label>event2/thread.h</label>
       </node>
-      <node id="2648">
+      <node id="144">
         <label>sbfMwPrivate.h</label>
         <link refid="sbf_mw_private_8h"/>
-        <childnode refid="2635" relation="include">
+        <childnode refid="145" relation="include">
         </childnode>
-        <childnode refid="2649" relation="include">
+        <childnode refid="146" relation="include">
         </childnode>
-        <childnode refid="2650" relation="include">
+        <childnode refid="147" relation="include">
         </childnode>
       </node>
-      <node id="2631">
+      <node id="136">
         <label>core/sbfTimerPrivate.h</label>
         <link refid="sbf_timer_private_8h"/>
-        <childnode refid="2632" relation="include">
+        <childnode refid="137" relation="include">
         </childnode>
-        <childnode refid="2648" relation="include">
+        <childnode refid="144" relation="include">
         </childnode>
-        <childnode refid="2651" relation="include">
-        </childnode>
-      </node>
-      <node id="2651">
-        <label>sbfRefCount.h</label>
-        <link refid="sbf_ref_count_8h"/>
-        <childnode refid="2633" relation="include">
+        <childnode refid="148" relation="include">
         </childnode>
       </node>
-      <node id="2647">
+      <node id="143">
         <label>sbfTimer.h</label>
         <link refid="sbf_timer_8h"/>
-        <childnode refid="2633" relation="include">
+        <childnode refid="138" relation="include">
         </childnode>
       </node>
-      <node id="2633">
+      <node id="138">
         <label>sbfCommon.h</label>
-        <link refid="sbf_common_8h"/>
-        <childnode refid="2634" relation="include">
-        </childnode>
-        <childnode refid="2635" relation="include">
-        </childnode>
-        <childnode refid="2636" relation="include">
-        </childnode>
-        <childnode refid="2638" relation="include">
-        </childnode>
-        <childnode refid="2639" relation="include">
-        </childnode>
-        <childnode refid="2640" relation="include">
-        </childnode>
-        <childnode refid="2641" relation="include">
-        </childnode>
-        <childnode refid="2642" relation="include">
-        </childnode>
       </node>
-      <node id="2639">
-        <label>systree.h</label>
-        <link refid="systree_8h"/>
-      </node>
-      <node id="2638">
-        <label>sysqueue.h</label>
-        <link refid="sysqueue_8h"/>
-      </node>
-      <node id="2632">
+      <node id="137">
         <label>sbfMw.h</label>
         <link refid="sbf_mw_8h"/>
-        <childnode refid="2633" relation="include">
+        <childnode refid="138" relation="include">
         </childnode>
-        <childnode refid="2643" relation="include">
+        <childnode refid="139" relation="include">
         </childnode>
-        <childnode refid="2644" relation="include">
+        <childnode refid="140" relation="include">
         </childnode>
-        <childnode refid="2645" relation="include">
+        <childnode refid="141" relation="include">
         </childnode>
-        <childnode refid="2646" relation="include">
+        <childnode refid="142" relation="include">
         </childnode>
-        <childnode refid="2647" relation="include">
-        </childnode>
-      </node>
-      <node id="2641">
-        <label>sbfLog.h</label>
-        <link refid="sbf_log_8h"/>
-        <childnode refid="2633" relation="include">
+        <childnode refid="143" relation="include">
         </childnode>
       </node>
-      <node id="2646">
+      <node id="141">
+        <label>sbfKeyValue.h</label>
+      </node>
+      <node id="142">
         <label>sbfQueue.h</label>
         <link refid="sbf_queue_8h"/>
-        <childnode refid="2633" relation="include">
-        </childnode>
-      </node>
-      <node id="2642">
-        <label>sbfMemory.h</label>
-        <link refid="sbf_memory_8h"/>
-        <childnode refid="2633" relation="include">
+        <childnode refid="138" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="2652">
-        <label>core/sbfTimerPrivate.h</label>
-        <link refid="sbf_timer_private_8h"/>
-        <childnode refid="2653" relation="include">
-        </childnode>
-      </node>
-      <node id="2653">
-        <label>core/sbfTimer.c</label>
-        <link refid="sbf_timer_8c"/>
-      </node>
-    </invincdepgraph>
-    <innerclass refid="structsbf_timer_impl" prot="public">sbfTimerImpl</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -171,28 +95,28 @@
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_mw_8h" kindref="compound">sbfMw.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_mw_private_8h" kindref="compound">sbfMwPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_ref_count_8h" kindref="compound">sbfRefCount.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfRefCount.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">SBF_BEGIN_DECLS</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10" refid="structsbf_timer_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_timer_impl" kindref="compound">sbfTimerImpl</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfTimerImpl</highlight></codeline>
 <codeline lineno="11"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="12" refid="structsbf_timer_impl_1aeece9ca1d038468016aba842c43b7b79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_timer_8h_1ad4886ffe6e46a398e2c741ebd64fe552" kindref="member">sbfTimerCb</ref><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_timer_impl_1aeece9ca1d038468016aba842c43b7b79" kindref="member">mCb</ref>;</highlight></codeline>
-<codeline lineno="13" refid="structsbf_timer_impl_1aab2a38dbc883fa9b25efa2e163471bd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_timer_impl_1aab2a38dbc883fa9b25efa2e163471bd9" kindref="member">mClosure</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_timer_8h_1ad4886ffe6e46a398e2c741ebd64fe552" kindref="member">sbfTimerCb</ref><sp/><sp/><sp/><sp/><sp/>mCb;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mClosure;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="structsbf_timer_impl_1afd0ee3733e35211d4dd0a7880a80387f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_timer_impl_1afd0ee3733e35211d4dd0a7880a80387f" kindref="member">mInterval</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mInterval;</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17" refid="structsbf_timer_impl_1a9ecc46cda89b5c541e867869646b9168" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/><sp/><sp/><sp/><ref refid="structsbf_timer_impl_1a9ecc46cda89b5c541e867869646b9168" kindref="member">mThread</ref>;</highlight></codeline>
-<codeline lineno="18" refid="structsbf_timer_impl_1a5380973f4fc8e5f0005e22be157152e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_timer_impl_1a5380973f4fc8e5f0005e22be157152e1" kindref="member">mQueue</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/><sp/><sp/><sp/>mThread;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mQueue;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="structsbf_timer_impl_1ae34b6127c52d187c9a73fbee3b25ae3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_timer_impl_1ae34b6127c52d187c9a73fbee3b25ae3e" kindref="member">mDestroyed</ref>;</highlight></codeline>
-<codeline lineno="21" refid="structsbf_timer_impl_1aad5cc5cec2fe8e32cac63b2168377491" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref><sp/><sp/><sp/><sp/><ref refid="structsbf_timer_impl_1aad5cc5cec2fe8e32cac63b2168377491" kindref="member">mRefCount</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mDestroyed;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfRefCount<sp/><sp/><sp/><sp/>mRefCount;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="structsbf_timer_impl_1aacb84736518058ce4ed759649660ef8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">event<sp/><sp/><sp/><ref refid="structsbf_timer_impl_1aacb84736518058ce4ed759649660ef8e" kindref="member">mEvent</ref>;</highlight></codeline>
-<codeline lineno="24" refid="structsbf_timer_impl_1ae8375698915ccf841f4849fd393e3d01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/><ref refid="structsbf_timer_impl_1ae8375698915ccf841f4849fd393e3d01" kindref="member">mTime</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">event<sp/><sp/><sp/>mEvent;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>mTime;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">SBF_END_DECLS</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_TIMER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>

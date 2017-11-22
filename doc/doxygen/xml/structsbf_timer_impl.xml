@@ -83,7 +83,7 @@
         <location file="core/sbfTimerPrivate.h" line="20" column="1" bodyfile="core/sbfTimerPrivate.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_timer_impl_1aad5cc5cec2fe8e32cac63b2168377491" prot="public" static="no" mutable="no">
-        <type><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref></type>
+        <type>sbfRefCount</type>
         <definition>sbfRefCount sbfTimerImpl::mRefCount</definition>
         <argsstring></argsstring>
         <name>mRefCount</name>
@@ -127,93 +127,35 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="236">
+      <node id="41">
         <label>sbfQueueImpl</label>
         <link refid="structsbf_queue_impl"/>
-        <childnode refid="235" relation="usage">
-          <edgelabel>mRefCount</edgelabel>
-        </childnode>
-        <childnode refid="237" relation="usage">
-          <edgelabel>mPool</edgelabel>
-        </childnode>
-        <childnode refid="233" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
       </node>
-      <node id="231">
+      <node id="39">
         <label>sbfMwThreadImpl</label>
         <link refid="structsbf_mw_thread_impl"/>
-        <childnode refid="232" relation="usage">
+        <childnode refid="40" relation="usage">
           <edgelabel>mParent</edgelabel>
         </childnode>
       </node>
-      <node id="235">
-        <label>sbfRefCount</label>
-        <link refid="structsbf_ref_count"/>
-      </node>
-      <node id="238">
-        <label>sbfPoolCountImpl</label>
-        <link refid="structsbf_pool_count_impl"/>
-      </node>
-      <node id="232">
+      <node id="40">
         <label>sbfMwImpl</label>
         <link refid="structsbf_mw_impl"/>
-        <childnode refid="231" relation="usage">
+        <childnode refid="39" relation="usage">
           <edgelabel>mThreads</edgelabel>
         </childnode>
-        <childnode refid="233" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
       </node>
-      <node id="239">
-        <label>sbfPoolItemImpl</label>
-        <link refid="structsbf_pool_item_impl"/>
-        <childnode refid="239" relation="usage">
-          <edgelabel>mNext</edgelabel>
-        </childnode>
-        <childnode refid="237" relation="usage">
-          <edgelabel>mPool</edgelabel>
-        </childnode>
-      </node>
-      <node id="234">
-        <label>sbfLogFileImpl</label>
-        <link refid="structsbf_log_file_impl"/>
-      </node>
-      <node id="233">
-        <label>sbfLogImpl</label>
-        <link refid="structsbf_log_impl"/>
-        <childnode refid="233" relation="usage">
-          <edgelabel>mHookCb</edgelabel>
-        </childnode>
-        <childnode refid="234" relation="usage">
-          <edgelabel>mFile</edgelabel>
-        </childnode>
-      </node>
-      <node id="230">
+      <node id="38">
         <label>sbfTimerImpl</label>
         <link refid="structsbf_timer_impl"/>
-        <childnode refid="231" relation="usage">
+        <childnode refid="39" relation="usage">
           <edgelabel>mThread</edgelabel>
         </childnode>
-        <childnode refid="235" relation="usage">
-          <edgelabel>mRefCount</edgelabel>
-        </childnode>
-        <childnode refid="230" relation="usage">
+        <childnode refid="38" relation="usage">
           <edgelabel>mCb</edgelabel>
         </childnode>
-        <childnode refid="236" relation="usage">
+        <childnode refid="41" relation="usage">
           <edgelabel>mQueue</edgelabel>
-        </childnode>
-      </node>
-      <node id="237">
-        <label>sbfPoolImpl</label>
-        <link refid="structsbf_pool_impl"/>
-        <childnode refid="238" relation="usage">
-          <edgelabel>mCount</edgelabel>
-        </childnode>
-        <childnode refid="239" relation="usage">
-          <edgelabel>mFree</edgelabel>
-          <edgelabel>mAvailable</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>

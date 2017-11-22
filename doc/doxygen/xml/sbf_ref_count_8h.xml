@@ -3,437 +3,245 @@
   <compounddef id="sbf_ref_count_8h" kind="file" language="C++">
     <compoundname>sbfRefCount.h</compoundname>
     <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
-    <includedby refid="sbf_buffer_8h" local="yes">common/sbfBuffer.h</includedby>
-    <includedby refid="sbf_tcp_connection_private_8h" local="yes">common/sbfTcpConnectionPrivate.h</includedby>
-    <includedby refid="sbf_tcp_listener_private_8h" local="yes">common/sbfTcpListenerPrivate.h</includedby>
-    <includedby refid="sbf_event_private_8h" local="yes">core/sbfEventPrivate.h</includedby>
-    <includedby refid="sbf_hi_res_timer_private_8h" local="yes">core/sbfHiResTimerPrivate.h</includedby>
-    <includedby refid="sbf_queue_private_8h" local="yes">core/sbfQueuePrivate.h</includedby>
-    <includedby refid="sbf_timer_private_8h" local="yes">core/sbfTimerPrivate.h</includedby>
-    <includedby refid="sbf_request_reply_private_8h" local="yes">requestreply/sbfRequestReplyPrivate.h</includedby>
+    <includedby refid="sbf_buffer_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/common/sbfBuffer.h</includedby>
+    <includedby refid="sbf_tcp_connection_private_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/common/sbfTcpConnectionPrivate.h</includedby>
+    <includedby refid="sbf_tcp_listener_private_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/common/sbfTcpListenerPrivate.h</includedby>
+    <includedby refid="sbf_event_private_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/core/sbfEventPrivate.h</includedby>
+    <includedby refid="sbf_hi_res_timer_private_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/core/sbfHiResTimerPrivate.h</includedby>
+    <includedby refid="sbf_queue_private_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/core/sbfQueuePrivate.h</includedby>
+    <includedby refid="sbf_timer_private_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/core/sbfTimerPrivate.h</includedby>
+    <includedby refid="sbf_request_reply_private_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/requestreply/sbfRequestReplyPrivate.h</includedby>
     <incdepgraph>
-      <node id="1436">
+      <node id="730">
         <label>event.h</label>
       </node>
-      <node id="1435">
+      <node id="729">
         <label>sbfVersion.h</label>
         <link refid="sbf_version_8h"/>
       </node>
-      <node id="1437">
+      <node id="731">
         <label>syshash.h</label>
         <link refid="syshash_8h"/>
-        <childnode refid="1438" relation="include">
+        <childnode refid="732" relation="include">
         </childnode>
       </node>
-      <node id="1441">
+      <node id="735">
         <label>sbfFatal.h</label>
         <link refid="sbf_fatal_8h"/>
-        <childnode refid="1434" relation="include">
+        <childnode refid="728" relation="include">
         </childnode>
       </node>
-      <node id="1438">
+      <node id="732">
         <label>sys/types.h</label>
       </node>
-      <node id="1433">
-        <label>common/sbfRefCount.h</label>
+      <node id="727">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfRefCount.h</label>
         <link refid="sbf_ref_count_8h"/>
-        <childnode refid="1434" relation="include">
+        <childnode refid="728" relation="include">
         </childnode>
       </node>
-      <node id="1434">
+      <node id="728">
         <label>sbfCommon.h</label>
         <link refid="sbf_common_8h"/>
-        <childnode refid="1435" relation="include">
+        <childnode refid="729" relation="include">
         </childnode>
-        <childnode refid="1436" relation="include">
+        <childnode refid="730" relation="include">
         </childnode>
-        <childnode refid="1437" relation="include">
+        <childnode refid="731" relation="include">
         </childnode>
-        <childnode refid="1439" relation="include">
+        <childnode refid="733" relation="include">
         </childnode>
-        <childnode refid="1440" relation="include">
+        <childnode refid="734" relation="include">
         </childnode>
-        <childnode refid="1441" relation="include">
+        <childnode refid="735" relation="include">
         </childnode>
-        <childnode refid="1442" relation="include">
+        <childnode refid="736" relation="include">
         </childnode>
-        <childnode refid="1443" relation="include">
+        <childnode refid="737" relation="include">
         </childnode>
       </node>
-      <node id="1440">
+      <node id="734">
         <label>systree.h</label>
         <link refid="systree_8h"/>
       </node>
-      <node id="1439">
+      <node id="733">
         <label>sysqueue.h</label>
         <link refid="sysqueue_8h"/>
       </node>
-      <node id="1442">
+      <node id="736">
         <label>sbfLog.h</label>
         <link refid="sbf_log_8h"/>
-        <childnode refid="1434" relation="include">
+        <childnode refid="728" relation="include">
         </childnode>
       </node>
-      <node id="1443">
+      <node id="737">
         <label>sbfMemory.h</label>
         <link refid="sbf_memory_8h"/>
-        <childnode refid="1434" relation="include">
+        <childnode refid="728" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1487">
-        <label>core/sbfHiResTimerPrivate.h</label>
+      <node id="758">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/core/sbfHiResTimerPrivate.h</label>
         <link refid="sbf_hi_res_timer_private_8h"/>
-        <childnode refid="1488" relation="include">
-        </childnode>
-        <childnode refid="1489" relation="include">
+        <childnode refid="759" relation="include">
         </childnode>
       </node>
-      <node id="1493">
-        <label>requestreply/sbfRequestReplyPrivate.h</label>
+      <node id="761">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/requestreply/sbfRequestReplyPrivate.h</label>
         <link refid="sbf_request_reply_private_8h"/>
-        <childnode refid="1463" relation="include">
-        </childnode>
-        <childnode refid="1464" relation="include">
-        </childnode>
-        <childnode refid="1465" relation="include">
-        </childnode>
       </node>
-      <node id="1489">
-        <label>core/sbfQueuePrivate.h</label>
+      <node id="759">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/core/sbfQueuePrivate.h</label>
         <link refid="sbf_queue_private_8h"/>
-        <childnode refid="1488" relation="include">
-        </childnode>
-        <childnode refid="1490" relation="include">
-        </childnode>
       </node>
-      <node id="1453">
-        <label>handlers/common/sbfCommonHandler.c</label>
-        <link refid="sbf_common_handler_8c"/>
-      </node>
-      <node id="1458">
-        <label>handlers/common/sbfCommonHandler.h</label>
+      <node id="746">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/common/sbfCommonHandler.h</label>
         <link refid="sbf_common_handler_8h"/>
-        <childnode refid="1453" relation="include">
-        </childnode>
-        <childnode refid="1454" relation="include">
+        <childnode refid="743" relation="include">
         </childnode>
       </node>
-      <node id="1480">
-        <label>transport/sbfTportWeight.c</label>
-        <link refid="sbf_tport_weight_8c"/>
-      </node>
-      <node id="1465">
-        <label>requestreply/sbfRequestSub.c</label>
-        <link refid="sbf_request_sub_8c"/>
-      </node>
-      <node id="1461">
-        <label>requestreply/sbfRequestSub.h</label>
+      <node id="750">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/requestreply/sbfRequestSub.h</label>
         <link refid="sbf_request_sub_8h"/>
-        <childnode refid="1462" relation="include">
+        <childnode refid="749" relation="include">
         </childnode>
       </node>
-      <node id="1466">
-        <label>tools/replier/sbfReplier.c</label>
-        <link refid="sbf_replier_8c"/>
-      </node>
-      <node id="1476">
-        <label>transport/sbfSub.c</label>
-        <link refid="sbf_sub_8c"/>
-      </node>
-      <node id="1482">
-        <label>transport/sbfSub.h</label>
+      <node id="754">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfSub.h</label>
         <link refid="sbf_sub_8h"/>
-        <childnode refid="1457" relation="include">
+        <childnode refid="745" relation="include">
         </childnode>
       </node>
-      <node id="1477">
-        <label>transport/sbfTopic.c</label>
-        <link refid="sbf_topic_8c"/>
-      </node>
-      <node id="1452">
-        <label>handlers/common/sbfCommonHandlerPrivate.h</label>
+      <node id="742">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/common/sbfCommonHandlerPrivate.h</label>
         <link refid="sbf_common_handler_private_8h"/>
-        <childnode refid="1453" relation="include">
-        </childnode>
       </node>
-      <node id="1484">
-        <label>common/sbfTcpListenerPrivate.h</label>
+      <node id="756">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfTcpListenerPrivate.h</label>
         <link refid="sbf_tcp_listener_private_8h"/>
-        <childnode refid="1449" relation="include">
-        </childnode>
       </node>
-      <node id="1455">
-        <label>handlers/udp/sbfUdpHandler.c</label>
-        <link refid="sbf_udp_handler_8c"/>
-      </node>
-      <node id="1454">
-        <label>handlers/udp/sbfUdpHandler.h</label>
+      <node id="743">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/udp/sbfUdpHandler.h</label>
         <link refid="sbf_udp_handler_8h"/>
-        <childnode refid="1455" relation="include">
-        </childnode>
       </node>
-      <node id="1485">
-        <label>core/sbfEventPrivate.h</label>
+      <node id="757">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/core/sbfEventPrivate.h</label>
         <link refid="sbf_event_private_8h"/>
-        <childnode refid="1486" relation="include">
-        </childnode>
       </node>
-      <node id="1469">
-        <label>tools/publisher/sbfPublisher.c</label>
-        <link refid="sbf_publisher_8c"/>
-      </node>
-      <node id="1486">
-        <label>core/sbfEvent.c</label>
-        <link refid="sbf_event_8c"/>
-      </node>
-      <node id="1471">
-        <label>transport/sbfBatch.c</label>
-        <link refid="sbf_batch_8c"/>
-      </node>
-      <node id="1456">
-        <label>transport/sbfBatch.h</label>
+      <node id="744">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfBatch.h</label>
         <link refid="sbf_batch_8h"/>
-        <childnode refid="1457" relation="include">
+        <childnode refid="745" relation="include">
         </childnode>
       </node>
-      <node id="1467">
-        <label>tools/requester/sbfRequester.c</label>
-        <link refid="sbf_requester_8c"/>
-      </node>
-      <node id="1446">
-        <label>common/sbfBuffer.c</label>
-        <link refid="sbf_buffer_8c"/>
-      </node>
-      <node id="1445">
-        <label>common/sbfBuffer.h</label>
+      <node id="739">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfBuffer.h</label>
         <link refid="sbf_buffer_8h"/>
-        <childnode refid="1446" relation="include">
+        <childnode refid="740" relation="include">
         </childnode>
-        <childnode refid="1447" relation="include">
+        <childnode refid="741" relation="include">
         </childnode>
-        <childnode refid="1450" relation="include">
+        <childnode refid="744" relation="include">
         </childnode>
-        <childnode refid="1456" relation="include">
+        <childnode refid="753" relation="include">
         </childnode>
-        <childnode refid="1481" relation="include">
-        </childnode>
-        <childnode refid="1482" relation="include">
+        <childnode refid="754" relation="include">
         </childnode>
       </node>
-      <node id="1488">
-        <label>core/sbfHiResTimer.c</label>
-        <link refid="sbf_hi_res_timer_8c"/>
-      </node>
-      <node id="1483">
-        <label>common/sbfTcpConnectionPrivate.h</label>
+      <node id="755">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfTcpConnectionPrivate.h</label>
         <link refid="sbf_tcp_connection_private_8h"/>
-        <childnode refid="1448" relation="include">
-        </childnode>
-        <childnode refid="1449" relation="include">
-        </childnode>
       </node>
-      <node id="1470">
-        <label>tools/subscriber/sbfSubscriber.c</label>
-        <link refid="sbf_subscriber_8c"/>
-      </node>
-      <node id="1460">
-        <label>handlers/tcpmesh/sbfTcpMeshHandler.c</label>
-        <link refid="sbf_tcp_mesh_handler_8c"/>
-      </node>
-      <node id="1459">
-        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+      <node id="747">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/tcpmesh/sbfTcpMeshHandler.h</label>
         <link refid="sbf_tcp_mesh_handler_8h"/>
-        <childnode refid="1460" relation="include">
-        </childnode>
       </node>
-      <node id="1475">
-        <label>transport/sbfPub.c</label>
-        <link refid="sbf_pub_8c"/>
-      </node>
-      <node id="1481">
-        <label>transport/sbfPub.h</label>
+      <node id="753">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfPub.h</label>
         <link refid="sbf_pub_8h"/>
-        <childnode refid="1457" relation="include">
+        <childnode refid="745" relation="include">
         </childnode>
       </node>
-      <node id="1448">
-        <label>common/sbfTcpConnection.c</label>
-        <link refid="sbf_tcp_connection_8c"/>
-      </node>
-      <node id="1491">
-        <label>core/sbfTimerPrivate.h</label>
+      <node id="760">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/core/sbfTimerPrivate.h</label>
         <link refid="sbf_timer_private_8h"/>
-        <childnode refid="1492" relation="include">
-        </childnode>
       </node>
-      <node id="1447">
-        <label>common/sbfTcpConnection.h</label>
+      <node id="740">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfTcpConnection.h</label>
         <link refid="sbf_tcp_connection_8h"/>
-        <childnode refid="1448" relation="include">
-        </childnode>
-        <childnode refid="1449" relation="include">
-        </childnode>
       </node>
-      <node id="1464">
-        <label>requestreply/sbfRequestReply.c</label>
-        <link refid="sbf_request_reply_8c"/>
-      </node>
-      <node id="1444">
-        <label>common/sbfRefCount.h</label>
+      <node id="738">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfRefCount.h</label>
         <link refid="sbf_ref_count_8h"/>
-        <childnode refid="1445" relation="include">
+        <childnode refid="739" relation="include">
         </childnode>
-        <childnode refid="1483" relation="include">
+        <childnode refid="755" relation="include">
         </childnode>
-        <childnode refid="1484" relation="include">
+        <childnode refid="756" relation="include">
         </childnode>
-        <childnode refid="1485" relation="include">
+        <childnode refid="757" relation="include">
         </childnode>
-        <childnode refid="1487" relation="include">
+        <childnode refid="758" relation="include">
         </childnode>
-        <childnode refid="1489" relation="include">
+        <childnode refid="759" relation="include">
         </childnode>
-        <childnode refid="1491" relation="include">
+        <childnode refid="760" relation="include">
         </childnode>
-        <childnode refid="1493" relation="include">
+        <childnode refid="761" relation="include">
         </childnode>
       </node>
-      <node id="1462">
-        <label>requestreply/sbfRequestReply.h</label>
+      <node id="749">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/requestreply/sbfRequestReply.h</label>
         <link refid="sbf_request_reply_8h"/>
-        <childnode refid="1463" relation="include">
-        </childnode>
-        <childnode refid="1464" relation="include">
-        </childnode>
-        <childnode refid="1465" relation="include">
-        </childnode>
-        <childnode refid="1466" relation="include">
-        </childnode>
-        <childnode refid="1467" relation="include">
-        </childnode>
       </node>
-      <node id="1474">
-        <label>transport/sbfHandler.c</label>
-        <link refid="sbf_handler_8c"/>
-      </node>
-      <node id="1472">
-        <label>transport/sbfHandler.h</label>
+      <node id="751">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h</label>
         <link refid="sbf_handler_8h"/>
-        <childnode refid="1452" relation="include">
+        <childnode refid="742" relation="include">
         </childnode>
-        <childnode refid="1459" relation="include">
+        <childnode refid="747" relation="include">
         </childnode>
-        <childnode refid="1454" relation="include">
+        <childnode refid="743" relation="include">
         </childnode>
-        <childnode refid="1473" relation="include">
+        <childnode refid="752" relation="include">
         </childnode>
       </node>
-      <node id="1492">
-        <label>core/sbfTimer.c</label>
-        <link refid="sbf_timer_8c"/>
-      </node>
-      <node id="1451">
-        <label>common/sbfUdpMulticast.c</label>
-        <link refid="sbf_udp_multicast_8c"/>
-      </node>
-      <node id="1473">
-        <label>transport/sbfTportPrivate.h</label>
+      <node id="752">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTportPrivate.h</label>
         <link refid="sbf_tport_private_8h"/>
-        <childnode refid="1471" relation="include">
-        </childnode>
-        <childnode refid="1474" relation="include">
-        </childnode>
-        <childnode refid="1475" relation="include">
-        </childnode>
-        <childnode refid="1476" relation="include">
-        </childnode>
-        <childnode refid="1477" relation="include">
-        </childnode>
-        <childnode refid="1478" relation="include">
-        </childnode>
-        <childnode refid="1479" relation="include">
-        </childnode>
-        <childnode refid="1480" relation="include">
-        </childnode>
       </node>
-      <node id="1450">
-        <label>common/sbfUdpMulticast.h</label>
+      <node id="741">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfUdpMulticast.h</label>
         <link refid="sbf_udp_multicast_8h"/>
-        <childnode refid="1451" relation="include">
+        <childnode refid="742" relation="include">
         </childnode>
-        <childnode refid="1452" relation="include">
-        </childnode>
-        <childnode refid="1454" relation="include">
+        <childnode refid="743" relation="include">
         </childnode>
       </node>
-      <node id="1479">
-        <label>transport/sbfTportFragments.c</label>
-        <link refid="sbf_tport_fragments_8c"/>
-      </node>
-      <node id="1478">
-        <label>transport/sbfTport.c</label>
-        <link refid="sbf_tport_8c"/>
-      </node>
-      <node id="1457">
-        <label>transport/sbfTport.h</label>
+      <node id="745">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTport.h</label>
         <link refid="sbf_tport_8h"/>
-        <childnode refid="1458" relation="include">
+        <childnode refid="746" relation="include">
         </childnode>
-        <childnode refid="1452" relation="include">
+        <childnode refid="742" relation="include">
         </childnode>
-        <childnode refid="1459" relation="include">
+        <childnode refid="747" relation="include">
         </childnode>
-        <childnode refid="1454" relation="include">
+        <childnode refid="743" relation="include">
         </childnode>
-        <childnode refid="1461" relation="include">
+        <childnode refid="748" relation="include">
         </childnode>
-        <childnode refid="1468" relation="include">
+        <childnode refid="750" relation="include">
         </childnode>
-        <childnode refid="1469" relation="include">
-        </childnode>
-        <childnode refid="1466" relation="include">
-        </childnode>
-        <childnode refid="1467" relation="include">
-        </childnode>
-        <childnode refid="1470" relation="include">
-        </childnode>
-        <childnode refid="1471" relation="include">
-        </childnode>
-        <childnode refid="1472" relation="include">
-        </childnode>
-        <childnode refid="1474" relation="include">
-        </childnode>
-        <childnode refid="1475" relation="include">
-        </childnode>
-        <childnode refid="1476" relation="include">
-        </childnode>
-        <childnode refid="1477" relation="include">
-        </childnode>
-        <childnode refid="1478" relation="include">
-        </childnode>
-        <childnode refid="1479" relation="include">
-        </childnode>
-        <childnode refid="1480" relation="include">
+        <childnode refid="751" relation="include">
         </childnode>
       </node>
-      <node id="1449">
-        <label>common/sbfTcpListener.c</label>
-        <link refid="sbf_tcp_listener_8c"/>
-      </node>
-      <node id="1490">
-        <label>core/sbfQueue.c</label>
-        <link refid="sbf_queue_8c"/>
-      </node>
-      <node id="1463">
-        <label>requestreply/sbfRequestPub.c</label>
-        <link refid="sbf_request_pub_8c"/>
-      </node>
-      <node id="1468">
-        <label>requestreply/sbfRequestPub.h</label>
+      <node id="748">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/requestreply/sbfRequestPub.h</label>
         <link refid="sbf_request_pub_8h"/>
-        <childnode refid="1462" relation="include">
+        <childnode refid="749" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -449,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfRefCount.h" line="10" column="9" bodyfile="common/sbfRefCount.h" bodystart="10" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfRefCount.h" line="10" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfRefCount.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -472,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfRefCount.h" line="13" column="1" bodyfile="common/sbfRefCount.h" bodystart="13" bodyend="16"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfRefCount.h" line="13" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfRefCount.h" bodystart="13" bodyend="16"/>
       </memberdef>
       <memberdef kind="function" id="sbf_ref_count_8h_1a300932b3c2f9d26b09a5cc2933ff1dc2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> void</type>
@@ -489,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfRefCount.h" line="19" column="1" bodyfile="common/sbfRefCount.h" bodystart="19" bodyend="26"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfRefCount.h" line="19" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfRefCount.h" bodystart="19" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="sbf_ref_count_8h_1a04bbbe29b9183744a20232e9939b0f25" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> int</type>
@@ -506,7 +314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfRefCount.h" line="29" column="1" bodyfile="common/sbfRefCount.h" bodystart="29" bodyend="36"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfRefCount.h" line="29" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfRefCount.h" bodystart="29" bodyend="36"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -555,6 +363,6 @@
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_REFCOUNT_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="common/sbfRefCount.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfRefCount.h"/>
   </compounddef>
 </doxygen>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="137" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="137" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="137" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="137" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtimespec_1ae3c7510dafa8cbcaede866ed13c99683" prot="public" static="no" mutable="no">
         <type>long</type>
@@ -28,14 +28,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="138" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="138" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="138" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="138" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="common/sbfCommonWin32.h" line="136" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="135" bodyend="139"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="136" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="135" bodyend="139"/>
     <listofallmembers>
       <member refid="structtimespec_1ae3c7510dafa8cbcaede866ed13c99683" prot="public" virt="non-virtual"><scope>timespec</scope><name>tv_nsec</name></member>
       <member refid="structtimespec_1afc3302668d7cb5952f590da69fdd4955" prot="public" virt="non-virtual"><scope>timespec</scope><name>tv_sec</name></member>

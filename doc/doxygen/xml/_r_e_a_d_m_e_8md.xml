@@ -72,7 +72,7 @@
 <codeline><highlight class="normal">sbfPub<sp/>pub<sp/>=<sp/>sbfPub_create<sp/>(tport,<sp/>queue,<sp/>&quot;topic&quot;,<sp/>NULL,<sp/>NULL);</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">You<sp/>can<sp/>find<sp/>the<sp/>whole<sp/>example<sp/>of<sp/>the<sp/>publisher<sp/><sp/>[here](https://gitlab.com/neueda/sbf/tree/master/tools/publisher)</highlight></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>find<sp/>the<sp/>whole<sp/>example<sp/>of<sp/>the<sp/>publisher<sp/><sp/>[here](./tools/publisher)</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>Subscriber<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">Now<sp/>let&apos;s<sp/>see<sp/>how<sp/>the<sp/>subscriber<sp/>works.</highlight></codeline>
 <codeline></codeline>
@@ -134,7 +134,7 @@
 <codeline><highlight class="normal">sbfPub<sp/>pub<sp/>=<sp/>sbfPub_create<sp/>(tport,<sp/>queue,<sp/>&quot;topic&quot;,<sp/>NULL,<sp/>NULL);</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">You<sp/>can<sp/>find<sp/>the<sp/>whole<sp/>example<sp/>of<sp/>the<sp/>subscriber<sp/><sp/><sp/>[here](https://gitlab.com/neueda/sbf/tree/master/tools/subscriber).</highlight></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>find<sp/>the<sp/>whole<sp/>example<sp/>of<sp/>the<sp/>subscriber<sp/>[here](./tools/subscriber).</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Requester<sp/>replier<sp/>example</highlight></codeline>
 <codeline><highlight class="normal">&gt;<sp/>TBD</highlight></codeline>
@@ -179,6 +179,24 @@
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline><highlight class="normal">The<sp/>requester<sp/>sends<sp/>messages<sp/>and<sp/>the<sp/>replier<sp/>reads<sp/>the<sp/>message<sp/>and<sp/>replies.</highlight></codeline>
 <codeline><highlight class="normal">Something<sp/>similar<sp/>for<sp/>the<sp/>publisher<sp/>and<sp/>subscriber.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>API</highlight></codeline>
+<codeline><highlight class="normal">Here<sp/>you<sp/>are<sp/>the<sp/>list<sp/>of<sp/>modules<sp/>the<sp/>API<sp/>offers<sp/>to<sp/>build<sp/>your<sp/>transport</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Core</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Event](@ref<sp/>sbfEvent.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Timers</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>[Timer](@ref<sp/>sbfTimer.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>[Hi<sp/>resolution<sp/>timer](@ref<sp/>sbfHiResTimer.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Queue](@ref<sp/>sbfQueue.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Middleware](@ref<sp/>sbfMw.h)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Handlers</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Common<sp/>handler](@ref<sp/>sbfCommonHandler.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[TCP<sp/>mesh<sp/>handler](@ref<sp/>sbfTcpMeshHandler.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[UDP<sp/>handler](@ref<sp/>sbfUdpHandler.h)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Request<sp/>/<sp/>reply</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Request<sp/>publisher](@ref<sp/>sbfRequestPub.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Request<sp/>subscriber](@ref<sp/>sbfRequestSub.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Request<sp/>reply](@ref<sp/>sbfRequestReply.h)</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">#<sp/>Contribute</highlight></codeline>
 <codeline><highlight class="normal">&gt;<sp/>TBD</highlight></codeline>

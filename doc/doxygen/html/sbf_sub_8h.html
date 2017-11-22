@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SBF: transport/sbfSub.h File Reference</title>
+<title>SBF: C:/Users/Neueda/Documents/workspace/sbf/transport/sbfSub.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('sbf_sub_8h.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a2df9639af5595d3f96296d1432b80cba"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structsbf_sub_impl.html">sbfSubImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a></td></tr>
+<tr class="memitem:a2df9639af5595d3f96296d1432b80cba"><td class="memItemLeft" align="right" valign="top">typedef struct sbfSubImpl *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a></td></tr>
 <tr class="separator:a2df9639af5595d3f96296d1432b80cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21874f3f038f352bd283fc2dffff1c2c"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_sub_8h.html#a21874f3f038f352bd283fc2dffff1c2c">sbfSubReadyCb</a>) (<a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a> sub, void *closure)</td></tr>
 <tr class="separator:a21874f3f038f352bd283fc2dffff1c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,13 +104,13 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2ba5262c16e06c206c170bc2bdbbcfde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_sub_8h.html#a2ba5262c16e06c206c170bc2bdbbcfde">sbfSub_create</a> (struct <a class="el" href="structsbf_tport_impl.html">sbfTportImpl</a> *tport, <a class="el" href="sbf_queue_8h.html#aa8b64a26e53f1e9c6eef9d3379d805e3">sbfQueue</a> queue, const char *topic, <a class="el" href="sbf_sub_8h.html#a21874f3f038f352bd283fc2dffff1c2c">sbfSubReadyCb</a> readyCb, <a class="el" href="sbf_sub_8h.html#a2f0fc2e02f85c60bea98943659ccbb4d">sbfSubMessageCb</a> messageCb, void *closure)</td></tr>
+<tr class="memitem:a2ba5262c16e06c206c170bc2bdbbcfde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_sub_8h.html#a2ba5262c16e06c206c170bc2bdbbcfde">sbfSub_create</a> (struct sbfTportImpl *tport, <a class="el" href="sbf_queue_8h.html#aa8b64a26e53f1e9c6eef9d3379d805e3">sbfQueue</a> queue, const char *topic, <a class="el" href="sbf_sub_8h.html#a21874f3f038f352bd283fc2dffff1c2c">sbfSubReadyCb</a> readyCb, <a class="el" href="sbf_sub_8h.html#a2f0fc2e02f85c60bea98943659ccbb4d">sbfSubMessageCb</a> messageCb, void *closure)</td></tr>
 <tr class="separator:a2ba5262c16e06c206c170bc2bdbbcfde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52ee27e0190a813dad71e9b89573a74d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_sub_8h.html#a52ee27e0190a813dad71e9b89573a74d">sbfSub_destroy</a> (<a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a> sub)</td></tr>
 <tr class="separator:a52ee27e0190a813dad71e9b89573a74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8658afac567248ddda4fbf93bcd14a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_sub_8h.html#a7b8658afac567248ddda4fbf93bcd14a">sbfSub_setQueueBypass</a> (<a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a> sub, int set)</td></tr>
 <tr class="separator:a7b8658afac567248ddda4fbf93bcd14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81974de3ef0d790b1b3ed4da9af36bd6"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsbf_topic_impl.html">sbfTopicImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_sub_8h.html#a81974de3ef0d790b1b3ed4da9af36bd6">sbfSub_getTopic</a> (<a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a> sub)</td></tr>
+<tr class="memitem:a81974de3ef0d790b1b3ed4da9af36bd6"><td class="memItemLeft" align="right" valign="top">struct sbfTopicImpl *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_sub_8h.html#a81974de3ef0d790b1b3ed4da9af36bd6">sbfSub_getTopic</a> (<a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a> sub)</td></tr>
 <tr class="separator:a81974de3ef0d790b1b3ed4da9af36bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -121,7 +121,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structsbf_sub_impl.html">sbfSubImpl</a>* <a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a></td>
+          <td class="memname">typedef struct sbfSubImpl* <a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -172,7 +172,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a> sbfSub_create </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structsbf_tport_impl.html">sbfTportImpl</a> *&#160;</td>
+          <td class="paramtype">struct sbfTportImpl *&#160;</td>
           <td class="paramname"><em>tport</em>, </td>
         </tr>
         <tr>
@@ -231,8 +231,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sbf_sub_8c_source.html#l00326">326</a> of file <a class="el" href="sbf_sub_8c_source.html">sbfSub.c</a>.</p>
-
 </div>
 </div>
 <a id="a81974de3ef0d790b1b3ed4da9af36bd6"></a>
@@ -242,7 +240,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structsbf_topic_impl.html">sbfTopicImpl</a>* sbfSub_getTopic </td>
+          <td class="memname">struct sbfTopicImpl* sbfSub_getTopic </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="sbf_sub_8h.html#a2df9639af5595d3f96296d1432b80cba">sbfSub</a>&#160;</td>
           <td class="paramname"><em>sub</em></td><td>)</td>
@@ -250,8 +248,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sbf_sub_8c_source.html#l00343">343</a> of file <a class="el" href="sbf_sub_8c_source.html">sbfSub.c</a>.</p>
 
 </div>
 </div>
@@ -280,8 +276,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sbf_sub_8c_source.html#l00349">349</a> of file <a class="el" href="sbf_sub_8c_source.html">sbfSub.c</a>.</p>
 
 </div>
 </div>

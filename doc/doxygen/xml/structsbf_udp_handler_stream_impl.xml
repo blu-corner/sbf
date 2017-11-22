@@ -31,7 +31,7 @@
         <location file="handlers/udp/sbfUdpHandler.h" line="43" column="1" bodyfile="handlers/udp/sbfUdpHandler.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_udp_handler_stream_impl_1a02bad5461dc1c3a6696cc4616b53a2ce" prot="public" static="no" mutable="no">
-        <type><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref></type>
+        <type>sbfHandlerHandle</type>
         <definition>sbfHandlerHandle sbfUdpHandlerStreamImpl::mHandle</definition>
         <argsstring></argsstring>
         <name>mHandle</name>
@@ -44,7 +44,7 @@
         <location file="handlers/udp/sbfUdpHandler.h" line="44" column="1" bodyfile="handlers/udp/sbfUdpHandler.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_udp_handler_stream_impl_1ab75edc6bfcfc5b90fdac134d2c522a64" prot="public" static="no" mutable="no">
-        <type><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref></type>
+        <type>sbfTopicType</type>
         <definition>sbfTopicType sbfUdpHandlerStreamImpl::mType</definition>
         <argsstring></argsstring>
         <name>mType</name>
@@ -70,7 +70,7 @@
         <location file="handlers/udp/sbfUdpHandler.h" line="47" column="1" bodyfile="handlers/udp/sbfUdpHandler.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_udp_handler_stream_impl_1ace225d5735994b40a6eb7be91aef1695" prot="public" static="no" mutable="no">
-        <type><ref refid="sbf_udp_multicast_8h_1ae52e3c214bf4f6bd5af4e2df923de670" kindref="member">sbfUdpMulticast</ref></type>
+        <type>sbfUdpMulticast</type>
         <definition>sbfUdpMulticast sbfUdpHandlerStreamImpl::mSocket</definition>
         <argsstring></argsstring>
         <name>mSocket</name>
@@ -96,7 +96,7 @@
         <location file="handlers/udp/sbfUdpHandler.h" line="48" column="1" bodyfile="handlers/udp/sbfUdpHandler.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_udp_handler_stream_impl_1ad5f048c088f2443eea9d25503aec2ad8" prot="public" static="no" mutable="no">
-        <type><ref refid="sbf_handler_8h_1a5b047b3b44834708064523d3f20ae4c5" kindref="member">sbfHandlerAddStreamCompleteCb</ref></type>
+        <type>sbfHandlerAddStreamCompleteCb</type>
         <definition>sbfHandlerAddStreamCompleteCb sbfUdpHandlerStreamImpl::mAddStreamCompleteCb</definition>
         <argsstring></argsstring>
         <name>mAddStreamCompleteCb</name>
@@ -158,77 +158,25 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="278">
+      <node id="43">
         <label>sbfUdpHandlerStreamImpl</label>
         <link refid="structsbf_udp_handler_stream_impl"/>
-        <childnode refid="279" relation="usage">
+        <childnode refid="44" relation="usage">
           <edgelabel>mThread</edgelabel>
         </childnode>
-        <childnode refid="283" relation="usage">
-          <edgelabel>mSocket</edgelabel>
-        </childnode>
       </node>
-      <node id="283">
-        <label>sbfUdpMulticastImpl</label>
-        <link refid="structsbf_udp_multicast_impl"/>
-        <childnode refid="284" relation="usage">
-          <edgelabel>mPool</edgelabel>
-        </childnode>
-      </node>
-      <node id="279">
+      <node id="44">
         <label>sbfMwThreadImpl</label>
         <link refid="structsbf_mw_thread_impl"/>
-        <childnode refid="280" relation="usage">
+        <childnode refid="45" relation="usage">
           <edgelabel>mParent</edgelabel>
         </childnode>
       </node>
-      <node id="285">
-        <label>sbfPoolCountImpl</label>
-        <link refid="structsbf_pool_count_impl"/>
-      </node>
-      <node id="280">
+      <node id="45">
         <label>sbfMwImpl</label>
         <link refid="structsbf_mw_impl"/>
-        <childnode refid="279" relation="usage">
+        <childnode refid="44" relation="usage">
           <edgelabel>mThreads</edgelabel>
-        </childnode>
-        <childnode refid="281" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
-      </node>
-      <node id="286">
-        <label>sbfPoolItemImpl</label>
-        <link refid="structsbf_pool_item_impl"/>
-        <childnode refid="286" relation="usage">
-          <edgelabel>mNext</edgelabel>
-        </childnode>
-        <childnode refid="284" relation="usage">
-          <edgelabel>mPool</edgelabel>
-        </childnode>
-      </node>
-      <node id="282">
-        <label>sbfLogFileImpl</label>
-        <link refid="structsbf_log_file_impl"/>
-      </node>
-      <node id="281">
-        <label>sbfLogImpl</label>
-        <link refid="structsbf_log_impl"/>
-        <childnode refid="281" relation="usage">
-          <edgelabel>mHookCb</edgelabel>
-        </childnode>
-        <childnode refid="282" relation="usage">
-          <edgelabel>mFile</edgelabel>
-        </childnode>
-      </node>
-      <node id="284">
-        <label>sbfPoolImpl</label>
-        <link refid="structsbf_pool_impl"/>
-        <childnode refid="285" relation="usage">
-          <edgelabel>mCount</edgelabel>
-        </childnode>
-        <childnode refid="286" relation="usage">
-          <edgelabel>mFree</edgelabel>
-          <edgelabel>mAvailable</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>

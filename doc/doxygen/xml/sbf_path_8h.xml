@@ -3,185 +3,106 @@
   <compounddef id="sbf_path_8h" kind="file" language="C++">
     <compoundname>sbfPath.h</compoundname>
     <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
-    <includedby refid="sbf_log_file_private_8h" local="yes">common/sbfLogFilePrivate.h</includedby>
-    <includedby refid="sbf_path_8c" local="yes">common/sbfPath.c</includedby>
-    <includedby refid="sbf_properties_8h" local="yes">common/sbfProperties.h</includedby>
+    <includedby refid="sbf_log_file_private_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/common/sbfLogFilePrivate.h</includedby>
+    <includedby refid="sbf_properties_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/common/sbfProperties.h</includedby>
     <incdepgraph>
-      <node id="1213">
+      <node id="631">
         <label>event.h</label>
       </node>
-      <node id="1212">
+      <node id="630">
         <label>sbfVersion.h</label>
         <link refid="sbf_version_8h"/>
       </node>
-      <node id="1214">
+      <node id="632">
         <label>syshash.h</label>
         <link refid="syshash_8h"/>
-        <childnode refid="1215" relation="include">
+        <childnode refid="633" relation="include">
         </childnode>
       </node>
-      <node id="1218">
+      <node id="636">
         <label>sbfFatal.h</label>
         <link refid="sbf_fatal_8h"/>
-        <childnode refid="1211" relation="include">
+        <childnode refid="629" relation="include">
         </childnode>
       </node>
-      <node id="1215">
+      <node id="633">
         <label>sys/types.h</label>
       </node>
-      <node id="1210">
-        <label>common/sbfPath.h</label>
+      <node id="628">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfPath.h</label>
         <link refid="sbf_path_8h"/>
-        <childnode refid="1211" relation="include">
+        <childnode refid="629" relation="include">
         </childnode>
       </node>
-      <node id="1211">
+      <node id="629">
         <label>sbfCommon.h</label>
         <link refid="sbf_common_8h"/>
-        <childnode refid="1212" relation="include">
+        <childnode refid="630" relation="include">
         </childnode>
-        <childnode refid="1213" relation="include">
+        <childnode refid="631" relation="include">
         </childnode>
-        <childnode refid="1214" relation="include">
+        <childnode refid="632" relation="include">
         </childnode>
-        <childnode refid="1216" relation="include">
+        <childnode refid="634" relation="include">
         </childnode>
-        <childnode refid="1217" relation="include">
+        <childnode refid="635" relation="include">
         </childnode>
-        <childnode refid="1218" relation="include">
+        <childnode refid="636" relation="include">
         </childnode>
-        <childnode refid="1219" relation="include">
+        <childnode refid="637" relation="include">
         </childnode>
-        <childnode refid="1220" relation="include">
+        <childnode refid="638" relation="include">
         </childnode>
       </node>
-      <node id="1217">
+      <node id="635">
         <label>systree.h</label>
         <link refid="systree_8h"/>
       </node>
-      <node id="1216">
+      <node id="634">
         <label>sysqueue.h</label>
         <link refid="sysqueue_8h"/>
       </node>
-      <node id="1219">
+      <node id="637">
         <label>sbfLog.h</label>
         <link refid="sbf_log_8h"/>
-        <childnode refid="1211" relation="include">
+        <childnode refid="629" relation="include">
         </childnode>
       </node>
-      <node id="1220">
+      <node id="638">
         <label>sbfMemory.h</label>
         <link refid="sbf_memory_8h"/>
-        <childnode refid="1211" relation="include">
+        <childnode refid="629" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1226">
-        <label>common/sbfProperties.c</label>
-        <link refid="sbf_properties_8c"/>
-      </node>
-      <node id="1225">
-        <label>common/sbfProperties.h</label>
+      <node id="641">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfProperties.h</label>
         <link refid="sbf_properties_8h"/>
-        <childnode refid="1226" relation="include">
+        <childnode refid="642" relation="include">
         </childnode>
-        <childnode refid="1227" relation="include">
-        </childnode>
-        <childnode refid="1230" relation="include">
+        <childnode refid="643" relation="include">
         </childnode>
       </node>
-      <node id="1227">
-        <label>core/sbfQueuePrivate.h</label>
+      <node id="642">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/core/sbfQueuePrivate.h</label>
         <link refid="sbf_queue_private_8h"/>
-        <childnode refid="1228" relation="include">
-        </childnode>
-        <childnode refid="1229" relation="include">
-        </childnode>
       </node>
-      <node id="1238">
-        <label>transport/sbfTportWeight.c</label>
-        <link refid="sbf_tport_weight_8c"/>
-      </node>
-      <node id="1234">
-        <label>transport/sbfSub.c</label>
-        <link refid="sbf_sub_8c"/>
-      </node>
-      <node id="1235">
-        <label>transport/sbfTopic.c</label>
-        <link refid="sbf_topic_8c"/>
-      </node>
-      <node id="1231">
-        <label>transport/sbfBatch.c</label>
-        <link refid="sbf_batch_8c"/>
-      </node>
-      <node id="1228">
-        <label>core/sbfHiResTimer.c</label>
-        <link refid="sbf_hi_res_timer_8c"/>
-      </node>
-      <node id="1233">
-        <label>transport/sbfPub.c</label>
-        <link refid="sbf_pub_8c"/>
-      </node>
-      <node id="1224">
-        <label>common/sbfPath.c</label>
-        <link refid="sbf_path_8c"/>
-      </node>
-      <node id="1221">
-        <label>common/sbfPath.h</label>
+      <node id="639">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfPath.h</label>
         <link refid="sbf_path_8h"/>
-        <childnode refid="1222" relation="include">
+        <childnode refid="640" relation="include">
         </childnode>
-        <childnode refid="1224" relation="include">
-        </childnode>
-        <childnode refid="1225" relation="include">
+        <childnode refid="641" relation="include">
         </childnode>
       </node>
-      <node id="1232">
-        <label>transport/sbfHandler.c</label>
-        <link refid="sbf_handler_8c"/>
-      </node>
-      <node id="1222">
-        <label>common/sbfLogFilePrivate.h</label>
+      <node id="640">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfLogFilePrivate.h</label>
         <link refid="sbf_log_file_private_8h"/>
-        <childnode refid="1223" relation="include">
-        </childnode>
       </node>
-      <node id="1230">
-        <label>transport/sbfTportPrivate.h</label>
+      <node id="643">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTportPrivate.h</label>
         <link refid="sbf_tport_private_8h"/>
-        <childnode refid="1231" relation="include">
-        </childnode>
-        <childnode refid="1232" relation="include">
-        </childnode>
-        <childnode refid="1233" relation="include">
-        </childnode>
-        <childnode refid="1234" relation="include">
-        </childnode>
-        <childnode refid="1235" relation="include">
-        </childnode>
-        <childnode refid="1236" relation="include">
-        </childnode>
-        <childnode refid="1237" relation="include">
-        </childnode>
-        <childnode refid="1238" relation="include">
-        </childnode>
-      </node>
-      <node id="1237">
-        <label>transport/sbfTportFragments.c</label>
-        <link refid="sbf_tport_fragments_8c"/>
-      </node>
-      <node id="1236">
-        <label>transport/sbfTport.c</label>
-        <link refid="sbf_tport_8c"/>
-      </node>
-      <node id="1229">
-        <label>core/sbfQueue.c</label>
-        <link refid="sbf_queue_8c"/>
-      </node>
-      <node id="1223">
-        <label>common/sbfLogFile.c</label>
-        <link refid="sbf_log_file_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
@@ -199,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfPath.h" line="8" column="1" bodyfile="common/sbfPath.c" bodystart="4" bodyend="15"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfPath.h" line="8" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_path_8h_1a831e4929e41427b228e1e8200c50f33d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char *</type>
@@ -219,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfPath.h" line="14" column="1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfPath.h" line="14" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_path_8h_1ad3e328363a70f49c4c323d9babb9b056" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char char *</type>
@@ -240,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfPath.h" line="15" column="1" bodyfile="common/sbfPath.c" bodystart="31" bodyend="44"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfPath.h" line="15" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_path_8h_1a060d60caef2e753150905a60e65ea305" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char *</type>
@@ -260,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfPath.h" line="21" column="1" bodyfile="common/sbfPath.c" bodystart="47" bodyend="67"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfPath.h" line="21" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -294,6 +215,6 @@
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_PATH_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="common/sbfPath.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfPath.h"/>
   </compounddef>
 </doxygen>

@@ -3,283 +3,153 @@
   <compounddef id="sbf_topic_8h" kind="file" language="C++">
     <compoundname>sbfTopic.h</compoundname>
     <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
-    <includedby refid="sbf_request_reply_8h" local="yes">requestreply/sbfRequestReply.h</includedby>
-    <includedby refid="sbf_tport_8h" local="yes">transport/sbfTport.h</includedby>
+    <includedby refid="sbf_request_reply_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/requestreply/sbfRequestReply.h</includedby>
+    <includedby refid="sbf_tport_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTport.h</includedby>
     <incdepgraph>
-      <node id="3691">
+      <node id="1756">
         <label>event.h</label>
       </node>
-      <node id="3688">
-        <label>transport/sbfTopic.h</label>
+      <node id="1753">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h</label>
         <link refid="sbf_topic_8h"/>
-        <childnode refid="3689" relation="include">
+        <childnode refid="1754" relation="include">
         </childnode>
       </node>
-      <node id="3690">
+      <node id="1755">
         <label>sbfVersion.h</label>
         <link refid="sbf_version_8h"/>
       </node>
-      <node id="3692">
+      <node id="1757">
         <label>syshash.h</label>
         <link refid="syshash_8h"/>
-        <childnode refid="3693" relation="include">
+        <childnode refid="1758" relation="include">
         </childnode>
       </node>
-      <node id="3696">
+      <node id="1761">
         <label>sbfFatal.h</label>
         <link refid="sbf_fatal_8h"/>
-        <childnode refid="3689" relation="include">
+        <childnode refid="1754" relation="include">
         </childnode>
       </node>
-      <node id="3693">
+      <node id="1758">
         <label>sys/types.h</label>
       </node>
-      <node id="3689">
+      <node id="1754">
         <label>sbfCommon.h</label>
         <link refid="sbf_common_8h"/>
-        <childnode refid="3690" relation="include">
+        <childnode refid="1755" relation="include">
         </childnode>
-        <childnode refid="3691" relation="include">
+        <childnode refid="1756" relation="include">
         </childnode>
-        <childnode refid="3692" relation="include">
+        <childnode refid="1757" relation="include">
         </childnode>
-        <childnode refid="3694" relation="include">
+        <childnode refid="1759" relation="include">
         </childnode>
-        <childnode refid="3695" relation="include">
+        <childnode refid="1760" relation="include">
         </childnode>
-        <childnode refid="3696" relation="include">
+        <childnode refid="1761" relation="include">
         </childnode>
-        <childnode refid="3697" relation="include">
+        <childnode refid="1762" relation="include">
         </childnode>
-        <childnode refid="3698" relation="include">
+        <childnode refid="1763" relation="include">
         </childnode>
       </node>
-      <node id="3695">
+      <node id="1760">
         <label>systree.h</label>
         <link refid="systree_8h"/>
       </node>
-      <node id="3694">
+      <node id="1759">
         <label>sysqueue.h</label>
         <link refid="sysqueue_8h"/>
       </node>
-      <node id="3697">
+      <node id="1762">
         <label>sbfLog.h</label>
         <link refid="sbf_log_8h"/>
-        <childnode refid="3689" relation="include">
+        <childnode refid="1754" relation="include">
         </childnode>
       </node>
-      <node id="3698">
+      <node id="1763">
         <label>sbfMemory.h</label>
         <link refid="sbf_memory_8h"/>
-        <childnode refid="3689" relation="include">
+        <childnode refid="1754" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3708">
-        <label>handlers/common/sbfCommonHandler.c</label>
-        <link refid="sbf_common_handler_8c"/>
-      </node>
-      <node id="3707">
-        <label>handlers/common/sbfCommonHandler.h</label>
+      <node id="1767">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/common/sbfCommonHandler.h</label>
         <link refid="sbf_common_handler_8h"/>
-        <childnode refid="3708" relation="include">
-        </childnode>
-        <childnode refid="3709" relation="include">
+        <childnode refid="1768" relation="include">
         </childnode>
       </node>
-      <node id="3727">
-        <label>transport/sbfTportWeight.c</label>
-        <link refid="sbf_tport_weight_8c"/>
-      </node>
-      <node id="3703">
-        <label>requestreply/sbfRequestSub.c</label>
-        <link refid="sbf_request_sub_8c"/>
-      </node>
-      <node id="3714">
-        <label>requestreply/sbfRequestSub.h</label>
+      <node id="1772">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/requestreply/sbfRequestSub.h</label>
         <link refid="sbf_request_sub_8h"/>
-        <childnode refid="3700" relation="include">
+        <childnode refid="1765" relation="include">
         </childnode>
       </node>
-      <node id="3704">
-        <label>tools/replier/sbfReplier.c</label>
-        <link refid="sbf_replier_8c"/>
-      </node>
-      <node id="3723">
-        <label>transport/sbfSub.c</label>
-        <link refid="sbf_sub_8c"/>
-      </node>
-      <node id="3724">
-        <label>transport/sbfTopic.c</label>
-        <link refid="sbf_topic_8c"/>
-      </node>
-      <node id="3699">
-        <label>transport/sbfTopic.h</label>
+      <node id="1764">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h</label>
         <link refid="sbf_topic_8h"/>
-        <childnode refid="3700" relation="include">
+        <childnode refid="1765" relation="include">
         </childnode>
-        <childnode refid="3706" relation="include">
+        <childnode refid="1766" relation="include">
         </childnode>
       </node>
-      <node id="3711">
-        <label>handlers/common/sbfCommonHandlerPrivate.h</label>
+      <node id="1769">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/common/sbfCommonHandlerPrivate.h</label>
         <link refid="sbf_common_handler_private_8h"/>
-        <childnode refid="3708" relation="include">
-        </childnode>
       </node>
-      <node id="3710">
-        <label>handlers/udp/sbfUdpHandler.c</label>
-        <link refid="sbf_udp_handler_8c"/>
-      </node>
-      <node id="3709">
-        <label>handlers/udp/sbfUdpHandler.h</label>
+      <node id="1768">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/udp/sbfUdpHandler.h</label>
         <link refid="sbf_udp_handler_8h"/>
-        <childnode refid="3710" relation="include">
-        </childnode>
       </node>
-      <node id="3716">
-        <label>tools/publisher/sbfPublisher.c</label>
-        <link refid="sbf_publisher_8c"/>
-      </node>
-      <node id="3718">
-        <label>transport/sbfBatch.c</label>
-        <link refid="sbf_batch_8c"/>
-      </node>
-      <node id="3705">
-        <label>tools/requester/sbfRequester.c</label>
-        <link refid="sbf_requester_8c"/>
-      </node>
-      <node id="3717">
-        <label>tools/subscriber/sbfSubscriber.c</label>
-        <link refid="sbf_subscriber_8c"/>
-      </node>
-      <node id="3713">
-        <label>handlers/tcpmesh/sbfTcpMeshHandler.c</label>
-        <link refid="sbf_tcp_mesh_handler_8c"/>
-      </node>
-      <node id="3712">
-        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+      <node id="1770">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/tcpmesh/sbfTcpMeshHandler.h</label>
         <link refid="sbf_tcp_mesh_handler_8h"/>
-        <childnode refid="3713" relation="include">
-        </childnode>
       </node>
-      <node id="3722">
-        <label>transport/sbfPub.c</label>
-        <link refid="sbf_pub_8c"/>
-      </node>
-      <node id="3702">
-        <label>requestreply/sbfRequestReply.c</label>
-        <link refid="sbf_request_reply_8c"/>
-      </node>
-      <node id="3700">
-        <label>requestreply/sbfRequestReply.h</label>
+      <node id="1765">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/requestreply/sbfRequestReply.h</label>
         <link refid="sbf_request_reply_8h"/>
-        <childnode refid="3701" relation="include">
-        </childnode>
-        <childnode refid="3702" relation="include">
-        </childnode>
-        <childnode refid="3703" relation="include">
-        </childnode>
-        <childnode refid="3704" relation="include">
-        </childnode>
-        <childnode refid="3705" relation="include">
-        </childnode>
       </node>
-      <node id="3721">
-        <label>transport/sbfHandler.c</label>
-        <link refid="sbf_handler_8c"/>
-      </node>
-      <node id="3719">
-        <label>transport/sbfHandler.h</label>
+      <node id="1773">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h</label>
         <link refid="sbf_handler_8h"/>
-        <childnode refid="3711" relation="include">
+        <childnode refid="1769" relation="include">
         </childnode>
-        <childnode refid="3712" relation="include">
+        <childnode refid="1770" relation="include">
         </childnode>
-        <childnode refid="3709" relation="include">
+        <childnode refid="1768" relation="include">
         </childnode>
-        <childnode refid="3720" relation="include">
+        <childnode refid="1774" relation="include">
         </childnode>
       </node>
-      <node id="3720">
-        <label>transport/sbfTportPrivate.h</label>
+      <node id="1774">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTportPrivate.h</label>
         <link refid="sbf_tport_private_8h"/>
-        <childnode refid="3718" relation="include">
-        </childnode>
-        <childnode refid="3721" relation="include">
-        </childnode>
-        <childnode refid="3722" relation="include">
-        </childnode>
-        <childnode refid="3723" relation="include">
-        </childnode>
-        <childnode refid="3724" relation="include">
-        </childnode>
-        <childnode refid="3725" relation="include">
-        </childnode>
-        <childnode refid="3726" relation="include">
-        </childnode>
-        <childnode refid="3727" relation="include">
-        </childnode>
       </node>
-      <node id="3726">
-        <label>transport/sbfTportFragments.c</label>
-        <link refid="sbf_tport_fragments_8c"/>
-      </node>
-      <node id="3725">
-        <label>transport/sbfTport.c</label>
-        <link refid="sbf_tport_8c"/>
-      </node>
-      <node id="3706">
-        <label>transport/sbfTport.h</label>
+      <node id="1766">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTport.h</label>
         <link refid="sbf_tport_8h"/>
-        <childnode refid="3707" relation="include">
+        <childnode refid="1767" relation="include">
         </childnode>
-        <childnode refid="3711" relation="include">
+        <childnode refid="1769" relation="include">
         </childnode>
-        <childnode refid="3712" relation="include">
+        <childnode refid="1770" relation="include">
         </childnode>
-        <childnode refid="3709" relation="include">
+        <childnode refid="1768" relation="include">
         </childnode>
-        <childnode refid="3714" relation="include">
+        <childnode refid="1771" relation="include">
         </childnode>
-        <childnode refid="3715" relation="include">
+        <childnode refid="1772" relation="include">
         </childnode>
-        <childnode refid="3716" relation="include">
-        </childnode>
-        <childnode refid="3704" relation="include">
-        </childnode>
-        <childnode refid="3705" relation="include">
-        </childnode>
-        <childnode refid="3717" relation="include">
-        </childnode>
-        <childnode refid="3718" relation="include">
-        </childnode>
-        <childnode refid="3719" relation="include">
-        </childnode>
-        <childnode refid="3721" relation="include">
-        </childnode>
-        <childnode refid="3722" relation="include">
-        </childnode>
-        <childnode refid="3723" relation="include">
-        </childnode>
-        <childnode refid="3724" relation="include">
-        </childnode>
-        <childnode refid="3725" relation="include">
-        </childnode>
-        <childnode refid="3726" relation="include">
-        </childnode>
-        <childnode refid="3727" relation="include">
+        <childnode refid="1773" relation="include">
         </childnode>
       </node>
-      <node id="3701">
-        <label>requestreply/sbfRequestPub.c</label>
-        <link refid="sbf_request_pub_8c"/>
-      </node>
-      <node id="3715">
-        <label>requestreply/sbfRequestPub.h</label>
+      <node id="1771">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/requestreply/sbfRequestPub.h</label>
         <link refid="sbf_request_pub_8h"/>
-        <childnode refid="3700" relation="include">
+        <childnode refid="1765" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -293,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfTopic.h" line="10" column="9" bodyfile="transport/sbfTopic.h" bodystart="10" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" line="10" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -319,12 +189,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfTopic.h" line="13" column="1" bodyfile="transport/sbfTopic.h" bodystart="12" bodyend="16"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" line="13" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" bodystart="12" bodyend="16"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" prot="public" static="no">
-        <type>typedefSBF_BEGIN_DECLS struct <ref refid="structsbf_topic_impl" kindref="compound">sbfTopicImpl</ref> *</type>
+        <type>typedefSBF_BEGIN_DECLS struct sbfTopicImpl *</type>
         <definition>typedef typedefSBF_BEGIN_DECLS struct sbfTopicImpl* sbfTopic</definition>
         <argsstring></argsstring>
         <name>sbfTopic</name>
@@ -334,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfTopic.h" line="8" column="1" bodyfile="transport/sbfTopic.h" bodystart="8" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" line="8" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" bodystart="8" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -357,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfTopic.h" line="18" column="1" bodyfile="transport/sbfTopic.c" bodystart="5" bodyend="58"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" line="18" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_topic_8h_1a154e4f4857a66c1e372281ce493ece99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -374,7 +244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfTopic.h" line="19" column="1" bodyfile="transport/sbfTopic.c" bodystart="61" bodyend="69"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" line="19" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_topic_8h_1a3d96e97c321ba2ffce13f89eb0a84d86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
@@ -391,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfTopic.h" line="21" column="1" bodyfile="transport/sbfTopic.c" bodystart="72" bodyend="85"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" line="21" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_topic_8h_1a1b9121e3bf33ef3e0552f11ff72c6553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -412,7 +282,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfTopic.h" line="23" column="1" bodyfile="transport/sbfTopic.c" bodystart="88" bodyend="97"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" line="23" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_topic_8h_1a17610769aed59c45ea07fa4b89651bbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref></type>
@@ -429,7 +299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfTopic.h" line="25" column="1" bodyfile="transport/sbfTopic.c" bodystart="100" bodyend="103"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" line="25" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_topic_8h_1ab0f153a4579b16f243f1b946068e95c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -446,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfTopic.h" line="26" column="1" bodyfile="transport/sbfTopic.c" bodystart="106" bodyend="109"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" line="26" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_topic_8h_1a7c42b4986cfdfcd6b9dfaef882bea027" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -463,7 +333,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfTopic.h" line="28" column="1" bodyfile="transport/sbfTopic.c" bodystart="112" bodyend="115"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" line="28" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_topic_8h_1a7f6f6aef75d127ae65b00a566ab24647" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -480,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfTopic.h" line="29" column="1" bodyfile="transport/sbfTopic.c" bodystart="118" bodyend="121"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" line="29" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_topic_8h_1a15bcfc641e9f5996ac12a41f81ab38ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -497,7 +367,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfTopic.h" line="30" column="1" bodyfile="transport/sbfTopic.c" bodystart="124" bodyend="127"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h" line="30" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -512,7 +382,7 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8" refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_topic_impl" kindref="compound">sbfTopicImpl</ref>*<sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref>;</highlight></codeline>
+<codeline lineno="8" refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfTopicImpl*<sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref>;</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10" refid="sbf_topic_8h_1aa9f435bc8956a8d5d5e7e32e3d3e3e45" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBF_TOPIC_SIZE_LIMIT<sp/>255</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
@@ -522,24 +392,24 @@
 <codeline lineno="15" refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cfa5c80119f0bb1907166badfec7d3f09da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cfa5c80119f0bb1907166badfec7d3f09da" kindref="member">SBF_TOPIC_SUB</ref></highlight></codeline>
 <codeline lineno="16"><highlight class="normal">}<sp/><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref>;</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal">sbfTopic<sp/><ref refid="sbf_topic_8h_1a9672cf4f3a60f28d226b45f7a1721679" kindref="member">sbfTopic_create</ref><sp/>(<ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref><sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_topic_8h_1a154e4f4857a66c1e372281ce493ece99" kindref="member">sbfTopic_destroy</ref><sp/>(sbfTopic<sp/>topic);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/><ref refid="sbf_topic_8h_1a9672cf4f3a60f28d226b45f7a1721679" kindref="member">sbfTopic_create</ref><sp/>(<ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref><sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_topic_8h_1a154e4f4857a66c1e372281ce493ece99" kindref="member">sbfTopic_destroy</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal">sbfTopic<sp/><ref refid="sbf_topic_8h_1a3d96e97c321ba2ffce13f89eb0a84d86" kindref="member">sbfTopic_copy</ref><sp/>(sbfTopic<sp/>topic);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/><ref refid="sbf_topic_8h_1a3d96e97c321ba2ffce13f89eb0a84d86" kindref="member">sbfTopic_copy</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sbf_topic_8h_1a1b9121e3bf33ef3e0552f11ff72c6553" kindref="member">sbfTopic_compare</ref><sp/>(sbfTopic<sp/>lhs,<sp/>sbfTopic<sp/>rhs);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sbf_topic_8h_1a1b9121e3bf33ef3e0552f11ff72c6553" kindref="member">sbfTopic_compare</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>lhs,<sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>rhs);</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref><sp/><ref refid="sbf_topic_8h_1a17610769aed59c45ea07fa4b89651bbc" kindref="member">sbfTopic_getType</ref><sp/>(sbfTopic<sp/>topic);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_topic_8h_1ab0f153a4579b16f243f1b946068e95c9" kindref="member">sbfTopic_getTopic</ref><sp/>(sbfTopic<sp/>topic);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref><sp/><ref refid="sbf_topic_8h_1a17610769aed59c45ea07fa4b89651bbc" kindref="member">sbfTopic_getType</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_topic_8h_1ab0f153a4579b16f243f1b946068e95c9" kindref="member">sbfTopic_getTopic</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_topic_8h_1a7c42b4986cfdfcd6b9dfaef882bea027" kindref="member">sbfTopic_getFirst</ref><sp/>(sbfTopic<sp/>topic);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_topic_8h_1a7f6f6aef75d127ae65b00a566ab24647" kindref="member">sbfTopic_getSecond</ref><sp/>(sbfTopic<sp/>topic);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_topic_8h_1a15bcfc641e9f5996ac12a41f81ab38ff" kindref="member">sbfTopic_getThird</ref><sp/>(sbfTopic<sp/>topic);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_topic_8h_1a7c42b4986cfdfcd6b9dfaef882bea027" kindref="member">sbfTopic_getFirst</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_topic_8h_1a7f6f6aef75d127ae65b00a566ab24647" kindref="member">sbfTopic_getSecond</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_topic_8h_1a15bcfc641e9f5996ac12a41f81ab38ff" kindref="member">sbfTopic_getThird</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_TOPIC_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="transport/sbfTopic.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopic.h"/>
   </compounddef>
 </doxygen>

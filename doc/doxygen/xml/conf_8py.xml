@@ -93,7 +93,7 @@
 <codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">#<sp/>The<sp/>theme<sp/>to<sp/>use<sp/>for<sp/>HTML<sp/>and<sp/>HTML<sp/>Help<sp/>pages.<sp/><sp/>See<sp/>the<sp/>documentation<sp/>for</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">#<sp/>a<sp/>list<sp/>of<sp/>builtin<sp/>themes.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86" refid="namespaceconf_1a6c3bfcc1a44546c1c75ce20f55bd0fd6" refkind="member"><highlight class="normal">html_theme<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;alabaster&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="namespaceconf_1a7f1b143ff25817758abd21a7db110510" refkind="member"><highlight class="normal">html_theme<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;alabaster&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Theme<sp/>options<sp/>are<sp/>theme-specific<sp/>and<sp/>customize<sp/>the<sp/>look<sp/>and<sp/>feel<sp/>of<sp/>a<sp/>theme</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">#<sp/>further.<sp/><sp/>For<sp/>a<sp/>list<sp/>of<sp/>options<sp/>available<sp/>for<sp/>each<sp/>theme,<sp/>see<sp/>the</highlight><highlight class="normal"></highlight></codeline>
@@ -174,9 +174,12 @@
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>author,<sp/></highlight><highlight class="stringliteral">&apos;SBF&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;One<sp/>line<sp/>description<sp/>of<sp/>project.&apos;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Miscellaneous&apos;</highlight><highlight class="normal">),</highlight></codeline>
 <codeline lineno="166"><highlight class="normal">]</highlight></codeline>
-<codeline lineno="167" refid="namespaceconf_1acb47d2c0c2904fa7d36b63142533f383" refkind="member"><highlight class="normal">breathe_projects<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;sbf&quot;</highlight><highlight class="normal">:</highlight><highlight class="stringliteral">&quot;../doxygen/xml/&quot;</highlight><highlight class="normal"><sp/>}</highlight></codeline>
-<codeline lineno="168" refid="namespaceconf_1a6eba2d2c7ae923054b1c49e686ec89b9" refkind="member"><highlight class="normal">breathe_default_project<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;sbf&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal">html_theme<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;sphinx_rtd_theme&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="namespaceconf_1acb47d2c0c2904fa7d36b63142533f383" refkind="member"><highlight class="normal">breathe_projects<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;sbf&quot;</highlight><highlight class="normal">:</highlight><highlight class="stringliteral">&quot;../doxygen/xml/&quot;</highlight><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="171" refid="namespaceconf_1a6eba2d2c7ae923054b1c49e686ec89b9" refkind="member"><highlight class="normal">breathe_default_project<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;sbf&quot;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="doc/sphinx/conf.py"/>
+    <location file="sphinx/conf.py"/>
   </compounddef>
 </doxygen>

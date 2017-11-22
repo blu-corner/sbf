@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SBF: common/sbfTcpListener.h File Reference</title>
+<title>SBF: C:/Users/Neueda/Documents/workspace/sbf/common/sbfTcpListener.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,16 +93,16 @@ $(document).ready(function(){initNavTree('sbf_tcp_listener_8h.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a05c4b67f3b2468fac0bb818cc5aea697"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structsbf_tcp_listener_impl.html">sbfTcpListenerImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_listener_8h.html#a05c4b67f3b2468fac0bb818cc5aea697">sbfTcpListener</a></td></tr>
+<tr class="memitem:a05c4b67f3b2468fac0bb818cc5aea697"><td class="memItemLeft" align="right" valign="top">typedef struct sbfTcpListenerImpl *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_listener_8h.html#a05c4b67f3b2468fac0bb818cc5aea697">sbfTcpListener</a></td></tr>
 <tr class="separator:a05c4b67f3b2468fac0bb818cc5aea697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40d842953865253546cbdce73e47f008"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_listener_8h.html#a40d842953865253546cbdce73e47f008">sbfTcpListenerReadyCb</a>) (<a class="el" href="sbf_tcp_listener_8h.html#a05c4b67f3b2468fac0bb818cc5aea697">sbfTcpListener</a> tl, void *closure)</td></tr>
 <tr class="separator:a40d842953865253546cbdce73e47f008"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c4e93e8dab60d62b597292d5eb0c7cc"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_listener_8h.html#a5c4e93e8dab60d62b597292d5eb0c7cc">sbfTcpListenerAcceptCb</a>) (<a class="el" href="sbf_tcp_listener_8h.html#a05c4b67f3b2468fac0bb818cc5aea697">sbfTcpListener</a> tl, struct <a class="el" href="structsbf_tcp_connection_impl.html">sbfTcpConnectionImpl</a> *tc, void *closure)</td></tr>
+<tr class="memitem:a5c4e93e8dab60d62b597292d5eb0c7cc"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_listener_8h.html#a5c4e93e8dab60d62b597292d5eb0c7cc">sbfTcpListenerAcceptCb</a>) (<a class="el" href="sbf_tcp_listener_8h.html#a05c4b67f3b2468fac0bb818cc5aea697">sbfTcpListener</a> tl, struct sbfTcpConnectionImpl *tc, void *closure)</td></tr>
 <tr class="separator:a5c4e93e8dab60d62b597292d5eb0c7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac07fa159f64c355c96c4184f0ab96e6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_tcp_listener_8h.html#a05c4b67f3b2468fac0bb818cc5aea697">sbfTcpListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_listener_8h.html#ac07fa159f64c355c96c4184f0ab96e6f">sbfTcpListener_create</a> (<a class="el" href="sbf_log_8h.html#af52e123ee70a148a5492a53d34c16c37">sbfLog</a> log, struct <a class="el" href="structsbf_mw_thread_impl.html">sbfMwThreadImpl</a> *thread, struct <a class="el" href="structsbf_queue_impl.html">sbfQueueImpl</a> *queue, uint16_t port, <a class="el" href="sbf_tcp_listener_8h.html#a40d842953865253546cbdce73e47f008">sbfTcpListenerReadyCb</a> readyCb, <a class="el" href="sbf_tcp_listener_8h.html#a5c4e93e8dab60d62b597292d5eb0c7cc">sbfTcpListenerAcceptCb</a> acceptCb, void *closure)</td></tr>
+<tr class="memitem:ac07fa159f64c355c96c4184f0ab96e6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_tcp_listener_8h.html#a05c4b67f3b2468fac0bb818cc5aea697">sbfTcpListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_listener_8h.html#ac07fa159f64c355c96c4184f0ab96e6f">sbfTcpListener_create</a> (<a class="el" href="sbf_log_8h.html#af52e123ee70a148a5492a53d34c16c37">sbfLog</a> log, struct sbfMwThreadImpl *thread, struct sbfQueueImpl *queue, uint16_t port, <a class="el" href="sbf_tcp_listener_8h.html#a40d842953865253546cbdce73e47f008">sbfTcpListenerReadyCb</a> readyCb, <a class="el" href="sbf_tcp_listener_8h.html#a5c4e93e8dab60d62b597292d5eb0c7cc">sbfTcpListenerAcceptCb</a> acceptCb, void *closure)</td></tr>
 <tr class="separator:ac07fa159f64c355c96c4184f0ab96e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a615a3f54bc14ad74267beccc3476dc2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_tcp_listener_8h.html#a615a3f54bc14ad74267beccc3476dc2e">sbfTcpListener_destroy</a> (<a class="el" href="sbf_tcp_listener_8h.html#a05c4b67f3b2468fac0bb818cc5aea697">sbfTcpListener</a> tl)</td></tr>
 <tr class="separator:a615a3f54bc14ad74267beccc3476dc2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,7 +115,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structsbf_tcp_listener_impl.html">sbfTcpListenerImpl</a>* <a class="el" href="sbf_tcp_listener_8h.html#a05c4b67f3b2468fac0bb818cc5aea697">sbfTcpListener</a></td>
+          <td class="memname">typedef struct sbfTcpListenerImpl* <a class="el" href="sbf_tcp_listener_8h.html#a05c4b67f3b2468fac0bb818cc5aea697">sbfTcpListener</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -131,7 +131,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* sbfTcpListenerAcceptCb) (<a class="el" href="sbf_tcp_listener_8h.html#a05c4b67f3b2468fac0bb818cc5aea697">sbfTcpListener</a> tl, struct <a class="el" href="structsbf_tcp_connection_impl.html">sbfTcpConnectionImpl</a> *tc, void *closure)</td>
+          <td class="memname">typedef void(* sbfTcpListenerAcceptCb) (<a class="el" href="sbf_tcp_listener_8h.html#a05c4b67f3b2468fac0bb818cc5aea697">sbfTcpListener</a> tl, struct sbfTcpConnectionImpl *tc, void *closure)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -172,13 +172,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structsbf_mw_thread_impl.html">sbfMwThreadImpl</a> *&#160;</td>
+          <td class="paramtype">struct sbfMwThreadImpl *&#160;</td>
           <td class="paramname"><em>thread</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structsbf_queue_impl.html">sbfQueueImpl</a> *&#160;</td>
+          <td class="paramtype">struct sbfQueueImpl *&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
         </tr>
         <tr>
@@ -213,8 +213,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sbf_tcp_listener_8c_source.html#l00054">54</a> of file <a class="el" href="sbf_tcp_listener_8c_source.html">sbfTcpListener.c</a>.</p>
-
 </div>
 </div>
 <a id="a615a3f54bc14ad74267beccc3476dc2e"></a>
@@ -232,8 +230,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sbf_tcp_listener_8c_source.html#l00113">113</a> of file <a class="el" href="sbf_tcp_listener_8c_source.html">sbfTcpListener.c</a>.</p>
 
 </div>
 </div>

@@ -5,7 +5,7 @@
     <includes refid="sbf_request_pub_private_8h" local="no">sbfRequestPubPrivate.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structsbf_request_pub_impl_1a841ee0a516db377942f735791ccecd11" prot="public" static="no" mutable="no">
-        <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+        <type>sbfLog</type>
         <definition>sbfLog sbfRequestPubImpl::mLog</definition>
         <argsstring></argsstring>
         <name>mLog</name>
@@ -57,7 +57,7 @@
         <location file="requestreply/sbfRequestPubPrivate.h" line="12" column="1" bodyfile="requestreply/sbfRequestPubPrivate.h" bodystart="12" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_request_pub_impl_1a2d1bea84e7effcd412fd0020b601d11e" prot="public" static="no" mutable="no">
-        <type><ref refid="sbf_pub_8h_1aa23045dc7b9f1d04b6dee3bb3ffe63a8" kindref="member">sbfPub</ref></type>
+        <type>sbfPub</type>
         <definition>sbfPub sbfRequestPubImpl::mPub</definition>
         <argsstring></argsstring>
         <name>mPub</name>
@@ -83,7 +83,7 @@
         <location file="requestreply/sbfRequestPubPrivate.h" line="15" column="1" bodyfile="requestreply/sbfRequestPubPrivate.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_request_pub_impl_1af059cd9caeaa78b6be14da8ef0dd9037" prot="public" static="no" mutable="no">
-        <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+        <type>sbfSub</type>
         <definition>sbfSub sbfRequestPubImpl::mSub</definition>
         <argsstring></argsstring>
         <name>mSub</name>
@@ -109,7 +109,7 @@
         <location file="requestreply/sbfRequestPubPrivate.h" line="17" column="1" bodyfile="requestreply/sbfRequestPubPrivate.h" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_request_pub_impl_1ab0cfbaf17b980b58cba1287729824e44" prot="public" static="no" mutable="no">
-        <type><ref refid="sbf_guid_8h_1a36001b189a6dd7b95858bd266dbe4404" kindref="member">sbfGuid</ref></type>
+        <type>sbfGuid</type>
         <definition>sbfGuid sbfRequestPubImpl::mNext</definition>
         <argsstring></argsstring>
         <name>mNext</name>
@@ -140,176 +140,11 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="136">
+      <node id="25">
         <label>sbfRequestPubImpl</label>
         <link refid="structsbf_request_pub_impl"/>
-        <childnode refid="137" relation="usage">
-          <edgelabel>mPub</edgelabel>
-        </childnode>
-        <childnode refid="139" relation="usage">
-          <edgelabel>mSub</edgelabel>
-        </childnode>
-        <childnode refid="136" relation="usage">
+        <childnode refid="25" relation="usage">
           <edgelabel>mReadyCb</edgelabel>
-        </childnode>
-        <childnode refid="143" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
-      </node>
-      <node id="137">
-        <label>sbfPubImpl</label>
-        <link refid="structsbf_pub_impl"/>
-        <childnode refid="137" relation="usage">
-          <edgelabel>mReadyCb</edgelabel>
-        </childnode>
-        <childnode refid="138" relation="usage">
-          <edgelabel>mTportTopic</edgelabel>
-        </childnode>
-        <childnode refid="140" relation="usage">
-          <edgelabel>mTport</edgelabel>
-        </childnode>
-        <childnode refid="147" relation="usage">
-          <edgelabel>mRefCount</edgelabel>
-        </childnode>
-        <childnode refid="148" relation="usage">
-          <edgelabel>mTopic</edgelabel>
-        </childnode>
-        <childnode refid="149" relation="usage">
-          <edgelabel>mQueue</edgelabel>
-        </childnode>
-      </node>
-      <node id="149">
-        <label>sbfQueueImpl</label>
-        <link refid="structsbf_queue_impl"/>
-        <childnode refid="147" relation="usage">
-          <edgelabel>mRefCount</edgelabel>
-        </childnode>
-        <childnode refid="150" relation="usage">
-          <edgelabel>mPool</edgelabel>
-        </childnode>
-        <childnode refid="143" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
-      </node>
-      <node id="142">
-        <label>sbfMwThreadImpl</label>
-        <link refid="structsbf_mw_thread_impl"/>
-        <childnode refid="141" relation="usage">
-          <edgelabel>mParent</edgelabel>
-        </childnode>
-      </node>
-      <node id="148">
-        <label>sbfTopicImpl</label>
-        <link refid="structsbf_topic_impl"/>
-      </node>
-      <node id="147">
-        <label>sbfRefCount</label>
-        <link refid="structsbf_ref_count"/>
-      </node>
-      <node id="151">
-        <label>sbfPoolCountImpl</label>
-        <link refid="structsbf_pool_count_impl"/>
-      </node>
-      <node id="145">
-        <label>sbfTportWeight</label>
-        <link refid="structsbf_tport_weight"/>
-      </node>
-      <node id="141">
-        <label>sbfMwImpl</label>
-        <link refid="structsbf_mw_impl"/>
-        <childnode refid="142" relation="usage">
-          <edgelabel>mThreads</edgelabel>
-        </childnode>
-        <childnode refid="143" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
-      </node>
-      <node id="152">
-        <label>sbfPoolItemImpl</label>
-        <link refid="structsbf_pool_item_impl"/>
-        <childnode refid="152" relation="usage">
-          <edgelabel>mNext</edgelabel>
-        </childnode>
-        <childnode refid="150" relation="usage">
-          <edgelabel>mPool</edgelabel>
-        </childnode>
-      </node>
-      <node id="140">
-        <label>sbfTportImpl</label>
-        <link refid="structsbf_tport_impl"/>
-        <childnode refid="141" relation="usage">
-          <edgelabel>mMw</edgelabel>
-        </childnode>
-        <childnode refid="145" relation="usage">
-          <edgelabel>mWeightsList</edgelabel>
-        </childnode>
-        <childnode refid="146" relation="usage">
-          <edgelabel>mHandlerTable</edgelabel>
-        </childnode>
-        <childnode refid="143" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
-      </node>
-      <node id="139">
-        <label>sbfSubImpl</label>
-        <link refid="structsbf_sub_impl"/>
-        <childnode refid="138" relation="usage">
-          <edgelabel>mTportTopic</edgelabel>
-        </childnode>
-        <childnode refid="139" relation="usage">
-          <edgelabel>mMessageCb</edgelabel>
-          <edgelabel>mReadyCb</edgelabel>
-        </childnode>
-        <childnode refid="140" relation="usage">
-          <edgelabel>mTport</edgelabel>
-        </childnode>
-        <childnode refid="147" relation="usage">
-          <edgelabel>mRefCount</edgelabel>
-        </childnode>
-        <childnode refid="148" relation="usage">
-          <edgelabel>mTopic</edgelabel>
-        </childnode>
-        <childnode refid="149" relation="usage">
-          <edgelabel>mQueue</edgelabel>
-        </childnode>
-      </node>
-      <node id="144">
-        <label>sbfLogFileImpl</label>
-        <link refid="structsbf_log_file_impl"/>
-      </node>
-      <node id="143">
-        <label>sbfLogImpl</label>
-        <link refid="structsbf_log_impl"/>
-        <childnode refid="143" relation="usage">
-          <edgelabel>mHookCb</edgelabel>
-        </childnode>
-        <childnode refid="144" relation="usage">
-          <edgelabel>mFile</edgelabel>
-        </childnode>
-      </node>
-      <node id="150">
-        <label>sbfPoolImpl</label>
-        <link refid="structsbf_pool_impl"/>
-        <childnode refid="151" relation="usage">
-          <edgelabel>mCount</edgelabel>
-        </childnode>
-        <childnode refid="152" relation="usage">
-          <edgelabel>mFree</edgelabel>
-          <edgelabel>mAvailable</edgelabel>
-        </childnode>
-      </node>
-      <node id="138">
-        <label>sbfTportTopicImpl</label>
-        <link refid="structsbf_tport_topic_impl"/>
-        <childnode refid="139" relation="usage">
-          <edgelabel>mNext</edgelabel>
-        </childnode>
-      </node>
-      <node id="146">
-        <label>sbfHandlerTable</label>
-        <link refid="structsbf_handler_table"/>
-        <childnode refid="142" relation="usage">
-          <edgelabel>mAddStream</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>

@@ -2,21 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="sbf_cache_file_private_8h" kind="file" language="C++">
     <compoundname>sbfCacheFilePrivate.h</compoundname>
-    <includedby refid="sbf_cache_file_8c" local="yes">common/sbfCacheFile.c</includedby>
-    <invincdepgraph>
-      <node id="250">
-        <label>common/sbfCacheFile.c</label>
-        <link refid="sbf_cache_file_8c"/>
-      </node>
-      <node id="249">
-        <label>common/sbfCacheFilePrivate.h</label>
-        <link refid="sbf_cache_file_private_8h"/>
-        <childnode refid="250" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
-    <innerclass refid="structsbf_cache_file_item_impl" prot="public">sbfCacheFileItemImpl</innerclass>
-    <innerclass refid="structsbf_cache_file_impl" prot="public">sbfCacheFileImpl</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -27,27 +12,27 @@
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="structsbf_cache_file_item_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_cache_file_item_impl" kindref="compound">sbfCacheFileItemImpl</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfCacheFileItemImpl</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8" refid="structsbf_cache_file_item_impl_1a604d9aa1dc343d76a37e2093e191587c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_cache_file_8h_1a2ad4f3345eb66c3a92cb89941d813a0f" kindref="member">sbfCacheFile</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_cache_file_item_impl_1a604d9aa1dc343d76a37e2093e191587c" kindref="member">mParent</ref>;</highlight></codeline>
-<codeline lineno="9" refid="structsbf_cache_file_item_impl_1a57f09f4e72f2f6cccad0835d4cf6adfd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_cache_file_item_impl_1a57f09f4e72f2f6cccad0835d4cf6adfd" kindref="member">mOffset</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_cache_file_8h_1a2ad4f3345eb66c3a92cb89941d813a0f" kindref="member">sbfCacheFile</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mParent;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mOffset;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_cache_file_item_impl_1aeb2ccfa5656c84f9879b19869a90db0a" kindref="member">TAILQ_ENTRY</ref><sp/>(<ref refid="structsbf_cache_file_item_impl" kindref="compound">sbfCacheFileItemImpl</ref>)<sp/>mEntry;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sysqueue_8h_1af71bfd90dc9d00fb03545fe66c67d673" kindref="member">TAILQ_ENTRY</ref><sp/>(sbfCacheFileItemImpl)<sp/>mEntry;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="structsbf_cache_file_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_cache_file_impl" kindref="compound">sbfCacheFileImpl</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfCacheFileImpl</highlight></codeline>
 <codeline lineno="15"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="16" refid="structsbf_cache_file_impl_1a184fb6a3ccefec7c26312f83bcedaccd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_cache_file_impl_1a184fb6a3ccefec7c26312f83bcedaccd" kindref="member">mFile</ref>;</highlight></codeline>
-<codeline lineno="17" refid="structsbf_cache_file_impl_1aedfee69719d0a291b304f3809c1c6689" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_cache_file_impl_1aedfee69719d0a291b304f3809c1c6689" kindref="member">mUsed</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mFile;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mUsed;</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="structsbf_cache_file_impl_1ac97daeaf47be5854cd270f2071ba1614" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_cache_file_impl_1ac97daeaf47be5854cd270f2071ba1614" kindref="member">mItemSize</ref>;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_deque_private_8h_1a2db60b284121f13391c36c450db70df6" kindref="member">TAILQ_HEAD</ref><sp/>(,<sp/><ref refid="structsbf_cache_file_item_impl" kindref="compound">sbfCacheFileItemImpl</ref>)<sp/>mItems;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mItemSize;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_deque_private_8h_1a2db60b284121f13391c36c450db70df6" kindref="member">TAILQ_HEAD</ref><sp/>(,<sp/>sbfCacheFileItemImpl)<sp/>mItems;</highlight></codeline>
 <codeline lineno="21"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_CACHE_FILE_PRIVATE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="common/sbfCacheFilePrivate.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCacheFilePrivate.h"/>
   </compounddef>
 </doxygen>

@@ -1,7 +1,5 @@
 var sbf_queue_private_8h =
 [
-    [ "sbfQueueItemImpl", "structsbf_queue_item_impl.html", "structsbf_queue_item_impl" ],
-    [ "sbfQueueImpl", "structsbf_queue_impl.html", "structsbf_queue_impl" ],
     [ "SBF_QUEUE_BLOCKING", "sbf_queue_private_8h.html#ac6807d49592d1eddd7fc40209726a6a0", null ],
     [ "SBF_QUEUE_FUNCTIONS", "sbf_queue_private_8h.html#a946f1f7aec29f8d92e1b4a8a33e8ef76", null ],
     [ "SBF_QUEUE_ITEM_DATA_SIZE", "sbf_queue_private_8h.html#adc00f0a64bc9f1426cc6a398b815755f", null ],

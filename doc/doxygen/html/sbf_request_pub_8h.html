@@ -90,33 +90,33 @@ $(document).ready(function(){initNavTree('sbf_request_pub_8h.html','');});
 
 <p>Helper structures and functions to create a publisher.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="sbf_common_8h_source.html">sbfCommon.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sbf_tport_8h_source.html">sbfTport.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;sbfCommon.h&quot;</code><br />
+<code>#include &quot;sbfTport.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="sbf_queue_8h_source.html">sbfQueue.h</a>&quot;</code><br />
 </div>
 <p><a href="sbf_request_pub_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a9bcb13977342f28786f635e341e29ad4"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structsbf_request_pub_impl.html">sbfRequestPubImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a></td></tr>
+<tr class="memitem:a9bcb13977342f28786f635e341e29ad4"><td class="memItemLeft" align="right" valign="top">typedef struct sbfRequestPubImpl *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a></td></tr>
 <tr class="memdesc:a9bcb13977342f28786f635e341e29ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares the publisher.  <a href="#a9bcb13977342f28786f635e341e29ad4">More...</a><br /></td></tr>
 <tr class="separator:a9bcb13977342f28786f635e341e29ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a906a2e4613ca59e07e2f4d6fa8d4e92e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_pub_8h.html#a906a2e4613ca59e07e2f4d6fa8d4e92e">sbfRequestPubReadyCb</a>) (<a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a> pub, void *closure)</td></tr>
 <tr class="memdesc:a906a2e4613ca59e07e2f4d6fa8d4e92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback declaration that will be invoked when publisher is ready.  <a href="#a906a2e4613ca59e07e2f4d6fa8d4e92e">More...</a><br /></td></tr>
 <tr class="separator:a906a2e4613ca59e07e2f4d6fa8d4e92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a204000cf1d1fd85c729701e42ca0504e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_pub_8h.html#a204000cf1d1fd85c729701e42ca0504e">sbfRequestPubReplyCb</a>) (<a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a> pub, struct <a class="el" href="structsbf_request_impl.html">sbfRequestImpl</a> *req, <a class="el" href="sbf_buffer_8h.html#a1e025c4644df2171527745712604be3b">sbfBuffer</a> buffer, void *closure)</td></tr>
+<tr class="memitem:a204000cf1d1fd85c729701e42ca0504e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_pub_8h.html#a204000cf1d1fd85c729701e42ca0504e">sbfRequestPubReplyCb</a>) (<a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a> pub, struct sbfRequestImpl *req, sbfBuffer buffer, void *closure)</td></tr>
 <tr class="memdesc:a204000cf1d1fd85c729701e42ca0504e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback declaration when publisher is replied by the subscriptor.  <a href="#a204000cf1d1fd85c729701e42ca0504e">More...</a><br /></td></tr>
 <tr class="separator:a204000cf1d1fd85c729701e42ca0504e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab20628164dcae6d44a4a985599403a2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_pub_8h.html#ab20628164dcae6d44a4a985599403a2b">sbfRequestPub_create</a> (<a class="el" href="sbf_tport_8h.html#acbaf9d451442abe85c18e3583d746181">sbfTport</a> tport, <a class="el" href="sbf_queue_8h.html#aa8b64a26e53f1e9c6eef9d3379d805e3">sbfQueue</a> queue, const char *topic, <a class="el" href="sbf_request_pub_8h.html#a906a2e4613ca59e07e2f4d6fa8d4e92e">sbfRequestPubReadyCb</a> readyCb, void *closure)</td></tr>
+<tr class="memitem:ab20628164dcae6d44a4a985599403a2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_pub_8h.html#ab20628164dcae6d44a4a985599403a2b">sbfRequestPub_create</a> (sbfTport tport, <a class="el" href="sbf_queue_8h.html#aa8b64a26e53f1e9c6eef9d3379d805e3">sbfQueue</a> queue, const char *topic, <a class="el" href="sbf_request_pub_8h.html#a906a2e4613ca59e07e2f4d6fa8d4e92e">sbfRequestPubReadyCb</a> readyCb, void *closure)</td></tr>
 <tr class="memdesc:ab20628164dcae6d44a4a985599403a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a publisher configured with the given parameters.  <a href="#ab20628164dcae6d44a4a985599403a2b">More...</a><br /></td></tr>
 <tr class="separator:ab20628164dcae6d44a4a985599403a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a608a5445ee3a1d7390e4fd41e72bb806"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_pub_8h.html#a608a5445ee3a1d7390e4fd41e72bb806">sbfRequestPub_destroy</a> (<a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a> pub)</td></tr>
 <tr class="memdesc:a608a5445ee3a1d7390e4fd41e72bb806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release all the resources allocated by the publisher.  <a href="#a608a5445ee3a1d7390e4fd41e72bb806">More...</a><br /></td></tr>
 <tr class="separator:a608a5445ee3a1d7390e4fd41e72bb806"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a012294d9f4dc9b15be7fdb8df4a5cf93"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsbf_request_impl.html">sbfRequestImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_pub_8h.html#a012294d9f4dc9b15be7fdb8df4a5cf93">sbfRequestPub_send</a> (<a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a> pub, void *data, size_t size, <a class="el" href="sbf_request_pub_8h.html#a204000cf1d1fd85c729701e42ca0504e">sbfRequestPubReplyCb</a> replyCb, void *closure)</td></tr>
+<tr class="memitem:a012294d9f4dc9b15be7fdb8df4a5cf93"><td class="memItemLeft" align="right" valign="top">struct sbfRequestImpl *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_pub_8h.html#a012294d9f4dc9b15be7fdb8df4a5cf93">sbfRequestPub_send</a> (<a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a> pub, void *data, size_t size, <a class="el" href="sbf_request_pub_8h.html#a204000cf1d1fd85c729701e42ca0504e">sbfRequestPubReplyCb</a> replyCb, void *closure)</td></tr>
 <tr class="memdesc:a012294d9f4dc9b15be7fdb8df4a5cf93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a message with the given subscriber.  <a href="#a012294d9f4dc9b15be7fdb8df4a5cf93">More...</a><br /></td></tr>
 <tr class="separator:a012294d9f4dc9b15be7fdb8df4a5cf93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fb1ec7c72757ca669a923570a914668"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_pub_8h.html#a4fb1ec7c72757ca669a923570a914668">sbfRequestPub_getTopic</a> (<a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a> pub)</td></tr>
@@ -136,7 +136,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structsbf_request_pub_impl.html">sbfRequestPubImpl</a>* <a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a></td>
+          <td class="memname">typedef struct sbfRequestPubImpl* <a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -179,7 +179,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* sbfRequestPubReplyCb) (<a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a> pub, struct <a class="el" href="structsbf_request_impl.html">sbfRequestImpl</a> *req, <a class="el" href="sbf_buffer_8h.html#a1e025c4644df2171527745712604be3b">sbfBuffer</a> buffer, void *closure)</td>
+          <td class="memname">typedef void(* sbfRequestPubReplyCb) (<a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a> pub, struct sbfRequestImpl *req, sbfBuffer buffer, void *closure)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -209,7 +209,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a> sbfRequestPub_create </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="sbf_tport_8h.html#acbaf9d451442abe85c18e3583d746181">sbfTport</a>&#160;</td>
+          <td class="paramtype">sbfTport&#160;</td>
           <td class="paramname"><em>tport</em>, </td>
         </tr>
         <tr>
@@ -257,8 +257,6 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a publisher configured with the given parameters. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sbf_request_pub_8c_source.html#l00050">50</a> of file <a class="el" href="sbf_request_pub_8c_source.html">sbfRequestPub.c</a>.</p>
-
 </div>
 </div>
 <a id="a608a5445ee3a1d7390e4fd41e72bb806"></a>
@@ -284,8 +282,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="sbf_request_pub_8c_source.html#l00108">108</a> of file <a class="el" href="sbf_request_pub_8c_source.html">sbfRequestPub.c</a>.</p>
 
 </div>
 </div>
@@ -314,8 +310,6 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>null terminated string containing the name of the topic associated with the given publisher. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sbf_request_pub_8c_source.html#l00166">166</a> of file <a class="el" href="sbf_request_pub_8c_source.html">sbfRequestPub.c</a>.</p>
-
 </div>
 </div>
 <a id="a012294d9f4dc9b15be7fdb8df4a5cf93"></a>
@@ -325,7 +319,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structsbf_request_impl.html">sbfRequestImpl</a>* sbfRequestPub_send </td>
+          <td class="memname">struct sbfRequestImpl* sbfRequestPub_send </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4">sbfRequestPub</a>&#160;</td>
           <td class="paramname"><em>pub</em>, </td>
@@ -374,8 +368,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the request handler. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="sbf_request_pub_8c_source.html#l00128">128</a> of file <a class="el" href="sbf_request_pub_8c_source.html">sbfRequestPub.c</a>.</p>
 
 </div>
 </div>

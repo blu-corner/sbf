@@ -4,35 +4,23 @@
     <compoundname>sbfQueueDarwin.h</compoundname>
     <includedby refid="sbf_queue_private_8h" local="yes">core/sbfQueuePrivate.h</includedby>
     <invincdepgraph>
-      <node id="2515">
+      <node id="99">
         <label>core/sbfQueuePrivate.h</label>
         <link refid="sbf_queue_private_8h"/>
-        <childnode refid="2516" relation="include">
-        </childnode>
-        <childnode refid="2517" relation="include">
-        </childnode>
       </node>
-      <node id="2514">
+      <node id="98">
         <label>core/sbfQueueDarwin.h</label>
         <link refid="sbf_queue_darwin_8h"/>
-        <childnode refid="2515" relation="include">
+        <childnode refid="99" relation="include">
         </childnode>
-      </node>
-      <node id="2516">
-        <label>core/sbfHiResTimer.c</label>
-        <link refid="sbf_hi_res_timer_8c"/>
-      </node>
-      <node id="2517">
-        <label>core/sbfQueue.c</label>
-        <link refid="sbf_queue_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
       <memberdef kind="define" id="sbf_queue_darwin_8h_1a8bc4a90e1403cf84c0b31dac516419c0" prot="public" static="no">
         <name>SBF_QUEUE_DECL</name>
-        <initializer><ref refid="sbf_common_darwin_8h_1ae8e30512fa920f7ed878fc63307e7f97" kindref="member">sbfMutex</ref>                          mMutex;   \
-    <ref refid="sbf_common_darwin_8h_1a27e225ff8446b4974be1e839d59f6a46" kindref="member">sbfCondVar</ref>                        mCondVar; \
-    <ref refid="sysqueue_8h_1adf0c29c386006b1f32435abe538d4398" kindref="member">SIMPLEQ_HEAD</ref> (, <ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItemImpl</ref>) mItems;</initializer>
+        <initializer>sbfMutex                          mMutex;   \
+    sbfCondVar                        mCondVar; \
+    SIMPLEQ_HEAD (, sbfQueueItemImpl) mItems;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -43,7 +31,7 @@
       </memberdef>
       <memberdef kind="define" id="sbf_queue_darwin_8h_1a12a7585797d70a2e230bbae3180f6669" prot="public" static="no">
         <name>SBF_QUEUE_ITEM_DECL</name>
-        <initializer><ref refid="sysqueue_8h_1af416c4e9e87270cb7b90152a27b8daa4" kindref="member">SIMPLEQ_ENTRY</ref> (<ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItemImpl</ref>) mEntry;</initializer>
+        <initializer>SIMPLEQ_ENTRY (sbfQueueItemImpl) mEntry;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -74,49 +62,49 @@
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>SBF_QUEUE_FUNCTIONS<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_darwin_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal">sbfQueueCreate<sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">sbfQueueCreate<sp/>(<ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/>queue)</highlight></codeline>
 <codeline lineno="19"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a0f0968bebfa055ca5bc7ef552a0f7306" kindref="member">sbfMutex_init</ref><sp/>(&amp;queue-&gt;mMutex,<sp/>0);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1ac4461ac56f70b819e85ab353ff052c27" kindref="member">sbfCondVar_init</ref><sp/>(&amp;queue-&gt;mCondVar);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sysqueue_8h_1a36c4353aafcd6f7d0dbf74473d761b08" kindref="member">SIMPLEQ_INIT</ref><sp/>(&amp;queue-&gt;mItems);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_init<sp/>(&amp;queue-&gt;mMutex,<sp/>0);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfCondVar_init<sp/>(&amp;queue-&gt;mCondVar);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>SIMPLEQ_INIT<sp/>(&amp;queue-&gt;mItems);</highlight></codeline>
 <codeline lineno="23"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_darwin_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">sbfQueueDestroy<sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">sbfQueueDestroy<sp/>(<ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/>queue)</highlight></codeline>
 <codeline lineno="27"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref><sp/>item;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((item<sp/>=<sp/><ref refid="sysqueue_8h_1a8aca010fb5702082a231bb2535e5a945" kindref="member">SIMPLEQ_FIRST</ref><sp/>(&amp;queue-&gt;mItems))<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((item<sp/>=<sp/>SIMPLEQ_FIRST<sp/>(&amp;queue-&gt;mItems))<sp/>!=<sp/>NULL)</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sysqueue_8h_1a595ba5db373de6d9e9daba311b1e458d" kindref="member">SIMPLEQ_REMOVE_HEAD</ref><sp/>(&amp;queue-&gt;mItems,<sp/>mEntry);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SIMPLEQ_REMOVE_HEAD<sp/>(&amp;queue-&gt;mItems,<sp/>mEntry);</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfPool_put<sp/>(item);</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1aee816bafc4e98628a6be5e910fac2fb7" kindref="member">sbfCondVar_destroy</ref><sp/>(&amp;queue-&gt;mCondVar);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a696ae52b59c8ee67b0792cf793ca07c3" kindref="member">sbfMutex_destroy</ref><sp/>(&amp;queue-&gt;mMutex);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfCondVar_destroy<sp/>(&amp;queue-&gt;mCondVar);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_destroy<sp/>(&amp;queue-&gt;mMutex);</highlight></codeline>
 <codeline lineno="38"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_darwin_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal">sbfQueueEnqueue<sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue,<sp/><ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">sbfQueueEnqueue<sp/>(<ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/>queue,<sp/><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref><sp/>item)</highlight></codeline>
 <codeline lineno="42"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1afe21416b021add1d039070372b28c2b7" kindref="member">sbfMutex_lock</ref><sp/>(&amp;queue-&gt;mMutex);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sysqueue_8h_1a3f31b4857ff4ccb0f970ca9d19e133b4" kindref="member">SIMPLEQ_INSERT_TAIL</ref><sp/>(&amp;queue-&gt;mItems,<sp/>item,<sp/>mEntry);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a1c1fe46b5cd2ee83b67395c6e24a086c" kindref="member">sbfCondVar_signal</ref><sp/>(&amp;queue-&gt;mCondVar);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1ae9f52fb356fee346369a22cfef0def73" kindref="member">sbfMutex_unlock</ref><sp/>(&amp;queue-&gt;mMutex);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_lock<sp/>(&amp;queue-&gt;mMutex);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>SIMPLEQ_INSERT_TAIL<sp/>(&amp;queue-&gt;mItems,<sp/>item,<sp/>mEntry);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfCondVar_signal<sp/>(&amp;queue-&gt;mCondVar);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_unlock<sp/>(&amp;queue-&gt;mMutex);</highlight></codeline>
 <codeline lineno="47"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_common_darwin_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref><sp/><ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref></highlight></codeline>
-<codeline lineno="50"><highlight class="normal">sbfQueueDequeue<sp/>(<ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/>queue)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">sbfQueueDequeue<sp/>(<ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/>queue)</highlight></codeline>
 <codeline lineno="51"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_item_impl" kindref="compound">sbfQueueItem</ref><sp/>item<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref><sp/>item<sp/>=<sp/>NULL;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1afe21416b021add1d039070372b28c2b7" kindref="member">sbfMutex_lock</ref><sp/>(&amp;queue-&gt;mMutex);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((item<sp/>=<sp/><ref refid="sysqueue_8h_1a8aca010fb5702082a231bb2535e5a945" kindref="member">SIMPLEQ_FIRST</ref><sp/>(&amp;queue-&gt;mItems))<sp/>==<sp/>NULL)</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a294ec73d6c256d0ab0d3cce320bdff44" kindref="member">sbfCondVar_wait</ref><sp/>(&amp;queue-&gt;mCondVar,<sp/>&amp;queue-&gt;mMutex);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_lock<sp/>(&amp;queue-&gt;mMutex);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((item<sp/>=<sp/>SIMPLEQ_FIRST<sp/>(&amp;queue-&gt;mItems))<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfCondVar_wait<sp/>(&amp;queue-&gt;mCondVar,<sp/>&amp;queue-&gt;mMutex);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item<sp/>!=<sp/>NULL)</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sysqueue_8h_1a595ba5db373de6d9e9daba311b1e458d" kindref="member">SIMPLEQ_REMOVE_HEAD</ref><sp/>(&amp;queue-&gt;mItems,<sp/>mEntry);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1ae9f52fb356fee346369a22cfef0def73" kindref="member">sbfMutex_unlock</ref><sp/>(&amp;queue-&gt;mMutex);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SIMPLEQ_REMOVE_HEAD<sp/>(&amp;queue-&gt;mItems,<sp/>mEntry);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_unlock<sp/>(&amp;queue-&gt;mMutex);</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>item;</highlight></codeline>
 <codeline lineno="62"><highlight class="normal">}</highlight></codeline>

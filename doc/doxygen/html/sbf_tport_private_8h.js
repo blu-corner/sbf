@@ -1,8 +1,6 @@
 var sbf_tport_private_8h =
 [
-    [ "sbfTportTopicImpl", "structsbf_tport_topic_impl.html", "structsbf_tport_topic_impl" ],
     [ "sbfTportWeight", "structsbf_tport_weight.html", "structsbf_tport_weight" ],
-    [ "sbfTportImpl", "structsbf_tport_impl.html", "structsbf_tport_impl" ],
     [ "SBF_MESSAGE_FLAG_LAST_FRAGMENT", "sbf_tport_private_8h.html#a21e7eb1c6080cd45e307ecc2fa072fac", null ],
     [ "SBF_MESSAGE_FLAG_LAST_IN_PACKET", "sbf_tport_private_8h.html#a6465f6e050bfabd18dd4bf2c6ddbe53b", null ],
     [ "SBF_MESSAGE_SIZE_LIMIT", "sbf_tport_private_8h.html#a96c87ede5a7f7cc05d701912bc46f73f", null ],

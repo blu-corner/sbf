@@ -2,444 +2,130 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="sbf_mw_8h" kind="file" language="C++">
     <compoundname>sbfMw.h</compoundname>
-    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includes local="yes">sbfCommon.h</includes>
     <includes refid="sbf_event_8h" local="yes">sbfEvent.h</includes>
     <includes refid="sbf_hi_res_timer_8h" local="yes">sbfHiResTimer.h</includes>
-    <includes refid="sbf_key_value_8h" local="yes">sbfKeyValue.h</includes>
+    <includes local="yes">sbfKeyValue.h</includes>
     <includes refid="sbf_queue_8h" local="yes">sbfQueue.h</includes>
     <includes refid="sbf_timer_8h" local="yes">sbfTimer.h</includes>
-    <includedby refid="sbf_tcp_connection_private_8h" local="yes">common/sbfTcpConnectionPrivate.h</includedby>
-    <includedby refid="sbf_tcp_listener_private_8h" local="yes">common/sbfTcpListenerPrivate.h</includedby>
     <includedby refid="sbf_event_private_8h" local="yes">core/sbfEventPrivate.h</includedby>
     <includedby refid="sbf_hi_res_timer_private_8h" local="yes">core/sbfHiResTimerPrivate.h</includedby>
     <includedby refid="sbf_queue_private_8h" local="yes">core/sbfQueuePrivate.h</includedby>
-    <includedby refid="sbf_mw_8c" local="yes">core/sbfMw.c</includedby>
     <includedby refid="sbf_timer_private_8h" local="yes">core/sbfTimerPrivate.h</includedby>
     <includedby refid="sbf_common_handler_8h" local="yes">handlers/common/sbfCommonHandler.h</includedby>
     <includedby refid="sbf_common_handler_private_8h" local="yes">handlers/common/sbfCommonHandlerPrivate.h</includedby>
     <includedby refid="sbf_tcp_mesh_handler_8h" local="yes">handlers/tcpmesh/sbfTcpMeshHandler.h</includedby>
     <includedby refid="sbf_udp_handler_8h" local="yes">handlers/udp/sbfUdpHandler.h</includedby>
     <includedby refid="sbf_request_reply_8h" local="yes">requestreply/sbfRequestReply.h</includedby>
-    <includedby refid="sbf_publisher_8c" local="yes">tools/publisher/sbfPublisher.c</includedby>
-    <includedby refid="sbf_replier_8c" local="yes">tools/replier/sbfReplier.c</includedby>
-    <includedby refid="sbf_requester_8c" local="yes">tools/requester/sbfRequester.c</includedby>
-    <includedby refid="sbf_subscriber_8c" local="yes">tools/subscriber/sbfSubscriber.c</includedby>
-    <includedby refid="sbf_tport_8h" local="yes">transport/sbfTport.h</includedby>
     <incdepgraph>
-      <node id="2342">
-        <label>event.h</label>
-      </node>
-      <node id="2341">
-        <label>sbfVersion.h</label>
-        <link refid="sbf_version_8h"/>
-      </node>
-      <node id="2343">
-        <label>syshash.h</label>
-        <link refid="syshash_8h"/>
-        <childnode refid="2344" relation="include">
-        </childnode>
-      </node>
-      <node id="2350">
+      <node id="58">
         <label>sbfEvent.h</label>
         <link refid="sbf_event_8h"/>
-        <childnode refid="2340" relation="include">
+        <childnode refid="57" relation="include">
         </childnode>
       </node>
-      <node id="2347">
-        <label>sbfFatal.h</label>
-        <link refid="sbf_fatal_8h"/>
-        <childnode refid="2340" relation="include">
-        </childnode>
-      </node>
-      <node id="2352">
-        <label>sbfKeyValue.h</label>
-        <link refid="sbf_key_value_8h"/>
-        <childnode refid="2340" relation="include">
-        </childnode>
-      </node>
-      <node id="2351">
+      <node id="59">
         <label>sbfHiResTimer.h</label>
         <link refid="sbf_hi_res_timer_8h"/>
-        <childnode refid="2340" relation="include">
+        <childnode refid="57" relation="include">
         </childnode>
       </node>
-      <node id="2344">
-        <label>sys/types.h</label>
-      </node>
-      <node id="2354">
+      <node id="62">
         <label>sbfTimer.h</label>
         <link refid="sbf_timer_8h"/>
-        <childnode refid="2340" relation="include">
+        <childnode refid="57" relation="include">
         </childnode>
       </node>
-      <node id="2340">
+      <node id="57">
         <label>sbfCommon.h</label>
-        <link refid="sbf_common_8h"/>
-        <childnode refid="2341" relation="include">
-        </childnode>
-        <childnode refid="2342" relation="include">
-        </childnode>
-        <childnode refid="2343" relation="include">
-        </childnode>
-        <childnode refid="2345" relation="include">
-        </childnode>
-        <childnode refid="2346" relation="include">
-        </childnode>
-        <childnode refid="2347" relation="include">
-        </childnode>
-        <childnode refid="2348" relation="include">
-        </childnode>
-        <childnode refid="2349" relation="include">
-        </childnode>
       </node>
-      <node id="2346">
-        <label>systree.h</label>
-        <link refid="systree_8h"/>
-      </node>
-      <node id="2345">
-        <label>sysqueue.h</label>
-        <link refid="sysqueue_8h"/>
-      </node>
-      <node id="2339">
+      <node id="56">
         <label>core/sbfMw.h</label>
         <link refid="sbf_mw_8h"/>
-        <childnode refid="2340" relation="include">
+        <childnode refid="57" relation="include">
         </childnode>
-        <childnode refid="2350" relation="include">
+        <childnode refid="58" relation="include">
         </childnode>
-        <childnode refid="2351" relation="include">
+        <childnode refid="59" relation="include">
         </childnode>
-        <childnode refid="2352" relation="include">
+        <childnode refid="60" relation="include">
         </childnode>
-        <childnode refid="2353" relation="include">
+        <childnode refid="61" relation="include">
         </childnode>
-        <childnode refid="2354" relation="include">
-        </childnode>
-      </node>
-      <node id="2348">
-        <label>sbfLog.h</label>
-        <link refid="sbf_log_8h"/>
-        <childnode refid="2340" relation="include">
+        <childnode refid="62" relation="include">
         </childnode>
       </node>
-      <node id="2353">
+      <node id="60">
+        <label>sbfKeyValue.h</label>
+      </node>
+      <node id="61">
         <label>sbfQueue.h</label>
         <link refid="sbf_queue_8h"/>
-        <childnode refid="2340" relation="include">
-        </childnode>
-      </node>
-      <node id="2349">
-        <label>sbfMemory.h</label>
-        <link refid="sbf_memory_8h"/>
-        <childnode refid="2340" relation="include">
+        <childnode refid="57" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2362">
+      <node id="65">
         <label>core/sbfHiResTimerPrivate.h</label>
         <link refid="sbf_hi_res_timer_private_8h"/>
-        <childnode refid="2363" relation="include">
-        </childnode>
-        <childnode refid="2364" relation="include">
+        <childnode refid="66" relation="include">
         </childnode>
       </node>
-      <node id="2364">
+      <node id="66">
         <label>core/sbfQueuePrivate.h</label>
         <link refid="sbf_queue_private_8h"/>
-        <childnode refid="2363" relation="include">
-        </childnode>
-        <childnode refid="2365" relation="include">
-        </childnode>
       </node>
-      <node id="2370">
-        <label>handlers/common/sbfCommonHandler.c</label>
-        <link refid="sbf_common_handler_8c"/>
-      </node>
-      <node id="2369">
+      <node id="68">
         <label>handlers/common/sbfCommonHandler.h</label>
         <link refid="sbf_common_handler_8h"/>
-        <childnode refid="2370" relation="include">
-        </childnode>
-        <childnode refid="2371" relation="include">
+        <childnode refid="69" relation="include">
         </childnode>
       </node>
-      <node id="2396">
-        <label>transport/sbfTportWeight.c</label>
-        <link refid="sbf_tport_weight_8c"/>
-      </node>
-      <node id="2379">
-        <label>requestreply/sbfRequestSub.c</label>
-        <link refid="sbf_request_sub_8c"/>
-      </node>
-      <node id="2385">
-        <label>requestreply/sbfRequestSub.h</label>
-        <link refid="sbf_request_sub_8h"/>
-        <childnode refid="2376" relation="include">
-        </childnode>
-      </node>
-      <node id="2380">
-        <label>tools/replier/sbfReplier.c</label>
-        <link refid="sbf_replier_8c"/>
-      </node>
-      <node id="2392">
-        <label>transport/sbfSub.c</label>
-        <link refid="sbf_sub_8c"/>
-      </node>
-      <node id="2393">
-        <label>transport/sbfTopic.c</label>
-        <link refid="sbf_topic_8c"/>
-      </node>
-      <node id="2373">
+      <node id="70">
         <label>handlers/common/sbfCommonHandlerPrivate.h</label>
         <link refid="sbf_common_handler_private_8h"/>
-        <childnode refid="2370" relation="include">
-        </childnode>
       </node>
-      <node id="2359">
-        <label>common/sbfTcpListenerPrivate.h</label>
-        <link refid="sbf_tcp_listener_private_8h"/>
-        <childnode refid="2358" relation="include">
-        </childnode>
-      </node>
-      <node id="2372">
-        <label>handlers/udp/sbfUdpHandler.c</label>
-        <link refid="sbf_udp_handler_8c"/>
-      </node>
-      <node id="2371">
+      <node id="69">
         <label>handlers/udp/sbfUdpHandler.h</label>
         <link refid="sbf_udp_handler_8h"/>
-        <childnode refid="2372" relation="include">
-        </childnode>
       </node>
-      <node id="2360">
+      <node id="64">
         <label>core/sbfEventPrivate.h</label>
         <link refid="sbf_event_private_8h"/>
-        <childnode refid="2361" relation="include">
-        </childnode>
       </node>
-      <node id="2382">
-        <label>tools/publisher/sbfPublisher.c</label>
-        <link refid="sbf_publisher_8c"/>
-      </node>
-      <node id="2361">
-        <label>core/sbfEvent.c</label>
-        <link refid="sbf_event_8c"/>
-      </node>
-      <node id="2387">
-        <label>transport/sbfBatch.c</label>
-        <link refid="sbf_batch_8c"/>
-      </node>
-      <node id="2381">
-        <label>tools/requester/sbfRequester.c</label>
-        <link refid="sbf_requester_8c"/>
-      </node>
-      <node id="2363">
-        <label>core/sbfHiResTimer.c</label>
-        <link refid="sbf_hi_res_timer_8c"/>
-      </node>
-      <node id="2356">
-        <label>common/sbfTcpConnectionPrivate.h</label>
-        <link refid="sbf_tcp_connection_private_8h"/>
-        <childnode refid="2357" relation="include">
-        </childnode>
-        <childnode refid="2358" relation="include">
-        </childnode>
-      </node>
-      <node id="2383">
-        <label>tools/subscriber/sbfSubscriber.c</label>
-        <link refid="sbf_subscriber_8c"/>
-      </node>
-      <node id="2375">
-        <label>handlers/tcpmesh/sbfTcpMeshHandler.c</label>
-        <link refid="sbf_tcp_mesh_handler_8c"/>
-      </node>
-      <node id="2374">
+      <node id="71">
         <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
         <link refid="sbf_tcp_mesh_handler_8h"/>
-        <childnode refid="2375" relation="include">
-        </childnode>
       </node>
-      <node id="2391">
-        <label>transport/sbfPub.c</label>
-        <link refid="sbf_pub_8c"/>
-      </node>
-      <node id="2357">
-        <label>common/sbfTcpConnection.c</label>
-        <link refid="sbf_tcp_connection_8c"/>
-      </node>
-      <node id="2367">
+      <node id="67">
         <label>core/sbfTimerPrivate.h</label>
         <link refid="sbf_timer_private_8h"/>
-        <childnode refid="2368" relation="include">
-        </childnode>
       </node>
-      <node id="2378">
-        <label>requestreply/sbfRequestReply.c</label>
-        <link refid="sbf_request_reply_8c"/>
-      </node>
-      <node id="2376">
+      <node id="72">
         <label>requestreply/sbfRequestReply.h</label>
         <link refid="sbf_request_reply_8h"/>
-        <childnode refid="2377" relation="include">
-        </childnode>
-        <childnode refid="2378" relation="include">
-        </childnode>
-        <childnode refid="2379" relation="include">
-        </childnode>
-        <childnode refid="2380" relation="include">
-        </childnode>
-        <childnode refid="2381" relation="include">
-        </childnode>
       </node>
-      <node id="2390">
-        <label>transport/sbfHandler.c</label>
-        <link refid="sbf_handler_8c"/>
-      </node>
-      <node id="2388">
-        <label>transport/sbfHandler.h</label>
-        <link refid="sbf_handler_8h"/>
-        <childnode refid="2373" relation="include">
-        </childnode>
-        <childnode refid="2374" relation="include">
-        </childnode>
-        <childnode refid="2371" relation="include">
-        </childnode>
-        <childnode refid="2389" relation="include">
-        </childnode>
-      </node>
-      <node id="2368">
-        <label>core/sbfTimer.c</label>
-        <link refid="sbf_timer_8c"/>
-      </node>
-      <node id="2389">
-        <label>transport/sbfTportPrivate.h</label>
-        <link refid="sbf_tport_private_8h"/>
-        <childnode refid="2387" relation="include">
-        </childnode>
-        <childnode refid="2390" relation="include">
-        </childnode>
-        <childnode refid="2391" relation="include">
-        </childnode>
-        <childnode refid="2392" relation="include">
-        </childnode>
-        <childnode refid="2393" relation="include">
-        </childnode>
-        <childnode refid="2394" relation="include">
-        </childnode>
-        <childnode refid="2395" relation="include">
-        </childnode>
-        <childnode refid="2396" relation="include">
-        </childnode>
-      </node>
-      <node id="2395">
-        <label>transport/sbfTportFragments.c</label>
-        <link refid="sbf_tport_fragments_8c"/>
-      </node>
-      <node id="2394">
-        <label>transport/sbfTport.c</label>
-        <link refid="sbf_tport_8c"/>
-      </node>
-      <node id="2384">
-        <label>transport/sbfTport.h</label>
-        <link refid="sbf_tport_8h"/>
-        <childnode refid="2369" relation="include">
-        </childnode>
-        <childnode refid="2373" relation="include">
-        </childnode>
-        <childnode refid="2374" relation="include">
-        </childnode>
-        <childnode refid="2371" relation="include">
-        </childnode>
-        <childnode refid="2385" relation="include">
-        </childnode>
-        <childnode refid="2386" relation="include">
-        </childnode>
-        <childnode refid="2382" relation="include">
-        </childnode>
-        <childnode refid="2380" relation="include">
-        </childnode>
-        <childnode refid="2381" relation="include">
-        </childnode>
-        <childnode refid="2383" relation="include">
-        </childnode>
-        <childnode refid="2387" relation="include">
-        </childnode>
-        <childnode refid="2388" relation="include">
-        </childnode>
-        <childnode refid="2390" relation="include">
-        </childnode>
-        <childnode refid="2391" relation="include">
-        </childnode>
-        <childnode refid="2392" relation="include">
-        </childnode>
-        <childnode refid="2393" relation="include">
-        </childnode>
-        <childnode refid="2394" relation="include">
-        </childnode>
-        <childnode refid="2395" relation="include">
-        </childnode>
-        <childnode refid="2396" relation="include">
-        </childnode>
-      </node>
-      <node id="2366">
-        <label>core/sbfMw.c</label>
-        <link refid="sbf_mw_8c"/>
-      </node>
-      <node id="2355">
+      <node id="63">
         <label>core/sbfMw.h</label>
         <link refid="sbf_mw_8h"/>
-        <childnode refid="2356" relation="include">
+        <childnode refid="64" relation="include">
         </childnode>
-        <childnode refid="2359" relation="include">
+        <childnode refid="65" relation="include">
         </childnode>
-        <childnode refid="2360" relation="include">
+        <childnode refid="66" relation="include">
         </childnode>
-        <childnode refid="2362" relation="include">
+        <childnode refid="67" relation="include">
         </childnode>
-        <childnode refid="2364" relation="include">
+        <childnode refid="68" relation="include">
         </childnode>
-        <childnode refid="2366" relation="include">
+        <childnode refid="70" relation="include">
         </childnode>
-        <childnode refid="2367" relation="include">
+        <childnode refid="71" relation="include">
         </childnode>
-        <childnode refid="2369" relation="include">
+        <childnode refid="69" relation="include">
         </childnode>
-        <childnode refid="2373" relation="include">
-        </childnode>
-        <childnode refid="2374" relation="include">
-        </childnode>
-        <childnode refid="2371" relation="include">
-        </childnode>
-        <childnode refid="2376" relation="include">
-        </childnode>
-        <childnode refid="2382" relation="include">
-        </childnode>
-        <childnode refid="2380" relation="include">
-        </childnode>
-        <childnode refid="2381" relation="include">
-        </childnode>
-        <childnode refid="2383" relation="include">
-        </childnode>
-        <childnode refid="2384" relation="include">
-        </childnode>
-      </node>
-      <node id="2358">
-        <label>common/sbfTcpListener.c</label>
-        <link refid="sbf_tcp_listener_8c"/>
-      </node>
-      <node id="2365">
-        <label>core/sbfQueue.c</label>
-        <link refid="sbf_queue_8c"/>
-      </node>
-      <node id="2377">
-        <label>requestreply/sbfRequestPub.c</label>
-        <link refid="sbf_request_pub_8c"/>
-      </node>
-      <node id="2386">
-        <label>requestreply/sbfRequestPub.h</label>
-        <link refid="sbf_request_pub_8h"/>
-        <childnode refid="2376" relation="include">
+        <childnode refid="72" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -481,7 +167,7 @@
       </sectiondef>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" prot="public" static="no">
-        <type>typedefSBF_BEGIN_DECLS struct <ref refid="structsbf_mw_impl" kindref="compound">sbfMwImpl</ref> *</type>
+        <type>typedefSBF_BEGIN_DECLS struct sbfMwImpl *</type>
         <definition>typedef typedefSBF_BEGIN_DECLS struct sbfMwImpl* sbfMw</definition>
         <argsstring></argsstring>
         <name>sbfMw</name>
@@ -494,7 +180,7 @@
         <location file="core/sbfMw.h" line="18" column="1" bodyfile="core/sbfMw.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" prot="public" static="no">
-        <type>struct <ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThreadImpl</ref> *</type>
+        <type>struct sbfMwThreadImpl *</type>
         <definition>typedef struct sbfMwThreadImpl* sbfMwThread</definition>
         <argsstring></argsstring>
         <name>sbfMwThread</name>
@@ -514,11 +200,11 @@
         <argsstring>(sbfLog log, sbfKeyValue properties)</argsstring>
         <name>sbfMw_create</name>
         <param>
-          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <type>sbfLog</type>
           <declname>log</declname>
         </param>
         <param>
-          <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+          <type>sbfKeyValue</type>
           <declname>properties</declname>
         </param>
         <briefdescription>
@@ -543,7 +229,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="36" column="1" bodyfile="core/sbfMw.c" bodystart="32" bodyend="107"/>
+        <location file="core/sbfMw.h" line="36" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1a4ac93cb7885ade2979c7663b557e119c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -569,7 +255,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="43" column="1" bodyfile="core/sbfMw.c" bodystart="110" bodyend="131"/>
+        <location file="core/sbfMw.h" line="43" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1a286f53f7cda015578f2f78669fee0791" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>u_int</type>
@@ -595,7 +281,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="50" column="1" bodyfile="core/sbfMw.c" bodystart="142" bodyend="145"/>
+        <location file="core/sbfMw.h" line="50" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1a0f0c2d3ddad45d49b67349f02a2ad772" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref></type>
@@ -632,10 +318,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="58" column="1" bodyfile="core/sbfMw.c" bodystart="134" bodyend="139"/>
+        <location file="core/sbfMw.h" line="58" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1aa7e45fc4943d4080534faf9d4b2f394f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+        <type>sbfLog</type>
         <definition>sbfLog sbfMw_getLog</definition>
         <argsstring>(sbfMw mw)</argsstring>
         <name>sbfMw_getLog</name>
@@ -658,10 +344,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="68" column="1" bodyfile="core/sbfMw.c" bodystart="181" bodyend="184"/>
+        <location file="core/sbfMw.h" line="68" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1a655078066f200c13dfa63a1bdd650f5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+        <type>sbfKeyValue</type>
         <definition>sbfKeyValue sbfMw_getProperties</definition>
         <argsstring>(sbfMw mw)</argsstring>
         <name>sbfMw_getProperties</name>
@@ -684,7 +370,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="75" column="1" bodyfile="core/sbfMw.c" bodystart="187" bodyend="190"/>
+        <location file="core/sbfMw.h" line="75" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1aa183ff642fc7b83bf48a3d6757f79e06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>u_int</type>
@@ -710,7 +396,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="86" column="1" bodyfile="core/sbfMw.c" bodystart="148" bodyend="151"/>
+        <location file="core/sbfMw.h" line="86" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1a68205584a281f9eba76af89248eb71f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint64_t</type>
@@ -736,7 +422,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="93" column="1" bodyfile="core/sbfMw.c" bodystart="154" bodyend="157"/>
+        <location file="core/sbfMw.h" line="93" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1a49eee9c382b8543bbb6e5822b6c7d554" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct event_base *</type>
@@ -762,7 +448,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="100" column="1" bodyfile="core/sbfMw.c" bodystart="160" bodyend="163"/>
+        <location file="core/sbfMw.h" line="100" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -775,17 +461,17 @@
 <codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>_SBF_MW_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_MW_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfCommon.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_event_8h" kindref="compound">sbfEvent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_hi_res_timer_8h" kindref="compound">sbfHiResTimer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_key_value_8h" kindref="compound">sbfKeyValue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfKeyValue.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_queue_8h" kindref="compound">sbfQueue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_timer_8h" kindref="compound">sbfTimer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">SBF_BEGIN_DECLS</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_mw_impl" kindref="compound">sbfMwImpl</ref>*<sp/><ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref>;</highlight></codeline>
-<codeline lineno="19" refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThreadImpl</ref>*<sp/><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref>;</highlight></codeline>
+<codeline lineno="18" refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfMwImpl*<sp/><ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref>;</highlight></codeline>
+<codeline lineno="19" refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfMwThreadImpl*<sp/><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref>;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22" refid="sbf_mw_8h_1a3a43b58a7ec394a4cba898f47c99d50f" refkind="member"><highlight class="preprocessor">#define<sp/>SBF_MW_THREAD_LIMIT<sp/>64</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
@@ -795,30 +481,30 @@
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Middleware<sp/>API</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal">sbfMw<sp/><ref refid="sbf_mw_8h_1a9f7c2a1535eb545d6e73bb8ebc33a209" kindref="member">sbfMw_create</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,<sp/><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/>properties);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/><ref refid="sbf_mw_8h_1a9f7c2a1535eb545d6e73bb8ebc33a209" kindref="member">sbfMw_create</ref><sp/>(sbfLog<sp/>log,<sp/>sbfKeyValue<sp/>properties);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_mw_8h_1a4ac93cb7885ade2979c7663b557e119c" kindref="member">sbfMw_destroy</ref><sp/>(sbfMw<sp/>mw);</highlight></codeline>
+<codeline lineno="43"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_mw_8h_1a4ac93cb7885ade2979c7663b557e119c" kindref="member">sbfMw_destroy</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal">u_int<sp/><ref refid="sbf_mw_8h_1a286f53f7cda015578f2f78669fee0791" kindref="member">sbfMw_getNumThreads</ref><sp/>(sbfMw<sp/>mw);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal">sbfMwThread<sp/><ref refid="sbf_mw_8h_1a0f0c2d3ddad45d49b67349f02a2ad772" kindref="member">sbfMw_getThread</ref><sp/>(sbfMw<sp/>mw,<sp/>u_int<sp/>index);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">u_int<sp/><ref refid="sbf_mw_8h_1a286f53f7cda015578f2f78669fee0791" kindref="member">sbfMw_getNumThreads</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/><ref refid="sbf_mw_8h_1a0f0c2d3ddad45d49b67349f02a2ad772" kindref="member">sbfMw_getThread</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw,<sp/>u_int<sp/>index);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
 <codeline lineno="61" refid="sbf_mw_8h_1abf18b7c2721832ab6504c716791ce31c" refkind="member"><highlight class="preprocessor">#define<sp/>sbfMw_getDefaultThread(mw)<sp/>sbfMw_getThread<sp/>(mw,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/><ref refid="sbf_mw_8h_1aa7e45fc4943d4080534faf9d4b2f394f" kindref="member">sbfMw_getLog</ref><sp/>(sbfMw<sp/>mw);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">sbfLog<sp/><ref refid="sbf_mw_8h_1aa7e45fc4943d4080534faf9d4b2f394f" kindref="member">sbfMw_getLog</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw);</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/><ref refid="sbf_mw_8h_1a655078066f200c13dfa63a1bdd650f5e" kindref="member">sbfMw_getProperties</ref><sp/>(sbfMw<sp/>mw);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">sbfKeyValue<sp/><ref refid="sbf_mw_8h_1a655078066f200c13dfa63a1bdd650f5e" kindref="member">sbfMw_getProperties</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw);</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Thread<sp/>helper<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal">u_int<sp/><ref refid="sbf_mw_8h_1aa183ff642fc7b83bf48a3d6757f79e06" kindref="member">sbfMw_getThreadIndex</ref><sp/>(sbfMwThread<sp/>thread);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">u_int<sp/><ref refid="sbf_mw_8h_1aa183ff642fc7b83bf48a3d6757f79e06" kindref="member">sbfMw_getThreadIndex</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal">uint64_t<sp/><ref refid="sbf_mw_8h_1a68205584a281f9eba76af89248eb71f9" kindref="member">sbfMw_getThreadMask</ref><sp/>(sbfMwThread<sp/>thread);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">uint64_t<sp/><ref refid="sbf_mw_8h_1a68205584a281f9eba76af89248eb71f9" kindref="member">sbfMw_getThreadMask</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread);</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">event_base*<sp/><ref refid="sbf_mw_8h_1a49eee9c382b8543bbb6e5822b6c7d554" kindref="member">sbfMw_getThreadEventBase</ref><sp/>(sbfMwThread<sp/>thread);</highlight></codeline>
+<codeline lineno="100"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">event_base*<sp/><ref refid="sbf_mw_8h_1a49eee9c382b8543bbb6e5822b6c7d554" kindref="member">sbfMw_getThreadEventBase</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread);</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">SBF_END_DECLS</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
 <codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_MW_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>

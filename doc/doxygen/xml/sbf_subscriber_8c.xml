@@ -2,228 +2,74 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="sbf_subscriber_8c" kind="file" language="C++">
     <compoundname>sbfSubscriber.c</compoundname>
-    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includes local="yes">sbfCommon.h</includes>
     <includes refid="sbf_mw_8h" local="yes">sbfMw.h</includes>
-    <includes refid="sbf_perf_counter_8h" local="yes">sbfPerfCounter.h</includes>
-    <includes refid="sbf_tport_8h" local="yes">sbfTport.h</includes>
+    <includes local="yes">sbfPerfCounter.h</includes>
+    <includes local="yes">sbfTport.h</includes>
     <incdepgraph>
-      <node id="3246">
-        <label>sbfPool.h</label>
-        <link refid="sbf_pool_8h"/>
-        <childnode refid="3226" relation="include">
-        </childnode>
-        <childnode refid="3247" relation="include">
-        </childnode>
-        <childnode refid="3248" relation="include">
-        </childnode>
-      </node>
-      <node id="3228">
-        <label>event.h</label>
-      </node>
-      <node id="3247">
-        <label>sbfAtomic.h</label>
-        <link refid="sbf_atomic_8h"/>
-        <childnode refid="3226" relation="include">
-        </childnode>
-      </node>
-      <node id="3252">
-        <label>sbfSub.h</label>
-        <link refid="sbf_sub_8h"/>
-        <childnode refid="3245" relation="include">
-        </childnode>
-        <childnode refid="3226" relation="include">
-        </childnode>
-        <childnode refid="3240" relation="include">
-        </childnode>
-      </node>
-      <node id="3253">
-        <label>sbfTopic.h</label>
-        <link refid="sbf_topic_8h"/>
-        <childnode refid="3226" relation="include">
-        </childnode>
-      </node>
-      <node id="3227">
-        <label>sbfVersion.h</label>
-        <link refid="sbf_version_8h"/>
-      </node>
-      <node id="3229">
-        <label>syshash.h</label>
-        <link refid="syshash_8h"/>
-        <childnode refid="3230" relation="include">
-        </childnode>
-      </node>
-      <node id="3237">
+      <node id="584">
         <label>sbfEvent.h</label>
         <link refid="sbf_event_8h"/>
-        <childnode refid="3226" relation="include">
+        <childnode refid="582" relation="include">
         </childnode>
       </node>
-      <node id="3244">
-        <label>sbfBatch.h</label>
-        <link refid="sbf_batch_8h"/>
-        <childnode refid="3245" relation="include">
-        </childnode>
-        <childnode refid="3226" relation="include">
-        </childnode>
-      </node>
-      <node id="3233">
-        <label>sbfFatal.h</label>
-        <link refid="sbf_fatal_8h"/>
-        <childnode refid="3226" relation="include">
-        </childnode>
-      </node>
-      <node id="3239">
-        <label>sbfKeyValue.h</label>
-        <link refid="sbf_key_value_8h"/>
-        <childnode refid="3226" relation="include">
-        </childnode>
-      </node>
-      <node id="3245">
-        <label>sbfBuffer.h</label>
-        <link refid="sbf_buffer_8h"/>
-        <childnode refid="3226" relation="include">
-        </childnode>
-        <childnode refid="3246" relation="include">
-        </childnode>
-        <childnode refid="3249" relation="include">
-        </childnode>
-        <childnode refid="3250" relation="include">
-        </childnode>
-      </node>
-      <node id="3238">
+      <node id="585">
         <label>sbfHiResTimer.h</label>
         <link refid="sbf_hi_res_timer_8h"/>
-        <childnode refid="3226" relation="include">
+        <childnode refid="582" relation="include">
         </childnode>
       </node>
-      <node id="3230">
-        <label>sys/types.h</label>
+      <node id="589">
+        <label>sbfPerfCounter.h</label>
       </node>
-      <node id="3225">
+      <node id="581">
         <label>tools/subscriber/sbfSubscriber.c</label>
         <link refid="sbf_subscriber_8c"/>
-        <childnode refid="3226" relation="include">
+        <childnode refid="582" relation="include">
         </childnode>
-        <childnode refid="3236" relation="include">
+        <childnode refid="583" relation="include">
         </childnode>
-        <childnode refid="3242" relation="include">
+        <childnode refid="589" relation="include">
         </childnode>
-        <childnode refid="3243" relation="include">
-        </childnode>
-      </node>
-      <node id="3251">
-        <label>sbfPub.h</label>
-        <link refid="sbf_pub_8h"/>
-        <childnode refid="3245" relation="include">
-        </childnode>
-        <childnode refid="3226" relation="include">
-        </childnode>
-        <childnode refid="3240" relation="include">
+        <childnode refid="590" relation="include">
         </childnode>
       </node>
-      <node id="3250">
-        <label>sbfBufferInline.h</label>
-        <link refid="sbf_buffer_inline_8h"/>
-      </node>
-      <node id="3249">
-        <label>sbfRefCount.h</label>
-        <link refid="sbf_ref_count_8h"/>
-        <childnode refid="3226" relation="include">
-        </childnode>
-      </node>
-      <node id="3241">
+      <node id="588">
         <label>sbfTimer.h</label>
         <link refid="sbf_timer_8h"/>
-        <childnode refid="3226" relation="include">
+        <childnode refid="582" relation="include">
         </childnode>
       </node>
-      <node id="3226">
-        <label>sbfCommon.h</label>
-        <link refid="sbf_common_8h"/>
-        <childnode refid="3227" relation="include">
-        </childnode>
-        <childnode refid="3228" relation="include">
-        </childnode>
-        <childnode refid="3229" relation="include">
-        </childnode>
-        <childnode refid="3231" relation="include">
-        </childnode>
-        <childnode refid="3232" relation="include">
-        </childnode>
-        <childnode refid="3233" relation="include">
-        </childnode>
-        <childnode refid="3234" relation="include">
-        </childnode>
-        <childnode refid="3235" relation="include">
-        </childnode>
-      </node>
-      <node id="3232">
-        <label>systree.h</label>
-        <link refid="systree_8h"/>
-      </node>
-      <node id="3243">
+      <node id="590">
         <label>sbfTport.h</label>
-        <link refid="sbf_tport_8h"/>
-        <childnode refid="3244" relation="include">
-        </childnode>
-        <childnode refid="3226" relation="include">
-        </childnode>
-        <childnode refid="3236" relation="include">
-        </childnode>
-        <childnode refid="3251" relation="include">
-        </childnode>
-        <childnode refid="3252" relation="include">
-        </childnode>
-        <childnode refid="3253" relation="include">
-        </childnode>
       </node>
-      <node id="3231">
-        <label>sysqueue.h</label>
-        <link refid="sysqueue_8h"/>
+      <node id="582">
+        <label>sbfCommon.h</label>
       </node>
-      <node id="3236">
+      <node id="583">
         <label>sbfMw.h</label>
         <link refid="sbf_mw_8h"/>
-        <childnode refid="3226" relation="include">
+        <childnode refid="582" relation="include">
         </childnode>
-        <childnode refid="3237" relation="include">
+        <childnode refid="584" relation="include">
         </childnode>
-        <childnode refid="3238" relation="include">
+        <childnode refid="585" relation="include">
         </childnode>
-        <childnode refid="3239" relation="include">
+        <childnode refid="586" relation="include">
         </childnode>
-        <childnode refid="3240" relation="include">
+        <childnode refid="587" relation="include">
         </childnode>
-        <childnode refid="3241" relation="include">
-        </childnode>
-      </node>
-      <node id="3242">
-        <label>sbfPerfCounter.h</label>
-        <link refid="sbf_perf_counter_8h"/>
-        <childnode refid="3226" relation="include">
+        <childnode refid="588" relation="include">
         </childnode>
       </node>
-      <node id="3234">
-        <label>sbfLog.h</label>
-        <link refid="sbf_log_8h"/>
-        <childnode refid="3226" relation="include">
-        </childnode>
+      <node id="586">
+        <label>sbfKeyValue.h</label>
       </node>
-      <node id="3240">
+      <node id="587">
         <label>sbfQueue.h</label>
         <link refid="sbf_queue_8h"/>
-        <childnode refid="3226" relation="include">
+        <childnode refid="582" relation="include">
         </childnode>
-      </node>
-      <node id="3235">
-        <label>sbfMemory.h</label>
-        <link refid="sbf_memory_8h"/>
-        <childnode refid="3226" relation="include">
-        </childnode>
-      </node>
-      <node id="3248">
-        <label>sbfPoolInline.h</label>
-        <link refid="sbf_pool_inline_8h"/>
       </node>
     </incdepgraph>
       <sectiondef kind="var">
@@ -350,11 +196,11 @@
         <argsstring>(sbfSub sub, sbfBuffer buffer, void *closure)</argsstring>
         <name>messageCb</name>
         <param>
-          <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+          <type>sbfSub</type>
           <declname>sub</declname>
         </param>
         <param>
-          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <type>sbfBuffer</type>
           <declname>buffer</declname>
         </param>
         <param>
@@ -462,10 +308,10 @@
 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="6"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#include<sp/>&quot;sbfCommon.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_mw_8h" kindref="compound">sbfMw.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_perf_counter_8h" kindref="compound">sbfPerfCounter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_tport_8h" kindref="compound">sbfTport.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfPerfCounter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfTport.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>u_int<sp/><sp/><sp/><sp/>gMessages;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint64_t<sp/>gTimeLow<sp/>=<sp/>UINT64_MAX;</highlight></codeline>
@@ -480,9 +326,9 @@
 <codeline lineno="26"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal">timerCb<sp/>(<ref refid="structsbf_timer_impl" kindref="compound">sbfTimer</ref><sp/>timer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">timerCb<sp/>(<ref refid="sbf_timer_8h_1a107fc98170a20456ae5fbea0e5862ec2" kindref="member">sbfTimer</ref><sp/>timer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
 <codeline lineno="35"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%u<sp/>low=%llu<sp/>average=%llu<sp/>high=%llu&quot;</highlight><highlight class="normal"><sp/><ref refid="sbf_common_darwin_8h_1ae3192df127a8ec551c64402669381f59" kindref="member">SBF_EOL</ref>,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%u<sp/>low=%llu<sp/>average=%llu<sp/>high=%llu&quot;</highlight><highlight class="normal"><sp/>SBF_EOL,</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gMessages,</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gTimeLow<sp/>==<sp/>UINT64_MAX<sp/>?<sp/>0<sp/>:<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)gTimeLow,</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gMessages<sp/>==<sp/>0<sp/>?<sp/>0<sp/>:<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)gTimeTotal<sp/>/<sp/>gMessages,</highlight></codeline>
@@ -496,7 +342,7 @@
 <codeline lineno="47"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal">messageCb<sp/>(<ref refid="structsbf_sub_impl" kindref="compound">sbfSub</ref><sp/>sub,<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">messageCb<sp/>(sbfSub<sp/>sub,<sp/>sbfBuffer<sp/>buffer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
 <codeline lineno="57"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t*<sp/>payload<sp/>=<sp/>sbfBuffer_getData<sp/>(buffer);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><sp/>now;</highlight></codeline>
@@ -507,7 +353,7 @@
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(now<sp/>&lt;<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interval<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interval<sp/>=<sp/><ref refid="sbf_perf_counter_8c_1aeffb9edc51128417ceef91ccd9af0aa8" kindref="member">sbfPerfCounter_microseconds</ref><sp/>(now<sp/>-<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interval<sp/>=<sp/>sbfPerfCounter_microseconds<sp/>(now<sp/>-<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>gMessages++;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>gTimeTotal<sp/>+=<sp/>(uint64_t)interval;</highlight></codeline>
@@ -536,51 +382,51 @@
 <codeline lineno="109"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv0<sp/>=<sp/>argv[0];</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mw;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/><sp/><sp/><sp/>queue;</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1afbf7dc0a8bbd900f63f4bf4ec58c80f2" kindref="member">sbfThread</ref><sp/><sp/><sp/>t;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tport_8h_1acbaf9d451442abe85c18e3583d746181" kindref="member">sbfTport</ref><sp/><sp/><sp/><sp/>tport;</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/>properties;</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/><sp/><sp/><sp/><sp/><sp/>log;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/><sp/><sp/><sp/>queue;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfThread<sp/><sp/><sp/>t;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfTport<sp/><sp/><sp/><sp/>tport;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfKeyValue<sp/>properties;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfLog<sp/><sp/><sp/><sp/><sp/><sp/>log;</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>opt;</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>topic<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;OUT&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>handler<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;udp&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>interf<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;eth0&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"></highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>the<sp/>logging<sp/>system</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>log<sp/>=<sp/><ref refid="sbf_log_8c_1a3bd2dd7ade41efb36ae92bb650482cf0" kindref="member">sbfLog_create</ref><sp/>(NULL,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8c_1af2c6d0b112df7a5b7fab1012ddee6798" kindref="member">sbfLog_setLevel</ref><sp/>(log,<sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540aad24448569b0eef884d43e6ad8b2c1550" kindref="member">SBF_LOG_OFF</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>log<sp/>=<sp/>sbfLog_create<sp/>(NULL,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfLog_setLevel<sp/>(log,<sp/>SBF_LOG_OFF);</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Apply<sp/>command<sp/>options<sp/>and<sp/>print<sp/>message<sp/>if<sp/>wrong<sp/>option<sp/>is<sp/>found</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((opt<sp/>=<sp/><ref refid="sbf_common_win32_8h_1a631e8252798c4ede857d00d1cede6f0f" kindref="member">getopt</ref><sp/>(argc,<sp/>argv,<sp/></highlight><highlight class="stringliteral">&quot;h:i:t:v:&quot;</highlight><highlight class="normal">))<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((opt<sp/>=<sp/>getopt<sp/>(argc,<sp/>argv,<sp/></highlight><highlight class="stringliteral">&quot;h:i:t:v:&quot;</highlight><highlight class="normal">))<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(opt)<sp/>{</highlight></codeline>
 <codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;h&apos;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handler<sp/>=<sp/><ref refid="sbf_common_win32_8h_1a9227b18da5777b0578ef7376ad78b649" kindref="member">optarg</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handler<sp/>=<sp/>optarg;</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;i&apos;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interf<sp/>=<sp/><ref refid="sbf_common_win32_8h_1a9227b18da5777b0578ef7376ad78b649" kindref="member">optarg</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interf<sp/>=<sp/>optarg;</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;t&apos;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topic<sp/>=<sp/><ref refid="sbf_common_win32_8h_1a9227b18da5777b0578ef7376ad78b649" kindref="member">optarg</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topic<sp/>=<sp/>optarg;</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;v&apos;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8c_1af2c6d0b112df7a5b7fab1012ddee6798" kindref="member">sbfLog_setLevel</ref><sp/>(log,<sp/><ref refid="sbf_log_8c_1af7f50ca9acb4f2d158f7f994063672dd" kindref="member">sbfLog_levelFromString</ref><sp/>(<ref refid="sbf_common_win32_8h_1a9227b18da5777b0578ef7376ad78b649" kindref="member">optarg</ref>,<sp/>NULL));</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfLog_setLevel<sp/>(log,<sp/>sbfLog_levelFromString<sp/>(optarg,<sp/>NULL));</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usage<sp/>(argv0);</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>argc<sp/>-=<sp/><ref refid="sbf_common_win32_8h_1afa9437ffe2a670485f18f082213533f8" kindref="member">optind</ref>;</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>argv<sp/>+=<sp/><ref refid="sbf_common_win32_8h_1afa9437ffe2a670485f18f082213533f8" kindref="member">optind</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>argc<sp/>-=<sp/>optind;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>argv<sp/>+=<sp/>optind;</highlight></codeline>
 <codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>!=<sp/>0)</highlight></codeline>
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usage<sp/>(argv0);</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"></highlight></codeline>
 <codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>the<sp/>middleware<sp/>by<sp/>defining<sp/>some<sp/>properties<sp/>like<sp/>the<sp/>handler</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(e.g.<sp/>tcp,<sp/>udp)<sp/>and<sp/>the<sp/><sp/>connection<sp/>interface<sp/>(e.g.<sp/>eth0).</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>properties<sp/>=<sp/><ref refid="sbf_key_value_8c_1ab8344e795e79d91518d03b8abcd68387" kindref="member">sbfKeyValue_create</ref><sp/>();</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_key_value_8c_1a8006282ede956c18b896a78984a62435" kindref="member">sbfKeyValue_put</ref><sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;transport.default.type&quot;</highlight><highlight class="normal">,<sp/>handler);</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_key_value_8c_1a8006282ede956c18b896a78984a62435" kindref="member">sbfKeyValue_put</ref><sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;transport.default.udp.interface&quot;</highlight><highlight class="normal">,<sp/>interf);</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_key_value_8c_1a8006282ede956c18b896a78984a62435" kindref="member">sbfKeyValue_put</ref><sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;transport.default.tcpmesh.listen&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_key_value_8c_1a8006282ede956c18b896a78984a62435" kindref="member">sbfKeyValue_put</ref><sp/>(properties,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>properties<sp/>=<sp/>sbfKeyValue_create<sp/>();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfKeyValue_put<sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;transport.default.type&quot;</highlight><highlight class="normal">,<sp/>handler);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfKeyValue_put<sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;transport.default.udp.interface&quot;</highlight><highlight class="normal">,<sp/>interf);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfKeyValue_put<sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;transport.default.tcpmesh.listen&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfKeyValue_put<sp/>(properties,</highlight></codeline>
 <codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;transport.default.tcpmesh.connect0&quot;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;127.0.0.1&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"></highlight></codeline>
@@ -588,9 +434,9 @@
 <codeline lineno="161"><highlight class="normal"></highlight></codeline>
 <codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>queue,<sp/>the<sp/>connection<sp/>port<sp/>and<sp/>a<sp/>thread<sp/>to<sp/>dispatch<sp/>events</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>queue<sp/>=<sp/><ref refid="sbf_queue_8c_1a46db8e909ba6e1f1091f8e886c512743" kindref="member">sbfQueue_create</ref><sp/>(mw,<sp/></highlight><highlight class="stringliteral">&quot;default&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1ae7f48f80d02515dc515a99d935ba0212" kindref="member">sbfThread_create</ref><sp/>(&amp;t,<sp/>dispatchCb,<sp/>queue);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfThread_create<sp/>(&amp;t,<sp/>dispatchCb,<sp/>queue);</highlight></codeline>
 <codeline lineno="165"><highlight class="normal"></highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>tport<sp/>=<sp/><ref refid="sbf_tport_8c_1a05fca7eee3751f966e9f933f2b9e965f" kindref="member">sbfTport_create</ref><sp/>(mw,<sp/></highlight><highlight class="stringliteral">&quot;default&quot;</highlight><highlight class="normal">,<sp/><ref refid="sbf_mw_8h_1a9bd654394f96810c80e05011e393a750" kindref="member">SBF_MW_ALL_THREADS</ref>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>tport<sp/>=<sp/>sbfTport_create<sp/>(mw,<sp/></highlight><highlight class="stringliteral">&quot;default&quot;</highlight><highlight class="normal">,<sp/><ref refid="sbf_mw_8h_1a9bd654394f96810c80e05011e393a750" kindref="member">SBF_MW_ALL_THREADS</ref>);</highlight></codeline>
 <codeline lineno="167"><highlight class="normal"></highlight></codeline>
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>the<sp/>timer<sp/>consuming<sp/>messages<sp/>from<sp/>the<sp/>queue<sp/>and</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_timer_8c_1aae7a500a10f8e3c6ff6e5cf9898f8185" kindref="member">sbfTimer_create</ref><sp/>(<ref refid="sbf_mw_8h_1abf18b7c2721832ab6504c716791ce31c" kindref="member">sbfMw_getDefaultThread</ref><sp/>(mw),</highlight></codeline>
@@ -600,7 +446,7 @@
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
 <codeline lineno="174"><highlight class="normal"></highlight></codeline>
 <codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>the<sp/>subscriber</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_sub_8c_1ad3c0b1c131bc201d4c0a960877ddba16" kindref="member">sbfSub_create</ref><sp/>(tport,<sp/>queue,<sp/>topic,<sp/>NULL,<sp/>messageCb,<sp/>NULL);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfSub_create<sp/>(tport,<sp/>queue,<sp/>topic,<sp/>NULL,<sp/>messageCb,<sp/>NULL);</highlight></codeline>
 <codeline lineno="177"><highlight class="normal"></highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sleep<sp/>(60);</highlight></codeline>

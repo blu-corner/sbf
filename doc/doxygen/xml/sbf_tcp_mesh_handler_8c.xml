@@ -5,260 +5,104 @@
     <includes refid="sbf_tcp_mesh_handler_8h" local="yes">sbfTcpMeshHandler.h</includes>
     <includes refid="sbf_mw_private_8h" local="yes">sbfMwPrivate.h</includes>
     <incdepgraph>
-      <node id="2770">
-        <label>sbfPool.h</label>
-        <link refid="sbf_pool_8h"/>
-        <childnode refid="2757" relation="include">
-        </childnode>
-        <childnode refid="2771" relation="include">
-        </childnode>
-        <childnode refid="2772" relation="include">
-        </childnode>
-      </node>
-      <node id="2759">
+      <node id="379">
         <label>event.h</label>
       </node>
-      <node id="2771">
-        <label>sbfAtomic.h</label>
-        <link refid="sbf_atomic_8h"/>
-        <childnode refid="2757" relation="include">
-        </childnode>
-      </node>
-      <node id="2782">
-        <label>sbfSub.h</label>
-        <link refid="sbf_sub_8h"/>
-        <childnode refid="2769" relation="include">
-        </childnode>
-        <childnode refid="2757" relation="include">
-        </childnode>
-        <childnode refid="2779" relation="include">
-        </childnode>
-      </node>
-      <node id="2783">
-        <label>sbfTopic.h</label>
-        <link refid="sbf_topic_8h"/>
-        <childnode refid="2757" relation="include">
-        </childnode>
-      </node>
-      <node id="2758">
-        <label>sbfVersion.h</label>
-        <link refid="sbf_version_8h"/>
-      </node>
-      <node id="2760">
-        <label>syshash.h</label>
-        <link refid="syshash_8h"/>
-        <childnode refid="2761" relation="include">
-        </childnode>
-      </node>
-      <node id="2776">
+      <node id="372">
         <label>sbfEvent.h</label>
         <link refid="sbf_event_8h"/>
-        <childnode refid="2757" relation="include">
+        <childnode refid="371" relation="include">
         </childnode>
       </node>
-      <node id="2768">
-        <label>sbfBatch.h</label>
-        <link refid="sbf_batch_8h"/>
-        <childnode refid="2769" relation="include">
-        </childnode>
-        <childnode refid="2757" relation="include">
-        </childnode>
-      </node>
-      <node id="2764">
-        <label>sbfFatal.h</label>
-        <link refid="sbf_fatal_8h"/>
-        <childnode refid="2757" relation="include">
-        </childnode>
-      </node>
-      <node id="2787">
+      <node id="381">
         <label>event2/listener.h</label>
       </node>
-      <node id="2778">
-        <label>sbfKeyValue.h</label>
-        <link refid="sbf_key_value_8h"/>
-        <childnode refid="2757" relation="include">
-        </childnode>
+      <node id="368">
+        <label>sbfHandler.h</label>
       </node>
-      <node id="2769">
-        <label>sbfBuffer.h</label>
-        <link refid="sbf_buffer_8h"/>
-        <childnode refid="2757" relation="include">
-        </childnode>
-        <childnode refid="2770" relation="include">
-        </childnode>
-        <childnode refid="2773" relation="include">
-        </childnode>
-        <childnode refid="2774" relation="include">
-        </childnode>
-      </node>
-      <node id="2777">
+      <node id="373">
         <label>sbfHiResTimer.h</label>
         <link refid="sbf_hi_res_timer_8h"/>
-        <childnode refid="2757" relation="include">
+        <childnode refid="371" relation="include">
         </childnode>
       </node>
-      <node id="2761">
-        <label>sys/types.h</label>
-      </node>
-      <node id="2754">
+      <node id="366">
         <label>handlers/tcpmesh/sbfTcpMeshHandler.c</label>
         <link refid="sbf_tcp_mesh_handler_8c"/>
-        <childnode refid="2755" relation="include">
+        <childnode refid="367" relation="include">
         </childnode>
-        <childnode refid="2785" relation="include">
+        <childnode refid="378" relation="include">
         </childnode>
       </node>
-      <node id="2755">
+      <node id="367">
         <label>sbfTcpMeshHandler.h</label>
         <link refid="sbf_tcp_mesh_handler_8h"/>
-        <childnode refid="2756" relation="include">
+        <childnode refid="368" relation="include">
         </childnode>
-        <childnode refid="2784" relation="include">
+        <childnode refid="369" relation="include">
         </childnode>
-        <childnode refid="2775" relation="include">
+        <childnode refid="370" relation="include">
         </childnode>
-        <childnode refid="2767" relation="include">
-        </childnode>
-      </node>
-      <node id="2781">
-        <label>sbfPub.h</label>
-        <link refid="sbf_pub_8h"/>
-        <childnode refid="2769" relation="include">
-        </childnode>
-        <childnode refid="2757" relation="include">
-        </childnode>
-        <childnode refid="2779" relation="include">
+        <childnode refid="377" relation="include">
         </childnode>
       </node>
-      <node id="2786">
+      <node id="380">
         <label>event2/thread.h</label>
       </node>
-      <node id="2774">
-        <label>sbfBufferInline.h</label>
-        <link refid="sbf_buffer_inline_8h"/>
-      </node>
-      <node id="2785">
+      <node id="378">
         <label>sbfMwPrivate.h</label>
         <link refid="sbf_mw_private_8h"/>
-        <childnode refid="2759" relation="include">
+        <childnode refid="379" relation="include">
         </childnode>
-        <childnode refid="2786" relation="include">
+        <childnode refid="380" relation="include">
         </childnode>
-        <childnode refid="2787" relation="include">
-        </childnode>
-      </node>
-      <node id="2784">
-        <label>sbfInterface.h</label>
-        <link refid="sbf_interface_8h"/>
-        <childnode refid="2757" relation="include">
+        <childnode refid="381" relation="include">
         </childnode>
       </node>
-      <node id="2773">
-        <label>sbfRefCount.h</label>
-        <link refid="sbf_ref_count_8h"/>
-        <childnode refid="2757" relation="include">
-        </childnode>
-      </node>
-      <node id="2756">
-        <label>sbfHandler.h</label>
-        <link refid="sbf_handler_8h"/>
-        <childnode refid="2757" relation="include">
-        </childnode>
-        <childnode refid="2767" relation="include">
-        </childnode>
-      </node>
-      <node id="2780">
+      <node id="376">
         <label>sbfTimer.h</label>
         <link refid="sbf_timer_8h"/>
-        <childnode refid="2757" relation="include">
+        <childnode refid="371" relation="include">
         </childnode>
       </node>
-      <node id="2757">
-        <label>sbfCommon.h</label>
-        <link refid="sbf_common_8h"/>
-        <childnode refid="2758" relation="include">
-        </childnode>
-        <childnode refid="2759" relation="include">
-        </childnode>
-        <childnode refid="2760" relation="include">
-        </childnode>
-        <childnode refid="2762" relation="include">
-        </childnode>
-        <childnode refid="2763" relation="include">
-        </childnode>
-        <childnode refid="2764" relation="include">
-        </childnode>
-        <childnode refid="2765" relation="include">
-        </childnode>
-        <childnode refid="2766" relation="include">
-        </childnode>
+      <node id="369">
+        <label>sbfInterface.h</label>
       </node>
-      <node id="2763">
-        <label>systree.h</label>
-        <link refid="systree_8h"/>
-      </node>
-      <node id="2767">
+      <node id="377">
         <label>sbfTport.h</label>
-        <link refid="sbf_tport_8h"/>
-        <childnode refid="2768" relation="include">
-        </childnode>
-        <childnode refid="2757" relation="include">
-        </childnode>
-        <childnode refid="2775" relation="include">
-        </childnode>
-        <childnode refid="2781" relation="include">
-        </childnode>
-        <childnode refid="2782" relation="include">
-        </childnode>
-        <childnode refid="2783" relation="include">
-        </childnode>
       </node>
-      <node id="2762">
-        <label>sysqueue.h</label>
-        <link refid="sysqueue_8h"/>
+      <node id="371">
+        <label>sbfCommon.h</label>
       </node>
-      <node id="2775">
+      <node id="370">
         <label>sbfMw.h</label>
         <link refid="sbf_mw_8h"/>
-        <childnode refid="2757" relation="include">
+        <childnode refid="371" relation="include">
         </childnode>
-        <childnode refid="2776" relation="include">
+        <childnode refid="372" relation="include">
         </childnode>
-        <childnode refid="2777" relation="include">
+        <childnode refid="373" relation="include">
         </childnode>
-        <childnode refid="2778" relation="include">
+        <childnode refid="374" relation="include">
         </childnode>
-        <childnode refid="2779" relation="include">
+        <childnode refid="375" relation="include">
         </childnode>
-        <childnode refid="2780" relation="include">
-        </childnode>
-      </node>
-      <node id="2765">
-        <label>sbfLog.h</label>
-        <link refid="sbf_log_8h"/>
-        <childnode refid="2757" relation="include">
+        <childnode refid="376" relation="include">
         </childnode>
       </node>
-      <node id="2779">
+      <node id="374">
+        <label>sbfKeyValue.h</label>
+      </node>
+      <node id="375">
         <label>sbfQueue.h</label>
         <link refid="sbf_queue_8h"/>
-        <childnode refid="2757" relation="include">
+        <childnode refid="371" relation="include">
         </childnode>
-      </node>
-      <node id="2766">
-        <label>sbfMemory.h</label>
-        <link refid="sbf_memory_8h"/>
-        <childnode refid="2757" relation="include">
-        </childnode>
-      </node>
-      <node id="2772">
-        <label>sbfPoolInline.h</label>
-        <link refid="sbf_pool_inline_8h"/>
       </node>
     </incdepgraph>
       <sectiondef kind="var">
       <memberdef kind="variable" id="sbf_tcp_mesh_handler_8c_1af02f4b45ac8659a72302327dc2c589ac" prot="public" static="no" mutable="no">
-        <type><ref refid="structsbf_handler_table" kindref="compound">sbfHandlerTable</ref></type>
+        <type>sbfHandlerTable</type>
         <definition>sbfHandlerTable sbf_tcpmesh_handler</definition>
         <argsstring></argsstring>
         <name>sbf_tcpmesh_handler</name>
@@ -494,7 +338,7 @@
         <argsstring>(sbfHandler handler)</argsstring>
         <name>sbfTcpMeshHandlerDestroy</name>
         <param>
-          <type><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref></type>
+          <type>sbfHandler</type>
           <declname>handler</declname>
         </param>
         <briefdescription>
@@ -506,16 +350,16 @@
         <location file="handlers/tcpmesh/sbfTcpMeshHandler.c" line="208" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.c" bodystart="208" bodyend="223"/>
       </memberdef>
       <memberdef kind="function" id="sbf_tcp_mesh_handler_8c_1aa862232fe4137aae4f7ffff7f03bd133" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref></type>
+        <type>sbfHandler</type>
         <definition>static sbfHandler sbfTcpMeshHandlerCreate</definition>
         <argsstring>(sbfTport tport, sbfKeyValue properties)</argsstring>
         <name>sbfTcpMeshHandlerCreate</name>
         <param>
-          <type><ref refid="sbf_tport_8h_1acbaf9d451442abe85c18e3583d746181" kindref="member">sbfTport</ref></type>
+          <type>sbfTport</type>
           <declname>tport</declname>
         </param>
         <param>
-          <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+          <type>sbfKeyValue</type>
           <declname>properties</declname>
         </param>
         <briefdescription>
@@ -527,16 +371,16 @@
         <location file="handlers/tcpmesh/sbfTcpMeshHandler.c" line="226" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.c" bodystart="226" bodyend="322"/>
       </memberdef>
       <memberdef kind="function" id="sbf_tcp_mesh_handler_8c_1a92f1383e4f02ffd61b66360ef81aed83" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref></type>
+        <type>sbfHandlerHandle</type>
         <definition>static sbfHandlerHandle sbfTcpMeshHandlerFindStream</definition>
         <argsstring>(sbfHandler handler, sbfTopic topic)</argsstring>
         <name>sbfTcpMeshHandlerFindStream</name>
         <param>
-          <type><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref></type>
+          <type>sbfHandler</type>
           <declname>handler</declname>
         </param>
         <param>
-          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <type>sbfTopic</type>
           <declname>topic</declname>
         </param>
         <briefdescription>
@@ -548,16 +392,16 @@
         <location file="handlers/tcpmesh/sbfTcpMeshHandler.c" line="325" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.c" bodystart="325" bodyend="330"/>
       </memberdef>
       <memberdef kind="function" id="sbf_tcp_mesh_handler_8c_1a8e138ad5167db4d411a60a302312421b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref></type>
+        <type>sbfHandlerStream</type>
         <definition>static sbfHandlerStream sbfTcpMeshHandlerAddStream</definition>
         <argsstring>(sbfHandler handler, sbfTopic topic, sbfMwThread thread, sbfHandlerHandle handle, sbfHandlerAddStreamCompleteCb cb, void *closure)</argsstring>
         <name>sbfTcpMeshHandlerAddStream</name>
         <param>
-          <type><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref></type>
+          <type>sbfHandler</type>
           <declname>handler</declname>
         </param>
         <param>
-          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <type>sbfTopic</type>
           <declname>topic</declname>
         </param>
         <param>
@@ -565,11 +409,11 @@
           <declname>thread</declname>
         </param>
         <param>
-          <type><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref></type>
+          <type>sbfHandlerHandle</type>
           <declname>handle</declname>
         </param>
         <param>
-          <type><ref refid="sbf_handler_8h_1a5b047b3b44834708064523d3f20ae4c5" kindref="member">sbfHandlerAddStreamCompleteCb</ref></type>
+          <type>sbfHandlerAddStreamCompleteCb</type>
           <declname>cb</declname>
         </param>
         <param>
@@ -590,7 +434,7 @@
         <argsstring>(sbfHandlerStream stream)</argsstring>
         <name>sbfTcpMeshHandlerRemoveStream</name>
         <param>
-          <type><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref></type>
+          <type>sbfHandlerStream</type>
           <declname>stream</declname>
         </param>
         <briefdescription>
@@ -602,12 +446,12 @@
         <location file="handlers/tcpmesh/sbfTcpMeshHandler.c" line="362" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.c" bodystart="362" bodyend="364"/>
       </memberdef>
       <memberdef kind="function" id="sbf_tcp_mesh_handler_8c_1aa5de32de8ebcf8be56a4d87c6b0c2481" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+        <type>sbfBuffer</type>
         <definition>static sbfBuffer sbfTcpMeshHandlerGetBuffer</definition>
         <argsstring>(sbfHandlerStream stream, size_t size)</argsstring>
         <name>sbfTcpMeshHandlerGetBuffer</name>
         <param>
-          <type><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref></type>
+          <type>sbfHandlerStream</type>
           <declname>stream</declname>
         </param>
         <param>
@@ -628,11 +472,11 @@
         <argsstring>(sbfHandlerStream stream, sbfBuffer buffer)</argsstring>
         <name>sbfTcpMeshHandlerSendBuffer</name>
         <param>
-          <type><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref></type>
+          <type>sbfHandlerStream</type>
           <declname>stream</declname>
         </param>
         <param>
-          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <type>sbfBuffer</type>
           <declname>buffer</declname>
         </param>
         <briefdescription>
@@ -652,24 +496,24 @@
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_tcp_mesh_handler_8h" kindref="compound">sbfTcpMeshHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_mw_private_8h" kindref="compound">sbfMwPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sbfTcpMeshHandlerFreeConnection<sp/>(<ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c);</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sbfTcpMeshHandlerSetSocket<sp/>(<ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c,</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sbfTcpMeshHandlerFreeConnection<sp/>(<ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sbfTcpMeshHandlerSetSocket<sp/>(<ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c,</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evutil_socket_t<sp/>s);</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sbfTcpMeshHandlerCloseSocket<sp/>(<ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sbfTcpMeshHandlerCloseSocket<sp/>(<ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c);</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal">sbfTcpMeshHandlerConnectionTimerCb<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>events,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
 <codeline lineno="11"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c<sp/>=<sp/>closure;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tv<sp/>=<sp/><ref refid="sbf_tcp_mesh_handler_8h_1ad527a3aeea707608ed5c0435061bf92c" kindref="member">SBF_TCP_MESH_HANDLER_CONNECT_INTERVAL</ref>;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>evutil_socket_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s;</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a73ffd3695bf7226abff06c5e98171c24" kindref="member">sbfLog_info</ref><sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" kindref="member">mParent</ref>-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a22b93b6abaf30e01afc22c1606e29760" kindref="member">mLog</ref>,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfLog_info<sp/>(c-&gt;mParent-&gt;mLog,</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;trying<sp/>connection<sp/>%p<sp/>to<sp/>%s:%hu&quot;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c,</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a3339ba92ac0fb6252dc4708f082d7f64" kindref="member">mHost</ref>,</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4edeeeb98debc477a65da5781c18cb89" kindref="member">mPort</ref>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;mHost,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;mPort);</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfTcpMeshHandlerCloseSocket<sp/>(c);</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
@@ -678,40 +522,40 @@
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfTcpMeshHandlerSetSocket<sp/>(c,<sp/>s);</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>error<sp/>=<sp/>bufferevent_socket_connect_hostname<sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" kindref="member">mEvent</ref>,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>error<sp/>=<sp/>bufferevent_socket_connect_hostname<sp/>(c-&gt;mEvent,</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AF_INET,</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a3339ba92ac0fb6252dc4708f082d7f64" kindref="member">mHost</ref>,</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4edeeeb98debc477a65da5781c18cb89" kindref="member">mPort</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;mHost,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;mPort);</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(error<sp/>!=<sp/>0)</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal">fail:</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a73ffd3695bf7226abff06c5e98171c24" kindref="member">sbfLog_info</ref><sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" kindref="member">mParent</ref>-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a22b93b6abaf30e01afc22c1606e29760" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;connection<sp/>%p<sp/>failed&quot;</highlight><highlight class="normal">,<sp/>c);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>event_add<sp/>(&amp;c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a026b6b69db318ba27bdb53eed56d675b" kindref="member">mTimer</ref>,<sp/>&amp;tv);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfLog_info<sp/>(c-&gt;mParent-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;connection<sp/>%p<sp/>failed&quot;</highlight><highlight class="normal">,<sp/>c);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>event_add<sp/>(&amp;c-&gt;mTimer,<sp/>&amp;tv);</highlight></codeline>
 <codeline lineno="43"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="46"><highlight class="normal">sbfTcpMeshHandlerConnectionReadCb<sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>bufferevent*<sp/>bev,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
 <codeline lineno="47"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c<sp/>=<sp/>closure;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">evbuffer*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evb<sp/>=<sp/>bufferevent_get_input<sp/>(bev);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>=<sp/>evbuffer_pullup<sp/>(evb,<sp/>-1);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfBuffer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>size<sp/>=<sp/><ref refid="sbf_handler_8c_1a9f5cff6a4fa8c8cb0fec7ab404b09fc6" kindref="member">sbfHandler_size</ref><sp/>(data,<sp/>evbuffer_get_length<sp/>(evb));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>size<sp/>=<sp/>sbfHandler_size<sp/>(data,<sp/>evbuffer_get_length<sp/>(evb));</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>==<sp/>0)</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" kindref="member">mParent</ref>-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a3f3e01fef34c48bd716668e09ae82ad2" kindref="member">mHandle</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;mParent-&gt;mHandle<sp/>!=<sp/>NULL)</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer<sp/>=<sp/>sbfBuffer_new<sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" kindref="member">mParent</ref>-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a8b894de2bd7fd4961daea975f585a1f0" kindref="member">mPool</ref>,<sp/>size);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer<sp/>=<sp/>sbfBuffer_new<sp/>(c-&gt;mParent-&gt;mPool,<sp/>size);</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy<sp/>(sbfBuffer_getData<sp/>(buffer),<sp/>data,<sp/>size);</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8c_1a715719602106304462b6d493c29c78c9" kindref="member">sbfHandler_packet</ref><sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" kindref="member">mParent</ref>-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a3f3e01fef34c48bd716668e09ae82ad2" kindref="member">mHandle</ref>,<sp/>buffer);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfHandler_packet<sp/>(c-&gt;mParent-&gt;mHandle,<sp/>buffer);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfBuffer_destroy<sp/>(buffer);</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>evbuffer_drain<sp/>(evb,<sp/>size);</highlight></codeline>
@@ -722,69 +566,69 @@
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>events,</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
 <codeline lineno="73"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c<sp/>=<sp/>closure;</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tv<sp/>=<sp/><ref refid="sbf_tcp_mesh_handler_8h_1ad527a3aeea707608ed5c0435061bf92c" kindref="member">SBF_TCP_MESH_HANDLER_CONNECT_INTERVAL</ref>;</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(events<sp/>&amp;<sp/>BEV_EVENT_CONNECTED)</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1ae52a584543b12cfa68130aed9c5a166c" kindref="member">mConnected</ref><sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bufferevent_enable<sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" kindref="member">mEvent</ref>,<sp/>EV_READ|EV_WRITE);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a73ffd3695bf7226abff06c5e98171c24" kindref="member">sbfLog_info</ref><sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" kindref="member">mParent</ref>-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a22b93b6abaf30e01afc22c1606e29760" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;connection<sp/>%p<sp/>connected&quot;</highlight><highlight class="normal">,<sp/>c);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;mConnected<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bufferevent_enable<sp/>(c-&gt;mEvent,<sp/>EV_READ|EV_WRITE);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfLog_info<sp/>(c-&gt;mParent-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;connection<sp/>%p<sp/>connected&quot;</highlight><highlight class="normal">,<sp/>c);</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(events<sp/>&amp;<sp/>(BEV_EVENT_ERROR|BEV_EVENT_TIMEOUT|BEV_EVENT_EOF))</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1ae52a584543b12cfa68130aed9c5a166c" kindref="member">mConnected</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bufferevent_disable<sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" kindref="member">mEvent</ref>,<sp/>EV_READ|EV_WRITE);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a73ffd3695bf7226abff06c5e98171c24" kindref="member">sbfLog_info</ref><sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" kindref="member">mParent</ref>-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a22b93b6abaf30e01afc22c1606e29760" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;connection<sp/>%p<sp/>failed&quot;</highlight><highlight class="normal">,<sp/>c);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;mConnected<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bufferevent_disable<sp/>(c-&gt;mEvent,<sp/>EV_READ|EV_WRITE);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfLog_info<sp/>(c-&gt;mParent-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;connection<sp/>%p<sp/>failed&quot;</highlight><highlight class="normal">,<sp/>c);</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1aaf3589f58de78a9726e41099815ca11a" kindref="member">mIncoming</ref>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;mIncoming)</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTcpMeshHandlerFreeConnection<sp/>(c);</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_add<sp/>(&amp;c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a026b6b69db318ba27bdb53eed56d675b" kindref="member">mTimer</ref>,<sp/>&amp;tv);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_add<sp/>(&amp;c-&gt;mTimer,<sp/>&amp;tv);</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="95"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref></highlight></codeline>
-<codeline lineno="98"><highlight class="normal">sbfTcpMeshHandlerNewConnection<sp/>(<ref refid="structsbf_tcp_mesh_handler_impl" kindref="compound">sbfTcpMeshHandler</ref><sp/>tmh,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>incoming)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">sbfTcpMeshHandlerNewConnection<sp/>(<ref refid="sbf_tcp_mesh_handler_8h_1aaa8334a760c043b7339b056de6839b97" kindref="member">sbfTcpMeshHandler</ref><sp/>tmh,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>incoming)</highlight></codeline>
 <codeline lineno="99"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c;</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>c<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*c);</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" kindref="member">mParent</ref><sp/>=<sp/>tmh;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>c<sp/>=<sp/>xcalloc<sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*c);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;mParent<sp/>=<sp/>tmh;</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1afe21416b021add1d039070372b28c2b7" kindref="member">sbfMutex_lock</ref><sp/>(&amp;tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a9ab4d034e317d56cb825b27a500a3c95" kindref="member">mMutex</ref>);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sysqueue_8h_1a512bee16b46f601078c96c776d2648c3" kindref="member">TAILQ_INSERT_TAIL</ref><sp/>(&amp;tmh-&gt;mConnections,<sp/>c,<sp/>mEntry);</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1ae9f52fb356fee346369a22cfef0def73" kindref="member">sbfMutex_unlock</ref><sp/>(&amp;tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a9ab4d034e317d56cb825b27a500a3c95" kindref="member">mMutex</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_lock<sp/>(&amp;tmh-&gt;mMutex);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>TAILQ_INSERT_TAIL<sp/>(&amp;tmh-&gt;mConnections,<sp/>c,<sp/>mEntry);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_unlock<sp/>(&amp;tmh-&gt;mMutex);</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>event_assign<sp/>(&amp;c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a026b6b69db318ba27bdb53eed56d675b" kindref="member">mTimer</ref>,</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a4456429307486f88f92009820206bd5b" kindref="member">mEventBase</ref>,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>event_assign<sp/>(&amp;c-&gt;mTimer,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh-&gt;mEventBase,</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1,</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTcpMeshHandlerConnectionTimerCb,</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c);</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1aaf3589f58de78a9726e41099815ca11a" kindref="member">mIncoming</ref><sp/>=<sp/>incoming;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;mIncoming<sp/>=<sp/>incoming;</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a7cf632762b21e1456fb572f4a807a4e2" kindref="member">mSocket</ref><sp/>=<sp/>-1;</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" kindref="member">mEvent</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;mSocket<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;mEvent<sp/>=<sp/>NULL;</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
 <codeline lineno="121"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"></highlight></codeline>
 <codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal">sbfTcpMeshHandlerSetSocket<sp/>(<ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c,<sp/>evutil_socket_t<sp/>s)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">sbfTcpMeshHandlerSetSocket<sp/>(<ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c,<sp/>evutil_socket_t<sp/>s)</highlight></codeline>
 <codeline lineno="125"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_impl" kindref="compound">sbfTcpMeshHandler</ref><sp/>tmh<sp/>=<sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" kindref="member">mParent</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1aaa8334a760c043b7339b056de6839b97" kindref="member">sbfTcpMeshHandler</ref><sp/>tmh<sp/>=<sp/>c-&gt;mParent;</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>evutil_make_socket_closeonexec<sp/>(s);</highlight></codeline>
 <codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>evutil_make_socket_nonblocking<sp/>(s);</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" kindref="member">mEvent</ref><sp/>=<sp/>bufferevent_socket_new<sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a4456429307486f88f92009820206bd5b" kindref="member">mEventBase</ref>,<sp/>s,<sp/>BEV_OPT_THREADSAFE);</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" kindref="member">mEvent</ref><sp/>==<sp/>NULL)</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_fatal_8h_1a8ae1d367ee2c1922adb415aa8c1972b9" kindref="member">SBF_FATAL</ref><sp/>(</highlight><highlight class="stringliteral">&quot;couldn&apos;t<sp/>allocate<sp/>event&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a7cf632762b21e1456fb572f4a807a4e2" kindref="member">mSocket</ref><sp/>=<sp/>s;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;mEvent<sp/>=<sp/>bufferevent_socket_new<sp/>(tmh-&gt;mEventBase,<sp/>s,<sp/>BEV_OPT_THREADSAFE);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;mEvent<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SBF_FATAL<sp/>(</highlight><highlight class="stringliteral">&quot;couldn&apos;t<sp/>allocate<sp/>event&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;mSocket<sp/>=<sp/>s;</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>bufferevent_setcb<sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" kindref="member">mEvent</ref>,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>bufferevent_setcb<sp/>(c-&gt;mEvent,</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTcpMeshHandlerConnectionReadCb,</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTcpMeshHandlerConnectionEventCb,</highlight></codeline>
@@ -792,31 +636,31 @@
 <codeline lineno="141"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="142"><highlight class="normal"></highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal">sbfTcpMeshHandlerCloseSocket<sp/>(<ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">sbfTcpMeshHandlerCloseSocket<sp/>(<ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c)</highlight></codeline>
 <codeline lineno="145"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a7cf632762b21e1456fb572f4a807a4e2" kindref="member">mSocket</ref><sp/>!=<sp/>-1)</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVUTIL_CLOSESOCKET<sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a7cf632762b21e1456fb572f4a807a4e2" kindref="member">mSocket</ref>);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a7cf632762b21e1456fb572f4a807a4e2" kindref="member">mSocket</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;mSocket<sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVUTIL_CLOSESOCKET<sp/>(c-&gt;mSocket);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;mSocket<sp/>=<sp/>-1;</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" kindref="member">mEvent</ref><sp/>!=<sp/>NULL)</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bufferevent_free<sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" kindref="member">mEvent</ref>);</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" kindref="member">mEvent</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;mEvent<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bufferevent_free<sp/>(c-&gt;mEvent);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;mEvent<sp/>=<sp/>NULL;</highlight></codeline>
 <codeline lineno="153"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>
 <codeline lineno="155"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal">sbfTcpMeshHandlerFreeConnection<sp/>(<ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">sbfTcpMeshHandlerFreeConnection<sp/>(<ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c)</highlight></codeline>
 <codeline lineno="157"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_impl" kindref="compound">sbfTcpMeshHandler</ref><sp/>tmh<sp/>=<sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" kindref="member">mParent</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1aaa8334a760c043b7339b056de6839b97" kindref="member">sbfTcpMeshHandler</ref><sp/>tmh<sp/>=<sp/>c-&gt;mParent;</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>event_del<sp/>(&amp;c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a026b6b69db318ba27bdb53eed56d675b" kindref="member">mTimer</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>event_del<sp/>(&amp;c-&gt;mTimer);</highlight></codeline>
 <codeline lineno="161"><highlight class="normal"></highlight></codeline>
 <codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfTcpMeshHandlerCloseSocket<sp/>(c);</highlight></codeline>
 <codeline lineno="163"><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a3339ba92ac0fb6252dc4708f082d7f64" kindref="member">mHost</ref>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)c-&gt;mHost);</highlight></codeline>
 <codeline lineno="165"><highlight class="normal"></highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1afe21416b021add1d039070372b28c2b7" kindref="member">sbfMutex_lock</ref><sp/>(&amp;tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a9ab4d034e317d56cb825b27a500a3c95" kindref="member">mMutex</ref>);</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sysqueue_8h_1aaae87ca18c28066e1a96221e762d1209" kindref="member">TAILQ_REMOVE</ref><sp/>(&amp;tmh-&gt;mConnections,<sp/>c,<sp/>mEntry);</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1ae9f52fb356fee346369a22cfef0def73" kindref="member">sbfMutex_unlock</ref><sp/>(&amp;tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a9ab4d034e317d56cb825b27a500a3c95" kindref="member">mMutex</ref>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_lock<sp/>(&amp;tmh-&gt;mMutex);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>TAILQ_REMOVE<sp/>(&amp;tmh-&gt;mConnections,<sp/>c,<sp/>mEntry);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_unlock<sp/>(&amp;tmh-&gt;mMutex);</highlight></codeline>
 <codeline lineno="169"><highlight class="normal"></highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(c);</highlight></codeline>
 <codeline lineno="171"><highlight class="normal">}</highlight></codeline>
@@ -828,19 +672,19 @@
 <codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
 <codeline lineno="179"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_impl" kindref="compound">sbfTcpMeshHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh<sp/>=<sp/>closure;</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1aaa8334a760c043b7339b056de6839b97" kindref="member">sbfTcpMeshHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c;</highlight></codeline>
 <codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp[INET_ADDRSTRLEN];</highlight></codeline>
 <codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sin<sp/>=<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in*)address;</highlight></codeline>
 <codeline lineno="184"><highlight class="normal"></highlight></codeline>
 <codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>c<sp/>=<sp/>sbfTcpMeshHandlerNewConnection<sp/>(tmh,<sp/>1);</highlight></codeline>
 <codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfTcpMeshHandlerSetSocket<sp/>(c,<sp/>s);</highlight></codeline>
 <codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1ae52a584543b12cfa68130aed9c5a166c" kindref="member">mConnected</ref><sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>bufferevent_enable<sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" kindref="member">mEvent</ref>,<sp/>EV_READ|EV_WRITE);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>c-&gt;mConnected<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>bufferevent_enable<sp/>(c-&gt;mEvent,<sp/>EV_READ|EV_WRITE);</highlight></codeline>
 <codeline lineno="190"><highlight class="normal"></highlight></codeline>
 <codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>inet_ntop<sp/>(AF_INET,<sp/>&amp;sin-&gt;sin_addr,<sp/>tmp,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>tmp);</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a73ffd3695bf7226abff06c5e98171c24" kindref="member">sbfLog_info</ref><sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4f90f256847da3666e7026beada64429" kindref="member">mParent</ref>-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a22b93b6abaf30e01afc22c1606e29760" kindref="member">mLog</ref>,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfLog_info<sp/>(c-&gt;mParent-&gt;mLog,</highlight></codeline>
 <codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;incoming<sp/>connection<sp/>%p<sp/>from<sp/>%s:%hu&quot;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c,</highlight></codeline>
 <codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp,</highlight></codeline>
@@ -850,58 +694,58 @@
 <codeline lineno="199"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="200"><highlight class="normal">sbfTcpMeshHandlerAddCompleteEventCb<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>events,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
 <codeline lineno="201"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_impl" kindref="compound">sbfTcpMeshHandler</ref><sp/>tmh<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1aaa8334a760c043b7339b056de6839b97" kindref="member">sbfTcpMeshHandler</ref><sp/>tmh<sp/>=<sp/>closure;</highlight></codeline>
 <codeline lineno="203"><highlight class="normal"></highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a6ee0cad95a8fbb9f66b63db35802a547" kindref="member">mAddStreamCompleteCb</ref><sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a3f3e01fef34c48bd716668e09ae82ad2" kindref="member">mHandle</ref>,<sp/>0,<sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a9a7d1574d58cc3e610b15292a441c200" kindref="member">mClosure</ref>);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;mAddStreamCompleteCb<sp/>(tmh-&gt;mHandle,<sp/>0,<sp/>tmh-&gt;mClosure);</highlight></codeline>
 <codeline lineno="205"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="206"><highlight class="normal"></highlight></codeline>
 <codeline lineno="207"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="208"><highlight class="normal">sbfTcpMeshHandlerDestroy<sp/>(<ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref><sp/>handler)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">sbfTcpMeshHandlerDestroy<sp/>(sbfHandler<sp/>handler)</highlight></codeline>
 <codeline lineno="209"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_impl" kindref="compound">sbfTcpMeshHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh<sp/>=<sp/>handler;</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c;</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c1;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1aaa8334a760c043b7339b056de6839b97" kindref="member">sbfTcpMeshHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh<sp/>=<sp/>handler;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c1;</highlight></codeline>
 <codeline lineno="213"><highlight class="normal"></highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sysqueue_8h_1a2a85f19896399eecd0ebf91cb8176166" kindref="member">TAILQ_FOREACH_SAFE</ref><sp/>(c,<sp/>&amp;tmh-&gt;mConnections,<sp/>mEntry,<sp/>c1)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>TAILQ_FOREACH_SAFE<sp/>(c,<sp/>&amp;tmh-&gt;mConnections,<sp/>mEntry,<sp/>c1)</highlight></codeline>
 <codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTcpMeshHandlerFreeConnection<sp/>(c);</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a696ae52b59c8ee67b0792cf793ca07c3" kindref="member">sbfMutex_destroy</ref><sp/>(&amp;tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a9ab4d034e317d56cb825b27a500a3c95" kindref="member">mMutex</ref>);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_destroy<sp/>(&amp;tmh-&gt;mMutex);</highlight></codeline>
 <codeline lineno="217"><highlight class="normal"></highlight></codeline>
-<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a33497ddcbbdeafd08b308a7fe90b95c3" kindref="member">mListener</ref><sp/>!=<sp/>NULL)</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evconnlistener_free<sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a33497ddcbbdeafd08b308a7fe90b95c3" kindref="member">mListener</ref>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmh-&gt;mListener<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evconnlistener_free<sp/>(tmh-&gt;mListener);</highlight></codeline>
 <codeline lineno="220"><highlight class="normal"></highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_pool_8c_1aa642928717354dd1f50a38ef13d92c3a" kindref="member">sbfPool_destroy</ref><sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a8b894de2bd7fd4961daea975f585a1f0" kindref="member">mPool</ref>);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfPool_destroy<sp/>(tmh-&gt;mPool);</highlight></codeline>
 <codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(tmh);</highlight></codeline>
 <codeline lineno="223"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="224"><highlight class="normal"></highlight></codeline>
-<codeline lineno="225"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref></highlight></codeline>
-<codeline lineno="226"><highlight class="normal">sbfTcpMeshHandlerCreate<sp/>(<ref refid="sbf_tport_8h_1acbaf9d451442abe85c18e3583d746181" kindref="member">sbfTport</ref><sp/>tport,<sp/><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/>properties)</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>sbfHandler</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">sbfTcpMeshHandlerCreate<sp/>(sbfTport<sp/>tport,<sp/>sbfKeyValue<sp/>properties)</highlight></codeline>
 <codeline lineno="227"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_impl" kindref="compound">sbfTcpMeshHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1aaa8334a760c043b7339b056de6839b97" kindref="member">sbfTcpMeshHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh;</highlight></codeline>
 <codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sin;</highlight></codeline>
 <codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i;</highlight></codeline>
 <codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>host;</highlight></codeline>
 <codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value;</highlight></codeline>
 <codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>endptr;</highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c;</highlight></codeline>
 <codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>port;</highlight></codeline>
 <codeline lineno="236"><highlight class="normal"></highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*tmh);</highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a22b93b6abaf30e01afc22c1606e29760" kindref="member">mLog</ref><sp/>=<sp/><ref refid="sbf_mw_8c_1aa7e45fc4943d4080534faf9d4b2f394f" kindref="member">sbfMw_getLog</ref><sp/>(<ref refid="sbf_tport_8c_1aa923af23b38a07524d327dea78fba30b" kindref="member">sbfTport_getMw</ref><sp/>(tport));</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_win32_8h_1a0f0968bebfa055ca5bc7ef552a0f7306" kindref="member">sbfMutex_init</ref><sp/>(&amp;tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a9ab4d034e317d56cb825b27a500a3c95" kindref="member">mMutex</ref>,<sp/>0);</highlight></codeline>
-<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sysqueue_8h_1a449d224023780e46253b83b61e0a50a9" kindref="member">TAILQ_INIT</ref><sp/>(&amp;tmh-&gt;mConnections);</highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a8b894de2bd7fd4961daea975f585a1f0" kindref="member">mPool</ref><sp/>=<sp/><ref refid="sbf_buffer_8h_1aa4e1e3381a982ca38035fc6a73824a91" kindref="member">sbfBuffer_createPool</ref><sp/>(65536);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh<sp/>=<sp/>xcalloc<sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*tmh);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;mLog<sp/>=<sp/><ref refid="sbf_mw_8c_1aa7e45fc4943d4080534faf9d4b2f394f" kindref="member">sbfMw_getLog</ref><sp/>(sbfTport_getMw<sp/>(tport));</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_init<sp/>(&amp;tmh-&gt;mMutex,<sp/>0);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>TAILQ_INIT<sp/>(&amp;tmh-&gt;mConnections);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;mPool<sp/>=<sp/>sbfBuffer_createPool<sp/>(65536);</highlight></codeline>
 <codeline lineno="242"><highlight class="normal"></highlight></codeline>
-<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a3f3e01fef34c48bd716668e09ae82ad2" kindref="member">mHandle</ref><sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a49a65a5bf40f35f2cf333a0c16020db5" kindref="member">mThread</ref><sp/>=<sp/><ref refid="sbf_mw_8h_1abf18b7c2721832ab6504c716791ce31c" kindref="member">sbfMw_getDefaultThread</ref><sp/>(<ref refid="sbf_tport_8c_1aa923af23b38a07524d327dea78fba30b" kindref="member">sbfTport_getMw</ref><sp/>(tport));</highlight></codeline>
-<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a4456429307486f88f92009820206bd5b" kindref="member">mEventBase</ref><sp/>=<sp/><ref refid="sbf_mw_8c_1a49eee9c382b8543bbb6e5822b6c7d554" kindref="member">sbfMw_getThreadEventBase</ref><sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a49a65a5bf40f35f2cf333a0c16020db5" kindref="member">mThread</ref>);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;mHandle<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;mThread<sp/>=<sp/><ref refid="sbf_mw_8h_1abf18b7c2721832ab6504c716791ce31c" kindref="member">sbfMw_getDefaultThread</ref><sp/>(sbfTport_getMw<sp/>(tport));</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;mEventBase<sp/>=<sp/><ref refid="sbf_mw_8c_1a49eee9c382b8543bbb6e5822b6c7d554" kindref="member">sbfMw_getThreadEventBase</ref><sp/>(tmh-&gt;mThread);</highlight></codeline>
 <codeline lineno="246"><highlight class="normal"></highlight></codeline>
 <codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>port<sp/>=<sp/><ref refid="sbf_tcp_mesh_handler_8h_1a3e90b2d7822aeb5f41f96561820cb06d" kindref="member">SBF_TCP_MESH_HANDLER_DEFAULT_PORT</ref>;</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((value<sp/>=<sp/><ref refid="sbf_key_value_8c_1a5bf2be4a5e087f042234f99b57dd2504" kindref="member">sbfKeyValue_get</ref><sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;tcpmesh.listen&quot;</highlight><highlight class="normal">))<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((value<sp/>=<sp/>sbfKeyValue_get<sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;tcpmesh.listen&quot;</highlight><highlight class="normal">))<sp/>!=<sp/>NULL)</highlight></codeline>
 <codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>port<sp/>=<sp/>strtoul<sp/>(value,<sp/>&amp;endptr,<sp/>10);</highlight></codeline>
 <codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(port<sp/>&gt;<sp/>65536<sp/>||<sp/>*endptr<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a623a831041e812e33a41439b449d740d" kindref="member">sbfLog_err</ref><sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a22b93b6abaf30e01afc22c1606e29760" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>port<sp/>in<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>value);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfLog_err<sp/>(tmh-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>port<sp/>in<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>value);</highlight></codeline>
 <codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
 <codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -911,8 +755,8 @@
 <codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sin.sin_family<sp/>=<sp/>AF_INET;</highlight></codeline>
 <codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sin.sin_addr.s_addr<sp/>=<sp/>INADDR_ANY;</highlight></codeline>
 <codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sin.sin_port<sp/>=<sp/>htons<sp/>((uint16_t)port);</highlight></codeline>
-<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a33497ddcbbdeafd08b308a7fe90b95c3" kindref="member">mListener</ref><sp/>=<sp/>evconnlistener_new_bind<sp/>(</highlight></codeline>
-<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a4456429307486f88f92009820206bd5b" kindref="member">mEventBase</ref>,</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh-&gt;mListener<sp/>=<sp/>evconnlistener_new_bind<sp/>(</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh-&gt;mEventBase,</highlight></codeline>
 <codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTcpMeshHandlerListenerAcceptCb,</highlight></codeline>
 <codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh,</highlight></codeline>
 <codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEV_OPT_THREADSAFE|</highlight></codeline>
@@ -922,9 +766,9 @@
 <codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1,</highlight></codeline>
 <codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr*)&amp;sin,</highlight></codeline>
 <codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>sin);</highlight></codeline>
-<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a33497ddcbbdeafd08b308a7fe90b95c3" kindref="member">mListener</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmh-&gt;mListener<sp/>==<sp/>NULL)</highlight></codeline>
 <codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a623a831041e812e33a41439b449d740d" kindref="member">sbfLog_err</ref><sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a22b93b6abaf30e01afc22c1606e29760" kindref="member">mLog</ref>,</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfLog_err<sp/>(tmh-&gt;mLog,</highlight></codeline>
 <codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>create<sp/>listener:<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror<sp/>(errno));</highlight></codeline>
 <codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
@@ -933,7 +777,7 @@
 <codeline lineno="282"><highlight class="normal"></highlight></codeline>
 <codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>USHRT_MAX;<sp/>i++)</highlight></codeline>
 <codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>host<sp/>=<sp/><ref refid="sbf_key_value_8c_1aba52e0539720bdd0f3afefbfc5f5c831" kindref="member">sbfKeyValue_getV</ref><sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;tcpmesh.connect%u&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>host<sp/>=<sp/>sbfKeyValue_getV<sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;tcpmesh.connect%u&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
 <codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(host<sp/>==<sp/>NULL)</highlight></codeline>
 <codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="288"><highlight class="normal"></highlight></codeline>
@@ -941,28 +785,28 @@
 <codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c<sp/>==<sp/>NULL)</highlight></codeline>
 <codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
 <codeline lineno="292"><highlight class="normal"></highlight></codeline>
-<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a3339ba92ac0fb6252dc4708f082d7f64" kindref="member">mHost</ref><sp/>=<sp/><ref refid="sbf_memory_8h_1a5eb055ca3b42205cc134b4a438cd9a72" kindref="member">xstrdup</ref><sp/>(host);</highlight></codeline>
-<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((endptr<sp/>=<sp/>strchr<sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a3339ba92ac0fb6252dc4708f082d7f64" kindref="member">mHost</ref>,<sp/></highlight><highlight class="charliteral">&apos;:&apos;</highlight><highlight class="normal">))<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;mHost<sp/>=<sp/>xstrdup<sp/>(host);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((endptr<sp/>=<sp/>strchr<sp/>(c-&gt;mHost,<sp/></highlight><highlight class="charliteral">&apos;:&apos;</highlight><highlight class="normal">))<sp/>!=<sp/>NULL)</highlight></codeline>
 <codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*endptr++<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="297"><highlight class="normal"></highlight></codeline>
 <codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>port<sp/>=<sp/>strtoul<sp/>(endptr,<sp/>&amp;endptr,<sp/>10);</highlight></codeline>
 <codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(port<sp/>==<sp/>0<sp/>||<sp/>port<sp/>&gt;<sp/>65536<sp/>||<sp/>*endptr<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a623a831041e812e33a41439b449d740d" kindref="member">sbfLog_err</ref><sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a22b93b6abaf30e01afc22c1606e29760" kindref="member">mLog</ref>,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>port<sp/>in<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>host);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfLog_err<sp/>(tmh-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>port<sp/>in<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>host);</highlight></codeline>
 <codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>fail;</highlight></codeline>
 <codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4edeeeb98debc477a65da5781c18cb89" kindref="member">mPort</ref><sp/>=<sp/>(uint16_t)port;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;mPort<sp/>=<sp/>(uint16_t)port;</highlight></codeline>
 <codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4edeeeb98debc477a65da5781c18cb89" kindref="member">mPort</ref><sp/>=<sp/><ref refid="sbf_tcp_mesh_handler_8h_1a3e90b2d7822aeb5f41f96561820cb06d" kindref="member">SBF_TCP_MESH_HANDLER_DEFAULT_PORT</ref>;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;mPort<sp/>=<sp/><ref refid="sbf_tcp_mesh_handler_8h_1a3e90b2d7822aeb5f41f96561820cb06d" kindref="member">SBF_TCP_MESH_HANDLER_DEFAULT_PORT</ref>;</highlight></codeline>
 <codeline lineno="308"><highlight class="normal"></highlight></codeline>
-<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a73ffd3695bf7226abff06c5e98171c24" kindref="member">sbfLog_info</ref><sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a22b93b6abaf30e01afc22c1606e29760" kindref="member">mLog</ref>,</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfLog_info<sp/>(tmh-&gt;mLog,</highlight></codeline>
 <codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;outgoing<sp/>connection<sp/>%p<sp/>to<sp/>%s:%hu&quot;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c,</highlight></codeline>
-<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a3339ba92ac0fb6252dc4708f082d7f64" kindref="member">mHost</ref>,</highlight></codeline>
-<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a4edeeeb98debc477a65da5781c18cb89" kindref="member">mPort</ref>);</highlight></codeline>
-<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_active<sp/>(&amp;c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a026b6b69db318ba27bdb53eed56d675b" kindref="member">mTimer</ref>,<sp/>EV_TIMEOUT,<sp/>0);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;mHost,</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;mPort);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_active<sp/>(&amp;c-&gt;mTimer,<sp/>EV_TIMEOUT,<sp/>0);</highlight></codeline>
 <codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="316"><highlight class="normal"></highlight></codeline>
 <codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmh;</highlight></codeline>
@@ -972,36 +816,36 @@
 <codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
 <codeline lineno="322"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="323"><highlight class="normal"></highlight></codeline>
-<codeline lineno="324"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref></highlight></codeline>
-<codeline lineno="325"><highlight class="normal">sbfTcpMeshHandlerFindStream<sp/>(<ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref><sp/>handler,<sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic)</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>sbfHandlerHandle</highlight></codeline>
+<codeline lineno="325"><highlight class="normal">sbfTcpMeshHandlerFindStream<sp/>(sbfHandler<sp/>handler,<sp/>sbfTopic<sp/>topic)</highlight></codeline>
 <codeline lineno="326"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_impl" kindref="compound">sbfTcpMeshHandler</ref><sp/>tmh<sp/>=<sp/>handler;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1aaa8334a760c043b7339b056de6839b97" kindref="member">sbfTcpMeshHandler</ref><sp/>tmh<sp/>=<sp/>handler;</highlight></codeline>
 <codeline lineno="328"><highlight class="normal"></highlight></codeline>
-<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a3f3e01fef34c48bd716668e09ae82ad2" kindref="member">mHandle</ref>;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmh-&gt;mHandle;</highlight></codeline>
 <codeline lineno="330"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="331"><highlight class="normal"></highlight></codeline>
-<codeline lineno="332"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref></highlight></codeline>
-<codeline lineno="333"><highlight class="normal">sbfTcpMeshHandlerAddStream<sp/>(<ref refid="sbf_handler_8h_1a7cf120794ea3f4e4057378288e794cf5" kindref="member">sbfHandler</ref><sp/>handler,</highlight></codeline>
-<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic,</highlight></codeline>
-<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/>thread,</highlight></codeline>
-<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1a3b6e24841bce408d649b41f0aebe6923" kindref="member">sbfHandlerHandle</ref><sp/>handle,</highlight></codeline>
-<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_handler_8h_1a5b047b3b44834708064523d3f20ae4c5" kindref="member">sbfHandlerAddStreamCompleteCb</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>sbfHandlerStream</highlight></codeline>
+<codeline lineno="333"><highlight class="normal">sbfTcpMeshHandlerAddStream<sp/>(sbfHandler<sp/>handler,</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTopic<sp/>topic,</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread,</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfHandlerHandle<sp/>handle,</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfHandlerAddStreamCompleteCb<sp/>cb,</highlight></codeline>
 <codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
 <codeline lineno="339"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_impl" kindref="compound">sbfTcpMeshHandler</ref><sp/>tmh<sp/>=<sp/>handler;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1aaa8334a760c043b7339b056de6839b97" kindref="member">sbfTcpMeshHandler</ref><sp/>tmh<sp/>=<sp/>handler;</highlight></codeline>
 <codeline lineno="341"><highlight class="normal"></highlight></codeline>
-<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a9494b177643e1271eeb943d1dd3e9dbb" kindref="member">SBF_ASSERT</ref><sp/>(thread<sp/>==<sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a49a65a5bf40f35f2cf333a0c16020db5" kindref="member">mThread</ref>);<sp/></highlight><highlight class="comment">/*<sp/>must<sp/>be<sp/>first<sp/>thread<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>SBF_ASSERT<sp/>(thread<sp/>==<sp/>tmh-&gt;mThread);<sp/></highlight><highlight class="comment">/*<sp/>must<sp/>be<sp/>first<sp/>thread<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="343"><highlight class="normal"></highlight></codeline>
-<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a9494b177643e1271eeb943d1dd3e9dbb" kindref="member">SBF_ASSERT</ref><sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a3f3e01fef34c48bd716668e09ae82ad2" kindref="member">mHandle</ref><sp/>==<sp/>NULL);<sp/></highlight><highlight class="comment">/*<sp/>must<sp/>be<sp/>only<sp/>one<sp/>handle<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a3f3e01fef34c48bd716668e09ae82ad2" kindref="member">mHandle</ref><sp/>=<sp/>handle;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/>SBF_ASSERT<sp/>(tmh-&gt;mHandle<sp/>==<sp/>NULL);<sp/></highlight><highlight class="comment">/*<sp/>must<sp/>be<sp/>only<sp/>one<sp/>handle<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;mHandle<sp/>=<sp/>handle;</highlight></codeline>
 <codeline lineno="346"><highlight class="normal"></highlight></codeline>
-<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a6ee0cad95a8fbb9f66b63db35802a547" kindref="member">mAddStreamCompleteCb</ref><sp/>=<sp/>cb;</highlight></codeline>
-<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a9a7d1574d58cc3e610b15292a441c200" kindref="member">mClosure</ref><sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;mAddStreamCompleteCb<sp/>=<sp/>cb;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>tmh-&gt;mClosure<sp/>=<sp/>closure;</highlight></codeline>
 <codeline lineno="349"><highlight class="normal"></highlight></codeline>
 <codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cb<sp/>!=<sp/>NULL)</highlight></codeline>
 <codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8c_1ae30e3fd3f462247eb140805b083d83c6" kindref="member">sbfMw_enqueueThread</ref><sp/>(tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a49a65a5bf40f35f2cf333a0c16020db5" kindref="member">mThread</ref>,</highlight></codeline>
-<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1ab0bd8e66fa3cf3b00f0cef3c000870cf" kindref="member">mEventAdd</ref>,</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8c_1ae30e3fd3f462247eb140805b083d83c6" kindref="member">sbfMw_enqueueThread</ref><sp/>(tmh-&gt;mThread,</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;tmh-&gt;mEventAdd,</highlight></codeline>
 <codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTcpMeshHandlerAddCompleteEventCb,</highlight></codeline>
 <codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh);</highlight></codeline>
 <codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -1010,34 +854,34 @@
 <codeline lineno="359"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="360"><highlight class="normal"></highlight></codeline>
 <codeline lineno="361"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="362"><highlight class="normal">sbfTcpMeshHandlerRemoveStream<sp/>(<ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref><sp/>stream)</highlight></codeline>
+<codeline lineno="362"><highlight class="normal">sbfTcpMeshHandlerRemoveStream<sp/>(sbfHandlerStream<sp/>stream)</highlight></codeline>
 <codeline lineno="363"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="364"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="365"><highlight class="normal"></highlight></codeline>
-<codeline lineno="366"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></highlight></codeline>
-<codeline lineno="367"><highlight class="normal">sbfTcpMeshHandlerGetBuffer<sp/>(<ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref><sp/>stream,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>sbfBuffer</highlight></codeline>
+<codeline lineno="367"><highlight class="normal">sbfTcpMeshHandlerGetBuffer<sp/>(sbfHandlerStream<sp/>stream,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
 <codeline lineno="368"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sbfBuffer_new<sp/>(NULL,<sp/>size);</highlight></codeline>
 <codeline lineno="370"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="371"><highlight class="normal"></highlight></codeline>
 <codeline lineno="372"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="373"><highlight class="normal">sbfTcpMeshHandlerSendBuffer<sp/>(<ref refid="sbf_handler_8h_1afbc3f33e773c22a8e29758199c2254bd" kindref="member">sbfHandlerStream</ref><sp/>stream,<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer)</highlight></codeline>
+<codeline lineno="373"><highlight class="normal">sbfTcpMeshHandlerSendBuffer<sp/>(sbfHandlerStream<sp/>stream,<sp/>sbfBuffer<sp/>buffer)</highlight></codeline>
 <codeline lineno="374"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_impl" kindref="compound">sbfTcpMeshHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh<sp/>=<sp/>stream;</highlight></codeline>
-<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_mesh_handler_connection_impl" kindref="compound">sbfTcpMeshHandlerConnection</ref><sp/>c;</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1aaa8334a760c043b7339b056de6839b97" kindref="member">sbfTcpMeshHandler</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmh<sp/>=<sp/>stream;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9" kindref="member">sbfTcpMeshHandlerConnection</ref><sp/>c;</highlight></codeline>
 <codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>=<sp/>sbfBuffer_getData<sp/>(buffer);</highlight></codeline>
 <codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/>sbfBuffer_getSize<sp/>(buffer);</highlight></codeline>
 <codeline lineno="379"><highlight class="normal"></highlight></codeline>
-<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1afe21416b021add1d039070372b28c2b7" kindref="member">sbfMutex_lock</ref><sp/>(&amp;tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a9ab4d034e317d56cb825b27a500a3c95" kindref="member">mMutex</ref>);</highlight></codeline>
-<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sysqueue_8h_1a16e5fc168e7f3494d4b1df54447d871e" kindref="member">TAILQ_FOREACH</ref><sp/>(c,<sp/>&amp;tmh-&gt;mConnections,<sp/>mEntry)</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_lock<sp/>(&amp;tmh-&gt;mMutex);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>TAILQ_FOREACH<sp/>(c,<sp/>&amp;tmh-&gt;mConnections,<sp/>mEntry)</highlight></codeline>
 <codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1ae52a584543b12cfa68130aed9c5a166c" kindref="member">mConnected</ref>)</highlight></codeline>
-<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evbuffer_add<sp/>(bufferevent_get_output<sp/>(c-&gt;<ref refid="structsbf_tcp_mesh_handler_connection_impl_1a541b1ef2e283d2976bba053015912a20" kindref="member">mEvent</ref>),<sp/>data,<sp/>size);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c-&gt;mConnected)</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evbuffer_add<sp/>(bufferevent_get_output<sp/>(c-&gt;mEvent),<sp/>data,<sp/>size);</highlight></codeline>
 <codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1ae9f52fb356fee346369a22cfef0def73" kindref="member">sbfMutex_unlock</ref><sp/>(&amp;tmh-&gt;<ref refid="structsbf_tcp_mesh_handler_impl_1a9ab4d034e317d56cb825b27a500a3c95" kindref="member">mMutex</ref>);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfMutex_unlock<sp/>(&amp;tmh-&gt;mMutex);</highlight></codeline>
 <codeline lineno="387"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="388"><highlight class="normal"></highlight></codeline>
-<codeline lineno="389" refid="sbf_tcp_mesh_handler_8c_1af02f4b45ac8659a72302327dc2c589ac" refkind="member"><highlight class="normal"><ref refid="structsbf_handler_table" kindref="compound">sbfHandlerTable</ref><sp/><ref refid="sbf_tcp_mesh_handler_8c_1af02f4b45ac8659a72302327dc2c589ac" kindref="member">sbf_tcpmesh_handler</ref><sp/>=</highlight></codeline>
+<codeline lineno="389" refid="sbf_tcp_mesh_handler_8c_1af02f4b45ac8659a72302327dc2c589ac" refkind="member"><highlight class="normal">sbfHandlerTable<sp/><ref refid="sbf_tcp_mesh_handler_8c_1af02f4b45ac8659a72302327dc2c589ac" kindref="member">sbf_tcpmesh_handler</ref><sp/>=</highlight></codeline>
 <codeline lineno="390"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/>65535,</highlight></codeline>
 <codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfTcpMeshHandlerCreate,</highlight></codeline>

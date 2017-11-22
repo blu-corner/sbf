@@ -81,7 +81,6 @@ $(document).ready(function(){initNavTree('sbf_queue_private_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -90,28 +89,21 @@ $(document).ready(function(){initNavTree('sbf_queue_private_8h.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="sbf_mw_8h_source.html">sbfMw.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sbf_mw_private_8h_source.html">sbfMwPrivate.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sbf_pool_8h_source.html">sbfPool.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sbf_properties_8h_source.html">sbfProperties.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sbf_ref_count_8h_source.html">sbfRefCount.h</a>&quot;</code><br />
+<code>#include &quot;sbfPool.h&quot;</code><br />
+<code>#include &quot;sbfProperties.h&quot;</code><br />
+<code>#include &quot;sbfRefCount.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="sbf_hi_res_timer_private_8h_source.html">sbfHiResTimerPrivate.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sbf_queue_darwin_8h_source.html">sbfQueueDarwin.h</a>&quot;</code><br />
 </div>
 <p><a href="sbf_queue_private_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsbf_queue_item_impl.html">sbfQueueItemImpl</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsbf_queue_impl.html">sbfQueueImpl</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:adc00f0a64bc9f1426cc6a398b815755f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_private_8h.html#adc00f0a64bc9f1426cc6a398b815755f">SBF_QUEUE_ITEM_DATA_SIZE</a>&#160;&#160;&#160;32</td></tr>
 <tr class="separator:adc00f0a64bc9f1426cc6a398b815755f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a2d2874e516558470a073b42c8e124b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_private_8h.html#a8a2d2874e516558470a073b42c8e124b">SBF_QUEUE_NONBLOCK</a>&#160;&#160;&#160;0x1</td></tr>
 <tr class="separator:a8a2d2874e516558470a073b42c8e124b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6807d49592d1eddd7fc40209726a6a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_private_8h.html#ac6807d49592d1eddd7fc40209726a6a0">SBF_QUEUE_BLOCKING</a>(queue)&#160;&#160;&#160;(!((queue)-&gt;mFlags &amp; <a class="el" href="sbf_queue_private_8h.html#a8a2d2874e516558470a073b42c8e124b">SBF_QUEUE_NONBLOCK</a>) &amp;&amp; <a class="el" href="systree_8h.html#a0d85aa035345c2d3f890bf6bc602c068">RB_EMPTY</a> (&amp;queue-&gt;mHiResTimers))</td></tr>
+<tr class="memitem:ac6807d49592d1eddd7fc40209726a6a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_private_8h.html#ac6807d49592d1eddd7fc40209726a6a0">SBF_QUEUE_BLOCKING</a>(queue)&#160;&#160;&#160;(!((queue)-&gt;mFlags &amp; <a class="el" href="sbf_queue_private_8h.html#a8a2d2874e516558470a073b42c8e124b">SBF_QUEUE_NONBLOCK</a>) &amp;&amp; RB_EMPTY (&amp;queue-&gt;mHiResTimers))</td></tr>
 <tr class="separator:ac6807d49592d1eddd7fc40209726a6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a946f1f7aec29f8d92e1b4a8a33e8ef76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_private_8h.html#a946f1f7aec29f8d92e1b4a8a33e8ef76">SBF_QUEUE_FUNCTIONS</a></td></tr>
 <tr class="separator:a946f1f7aec29f8d92e1b4a8a33e8ef76"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,7 +127,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">queue</td><td>)</td>
-          <td>&#160;&#160;&#160;(!((queue)-&gt;mFlags &amp; <a class="el" href="sbf_queue_private_8h.html#a8a2d2874e516558470a073b42c8e124b">SBF_QUEUE_NONBLOCK</a>) &amp;&amp; <a class="el" href="systree_8h.html#a0d85aa035345c2d3f890bf6bc602c068">RB_EMPTY</a> (&amp;queue-&gt;mHiResTimers))</td>
+          <td>&#160;&#160;&#160;(!((queue)-&gt;mFlags &amp; <a class="el" href="sbf_queue_private_8h.html#a8a2d2874e516558470a073b42c8e124b">SBF_QUEUE_NONBLOCK</a>) &amp;&amp; RB_EMPTY (&amp;queue-&gt;mHiResTimers))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -209,8 +201,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sbf_queue_8c_source.html#l00058">58</a> of file <a class="el" href="sbf_queue_8c_source.html">sbfQueue.c</a>.</p>
-
 </div>
 </div>
 <a id="abef4c8004b90db6771d30ca33d23dde8"></a>
@@ -228,8 +218,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sbf_queue_8c_source.html#l00064">64</a> of file <a class="el" href="sbf_queue_8c_source.html">sbfQueue.c</a>.</p>
 
 </div>
 </div>

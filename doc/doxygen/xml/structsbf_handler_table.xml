@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfHandler.h" line="47" column="1" bodyfile="transport/sbfHandler.h" bodystart="47" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" line="47" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_handler_table_1aaa4887afcd5ea5e098456969c872cf87" prot="public" static="no" mutable="no">
         <type><ref refid="sbf_handler_8h_1a9807fc2c0e4095ee110af36653bdf88f" kindref="member">sbfHandlerCreateFn</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfHandler.h" line="49" column="1" bodyfile="transport/sbfHandler.h" bodystart="49" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" line="49" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_handler_table_1aba14b9c93de7cee554fc0574cd0aebea" prot="public" static="no" mutable="no">
         <type><ref refid="sbf_handler_8h_1af34440a3ea5da006565c681c5a363378" kindref="member">sbfHandlerDestroyFn</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfHandler.h" line="50" column="1" bodyfile="transport/sbfHandler.h" bodystart="50" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" line="50" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_handler_table_1af94f27799d27f8d232324402186c78a8" prot="public" static="no" mutable="no">
         <type><ref refid="sbf_handler_8h_1afe2e653b58f3168780e9e592d33caa22" kindref="member">sbfHandlerFindStreamFn</ref></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfHandler.h" line="52" column="1" bodyfile="transport/sbfHandler.h" bodystart="52" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" line="52" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_handler_table_1a7854e41f179522aa0e34076d5379c4bb" prot="public" static="no" mutable="no">
         <type><ref refid="sbf_handler_8h_1ac27fb6df67acb007f460ff1a361df8c0" kindref="member">sbfHandlerAddStreamFn</ref></type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfHandler.h" line="53" column="1" bodyfile="transport/sbfHandler.h" bodystart="53" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" line="53" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_handler_table_1a54e4ae99bdf581b2d7f4f6eb3d0972e5" prot="public" static="no" mutable="no">
         <type><ref refid="sbf_handler_8h_1aa8d7d120f70f028e72e2f2ce51518a3c" kindref="member">sbfHandlerRemoveStreamFn</ref></type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfHandler.h" line="54" column="1" bodyfile="transport/sbfHandler.h" bodystart="54" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" line="54" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_handler_table_1acd88c2ddb444b1416a9c4c4ef519b115" prot="public" static="no" mutable="no">
         <type><ref refid="sbf_handler_8h_1ad0064fd4d91a1cd37c1be20eb953b6c9" kindref="member">sbfHandlerGetBufferFn</ref></type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfHandler.h" line="56" column="1" bodyfile="transport/sbfHandler.h" bodystart="56" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" line="56" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_handler_table_1ad36659c8c1d4a33ff7e04ebeb23855c0" prot="public" static="no" mutable="no">
         <type><ref refid="sbf_handler_8h_1a5cbfeb57eb9d817d78522ded62079b36" kindref="member">sbfHandlerSendBufferFn</ref></type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="transport/sbfHandler.h" line="57" column="1" bodyfile="transport/sbfHandler.h" bodystart="57" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" line="57" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" bodystart="57" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -114,46 +114,18 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="40">
+      <node id="18">
         <label>sbfMwThreadImpl</label>
-        <link refid="structsbf_mw_thread_impl"/>
-        <childnode refid="41" relation="usage">
-          <edgelabel>mParent</edgelabel>
-        </childnode>
       </node>
-      <node id="41">
-        <label>sbfMwImpl</label>
-        <link refid="structsbf_mw_impl"/>
-        <childnode refid="40" relation="usage">
-          <edgelabel>mThreads</edgelabel>
-        </childnode>
-        <childnode refid="42" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
-      </node>
-      <node id="43">
-        <label>sbfLogFileImpl</label>
-        <link refid="structsbf_log_file_impl"/>
-      </node>
-      <node id="42">
-        <label>sbfLogImpl</label>
-        <link refid="structsbf_log_impl"/>
-        <childnode refid="42" relation="usage">
-          <edgelabel>mHookCb</edgelabel>
-        </childnode>
-        <childnode refid="43" relation="usage">
-          <edgelabel>mFile</edgelabel>
-        </childnode>
-      </node>
-      <node id="39">
+      <node id="17">
         <label>sbfHandlerTable</label>
         <link refid="structsbf_handler_table"/>
-        <childnode refid="40" relation="usage">
+        <childnode refid="18" relation="usage">
           <edgelabel>mAddStream</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="transport/sbfHandler.h" line="46" column="1" bodyfile="transport/sbfHandler.h" bodystart="45" bodyend="58"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" line="46" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h" bodystart="45" bodyend="58"/>
     <listofallmembers>
       <member refid="structsbf_handler_table_1a7854e41f179522aa0e34076d5379c4bb" prot="public" virt="non-virtual"><scope>sbfHandlerTable</scope><name>mAddStream</name></member>
       <member refid="structsbf_handler_table_1aaa4887afcd5ea5e098456969c872cf87" prot="public" virt="non-virtual"><scope>sbfHandlerTable</scope><name>mCreate</name></member>

@@ -70,7 +70,7 @@
         <location file="core/sbfEventPrivate.h" line="18" column="1" bodyfile="core/sbfEventPrivate.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_event_impl_1a3c621d15079d81b7c63f8faba12b9730" prot="public" static="no" mutable="no">
-        <type><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref></type>
+        <type>sbfRefCount</type>
         <definition>sbfRefCount sbfEventImpl::mRefCount</definition>
         <argsstring></argsstring>
         <name>mRefCount</name>
@@ -101,93 +101,35 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="34">
+      <node id="4">
         <label>sbfQueueImpl</label>
         <link refid="structsbf_queue_impl"/>
-        <childnode refid="33" relation="usage">
-          <edgelabel>mRefCount</edgelabel>
-        </childnode>
-        <childnode refid="35" relation="usage">
-          <edgelabel>mPool</edgelabel>
-        </childnode>
-        <childnode refid="31" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
       </node>
-      <node id="29">
+      <node id="2">
         <label>sbfMwThreadImpl</label>
         <link refid="structsbf_mw_thread_impl"/>
-        <childnode refid="30" relation="usage">
+        <childnode refid="3" relation="usage">
           <edgelabel>mParent</edgelabel>
         </childnode>
       </node>
-      <node id="33">
-        <label>sbfRefCount</label>
-        <link refid="structsbf_ref_count"/>
-      </node>
-      <node id="28">
+      <node id="1">
         <label>sbfEventImpl</label>
         <link refid="structsbf_event_impl"/>
-        <childnode refid="28" relation="usage">
+        <childnode refid="1" relation="usage">
           <edgelabel>mCb</edgelabel>
         </childnode>
-        <childnode refid="29" relation="usage">
+        <childnode refid="2" relation="usage">
           <edgelabel>mThread</edgelabel>
         </childnode>
-        <childnode refid="33" relation="usage">
-          <edgelabel>mRefCount</edgelabel>
-        </childnode>
-        <childnode refid="34" relation="usage">
+        <childnode refid="4" relation="usage">
           <edgelabel>mQueue</edgelabel>
         </childnode>
       </node>
-      <node id="36">
-        <label>sbfPoolCountImpl</label>
-        <link refid="structsbf_pool_count_impl"/>
-      </node>
-      <node id="30">
+      <node id="3">
         <label>sbfMwImpl</label>
         <link refid="structsbf_mw_impl"/>
-        <childnode refid="29" relation="usage">
+        <childnode refid="2" relation="usage">
           <edgelabel>mThreads</edgelabel>
-        </childnode>
-        <childnode refid="31" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
-      </node>
-      <node id="37">
-        <label>sbfPoolItemImpl</label>
-        <link refid="structsbf_pool_item_impl"/>
-        <childnode refid="37" relation="usage">
-          <edgelabel>mNext</edgelabel>
-        </childnode>
-        <childnode refid="35" relation="usage">
-          <edgelabel>mPool</edgelabel>
-        </childnode>
-      </node>
-      <node id="32">
-        <label>sbfLogFileImpl</label>
-        <link refid="structsbf_log_file_impl"/>
-      </node>
-      <node id="31">
-        <label>sbfLogImpl</label>
-        <link refid="structsbf_log_impl"/>
-        <childnode refid="31" relation="usage">
-          <edgelabel>mHookCb</edgelabel>
-        </childnode>
-        <childnode refid="32" relation="usage">
-          <edgelabel>mFile</edgelabel>
-        </childnode>
-      </node>
-      <node id="35">
-        <label>sbfPoolImpl</label>
-        <link refid="structsbf_pool_impl"/>
-        <childnode refid="36" relation="usage">
-          <edgelabel>mCount</edgelabel>
-        </childnode>
-        <childnode refid="37" relation="usage">
-          <edgelabel>mFree</edgelabel>
-          <edgelabel>mAvailable</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>

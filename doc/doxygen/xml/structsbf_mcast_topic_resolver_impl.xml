@@ -5,7 +5,7 @@
     <includes refid="sbf_common_handler_private_8h" local="no">sbfCommonHandlerPrivate.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structsbf_mcast_topic_resolver_impl_1a0f3ca8fb8fe2bf83d3d6ea91e4f0dbb6" prot="public" static="no" mutable="no">
-        <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+        <type>sbfLog</type>
         <definition>sbfLog sbfMcastTopicResolverImpl::mLog</definition>
         <argsstring></argsstring>
         <name>mLog</name>
@@ -100,29 +100,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <collaborationgraph>
-      <node id="63">
-        <label>sbfMcastTopicResolverImpl</label>
-        <link refid="structsbf_mcast_topic_resolver_impl"/>
-        <childnode refid="64" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
-      </node>
-      <node id="65">
-        <label>sbfLogFileImpl</label>
-        <link refid="structsbf_log_file_impl"/>
-      </node>
-      <node id="64">
-        <label>sbfLogImpl</label>
-        <link refid="structsbf_log_impl"/>
-        <childnode refid="64" relation="usage">
-          <edgelabel>mHookCb</edgelabel>
-        </childnode>
-        <childnode refid="65" relation="usage">
-          <edgelabel>mFile</edgelabel>
-        </childnode>
-      </node>
-    </collaborationgraph>
     <location file="handlers/common/sbfCommonHandlerPrivate.h" line="13" column="1" bodyfile="handlers/common/sbfCommonHandlerPrivate.h" bodystart="12" bodyend="24"/>
     <listofallmembers>
       <member refid="structsbf_mcast_topic_resolver_impl_1a23d758bc75da446637500897766f142c" prot="public" virt="non-virtual"><scope>sbfMcastTopicResolverImpl</scope><name>mBase</name></member>

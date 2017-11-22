@@ -109,7 +109,7 @@
         <location file="core/sbfHiResTimerPrivate.h" line="23" column="1" bodyfile="core/sbfHiResTimerPrivate.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_hi_res_timer_impl_1a7c0910145cec4e526706e5788db1ac53" prot="public" static="no" mutable="no">
-        <type><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref></type>
+        <type>sbfRefCount</type>
         <definition>sbfRefCount sbfHiResTimerImpl::mRefCount</definition>
         <argsstring></argsstring>
         <name>mRefCount</name>
@@ -145,73 +145,18 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="47">
+      <node id="7">
         <label>sbfQueueImpl</label>
         <link refid="structsbf_queue_impl"/>
-        <childnode refid="46" relation="usage">
-          <edgelabel>mRefCount</edgelabel>
-        </childnode>
-        <childnode refid="48" relation="usage">
-          <edgelabel>mPool</edgelabel>
-        </childnode>
-        <childnode refid="51" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
       </node>
-      <node id="46">
-        <label>sbfRefCount</label>
-        <link refid="structsbf_ref_count"/>
-      </node>
-      <node id="49">
-        <label>sbfPoolCountImpl</label>
-        <link refid="structsbf_pool_count_impl"/>
-      </node>
-      <node id="50">
-        <label>sbfPoolItemImpl</label>
-        <link refid="structsbf_pool_item_impl"/>
-        <childnode refid="50" relation="usage">
-          <edgelabel>mNext</edgelabel>
-        </childnode>
-        <childnode refid="48" relation="usage">
-          <edgelabel>mPool</edgelabel>
-        </childnode>
-      </node>
-      <node id="52">
-        <label>sbfLogFileImpl</label>
-        <link refid="structsbf_log_file_impl"/>
-      </node>
-      <node id="51">
-        <label>sbfLogImpl</label>
-        <link refid="structsbf_log_impl"/>
-        <childnode refid="51" relation="usage">
-          <edgelabel>mHookCb</edgelabel>
-        </childnode>
-        <childnode refid="52" relation="usage">
-          <edgelabel>mFile</edgelabel>
-        </childnode>
-      </node>
-      <node id="45">
+      <node id="6">
         <label>sbfHiResTimerImpl</label>
         <link refid="structsbf_hi_res_timer_impl"/>
-        <childnode refid="45" relation="usage">
+        <childnode refid="6" relation="usage">
           <edgelabel>mCb</edgelabel>
         </childnode>
-        <childnode refid="46" relation="usage">
-          <edgelabel>mRefCount</edgelabel>
-        </childnode>
-        <childnode refid="47" relation="usage">
+        <childnode refid="7" relation="usage">
           <edgelabel>mQueue</edgelabel>
-        </childnode>
-      </node>
-      <node id="48">
-        <label>sbfPoolImpl</label>
-        <link refid="structsbf_pool_impl"/>
-        <childnode refid="49" relation="usage">
-          <edgelabel>mCount</edgelabel>
-        </childnode>
-        <childnode refid="50" relation="usage">
-          <edgelabel>mFree</edgelabel>
-          <edgelabel>mAvailable</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>

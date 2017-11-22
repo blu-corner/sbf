@@ -5,136 +5,77 @@
     <includes refid="sbf_mw_8h" local="yes">sbfMw.h</includes>
     <includes refid="sbf_mw_private_8h" local="yes">sbfMwPrivate.h</includes>
     <incdepgraph>
-      <node id="2322">
+      <node id="133">
         <label>event.h</label>
       </node>
-      <node id="2321">
-        <label>sbfVersion.h</label>
-        <link refid="sbf_version_8h"/>
-      </node>
-      <node id="2323">
-        <label>syshash.h</label>
-        <link refid="syshash_8h"/>
-        <childnode refid="2324" relation="include">
-        </childnode>
-      </node>
-      <node id="2330">
+      <node id="127">
         <label>sbfEvent.h</label>
         <link refid="sbf_event_8h"/>
-        <childnode refid="2320" relation="include">
+        <childnode refid="126" relation="include">
         </childnode>
       </node>
-      <node id="2327">
-        <label>sbfFatal.h</label>
-        <link refid="sbf_fatal_8h"/>
-        <childnode refid="2320" relation="include">
-        </childnode>
-      </node>
-      <node id="2337">
+      <node id="135">
         <label>event2/listener.h</label>
       </node>
-      <node id="2332">
-        <label>sbfKeyValue.h</label>
-        <link refid="sbf_key_value_8h"/>
-        <childnode refid="2320" relation="include">
-        </childnode>
-      </node>
-      <node id="2331">
+      <node id="128">
         <label>sbfHiResTimer.h</label>
         <link refid="sbf_hi_res_timer_8h"/>
-        <childnode refid="2320" relation="include">
+        <childnode refid="126" relation="include">
         </childnode>
       </node>
-      <node id="2324">
-        <label>sys/types.h</label>
-      </node>
-      <node id="2336">
+      <node id="134">
         <label>event2/thread.h</label>
       </node>
-      <node id="2335">
+      <node id="132">
         <label>sbfMwPrivate.h</label>
         <link refid="sbf_mw_private_8h"/>
-        <childnode refid="2322" relation="include">
+        <childnode refid="133" relation="include">
         </childnode>
-        <childnode refid="2336" relation="include">
+        <childnode refid="134" relation="include">
         </childnode>
-        <childnode refid="2337" relation="include">
+        <childnode refid="135" relation="include">
         </childnode>
       </node>
-      <node id="2334">
+      <node id="131">
         <label>sbfTimer.h</label>
         <link refid="sbf_timer_8h"/>
-        <childnode refid="2320" relation="include">
+        <childnode refid="126" relation="include">
         </childnode>
       </node>
-      <node id="2320">
+      <node id="126">
         <label>sbfCommon.h</label>
-        <link refid="sbf_common_8h"/>
-        <childnode refid="2321" relation="include">
-        </childnode>
-        <childnode refid="2322" relation="include">
-        </childnode>
-        <childnode refid="2323" relation="include">
-        </childnode>
-        <childnode refid="2325" relation="include">
-        </childnode>
-        <childnode refid="2326" relation="include">
-        </childnode>
-        <childnode refid="2327" relation="include">
-        </childnode>
-        <childnode refid="2328" relation="include">
-        </childnode>
-        <childnode refid="2329" relation="include">
-        </childnode>
       </node>
-      <node id="2326">
-        <label>systree.h</label>
-        <link refid="systree_8h"/>
-      </node>
-      <node id="2325">
-        <label>sysqueue.h</label>
-        <link refid="sysqueue_8h"/>
-      </node>
-      <node id="2318">
+      <node id="124">
         <label>core/sbfMw.c</label>
         <link refid="sbf_mw_8c"/>
-        <childnode refid="2319" relation="include">
+        <childnode refid="125" relation="include">
         </childnode>
-        <childnode refid="2335" relation="include">
+        <childnode refid="132" relation="include">
         </childnode>
       </node>
-      <node id="2319">
+      <node id="125">
         <label>sbfMw.h</label>
         <link refid="sbf_mw_8h"/>
-        <childnode refid="2320" relation="include">
+        <childnode refid="126" relation="include">
         </childnode>
-        <childnode refid="2330" relation="include">
+        <childnode refid="127" relation="include">
         </childnode>
-        <childnode refid="2331" relation="include">
+        <childnode refid="128" relation="include">
         </childnode>
-        <childnode refid="2332" relation="include">
+        <childnode refid="129" relation="include">
         </childnode>
-        <childnode refid="2333" relation="include">
+        <childnode refid="130" relation="include">
         </childnode>
-        <childnode refid="2334" relation="include">
-        </childnode>
-      </node>
-      <node id="2328">
-        <label>sbfLog.h</label>
-        <link refid="sbf_log_8h"/>
-        <childnode refid="2320" relation="include">
+        <childnode refid="131" relation="include">
         </childnode>
       </node>
-      <node id="2333">
+      <node id="129">
+        <label>sbfKeyValue.h</label>
+      </node>
+      <node id="130">
         <label>sbfQueue.h</label>
         <link refid="sbf_queue_8h"/>
-        <childnode refid="2320" relation="include">
-        </childnode>
-      </node>
-      <node id="2329">
-        <label>sbfMemory.h</label>
-        <link refid="sbf_memory_8h"/>
-        <childnode refid="2320" relation="include">
+        <childnode refid="126" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -187,11 +128,11 @@
         <argsstring>(sbfLog log, sbfKeyValue properties)</argsstring>
         <name>sbfMw_create</name>
         <param>
-          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <type>sbfLog</type>
           <declname>log</declname>
         </param>
         <param>
-          <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+          <type>sbfKeyValue</type>
           <declname>properties</declname>
         </param>
         <briefdescription>
@@ -415,7 +356,7 @@
         <location file="core/sbfMw.c" line="166" column="1" bodyfile="core/sbfMw.c" bodystart="166" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8c_1aa7e45fc4943d4080534faf9d4b2f394f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+        <type>sbfLog</type>
         <definition>sbfLog sbfMw_getLog</definition>
         <argsstring>(sbfMw mw)</argsstring>
         <name>sbfMw_getLog</name>
@@ -441,7 +382,7 @@
         <location file="core/sbfMw.c" line="181" column="1" bodyfile="core/sbfMw.c" bodystart="181" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8c_1a655078066f200c13dfa63a1bdd650f5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></type>
+        <type>sbfKeyValue</type>
         <definition>sbfKeyValue sbfMw_getProperties</definition>
         <argsstring>(sbfMw mw)</argsstring>
         <name>sbfMw_getProperties</name>
@@ -478,44 +419,44 @@
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal">sbfMwEventBaseTimerCb<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>events,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
 <codeline lineno="6"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/><sp/><sp/><sp/>thread<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/><sp/><sp/><sp/>thread<sp/>=<sp/>closure;</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>tv;</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>timerclear<sp/>(&amp;tv);</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>tv.tv_sec<sp/>=<sp/>3600;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>event_add<sp/>(&amp;thread-&gt;<ref refid="structsbf_mw_thread_impl_1ae414dd2ffe25372cc1d037c12dcd5739" kindref="member">mTimer</ref>,<sp/>&amp;tv);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>event_add<sp/>(&amp;thread-&gt;mTimer,<sp/>&amp;tv);</highlight></codeline>
 <codeline lineno="14"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight></codeline>
 <codeline lineno="17"><highlight class="normal">sbfMwEventBaseThreadCb<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
 <codeline lineno="18"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/>thread<sp/>=<sp/>closure;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread<sp/>=<sp/>closure;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(thread-&gt;<ref refid="structsbf_mw_thread_impl_1a18ff87866b3d61e1772e92945d1ab8a1" kindref="member">mParent</ref>-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;thread<sp/>%u<sp/>entered&quot;</highlight><highlight class="normal">,<sp/>thread-&gt;<ref refid="structsbf_mw_thread_impl_1a6411ea3b73a40db982ad04b8f86d6a4b" kindref="member">mIndex</ref>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfLog_debug<sp/>(thread-&gt;mParent-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;thread<sp/>%u<sp/>entered&quot;</highlight><highlight class="normal">,<sp/>thread-&gt;mIndex);</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!thread-&gt;<ref refid="structsbf_mw_thread_impl_1a18ff87866b3d61e1772e92945d1ab8a1" kindref="member">mParent</ref>-&gt;mStop)</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_base_loop<sp/>(thread-&gt;<ref refid="structsbf_mw_thread_impl_1a626a5a2cdfd9561709c69669d337d0ec" kindref="member">mEventBase</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!thread-&gt;mParent-&gt;mStop)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_base_loop<sp/>(thread-&gt;mEventBase,<sp/>0);</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(thread-&gt;<ref refid="structsbf_mw_thread_impl_1a18ff87866b3d61e1772e92945d1ab8a1" kindref="member">mParent</ref>-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;thread<sp/>%u<sp/>exited&quot;</highlight><highlight class="normal">,<sp/>thread-&gt;<ref refid="structsbf_mw_thread_impl_1a6411ea3b73a40db982ad04b8f86d6a4b" kindref="member">mIndex</ref>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfLog_debug<sp/>(thread-&gt;mParent-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;thread<sp/>%u<sp/>exited&quot;</highlight><highlight class="normal">,<sp/>thread-&gt;mIndex);</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref></highlight></codeline>
-<codeline lineno="32" refid="sbf_mw_8h_1a9f7c2a1535eb545d6e73bb8ebc33a209" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1a9f7c2a1535eb545d6e73bb8ebc33a209" kindref="member">sbfMw_create</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,<sp/><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref><sp/>properties)</highlight></codeline>
+<codeline lineno="32" refid="sbf_mw_8h_1a9f7c2a1535eb545d6e73bb8ebc33a209" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1a9f7c2a1535eb545d6e73bb8ebc33a209" kindref="member">sbfMw_create</ref><sp/>(sbfLog<sp/>log,<sp/>sbfKeyValue<sp/>properties)</highlight></codeline>
 <codeline lineno="33"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mw;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>threads;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">event_config*<sp/>ec;</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>WSADATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wsd;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/><ref refid="sbf_key_value_8c_1a5bf2be4a5e087f042234f99b57dd2504" kindref="member">sbfKeyValue_get</ref><sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;threads&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>sbfKeyValue_get<sp/>(properties,<sp/></highlight><highlight class="stringliteral">&quot;threads&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>==<sp/>NULL)</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>threads<sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
@@ -527,26 +468,26 @@
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>signal<sp/>(SIGPIPE,<sp/>SIG_IGN);</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>mw<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*mw);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>mw-&gt;mProperties<sp/>=<sp/><ref refid="sbf_key_value_8c_1a4c2d9f80fe94f25315ef4222a93f038c" kindref="member">sbfKeyValue_copy</ref><sp/>(properties);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>mw<sp/>=<sp/>xcalloc<sp/>(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*mw);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>mw-&gt;mProperties<sp/>=<sp/>sbfKeyValue_copy<sp/>(properties);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>mw-&gt;mLog<sp/>=<sp/>log;</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>mw-&gt;mNumThreads<sp/>=<sp/>threads;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>mw-&gt;mThreads<sp/>=<sp/><ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(mw-&gt;mNumThreads,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*mw-&gt;mThreads);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>mw-&gt;mThreads<sp/>=<sp/>xcalloc<sp/>(mw-&gt;mNumThreads,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*mw-&gt;mThreads);</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a73ffd3695bf7226abff06c5e98171c24" kindref="member">sbfLog_info</ref><sp/>(mw-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;this<sp/>is<sp/>version<sp/>&quot;</highlight><highlight class="normal"><sp/><ref refid="sbf_version_8h_1a5c29c38ca80dd375503a8978699657b0" kindref="member">SBF_VERSION</ref>);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(mw-&gt;mLog,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfLog_info<sp/>(mw-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;this<sp/>is<sp/>version<sp/>&quot;</highlight><highlight class="normal"><sp/>SBF_VERSION);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfLog_debug<sp/>(mw-&gt;mLog,</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;creating<sp/>middleware<sp/>%p,<sp/>using<sp/>%u<sp/>threads&quot;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mw,</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>threads);</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WSAStartup(MAKEWORD<sp/>(2,<sp/>2),<sp/>&amp;wsd)<sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_fatal_8h_1a8ae1d367ee2c1922adb415aa8c1972b9" kindref="member">SBF_FATAL</ref><sp/>(</highlight><highlight class="stringliteral">&quot;WSAStartup<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SBF_FATAL<sp/>(</highlight><highlight class="stringliteral">&quot;WSAStartup<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(evthread_use_windows_threads<sp/>()<sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_fatal_8h_1a8ae1d367ee2c1922adb415aa8c1972b9" kindref="member">SBF_FATAL</ref><sp/>(</highlight><highlight class="stringliteral">&quot;event_use_windows_threads<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SBF_FATAL<sp/>(</highlight><highlight class="stringliteral">&quot;event_use_windows_threads<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(evthread_use_pthreads<sp/>()<sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_fatal_8h_1a8ae1d367ee2c1922adb415aa8c1972b9" kindref="member">SBF_FATAL</ref><sp/>(</highlight><highlight class="stringliteral">&quot;event_use_pthreads<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SBF_FATAL<sp/>(</highlight><highlight class="stringliteral">&quot;event_use_pthreads<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>ec<sp/>=<sp/>event_config_new<sp/>();</highlight></codeline>
@@ -555,25 +496,25 @@
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>mw-&gt;mNumThreads;<sp/>i++)</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread<sp/>=<sp/>&amp;mw-&gt;mThreads[i];</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread-&gt;<ref refid="structsbf_mw_thread_impl_1a18ff87866b3d61e1772e92945d1ab8a1" kindref="member">mParent</ref><sp/>=<sp/>mw;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread-&gt;<ref refid="structsbf_mw_thread_impl_1a6411ea3b73a40db982ad04b8f86d6a4b" kindref="member">mIndex</ref><sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread-&gt;mParent<sp/>=<sp/>mw;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread-&gt;mIndex<sp/>=<sp/>i;</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread-&gt;<ref refid="structsbf_mw_thread_impl_1a626a5a2cdfd9561709c69669d337d0ec" kindref="member">mEventBase</ref><sp/>=<sp/>event_base_new_with_config<sp/>(ec);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(thread-&gt;<ref refid="structsbf_mw_thread_impl_1a626a5a2cdfd9561709c69669d337d0ec" kindref="member">mEventBase</ref><sp/>==<sp/>NULL)</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_fatal_8h_1a8ae1d367ee2c1922adb415aa8c1972b9" kindref="member">SBF_FATAL</ref><sp/>(</highlight><highlight class="stringliteral">&quot;event_base_new<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread-&gt;mEventBase<sp/>=<sp/>event_base_new_with_config<sp/>(ec);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(thread-&gt;mEventBase<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SBF_FATAL<sp/>(</highlight><highlight class="stringliteral">&quot;event_base_new<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_assign<sp/>(&amp;thread-&gt;<ref refid="structsbf_mw_thread_impl_1ae414dd2ffe25372cc1d037c12dcd5739" kindref="member">mTimer</ref>,</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread-&gt;<ref refid="structsbf_mw_thread_impl_1a626a5a2cdfd9561709c69669d337d0ec" kindref="member">mEventBase</ref>,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_assign<sp/>(&amp;thread-&gt;mTimer,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread-&gt;mEventBase,</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1,</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfMwEventBaseTimerCb,</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread);</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfMwEventBaseTimerCb<sp/>(-1,<sp/>0,<sp/>thread);</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="sbf_common_darwin_8h_1ae7f48f80d02515dc515a99d935ba0212" kindref="member">sbfThread_create</ref><sp/>(&amp;thread-&gt;<ref refid="structsbf_mw_thread_impl_1a68ab51c8ce3bf9c861650770c9e0ebbf" kindref="member">mThread</ref>,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sbfThread_create<sp/>(&amp;thread-&gt;mThread,</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfMwEventBaseThreadCb,</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thread)<sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_fatal_8h_1a8ae1d367ee2c1922adb415aa8c1972b9" kindref="member">SBF_FATAL</ref><sp/>(</highlight><highlight class="stringliteral">&quot;sbfThread_create<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SBF_FATAL<sp/>(</highlight><highlight class="stringliteral">&quot;sbfThread_create<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"></highlight></codeline>
 <codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>event_config_free<sp/>(ec);</highlight></codeline>
@@ -585,7 +526,7 @@
 <codeline lineno="111"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/>i;</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1aae0c47552712e01de64869037cbf4e56" kindref="member">sbfLog_debug</ref><sp/>(mw-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;destroying<sp/>middleware<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>mw);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfLog_debug<sp/>(mw-&gt;mLog,<sp/></highlight><highlight class="stringliteral">&quot;destroying<sp/>middleware<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>mw);</highlight></codeline>
 <codeline lineno="115"><highlight class="normal"></highlight></codeline>
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>mw-&gt;mStop<sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>mw-&gt;mNumThreads;<sp/>i++)</highlight></codeline>
@@ -595,16 +536,16 @@
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>mw-&gt;mNumThreads;<sp/>i++)</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_common_darwin_8h_1a05d4d9d0ff6dfcd043fef5990f4c03a2" kindref="member">sbfThread_join</ref><sp/>(mw-&gt;mThreads[i].mThread);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfThread_join<sp/>(mw-&gt;mThreads[i].mThread);</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_base_free<sp/>(mw-&gt;mThreads[i].mEventBase);</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(mw-&gt;mThreads);</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_key_value_8c_1af04cf659e336c325822508eb5065b2b9" kindref="member">sbfKeyValue_destroy</ref><sp/>(mw-&gt;mProperties);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfKeyValue_destroy<sp/>(mw-&gt;mProperties);</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(mw);</highlight></codeline>
 <codeline lineno="131"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref></highlight></codeline>
 <codeline lineno="134" refid="sbf_mw_8h_1a0f0c2d3ddad45d49b67349f02a2ad772" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1a0f0c2d3ddad45d49b67349f02a2ad772" kindref="member">sbfMw_getThread</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw,<sp/>u_int<sp/>index)</highlight></codeline>
 <codeline lineno="135"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;=<sp/>mw-&gt;mNumThreads)</highlight></codeline>
@@ -619,25 +560,25 @@
 <codeline lineno="145"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"></highlight></codeline>
 <codeline lineno="147"><highlight class="normal">u_int</highlight></codeline>
-<codeline lineno="148" refid="sbf_mw_8h_1aa183ff642fc7b83bf48a3d6757f79e06" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1aa183ff642fc7b83bf48a3d6757f79e06" kindref="member">sbfMw_getThreadIndex</ref><sp/>(<ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/>thread)</highlight></codeline>
+<codeline lineno="148" refid="sbf_mw_8h_1aa183ff642fc7b83bf48a3d6757f79e06" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1aa183ff642fc7b83bf48a3d6757f79e06" kindref="member">sbfMw_getThreadIndex</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread)</highlight></codeline>
 <codeline lineno="149"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>thread-&gt;<ref refid="structsbf_mw_thread_impl_1a6411ea3b73a40db982ad04b8f86d6a4b" kindref="member">mIndex</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>thread-&gt;mIndex;</highlight></codeline>
 <codeline lineno="151"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"></highlight></codeline>
 <codeline lineno="153"><highlight class="normal">uint64_t</highlight></codeline>
-<codeline lineno="154" refid="sbf_mw_8h_1a68205584a281f9eba76af89248eb71f9" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1a68205584a281f9eba76af89248eb71f9" kindref="member">sbfMw_getThreadMask</ref><sp/>(<ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/>thread)</highlight></codeline>
+<codeline lineno="154" refid="sbf_mw_8h_1a68205584a281f9eba76af89248eb71f9" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1a68205584a281f9eba76af89248eb71f9" kindref="member">sbfMw_getThreadMask</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread)</highlight></codeline>
 <codeline lineno="155"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1ULL<sp/>&lt;&lt;<sp/>thread-&gt;<ref refid="structsbf_mw_thread_impl_1a6411ea3b73a40db982ad04b8f86d6a4b" kindref="member">mIndex</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1ULL<sp/>&lt;&lt;<sp/>thread-&gt;mIndex;</highlight></codeline>
 <codeline lineno="157"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="158"><highlight class="normal"></highlight></codeline>
 <codeline lineno="159"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">event_base*</highlight></codeline>
-<codeline lineno="160" refid="sbf_mw_8h_1a49eee9c382b8543bbb6e5822b6c7d554" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1a49eee9c382b8543bbb6e5822b6c7d554" kindref="member">sbfMw_getThreadEventBase</ref><sp/>(<ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/>thread)</highlight></codeline>
+<codeline lineno="160" refid="sbf_mw_8h_1a49eee9c382b8543bbb6e5822b6c7d554" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1a49eee9c382b8543bbb6e5822b6c7d554" kindref="member">sbfMw_getThreadEventBase</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread)</highlight></codeline>
 <codeline lineno="161"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>thread-&gt;<ref refid="structsbf_mw_thread_impl_1a626a5a2cdfd9561709c69669d337d0ec" kindref="member">mEventBase</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>thread-&gt;mEventBase;</highlight></codeline>
 <codeline lineno="163"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"></highlight></codeline>
 <codeline lineno="165"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="166" refid="sbf_mw_private_8h_1ae30e3fd3f462247eb140805b083d83c6" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1ae30e3fd3f462247eb140805b083d83c6" kindref="member">sbfMw_enqueueThread</ref><sp/>(<ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/>thread,</highlight></codeline>
+<codeline lineno="166" refid="sbf_mw_private_8h_1ae30e3fd3f462247eb140805b083d83c6" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1ae30e3fd3f462247eb140805b083d83c6" kindref="member">sbfMw_enqueueThread</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread,</highlight></codeline>
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>event*<sp/>event,</highlight></codeline>
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_callback_fn<sp/>cb,</highlight></codeline>
 <codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure)</highlight></codeline>
@@ -651,13 +592,13 @@
 <codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>event_active<sp/>(event,<sp/>EV_TIMEOUT,<sp/>1);</highlight></codeline>
 <codeline lineno="178"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"></highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref></highlight></codeline>
+<codeline lineno="180"><highlight class="normal">sbfLog</highlight></codeline>
 <codeline lineno="181" refid="sbf_mw_8h_1aa7e45fc4943d4080534faf9d4b2f394f" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1aa7e45fc4943d4080534faf9d4b2f394f" kindref="member">sbfMw_getLog</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw)</highlight></codeline>
 <codeline lineno="182"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mw-&gt;mLog;</highlight></codeline>
 <codeline lineno="184"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="185"><highlight class="normal"></highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><ref refid="sbf_key_value_8h_1a954d4d49b7dfd98968ab8a3e4b5dd4fa" kindref="member">sbfKeyValue</ref></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">sbfKeyValue</highlight></codeline>
 <codeline lineno="187" refid="sbf_mw_8h_1a655078066f200c13dfa63a1bdd650f5e" refkind="member"><highlight class="normal"><ref refid="sbf_mw_8c_1a655078066f200c13dfa63a1bdd650f5e" kindref="member">sbfMw_getProperties</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw)</highlight></codeline>
 <codeline lineno="188"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mw-&gt;mProperties;</highlight></codeline>

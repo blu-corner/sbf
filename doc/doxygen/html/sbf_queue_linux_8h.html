@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('sbf_queue_linux_8h.html','');});
 Macros</h2></td></tr>
 <tr class="memitem:a8bc4a90e1403cf84c0b31dac516419c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_linux_8h.html#a8bc4a90e1403cf84c0b31dac516419c0">SBF_QUEUE_DECL</a></td></tr>
 <tr class="separator:a8bc4a90e1403cf84c0b31dac516419c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12a7585797d70a2e230bbae3180f6669"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_linux_8h.html#a12a7585797d70a2e230bbae3180f6669">SBF_QUEUE_ITEM_DECL</a>&#160;&#160;&#160;struct <a class="el" href="structsbf_queue_item_impl.html">sbfQueueItemImpl</a>* volatile mNext;</td></tr>
+<tr class="memitem:a12a7585797d70a2e230bbae3180f6669"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_linux_8h.html#a12a7585797d70a2e230bbae3180f6669">SBF_QUEUE_ITEM_DECL</a>&#160;&#160;&#160;struct sbfQueueItemImpl* volatile mNext;</td></tr>
 <tr class="separator:a12a7585797d70a2e230bbae3180f6669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -108,8 +108,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">volatile</span> <span class="keywordtype">int</span>                      mWaiting;   \</div><div class="line">    struct <a class="code" href="structsbf_queue_item_impl.html">sbfQueueItemImpl</a>* <span class="keyword">volatile</span> mHead;      \</div><div class="line">    struct <a class="code" href="structsbf_queue_item_impl.html">sbfQueueItemImpl</a>*          mTail;      \</div><div class="line">    struct <a class="code" href="structsbf_queue_item_impl.html">sbfQueueItemImpl</a>           mEmpty;</div><div class="ttc" id="structsbf_queue_item_impl_html"><div class="ttname"><a href="structsbf_queue_item_impl.html">sbfQueueItemImpl</a></div><div class="ttdef"><b>Definition:</b> <a href="sbf_queue_private_8h_source.html#l00026">sbfQueuePrivate.h:26</a></div></div>
-</div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">volatile</span> <span class="keywordtype">int</span>                      mWaiting;   \</div><div class="line">    struct sbfQueueItemImpl* <span class="keyword">volatile</span> mHead;      \</div><div class="line">    struct sbfQueueItemImpl*          mTail;      \</div><div class="line">    struct sbfQueueItemImpl           mEmpty;</div></div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="sbf_queue_linux_8h_source.html#l00012">12</a> of file <a class="el" href="sbf_queue_linux_8h_source.html">sbfQueueLinux.h</a>.</p>
 
 </div>
@@ -121,7 +120,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SBF_QUEUE_ITEM_DECL&#160;&#160;&#160;struct <a class="el" href="structsbf_queue_item_impl.html">sbfQueueItemImpl</a>* volatile mNext;</td>
+          <td class="memname">#define SBF_QUEUE_ITEM_DECL&#160;&#160;&#160;struct sbfQueueItemImpl* volatile mNext;</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="dir_2c514969ae6cff6d8fc0eaac1ba2f514" kind="dir">
-    <compoundname>thirdparty/pcre/win32/include</compoundname>
+    <compoundname>C:/Users/Neueda/Documents/workspace/sbf/thirdparty/pcre/win32/include</compoundname>
     <innerfile refid="pcre_8h">pcre.h</innerfile>
     <innerfile refid="pcreposix_8h">pcreposix.h</innerfile>
     <innerfile refid="regex_8h">regex.h</innerfile>
@@ -9,6 +9,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="thirdparty/pcre/win32/include/"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/thirdparty/pcre/win32/include/"/>
   </compounddef>
 </doxygen>

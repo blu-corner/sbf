@@ -1,23 +1,5 @@
 var searchData=
 [
-  ['circleq_5fempty',['CIRCLEQ_EMPTY',['../sysqueue_8h.html#a5612649227a37a22f0b8b6420d5f2c92',1,'sysqueue.h']]],
-  ['circleq_5fend',['CIRCLEQ_END',['../sysqueue_8h.html#ad5e0f98453ebaf5e7435b3cd393b8e36',1,'sysqueue.h']]],
-  ['circleq_5fentry',['CIRCLEQ_ENTRY',['../sysqueue_8h.html#abc5774651e7db6bcecf18d2b92259707',1,'sysqueue.h']]],
-  ['circleq_5ffirst',['CIRCLEQ_FIRST',['../sysqueue_8h.html#ab6bde704fab7206d75cf540048cea723',1,'sysqueue.h']]],
-  ['circleq_5fforeach',['CIRCLEQ_FOREACH',['../sysqueue_8h.html#ae97f4eb5724477c63699fafea4614b46',1,'sysqueue.h']]],
-  ['circleq_5fforeach_5freverse',['CIRCLEQ_FOREACH_REVERSE',['../sysqueue_8h.html#a212ecf8e0e17e1c74603b719cab4a9bc',1,'sysqueue.h']]],
-  ['circleq_5fforeach_5freverse_5fsafe',['CIRCLEQ_FOREACH_REVERSE_SAFE',['../sysqueue_8h.html#a8171cb37e52482568fb13d573050a0c6',1,'sysqueue.h']]],
-  ['circleq_5fforeach_5fsafe',['CIRCLEQ_FOREACH_SAFE',['../sysqueue_8h.html#af86648dc74cd25049ffb45f792ff5d8c',1,'sysqueue.h']]],
-  ['circleq_5fhead',['CIRCLEQ_HEAD',['../sysqueue_8h.html#ac564235b07f0c8c8db2a7957d37300ee',1,'sysqueue.h']]],
-  ['circleq_5fhead_5finitializer',['CIRCLEQ_HEAD_INITIALIZER',['../sysqueue_8h.html#a66bcae453448e43a4233428494aca741',1,'sysqueue.h']]],
-  ['circleq_5finit',['CIRCLEQ_INIT',['../sysqueue_8h.html#a2c12c697981b6dbe21822ccdfd8decfd',1,'sysqueue.h']]],
-  ['circleq_5finsert_5fafter',['CIRCLEQ_INSERT_AFTER',['../sysqueue_8h.html#a108b36ff00cbf59efbbf185baac770b4',1,'sysqueue.h']]],
-  ['circleq_5finsert_5fbefore',['CIRCLEQ_INSERT_BEFORE',['../sysqueue_8h.html#af5cda165eacfbfe150e86c12baa96089',1,'sysqueue.h']]],
-  ['circleq_5finsert_5fhead',['CIRCLEQ_INSERT_HEAD',['../sysqueue_8h.html#a2826789c50d93610c6c1e2f76651259a',1,'sysqueue.h']]],
-  ['circleq_5finsert_5ftail',['CIRCLEQ_INSERT_TAIL',['../sysqueue_8h.html#aa2b767125267fa26ca10e21fa358008c',1,'sysqueue.h']]],
-  ['circleq_5flast',['CIRCLEQ_LAST',['../sysqueue_8h.html#a5e9a63e6896e72acbf0bdbdf45baeb1a',1,'sysqueue.h']]],
-  ['circleq_5fnext',['CIRCLEQ_NEXT',['../sysqueue_8h.html#a7d1437823e61cb4941eee6a05705f567',1,'sysqueue.h']]],
-  ['circleq_5fprev',['CIRCLEQ_PREV',['../sysqueue_8h.html#ae15b6cb06907211e1e5c621fdf0f4030',1,'sysqueue.h']]],
-  ['circleq_5fremove',['CIRCLEQ_REMOVE',['../sysqueue_8h.html#ae1b066e803ee2f2a3ead6e4c632b7e49',1,'sysqueue.h']]],
-  ['circleq_5freplace',['CIRCLEQ_REPLACE',['../sysqueue_8h.html#a64b29c5e5070783142981b1e364a3c80',1,'sysqueue.h']]]
+  ['fseeko',['fseeko',['../sbf_common_win32_8h.html#a227875b8399b0589b1124555d3ae4007',1,'sbfCommonWin32.h']]],
+  ['fstat',['fstat',['../sbf_common_win32_8h.html#aa84a9ac582a3b7d9a0dea52e851855ea',1,'sbfCommonWin32.h']]]
 ];

@@ -2,68 +2,19 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="sbf_topic_private_8h" kind="file" language="C++">
     <compoundname>sbfTopicPrivate.h</compoundname>
-    <includedby refid="sbf_tport_private_8h" local="yes">transport/sbfTportPrivate.h</includedby>
+    <includedby refid="sbf_tport_private_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTportPrivate.h</includedby>
     <invincdepgraph>
-      <node id="3738">
-        <label>transport/sbfTportWeight.c</label>
-        <link refid="sbf_tport_weight_8c"/>
-      </node>
-      <node id="3734">
-        <label>transport/sbfSub.c</label>
-        <link refid="sbf_sub_8c"/>
-      </node>
-      <node id="3735">
-        <label>transport/sbfTopic.c</label>
-        <link refid="sbf_topic_8c"/>
-      </node>
-      <node id="3731">
-        <label>transport/sbfBatch.c</label>
-        <link refid="sbf_batch_8c"/>
-      </node>
-      <node id="3729">
-        <label>transport/sbfTopicPrivate.h</label>
+      <node id="1776">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopicPrivate.h</label>
         <link refid="sbf_topic_private_8h"/>
-        <childnode refid="3730" relation="include">
+        <childnode refid="1777" relation="include">
         </childnode>
       </node>
-      <node id="3733">
-        <label>transport/sbfPub.c</label>
-        <link refid="sbf_pub_8c"/>
-      </node>
-      <node id="3732">
-        <label>transport/sbfHandler.c</label>
-        <link refid="sbf_handler_8c"/>
-      </node>
-      <node id="3730">
-        <label>transport/sbfTportPrivate.h</label>
+      <node id="1777">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTportPrivate.h</label>
         <link refid="sbf_tport_private_8h"/>
-        <childnode refid="3731" relation="include">
-        </childnode>
-        <childnode refid="3732" relation="include">
-        </childnode>
-        <childnode refid="3733" relation="include">
-        </childnode>
-        <childnode refid="3734" relation="include">
-        </childnode>
-        <childnode refid="3735" relation="include">
-        </childnode>
-        <childnode refid="3736" relation="include">
-        </childnode>
-        <childnode refid="3737" relation="include">
-        </childnode>
-        <childnode refid="3738" relation="include">
-        </childnode>
-      </node>
-      <node id="3737">
-        <label>transport/sbfTportFragments.c</label>
-        <link refid="sbf_tport_fragments_8c"/>
-      </node>
-      <node id="3736">
-        <label>transport/sbfTport.c</label>
-        <link refid="sbf_tport_8c"/>
       </node>
     </invincdepgraph>
-    <innerclass refid="structsbf_topic_impl" prot="public">sbfTopicImpl</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -74,20 +25,20 @@
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="structsbf_topic_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_topic_impl" kindref="compound">sbfTopicImpl</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfTopicImpl</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8" refid="structsbf_topic_impl_1a7c2e9e11621e79d40198d89ed33b8d77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref><sp/><ref refid="structsbf_topic_impl_1a7c2e9e11621e79d40198d89ed33b8d77" kindref="member">mType</ref>;</highlight></codeline>
-<codeline lineno="9" refid="structsbf_topic_impl_1a1a89fae332a2fb26845b920435117d28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><ref refid="structsbf_topic_impl_1a1a89fae332a2fb26845b920435117d28" kindref="member">mTopic</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref><sp/>mType;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/>mTopic;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="structsbf_topic_impl_1acc6e2604b657bf76455518ede5eb2841" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><ref refid="structsbf_topic_impl_1acc6e2604b657bf76455518ede5eb2841" kindref="member">mFirst</ref>;</highlight></codeline>
-<codeline lineno="12" refid="structsbf_topic_impl_1a7f43b4a1fa7bfbc4e63a3682deaf9fba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><ref refid="structsbf_topic_impl_1a7f43b4a1fa7bfbc4e63a3682deaf9fba" kindref="member">mSecond</ref>;</highlight></codeline>
-<codeline lineno="13" refid="structsbf_topic_impl_1a4aa650146cd8d50370eb24d51e6d5878" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><ref refid="structsbf_topic_impl_1a4aa650146cd8d50370eb24d51e6d5878" kindref="member">mThird</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/>mFirst;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/>mSecond;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/>mThird;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_TOPIC_PRIVATE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="transport/sbfTopicPrivate.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTopicPrivate.h"/>
   </compounddef>
 </doxygen>

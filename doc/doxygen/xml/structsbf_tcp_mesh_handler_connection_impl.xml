@@ -70,7 +70,7 @@
         <location file="handlers/tcpmesh/sbfTcpMeshHandler.h" line="47" column="1" bodyfile="handlers/tcpmesh/sbfTcpMeshHandler.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_tcp_mesh_handler_connection_impl_1a7cf632762b21e1456fb572f4a807a4e2" prot="public" static="no" mutable="no">
-        <type><ref refid="sbf_common_darwin_8h_1a810b076a4ef5bd325cee986d4c993be6" kindref="member">sbfSocket</ref></type>
+        <type>sbfSocket</type>
         <definition>sbfSocket sbfTcpMeshHandlerConnectionImpl::mSocket</definition>
         <argsstring></argsstring>
         <name>mSocket</name>
@@ -132,80 +132,32 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="211">
+      <node id="29">
         <label>sbfTcpMeshHandlerConnectionImpl</label>
         <link refid="structsbf_tcp_mesh_handler_connection_impl"/>
-        <childnode refid="212" relation="usage">
+        <childnode refid="30" relation="usage">
           <edgelabel>mParent</edgelabel>
         </childnode>
       </node>
-      <node id="213">
+      <node id="31">
         <label>sbfMwThreadImpl</label>
         <link refid="structsbf_mw_thread_impl"/>
-        <childnode refid="214" relation="usage">
+        <childnode refid="32" relation="usage">
           <edgelabel>mParent</edgelabel>
         </childnode>
       </node>
-      <node id="212">
+      <node id="30">
         <label>sbfTcpMeshHandlerImpl</label>
         <link refid="structsbf_tcp_mesh_handler_impl"/>
-        <childnode refid="213" relation="usage">
+        <childnode refid="31" relation="usage">
           <edgelabel>mThread</edgelabel>
         </childnode>
-        <childnode refid="217" relation="usage">
-          <edgelabel>mPool</edgelabel>
-        </childnode>
-        <childnode refid="215" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
       </node>
-      <node id="218">
-        <label>sbfPoolCountImpl</label>
-        <link refid="structsbf_pool_count_impl"/>
-      </node>
-      <node id="214">
+      <node id="32">
         <label>sbfMwImpl</label>
         <link refid="structsbf_mw_impl"/>
-        <childnode refid="213" relation="usage">
+        <childnode refid="31" relation="usage">
           <edgelabel>mThreads</edgelabel>
-        </childnode>
-        <childnode refid="215" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
-      </node>
-      <node id="219">
-        <label>sbfPoolItemImpl</label>
-        <link refid="structsbf_pool_item_impl"/>
-        <childnode refid="219" relation="usage">
-          <edgelabel>mNext</edgelabel>
-        </childnode>
-        <childnode refid="217" relation="usage">
-          <edgelabel>mPool</edgelabel>
-        </childnode>
-      </node>
-      <node id="216">
-        <label>sbfLogFileImpl</label>
-        <link refid="structsbf_log_file_impl"/>
-      </node>
-      <node id="215">
-        <label>sbfLogImpl</label>
-        <link refid="structsbf_log_impl"/>
-        <childnode refid="215" relation="usage">
-          <edgelabel>mHookCb</edgelabel>
-        </childnode>
-        <childnode refid="216" relation="usage">
-          <edgelabel>mFile</edgelabel>
-        </childnode>
-      </node>
-      <node id="217">
-        <label>sbfPoolImpl</label>
-        <link refid="structsbf_pool_impl"/>
-        <childnode refid="218" relation="usage">
-          <edgelabel>mCount</edgelabel>
-        </childnode>
-        <childnode refid="219" relation="usage">
-          <edgelabel>mFree</edgelabel>
-          <edgelabel>mAvailable</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>

@@ -5,162 +5,148 @@
     <includes refid="sbf_mw_8h" local="yes">sbfMw.h</includes>
     <includes refid="sbf_mw_private_8h" local="yes">sbfMwPrivate.h</includes>
     <includes refid="sbf_ref_count_8h" local="yes">sbfRefCount.h</includes>
-    <includedby refid="sbf_tcp_listener_8c" local="yes">common/sbfTcpListener.c</includedby>
     <incdepgraph>
-      <node id="1615">
+      <node id="818">
         <label>event.h</label>
       </node>
-      <node id="1614">
+      <node id="817">
         <label>sbfVersion.h</label>
         <link refid="sbf_version_8h"/>
       </node>
-      <node id="1611">
-        <label>common/sbfTcpListenerPrivate.h</label>
+      <node id="814">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfTcpListenerPrivate.h</label>
         <link refid="sbf_tcp_listener_private_8h"/>
-        <childnode refid="1612" relation="include">
+        <childnode refid="815" relation="include">
         </childnode>
-        <childnode refid="1628" relation="include">
+        <childnode refid="831" relation="include">
         </childnode>
-        <childnode refid="1631" relation="include">
+        <childnode refid="834" relation="include">
         </childnode>
       </node>
-      <node id="1616">
+      <node id="819">
         <label>syshash.h</label>
         <link refid="syshash_8h"/>
-        <childnode refid="1617" relation="include">
+        <childnode refid="820" relation="include">
         </childnode>
       </node>
-      <node id="1623">
+      <node id="826">
         <label>sbfEvent.h</label>
         <link refid="sbf_event_8h"/>
-        <childnode refid="1613" relation="include">
+        <childnode refid="816" relation="include">
         </childnode>
       </node>
-      <node id="1620">
+      <node id="823">
         <label>sbfFatal.h</label>
         <link refid="sbf_fatal_8h"/>
-        <childnode refid="1613" relation="include">
+        <childnode refid="816" relation="include">
         </childnode>
       </node>
-      <node id="1630">
+      <node id="833">
         <label>event2/listener.h</label>
       </node>
-      <node id="1625">
+      <node id="828">
         <label>sbfKeyValue.h</label>
         <link refid="sbf_key_value_8h"/>
-        <childnode refid="1613" relation="include">
+        <childnode refid="816" relation="include">
         </childnode>
       </node>
-      <node id="1624">
+      <node id="827">
         <label>sbfHiResTimer.h</label>
         <link refid="sbf_hi_res_timer_8h"/>
-        <childnode refid="1613" relation="include">
+        <childnode refid="816" relation="include">
         </childnode>
       </node>
-      <node id="1617">
+      <node id="820">
         <label>sys/types.h</label>
       </node>
-      <node id="1629">
+      <node id="832">
         <label>event2/thread.h</label>
       </node>
-      <node id="1628">
+      <node id="831">
         <label>sbfMwPrivate.h</label>
         <link refid="sbf_mw_private_8h"/>
-        <childnode refid="1615" relation="include">
+        <childnode refid="818" relation="include">
         </childnode>
-        <childnode refid="1629" relation="include">
+        <childnode refid="832" relation="include">
         </childnode>
-        <childnode refid="1630" relation="include">
+        <childnode refid="833" relation="include">
         </childnode>
       </node>
-      <node id="1631">
+      <node id="834">
         <label>sbfRefCount.h</label>
         <link refid="sbf_ref_count_8h"/>
-        <childnode refid="1613" relation="include">
+        <childnode refid="816" relation="include">
         </childnode>
       </node>
-      <node id="1627">
+      <node id="830">
         <label>sbfTimer.h</label>
         <link refid="sbf_timer_8h"/>
-        <childnode refid="1613" relation="include">
+        <childnode refid="816" relation="include">
         </childnode>
       </node>
-      <node id="1613">
+      <node id="816">
         <label>sbfCommon.h</label>
         <link refid="sbf_common_8h"/>
-        <childnode refid="1614" relation="include">
+        <childnode refid="817" relation="include">
         </childnode>
-        <childnode refid="1615" relation="include">
+        <childnode refid="818" relation="include">
         </childnode>
-        <childnode refid="1616" relation="include">
+        <childnode refid="819" relation="include">
         </childnode>
-        <childnode refid="1618" relation="include">
+        <childnode refid="821" relation="include">
         </childnode>
-        <childnode refid="1619" relation="include">
+        <childnode refid="822" relation="include">
         </childnode>
-        <childnode refid="1620" relation="include">
+        <childnode refid="823" relation="include">
         </childnode>
-        <childnode refid="1621" relation="include">
+        <childnode refid="824" relation="include">
         </childnode>
-        <childnode refid="1622" relation="include">
+        <childnode refid="825" relation="include">
         </childnode>
       </node>
-      <node id="1619">
+      <node id="822">
         <label>systree.h</label>
         <link refid="systree_8h"/>
       </node>
-      <node id="1618">
+      <node id="821">
         <label>sysqueue.h</label>
         <link refid="sysqueue_8h"/>
       </node>
-      <node id="1612">
+      <node id="815">
         <label>sbfMw.h</label>
         <link refid="sbf_mw_8h"/>
-        <childnode refid="1613" relation="include">
+        <childnode refid="816" relation="include">
         </childnode>
-        <childnode refid="1623" relation="include">
+        <childnode refid="826" relation="include">
         </childnode>
-        <childnode refid="1624" relation="include">
+        <childnode refid="827" relation="include">
         </childnode>
-        <childnode refid="1625" relation="include">
+        <childnode refid="828" relation="include">
         </childnode>
-        <childnode refid="1626" relation="include">
+        <childnode refid="829" relation="include">
         </childnode>
-        <childnode refid="1627" relation="include">
+        <childnode refid="830" relation="include">
         </childnode>
       </node>
-      <node id="1621">
+      <node id="824">
         <label>sbfLog.h</label>
         <link refid="sbf_log_8h"/>
-        <childnode refid="1613" relation="include">
+        <childnode refid="816" relation="include">
         </childnode>
       </node>
-      <node id="1626">
+      <node id="829">
         <label>sbfQueue.h</label>
         <link refid="sbf_queue_8h"/>
-        <childnode refid="1613" relation="include">
+        <childnode refid="816" relation="include">
         </childnode>
       </node>
-      <node id="1622">
+      <node id="825">
         <label>sbfMemory.h</label>
         <link refid="sbf_memory_8h"/>
-        <childnode refid="1613" relation="include">
+        <childnode refid="816" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="1632">
-        <label>common/sbfTcpListenerPrivate.h</label>
-        <link refid="sbf_tcp_listener_private_8h"/>
-        <childnode refid="1633" relation="include">
-        </childnode>
-      </node>
-      <node id="1633">
-        <label>common/sbfTcpListener.c</label>
-        <link refid="sbf_tcp_listener_8c"/>
-      </node>
-    </invincdepgraph>
-    <innerclass refid="structsbf_tcp_listener_impl" prot="public">sbfTcpListenerImpl</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -175,27 +161,27 @@
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_mw_private_8h" kindref="compound">sbfMwPrivate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_ref_count_8h" kindref="compound">sbfRefCount.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10" refid="structsbf_tcp_listener_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_tcp_listener_impl" kindref="compound">sbfTcpListenerImpl</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfTcpListenerImpl</highlight></codeline>
 <codeline lineno="11"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="12" refid="structsbf_tcp_listener_impl_1a13e651d5a3445f5e669701d56e21c9ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_listener_impl_1a13e651d5a3445f5e669701d56e21c9ce" kindref="member">mLog</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mLog;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="structsbf_tcp_listener_impl_1afa5511ca24dfb4b79265f927cb3bdf83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">evconnlistener*<sp/><ref refid="structsbf_tcp_listener_impl_1afa5511ca24dfb4b79265f927cb3bdf83" kindref="member">mListener</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">evconnlistener*<sp/>mListener;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="structsbf_tcp_listener_impl_1ac33d4fbfa9e98df335bffff937c80b0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_listener_8h_1a40d842953865253546cbdce73e47f008" kindref="member">sbfTcpListenerReadyCb</ref><sp/><sp/><ref refid="structsbf_tcp_listener_impl_1ac33d4fbfa9e98df335bffff937c80b0a" kindref="member">mReadyCb</ref>;</highlight></codeline>
-<codeline lineno="17" refid="structsbf_tcp_listener_impl_1a9061fad645b4198fd32687a7dd20e8ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_listener_8h_1a5c4e93e8dab60d62b597292d5eb0c7cc" kindref="member">sbfTcpListenerAcceptCb</ref><sp/><ref refid="structsbf_tcp_listener_impl_1a9061fad645b4198fd32687a7dd20e8ab" kindref="member">mAcceptCb</ref>;</highlight></codeline>
-<codeline lineno="18" refid="structsbf_tcp_listener_impl_1a95b721b3a7dbc56ebe8c5b65b2ee5163" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_listener_impl_1a95b721b3a7dbc56ebe8c5b65b2ee5163" kindref="member">mClosure</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_listener_8h_1a40d842953865253546cbdce73e47f008" kindref="member">sbfTcpListenerReadyCb</ref><sp/><sp/>mReadyCb;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_tcp_listener_8h_1a5c4e93e8dab60d62b597292d5eb0c7cc" kindref="member">sbfTcpListenerAcceptCb</ref><sp/>mAcceptCb;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mClosure;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="structsbf_tcp_listener_impl_1af0acd0b12497cc75882613afdccc80cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_mw_thread_impl" kindref="compound">sbfMwThread</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_listener_impl_1af0acd0b12497cc75882613afdccc80cb" kindref="member">mThread</ref>;</highlight></codeline>
-<codeline lineno="21" refid="structsbf_tcp_listener_impl_1ae57a9c762f4edfd6033005cd83422e12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_queue_impl" kindref="compound">sbfQueue</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_listener_impl_1ae57a9c762f4edfd6033005cd83422e12" kindref="member">mQueue</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mThread;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mQueue;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="structsbf_tcp_listener_impl_1ac9ef6e888f3efb5a7d6066746bed1148" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_listener_impl_1ac9ef6e888f3efb5a7d6066746bed1148" kindref="member">mDestroyed</ref>;</highlight></codeline>
-<codeline lineno="24" refid="structsbf_tcp_listener_impl_1a307b6a784421161ba1fb5d031dde975a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_tcp_listener_impl_1a307b6a784421161ba1fb5d031dde975a" kindref="member">mRefCount</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mDestroyed;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mRefCount;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_TCP_LISTENER_PRIVATE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="common/sbfTcpListenerPrivate.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfTcpListenerPrivate.h"/>
   </compounddef>
 </doxygen>

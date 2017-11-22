@@ -90,16 +90,16 @@ $(document).ready(function(){initNavTree('sbf_queue_8h.html','');});
 
 <p>This file declares the interface for handling queues.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="sbf_common_8h_source.html">sbfCommon.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;sbfCommon.h&quot;</code><br />
 </div>
 <p><a href="sbf_queue_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aa8b64a26e53f1e9c6eef9d3379d805e3"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structsbf_queue_impl.html">sbfQueueImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_8h.html#aa8b64a26e53f1e9c6eef9d3379d805e3">sbfQueue</a></td></tr>
+<tr class="memitem:aa8b64a26e53f1e9c6eef9d3379d805e3"><td class="memItemLeft" align="right" valign="top">typedef struct sbfQueueImpl *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_8h.html#aa8b64a26e53f1e9c6eef9d3379d805e3">sbfQueue</a></td></tr>
 <tr class="memdesc:aa8b64a26e53f1e9c6eef9d3379d805e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaration of the queue handler.  <a href="#aa8b64a26e53f1e9c6eef9d3379d805e3">More...</a><br /></td></tr>
 <tr class="separator:aa8b64a26e53f1e9c6eef9d3379d805e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7433ebbf8ca13f31f33dddedbdf5533"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structsbf_queue_item_impl.html">sbfQueueItemImpl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_8h.html#ad7433ebbf8ca13f31f33dddedbdf5533">sbfQueueItem</a></td></tr>
+<tr class="memitem:ad7433ebbf8ca13f31f33dddedbdf5533"><td class="memItemLeft" align="right" valign="top">typedef struct sbfQueueItemImpl *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_8h.html#ad7433ebbf8ca13f31f33dddedbdf5533">sbfQueueItem</a></td></tr>
 <tr class="memdesc:ad7433ebbf8ca13f31f33dddedbdf5533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declaration of the queue item handler.  <a href="#ad7433ebbf8ca13f31f33dddedbdf5533">More...</a><br /></td></tr>
 <tr class="separator:ad7433ebbf8ca13f31f33dddedbdf5533"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a734fa954aded6cb14781887fdcb4c15b"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_8h.html#a734fa954aded6cb14781887fdcb4c15b">sbfQueueCb</a>) (<a class="el" href="sbf_queue_8h.html#ad7433ebbf8ca13f31f33dddedbdf5533">sbfQueueItem</a> item, void *closure)</td></tr>
@@ -108,7 +108,7 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa9e33c0cd988ac9011c769454c406be9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_queue_8h.html#aa8b64a26e53f1e9c6eef9d3379d805e3">sbfQueue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_8h.html#aa9e33c0cd988ac9011c769454c406be9">sbfQueue_create</a> (struct <a class="el" href="structsbf_mw_impl.html">sbfMwImpl</a> *mw, const char *name)</td></tr>
+<tr class="memitem:aa9e33c0cd988ac9011c769454c406be9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_queue_8h.html#aa8b64a26e53f1e9c6eef9d3379d805e3">sbfQueue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_8h.html#aa9e33c0cd988ac9011c769454c406be9">sbfQueue_create</a> (struct sbfMwImpl *mw, const char *name)</td></tr>
 <tr class="memdesc:aa9e33c0cd988ac9011c769454c406be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a queue handler for the given name.  <a href="#aa9e33c0cd988ac9011c769454c406be9">More...</a><br /></td></tr>
 <tr class="separator:aa9e33c0cd988ac9011c769454c406be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addab7a91fca88250c4ce64cfd5183d78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_queue_8h.html#addab7a91fca88250c4ce64cfd5183d78">sbfQueue_destroy</a> (<a class="el" href="sbf_queue_8h.html#aa8b64a26e53f1e9c6eef9d3379d805e3">sbfQueue</a> queue)</td></tr>
@@ -148,7 +148,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structsbf_queue_impl.html">sbfQueueImpl</a>* <a class="el" href="sbf_queue_8h.html#aa8b64a26e53f1e9c6eef9d3379d805e3">sbfQueue</a></td>
+          <td class="memname">typedef struct sbfQueueImpl* <a class="el" href="sbf_queue_8h.html#aa8b64a26e53f1e9c6eef9d3379d805e3">sbfQueue</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -191,7 +191,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structsbf_queue_item_impl.html">sbfQueueItemImpl</a>* <a class="el" href="sbf_queue_8h.html#ad7433ebbf8ca13f31f33dddedbdf5533">sbfQueueItem</a></td>
+          <td class="memname">typedef struct sbfQueueItemImpl* <a class="el" href="sbf_queue_8h.html#ad7433ebbf8ca13f31f33dddedbdf5533">sbfQueueItem</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -212,7 +212,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="sbf_queue_8h.html#aa8b64a26e53f1e9c6eef9d3379d805e3">sbfQueue</a> sbfQueue_create </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structsbf_mw_impl.html">sbfMwImpl</a> *&#160;</td>
+          <td class="paramtype">struct sbfMwImpl *&#160;</td>
           <td class="paramname"><em>mw</em>, </td>
         </tr>
         <tr>
@@ -265,8 +265,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sbf_queue_8c_source.html#l00038">38</a> of file <a class="el" href="sbf_queue_8c_source.html">sbfQueue.c</a>.</p>
-
 </div>
 </div>
 <a id="a92ae3820cd4fb1b634b638c727e5d79c"></a>
@@ -292,8 +290,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="sbf_queue_8c_source.html#l00091">91</a> of file <a class="el" href="sbf_queue_8c_source.html">sbfQueue.c</a>.</p>
 
 </div>
 </div>
@@ -339,8 +335,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sbf_queue_8c_source.html#l00082">82</a> of file <a class="el" href="sbf_queue_8c_source.html">sbfQueue.c</a>.</p>
-
 </div>
 </div>
 <a id="a041be175afa83868ffd3ad53638aa073"></a>
@@ -368,8 +362,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sbf_queue_8c_source.html#l00131">131</a> of file <a class="el" href="sbf_queue_8c_source.html">sbfQueue.c</a>.</p>
 
 </div>
 </div>
@@ -416,8 +408,6 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the item from the queue. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sbf_queue_8c_source.html#l00120">120</a> of file <a class="el" href="sbf_queue_8c_source.html">sbfQueue.c</a>.</p>
-
 </div>
 </div>
 <a id="a3a47a4e3a01ddecb9d5c49b0fab74609"></a>
@@ -445,8 +435,6 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the data associated to a queue item. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="sbf_queue_8h.html#ae5a1e7b31459264e4a5940976cfa0641" title="Returns the size of the given queue item. ">sbfQueue_getItemDataSize</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="sbf_queue_8c_source.html#l00138">138</a> of file <a class="el" href="sbf_queue_8c_source.html">sbfQueue.c</a>.</p>
 
 </div>
 </div>
@@ -476,8 +464,6 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the size of the given queue item. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="sbf_queue_8h.html#a3a47a4e3a01ddecb9d5c49b0fab74609" title="Returns the data associated to the given queue item. ">sbfQueue_getItemData</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sbf_queue_8c_source.html#l00144">144</a> of file <a class="el" href="sbf_queue_8c_source.html">sbfQueue.c</a>.</p>
-
 </div>
 </div>
 <a id="a2f1e3e58b4b9cea02ff5fa808a8703f2"></a>
@@ -504,8 +490,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>null terminated string containing the name of the queue (topic). </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="sbf_queue_8c_source.html#l00052">52</a> of file <a class="el" href="sbf_queue_8c_source.html">sbfQueue.c</a>.</p>
 
 </div>
 </div>

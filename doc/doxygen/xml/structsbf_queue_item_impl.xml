@@ -62,10 +62,10 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="112">
+      <node id="19">
         <label>sbfQueueItemImpl</label>
         <link refid="structsbf_queue_item_impl"/>
-        <childnode refid="112" relation="usage">
+        <childnode refid="19" relation="usage">
           <edgelabel>mCb</edgelabel>
         </childnode>
       </node>

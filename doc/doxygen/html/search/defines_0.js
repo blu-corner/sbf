@@ -1,10 +1,21 @@
 var searchData=
 [
-  ['_5f_5ffunc_5f_5f',['__func__',['../sbf_common_win32_8h.html#a7d6e1cf1a8d53f38471e9e9db3faf740',1,'sbfCommonWin32.h']]],
-  ['_5f_5fprogname',['__progname',['../getopt_8c.html#a41c2f9db0a7e23392fbbebb1d1c185ec',1,'getopt.c']]],
-  ['_5f_5fthread',['__thread',['../sbf_common_darwin_8h.html#a520a93730da646b0fbee09d441c8549e',1,'sbfCommonDarwin.h']]],
-  ['_5fcrt_5fnonstdc_5fno_5fwarnings',['_CRT_NONSTDC_NO_WARNINGS',['../sbf_common_win32_8h.html#aaadb6bb41668f554b12ee12829110cf7',1,'sbfCommonWin32.h']]],
-  ['_5fcrt_5fsecure_5fno_5fwarnings',['_CRT_SECURE_NO_WARNINGS',['../sbf_common_win32_8h.html#af08ec37a8c99d747fb60fa15bc28678b',1,'sbfCommonWin32.h']]],
-  ['_5fgnu_5fsource',['_GNU_SOURCE',['../sbf_common_darwin_8h.html#a369266c24eacffb87046522897a570d5',1,'_GNU_SOURCE():&#160;sbfCommonDarwin.h'],['../sbf_common_linux_8h.html#a369266c24eacffb87046522897a570d5',1,'_GNU_SOURCE():&#160;sbfCommonLinux.h']]],
-  ['_5fq_5finvalidate',['_Q_INVALIDATE',['../sysqueue_8h.html#a628c2134ca520da4fdb6a53d27930977',1,'sysqueue.h']]]
+  ['sbf_5fevent_5fread',['SBF_EVENT_READ',['../sbf_event_8h.html#a494548cb11d745b8f5425840061d09ba',1,'sbfEvent.h']]],
+  ['sbf_5fevent_5fwrite',['SBF_EVENT_WRITE',['../sbf_event_8h.html#a21f4a3663ea050be7419c3f7cdeaf006',1,'sbfEvent.h']]],
+  ['sbf_5fmw_5fall_5fthreads',['SBF_MW_ALL_THREADS',['../sbf_mw_8h.html#a9bd654394f96810c80e05011e393a750',1,'sbfMw.h']]],
+  ['sbf_5fmw_5fthread_5flimit',['SBF_MW_THREAD_LIMIT',['../sbf_mw_8h.html#a3a43b58a7ec394a4cba898f47c99d50f',1,'sbfMw.h']]],
+  ['sbf_5fqueue_5fblocking',['SBF_QUEUE_BLOCKING',['../sbf_queue_private_8h.html#ac6807d49592d1eddd7fc40209726a6a0',1,'sbfQueuePrivate.h']]],
+  ['sbf_5fqueue_5fdecl',['SBF_QUEUE_DECL',['../sbf_queue_darwin_8h.html#a8bc4a90e1403cf84c0b31dac516419c0',1,'SBF_QUEUE_DECL():&#160;sbfQueueDarwin.h'],['../sbf_queue_linux_8h.html#a8bc4a90e1403cf84c0b31dac516419c0',1,'SBF_QUEUE_DECL():&#160;sbfQueueLinux.h'],['../sbf_queue_win32_8h.html#a8bc4a90e1403cf84c0b31dac516419c0',1,'SBF_QUEUE_DECL():&#160;sbfQueueWin32.h']]],
+  ['sbf_5fqueue_5ffunctions',['SBF_QUEUE_FUNCTIONS',['../sbf_queue_private_8h.html#a946f1f7aec29f8d92e1b4a8a33e8ef76',1,'sbfQueuePrivate.h']]],
+  ['sbf_5fqueue_5fitem_5fdata_5fsize',['SBF_QUEUE_ITEM_DATA_SIZE',['../sbf_queue_private_8h.html#adc00f0a64bc9f1426cc6a398b815755f',1,'sbfQueuePrivate.h']]],
+  ['sbf_5fqueue_5fitem_5fdecl',['SBF_QUEUE_ITEM_DECL',['../sbf_queue_darwin_8h.html#a12a7585797d70a2e230bbae3180f6669',1,'SBF_QUEUE_ITEM_DECL():&#160;sbfQueueDarwin.h'],['../sbf_queue_linux_8h.html#a12a7585797d70a2e230bbae3180f6669',1,'SBF_QUEUE_ITEM_DECL():&#160;sbfQueueLinux.h'],['../sbf_queue_win32_8h.html#a12a7585797d70a2e230bbae3180f6669',1,'SBF_QUEUE_ITEM_DECL():&#160;sbfQueueWin32.h']]],
+  ['sbf_5fqueue_5fnonblock',['SBF_QUEUE_NONBLOCK',['../sbf_queue_private_8h.html#a8a2d2874e516558470a073b42c8e124b',1,'sbfQueuePrivate.h']]],
+  ['sbf_5frequest_5freply_5fheader_5fsize',['SBF_REQUEST_REPLY_HEADER_SIZE',['../sbf_request_reply_8h.html#a3f3b3a4e7ab0f69f9989cb14560dad37',1,'sbfRequestReply.h']]],
+  ['sbf_5ftcp_5fmesh_5fhandler_5fconnect_5finterval',['SBF_TCP_MESH_HANDLER_CONNECT_INTERVAL',['../sbf_tcp_mesh_handler_8h.html#ad527a3aeea707608ed5c0435061bf92c',1,'sbfTcpMeshHandler.h']]],
+  ['sbf_5ftcp_5fmesh_5fhandler_5fdefault_5fport',['SBF_TCP_MESH_HANDLER_DEFAULT_PORT',['../sbf_tcp_mesh_handler_8h.html#a3e90b2d7822aeb5f41f96561820cb06d',1,'sbfTcpMeshHandler.h']]],
+  ['sbf_5ftimer_5fmicroseconds',['SBF_TIMER_MICROSECONDS',['../sbf_timer_8h.html#a44bb79a590d1ed47a18ef8b540ce3650',1,'sbfTimer.h']]],
+  ['sbf_5ftimer_5fmilliseconds',['SBF_TIMER_MILLISECONDS',['../sbf_timer_8h.html#a5fe71016a949366101c0a61e5f62c3fd',1,'sbfTimer.h']]],
+  ['sbf_5fudp_5fhandler_5fdefault_5fport',['SBF_UDP_HANDLER_DEFAULT_PORT',['../sbf_udp_handler_8h.html#ae190d65949a60790c60525e14f61c3d3',1,'sbfUdpHandler.h']]],
+  ['sbf_5fudp_5fhandler_5fread_5flimit',['SBF_UDP_HANDLER_READ_LIMIT',['../sbf_udp_handler_8h.html#ad3b14f99908bed2f13126adf05e237bf',1,'sbfUdpHandler.h']]],
+  ['sbfmw_5fgetdefaultthread',['sbfMw_getDefaultThread',['../sbf_mw_8h.html#abf18b7c2721832ab6504c716791ce31c',1,'sbfMw.h']]]
 ];

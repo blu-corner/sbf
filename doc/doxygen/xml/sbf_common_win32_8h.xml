@@ -4,7 +4,7 @@
     <compoundname>sbfCommonWin32.h</compoundname>
     <includes local="no">assert.h</includes>
     <includes local="no">errno.h</includes>
-    <includes local="no">regex.h</includes>
+    <includes refid="regex_8h" local="no">regex.h</includes>
     <includes local="no">stdint.h</includes>
     <includes local="no">stdio.h</includes>
     <includes local="no">stdlib.h</includes>
@@ -20,93 +20,110 @@
     <includes local="no">sys/types.h</includes>
     <includes local="no">sys/stat.h</includes>
     <incdepgraph>
-      <node id="490">
+      <node id="269">
         <label>sys/stat.h</label>
       </node>
-      <node id="483">
+      <node id="262">
         <label>process.h</label>
       </node>
-      <node id="488">
+      <node id="267">
         <label>windows.h</label>
       </node>
-      <node id="474">
+      <node id="251">
         <label>assert.h</label>
       </node>
-      <node id="487">
+      <node id="266">
         <label>ws2tcpip.h</label>
       </node>
-      <node id="477">
+      <node id="256">
+        <label>pcreposix.h</label>
+        <link refid="pcreposix_8h"/>
+        <childnode refid="255" relation="include">
+        </childnode>
+      </node>
+      <node id="257">
         <label>stdint.h</label>
       </node>
-      <node id="479">
+      <node id="255">
         <label>stdlib.h</label>
       </node>
-      <node id="475">
+      <node id="252">
         <label>errno.h</label>
       </node>
-      <node id="485">
+      <node id="264">
         <label>io.h</label>
       </node>
-      <node id="473">
-        <label>common/sbfCommonWin32.h</label>
+      <node id="250">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h</label>
         <link refid="sbf_common_win32_8h"/>
-        <childnode refid="474" relation="include">
+        <childnode refid="251" relation="include">
         </childnode>
-        <childnode refid="475" relation="include">
+        <childnode refid="252" relation="include">
         </childnode>
-        <childnode refid="476" relation="include">
+        <childnode refid="253" relation="include">
         </childnode>
-        <childnode refid="477" relation="include">
+        <childnode refid="257" relation="include">
         </childnode>
-        <childnode refid="478" relation="include">
+        <childnode refid="258" relation="include">
         </childnode>
-        <childnode refid="479" relation="include">
+        <childnode refid="255" relation="include">
         </childnode>
-        <childnode refid="480" relation="include">
+        <childnode refid="259" relation="include">
         </childnode>
-        <childnode refid="481" relation="include">
+        <childnode refid="260" relation="include">
         </childnode>
-        <childnode refid="482" relation="include">
+        <childnode refid="261" relation="include">
         </childnode>
-        <childnode refid="483" relation="include">
+        <childnode refid="262" relation="include">
         </childnode>
-        <childnode refid="484" relation="include">
+        <childnode refid="263" relation="include">
         </childnode>
-        <childnode refid="485" relation="include">
+        <childnode refid="264" relation="include">
         </childnode>
-        <childnode refid="486" relation="include">
+        <childnode refid="265" relation="include">
         </childnode>
-        <childnode refid="487" relation="include">
+        <childnode refid="266" relation="include">
         </childnode>
-        <childnode refid="488" relation="include">
+        <childnode refid="267" relation="include">
         </childnode>
-        <childnode refid="489" relation="include">
+        <childnode refid="268" relation="include">
         </childnode>
-        <childnode refid="490" relation="include">
+        <childnode refid="269" relation="include">
         </childnode>
       </node>
-      <node id="486">
+      <node id="265">
         <label>iphlpapi.h</label>
       </node>
-      <node id="484">
+      <node id="263">
         <label>winsock2.h</label>
       </node>
-      <node id="482">
+      <node id="253">
+        <label>regex.h</label>
+        <link refid="regex_8h"/>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="261">
         <label>wchar.h</label>
       </node>
-      <node id="489">
+      <node id="268">
         <label>sys/types.h</label>
       </node>
-      <node id="480">
+      <node id="259">
         <label>string.h</label>
       </node>
-      <node id="481">
+      <node id="254">
+        <label>pcre.h</label>
+        <link refid="pcre_8h"/>
+        <childnode refid="255" relation="include">
+        </childnode>
+      </node>
+      <node id="260">
         <label>time.h</label>
       </node>
-      <node id="476">
-        <label>regex.h</label>
-      </node>
-      <node id="478">
+      <node id="258">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
@@ -120,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="5" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="5" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="5" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="5" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1af08ec37a8c99d747fb60fa15bc28678b" prot="public" static="no">
         <name>_CRT_SECURE_NO_WARNINGS</name>
@@ -130,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="8" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="8" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="8" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="8" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1ae688d728e1acdfe5988c7db45d6f0166" prot="public" static="no">
         <name>PATH_MAX</name>
@@ -141,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="35" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="35" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="35" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a7d6e1cf1a8d53f38471e9e9db3faf740" prot="public" static="no">
         <name>__func__</name>
@@ -152,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="38" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="38" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="38" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1ae3192df127a8ec551c64402669381f59" prot="public" static="no">
         <name>SBF_EOL</name>
@@ -163,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="41" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="41" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="41" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a07d717b6b79aca40485910f7d4d278aa" prot="public" static="no">
         <name>SBF_SHLIB_SUFFIX</name>
@@ -174,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="42" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="42" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="42" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1ae24ddcf80a3f76e535d9bf3a7f758b04" prot="public" static="no">
         <name>SBF_PACKED</name>
@@ -188,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="44" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="44" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="44" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1abcc9ea27d2fa4fc4b2b51bbdf96fb03d" prot="public" static="no">
         <name>SBF_PRINTFLIKE</name>
@@ -200,7 +217,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="48" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="48" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="48" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a789fcd195035787245e7734413e9b5a2" prot="public" static="no">
         <name>SBF_UNUSED</name>
@@ -210,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="49" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="49" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="49" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" prot="public" static="no">
         <name>SBF_INLINE</name>
@@ -221,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="50" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="50" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="50" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a6fc993d4b00d3799765f781b94543845" prot="public" static="no">
         <name>SBF_PURE</name>
@@ -231,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="51" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="51" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="51" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1ac76a00346f1087c98e3af12caed55ebe" prot="public" static="no">
         <name>SBF_CONST</name>
@@ -241,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="52" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="52" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="52" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a6ee02b35494da215f5fa30f1c64d5598" prot="public" static="no">
         <name>SBF_DEAD</name>
@@ -251,7 +268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="53" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="53" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="53" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1aa4c0463d5143c422ff33e19f6bbd6764" prot="public" static="no">
         <name>SBF_LIKELY</name>
@@ -262,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="55" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="55" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="55" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a270c0e11fe2fac830447b85580475bb9" prot="public" static="no">
         <name>SBF_UNLIKELY</name>
@@ -273,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="56" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="56" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="56" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a9494b177643e1271eeb943d1dd3e9dbb" prot="public" static="no">
         <name>SBF_ASSERT</name>
@@ -285,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="58" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="58" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="58" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a2990854b08d77f3bbd332b8174604b01" prot="public" static="no">
         <name>SBF_DLLEXPORT</name>
@@ -296,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="60" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="60" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="60" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a05d4d9d0ff6dfcd043fef5990f4c03a2" prot="public" static="no">
         <name>sbfThread_join</name>
@@ -308,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="64" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="64" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="64" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1ac4461ac56f70b819e85ab353ff052c27" prot="public" static="no">
         <name>sbfCondVar_init</name>
@@ -320,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="67" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="67" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="67" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="67" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1aee816bafc4e98628a6be5e910fac2fb7" prot="public" static="no">
         <name>sbfCondVar_destroy</name>
@@ -331,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="68" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="68" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="68" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a294ec73d6c256d0ab0d3cce320bdff44" prot="public" static="no">
         <name>sbfCondVar_wait</name>
@@ -344,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="69" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="69" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="69" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a58cd7395d3682e48c52b5cb1d96c3d5e" prot="public" static="no">
         <name>sbfCondVar_broadcast</name>
@@ -356,7 +373,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="70" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="70" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="70" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a1c1fe46b5cd2ee83b67395c6e24a086c" prot="public" static="no">
         <name>sbfCondVar_signal</name>
@@ -368,7 +385,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="71" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="71" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="71" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a0f0968bebfa055ca5bc7ef552a0f7306" prot="public" static="no">
         <name>sbfMutex_init</name>
@@ -381,7 +398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="74" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="74" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="74" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a696ae52b59c8ee67b0792cf793ca07c3" prot="public" static="no">
         <name>sbfMutex_destroy</name>
@@ -393,7 +410,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="75" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="75" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="75" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1afe21416b021add1d039070372b28c2b7" prot="public" static="no">
         <name>sbfMutex_lock</name>
@@ -405,7 +422,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="76" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="76" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="76" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1ae9f52fb356fee346369a22cfef0def73" prot="public" static="no">
         <name>sbfMutex_unlock</name>
@@ -417,7 +434,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="77" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="77" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="77" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="77" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1aa4c4cdb3faf35a33070cb32b2d07fc02" prot="public" static="no">
         <name>sbfSpinLock</name>
@@ -428,7 +445,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="79" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="79" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="79" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a17322bf0a00b6f8c25d4ddaf8d8be5a3" prot="public" static="no">
         <name>sbfSpinLock_init</name>
@@ -440,7 +457,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="80" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="80" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="80" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a03c68dcb3ba1974fecf82b5c5677df06" prot="public" static="no">
         <name>sbfSpinLock_destroy</name>
@@ -451,7 +468,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="81" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="81" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="81" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a994e66cd6be2970f50d9590b3769ee19" prot="public" static="no">
         <name>sbfSpinLock_lock</name>
@@ -462,7 +479,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="82" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="82" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="82" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a73c526a871a4a075bac2b9c3c3ce17d0" prot="public" static="no">
         <name>sbfSpinLock_unlock</name>
@@ -473,7 +490,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="83" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="83" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="83" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1aa367b75c5aed883fef5befbdf04835a4" prot="public" static="no">
         <name>snprintf</name>
@@ -484,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="100" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="100" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="100" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1ac99ec3f1036620727a68aa8c25a8963c" prot="public" static="no">
         <name>strcasecmp</name>
@@ -495,7 +512,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="101" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="101" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="101" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="101" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1aba00036f71bb67f8600b239a39cf5ec9" prot="public" static="no">
         <name>strncasecmp</name>
@@ -506,7 +523,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="102" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="102" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="102" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="102" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a3b96deb1c5b8e33fe2274b4578687e72" prot="public" static="no">
         <name>strtoll</name>
@@ -517,7 +534,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="103" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="103" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="103" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="103" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1acbc25345a39784031ea891c317ab6f4e" prot="public" static="no">
         <name>strtoull</name>
@@ -528,7 +545,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="104" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="104" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="104" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a00ba2ca988495904efc418acbf0627d7" prot="public" static="no">
         <name>vsnprintf</name>
@@ -539,7 +556,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="105" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="105" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="105" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a227875b8399b0589b1124555d3ae4007" prot="public" static="no">
         <name>fseeko</name>
@@ -550,7 +567,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="106" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="106" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="106" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a149da0702b060478da4d59ffe807adac" prot="public" static="no">
         <name>stat</name>
@@ -561,7 +578,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="107" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="107" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="107" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1aa84a9ac582a3b7d9a0dea52e851855ea" prot="public" static="no">
         <name>fstat</name>
@@ -572,7 +589,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="108" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="108" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="108" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a9bed4137a0c686f73fdb3310b1dd9f30" prot="public" static="no">
         <name>gmtime_r</name>
@@ -585,7 +602,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="116" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="116" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="116" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="116" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a7e4ac7ec95919b38e71518cd6573f007" prot="public" static="no">
         <name>localtime_r</name>
@@ -598,7 +615,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="117" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="117" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="117" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="117" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a631e8252798c4ede857d00d1cede6f0f" prot="public" static="no">
         <name>getopt</name>
@@ -612,7 +629,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="128" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="128" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="128" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a3d0369446ac39ee644edc472d24cfa5f" prot="public" static="no">
         <name>opterr</name>
@@ -623,7 +640,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="129" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="129" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="129" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1afa9437ffe2a670485f18f082213533f8" prot="public" static="no">
         <name>optind</name>
@@ -634,7 +651,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="130" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="130" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="130" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="130" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a9b3c9beb2078394a97f009c54e93ce05" prot="public" static="no">
         <name>optopt</name>
@@ -645,7 +662,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="131" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="131" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="131" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="131" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1ab95d1b25e0c8b7aa1c5c1b427d3c1c0a" prot="public" static="no">
         <name>optreset</name>
@@ -656,7 +673,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="132" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="132" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="132" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="132" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a9227b18da5777b0578ef7376ad78b649" prot="public" static="no">
         <name>optarg</name>
@@ -667,7 +684,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="133" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="133" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="133" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="133" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a15bf68ce8b590838b3a5c0b639d8d519" prot="public" static="no">
         <name>PROT_READ</name>
@@ -678,7 +695,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="163" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="163" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="163" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="163" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a2a79c8ceefb8fc25a940ae07a3d94429" prot="public" static="no">
         <name>PROT_WRITE</name>
@@ -689,7 +706,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="164" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="164" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="164" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="164" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a398ef47a991a44389aa9818c98a28d24" prot="public" static="no">
         <name>MAP_PRIVATE</name>
@@ -700,7 +717,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="166" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="166" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="166" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="166" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_win32_8h_1a8523dcf952f6ff059a3bed717e4f1296" prot="public" static="no">
         <name>MAP_FAILED</name>
@@ -711,7 +728,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="168" column="9" bodyfile="common/sbfCommonWin32.h" bodystart="168" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="168" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="168" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -730,7 +747,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="141" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="140" bodyend="143"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="141" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="140" bodyend="143"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -745,7 +762,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="32" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="32" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="32" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="sbf_common_win32_8h_1a8badfe9f04be07862558f98f6a522e97" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -758,7 +775,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="122" column="1" bodyfile="common/getopt.c" bodystart="41" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="122" column="1"/>
       </memberdef>
       <memberdef kind="variable" id="sbf_common_win32_8h_1a669d725531e2c2a52f60347ff33fed0e" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -771,7 +788,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="123" column="1" bodyfile="common/getopt.c" bodystart="42" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="123" column="1"/>
       </memberdef>
       <memberdef kind="variable" id="sbf_common_win32_8h_1a231a38fb4aeed51c5f37a47680781868" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -784,7 +801,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="124" column="1" bodyfile="common/getopt.c" bodystart="42" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="124" column="1"/>
       </memberdef>
       <memberdef kind="variable" id="sbf_common_win32_8h_1a5fd40e912d8f11da30c167d75b228f32" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -797,7 +814,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="125" column="1" bodyfile="common/getopt.c" bodystart="42" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="125" column="1"/>
       </memberdef>
       <memberdef kind="variable" id="sbf_common_win32_8h_1a2d25bab23ebf87160582f11391983c93" prot="public" static="no" mutable="no">
         <type>char *</type>
@@ -810,7 +827,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="126" column="1" bodyfile="common/getopt.c" bodystart="45" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="126" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -825,7 +842,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="62" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="62" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="62" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="sbf_common_win32_8h_1abbc78052b6315ac63b31b64988e4fc07" prot="public" static="no">
         <type>CONDITION_VARIABLE</type>
@@ -838,7 +855,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="66" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="66" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="66" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="sbf_common_win32_8h_1a6be932d07a7433a88756a2f8584b09ca" prot="public" static="no">
         <type>CRITICAL_SECTION</type>
@@ -851,7 +868,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="73" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="73" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="73" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -878,7 +895,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="63" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="29" bodyend="48"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="63" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_win32_8h_1aee5e1a2e9a4b32a52b3a44b9c83f4ba9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> void</type>
@@ -895,7 +912,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="86" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="86" bodyend="89"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="86" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="86" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_win32_8h_1a67e8c02fbbb0e466facdb5c879076191" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> char *</type>
@@ -912,7 +929,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="92" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="92" bodyend="98"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="92" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="92" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_win32_8h_1afe1d973411ec6554e24bae11e58612a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char *</type>
@@ -933,7 +950,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="110" column="1" bodyfile="common/fgetln.c" bodystart="43" bodyend="82"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="110" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_win32_8h_1ae85b825a7f3d4dcf136b85949b646a46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -958,7 +975,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="112" column="1" bodyfile="common/strlcat.c" bodystart="30" bodyend="55"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="112" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_win32_8h_1aeb79f86261de904967d433c1b5e9a1de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -983,7 +1000,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="113" column="1" bodyfile="common/strlcpy.c" bodystart="28" bodyend="51"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="113" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_win32_8h_1aaf2d0a99430a6d5253b8c395c30ca7e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1004,7 +1021,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="115" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="23" bodyend="26"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="115" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_win32_8h_1aac4b1d7707d03271e198e29e8375345d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1028,7 +1045,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="119" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="51" bodyend="61"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="119" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_win32_8h_1a54b6dd2c589426c8c2f2036f3342423e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1053,7 +1070,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="120" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="64" bodyend="85"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="120" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_win32_8h_1a9def4d0e84afd76da036d8c68172a5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1075,7 +1092,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="127" column="1" bodyfile="common/getopt.c" bodystart="56" bodyend="117"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="127" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_win32_8h_1a16e9146066526237e175565edb3c5a0d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> int</type>
@@ -1096,7 +1113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="145" column="1" bodyfile="common/sbfCommonWin32.h" bodystart="145" bodyend="161"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="145" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" bodystart="145" bodyend="161"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_win32_8h_1adcdc6990a7641f7ba05f5dd2a603b992" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -1133,7 +1150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="170" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="88" bodyend="125"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="170" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_win32_8h_1a7d888f95854ef9b7a9990f3b513bfef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1154,7 +1171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonWin32.h" line="176" column="1" bodyfile="common/sbfCommonWin32.c" bodystart="128" bodyend="131"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h" line="176" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1174,7 +1191,7 @@
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="regex_8h" kindref="compound">regex.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -1343,6 +1360,6 @@
 <codeline lineno="179"><highlight class="normal"></highlight></codeline>
 <codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_COMMON_WIN32_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="common/sbfCommonWin32.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonWin32.h"/>
   </compounddef>
 </doxygen>

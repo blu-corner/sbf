@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="dir_878b7276eb05f2c8f8163f9d2c52fdea" kind="dir">
-    <compoundname>thirdparty/pcre/win32</compoundname>
-    <innerdir refid="dir_2c514969ae6cff6d8fc0eaac1ba2f514">thirdparty/pcre/win32/include</innerdir>
+    <compoundname>C:/Users/Neueda/Documents/workspace/sbf/thirdparty/pcre/win32</compoundname>
+    <innerdir refid="dir_2c514969ae6cff6d8fc0eaac1ba2f514">C:/Users/Neueda/Documents/workspace/sbf/thirdparty/pcre/win32/include</innerdir>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="thirdparty/pcre/win32/"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/thirdparty/pcre/win32/"/>
   </compounddef>
 </doxygen>

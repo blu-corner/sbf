@@ -81,23 +81,17 @@ $(document).ready(function(){initNavTree('sbf_request_reply_private_8h.html','')
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">sbfRequestReplyPrivate.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="sbf_guid_8h_source.html">sbfGuid.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sbf_ref_count_8h_source.html">sbfRefCount.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;sbfGuid.h&quot;</code><br />
+<code>#include &quot;sbfRefCount.h&quot;</code><br />
 </div>
 <p><a href="sbf_request_reply_private_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsbf_request_impl.html">sbfRequestImpl</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a287ef027733349451b0cb2ea13292e59"><td class="memItemLeft" align="right" valign="top">typedef struct sbfRequestHeaderImpl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_reply_private_8h.html#a287ef027733349451b0cb2ea13292e59">sbfRequestHeader</a></td></tr>
@@ -105,7 +99,7 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:acbb53dcd8d24f74dd94ae482d9450d3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sbf_common_8h.html#a2e3c8d8485e2902b071ca73d389df0e4">SBF_BEGIN_DECLS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_reply_private_8h.html#acbb53dcd8d24f74dd94ae482d9450d3e">SBF_PACKED</a> (struct sbfRequestHeaderImpl { <a class="el" href="sbf_guid_8h.html#a36001b189a6dd7b95858bd266dbe4404">sbfGuid</a> mGuid;uint64_t mSpace[4];})</td></tr>
+<tr class="memitem:acbb53dcd8d24f74dd94ae482d9450d3e"><td class="memItemLeft" align="right" valign="top">SBF_BEGIN_DECLS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbf_request_reply_private_8h.html#acbb53dcd8d24f74dd94ae482d9450d3e">SBF_PACKED</a> (struct sbfRequestHeaderImpl { sbfGuid mGuid;uint64_t mSpace[4];})</td></tr>
 <tr class="separator:acbb53dcd8d24f74dd94ae482d9450d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -133,9 +127,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="sbf_common_8h.html#a2e3c8d8485e2902b071ca73d389df0e4">SBF_BEGIN_DECLS</a> SBF_PACKED </td>
+          <td class="memname">SBF_BEGIN_DECLS SBF_PACKED </td>
           <td>(</td>
-          <td class="paramtype">struct sbfRequestHeaderImpl { <a class="el" href="sbf_guid_8h.html#a36001b189a6dd7b95858bd266dbe4404">sbfGuid</a> mGuid;uint64_t mSpace[4];}&#160;</td>
+          <td class="paramtype">struct sbfRequestHeaderImpl { sbfGuid mGuid;uint64_t mSpace[4];}&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

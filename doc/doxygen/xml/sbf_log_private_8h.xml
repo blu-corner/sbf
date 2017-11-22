@@ -4,98 +4,84 @@
     <compoundname>sbfLogPrivate.h</compoundname>
     <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
     <includes refid="sbf_log_file_8h" local="yes">sbfLogFile.h</includes>
-    <includedby refid="sbf_log_8c" local="yes">common/sbfLog.c</includedby>
     <incdepgraph>
-      <node id="1036">
+      <node id="542">
         <label>event.h</label>
       </node>
-      <node id="1035">
+      <node id="541">
         <label>sbfVersion.h</label>
         <link refid="sbf_version_8h"/>
       </node>
-      <node id="1037">
+      <node id="543">
         <label>syshash.h</label>
         <link refid="syshash_8h"/>
-        <childnode refid="1038" relation="include">
+        <childnode refid="544" relation="include">
         </childnode>
       </node>
-      <node id="1041">
+      <node id="547">
         <label>sbfFatal.h</label>
         <link refid="sbf_fatal_8h"/>
-        <childnode refid="1034" relation="include">
+        <childnode refid="540" relation="include">
         </childnode>
       </node>
-      <node id="1038">
+      <node id="544">
         <label>sys/types.h</label>
       </node>
-      <node id="1033">
-        <label>common/sbfLogPrivate.h</label>
+      <node id="539">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfLogPrivate.h</label>
         <link refid="sbf_log_private_8h"/>
-        <childnode refid="1034" relation="include">
+        <childnode refid="540" relation="include">
         </childnode>
-        <childnode refid="1044" relation="include">
+        <childnode refid="550" relation="include">
         </childnode>
       </node>
-      <node id="1034">
+      <node id="540">
         <label>sbfCommon.h</label>
         <link refid="sbf_common_8h"/>
-        <childnode refid="1035" relation="include">
+        <childnode refid="541" relation="include">
         </childnode>
-        <childnode refid="1036" relation="include">
+        <childnode refid="542" relation="include">
         </childnode>
-        <childnode refid="1037" relation="include">
+        <childnode refid="543" relation="include">
         </childnode>
-        <childnode refid="1039" relation="include">
+        <childnode refid="545" relation="include">
         </childnode>
-        <childnode refid="1040" relation="include">
+        <childnode refid="546" relation="include">
         </childnode>
-        <childnode refid="1041" relation="include">
+        <childnode refid="547" relation="include">
         </childnode>
-        <childnode refid="1042" relation="include">
+        <childnode refid="548" relation="include">
         </childnode>
-        <childnode refid="1043" relation="include">
+        <childnode refid="549" relation="include">
         </childnode>
       </node>
-      <node id="1040">
+      <node id="546">
         <label>systree.h</label>
         <link refid="systree_8h"/>
       </node>
-      <node id="1039">
+      <node id="545">
         <label>sysqueue.h</label>
         <link refid="sysqueue_8h"/>
       </node>
-      <node id="1042">
+      <node id="548">
         <label>sbfLog.h</label>
         <link refid="sbf_log_8h"/>
-        <childnode refid="1034" relation="include">
+        <childnode refid="540" relation="include">
         </childnode>
       </node>
-      <node id="1043">
+      <node id="549">
         <label>sbfMemory.h</label>
         <link refid="sbf_memory_8h"/>
-        <childnode refid="1034" relation="include">
+        <childnode refid="540" relation="include">
         </childnode>
       </node>
-      <node id="1044">
+      <node id="550">
         <label>sbfLogFile.h</label>
         <link refid="sbf_log_file_8h"/>
-        <childnode refid="1034" relation="include">
+        <childnode refid="540" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="1045">
-        <label>common/sbfLogPrivate.h</label>
-        <link refid="sbf_log_private_8h"/>
-        <childnode refid="1046" relation="include">
-        </childnode>
-      </node>
-      <node id="1046">
-        <label>common/sbfLog.c</label>
-        <link refid="sbf_log_8c"/>
-      </node>
-    </invincdepgraph>
-    <innerclass refid="structsbf_log_impl" prot="public">sbfLogImpl</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -109,22 +95,22 @@
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9" refid="structsbf_log_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_log_impl" kindref="compound">sbfLogImpl</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfLogImpl</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="11" refid="structsbf_log_impl_1a2a0ef81221ff4d5be69673e7ee58059f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref><sp/><sp/><sp/><ref refid="structsbf_log_impl_1a2a0ef81221ff4d5be69673e7ee58059f" kindref="member">mFile</ref>;</highlight></codeline>
-<codeline lineno="12" refid="structsbf_log_impl_1a335bb037734289c01d9d3c061669ae03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref><sp/><sp/><ref refid="structsbf_log_impl_1a335bb037734289c01d9d3c061669ae03" kindref="member">mLevel</ref>;</highlight></codeline>
-<codeline lineno="13" refid="structsbf_log_impl_1a9ac6803065836a07754e048545cccdf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_log_impl_1a9ac6803065836a07754e048545cccdf6" kindref="member">mPrefix</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_file_8h_1a9b36dc99b09e3793952404b03558113f" kindref="member">sbfLogFile</ref><sp/><sp/><sp/>mFile;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref><sp/><sp/>mLevel;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mPrefix;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="structsbf_log_impl_1a76389663aa146431d043813561d4ecd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref><sp/><sp/><ref refid="structsbf_log_impl_1a76389663aa146431d043813561d4ecd0" kindref="member">mHookLevel</ref>;</highlight></codeline>
-<codeline lineno="16" refid="structsbf_log_impl_1adc4b5dee2760e51dd58b081677504d8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a765cab47397f491727fe408d9ee0fa1b" kindref="member">sbfLogHookCb</ref><sp/><ref refid="structsbf_log_impl_1adc4b5dee2760e51dd58b081677504d8d" kindref="member">mHookCb</ref>;</highlight></codeline>
-<codeline lineno="17" refid="structsbf_log_impl_1a2e9263fc09d5558f06a503bb28880694" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_log_impl_1a2e9263fc09d5558f06a503bb28880694" kindref="member">mHookClosure</ref>;</highlight></codeline>
-<codeline lineno="18" refid="structsbf_log_impl_1adaa676ed99227fdb161d764076dab3c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_log_impl_1adaa676ed99227fdb161d764076dab3c1" kindref="member">mHookInside</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref><sp/><sp/>mHookLevel;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_log_8h_1a765cab47397f491727fe408d9ee0fa1b" kindref="member">sbfLogHookCb</ref><sp/>mHookCb;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mHookClosure;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mHookInside;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_LOG_PRIVATE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="common/sbfLogPrivate.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfLogPrivate.h"/>
   </compounddef>
 </doxygen>

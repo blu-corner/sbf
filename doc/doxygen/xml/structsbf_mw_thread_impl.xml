@@ -57,7 +57,7 @@
         <location file="core/sbfMwPrivate.h" line="25" column="1" bodyfile="core/sbfMwPrivate.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsbf_mw_thread_impl_1a68ab51c8ce3bf9c861650770c9e0ebbf" prot="public" static="no" mutable="no">
-        <type><ref refid="sbf_common_darwin_8h_1afbf7dc0a8bbd900f63f4bf4ec58c80f2" kindref="member">sbfThread</ref></type>
+        <type>sbfThread</type>
         <definition>sbfThread sbfMwThreadImpl::mThread</definition>
         <argsstring></argsstring>
         <name>mThread</name>
@@ -75,35 +75,18 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="72">
+      <node id="14">
         <label>sbfMwThreadImpl</label>
         <link refid="structsbf_mw_thread_impl"/>
-        <childnode refid="73" relation="usage">
+        <childnode refid="15" relation="usage">
           <edgelabel>mParent</edgelabel>
         </childnode>
       </node>
-      <node id="73">
+      <node id="15">
         <label>sbfMwImpl</label>
         <link refid="structsbf_mw_impl"/>
-        <childnode refid="72" relation="usage">
+        <childnode refid="14" relation="usage">
           <edgelabel>mThreads</edgelabel>
-        </childnode>
-        <childnode refid="74" relation="usage">
-          <edgelabel>mLog</edgelabel>
-        </childnode>
-      </node>
-      <node id="75">
-        <label>sbfLogFileImpl</label>
-        <link refid="structsbf_log_file_impl"/>
-      </node>
-      <node id="74">
-        <label>sbfLogImpl</label>
-        <link refid="structsbf_log_impl"/>
-        <childnode refid="74" relation="usage">
-          <edgelabel>mHookCb</edgelabel>
-        </childnode>
-        <childnode refid="75" relation="usage">
-          <edgelabel>mFile</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>

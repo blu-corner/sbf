@@ -27,7 +27,7 @@
     <includes local="no">math.h</includes>
     <includes local="no">netdb.h</includes>
     <includes local="no">pthread.h</includes>
-    <includes local="no">regex.h</includes>
+    <includes refid="regex_8h" local="no">regex.h</includes>
     <includes local="no">signal.h</includes>
     <includes local="no">stdarg.h</includes>
     <includes local="no">stddef.h</includes>
@@ -38,183 +38,200 @@
     <includes local="no">time.h</includes>
     <includes local="no">unistd.h</includes>
     <incdepgraph>
-      <node id="429">
+      <node id="217">
         <label>sys/stat.h</label>
       </node>
-      <node id="442">
+      <node id="230">
         <label>glob.h</label>
       </node>
-      <node id="451">
+      <node id="242">
         <label>stdarg.h</label>
       </node>
-      <node id="433">
+      <node id="221">
         <label>netinet/in.h</label>
       </node>
-      <node id="432">
+      <node id="220">
         <label>arpa/inet.h</label>
       </node>
-      <node id="435">
+      <node id="223">
         <label>assert.h</label>
       </node>
-      <node id="453">
+      <node id="240">
+        <label>pcreposix.h</label>
+        <link refid="pcreposix_8h"/>
+        <childnode refid="239" relation="include">
+        </childnode>
+      </node>
+      <node id="244">
         <label>stdint.h</label>
       </node>
-      <node id="455">
+      <node id="239">
         <label>stdlib.h</label>
       </node>
-      <node id="427">
+      <node id="215">
         <label>sys/mman.h</label>
       </node>
-      <node id="439">
+      <node id="227">
         <label>errno.h</label>
       </node>
-      <node id="440">
+      <node id="228">
         <label>fcntl.h</label>
       </node>
-      <node id="426">
+      <node id="214">
         <label>sys/ioctl.h</label>
       </node>
-      <node id="452">
+      <node id="243">
         <label>stddef.h</label>
       </node>
-      <node id="447">
+      <node id="235">
         <label>netdb.h</label>
       </node>
-      <node id="445">
+      <node id="233">
         <label>limits.h</label>
       </node>
-      <node id="443">
+      <node id="231">
         <label>ifaddrs.h</label>
       </node>
-      <node id="448">
+      <node id="237">
+        <label>regex.h</label>
+        <link refid="regex_8h"/>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="236">
         <label>pthread.h</label>
       </node>
-      <node id="434">
+      <node id="222">
         <label>linux/futex.h</label>
       </node>
-      <node id="424">
+      <node id="212">
         <label>sys/types.h</label>
       </node>
-      <node id="444">
+      <node id="232">
         <label>libgen.h</label>
       </node>
-      <node id="456">
+      <node id="246">
         <label>string.h</label>
       </node>
-      <node id="458">
+      <node id="248">
         <label>unistd.h</label>
       </node>
-      <node id="450">
+      <node id="241">
         <label>signal.h</label>
       </node>
-      <node id="438">
+      <node id="226">
         <label>err.h</label>
       </node>
-      <node id="457">
+      <node id="238">
+        <label>pcre.h</label>
+        <link refid="pcre_8h"/>
+        <childnode refid="239" relation="include">
+        </childnode>
+      </node>
+      <node id="247">
         <label>time.h</label>
       </node>
-      <node id="446">
+      <node id="234">
         <label>math.h</label>
       </node>
-      <node id="430">
+      <node id="218">
         <label>sys/time.h</label>
       </node>
-      <node id="436">
+      <node id="224">
         <label>ctype.h</label>
       </node>
-      <node id="423">
-        <label>common/sbfCommonLinux.h</label>
+      <node id="211">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h</label>
         <link refid="sbf_common_linux_8h"/>
-        <childnode refid="424" relation="include">
+        <childnode refid="212" relation="include">
         </childnode>
-        <childnode refid="425" relation="include">
+        <childnode refid="213" relation="include">
         </childnode>
-        <childnode refid="426" relation="include">
+        <childnode refid="214" relation="include">
         </childnode>
-        <childnode refid="427" relation="include">
+        <childnode refid="215" relation="include">
         </childnode>
-        <childnode refid="428" relation="include">
+        <childnode refid="216" relation="include">
         </childnode>
-        <childnode refid="429" relation="include">
+        <childnode refid="217" relation="include">
         </childnode>
-        <childnode refid="430" relation="include">
+        <childnode refid="218" relation="include">
         </childnode>
-        <childnode refid="431" relation="include">
+        <childnode refid="219" relation="include">
         </childnode>
-        <childnode refid="432" relation="include">
+        <childnode refid="220" relation="include">
         </childnode>
-        <childnode refid="433" relation="include">
+        <childnode refid="221" relation="include">
         </childnode>
-        <childnode refid="434" relation="include">
+        <childnode refid="222" relation="include">
         </childnode>
-        <childnode refid="435" relation="include">
+        <childnode refid="223" relation="include">
         </childnode>
-        <childnode refid="436" relation="include">
+        <childnode refid="224" relation="include">
         </childnode>
-        <childnode refid="437" relation="include">
+        <childnode refid="225" relation="include">
         </childnode>
-        <childnode refid="438" relation="include">
+        <childnode refid="226" relation="include">
         </childnode>
-        <childnode refid="439" relation="include">
+        <childnode refid="227" relation="include">
         </childnode>
-        <childnode refid="440" relation="include">
+        <childnode refid="228" relation="include">
         </childnode>
-        <childnode refid="441" relation="include">
+        <childnode refid="229" relation="include">
         </childnode>
-        <childnode refid="442" relation="include">
+        <childnode refid="230" relation="include">
         </childnode>
-        <childnode refid="443" relation="include">
+        <childnode refid="231" relation="include">
         </childnode>
-        <childnode refid="444" relation="include">
+        <childnode refid="232" relation="include">
         </childnode>
-        <childnode refid="445" relation="include">
+        <childnode refid="233" relation="include">
         </childnode>
-        <childnode refid="446" relation="include">
+        <childnode refid="234" relation="include">
         </childnode>
-        <childnode refid="447" relation="include">
+        <childnode refid="235" relation="include">
         </childnode>
-        <childnode refid="448" relation="include">
+        <childnode refid="236" relation="include">
         </childnode>
-        <childnode refid="449" relation="include">
+        <childnode refid="237" relation="include">
         </childnode>
-        <childnode refid="450" relation="include">
+        <childnode refid="241" relation="include">
         </childnode>
-        <childnode refid="451" relation="include">
+        <childnode refid="242" relation="include">
         </childnode>
-        <childnode refid="452" relation="include">
+        <childnode refid="243" relation="include">
         </childnode>
-        <childnode refid="453" relation="include">
+        <childnode refid="244" relation="include">
         </childnode>
-        <childnode refid="454" relation="include">
+        <childnode refid="245" relation="include">
         </childnode>
-        <childnode refid="455" relation="include">
+        <childnode refid="239" relation="include">
         </childnode>
-        <childnode refid="456" relation="include">
+        <childnode refid="246" relation="include">
         </childnode>
-        <childnode refid="457" relation="include">
+        <childnode refid="247" relation="include">
         </childnode>
-        <childnode refid="458" relation="include">
+        <childnode refid="248" relation="include">
         </childnode>
       </node>
-      <node id="428">
+      <node id="216">
         <label>sys/socket.h</label>
       </node>
-      <node id="431">
+      <node id="219">
         <label>sys/syscall.h</label>
       </node>
-      <node id="425">
+      <node id="213">
         <label>sys/inotify.h</label>
       </node>
-      <node id="449">
-        <label>regex.h</label>
-      </node>
-      <node id="454">
+      <node id="245">
         <label>stdio.h</label>
       </node>
-      <node id="441">
+      <node id="229">
         <label>fnmatch.h</label>
       </node>
-      <node id="437">
+      <node id="225">
         <label>dlfcn.h</label>
       </node>
     </incdepgraph>
@@ -227,7 +244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="5" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="5" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="5" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="5" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1ae3192df127a8ec551c64402669381f59" prot="public" static="no">
         <name>SBF_EOL</name>
@@ -238,7 +255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="52" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="52" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="52" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a07d717b6b79aca40485910f7d4d278aa" prot="public" static="no">
         <name>SBF_SHLIB_SUFFIX</name>
@@ -249,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="53" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="53" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="53" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1ae24ddcf80a3f76e535d9bf3a7f758b04" prot="public" static="no">
         <name>SBF_PACKED</name>
@@ -261,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="55" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="55" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="55" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1abcc9ea27d2fa4fc4b2b51bbdf96fb03d" prot="public" static="no">
         <name>SBF_PRINTFLIKE</name>
@@ -274,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="56" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="56" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="56" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a789fcd195035787245e7734413e9b5a2" prot="public" static="no">
         <name>SBF_UNUSED</name>
@@ -285,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="57" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="57" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="57" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="57" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" prot="public" static="no">
         <name>SBF_INLINE</name>
@@ -296,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="58" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="58" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="58" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a6fc993d4b00d3799765f781b94543845" prot="public" static="no">
         <name>SBF_PURE</name>
@@ -307,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="59" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="59" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="59" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1ac76a00346f1087c98e3af12caed55ebe" prot="public" static="no">
         <name>SBF_CONST</name>
@@ -318,7 +335,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="60" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="60" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="60" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a6ee02b35494da215f5fa30f1c64d5598" prot="public" static="no">
         <name>SBF_DEAD</name>
@@ -329,7 +346,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="61" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="61" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="61" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1aa4c0463d5143c422ff33e19f6bbd6764" prot="public" static="no">
         <name>SBF_LIKELY</name>
@@ -341,7 +358,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="63" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="63" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="63" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a270c0e11fe2fac830447b85580475bb9" prot="public" static="no">
         <name>SBF_UNLIKELY</name>
@@ -353,7 +370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="64" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="64" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="64" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a9494b177643e1271eeb943d1dd3e9dbb" prot="public" static="no">
         <name>SBF_ASSERT</name>
@@ -365,7 +382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="66" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="66" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="66" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a2990854b08d77f3bbd332b8174604b01" prot="public" static="no">
         <name>SBF_DLLEXPORT</name>
@@ -375,7 +392,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="68" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="68" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="68" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1ae7f48f80d02515dc515a99d935ba0212" prot="public" static="no">
         <name>sbfThread_create</name>
@@ -389,7 +406,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="71" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="71" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="71" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a05d4d9d0ff6dfcd043fef5990f4c03a2" prot="public" static="no">
         <name>sbfThread_join</name>
@@ -401,7 +418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="72" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="72" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="72" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1ac4461ac56f70b819e85ab353ff052c27" prot="public" static="no">
         <name>sbfCondVar_init</name>
@@ -413,7 +430,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="75" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="75" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="75" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1aee816bafc4e98628a6be5e910fac2fb7" prot="public" static="no">
         <name>sbfCondVar_destroy</name>
@@ -425,7 +442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="76" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="76" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="76" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a294ec73d6c256d0ab0d3cce320bdff44" prot="public" static="no">
         <name>sbfCondVar_wait</name>
@@ -438,7 +455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="77" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="77" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="77" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="77" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a58cd7395d3682e48c52b5cb1d96c3d5e" prot="public" static="no">
         <name>sbfCondVar_broadcast</name>
@@ -450,7 +467,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="78" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="78" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="78" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="78" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a1c1fe46b5cd2ee83b67395c6e24a086c" prot="public" static="no">
         <name>sbfCondVar_signal</name>
@@ -462,7 +479,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="79" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="79" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="79" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a696ae52b59c8ee67b0792cf793ca07c3" prot="public" static="no">
         <name>sbfMutex_destroy</name>
@@ -474,7 +491,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="83" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="83" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="83" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1afe21416b021add1d039070372b28c2b7" prot="public" static="no">
         <name>sbfMutex_lock</name>
@@ -486,7 +503,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="84" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="84" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="84" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1ae9f52fb356fee346369a22cfef0def73" prot="public" static="no">
         <name>sbfMutex_unlock</name>
@@ -498,7 +515,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="85" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="85" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="85" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="85" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a18eb0e66d15262469832f65365ca7acf" prot="public" static="no">
         <name>sbfSpinLock_init</name>
@@ -510,7 +527,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="88" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="88" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="88" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a0e531e4bc5cd94dfc0ca53b77ef3c4e7" prot="public" static="no">
         <name>sbfSpinLock_destroy</name>
@@ -522,7 +539,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="89" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="89" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="89" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1aa933b8808fbcd8ee224c1f1eb748dffd" prot="public" static="no">
         <name>sbfSpinLock_lock</name>
@@ -534,7 +551,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="90" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="90" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="90" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="90" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_common_linux_8h_1a91c84ef009ce03cef5e03370bf674217" prot="public" static="no">
         <name>sbfSpinLock_unlock</name>
@@ -546,7 +563,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="91" column="9" bodyfile="common/sbfCommonLinux.h" bodystart="91" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="91" column="9" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="91" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -561,7 +578,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="50" column="1" bodyfile="common/sbfCommonLinux.h" bodystart="50" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="50" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -576,7 +593,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="70" column="1" bodyfile="common/sbfCommonLinux.h" bodystart="70" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="70" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="sbf_common_linux_8h_1a27e225ff8446b4974be1e839d59f6a46" prot="public" static="no">
         <type>pthread_cond_t</type>
@@ -589,7 +606,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="74" column="1" bodyfile="common/sbfCommonLinux.h" bodystart="74" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="74" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="sbf_common_linux_8h_1ae8e30512fa920f7ed878fc63307e7f97" prot="public" static="no">
         <type>pthread_mutex_t</type>
@@ -602,7 +619,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="81" column="1" bodyfile="common/sbfCommonLinux.h" bodystart="81" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="81" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="sbf_common_linux_8h_1a3b284226a5075e4492cf78b01b14d2eb" prot="public" static="no">
         <type>pthread_spinlock_t</type>
@@ -615,7 +632,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="87" column="1" bodyfile="common/sbfCommonLinux.h" bodystart="87" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="87" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -638,7 +655,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="82" column="1" bodyfile="common/sbfCommonDarwin.c" bodystart="4" bodyend="18"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="82" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_linux_8h_1afe1d973411ec6554e24bae11e58612a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char *</type>
@@ -659,7 +676,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="93" column="1" bodyfile="common/fgetln.c" bodystart="43" bodyend="82"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="93" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_linux_8h_1ae85b825a7f3d4dcf136b85949b646a46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -684,7 +701,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="95" column="1" bodyfile="common/strlcat.c" bodystart="30" bodyend="55"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="95" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_linux_8h_1aeb79f86261de904967d433c1b5e9a1de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -709,7 +726,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="96" column="1" bodyfile="common/strlcpy.c" bodystart="28" bodyend="51"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="96" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_common_linux_8h_1ac5171d86cd0dba2d16c03b19ea047319" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> long</type>
@@ -746,7 +763,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfCommonLinux.h" line="98" column="1" bodyfile="common/sbfCommonLinux.h" bodystart="98" bodyend="106"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" line="98" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h" bodystart="98" bodyend="106"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -790,7 +807,7 @@
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;netdb.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="regex_8h" kindref="compound">regex.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;signal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -866,6 +883,6 @@
 <codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_COMMON_LINUX_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="common/sbfCommonLinux.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfCommonLinux.h"/>
   </compounddef>
 </doxygen>

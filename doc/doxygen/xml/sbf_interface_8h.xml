@@ -3,144 +3,110 @@
   <compounddef id="sbf_interface_8h" kind="file" language="C++">
     <compoundname>sbfInterface.h</compoundname>
     <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
-    <includedby refid="sbf_guid_8c" local="yes">common/sbfGuid.c</includedby>
-    <includedby refid="sbf_interface_8c" local="yes">common/sbfInterface.c</includedby>
-    <includedby refid="sbf_common_handler_8h" local="yes">handlers/common/sbfCommonHandler.h</includedby>
-    <includedby refid="sbf_common_handler_private_8h" local="yes">handlers/common/sbfCommonHandlerPrivate.h</includedby>
-    <includedby refid="sbf_tcp_mesh_handler_8h" local="yes">handlers/tcpmesh/sbfTcpMeshHandler.h</includedby>
-    <includedby refid="sbf_udp_handler_8h" local="yes">handlers/udp/sbfUdpHandler.h</includedby>
+    <includedby refid="sbf_common_handler_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/handlers/common/sbfCommonHandler.h</includedby>
+    <includedby refid="sbf_common_handler_private_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/handlers/common/sbfCommonHandlerPrivate.h</includedby>
+    <includedby refid="sbf_tcp_mesh_handler_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/handlers/tcpmesh/sbfTcpMeshHandler.h</includedby>
+    <includedby refid="sbf_udp_handler_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/handlers/udp/sbfUdpHandler.h</includedby>
     <incdepgraph>
-      <node id="771">
+      <node id="404">
         <label>event.h</label>
       </node>
-      <node id="770">
+      <node id="403">
         <label>sbfVersion.h</label>
         <link refid="sbf_version_8h"/>
       </node>
-      <node id="772">
+      <node id="405">
         <label>syshash.h</label>
         <link refid="syshash_8h"/>
-        <childnode refid="773" relation="include">
+        <childnode refid="406" relation="include">
         </childnode>
       </node>
-      <node id="776">
+      <node id="409">
         <label>sbfFatal.h</label>
         <link refid="sbf_fatal_8h"/>
-        <childnode refid="769" relation="include">
+        <childnode refid="402" relation="include">
         </childnode>
       </node>
-      <node id="773">
+      <node id="406">
         <label>sys/types.h</label>
       </node>
-      <node id="768">
-        <label>common/sbfInterface.h</label>
+      <node id="401">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfInterface.h</label>
         <link refid="sbf_interface_8h"/>
-        <childnode refid="769" relation="include">
+        <childnode refid="402" relation="include">
         </childnode>
       </node>
-      <node id="769">
+      <node id="402">
         <label>sbfCommon.h</label>
         <link refid="sbf_common_8h"/>
-        <childnode refid="770" relation="include">
+        <childnode refid="403" relation="include">
         </childnode>
-        <childnode refid="771" relation="include">
+        <childnode refid="404" relation="include">
         </childnode>
-        <childnode refid="772" relation="include">
+        <childnode refid="405" relation="include">
         </childnode>
-        <childnode refid="774" relation="include">
+        <childnode refid="407" relation="include">
         </childnode>
-        <childnode refid="775" relation="include">
+        <childnode refid="408" relation="include">
         </childnode>
-        <childnode refid="776" relation="include">
+        <childnode refid="409" relation="include">
         </childnode>
-        <childnode refid="777" relation="include">
+        <childnode refid="410" relation="include">
         </childnode>
-        <childnode refid="778" relation="include">
+        <childnode refid="411" relation="include">
         </childnode>
       </node>
-      <node id="775">
+      <node id="408">
         <label>systree.h</label>
         <link refid="systree_8h"/>
       </node>
-      <node id="774">
+      <node id="407">
         <label>sysqueue.h</label>
         <link refid="sysqueue_8h"/>
       </node>
-      <node id="777">
+      <node id="410">
         <label>sbfLog.h</label>
         <link refid="sbf_log_8h"/>
-        <childnode refid="769" relation="include">
+        <childnode refid="402" relation="include">
         </childnode>
       </node>
-      <node id="778">
+      <node id="411">
         <label>sbfMemory.h</label>
         <link refid="sbf_memory_8h"/>
-        <childnode refid="769" relation="include">
+        <childnode refid="402" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="783">
-        <label>handlers/common/sbfCommonHandler.c</label>
-        <link refid="sbf_common_handler_8c"/>
-      </node>
-      <node id="782">
-        <label>handlers/common/sbfCommonHandler.h</label>
+      <node id="413">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/common/sbfCommonHandler.h</label>
         <link refid="sbf_common_handler_8h"/>
-        <childnode refid="783" relation="include">
-        </childnode>
-        <childnode refid="784" relation="include">
+        <childnode refid="414" relation="include">
         </childnode>
       </node>
-      <node id="786">
-        <label>handlers/common/sbfCommonHandlerPrivate.h</label>
+      <node id="415">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/common/sbfCommonHandlerPrivate.h</label>
         <link refid="sbf_common_handler_private_8h"/>
-        <childnode refid="783" relation="include">
-        </childnode>
       </node>
-      <node id="785">
-        <label>handlers/udp/sbfUdpHandler.c</label>
-        <link refid="sbf_udp_handler_8c"/>
-      </node>
-      <node id="784">
-        <label>handlers/udp/sbfUdpHandler.h</label>
+      <node id="414">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/udp/sbfUdpHandler.h</label>
         <link refid="sbf_udp_handler_8h"/>
-        <childnode refid="785" relation="include">
-        </childnode>
       </node>
-      <node id="788">
-        <label>handlers/tcpmesh/sbfTcpMeshHandler.c</label>
-        <link refid="sbf_tcp_mesh_handler_8c"/>
-      </node>
-      <node id="787">
-        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+      <node id="416">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/tcpmesh/sbfTcpMeshHandler.h</label>
         <link refid="sbf_tcp_mesh_handler_8h"/>
-        <childnode refid="788" relation="include">
-        </childnode>
       </node>
-      <node id="781">
-        <label>common/sbfInterface.c</label>
-        <link refid="sbf_interface_8c"/>
-      </node>
-      <node id="779">
-        <label>common/sbfInterface.h</label>
+      <node id="412">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfInterface.h</label>
         <link refid="sbf_interface_8h"/>
-        <childnode refid="780" relation="include">
+        <childnode refid="413" relation="include">
         </childnode>
-        <childnode refid="781" relation="include">
+        <childnode refid="415" relation="include">
         </childnode>
-        <childnode refid="782" relation="include">
+        <childnode refid="416" relation="include">
         </childnode>
-        <childnode refid="786" relation="include">
+        <childnode refid="414" relation="include">
         </childnode>
-        <childnode refid="787" relation="include">
-        </childnode>
-        <childnode refid="784" relation="include">
-        </childnode>
-      </node>
-      <node id="780">
-        <label>common/sbfGuid.c</label>
-        <link refid="sbf_guid_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
@@ -159,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfInterface.h" line="9" column="1" bodyfile="common/sbfInterface.c" bodystart="204" bodyend="225"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfInterface.h" line="9" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_interface_8h_1a84a04759777f7b62795072c83c6609e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -180,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfInterface.h" line="15" column="1" bodyfile="common/sbfInterface.c" bodystart="228" bodyend="231"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfInterface.h" line="15" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_interface_8h_1adbbee4518363492052f3e794b5be6d59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -205,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfInterface.h" line="18" column="1" bodyfile="common/sbfInterface.c" bodystart="234" bodyend="256"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfInterface.h" line="18" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_interface_8h_1add6c092d20134224da66348c9dcafa17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref></type>
@@ -226,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfInterface.h" line="23" column="1" bodyfile="common/sbfInterface.c" bodystart="259" bodyend="293"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfInterface.h" line="23" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_interface_8h_1a32adbdaa3807c3ee397ec18b60795bf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_8h_1a55668977c9501578c245e806c1212de9" kindref="member">sbfError</ref></type>
@@ -251,7 +217,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfInterface.h" line="26" column="1" bodyfile="common/sbfInterface.c" bodystart="296" bodyend="353"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfInterface.h" line="26" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -267,16 +233,16 @@
 <codeline lineno="6"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Get<sp/>first<sp/>interface<sp/>that<sp/>isn&apos;t<sp/>local.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal">uint32_t<sp/><ref refid="sbf_interface_8h_1ab4ff93dbe2e07da128c8a92839f62fb9" kindref="member">sbfInterface_first</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">uint32_t<sp/><ref refid="sbf_interface_8h_1ab4ff93dbe2e07da128c8a92839f62fb9" kindref="member">sbfInterface_first</ref><sp/>(<ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref><sp/>log);</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="12"><highlight class="comment"><sp/>*<sp/>Name<sp/>is<sp/>either<sp/>an<sp/>interface<sp/>name<sp/>(eth0)<sp/>or<sp/>an<sp/>address<sp/>in<sp/>the<sp/>form<sp/>10,<sp/>10.1,</highlight></codeline>
 <codeline lineno="13"><highlight class="comment"><sp/>*<sp/>10.1.2,<sp/>10.1.2.3.</highlight></codeline>
 <codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal">uint32_t<sp/><ref refid="sbf_interface_8h_1a84a04759777f7b62795072c83c6609e6" kindref="member">sbfInterface_find</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">uint32_t<sp/><ref refid="sbf_interface_8h_1a84a04759777f7b62795072c83c6609e6" kindref="member">sbfInterface_find</ref><sp/>(<ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref><sp/>log,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name);</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Find<sp/>one<sp/>interface<sp/>from<sp/>comma-separated<sp/>list.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal">uint32_t<sp/><ref refid="sbf_interface_8h_1adbbee4518363492052f3e794b5be6d59" kindref="member">sbfInterface_findOne</ref><sp/>(<ref refid="structsbf_log_impl" kindref="compound">sbfLog</ref><sp/>log,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">uint32_t<sp/><ref refid="sbf_interface_8h_1adbbee4518363492052f3e794b5be6d59" kindref="member">sbfInterface_findOne</ref><sp/>(<ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref><sp/>log,</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>names,</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>name);</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
@@ -292,6 +258,6 @@
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_INTERFACE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="common/sbfInterface.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfInterface.h"/>
   </compounddef>
 </doxygen>

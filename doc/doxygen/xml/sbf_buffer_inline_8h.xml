@@ -2,282 +2,127 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="sbf_buffer_inline_8h" kind="file" language="C++">
     <compoundname>sbfBufferInline.h</compoundname>
-    <includedby refid="sbf_buffer_8h" local="yes">common/sbfBuffer.h</includedby>
+    <includedby refid="sbf_buffer_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/common/sbfBuffer.h</includedby>
     <invincdepgraph>
-      <node id="191">
-        <label>handlers/common/sbfCommonHandler.c</label>
-        <link refid="sbf_common_handler_8c"/>
-      </node>
-      <node id="196">
-        <label>handlers/common/sbfCommonHandler.h</label>
+      <node id="86">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/common/sbfCommonHandler.h</label>
         <link refid="sbf_common_handler_8h"/>
-        <childnode refid="191" relation="include">
-        </childnode>
-        <childnode refid="192" relation="include">
+        <childnode refid="83" relation="include">
         </childnode>
       </node>
-      <node id="218">
-        <label>transport/sbfTportWeight.c</label>
-        <link refid="sbf_tport_weight_8c"/>
-      </node>
-      <node id="203">
-        <label>requestreply/sbfRequestSub.c</label>
-        <link refid="sbf_request_sub_8c"/>
-      </node>
-      <node id="199">
-        <label>requestreply/sbfRequestSub.h</label>
+      <node id="90">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/requestreply/sbfRequestSub.h</label>
         <link refid="sbf_request_sub_8h"/>
-        <childnode refid="200" relation="include">
+        <childnode refid="89" relation="include">
         </childnode>
       </node>
-      <node id="204">
-        <label>tools/replier/sbfReplier.c</label>
-        <link refid="sbf_replier_8c"/>
-      </node>
-      <node id="214">
-        <label>transport/sbfSub.c</label>
-        <link refid="sbf_sub_8c"/>
-      </node>
-      <node id="220">
-        <label>transport/sbfSub.h</label>
+      <node id="94">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfSub.h</label>
         <link refid="sbf_sub_8h"/>
-        <childnode refid="195" relation="include">
+        <childnode refid="85" relation="include">
         </childnode>
       </node>
-      <node id="215">
-        <label>transport/sbfTopic.c</label>
-        <link refid="sbf_topic_8c"/>
-      </node>
-      <node id="190">
-        <label>handlers/common/sbfCommonHandlerPrivate.h</label>
+      <node id="82">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/common/sbfCommonHandlerPrivate.h</label>
         <link refid="sbf_common_handler_private_8h"/>
-        <childnode refid="191" relation="include">
-        </childnode>
       </node>
-      <node id="193">
-        <label>handlers/udp/sbfUdpHandler.c</label>
-        <link refid="sbf_udp_handler_8c"/>
-      </node>
-      <node id="192">
-        <label>handlers/udp/sbfUdpHandler.h</label>
+      <node id="83">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/udp/sbfUdpHandler.h</label>
         <link refid="sbf_udp_handler_8h"/>
-        <childnode refid="193" relation="include">
-        </childnode>
       </node>
-      <node id="207">
-        <label>tools/publisher/sbfPublisher.c</label>
-        <link refid="sbf_publisher_8c"/>
-      </node>
-      <node id="209">
-        <label>transport/sbfBatch.c</label>
-        <link refid="sbf_batch_8c"/>
-      </node>
-      <node id="194">
-        <label>transport/sbfBatch.h</label>
+      <node id="84">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfBatch.h</label>
         <link refid="sbf_batch_8h"/>
-        <childnode refid="195" relation="include">
+        <childnode refid="85" relation="include">
         </childnode>
       </node>
-      <node id="205">
-        <label>tools/requester/sbfRequester.c</label>
-        <link refid="sbf_requester_8c"/>
-      </node>
-      <node id="184">
-        <label>common/sbfBuffer.c</label>
-        <link refid="sbf_buffer_8c"/>
-      </node>
-      <node id="183">
-        <label>common/sbfBuffer.h</label>
+      <node id="79">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfBuffer.h</label>
         <link refid="sbf_buffer_8h"/>
-        <childnode refid="184" relation="include">
+        <childnode refid="80" relation="include">
         </childnode>
-        <childnode refid="185" relation="include">
+        <childnode refid="81" relation="include">
         </childnode>
-        <childnode refid="188" relation="include">
+        <childnode refid="84" relation="include">
         </childnode>
-        <childnode refid="194" relation="include">
+        <childnode refid="93" relation="include">
         </childnode>
-        <childnode refid="219" relation="include">
-        </childnode>
-        <childnode refid="220" relation="include">
+        <childnode refid="94" relation="include">
         </childnode>
       </node>
-      <node id="208">
-        <label>tools/subscriber/sbfSubscriber.c</label>
-        <link refid="sbf_subscriber_8c"/>
-      </node>
-      <node id="198">
-        <label>handlers/tcpmesh/sbfTcpMeshHandler.c</label>
-        <link refid="sbf_tcp_mesh_handler_8c"/>
-      </node>
-      <node id="197">
-        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+      <node id="87">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/handlers/tcpmesh/sbfTcpMeshHandler.h</label>
         <link refid="sbf_tcp_mesh_handler_8h"/>
-        <childnode refid="198" relation="include">
-        </childnode>
       </node>
-      <node id="213">
-        <label>transport/sbfPub.c</label>
-        <link refid="sbf_pub_8c"/>
-      </node>
-      <node id="219">
-        <label>transport/sbfPub.h</label>
+      <node id="93">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfPub.h</label>
         <link refid="sbf_pub_8h"/>
-        <childnode refid="195" relation="include">
+        <childnode refid="85" relation="include">
         </childnode>
       </node>
-      <node id="182">
-        <label>common/sbfBufferInline.h</label>
+      <node id="78">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h</label>
         <link refid="sbf_buffer_inline_8h"/>
-        <childnode refid="183" relation="include">
+        <childnode refid="79" relation="include">
         </childnode>
       </node>
-      <node id="186">
-        <label>common/sbfTcpConnection.c</label>
-        <link refid="sbf_tcp_connection_8c"/>
-      </node>
-      <node id="185">
-        <label>common/sbfTcpConnection.h</label>
+      <node id="80">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfTcpConnection.h</label>
         <link refid="sbf_tcp_connection_8h"/>
-        <childnode refid="186" relation="include">
-        </childnode>
-        <childnode refid="187" relation="include">
-        </childnode>
       </node>
-      <node id="202">
-        <label>requestreply/sbfRequestReply.c</label>
-        <link refid="sbf_request_reply_8c"/>
-      </node>
-      <node id="200">
-        <label>requestreply/sbfRequestReply.h</label>
+      <node id="89">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/requestreply/sbfRequestReply.h</label>
         <link refid="sbf_request_reply_8h"/>
-        <childnode refid="201" relation="include">
-        </childnode>
-        <childnode refid="202" relation="include">
-        </childnode>
-        <childnode refid="203" relation="include">
-        </childnode>
-        <childnode refid="204" relation="include">
-        </childnode>
-        <childnode refid="205" relation="include">
-        </childnode>
       </node>
-      <node id="212">
-        <label>transport/sbfHandler.c</label>
-        <link refid="sbf_handler_8c"/>
-      </node>
-      <node id="210">
-        <label>transport/sbfHandler.h</label>
+      <node id="91">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfHandler.h</label>
         <link refid="sbf_handler_8h"/>
-        <childnode refid="190" relation="include">
+        <childnode refid="82" relation="include">
         </childnode>
-        <childnode refid="197" relation="include">
+        <childnode refid="87" relation="include">
         </childnode>
-        <childnode refid="192" relation="include">
+        <childnode refid="83" relation="include">
         </childnode>
-        <childnode refid="211" relation="include">
+        <childnode refid="92" relation="include">
         </childnode>
       </node>
-      <node id="189">
-        <label>common/sbfUdpMulticast.c</label>
-        <link refid="sbf_udp_multicast_8c"/>
-      </node>
-      <node id="211">
-        <label>transport/sbfTportPrivate.h</label>
+      <node id="92">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTportPrivate.h</label>
         <link refid="sbf_tport_private_8h"/>
-        <childnode refid="209" relation="include">
-        </childnode>
-        <childnode refid="212" relation="include">
-        </childnode>
-        <childnode refid="213" relation="include">
-        </childnode>
-        <childnode refid="214" relation="include">
-        </childnode>
-        <childnode refid="215" relation="include">
-        </childnode>
-        <childnode refid="216" relation="include">
-        </childnode>
-        <childnode refid="217" relation="include">
-        </childnode>
-        <childnode refid="218" relation="include">
-        </childnode>
       </node>
-      <node id="188">
-        <label>common/sbfUdpMulticast.h</label>
+      <node id="81">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfUdpMulticast.h</label>
         <link refid="sbf_udp_multicast_8h"/>
-        <childnode refid="189" relation="include">
+        <childnode refid="82" relation="include">
         </childnode>
-        <childnode refid="190" relation="include">
-        </childnode>
-        <childnode refid="192" relation="include">
+        <childnode refid="83" relation="include">
         </childnode>
       </node>
-      <node id="217">
-        <label>transport/sbfTportFragments.c</label>
-        <link refid="sbf_tport_fragments_8c"/>
-      </node>
-      <node id="216">
-        <label>transport/sbfTport.c</label>
-        <link refid="sbf_tport_8c"/>
-      </node>
-      <node id="195">
-        <label>transport/sbfTport.h</label>
+      <node id="85">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/transport/sbfTport.h</label>
         <link refid="sbf_tport_8h"/>
-        <childnode refid="196" relation="include">
+        <childnode refid="86" relation="include">
         </childnode>
-        <childnode refid="190" relation="include">
+        <childnode refid="82" relation="include">
         </childnode>
-        <childnode refid="197" relation="include">
+        <childnode refid="87" relation="include">
         </childnode>
-        <childnode refid="192" relation="include">
+        <childnode refid="83" relation="include">
         </childnode>
-        <childnode refid="199" relation="include">
+        <childnode refid="88" relation="include">
         </childnode>
-        <childnode refid="206" relation="include">
+        <childnode refid="90" relation="include">
         </childnode>
-        <childnode refid="207" relation="include">
-        </childnode>
-        <childnode refid="204" relation="include">
-        </childnode>
-        <childnode refid="205" relation="include">
-        </childnode>
-        <childnode refid="208" relation="include">
-        </childnode>
-        <childnode refid="209" relation="include">
-        </childnode>
-        <childnode refid="210" relation="include">
-        </childnode>
-        <childnode refid="212" relation="include">
-        </childnode>
-        <childnode refid="213" relation="include">
-        </childnode>
-        <childnode refid="214" relation="include">
-        </childnode>
-        <childnode refid="215" relation="include">
-        </childnode>
-        <childnode refid="216" relation="include">
-        </childnode>
-        <childnode refid="217" relation="include">
-        </childnode>
-        <childnode refid="218" relation="include">
+        <childnode refid="91" relation="include">
         </childnode>
       </node>
-      <node id="187">
-        <label>common/sbfTcpListener.c</label>
-        <link refid="sbf_tcp_listener_8c"/>
-      </node>
-      <node id="201">
-        <label>requestreply/sbfRequestPub.c</label>
-        <link refid="sbf_request_pub_8c"/>
-      </node>
-      <node id="206">
-        <label>requestreply/sbfRequestPub.h</label>
+      <node id="88">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/requestreply/sbfRequestPub.h</label>
         <link refid="sbf_request_pub_8h"/>
-        <childnode refid="200" relation="include">
+        <childnode refid="89" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="structsbf_buffer_impl" prot="public">sbfBufferImpl</innerclass>
       <sectiondef kind="var">
       <memberdef kind="variable" id="sbf_buffer_inline_8h_1a1c2d8c45313364ad7ba96824b63fdd5f" prot="public" static="no" mutable="no">
         <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
@@ -290,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfBufferInline.h" line="22" column="1" bodyfile="common/sbfBuffer.c" bodystart="3" bodyend="-1"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" line="22" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -313,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfBufferInline.h" line="25" column="1" bodyfile="common/sbfBufferInline.h" bodystart="25" bodyend="57"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" line="25" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" bodystart="25" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="sbf_buffer_inline_8h_1a5a7b94e9e0927abfa7023b1a6b300a09" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> <ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
@@ -334,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfBufferInline.h" line="60" column="1" bodyfile="common/sbfBufferInline.h" bodystart="60" bodyend="68"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" line="60" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" bodystart="60" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="sbf_buffer_inline_8h_1a3f97598ec371b4db1374fc4aef75f75d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> <ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
@@ -359,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfBufferInline.h" line="71" column="1" bodyfile="common/sbfBufferInline.h" bodystart="71" bodyend="79"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" line="71" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" bodystart="71" bodyend="79"/>
       </memberdef>
       <memberdef kind="function" id="sbf_buffer_inline_8h_1a1d9a08f5b2e75407761e904cbb11c459" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> <ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
@@ -388,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfBufferInline.h" line="82" column="1" bodyfile="common/sbfBufferInline.h" bodystart="82" bodyend="106"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" line="82" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" bodystart="82" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="sbf_buffer_inline_8h_1a20b54cb05a4d26866313023e0d943cb7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> void</type>
@@ -405,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfBufferInline.h" line="109" column="1" bodyfile="common/sbfBufferInline.h" bodystart="109" bodyend="112"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" line="109" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" bodystart="109" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="sbf_buffer_inline_8h_1abdddf1c9628096b9ad1b6b396ac3e2ea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> void</type>
@@ -422,7 +267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfBufferInline.h" line="115" column="1" bodyfile="common/sbfBufferInline.h" bodystart="115" bodyend="118"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" line="115" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" bodystart="115" bodyend="118"/>
       </memberdef>
       <memberdef kind="function" id="sbf_buffer_inline_8h_1a42152aa6a54990b45807573cd58dd633" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> void</type>
@@ -439,7 +284,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfBufferInline.h" line="121" column="1" bodyfile="common/sbfBufferInline.h" bodystart="121" bodyend="141"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" line="121" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" bodystart="121" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="sbf_buffer_inline_8h_1a4fabfe30cb536fdf9d690532ee98eadd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> void *</type>
@@ -456,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfBufferInline.h" line="144" column="1" bodyfile="common/sbfBufferInline.h" bodystart="144" bodyend="147"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" line="144" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" bodystart="144" bodyend="147"/>
       </memberdef>
       <memberdef kind="function" id="sbf_buffer_inline_8h_1a9229156dcc934fe54f832d702d7c0ecb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> void</type>
@@ -477,7 +322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfBufferInline.h" line="150" column="1" bodyfile="common/sbfBufferInline.h" bodystart="150" bodyend="155"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" line="150" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" bodystart="150" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="sbf_buffer_inline_8h_1a8ed38cd8f18ff6ffd65d2d31012790e5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> size_t</type>
@@ -494,7 +339,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfBufferInline.h" line="158" column="1" bodyfile="common/sbfBufferInline.h" bodystart="158" bodyend="161"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" line="158" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" bodystart="158" bodyend="161"/>
       </memberdef>
       <memberdef kind="function" id="sbf_buffer_inline_8h_1acd191499d5129b1456abb6a3f5980201" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> void</type>
@@ -515,7 +360,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfBufferInline.h" line="164" column="1" bodyfile="common/sbfBufferInline.h" bodystart="164" bodyend="169"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" line="164" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h" bodystart="164" bodyend="169"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -527,21 +372,21 @@
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;must<sp/>be<sp/>included<sp/>from<sp/>sbfBuffer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5" refid="structsbf_buffer_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsbf_buffer_impl" kindref="compound">sbfBufferImpl</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfBufferImpl</highlight></codeline>
 <codeline lineno="6"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="7" refid="structsbf_buffer_impl_1a3e2f09b4ab795738f13264a34010209e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_buffer_impl_1a3e2f09b4ab795738f13264a34010209e" kindref="member">mAllocated</ref>;</highlight></codeline>
-<codeline lineno="8" refid="structsbf_buffer_impl_1a05e1ac3ea04b0773a246dfb124c73769" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_buffer_impl_1a05e1ac3ea04b0773a246dfb124c73769" kindref="member">mData</ref>;</highlight></codeline>
-<codeline lineno="9" refid="structsbf_buffer_impl_1a70c017fa4a1fdf844ad115af222e6fda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_buffer_impl_1a70c017fa4a1fdf844ad115af222e6fda" kindref="member">mSize</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mAllocated;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mData;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mSize;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="structsbf_buffer_impl_1ad9f9499cb5a932b1c3bf42039206fa9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_8h_1a5846b791c7dfaf050a36392117d5a549" kindref="member">sbfBufferDestroyCb</ref><sp/><ref refid="structsbf_buffer_impl_1ad9f9499cb5a932b1c3bf42039206fa9c" kindref="member">mDestroyCb</ref>;</highlight></codeline>
-<codeline lineno="12" refid="structsbf_buffer_impl_1a0bfb2779e86db23f6138c7dcb514bf7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_buffer_impl_1a0bfb2779e86db23f6138c7dcb514bf7e" kindref="member">mDestroyData</ref>;</highlight></codeline>
-<codeline lineno="13" refid="structsbf_buffer_impl_1aa6b521da87f4650e8eba4e93b3f195a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_buffer_impl_1aa6b521da87f4650e8eba4e93b3f195a9" kindref="member">mDestroyClosure</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_8h_1a5846b791c7dfaf050a36392117d5a549" kindref="member">sbfBufferDestroyCb</ref><sp/>mDestroyCb;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mDestroyData;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mDestroyClosure;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="structsbf_buffer_impl_1ac997a0dd595c6c655fb3513819c717ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_buffer_impl_1ac997a0dd595c6c655fb3513819c717ba" kindref="member">mRefCount</ref>;</highlight></codeline>
-<codeline lineno="16" refid="structsbf_buffer_impl_1a9cbd854f223fbf5286797a98348560bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_buffer_impl_1a9cbd854f223fbf5286797a98348560bc" kindref="member">mLocked</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsbf_ref_count" kindref="compound">sbfRefCount</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mRefCount;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mLocked;</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="structsbf_buffer_impl_1a8cc50023433b62f8c87c9976d57c506b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_buffer_impl_1a8cc50023433b62f8c87c9976d57c506b" kindref="member">mOwner</ref>;</highlight></codeline>
-<codeline lineno="19" refid="structsbf_buffer_impl_1a2595b77d8475196d10a724a6c306d5b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsbf_buffer_impl_1a2595b77d8475196d10a724a6c306d5b4" kindref="member">mHandlerData</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mOwner;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mHandlerData;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/><ref refid="sbf_buffer_inline_8h_1a1c2d8c45313364ad7ba96824b63fdd5f" kindref="member">gSbfBufferDefaultPool</ref>;</highlight></codeline>
@@ -610,8 +455,8 @@
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="sbf_buffer_inline_8h_1a1c2d8c45313364ad7ba96824b63fdd5f" kindref="member">gSbfBufferDefaultPool</ref><sp/>==<sp/>NULL)</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_inline_8h_1a1c2d8c45313364ad7ba96824b63fdd5f" kindref="member">gSbfBufferDefaultPool</ref><sp/>=<sp/><ref refid="sbf_pool_8h_1af6cdf81e4347a1af78ce801f7e8def71" kindref="member">sbfPool_create</ref><sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsbf_buffer_impl" kindref="compound">sbfBufferImpl</ref>));</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_pool_8c_1a8a691a19809c18a79bf9793e5fac1c33" kindref="member">sbfPool_registerAtExit</ref><sp/>(<ref refid="sbf_buffer_inline_8h_1a1c2d8c45313364ad7ba96824b63fdd5f" kindref="member">gSbfBufferDefaultPool</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_inline_8h_1a1c2d8c45313364ad7ba96824b63fdd5f" kindref="member">gSbfBufferDefaultPool</ref><sp/>=<sp/><ref refid="sbf_pool_8h_1af6cdf81e4347a1af78ce801f7e8def71" kindref="member">sbfPool_create</ref><sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sbfBufferImpl));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_pool_8h_1a8a691a19809c18a79bf9793e5fac1c33" kindref="member">sbfPool_registerAtExit</ref><sp/>(<ref refid="sbf_buffer_inline_8h_1a1c2d8c45313364ad7ba96824b63fdd5f" kindref="member">gSbfBufferDefaultPool</ref>);</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer<sp/>=<sp/>(<ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref>)sbfPool_get<sp/>(<ref refid="sbf_buffer_inline_8h_1a1c2d8c45313364ad7ba96824b63fdd5f" kindref="member">gSbfBufferDefaultPool</ref>);</highlight></codeline>
@@ -693,6 +538,6 @@
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer-&gt;mSize<sp/>=<sp/>size;</highlight></codeline>
 <codeline lineno="169"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="common/sbfBufferInline.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfBufferInline.h"/>
   </compounddef>
 </doxygen>

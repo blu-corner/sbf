@@ -8,7 +8,7 @@ var conf_8py =
     [ "extensions", "conf_8py.html#ae475e080536acb271a0a0efe56c3ba42", null ],
     [ "html_sidebars", "conf_8py.html#a3f3b198d720ed6fab15e95fa2479adb6", null ],
     [ "html_static_path", "conf_8py.html#af4fb5d8851ccaade135c2668dd3ced41", null ],
-    [ "html_theme", "conf_8py.html#a6c3bfcc1a44546c1c75ce20f55bd0fd6", null ],
+    [ "html_theme", "conf_8py.html#a7f1b143ff25817758abd21a7db110510", null ],
     [ "htmlhelp_basename", "conf_8py.html#aab7fddb2766ce3c430d8246fbfdbc7b1", null ],
     [ "language", "conf_8py.html#ad76a2e6d7bfa880ebb4042c08e8b4e12", null ],
     [ "latex_documents", "conf_8py.html#a7812f49970f3de0d15dd7b9b9a10e3a1", null ],

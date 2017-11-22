@@ -3,128 +3,93 @@
   <compounddef id="sbf_perf_counter_8h" kind="file" language="C++">
     <compoundname>sbfPerfCounter.h</compoundname>
     <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
-    <includedby refid="sbf_perf_counter_8c" local="yes">common/sbfPerfCounter.c</includedby>
-    <includedby refid="sbf_hi_res_timer_private_8h" local="yes">core/sbfHiResTimerPrivate.h</includedby>
-    <includedby refid="sbf_publisher_8c" local="yes">tools/publisher/sbfPublisher.c</includedby>
-    <includedby refid="sbf_subscriber_8c" local="yes">tools/subscriber/sbfSubscriber.c</includedby>
+    <includedby refid="sbf_hi_res_timer_private_8h" local="yes">C:/Users/Neueda/Documents/workspace/sbf/core/sbfHiResTimerPrivate.h</includedby>
     <incdepgraph>
-      <node id="1255">
+      <node id="647">
         <label>event.h</label>
       </node>
-      <node id="1254">
+      <node id="646">
         <label>sbfVersion.h</label>
         <link refid="sbf_version_8h"/>
       </node>
-      <node id="1256">
+      <node id="648">
         <label>syshash.h</label>
         <link refid="syshash_8h"/>
-        <childnode refid="1257" relation="include">
+        <childnode refid="649" relation="include">
         </childnode>
       </node>
-      <node id="1260">
+      <node id="652">
         <label>sbfFatal.h</label>
         <link refid="sbf_fatal_8h"/>
-        <childnode refid="1253" relation="include">
+        <childnode refid="645" relation="include">
         </childnode>
       </node>
-      <node id="1257">
+      <node id="649">
         <label>sys/types.h</label>
       </node>
-      <node id="1253">
+      <node id="645">
         <label>sbfCommon.h</label>
         <link refid="sbf_common_8h"/>
-        <childnode refid="1254" relation="include">
+        <childnode refid="646" relation="include">
         </childnode>
-        <childnode refid="1255" relation="include">
+        <childnode refid="647" relation="include">
         </childnode>
-        <childnode refid="1256" relation="include">
+        <childnode refid="648" relation="include">
         </childnode>
-        <childnode refid="1258" relation="include">
+        <childnode refid="650" relation="include">
         </childnode>
-        <childnode refid="1259" relation="include">
+        <childnode refid="651" relation="include">
         </childnode>
-        <childnode refid="1260" relation="include">
+        <childnode refid="652" relation="include">
         </childnode>
-        <childnode refid="1261" relation="include">
+        <childnode refid="653" relation="include">
         </childnode>
-        <childnode refid="1262" relation="include">
+        <childnode refid="654" relation="include">
         </childnode>
       </node>
-      <node id="1259">
+      <node id="651">
         <label>systree.h</label>
         <link refid="systree_8h"/>
       </node>
-      <node id="1258">
+      <node id="650">
         <label>sysqueue.h</label>
         <link refid="sysqueue_8h"/>
       </node>
-      <node id="1252">
-        <label>common/sbfPerfCounter.h</label>
+      <node id="644">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfPerfCounter.h</label>
         <link refid="sbf_perf_counter_8h"/>
-        <childnode refid="1253" relation="include">
+        <childnode refid="645" relation="include">
         </childnode>
       </node>
-      <node id="1261">
+      <node id="653">
         <label>sbfLog.h</label>
         <link refid="sbf_log_8h"/>
-        <childnode refid="1253" relation="include">
+        <childnode refid="645" relation="include">
         </childnode>
       </node>
-      <node id="1262">
+      <node id="654">
         <label>sbfMemory.h</label>
         <link refid="sbf_memory_8h"/>
-        <childnode refid="1253" relation="include">
+        <childnode refid="645" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1265">
-        <label>core/sbfHiResTimerPrivate.h</label>
+      <node id="656">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/core/sbfHiResTimerPrivate.h</label>
         <link refid="sbf_hi_res_timer_private_8h"/>
-        <childnode refid="1266" relation="include">
-        </childnode>
-        <childnode refid="1267" relation="include">
+        <childnode refid="657" relation="include">
         </childnode>
       </node>
-      <node id="1267">
-        <label>core/sbfQueuePrivate.h</label>
+      <node id="657">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/core/sbfQueuePrivate.h</label>
         <link refid="sbf_queue_private_8h"/>
-        <childnode refid="1266" relation="include">
-        </childnode>
-        <childnode refid="1268" relation="include">
-        </childnode>
       </node>
-      <node id="1269">
-        <label>tools/publisher/sbfPublisher.c</label>
-        <link refid="sbf_publisher_8c"/>
-      </node>
-      <node id="1266">
-        <label>core/sbfHiResTimer.c</label>
-        <link refid="sbf_hi_res_timer_8c"/>
-      </node>
-      <node id="1270">
-        <label>tools/subscriber/sbfSubscriber.c</label>
-        <link refid="sbf_subscriber_8c"/>
-      </node>
-      <node id="1264">
-        <label>common/sbfPerfCounter.c</label>
-        <link refid="sbf_perf_counter_8c"/>
-      </node>
-      <node id="1263">
-        <label>common/sbfPerfCounter.h</label>
+      <node id="655">
+        <label>C:/Users/Neueda/Documents/workspace/sbf/common/sbfPerfCounter.h</label>
         <link refid="sbf_perf_counter_8h"/>
-        <childnode refid="1264" relation="include">
+        <childnode refid="656" relation="include">
         </childnode>
-        <childnode refid="1265" relation="include">
-        </childnode>
-        <childnode refid="1269" relation="include">
-        </childnode>
-        <childnode refid="1270" relation="include">
-        </childnode>
-      </node>
-      <node id="1268">
-        <label>core/sbfQueue.c</label>
-        <link refid="sbf_queue_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
@@ -142,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfPerfCounter.h" line="8" column="1" bodyfile="common/sbfPerfCounter.c" bodystart="32" bodyend="63"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfPerfCounter.h" line="8" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_perf_counter_8h_1a4d8c605c4a8cfe71e07299029389e292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint64_t</type>
@@ -159,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfPerfCounter.h" line="10" column="1" bodyfile="common/sbfPerfCounter.c" bodystart="68" bodyend="74"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfPerfCounter.h" line="10" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_perf_counter_8h_1aeffb9edc51128417ceef91ccd9af0aa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -176,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfPerfCounter.h" line="11" column="1" bodyfile="common/sbfPerfCounter.c" bodystart="77" bodyend="83"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfPerfCounter.h" line="11" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_perf_counter_8h_1a29d8d51bca4c8d203e07a471bcb2b179" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_common_win32_8h_1a0c1e0a65abe97d651f93f4cbf0f13e0e" kindref="member">SBF_INLINE</ref> uint64_t</type>
@@ -192,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="common/sbfPerfCounter.h" line="24" column="1" bodyfile="common/sbfPerfCounter.h" bodystart="24" bodyend="31"/>
+        <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfPerfCounter.h" line="24" column="1" bodyfile="C:/Users/Neueda/Documents/workspace/sbf/common/sbfPerfCounter.h" bodystart="24" bodyend="31"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -237,6 +202,6 @@
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_PERF_COUNTER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
-    <location file="common/sbfPerfCounter.h"/>
+    <location file="C:/Users/Neueda/Documents/workspace/sbf/common/sbfPerfCounter.h"/>
   </compounddef>
 </doxygen>
