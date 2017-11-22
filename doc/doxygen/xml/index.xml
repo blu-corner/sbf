@@ -8,19 +8,12 @@
     <member refid="sbf_event_8h_1a67c0591f8cee07af670dd520bcd75648" kind="function"><name>sbfEvent_create</name></member>
     <member refid="sbf_event_8h_1aec0d16c84dded19519f2eaf3f8ca8c40" kind="function"><name>sbfEvent_destroy</name></member>
   </compound>
-  <compound refid="sbf_event_private_8h" kind="file"><name>sbfEventPrivate.h</name>
-  </compound>
   <compound refid="sbf_hi_res_timer_8h" kind="file"><name>sbfHiResTimer.h</name>
     <member refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kind="typedef"><name>sbfHiResTimer</name></member>
     <member refid="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" kind="typedef"><name>sbfHiResTimerCb</name></member>
     <member refid="sbf_hi_res_timer_8h_1a4ed03ee88c4a1387158659a1f4b0066f" kind="function"><name>sbfHiResTimer_create</name></member>
     <member refid="sbf_hi_res_timer_8h_1a89282fbee3f560a4111eac6ae2b3ea1f" kind="function"><name>sbfHiResTimer_destroy</name></member>
     <member refid="sbf_hi_res_timer_8h_1a3d4d0b158165c2b16431cadaa73a7822" kind="function"><name>sbfHiResTimer_getInterval</name></member>
-  </compound>
-  <compound refid="sbf_hi_res_timer_private_8h" kind="file"><name>sbfHiResTimerPrivate.h</name>
-    <member refid="sbf_hi_res_timer_private_8h_1af6b1654af9796cce0e412d80c053f4d4" kind="function"><name>SBF_RB_TREE</name></member>
-    <member refid="sbf_hi_res_timer_private_8h_1ab3bc24ba8916071fd450aa096b78a8e4" kind="function"><name>sbfHiResTimer_queueDispatch</name></member>
-    <member refid="sbf_hi_res_timer_private_8h_1af00ad256a0e4d29594109b755b73c31d" kind="function"><name>sbfHiResTimer_queueDestroy</name></member>
   </compound>
   <compound refid="sbf_mw_8h" kind="file"><name>sbfMw.h</name>
     <member refid="sbf_mw_8h_1a3a43b58a7ec394a4cba898f47c99d50f" kind="define"><name>SBF_MW_THREAD_LIMIT</name></member>
@@ -38,9 +31,6 @@
     <member refid="sbf_mw_8h_1a68205584a281f9eba76af89248eb71f9" kind="function"><name>sbfMw_getThreadMask</name></member>
     <member refid="sbf_mw_8h_1a49eee9c382b8543bbb6e5822b6c7d554" kind="function"><name>sbfMw_getThreadEventBase</name></member>
   </compound>
-  <compound refid="sbf_mw_private_8h" kind="file"><name>sbfMwPrivate.h</name>
-    <member refid="sbf_mw_private_8h_1ae30e3fd3f462247eb140805b083d83c6" kind="function"><name>sbfMw_enqueueThread</name></member>
-  </compound>
   <compound refid="sbf_queue_8h" kind="file"><name>sbfQueue.h</name>
     <member refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kind="typedef"><name>sbfQueue</name></member>
     <member refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kind="typedef"><name>sbfQueueItem</name></member>
@@ -55,26 +45,6 @@
     <member refid="sbf_queue_8h_1a3a47a4e3a01ddecb9d5c49b0fab74609" kind="function"><name>sbfQueue_getItemData</name></member>
     <member refid="sbf_queue_8h_1ae5a1e7b31459264e4a5940976cfa0641" kind="function"><name>sbfQueue_getItemDataSize</name></member>
   </compound>
-  <compound refid="sbf_queue_darwin_8h" kind="file"><name>sbfQueueDarwin.h</name>
-    <member refid="sbf_queue_darwin_8h_1a8bc4a90e1403cf84c0b31dac516419c0" kind="define"><name>SBF_QUEUE_DECL</name></member>
-    <member refid="sbf_queue_darwin_8h_1a12a7585797d70a2e230bbae3180f6669" kind="define"><name>SBF_QUEUE_ITEM_DECL</name></member>
-  </compound>
-  <compound refid="sbf_queue_linux_8h" kind="file"><name>sbfQueueLinux.h</name>
-    <member refid="sbf_queue_linux_8h_1a8bc4a90e1403cf84c0b31dac516419c0" kind="define"><name>SBF_QUEUE_DECL</name></member>
-    <member refid="sbf_queue_linux_8h_1a12a7585797d70a2e230bbae3180f6669" kind="define"><name>SBF_QUEUE_ITEM_DECL</name></member>
-  </compound>
-  <compound refid="sbf_queue_private_8h" kind="file"><name>sbfQueuePrivate.h</name>
-    <member refid="sbf_queue_private_8h_1adc00f0a64bc9f1426cc6a398b815755f" kind="define"><name>SBF_QUEUE_ITEM_DATA_SIZE</name></member>
-    <member refid="sbf_queue_private_8h_1a8a2d2874e516558470a073b42c8e124b" kind="define"><name>SBF_QUEUE_NONBLOCK</name></member>
-    <member refid="sbf_queue_private_8h_1ac6807d49592d1eddd7fc40209726a6a0" kind="define"><name>SBF_QUEUE_BLOCKING</name></member>
-    <member refid="sbf_queue_private_8h_1a946f1f7aec29f8d92e1b4a8a33e8ef76" kind="define"><name>SBF_QUEUE_FUNCTIONS</name></member>
-    <member refid="sbf_queue_private_8h_1ae496ac2c82ab4fb4a640fa404b7c7624" kind="function"><name>sbfQueue_addRef</name></member>
-    <member refid="sbf_queue_private_8h_1abef4c8004b90db6771d30ca33d23dde8" kind="function"><name>sbfQueue_removeRef</name></member>
-  </compound>
-  <compound refid="sbf_queue_win32_8h" kind="file"><name>sbfQueueWin32.h</name>
-    <member refid="sbf_queue_win32_8h_1a8bc4a90e1403cf84c0b31dac516419c0" kind="define"><name>SBF_QUEUE_DECL</name></member>
-    <member refid="sbf_queue_win32_8h_1a12a7585797d70a2e230bbae3180f6669" kind="define"><name>SBF_QUEUE_ITEM_DECL</name></member>
-  </compound>
   <compound refid="sbf_timer_8h" kind="file"><name>sbfTimer.h</name>
     <member refid="sbf_timer_8h_1a5fe71016a949366101c0a61e5f62c3fd" kind="define"><name>SBF_TIMER_MILLISECONDS</name></member>
     <member refid="sbf_timer_8h_1a44bb79a590d1ed47a18ef8b540ce3650" kind="define"><name>SBF_TIMER_MICROSECONDS</name></member>
@@ -84,15 +54,11 @@
     <member refid="sbf_timer_8h_1af5cdfdf64302d94b1197ca7ea5fece24" kind="function"><name>sbfTimer_destroy</name></member>
     <member refid="sbf_timer_8h_1a61b6a284186fcc95558f0f716b6e0f49" kind="function"><name>sbfTimer_getInterval</name></member>
   </compound>
-  <compound refid="sbf_timer_private_8h" kind="file"><name>sbfTimerPrivate.h</name>
-  </compound>
   <compound refid="sbf_common_handler_8h" kind="file"><name>sbfCommonHandler.h</name>
     <member refid="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14" kind="typedef"><name>sbfMcastTopicResolver</name></member>
     <member refid="sbf_common_handler_8h_1a4e3ac1f4227d17c997a31c515c6ddd9c" kind="function"><name>sbfMcastTopicResolver_create</name></member>
     <member refid="sbf_common_handler_8h_1a30b747a308778de0050c3569b6a72cd2" kind="function"><name>sbfMcastTopicResolver_destroy</name></member>
     <member refid="sbf_common_handler_8h_1a83c67b0c8070436da88f38a9e592ef5b" kind="function"><name>sbfMcastTopicResolver_makeAddress</name></member>
-  </compound>
-  <compound refid="sbf_common_handler_private_8h" kind="file"><name>sbfCommonHandlerPrivate.h</name>
   </compound>
   <compound refid="sbf_tcp_mesh_handler_8h" kind="file"><name>sbfTcpMeshHandler.h</name>
     <member refid="sbf_tcp_mesh_handler_8h_1a3e90b2d7822aeb5f41f96561820cb06d" kind="define"><name>SBF_TCP_MESH_HANDLER_DEFAULT_PORT</name></member>
@@ -118,18 +84,12 @@
     <member refid="sbf_request_pub_8h_1a012294d9f4dc9b15be7fdb8df4a5cf93" kind="function"><name>sbfRequestPub_send</name></member>
     <member refid="sbf_request_pub_8h_1a4fb1ec7c72757ca669a923570a914668" kind="function"><name>sbfRequestPub_getTopic</name></member>
   </compound>
-  <compound refid="sbf_request_pub_private_8h" kind="file"><name>sbfRequestPubPrivate.h</name>
-  </compound>
   <compound refid="sbf_request_reply_8h" kind="file"><name>sbfRequestReply.h</name>
     <member refid="sbf_request_reply_8h_1a3f3b3a4e7ab0f69f9989cb14560dad37" kind="define"><name>SBF_REQUEST_REPLY_HEADER_SIZE</name></member>
     <member refid="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae" kind="typedef"><name>sbfRequest</name></member>
     <member refid="sbf_request_reply_8h_1aed25e8d1a7ca6692c4a9d7d1a0dffa32" kind="function"><name>sbfRequest_reply</name></member>
     <member refid="sbf_request_reply_8h_1a6f3bc2485806f8174bf2f2e2f443e6af" kind="function"><name>sbfRequest_detach</name></member>
     <member refid="sbf_request_reply_8h_1acaa6ac8247a2a4a849015ea0b2517228" kind="function"><name>sbfRequest_destroy</name></member>
-  </compound>
-  <compound refid="sbf_request_reply_private_8h" kind="file"><name>sbfRequestReplyPrivate.h</name>
-    <member refid="sbf_request_reply_private_8h_1a287ef027733349451b0cb2ea13292e59" kind="typedef"><name>sbfRequestHeader</name></member>
-    <member refid="sbf_request_reply_private_8h_1acbb53dcd8d24f74dd94ae482d9450d3e" kind="function"><name>SBF_PACKED</name></member>
   </compound>
   <compound refid="sbf_request_sub_8h" kind="file"><name>sbfRequestSub.h</name>
     <member refid="sbf_request_sub_8h_1a6f43898e8b9affe12bb6c378cd5c08b3" kind="typedef"><name>sbfRequestSub</name></member>
@@ -139,8 +99,6 @@
     <member refid="sbf_request_sub_8h_1ab30d78106273929f9b4096bdfb876ec5" kind="function"><name>sbfRequestSub_destroy</name></member>
     <member refid="sbf_request_sub_8h_1a76545074d59af600ec9f6dd312151dad" kind="function"><name>sbfRequestSub_getTopic</name></member>
     <member refid="sbf_request_sub_8h_1a1b50dcbb9968b9653a32a9c7df1b9d59" kind="function"><name>sbfRequestSub_reply</name></member>
-  </compound>
-  <compound refid="sbf_request_sub_private_8h" kind="file"><name>sbfRequestSubPrivate.h</name>
   </compound>
   <compound refid="dir_52ff2686f796482dae89c725c32853bb" kind="dir"><name>handlers/common</name>
   </compound>

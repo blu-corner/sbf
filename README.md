@@ -31,6 +31,7 @@ Let's see how to create a publisher-subscriber communication.
 
 ### Publisher code
 Here are the first lines you will need to create your publisher:
+
 #### Create the middleware  
 ```c
 #include "sbfCommon.h" // Common stuff such as queues, threading, ...
@@ -43,7 +44,8 @@ sbfKeyValue properties = sbfKeyValue_create ();
 sbfKeyValue_put (properties, "transport.default.type", "udp");
 sbfKeyValue_put (properties, "transport.default.udp.interface", "eth0");
 sbfMw mw = sbfMw_create (log, properties);
-```  
+```
+
 #### Create a queue, the connection port and a thread to dispatch events
 ```c
 static void*
@@ -60,6 +62,7 @@ sbfQueue queue = sbfQueue_create (mw, "default");
 sbfThread_create (&t, dispatchCb, queue);
 sbfTport tport = sbfTport_create (mw, "default", SBF_MW_ALL_THREADS);
 ```
+
 #### Create the publisher
 ```c
 static void
@@ -82,6 +85,7 @@ sbfPub pub = sbfPub_create (tport, queue, "topic", NULL, NULL);
 ```
 
 You can find the whole example of the publisher  [here](https://gitlab.com/neueda/sbf/tree/master/tools/publisher)
+
 ### Subscriber code
 Now let's see how the subscriber works.
 
@@ -99,7 +103,8 @@ sbfKeyValue_put (properties, "transport.default.udp.interface", "eth0");
 sbfKeyValue_put (properties, "transport.default.tcpmesh.listen", "0");
 sbfKeyValue_put (properties, "transport.default.tcpmesh.connect0", "127.0.0.1");
 sbfMw mw = sbfMw_create (log, properties);
-```  
+```
+
 #### Create a queue, the connection port and a thread to dispatch events
 ```c
 static void*
@@ -116,6 +121,7 @@ sbfQueue queue = sbfQueue_create (mw, "default");
 sbfThread_create (&t, dispatchCb, queue);
 sbfTport tport = sbfTport_create (mw, "default", SBF_MW_ALL_THREADS);
 ```
+
 #### Create the subscriber
 ```c
 static void

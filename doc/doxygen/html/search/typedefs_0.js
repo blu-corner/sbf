@@ -11,7 +11,6 @@ var searchData=
   ['sbfqueuecb',['sbfQueueCb',['../sbf_queue_8h.html#a734fa954aded6cb14781887fdcb4c15b',1,'sbfQueue.h']]],
   ['sbfqueueitem',['sbfQueueItem',['../sbf_queue_8h.html#ad7433ebbf8ca13f31f33dddedbdf5533',1,'sbfQueue.h']]],
   ['sbfrequest',['sbfRequest',['../sbf_request_reply_8h.html#a73616a24e829d8ac5400e7f2986036ae',1,'sbfRequestReply.h']]],
-  ['sbfrequestheader',['sbfRequestHeader',['../sbf_request_reply_private_8h.html#a287ef027733349451b0cb2ea13292e59',1,'sbfRequestReplyPrivate.h']]],
   ['sbfrequestpub',['sbfRequestPub',['../sbf_request_pub_8h.html#a9bcb13977342f28786f635e341e29ad4',1,'sbfRequestPub.h']]],
   ['sbfrequestpubreadycb',['sbfRequestPubReadyCb',['../sbf_request_pub_8h.html#a906a2e4613ca59e07e2f4d6fa8d4e92e',1,'sbfRequestPub.h']]],
   ['sbfrequestpubreplycb',['sbfRequestPubReplyCb',['../sbf_request_pub_8h.html#a204000cf1d1fd85c729701e42ca0504e',1,'sbfRequestPub.h']]],

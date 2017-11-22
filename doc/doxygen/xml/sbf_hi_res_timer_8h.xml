@@ -5,83 +5,51 @@
     <includes local="yes">sbfCommon.h</includes>
     <includedby refid="sbf_mw_8h" local="yes">core/sbfMw.h</includedby>
     <incdepgraph>
-      <node id="27">
+      <node id="8">
         <label>core/sbfHiResTimer.h</label>
         <link refid="sbf_hi_res_timer_8h"/>
-        <childnode refid="28" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="28">
+      <node id="9">
         <label>sbfCommon.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="32">
-        <label>core/sbfHiResTimerPrivate.h</label>
-        <link refid="sbf_hi_res_timer_private_8h"/>
-        <childnode refid="33" relation="include">
-        </childnode>
-      </node>
-      <node id="33">
-        <label>core/sbfQueuePrivate.h</label>
-        <link refid="sbf_queue_private_8h"/>
-      </node>
-      <node id="35">
+      <node id="12">
         <label>handlers/common/sbfCommonHandler.h</label>
         <link refid="sbf_common_handler_8h"/>
-        <childnode refid="36" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="37">
-        <label>handlers/common/sbfCommonHandlerPrivate.h</label>
-        <link refid="sbf_common_handler_private_8h"/>
-      </node>
-      <node id="36">
+      <node id="13">
         <label>handlers/udp/sbfUdpHandler.h</label>
         <link refid="sbf_udp_handler_8h"/>
       </node>
-      <node id="31">
-        <label>core/sbfEventPrivate.h</label>
-        <link refid="sbf_event_private_8h"/>
-      </node>
-      <node id="29">
+      <node id="10">
         <label>core/sbfHiResTimer.h</label>
         <link refid="sbf_hi_res_timer_8h"/>
-        <childnode refid="30" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="38">
+      <node id="14">
         <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
         <link refid="sbf_tcp_mesh_handler_8h"/>
       </node>
-      <node id="34">
-        <label>core/sbfTimerPrivate.h</label>
-        <link refid="sbf_timer_private_8h"/>
-      </node>
-      <node id="39">
+      <node id="15">
         <label>requestreply/sbfRequestReply.h</label>
         <link refid="sbf_request_reply_8h"/>
       </node>
-      <node id="30">
+      <node id="11">
         <label>core/sbfMw.h</label>
         <link refid="sbf_mw_8h"/>
-        <childnode refid="31" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
-        </childnode>
-        <childnode refid="35" relation="include">
-        </childnode>
-        <childnode refid="37" relation="include">
-        </childnode>
-        <childnode refid="38" relation="include">
-        </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

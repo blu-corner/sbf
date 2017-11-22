@@ -8,124 +8,87 @@
     <includes local="yes">sbfKeyValue.h</includes>
     <includes refid="sbf_queue_8h" local="yes">sbfQueue.h</includes>
     <includes refid="sbf_timer_8h" local="yes">sbfTimer.h</includes>
-    <includedby refid="sbf_event_private_8h" local="yes">core/sbfEventPrivate.h</includedby>
-    <includedby refid="sbf_hi_res_timer_private_8h" local="yes">core/sbfHiResTimerPrivate.h</includedby>
-    <includedby refid="sbf_queue_private_8h" local="yes">core/sbfQueuePrivate.h</includedby>
-    <includedby refid="sbf_timer_private_8h" local="yes">core/sbfTimerPrivate.h</includedby>
     <includedby refid="sbf_common_handler_8h" local="yes">handlers/common/sbfCommonHandler.h</includedby>
-    <includedby refid="sbf_common_handler_private_8h" local="yes">handlers/common/sbfCommonHandlerPrivate.h</includedby>
     <includedby refid="sbf_tcp_mesh_handler_8h" local="yes">handlers/tcpmesh/sbfTcpMeshHandler.h</includedby>
     <includedby refid="sbf_udp_handler_8h" local="yes">handlers/udp/sbfUdpHandler.h</includedby>
     <includedby refid="sbf_request_reply_8h" local="yes">requestreply/sbfRequestReply.h</includedby>
     <incdepgraph>
-      <node id="58">
+      <node id="18">
         <label>sbfEvent.h</label>
         <link refid="sbf_event_8h"/>
-        <childnode refid="57" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="59">
+      <node id="19">
         <label>sbfHiResTimer.h</label>
         <link refid="sbf_hi_res_timer_8h"/>
-        <childnode refid="57" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="62">
+      <node id="22">
         <label>sbfTimer.h</label>
         <link refid="sbf_timer_8h"/>
-        <childnode refid="57" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="57">
+      <node id="17">
         <label>sbfCommon.h</label>
       </node>
-      <node id="56">
+      <node id="16">
         <label>core/sbfMw.h</label>
         <link refid="sbf_mw_8h"/>
-        <childnode refid="57" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="58" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="59" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="60" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="61" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="62" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="60">
+      <node id="20">
         <label>sbfKeyValue.h</label>
       </node>
-      <node id="61">
+      <node id="21">
         <label>sbfQueue.h</label>
         <link refid="sbf_queue_8h"/>
-        <childnode refid="57" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="65">
-        <label>core/sbfHiResTimerPrivate.h</label>
-        <link refid="sbf_hi_res_timer_private_8h"/>
-        <childnode refid="66" relation="include">
-        </childnode>
-      </node>
-      <node id="66">
-        <label>core/sbfQueuePrivate.h</label>
-        <link refid="sbf_queue_private_8h"/>
-      </node>
-      <node id="68">
+      <node id="24">
         <label>handlers/common/sbfCommonHandler.h</label>
         <link refid="sbf_common_handler_8h"/>
-        <childnode refid="69" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="70">
-        <label>handlers/common/sbfCommonHandlerPrivate.h</label>
-        <link refid="sbf_common_handler_private_8h"/>
-      </node>
-      <node id="69">
+      <node id="25">
         <label>handlers/udp/sbfUdpHandler.h</label>
         <link refid="sbf_udp_handler_8h"/>
       </node>
-      <node id="64">
-        <label>core/sbfEventPrivate.h</label>
-        <link refid="sbf_event_private_8h"/>
-      </node>
-      <node id="71">
+      <node id="26">
         <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
         <link refid="sbf_tcp_mesh_handler_8h"/>
       </node>
-      <node id="67">
-        <label>core/sbfTimerPrivate.h</label>
-        <link refid="sbf_timer_private_8h"/>
-      </node>
-      <node id="72">
+      <node id="27">
         <label>requestreply/sbfRequestReply.h</label>
         <link refid="sbf_request_reply_8h"/>
       </node>
-      <node id="63">
+      <node id="23">
         <label>core/sbfMw.h</label>
         <link refid="sbf_mw_8h"/>
-        <childnode refid="64" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="65" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
-        <childnode refid="66" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="67" relation="include">
-        </childnode>
-        <childnode refid="68" relation="include">
-        </childnode>
-        <childnode refid="70" relation="include">
-        </childnode>
-        <childnode refid="71" relation="include">
-        </childnode>
-        <childnode refid="69" relation="include">
-        </childnode>
-        <childnode refid="72" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

@@ -40,6 +40,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">###<sp/>Publisher<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">Here<sp/>are<sp/>the<sp/>first<sp/>lines<sp/>you<sp/>will<sp/>need<sp/>to<sp/>create<sp/>your<sp/>publisher:</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">####<sp/>Create<sp/>the<sp/>middleware<sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">#include<sp/>&quot;sbfCommon.h&quot;<sp/>//<sp/>Common<sp/>stuff<sp/>such<sp/>as<sp/>queues,<sp/>threading,<sp/>...</highlight></codeline>
@@ -52,7 +53,8 @@
 <codeline><highlight class="normal">sbfKeyValue_put<sp/>(properties,<sp/>&quot;transport.default.type&quot;,<sp/>&quot;udp&quot;);</highlight></codeline>
 <codeline><highlight class="normal">sbfKeyValue_put<sp/>(properties,<sp/>&quot;transport.default.udp.interface&quot;,<sp/>&quot;eth0&quot;);</highlight></codeline>
 <codeline><highlight class="normal">sbfMw<sp/>mw<sp/>=<sp/>sbfMw_create<sp/>(log,<sp/>properties);</highlight></codeline>
-<codeline><highlight class="normal">```<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">####<sp/>Create<sp/>a<sp/>queue,<sp/>the<sp/>connection<sp/>port<sp/>and<sp/>a<sp/>thread<sp/>to<sp/>dispatch<sp/>events</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">static<sp/>void*</highlight></codeline>
@@ -69,6 +71,7 @@
 <codeline><highlight class="normal">sbfThread_create<sp/>(&amp;t,<sp/>dispatchCb,<sp/>queue);</highlight></codeline>
 <codeline><highlight class="normal">sbfTport<sp/>tport<sp/>=<sp/>sbfTport_create<sp/>(mw,<sp/>&quot;default&quot;,<sp/>SBF_MW_ALL_THREADS);</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">####<sp/>Create<sp/>the<sp/>publisher</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">static<sp/>void</highlight></codeline>
@@ -91,6 +94,7 @@
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">You<sp/>can<sp/>find<sp/>the<sp/>whole<sp/>example<sp/>of<sp/>the<sp/>publisher<sp/><sp/>[here](https://gitlab.com/neueda/sbf/tree/master/tools/publisher)</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">###<sp/>Subscriber<sp/>code</highlight></codeline>
 <codeline><highlight class="normal">Now<sp/>let&apos;s<sp/>see<sp/>how<sp/>the<sp/>subscriber<sp/>works.</highlight></codeline>
 <codeline></codeline>
@@ -108,7 +112,8 @@
 <codeline><highlight class="normal">sbfKeyValue_put<sp/>(properties,<sp/>&quot;transport.default.tcpmesh.listen&quot;,<sp/>&quot;0&quot;);</highlight></codeline>
 <codeline><highlight class="normal">sbfKeyValue_put<sp/>(properties,<sp/>&quot;transport.default.tcpmesh.connect0&quot;,<sp/>&quot;127.0.0.1&quot;);</highlight></codeline>
 <codeline><highlight class="normal">sbfMw<sp/>mw<sp/>=<sp/>sbfMw_create<sp/>(log,<sp/>properties);</highlight></codeline>
-<codeline><highlight class="normal">```<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">####<sp/>Create<sp/>a<sp/>queue,<sp/>the<sp/>connection<sp/>port<sp/>and<sp/>a<sp/>thread<sp/>to<sp/>dispatch<sp/>events</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">static<sp/>void*</highlight></codeline>
@@ -125,6 +130,7 @@
 <codeline><highlight class="normal">sbfThread_create<sp/>(&amp;t,<sp/>dispatchCb,<sp/>queue);</highlight></codeline>
 <codeline><highlight class="normal">sbfTport<sp/>tport<sp/>=<sp/>sbfTport_create<sp/>(mw,<sp/>&quot;default&quot;,<sp/>SBF_MW_ALL_THREADS);</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">####<sp/>Create<sp/>the<sp/>subscriber</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
 <codeline><highlight class="normal">static<sp/>void</highlight></codeline>

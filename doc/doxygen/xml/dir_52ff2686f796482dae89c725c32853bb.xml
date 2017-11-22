@@ -3,7 +3,6 @@
   <compounddef id="dir_52ff2686f796482dae89c725c32853bb" kind="dir">
     <compoundname>handlers/common</compoundname>
     <innerfile refid="sbf_common_handler_8h">sbfCommonHandler.h</innerfile>
-    <innerfile refid="sbf_common_handler_private_8h">sbfCommonHandlerPrivate.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
