@@ -8,6 +8,24 @@ On the other hand, the `requester-replier` communication is about defining a cha
 
 > TBD
 
+## API
+Here you are the list of modules the API offers to build your transport
+* Core
+  * [Event](@ref sbfEvent.h)
+  * Timers
+    * [Timer](@ref sbfTimer.h)
+    * [Hi resolution timer](@ref sbfHiResTimer.h)
+  * [Queue](@ref sbfQueue.h)
+  * [Middleware](@ref sbfMw.h)
+* Handlers
+  * [Common handler](@ref sbfCommonHandler.h)
+  * [TCP mesh handler](@ref sbfTcpMeshHandler.h)
+  * [UDP handler](@ref sbfUdpHandler.h)
+* Request / reply
+  * [Request publisher](@ref sbfRequestPub.h)
+  * [Request subscriber](@ref sbfRequestSub.h)
+  * [Request reply](@ref sbfRequestReply.h)
+
 ## Publisher - subscriber example
 Let's see how to create a publisher-subscriber communication.
 
@@ -171,25 +189,7 @@ sbf-subscriber
 The requester sends messages and the replier reads the message and replies.
 Something similar for the publisher and subscriber.
 
-# API
-Here you are the list of modules the API offers to build your transport
-* Core
-  * [Event](@ref sbfEvent.h)
-  * Timers
-    * [Timer](@ref sbfTimer.h)
-    * [Hi resolution timer](@ref sbfHiResTimer.h)
-  * [Queue](@ref sbfQueue.h)
-  * [Middleware](@ref sbfMw.h)
-* Handlers
-  * [Common handler](@ref sbfCommonHandler.h)
-  * [TCP mesh handler](@ref sbfTcpMeshHandler.h)
-  * [UDP handler](@ref sbfUdpHandler.h)
-* Request / reply
-  * [Request publisher](@ref sbfRequestPub.h)
-  * [Request subscriber](@ref sbfRequestSub.h)
-  * [Request reply](@ref sbfRequestReply.h)
-
-\# Contribute
+# Contribute
 > TBD
 
 # License
