@@ -7,37 +7,37 @@
     <includes refid="sbf_queue_8h" local="yes">sbfQueue.h</includes>
     <includedby refid="sbf_request_reply_8h" local="yes">requestreply/sbfRequestReply.h</includedby>
     <incdepgraph>
-      <node id="105">
+      <node id="107">
         <label>requestreply/sbfRequestSub.h</label>
         <link refid="sbf_request_sub_8h"/>
-        <childnode refid="106" relation="include">
-        </childnode>
-        <childnode refid="107" relation="include">
-        </childnode>
         <childnode refid="108" relation="include">
         </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
       </node>
-      <node id="107">
+      <node id="109">
         <label>sbfTport.h</label>
       </node>
-      <node id="106">
+      <node id="108">
         <label>sbfCommon.h</label>
       </node>
-      <node id="108">
+      <node id="110">
         <label>sbfQueue.h</label>
         <link refid="sbf_queue_8h"/>
-        <childnode refid="106" relation="include">
+        <childnode refid="108" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="109">
+      <node id="111">
         <label>requestreply/sbfRequestSub.h</label>
         <link refid="sbf_request_sub_8h"/>
-        <childnode refid="110" relation="include">
+        <childnode refid="112" relation="include">
         </childnode>
       </node>
-      <node id="110">
+      <node id="112">
         <label>requestreply/sbfRequestReply.h</label>
         <link refid="sbf_request_reply_8h"/>
       </node>

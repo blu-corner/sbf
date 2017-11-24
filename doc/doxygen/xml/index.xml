@@ -73,6 +73,8 @@
     <member refid="sbf_udp_handler_8h_1a826119cf714b6cc3ff3dcab73a9837b1" kind="typedef"><name>sbfUdpHandler</name></member>
     <member refid="sbf_udp_handler_8h_1a9d25098629ad0466479d14180d286667" kind="function"><name>SBF_RB_TREE</name></member>
   </compound>
+  <compound refid="know__issues_8md" kind="file"><name>know_issues.md</name>
+  </compound>
   <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
   </compound>
   <compound refid="sbf_request_pub_8h" kind="file"><name>sbfRequestPub.h</name>
@@ -99,6 +101,8 @@
     <member refid="sbf_request_sub_8h_1ab30d78106273929f9b4096bdfb876ec5" kind="function"><name>sbfRequestSub_destroy</name></member>
     <member refid="sbf_request_sub_8h_1a76545074d59af600ec9f6dd312151dad" kind="function"><name>sbfRequestSub_getTopic</name></member>
     <member refid="sbf_request_sub_8h_1a1b50dcbb9968b9653a32a9c7df1b9d59" kind="function"><name>sbfRequestSub_reply</name></member>
+  </compound>
+  <compound refid="md_know_issues" kind="page"><name>md_know_issues</name>
   </compound>
   <compound refid="dir_52ff2686f796482dae89c725c32853bb" kind="dir"><name>handlers/common</name>
   </compound>

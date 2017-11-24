@@ -18,8 +18,8 @@ struct sbfQueueImpl;
 typedef struct sbfTimerImpl* sbfTimer;
 
 /*!
-   \brief callback invoked when item needs to be processed.
-   \param item the timer handler.
+   \brief callback invoked when timer needs to be processed.
+   \param timer the timer handler.
    \param closure the user data associated to the queue item.
 */
 typedef void (*sbfTimerCb) (sbfTimer timer, void* closure);

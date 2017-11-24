@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="md_know_issues" kind="page">
+    <compoundname>md_know_issues</compoundname>
+    <title>Issues</title>
+    <detaileddescription>
+<para><heading level="2">General</heading>
+</para><para><itemizedlist>
+<listitem><para>No common error handling mechanisms. Sometimes the library just makes the program to end abruptly, some others the error is handled at application level, and some others the error is not handled. Define clear error codes per module so that they indicate the produced error as well as the mechanisms to handle them.</para></listitem><listitem><para>The examples does not take care of the ownership of the memory allocated by the API.</para></listitem><listitem><para>Destroy methods does not release the resources allocated during creation. As an example, timers does not stop callbacks when destroyed so callbacks will be fired internally.</para></listitem><listitem><para>Destroy method should not call release reference count... Destroy should be called as the action to release all of the resources when reference count come to zero. Better to define a release method invoking the destroy when no more references are pointing to the &apos;object&apos;.</para></listitem><listitem><para>All mandatory parameters defined at the API (public functions), should be checked with assertion to facilitate debugging. In the case that other parameters requires to be checked at runtime, they should be checked at the beginning of the method and propagate the error when proceeds.</para></listitem></itemizedlist>
+</para><para>Some private structures are used in public API (e.g. sbfBatch sbfBatch_create (struct sbfTportImpl* tport)). </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

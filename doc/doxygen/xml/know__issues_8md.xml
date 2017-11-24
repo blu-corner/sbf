@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="know__issues_8md" kind="file" language="Markdown">
+    <compoundname>know_issues.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Issues</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>General</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>No<sp/>common<sp/>error<sp/>handling<sp/>mechanisms.<sp/>Sometimes<sp/>the<sp/>library<sp/>just<sp/>makes<sp/>the<sp/>program</highlight></codeline>
+<codeline><highlight class="normal"><sp/>to<sp/>end<sp/>abruptly,<sp/>some<sp/>others<sp/>the<sp/>error<sp/>is<sp/>handled<sp/>at<sp/>application<sp/>level,<sp/>and</highlight></codeline>
+<codeline><highlight class="normal"><sp/>some<sp/>others<sp/>the<sp/>error<sp/>is<sp/>not<sp/>handled.<sp/>Define<sp/>clear<sp/>error<sp/>codes<sp/>per<sp/>module<sp/>so</highlight></codeline>
+<codeline><highlight class="normal"><sp/>that<sp/>they<sp/>indicate<sp/>the<sp/>produced<sp/>error<sp/>as<sp/>well<sp/>as<sp/>the<sp/>mechanisms<sp/>to<sp/>handle<sp/>them.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>The<sp/>examples<sp/>does<sp/>not<sp/>take<sp/>care<sp/>of<sp/>the<sp/>ownership<sp/>of<sp/>the<sp/>memory<sp/>allocated<sp/>by</highlight></codeline>
+<codeline><highlight class="normal"><sp/>the<sp/>API.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Destroy<sp/>methods<sp/>does<sp/>not<sp/>release<sp/>the<sp/>resources<sp/>allocated<sp/>during<sp/>creation.<sp/>As</highlight></codeline>
+<codeline><highlight class="normal"><sp/>an<sp/>example,<sp/>timers<sp/>does<sp/>not<sp/>stop<sp/>callbacks<sp/>when<sp/>destroyed<sp/>so<sp/>callbacks<sp/>will<sp/>be</highlight></codeline>
+<codeline><highlight class="normal"><sp/>fired<sp/>internally.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Destroy<sp/>method<sp/>should<sp/>not<sp/>call<sp/>release<sp/>reference<sp/>count...<sp/>Destroy<sp/>should<sp/>be</highlight></codeline>
+<codeline><highlight class="normal"><sp/>called<sp/>as<sp/>the<sp/>action<sp/>to<sp/>release<sp/>all<sp/>of<sp/>the<sp/>resources<sp/>when<sp/>reference<sp/>count<sp/>come</highlight></codeline>
+<codeline><highlight class="normal"><sp/>to<sp/>zero.<sp/>Better<sp/>to<sp/>define<sp/>a<sp/>release<sp/>method<sp/>invoking<sp/>the<sp/>destroy<sp/>when<sp/>no<sp/>more</highlight></codeline>
+<codeline><highlight class="normal"><sp/>references<sp/>are<sp/>pointing<sp/>to<sp/>the<sp/>&apos;object&apos;.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>All<sp/>mandatory<sp/>parameters<sp/>defined<sp/>at<sp/>the<sp/>API<sp/>(public<sp/>functions),</highlight></codeline>
+<codeline><highlight class="normal"><sp/>should<sp/>be<sp/>checked<sp/>with<sp/>assertion<sp/>to<sp/>facilitate<sp/>debugging.<sp/>In<sp/>the<sp/>case<sp/>that</highlight></codeline>
+<codeline><highlight class="normal"><sp/>other<sp/>parameters<sp/>requires<sp/>to<sp/>be<sp/>checked<sp/>at<sp/>runtime,<sp/>they<sp/>should<sp/>be<sp/>checked</highlight></codeline>
+<codeline><highlight class="normal"><sp/>at<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>method<sp/>and<sp/>propagate<sp/>the<sp/>error<sp/>when<sp/>proceeds.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Some<sp/>private<sp/>structures<sp/>are<sp/>used<sp/>in<sp/>public<sp/>API</highlight></codeline>
+<codeline><highlight class="normal">(e.g.<sp/>sbfBatch<sp/>sbfBatch_create<sp/>(struct<sp/>sbfTportImpl*<sp/>tport)).</highlight></codeline>
+    </programlisting>
+    <location file="know_issues.md"/>
+  </compounddef>
+</doxygen>

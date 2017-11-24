@@ -99,11 +99,11 @@
         <argsstring>)(sbfTimer timer, void *closure)</argsstring>
         <name>sbfTimerCb</name>
         <briefdescription>
-<para>callback invoked when item needs to be processed. </para>        </briefdescription>
+<para>callback invoked when timer needs to be processed. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>item</parametername>
+<parametername>timer</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>the timer handler. </para></parameterdescription>

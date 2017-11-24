@@ -2,6 +2,7 @@ var NAVTREE =
 [
   [ "SBF", "index.html", [
     [ "SBF - Super Bloody Fast", "index.html", null ],
+    [ "Issues", "md_know_issues.html", null ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "File Members", "globals.html", [

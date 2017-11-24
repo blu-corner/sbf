@@ -739,11 +739,11 @@
 <dl class="type">
 <dt id="_CPPv210sbfTimerCb">
 <span id="sbfTimerCb"></span><span class="target" id="sbf_timer_8h_1ad4886ffe6e46a398e2c741ebd64fe552"></span><em class="property">typedef </em>void (*<code class="descname">sbfTimerCb</code>)<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv28sbfTimer" title="sbfTimer">sbfTimer</a> timer, void *closure<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210sbfTimerCb" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>callback invoked when item needs to be processed. </p>
+<dd><p>callback invoked when timer needs to be processed. </p>
 <p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">item</span></code>: the timer handler. </li>
+<li><code class="docutils literal"><span class="pre">timer</span></code>: the timer handler. </li>
 <li><code class="docutils literal"><span class="pre">closure</span></code>: the user data associated to the queue item. </li>
 </ul>
 </dd>
@@ -969,6 +969,11 @@
 
 </div>
 </dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="know__issues_8md"></span><em>file</em> <code class="descname">know_issues.md</code></dt>
+<dd></dd></dl>
 
 <dl class="file">
 <dt>
@@ -1292,6 +1297,21 @@
 </dd></dl>
 
 </div>
+</dd></dl>
+
+<dl class="page">
+<dt>
+<span class="target" id="md_know_issues"></span><em>page</em> <code class="descname">md_know_issues</code></dt>
+<dd><p><em>General</em></p>
+<p><ul class="simple">
+<li>No common error handling mechanisms. Sometimes the library just makes the program to end abruptly, some others the error is handled at application level, and some others the error is not handled. Define clear error codes per module so that they indicate the produced error as well as the mechanisms to handle them.</li>
+<li>The examples does not take care of the ownership of the memory allocated by the API.</li>
+<li>Destroy methods does not release the resources allocated during creation. As an example, timers does not stop callbacks when destroyed so callbacks will be fired internally.</li>
+<li>Destroy method should not call release reference count… Destroy should be called as the action to release all of the resources when reference count come to zero. Better to define a release method invoking the destroy when no more references are pointing to the ‘object’.</li>
+<li>All mandatory parameters defined at the API (public functions), should be checked with assertion to facilitate debugging. In the case that other parameters requires to be checked at runtime, they should be checked at the beginning of the method and propagate the error when proceeds.</li>
+</ul>
+</p>
+<p>Some private structures are used in public API (e.g. sbfBatch sbfBatch_create (struct sbfTportImpl* tport)). </p>
 </dd></dl>
 
 <dl class="dir">
