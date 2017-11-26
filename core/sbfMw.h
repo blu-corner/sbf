@@ -18,6 +18,11 @@ SBF_BEGIN_DECLS
 typedef struct sbfMwImpl* sbfMw;
 typedef struct sbfMwThreadImpl* sbfMwThread;
 
+/** Supported capabilities bitmap */
+#define CAP_ALL_MASK          0x00000001 // All available capabilities
+#define CAP_HI_RES_COUNTER    1 << 0     // Hi resolution counters
+// TODO: Extends other capabilities here...
+
 /** \brief Maximum number of threads */
 #define SBF_MW_THREAD_LIMIT 64
 /** \brief all threads constant */
@@ -98,6 +103,14 @@ uint64_t sbfMw_getThreadMask (sbfMwThread thread);
    \return the event base for a given thread.
 */
 struct event_base* sbfMw_getThreadEventBase (sbfMwThread thread);
+
+/*!
+ \brief Returns CAP_SUPPORTED if feature is supported,
+ otherwise CAP_UNSUPPORTED is returned.
+ \param feature_mask the mask indicating the capabilities to be check.
+ \return capabilities supported.
+ */
+uint32_t sbfMw_check_supported(uint32_t cap_mask);
 
 SBF_END_DECLS
 

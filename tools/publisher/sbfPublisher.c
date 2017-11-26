@@ -4,12 +4,16 @@
    \copyright © Copyright 2016 Neueda all rights reserved.
 */
 
+#include <time.h>
+
 #include "sbfCommon.h"
 #include "sbfMw.h"
 #include "sbfPerfCounter.h"
 #include "sbfTport.h"
 
 uint32_t gPublished;
+
+#define MILLISECONDS_TO_NANO 1000000
 
 /*!
    \brief This is a callback raised by the thread consuming messages from the queue.
@@ -56,6 +60,49 @@ usage (const char* argv0)
     exit (1);
 }
 
+static void send_forever_perf_counter (sbfPub pub, size_t size, uint64_t rate)
+{
+    uint64_t* payload;
+    uint64_t  interval;
+
+    // Translate timing into ticks (high performance counter)
+    if (rate > 0)
+        interval = (uint64_t)(sbfPerfCounter_ticks (1000000) / rate);
+    else
+        interval = 0;
+    
+    // Alloc size for the payload and send the high performance counter values
+    // during the defined rate.
+    payload = xmalloc (size);
+    for (;;)
+    {
+        *payload = sbfPerfCounter_get ();
+        until = (*payload) + interval;
+        
+        sbfPub_send (pub, payload, size);
+        gPublished++;
+        
+        while (sbfPerfCounter_get () < until)
+        /* nothing */;
+    }
+}
+
+static void send_forever_usleep (sbfPub pub, size_t size, uint64_t rate)
+{
+    uint64_t* payload;
+
+    // Alloc size for the payload and send the high performance counter values
+    // during the defined rate.
+    payload = xmalloc (size);
+    for (;;)
+    {
+        *payload = sbfPerfCounter_get ();
+        sbfPub_send (pub, payload, size);
+        gPublished++;
+        nanosleep(rate);
+    }
+}
+
 /*!
    \brief This function is the main entry point for the subscriber command.
    You can specify the following parameters to run the subscriber:
@@ -80,7 +127,6 @@ main (int argc, char** argv)
     sbfKeyValue        properties;
     sbfLog             log;
     sbfPub             pub;
-    uint64_t           interval;
     uint64_t           until;
     int                opt;
     const char*        topic = "OUT";
@@ -89,7 +135,6 @@ main (int argc, char** argv)
     const char*        interf = "eth0";
     unsigned long long ull;
     size_t             size = 200;
-    uint64_t*          payload;
 
     // Initialise the logging system
     log = sbfLog_create (NULL, "%s", "");
@@ -151,26 +196,18 @@ main (int argc, char** argv)
 
     pub = sbfPub_create (tport, queue, topic, NULL, NULL);
 
-    // Translate timing into ticks (high performance counter)
-    if (rate > 0)
-        interval = (uint64_t)(sbfPerfCounter_ticks (1000000) / rate);
-    else
-        interval = 0;
-
-    // Alloc size for the payload and send the high performance counter values
-    // during the defined rate.
-    payload = xmalloc (size);
-    for (;;)
+    // If perf counter is supported send message with perf counter implementation,
+    // otherwise proceed with usleep.
+    if(sbfMw_is_supported(CAP_HI_RES_COUNTER) == CAP_HI_RES_COUNTER)
     {
-        *payload = sbfPerfCounter_get ();
-        until = (*payload) + interval;
-
-        sbfPub_send (pub, payload, size);
-        gPublished++;
-
-        while (sbfPerfCounter_get () < until)
-            /* nothing */;
+        send_forever_perf_counter(pub, size, rate);
     }
-
+    else
+    {
+        send_forever_usleep(pub, size, rate * MILLISECONDS_TO_NANO);
+    }
+    
+    
+    
     exit (0);
 }
