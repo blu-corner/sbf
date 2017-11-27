@@ -343,6 +343,17 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Defines</p>
 <dl class="macro">
+<dt id="c.CAP_ALL_MASK">
+<span class="target" id="sbf_mw_8h_1aeeea08256821a686bc39abc372079d82"></span><code class="descname">CAP_ALL_MASK</code><a class="headerlink" href="#c.CAP_ALL_MASK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Supported capabilities bitmap </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.CAP_HI_RES_COUNTER">
+<span class="target" id="sbf_mw_8h_1a0ac31433d3805f2469d6827a74034dbd"></span><code class="descname">CAP_HI_RES_COUNTER</code><a class="headerlink" href="#c.CAP_HI_RES_COUNTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
 <dt id="c.SBF_MW_THREAD_LIMIT">
 <span class="target" id="sbf_mw_8h_1a3a43b58a7ec394a4cba898f47c99d50f"></span><code class="descname">SBF_MW_THREAD_LIMIT</code><a class="headerlink" href="#c.SBF_MW_THREAD_LIMIT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum number of threads. </p>
@@ -516,6 +527,22 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal"><span class="pre">thread</span></code>: the thread handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv221sbfMw_check_supported8uint32_t">
+<span id="sbfMw_check_supported__uint32_t"></span><span class="target" id="sbf_mw_8h_1aad63d9e99110099c757a2855f41fb337"></span>uint32_t <code class="descname">sbfMw_check_supported</code><span class="sig-paren">(</span>uint32_t <em>cap_mask</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv221sbfMw_check_supported8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns CAP_SUPPORTED if feature is supported, otherwise CAP_UNSUPPORTED is returned. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>capabilities supported. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">feature_mask</span></code>: the mask indicating the capabilities to be check. </li>
 </ul>
 </dd>
 </dl>

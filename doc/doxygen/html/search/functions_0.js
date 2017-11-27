@@ -9,6 +9,7 @@ var searchData=
   ['sbfmcasttopicresolver_5fcreate',['sbfMcastTopicResolver_create',['../sbf_common_handler_8h.html#a4e3ac1f4227d17c997a31c515c6ddd9c',1,'sbfCommonHandler.h']]],
   ['sbfmcasttopicresolver_5fdestroy',['sbfMcastTopicResolver_destroy',['../sbf_common_handler_8h.html#a30b747a308778de0050c3569b6a72cd2',1,'sbfCommonHandler.h']]],
   ['sbfmcasttopicresolver_5fmakeaddress',['sbfMcastTopicResolver_makeAddress',['../sbf_common_handler_8h.html#a83c67b0c8070436da88f38a9e592ef5b',1,'sbfCommonHandler.h']]],
+  ['sbfmw_5fcheck_5fsupported',['sbfMw_check_supported',['../sbf_mw_8h.html#aad63d9e99110099c757a2855f41fb337',1,'sbfMw.h']]],
   ['sbfmw_5fcreate',['sbfMw_create',['../sbf_mw_8h.html#a9f7c2a1535eb545d6e73bb8ebc33a209',1,'sbfMw.h']]],
   ['sbfmw_5fdestroy',['sbfMw_destroy',['../sbf_mw_8h.html#a4ac93cb7885ade2979c7663b557e119c',1,'sbfMw.h']]],
   ['sbfmw_5fgetlog',['sbfMw_getLog',['../sbf_mw_8h.html#aa7e45fc4943d4080534faf9d4b2f394f',1,'sbfMw.h']]],

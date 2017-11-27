@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="md_know_issues" kind="page">
     <compoundname>md_know_issues</compoundname>
-    <title>Issues</title>
+    <title>Known issues / TODO List</title>
     <detaileddescription>
 <para><heading level="2">General</heading>
 </para><para><itemizedlist>
