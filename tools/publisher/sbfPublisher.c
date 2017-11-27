@@ -74,6 +74,13 @@ usage (const char* argv0)
     exit (1);
 }
 
+/*!
+ * \brief Sends payload in an endless loop using the hi resolution performance counters.
+ * \param pub the publisher handler.
+ * \param payload pointer to the payload data.
+ * \param size the size of the payload
+ * \param rate the time in nanoseconds between every send operation.
+ */
 static void send_forever_perf_counter (sbfPub pub, uint64_t* payload, size_t size, uint64_t rate)
 {
     uint64_t  interval;
@@ -99,11 +106,11 @@ static void send_forever_perf_counter (sbfPub pub, uint64_t* payload, size_t siz
 }
 
 /*!
- *
- * @param pub
- * @param payload
- * @param size
- * @param nanos
+ * \brief Sends payload in an endless loop using the nanosleep function.
+ * \param pub the publisher handler.
+ * \param payload pointer to the payload data.
+ * \param size the size of the payload
+ * \param nanos the time in nanoseconds between every send operation.
  */
 static void send_forever_nanosleep(sbfPub pub, uint64_t *payload, size_t size, uint64_t nanos)
 {
