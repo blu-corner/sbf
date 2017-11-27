@@ -58,20 +58,21 @@ messageCb (sbfSub sub, sbfBuffer buffer, void* closure)
     uint64_t* payload = sbfBuffer_getData (buffer);
     uint64_t  now;
     uint64_t  this = *payload;
-    double    interval;
+    double    interval = 0;
 
-    now = sbfPerfCounter_get ();
-    if (now < this)
-        interval = 0;
-    else
-        interval = sbfPerfCounter_microseconds (now - this);
+    if(CAP_HI_RES_COUNTER == sbfMw_check_supported(CAP_HI_RES_COUNTER))
+    {
+        now = sbfPerfCounter_get ();
+        if (now > this)
+            interval = sbfPerfCounter_microseconds (now - this);
+        gTimeTotal += (uint64_t)interval;
+        if (interval < gTimeLow)
+            gTimeLow = (uint64_t)interval;
+        if (interval > gTimeHigh)
+            gTimeHigh = (uint64_t)interval;
+    }
 
     gMessages++;
-    gTimeTotal += (uint64_t)interval;
-    if (interval < gTimeLow)
-        gTimeLow = (uint64_t)interval;
-    if (interval > gTimeHigh)
-        gTimeHigh = (uint64_t)interval;
 }
 
 /*!
