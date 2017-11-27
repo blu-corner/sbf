@@ -4,16 +4,30 @@
    \copyright © Copyright 2016 Neueda all rights reserved.
 */
 
+// External dependencies
 #include <time.h>
 
+// SBF dependencies
 #include "sbfCommon.h"
 #include "sbfMw.h"
 #include "sbfPerfCounter.h"
 #include "sbfTport.h"
 
+//----------------------------------------------------------------------------------------------------------------------
+// Globals
+//----------------------------------------------------------------------------------------------------------------------
+
 uint32_t gPublished;
 
+//----------------------------------------------------------------------------------------------------------------------
+// Consts
+//----------------------------------------------------------------------------------------------------------------------
+
 #define MILLISECONDS_TO_NANO 1000000
+
+//----------------------------------------------------------------------------------------------------------------------
+// Private functions
+//----------------------------------------------------------------------------------------------------------------------
 
 /*!
    \brief This is a callback raised by the thread consuming messages from the queue.
@@ -60,20 +74,17 @@ usage (const char* argv0)
     exit (1);
 }
 
-static void send_forever_perf_counter (sbfPub pub, size_t size, uint64_t rate)
+static void send_forever_perf_counter (sbfPub pub, uint64_t* payload, size_t size, uint64_t rate)
 {
-    uint64_t* payload;
     uint64_t  interval;
+    uint64_t until;
 
     // Translate timing into ticks (high performance counter)
     if (rate > 0)
         interval = (uint64_t)(sbfPerfCounter_ticks (1000000) / rate);
     else
         interval = 0;
-    
-    // Alloc size for the payload and send the high performance counter values
-    // during the defined rate.
-    payload = xmalloc (size);
+
     for (;;)
     {
         *payload = sbfPerfCounter_get ();
@@ -87,21 +98,34 @@ static void send_forever_perf_counter (sbfPub pub, size_t size, uint64_t rate)
     }
 }
 
-static void send_forever_usleep (sbfPub pub, size_t size, uint64_t rate)
+/*!
+ *
+ * @param pub
+ * @param payload
+ * @param size
+ * @param nanos
+ */
+static void send_forever_nanosleep(sbfPub pub, uint64_t *payload, size_t size, uint64_t nanos)
 {
-    uint64_t* payload;
+    struct timespec time1 = {
+        .tv_sec = 0,
+        .tv_nsec = nanos
+    }, time2;
 
     // Alloc size for the payload and send the high performance counter values
-    // during the defined rate.
-    payload = xmalloc (size);
+    // during the defined nanos.
     for (;;)
     {
         *payload = sbfPerfCounter_get ();
         sbfPub_send (pub, payload, size);
         gPublished++;
-        nanosleep(rate);
+        nanosleep(&time1, &time2);
     }
 }
+
+//----------------------------------------------------------------------------------------------------------------------
+// Public functions
+//----------------------------------------------------------------------------------------------------------------------
 
 /*!
    \brief This function is the main entry point for the subscriber command.
@@ -127,13 +151,13 @@ main (int argc, char** argv)
     sbfKeyValue        properties;
     sbfLog             log;
     sbfPub             pub;
-    uint64_t           until;
     int                opt;
     const char*        topic = "OUT";
     uint64_t           rate = 1000;
     const char*        handler = "udp";
     const char*        interf = "eth0";
     unsigned long long ull;
+    uint64_t* payload;
     size_t             size = 200;
 
     // Initialise the logging system
@@ -196,18 +220,20 @@ main (int argc, char** argv)
 
     pub = sbfPub_create (tport, queue, topic, NULL, NULL);
 
+    // Alloc size for the payload and send the high performance counter values
+    // during the defined rate.
+    payload = xmalloc (size);
+
     // If perf counter is supported send message with perf counter implementation,
     // otherwise proceed with usleep.
-    if(sbfMw_is_supported(CAP_HI_RES_COUNTER) == CAP_HI_RES_COUNTER)
+    if(sbfMw_check_supported(CAP_HI_RES_COUNTER) == CAP_HI_RES_COUNTER)
     {
-        send_forever_perf_counter(pub, size, rate);
+        send_forever_perf_counter(pub, payload, size, rate);
     }
     else
     {
-        send_forever_usleep(pub, size, rate * MILLISECONDS_TO_NANO);
+        send_forever_nanosleep(pub, payload, size, rate * MILLISECONDS_TO_NANO);
     }
-    
-    
-    
+
     exit (0);
 }

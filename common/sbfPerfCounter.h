@@ -5,6 +5,12 @@
 
 SBF_BEGIN_DECLS
 
+/*!
+ \brief Returns the cpu frequency per microsecond.
+ If there is an error during the frequency detection zero will be returned.
+ \return a positive value indicating the cpu frequency per microsecond or zero in case of not being able to
+ determine the frequency.
+ */
 uint64_t sbfPerfCounter_frequency (void); /* per microsecond */
 
 uint64_t sbfPerfCounter_ticks (double microseconds);

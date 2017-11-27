@@ -42,7 +42,7 @@ sbfPerfCounter_frequency (void)
 
     f = fopen ("/proc/cpuinfo", "r");
     if (f == NULL)
-        SBF_FATAL ("couldn't open /proc/cpuinfo");
+        return 0;
 
     line = NULL;
     while (getline (&line, &size, f) != -1)
@@ -57,8 +57,6 @@ sbfPerfCounter_frequency (void)
 
     fclose (f);
 
-    if (!(frequency > 0))
-        SBF_FATAL ("couldn't read CPU frequency");
     return frequency;
 }
 #endif

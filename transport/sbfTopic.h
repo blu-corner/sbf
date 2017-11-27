@@ -35,8 +35,8 @@ sbfTopic sbfTopic_create (sbfTopicType type, const char* string);
 
 /*!
    \brief Releases all the resources allocated by the given topic handler.
+   \param topic topic handler.
 */
-\param topic topic handler.
 void sbfTopic_destroy (sbfTopic topic);
 
 /*!
