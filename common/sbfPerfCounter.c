@@ -32,30 +32,36 @@ uint64_t
 sbfPerfCounter_frequency (void)
 {
     static uint64_t    frequency;
+    static int         processed = 0;
     FILE*              f;
     char*              line;
     size_t             size;
     unsigned long long n;
 
-    if (frequency > 0)
-        return frequency;
-
-    f = fopen ("/proc/cpuinfo", "r");
-    if (f == NULL)
-        return 0;
-
-    line = NULL;
-    while (getline (&line, &size, f) != -1)
+    // Get the frequence and cache it
+    if (processed == 0)
     {
-        if (sscanf (line, "cpu MHz         : %llu.", &n) == 1)
-        {
-            frequency = n;
-            break;
-        }
-    }
-    free (line);
+        f = fopen ("/proc/cpuinfo", "r");
+        // Not supported method to collect CPU Frequency
+        if (f == NULL)
+            return frequency;
 
-    fclose (f);
+        // Collect CPU frequency looking for cpu MHz line
+        line = NULL;
+        while (getline (&line, &size, f) != -1)
+        {
+            if (sscanf (line, "cpu MHz         : %llu.", &n) == 1)
+            {
+                frequency = n;
+                break;
+            }
+        }
+
+        free (line);
+        fclose (f);
+
+        processed = 1;
+    }
 
     return frequency;
 }

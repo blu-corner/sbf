@@ -196,19 +196,18 @@ sbfMw_getProperties (sbfMw mw)
 uint32_t
 sbfMw_check_supported (uint32_t cap_mask)
 {
-    static uint64_t supported = ~(0LL | CAP_ALL_MASK);
-    
+    static uint64_t supported = 0LL;
+    static char processed = 0;
+
     // Performs the check for the first time and cache it into static variable
-    if (supported == ~CAP_ALL_MASK)
+    if (processed == 0)
     {
-        // None is supported by default, evaluate and enable the supported capabilities
-        supported = 0x00000000;
-        
         // Hi resolution counter capability
         supported = (sbfPerfCounter_frequency() > 0)? CAP_HI_RES_COUNTER: supported;
-        
+
         // TODO: Extends other capabilities here...
-        
+
+        processed = 1;
     }
     
     return cap_mask & (uint32_t) supported;
