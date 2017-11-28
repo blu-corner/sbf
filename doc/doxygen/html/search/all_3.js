@@ -31,6 +31,7 @@ var searchData=
   ['sbfmcasttopicresolver_5fmakeaddress',['sbfMcastTopicResolver_makeAddress',['../sbf_common_handler_8h.html#a83c67b0c8070436da88f38a9e592ef5b',1,'sbfCommonHandler.h']]],
   ['sbfmw',['sbfMw',['../sbf_mw_8h.html#a40f56d06e9998d8db409f556482fce21',1,'sbfMw.h']]],
   ['sbfmw_2eh',['sbfMw.h',['../sbf_mw_8h.html',1,'']]],
+  ['sbfmw_5fcheck_5fsupported',['sbfMw_check_supported',['../sbf_mw_8h.html#aad63d9e99110099c757a2855f41fb337',1,'sbfMw.h']]],
   ['sbfmw_5fcreate',['sbfMw_create',['../sbf_mw_8h.html#a9f7c2a1535eb545d6e73bb8ebc33a209',1,'sbfMw.h']]],
   ['sbfmw_5fdestroy',['sbfMw_destroy',['../sbf_mw_8h.html#a4ac93cb7885ade2979c7663b557e119c',1,'sbfMw.h']]],
   ['sbfmw_5fgetdefaultthread',['sbfMw_getDefaultThread',['../sbf_mw_8h.html#abf18b7c2721832ab6504c716791ce31c',1,'sbfMw.h']]],

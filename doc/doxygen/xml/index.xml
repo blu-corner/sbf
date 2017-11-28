@@ -16,6 +16,8 @@
     <member refid="sbf_hi_res_timer_8h_1a3d4d0b158165c2b16431cadaa73a7822" kind="function"><name>sbfHiResTimer_getInterval</name></member>
   </compound>
   <compound refid="sbf_mw_8h" kind="file"><name>sbfMw.h</name>
+    <member refid="sbf_mw_8h_1aeeea08256821a686bc39abc372079d82" kind="define"><name>CAP_ALL_MASK</name></member>
+    <member refid="sbf_mw_8h_1a0ac31433d3805f2469d6827a74034dbd" kind="define"><name>CAP_HI_RES_COUNTER</name></member>
     <member refid="sbf_mw_8h_1a3a43b58a7ec394a4cba898f47c99d50f" kind="define"><name>SBF_MW_THREAD_LIMIT</name></member>
     <member refid="sbf_mw_8h_1a9bd654394f96810c80e05011e393a750" kind="define"><name>SBF_MW_ALL_THREADS</name></member>
     <member refid="sbf_mw_8h_1abf18b7c2721832ab6504c716791ce31c" kind="define"><name>sbfMw_getDefaultThread</name></member>
@@ -30,6 +32,7 @@
     <member refid="sbf_mw_8h_1aa183ff642fc7b83bf48a3d6757f79e06" kind="function"><name>sbfMw_getThreadIndex</name></member>
     <member refid="sbf_mw_8h_1a68205584a281f9eba76af89248eb71f9" kind="function"><name>sbfMw_getThreadMask</name></member>
     <member refid="sbf_mw_8h_1a49eee9c382b8543bbb6e5822b6c7d554" kind="function"><name>sbfMw_getThreadEventBase</name></member>
+    <member refid="sbf_mw_8h_1aad63d9e99110099c757a2855f41fb337" kind="function"><name>sbfMw_check_supported</name></member>
   </compound>
   <compound refid="sbf_queue_8h" kind="file"><name>sbfQueue.h</name>
     <member refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kind="typedef"><name>sbfQueue</name></member>

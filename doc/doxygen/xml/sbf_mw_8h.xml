@@ -93,6 +93,28 @@
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_mw_8h_1aeeea08256821a686bc39abc372079d82" prot="public" static="no">
+        <name>CAP_ALL_MASK</name>
+        <initializer>0x00000001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Supported capabilities bitmap </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfMw.h" line="22" column="9" bodyfile="core/sbfMw.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_mw_8h_1a0ac31433d3805f2469d6827a74034dbd" prot="public" static="no">
+        <name>CAP_HI_RES_COUNTER</name>
+        <initializer>1 &lt;&lt; 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfMw.h" line="23" column="9" bodyfile="core/sbfMw.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="define" id="sbf_mw_8h_1a3a43b58a7ec394a4cba898f47c99d50f" prot="public" static="no">
         <name>SBF_MW_THREAD_LIMIT</name>
         <initializer>64</initializer>
@@ -102,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="22" column="9" bodyfile="core/sbfMw.h" bodystart="22" bodyend="-1"/>
+        <location file="core/sbfMw.h" line="27" column="9" bodyfile="core/sbfMw.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_mw_8h_1a9bd654394f96810c80e05011e393a750" prot="public" static="no">
         <name>SBF_MW_ALL_THREADS</name>
@@ -113,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="24" column="9" bodyfile="core/sbfMw.h" bodystart="24" bodyend="-1"/>
+        <location file="core/sbfMw.h" line="29" column="9" bodyfile="core/sbfMw.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="sbf_mw_8h_1abf18b7c2721832ab6504c716791ce31c" prot="public" static="no">
         <name>sbfMw_getDefaultThread</name>
@@ -125,7 +147,7 @@
 <para>Returns the thread by default </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="61" column="9" bodyfile="core/sbfMw.h" bodystart="61" bodyend="-1"/>
+        <location file="core/sbfMw.h" line="66" column="9" bodyfile="core/sbfMw.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -192,7 +214,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="36" column="1"/>
+        <location file="core/sbfMw.h" line="41" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1a4ac93cb7885ade2979c7663b557e119c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -218,7 +240,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="43" column="1"/>
+        <location file="core/sbfMw.h" line="48" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1a286f53f7cda015578f2f78669fee0791" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>u_int</type>
@@ -244,7 +266,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="50" column="1"/>
+        <location file="core/sbfMw.h" line="55" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1a0f0c2d3ddad45d49b67349f02a2ad772" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref></type>
@@ -281,7 +303,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="58" column="1"/>
+        <location file="core/sbfMw.h" line="63" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1aa7e45fc4943d4080534faf9d4b2f394f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>sbfLog</type>
@@ -307,7 +329,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="68" column="1"/>
+        <location file="core/sbfMw.h" line="73" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1a655078066f200c13dfa63a1bdd650f5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>sbfKeyValue</type>
@@ -333,7 +355,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="75" column="1"/>
+        <location file="core/sbfMw.h" line="80" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1aa183ff642fc7b83bf48a3d6757f79e06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>u_int</type>
@@ -359,7 +381,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="86" column="1"/>
+        <location file="core/sbfMw.h" line="91" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1a68205584a281f9eba76af89248eb71f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint64_t</type>
@@ -385,7 +407,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="93" column="1"/>
+        <location file="core/sbfMw.h" line="98" column="1"/>
       </memberdef>
       <memberdef kind="function" id="sbf_mw_8h_1a49eee9c382b8543bbb6e5822b6c7d554" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct event_base *</type>
@@ -411,7 +433,33 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="core/sbfMw.h" line="100" column="1"/>
+        <location file="core/sbfMw.h" line="105" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_mw_8h_1aad63d9e99110099c757a2855f41fb337" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t sbfMw_check_supported</definition>
+        <argsstring>(uint32_t cap_mask)</argsstring>
+        <name>sbfMw_check_supported</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>cap_mask</declname>
+        </param>
+        <briefdescription>
+<para>Returns CAP_SUPPORTED if feature is supported, otherwise CAP_UNSUPPORTED is returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>feature_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the mask indicating the capabilities to be check. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>capabilities supported. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfMw.h" line="113" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -436,40 +484,46 @@
 <codeline lineno="18" refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfMwImpl*<sp/><ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref>;</highlight></codeline>
 <codeline lineno="19" refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfMwThreadImpl*<sp/><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref>;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="sbf_mw_8h_1a3a43b58a7ec394a4cba898f47c99d50f" refkind="member"><highlight class="preprocessor">#define<sp/>SBF_MW_THREAD_LIMIT<sp/>64</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="sbf_mw_8h_1a9bd654394f96810c80e05011e393a750" refkind="member"><highlight class="preprocessor">#define<sp/>SBF_MW_ALL_THREADS<sp/>(~0ULL)<sp/>//<sp/>Are<sp/>you<sp/>nuts?<sp/>XD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="sbf_mw_8h_1aeeea08256821a686bc39abc372079d82" refkind="member"><highlight class="preprocessor">#define<sp/>CAP_ALL_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000001<sp/>//<sp/>All<sp/>available<sp/>capabilities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="sbf_mw_8h_1a0ac31433d3805f2469d6827a74034dbd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAP_HI_RES_COUNTER<sp/><sp/><sp/><sp/>1<sp/>&lt;&lt;<sp/>0<sp/><sp/><sp/><sp/><sp/>//<sp/>Hi<sp/>resolution<sp/>counters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>Extends<sp/>other<sp/>capabilities<sp/>here...</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Middleware<sp/>API</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/><ref refid="sbf_mw_8h_1a9f7c2a1535eb545d6e73bb8ebc33a209" kindref="member">sbfMw_create</ref><sp/>(sbfLog<sp/>log,<sp/>sbfKeyValue<sp/>properties);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_mw_8h_1a4ac93cb7885ade2979c7663b557e119c" kindref="member">sbfMw_destroy</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal">u_int<sp/><ref refid="sbf_mw_8h_1a286f53f7cda015578f2f78669fee0791" kindref="member">sbfMw_getNumThreads</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/><ref refid="sbf_mw_8h_1a0f0c2d3ddad45d49b67349f02a2ad772" kindref="member">sbfMw_getThread</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw,<sp/>u_int<sp/>index);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="sbf_mw_8h_1abf18b7c2721832ab6504c716791ce31c" refkind="member"><highlight class="preprocessor">#define<sp/>sbfMw_getDefaultThread(mw)<sp/>sbfMw_getThread<sp/>(mw,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal">sbfLog<sp/><ref refid="sbf_mw_8h_1aa7e45fc4943d4080534faf9d4b2f394f" kindref="member">sbfMw_getLog</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal">sbfKeyValue<sp/><ref refid="sbf_mw_8h_1a655078066f200c13dfa63a1bdd650f5e" kindref="member">sbfMw_getProperties</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Thread<sp/>helper<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal">u_int<sp/><ref refid="sbf_mw_8h_1aa183ff642fc7b83bf48a3d6757f79e06" kindref="member">sbfMw_getThreadIndex</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal">uint64_t<sp/><ref refid="sbf_mw_8h_1a68205584a281f9eba76af89248eb71f9" kindref="member">sbfMw_getThreadMask</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread);</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">event_base*<sp/><ref refid="sbf_mw_8h_1a49eee9c382b8543bbb6e5822b6c7d554" kindref="member">sbfMw_getThreadEventBase</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread);</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal">SBF_END_DECLS</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_MW_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="27" refid="sbf_mw_8h_1a3a43b58a7ec394a4cba898f47c99d50f" refkind="member"><highlight class="preprocessor">#define<sp/>SBF_MW_THREAD_LIMIT<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="sbf_mw_8h_1a9bd654394f96810c80e05011e393a750" refkind="member"><highlight class="preprocessor">#define<sp/>SBF_MW_ALL_THREADS<sp/>(~0ULL)<sp/>//<sp/>Are<sp/>you<sp/>nuts?<sp/>XD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Middleware<sp/>API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/><ref refid="sbf_mw_8h_1a9f7c2a1535eb545d6e73bb8ebc33a209" kindref="member">sbfMw_create</ref><sp/>(sbfLog<sp/>log,<sp/>sbfKeyValue<sp/>properties);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_mw_8h_1a4ac93cb7885ade2979c7663b557e119c" kindref="member">sbfMw_destroy</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">u_int<sp/><ref refid="sbf_mw_8h_1a286f53f7cda015578f2f78669fee0791" kindref="member">sbfMw_getNumThreads</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/><ref refid="sbf_mw_8h_1a0f0c2d3ddad45d49b67349f02a2ad772" kindref="member">sbfMw_getThread</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw,<sp/>u_int<sp/>index);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="sbf_mw_8h_1abf18b7c2721832ab6504c716791ce31c" refkind="member"><highlight class="preprocessor">#define<sp/>sbfMw_getDefaultThread(mw)<sp/>sbfMw_getThread<sp/>(mw,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">sbfLog<sp/><ref refid="sbf_mw_8h_1aa7e45fc4943d4080534faf9d4b2f394f" kindref="member">sbfMw_getLog</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">sbfKeyValue<sp/><ref refid="sbf_mw_8h_1a655078066f200c13dfa63a1bdd650f5e" kindref="member">sbfMw_getProperties</ref><sp/>(<ref refid="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21" kindref="member">sbfMw</ref><sp/>mw);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Thread<sp/>helper<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">u_int<sp/><ref refid="sbf_mw_8h_1aa183ff642fc7b83bf48a3d6757f79e06" kindref="member">sbfMw_getThreadIndex</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">uint64_t<sp/><ref refid="sbf_mw_8h_1a68205584a281f9eba76af89248eb71f9" kindref="member">sbfMw_getThreadMask</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">event_base*<sp/><ref refid="sbf_mw_8h_1a49eee9c382b8543bbb6e5822b6c7d554" kindref="member">sbfMw_getThreadEventBase</ref><sp/>(<ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/>thread);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">uint32_t<sp/><ref refid="sbf_mw_8h_1aad63d9e99110099c757a2855f41fb337" kindref="member">sbfMw_check_supported</ref>(uint32_t<sp/>cap_mask);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">SBF_END_DECLS</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_MW_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="core/sbfMw.h"/>
   </compounddef>

@@ -7,7 +7,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline><highlight class="normal">#<sp/>Issues</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Known<sp/>issues<sp/>/<sp/>TODO<sp/>List</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>General</highlight></codeline>
 <codeline><highlight class="normal"><sp/>-<sp/>No<sp/>common<sp/>error<sp/>handling<sp/>mechanisms.<sp/>Sometimes<sp/>the<sp/>library<sp/>just<sp/>makes<sp/>the<sp/>program</highlight></codeline>
