@@ -20,19 +20,19 @@ SBF_BEGIN_DECLS
  */
 uint64_t sbfPerfCounter_frequency (void); /* per microsecond */
 
-/**
- * \brief Returns the number of ticks for the given microseconds.
- * @param microseconds the number of microseconds.
- * @return the number of ticks for the given microseconds.
+/*!
+   \brief Returns the number of ticks for the given microseconds.
+   \param microseconds the number of microseconds.
+   \return the number of ticks for the given microseconds.
  */
 uint64_t sbfPerfCounter_ticks (double microseconds);
 
-/**
- * \brief Returns the number of microseconds corresponding to the
- * given number of CPU ticks.
- * @param ticks the number of CPU ticks.
- * @return the number of microseconds corresponding to the
- * given number of CPU ticks.
+/*!
+   \brief Returns the number of microseconds corresponding to the
+   given number of CPU ticks.
+   \param ticks the number of CPU ticks.
+   \return the number of microseconds corresponding to the
+   given number of CPU ticks.
  */
 double sbfPerfCounter_microseconds (uint64_t ticks);
 
@@ -46,9 +46,9 @@ sbfPerfCounter_get (void)
     return v.QuadPart;
 }
 #else
-/**
- * \brief Returns the value stored at the high performance counter.
- * @return the value stored at the high performance counter.
+/*!
+   \brief Returns the value stored at the high performance counter.
+   \return the value stored at the high performance counter.
  */
 static SBF_INLINE uint64_t
 sbfPerfCounter_get (void)
