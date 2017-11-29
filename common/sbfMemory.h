@@ -23,6 +23,7 @@ void* sbfMemory_malloc (size_t size);
 /*!
    \brief Allocs a block of memory of the given size filled with zeros.
    It will return NULL if the memory cannot be allocated.
+   \param nmemb the number of items to be allocated.
    \param size the size of the block of memory to be allocated.
    \return a pointer to a block of memory of the given size filled with zeros.
  */

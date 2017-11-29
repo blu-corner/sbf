@@ -34,10 +34,10 @@ void sbfGuid_new (sbfLog log, sbfGuid* g);
    \brief Compares two GUIDs.
    \param g1 a GUID.
    \param g2 another GUID.
-   \return integer telling how \g1 is compared to \g2.
-     -1 if \g1 is less than \g2.
-      0 if \g1 is equal to \g2.
-      1 if \g1 is greater than \g2.
+   \return integer telling how g1 is compared to g2.
+     -1 if g1 is less than g2.
+      0 if g1 is equal to g2.
+      1 if g1 is greater than g2.
  */
 int sbfGuid_compare (const sbfGuid* g1, const sbfGuid* g2);
 
@@ -45,10 +45,10 @@ int sbfGuid_compare (const sbfGuid* g1, const sbfGuid* g2);
    \brief Compares the fixed part of two GUIDs.
    \param g1 a GUID.
    \param g2 another GUID.
-   \return integer telling how the fix parts of GUIDs are from \g1 is compared to \g2.
-     -1 if \g1 is less than \g2.
-      0 if \g1 is equal to \g2.
-      1 if \g1 is greater than \g2.
+   \return integer telling how the fix parts of GUIDs are from g1 is compared to g2.
+     -1 if g1 is less than g2.
+      0 if g1 is equal to g2.
+      1 if g1 is greater than g2.
  */
 int sbfGuid_compareFixed (const sbfGuid* g1, const sbfGuid* g2);
 
@@ -104,7 +104,7 @@ const char* sbfGuid_toString (const sbfGuid* g);
    \param g the GUID to be serialised.
    \param buf the data that will containg the GUID.
    \param len the length of the buffer.
-   \return null terminated string containing the GUID (returns \buf).
+   \return null terminated string containing the GUID (returns buf).
  */
 char* sbfGuid_toStringBuffer (const sbfGuid* g, char* buf, size_t len);
 
@@ -121,7 +121,7 @@ const char* sbfGuid_toStringFixed (const sbfGuid* g);
    \param g the GUID to be serialised.
    \param buf the data that will containg the fixed part of the GUID.
    \param len the length of the buffer.
-   \return null terminated string containing the fixed part of the GUID (returns \buf).
+   \return null terminated string containing the fixed part of the GUID (returns buf).
  */
 char* sbfGuid_toStringFixedBuffer (const sbfGuid* g, char* buf, size_t len);
 

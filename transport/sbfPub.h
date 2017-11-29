@@ -50,6 +50,7 @@ void sbfPub_destroy (sbfPub pub);
  /*!
     \brief Allocates and returns a buffer for a given publisher.
     \param pub the publisher's handler.
+    \param size the size of the buffer to be allocated.
     \return the buffer allocated by the publisher.
  */
 sbfBuffer sbfPub_getBuffer (sbfPub pub, size_t size);

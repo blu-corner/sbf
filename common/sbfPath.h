@@ -22,7 +22,7 @@ const char* sbfPath_root (void);
    starting with / are copied but otherwise unmodified.
    \param fmt formatted string.
    \param ... variable argument list that will be used to compose the
-   final string together with \fmt.
+   final string together with fmt.
    \return path underneath root path.
  */
 char* sbfPath_get (const char* fmt, ...) SBF_PRINTFLIKE (1, 2);
@@ -32,7 +32,7 @@ char* sbfPath_get (const char* fmt, ...) SBF_PRINTFLIKE (1, 2);
    starting with / are copied but otherwise unmodified.
    \param fmt formatted string.
    \param ap variable argument list that will be used to compose the
-   final string together with \fmt.
+   final string together with fmt.
    \return path underneath root path.
  */
 char* sbfPath_getV (const char* fmt, va_list ap);
@@ -42,7 +42,7 @@ char* sbfPath_getV (const char* fmt, va_list ap);
    starting with / are copied but otherwise unmodified.
    \param fmt formatted string.
    \param ... variable argument list that will be used to compose the
-   final string together with \fmt.
+   final string together with fmt.
    \return
  */
 char* sbfPath_getConf (const char* fmt, ...);

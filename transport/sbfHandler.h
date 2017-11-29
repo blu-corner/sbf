@@ -101,6 +101,7 @@ typedef struct
 /*!
    \brief Helper function that loads a handler given its type
    \param log a log handler.
+   \param type the type of connection.
    \return a pointer to handler table.
 */
 sbfHandlerTable* sbfHandler_load (sbfLog log, const char* type);
