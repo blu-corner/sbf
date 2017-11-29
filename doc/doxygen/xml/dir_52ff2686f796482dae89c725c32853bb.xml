@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_52ff2686f796482dae89c725c32853bb" kind="dir">
+    <compoundname>handlers/common</compoundname>
+    <innerfile refid="sbf_common_handler_8h">sbfCommonHandler.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="handlers/common/"/>
+  </compounddef>
+</doxygen>

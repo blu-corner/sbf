@@ -1,8 +1,17 @@
+/*!
+   \file sbfReplier.c
+   \brief TBD
+   \copyright © Copyright 2016 Neueda all rights reserved.
+*/
 #include "sbfCommon.h"
 #include "sbfMw.h"
 #include "sbfRequestReply.h"
 #include "sbfTport.h"
 
+/*!
+   \brief Callback from thread to dispatch the items in the queue.
+   \param closure data linked to the thread callback.
+*/
 static void*
 dispatchCb (void* closure)
 {
@@ -10,6 +19,13 @@ dispatchCb (void* closure)
     return NULL;
 }
 
+/*!
+   \brief Callback that replies with the number of request performed.
+   \param sub  pointer to subscriber.
+   \param req pointer to request.
+   \param buffer data being requested.
+   \param closure the data linked to this callback.
+*/
 static void
 requestCb (sbfRequestSub sub, sbfRequest req, sbfBuffer buffer, void* closure)
 {
@@ -26,6 +42,10 @@ requestCb (sbfRequestSub sub, sbfRequest req, sbfBuffer buffer, void* closure)
     printf ("--> reply %llu\n", (unsigned long long)next);
 }
 
+/*!
+   \brief Print out the description of this command.
+   \param argv0 the name of the command.
+*/
 static void
 usage (const char* argv0)
 {
@@ -40,6 +60,18 @@ usage (const char* argv0)
     exit (1);
 }
 
+/*!
+   \brief This function is the main entry point for the replier command.
+   You can specify the following parameters to run the replier:
+   "[-h handler] " the type of connection handler: tcp or udp.
+   "[-i interface] " the connection interface e.g. eth0.
+   "[-t topic] " the name of the topic where messages are published.
+   "[-v level]\n" log severity level.
+   \param argc The number of arguments passed to the command.
+   \param argv array of null terminated strings.
+   \return Error status: 0 for Successfull another indicates an error code.
+   \return "Return of the function"
+*/
 int
 main (int argc, char** argv)
 {

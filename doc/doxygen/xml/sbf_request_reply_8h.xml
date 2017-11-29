@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_request_reply_8h" kind="file" language="C++">
+    <compoundname>sbfRequestReply.h</compoundname>
+    <includes local="yes">sbfCommon.h</includes>
+    <includes refid="sbf_request_sub_8h" local="yes">sbfRequestSub.h</includes>
+    <includes refid="sbf_request_pub_8h" local="yes">sbfRequestPub.h</includes>
+    <includes refid="sbf_mw_8h" local="yes">sbfMw.h</includes>
+    <includes local="yes">sbfTopic.h</includes>
+    <incdepgraph>
+      <node id="96">
+        <label>sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>sbfTopic.h</label>
+      </node>
+      <node id="104">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>sbfTport.h</label>
+      </node>
+      <node id="95">
+        <label>sbfCommon.h</label>
+      </node>
+      <node id="100">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>sbfKeyValue.h</label>
+      </node>
+      <node id="98">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_request_reply_8h_1a3f3b3a4e7ab0f69f9989cb14560dad37" prot="public" static="no">
+        <name>SBF_REQUEST_REPLY_HEADER_SIZE</name>
+        <initializer>64</initializer>
+        <briefdescription>
+<para>Header size in bytes for reply. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestReply.h" line="18" column="9" bodyfile="requestreply/sbfRequestReply.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae" prot="public" static="no">
+        <type>struct sbfRequestImpl *</type>
+        <definition>typedef struct sbfRequestImpl* sbfRequest</definition>
+        <argsstring></argsstring>
+        <name>sbfRequest</name>
+        <briefdescription>
+<para>request handler </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestReply.h" line="21" column="1" bodyfile="requestreply/sbfRequestReply.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_request_reply_8h_1aed25e8d1a7ca6692c4a9d7d1a0dffa32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfRequest_reply</definition>
+        <argsstring>(sbfRequest req, void *data, size_t size)</argsstring>
+        <name>sbfRequest_reply</name>
+        <param>
+          <type><ref refid="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae" kindref="member">sbfRequest</ref></type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Replies to a given requester with a given message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>message payload in raw byte array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the payload. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestReply.h" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_reply_8h_1a6f3bc2485806f8174bf2f2e2f443e6af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfRequest_detach</definition>
+        <argsstring>(sbfRequest req)</argsstring>
+        <name>sbfRequest_detach</name>
+        <param>
+          <type><ref refid="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae" kindref="member">sbfRequest</ref></type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>Detaches a request so it can be used outside callback. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestReply.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_request_reply_8h_1acaa6ac8247a2a4a849015ea0b2517228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfRequest_destroy</definition>
+        <argsstring>(sbfRequest req)</argsstring>
+        <name>sbfRequest_destroy</name>
+        <param>
+          <type><ref refid="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae" kindref="member">sbfRequest</ref></type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>Release all the resources allocated by the request handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="requestreply/sbfRequestReply.h" line="41" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file declares the structures and functions for the requester-replier communication. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>_SBF_REQUEST_REPLY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_REQUEST_REPLY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfCommon.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_request_sub_8h" kindref="compound">sbfRequestSub.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_request_pub_8h" kindref="compound">sbfRequestPub.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_mw_8h" kindref="compound">sbfMw.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfTopic.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">SBF_BEGIN_DECLS</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="sbf_request_reply_8h_1a3f3b3a4e7ab0f69f9989cb14560dad37" refkind="member"><highlight class="preprocessor">#define<sp/>SBF_REQUEST_REPLY_HEADER_SIZE<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfRequestImpl*<sp/><ref refid="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae" kindref="member">sbfRequest</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_request_reply_8h_1aed25e8d1a7ca6692c4a9d7d1a0dffa32" kindref="member">sbfRequest_reply</ref><sp/>(<ref refid="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae" kindref="member">sbfRequest</ref><sp/>req,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_request_reply_8h_1a6f3bc2485806f8174bf2f2e2f443e6af" kindref="member">sbfRequest_detach</ref><sp/>(<ref refid="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae" kindref="member">sbfRequest</ref><sp/>req);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_request_reply_8h_1acaa6ac8247a2a4a849015ea0b2517228" kindref="member">sbfRequest_destroy</ref><sp/>(<ref refid="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae" kindref="member">sbfRequest</ref><sp/>req);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">SBF_END_DECLS</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_REQUEST_REPLY_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="requestreply/sbfRequestReply.h"/>
+  </compounddef>
+</doxygen>

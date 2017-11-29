@@ -1,0 +1,1626 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Super Bloody Fast transport system! &mdash; SBF 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="SBF 1.0 documentation" href="#"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> SBF
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Super Bloody Fast transport system!</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">SBF</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Super Bloody Fast transport system!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="super-bloody-fast-transport-system">
+<h1>Super Bloody Fast transport system!<a class="headerlink" href="#super-bloody-fast-transport-system" title="Permalink to this headline">¶</a></h1>
+<dl class="file">
+<dt>
+<span class="target" id="sbf_event_8h"></span><em>file</em> <code class="descname">sbfEvent.h</code></dt>
+<dd><em>#include “sbfCommon.h”</em><p>This file declares the event structures and functions for event handling. </p>
+<p><dl class="docutils">
+<dt><strong>Copyright</strong></dt>
+<dd>© Copyright 2016 Neueda all rights reserved. </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.SBF_EVENT_READ">
+<span class="target" id="sbf_event_8h_1a494548cb11d745b8f5425840061d09ba"></span><code class="descname">SBF_EVENT_READ</code><a class="headerlink" href="#c.SBF_EVENT_READ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event indicating a read operation. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.SBF_EVENT_WRITE">
+<span class="target" id="sbf_event_8h_1a21f4a3663ea050be7419c3f7cdeaf006"></span><code class="descname">SBF_EVENT_WRITE</code><a class="headerlink" href="#c.SBF_EVENT_WRITE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event indicating a write operation. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv28sbfEvent">
+<span id="sbfEvent"></span><span class="target" id="sbf_event_8h_1a24da4e6ee40913a2f525332dd05c69e8"></span><em class="property">typedef </em><em class="property">struct</em> sbfEventImpl *<code class="descname">sbfEvent</code><a class="headerlink" href="#_CPPv28sbfEvent" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>public event structure </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv210sbfEventCb">
+<span id="sbfEventCb"></span><span class="target" id="sbf_event_8h_1a6e3644b66167f52db7691dcd1d152c21"></span><em class="property">typedef </em>void (*<code class="descname">sbfEventCb</code>)<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv28sbfEvent" title="sbfEvent">sbfEvent</a> event, int events, void *closure<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210sbfEventCb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback function indicating there are events to process. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">event</span></code>: Pointer to events objects. </li>
+<li><code class="docutils literal"><span class="pre">the</span></code>: number of events. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the data associated to the callback. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv215sbfEvent_createP15sbfMwThreadImplP12sbfQueueImpl10sbfEventCbPvii">
+<span id="sbfEvent_create__sbfMwThreadImplP.sbfQueueImplP.sbfEventCb.voidP.i.i"></span><span class="target" id="sbf_event_8h_1a67c0591f8cee07af670dd520bcd75648"></span><a class="reference internal" href="#_CPPv28sbfEvent" title="sbfEvent">sbfEvent</a> <code class="descname">sbfEvent_create</code><span class="sig-paren">(</span><em class="property">struct</em> sbfMwThreadImpl *<em>thread</em>, <em class="property">struct</em> sbfQueueImpl *<em>queue</em>, <a class="reference internal" href="#_CPPv210sbfEventCb" title="sbfEventCb">sbfEventCb</a> <em>cb</em>, void *<em>closure</em>, int <em>descriptor</em>, int <em>events</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215sbfEvent_createP15sbfMwThreadImplP12sbfQueueImpl10sbfEventCbPvii" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns an event handler with the provided information. Events is one or both of SBF_EVENT_READ and SBF_EVENT_WRITE. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>an event handler with the provided information. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">thread</span></code>: the thread handling the reception of events. </li>
+<li><code class="docutils literal"><span class="pre">queue</span></code>: queue where events are stored. </li>
+<li><code class="docutils literal"><span class="pre">cb</span></code>: the event’s callback. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: a data to be associated to the event to be used in callbacks. </li>
+<li><code class="docutils literal"><span class="pre">descriptor</span></code>: the descriptor. </li>
+<li><code class="docutils literal"><span class="pre">events</span></code>: the number of events. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216sbfEvent_destroy8sbfEvent">
+<span id="sbfEvent_destroy__sbfEvent"></span><span class="target" id="sbf_event_8h_1aec0d16c84dded19519f2eaf3f8ca8c40"></span>void <code class="descname">sbfEvent_destroy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv28sbfEvent" title="sbfEvent">sbfEvent</a> <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216sbfEvent_destroy8sbfEvent" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Releases the memory allocated by the given memory handler. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">event</span></code>: the event handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="sbf_hi_res_timer_8h"></span><em>file</em> <code class="descname">sbfHiResTimer.h</code></dt>
+<dd><em>#include “sbfCommon.h”</em><p>This file declares the structures and functions to provide high resolution timers. </p>
+<p><dl class="docutils">
+<dt><strong>Copyright</strong></dt>
+<dd>© Copyright 2016 Neueda all rights reserved. </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv213sbfHiResTimer">
+<span id="sbfHiResTimer"></span><span class="target" id="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e"></span><em class="property">typedef </em><em class="property">struct</em> sbfHiResTimerImpl *<code class="descname">sbfHiResTimer</code><a class="headerlink" href="#_CPPv213sbfHiResTimer" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv215sbfHiResTimerCb">
+<span id="sbfHiResTimerCb"></span><span class="target" id="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97"></span><em class="property">typedef </em>void (*<code class="descname">sbfHiResTimerCb</code>)<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfHiResTimer" title="sbfHiResTimer">sbfHiResTimer</a> timer, void *closure<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215sbfHiResTimerCb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback invoked when timer expires. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">timer</span></code>: the timer handler. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the user data associated to the timer. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv220sbfHiResTimer_createP12sbfQueueImpl15sbfHiResTimerCbPv5u_int">
+<span id="sbfHiResTimer_create__sbfQueueImplP.sbfHiResTimerCb.voidP.u_int"></span><span class="target" id="sbf_hi_res_timer_8h_1a4ed03ee88c4a1387158659a1f4b0066f"></span><a class="reference internal" href="#_CPPv213sbfHiResTimer" title="sbfHiResTimer">sbfHiResTimer</a> <code class="descname">sbfHiResTimer_create</code><span class="sig-paren">(</span><em class="property">struct</em> sbfQueueImpl *<em>queue</em>, <a class="reference internal" href="#_CPPv215sbfHiResTimerCb" title="sbfHiResTimerCb">sbfHiResTimerCb</a> <em>cb</em>, void *<em>closure</em>, u_int <em>microseconds</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sbfHiResTimer_createP12sbfQueueImpl15sbfHiResTimerCbPv5u_int" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns a high resolution timer handler initialised with the given data. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>a high resolution timer handler. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">queue</span></code>: a queue. </li>
+<li><code class="docutils literal"><span class="pre">cb</span></code>: High resolution timer callback. It will be invoked when the timer expires. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: user data associated to this high resolution timer. </li>
+<li><code class="docutils literal"><span class="pre">microseconds</span></code>: the microseconds to fire the timer. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv221sbfHiResTimer_destroy13sbfHiResTimer">
+<span id="sbfHiResTimer_destroy__sbfHiResTimer"></span><span class="target" id="sbf_hi_res_timer_8h_1a89282fbee3f560a4111eac6ae2b3ea1f"></span>void <code class="descname">sbfHiResTimer_destroy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfHiResTimer" title="sbfHiResTimer">sbfHiResTimer</a> <em>timer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv221sbfHiResTimer_destroy13sbfHiResTimer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Release the memory allocated by the high resolution timer. This also stops the timer so no callback will be raised. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">timer</span></code>: the timer handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv225sbfHiResTimer_getInterval13sbfHiResTimer">
+<span id="sbfHiResTimer_getInterval__sbfHiResTimer"></span><span class="target" id="sbf_hi_res_timer_8h_1a3d4d0b158165c2b16431cadaa73a7822"></span>u_int <code class="descname">sbfHiResTimer_getInterval</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfHiResTimer" title="sbfHiResTimer">sbfHiResTimer</a> <em>timer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv225sbfHiResTimer_getInterval13sbfHiResTimer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>“Description” </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>”Return of the function” </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">timer</span></code>: the timer handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="sbf_mw_8h"></span><em>file</em> <code class="descname">sbfMw.h</code></dt>
+<dd><em>#include “sbfCommon.h”</em><em>#include “sbfEvent.h”</em><em>#include “sbfHiResTimer.h”</em><em>#include “sbfKeyValue.h”</em><em>#include “sbfQueue.h”</em><em>#include “sbfTimer.h”</em><p>This file represents the middleware API. </p>
+<p><dl class="docutils">
+<dt><strong>Copyright</strong></dt>
+<dd>© Copyright 2016 Neueda all rights reserved. </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.CAP_ALL_MASK">
+<span class="target" id="sbf_mw_8h_1aeeea08256821a686bc39abc372079d82"></span><code class="descname">CAP_ALL_MASK</code><a class="headerlink" href="#c.CAP_ALL_MASK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Supported capabilities bitmap </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.CAP_HI_RES_COUNTER">
+<span class="target" id="sbf_mw_8h_1a0ac31433d3805f2469d6827a74034dbd"></span><code class="descname">CAP_HI_RES_COUNTER</code><a class="headerlink" href="#c.CAP_HI_RES_COUNTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.SBF_MW_THREAD_LIMIT">
+<span class="target" id="sbf_mw_8h_1a3a43b58a7ec394a4cba898f47c99d50f"></span><code class="descname">SBF_MW_THREAD_LIMIT</code><a class="headerlink" href="#c.SBF_MW_THREAD_LIMIT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of threads. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.SBF_MW_ALL_THREADS">
+<span class="target" id="sbf_mw_8h_1a9bd654394f96810c80e05011e393a750"></span><code class="descname">SBF_MW_ALL_THREADS</code><a class="headerlink" href="#c.SBF_MW_ALL_THREADS" title="Permalink to this definition">¶</a></dt>
+<dd><p>all threads constant </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.sbfMw_getDefaultThread">
+<span class="target" id="sbf_mw_8h_1abf18b7c2721832ab6504c716791ce31c"></span><code class="descname">sbfMw_getDefaultThread</code><span class="sig-paren">(</span>mw<span class="sig-paren">)</span><a class="headerlink" href="#c.sbfMw_getDefaultThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the thread by default </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt>
+<span class="target" id="sbf_mw_8h_1a40f56d06e9998d8db409f556482fce21"></span><em class="property">typedef </em><code class="descname">typedefSBF_BEGIN_DECLS struct sbfMwImpl* sbfMw</code></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv211sbfMwThread">
+<span id="sbfMwThread"></span><span class="target" id="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133"></span><em class="property">typedef </em><em class="property">struct</em> sbfMwThreadImpl *<code class="descname">sbfMwThread</code><a class="headerlink" href="#_CPPv211sbfMwThread" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv212sbfMw_create6sbfLog11sbfKeyValue">
+<span id="sbfMw_create__sbfLog.sbfKeyValue"></span><span class="target" id="sbf_mw_8h_1a9f7c2a1535eb545d6e73bb8ebc33a209"></span>sbfMw <code class="descname">sbfMw_create</code><span class="sig-paren">(</span>sbfLog <em>log</em>, sbfKeyValue <em>properties</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212sbfMw_create6sbfLog11sbfKeyValue" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This function returns a middleware structure. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Pointer to middleware structure. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">log</span></code>: log structure used for logging purposes. </li>
+<li><code class="docutils literal"><span class="pre">properties</span></code>: key values defining the settings for the middleware. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv213sbfMw_destroy5sbfMw">
+<span id="sbfMw_destroy__sbfMw"></span><span class="target" id="sbf_mw_8h_1a4ac93cb7885ade2979c7663b557e119c"></span>void <code class="descname">sbfMw_destroy</code><span class="sig-paren">(</span>sbfMw <em>mw</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213sbfMw_destroy5sbfMw" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Release the memory allocated by the middleware structure. </p>
+<p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd><a class="reference internal" href="#sbf_mw_8h_1a9f7c2a1535eb545d6e73bb8ebc33a209"><span class="std std-ref">sbfMw_create</span></a>. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">mw</span></code>: pointer to middleware structure. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv219sbfMw_getNumThreads5sbfMw">
+<span id="sbfMw_getNumThreads__sbfMw"></span><span class="target" id="sbf_mw_8h_1a286f53f7cda015578f2f78669fee0791"></span>u_int <code class="descname">sbfMw_getNumThreads</code><span class="sig-paren">(</span>sbfMw <em>mw</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv219sbfMw_getNumThreads5sbfMw" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the number of thread defined at the middleware. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the number of thread defined at the middleware. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">mw</span></code>: pointer to middleware structure. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv215sbfMw_getThread5sbfMw5u_int">
+<span id="sbfMw_getThread__sbfMw.u_int"></span><span class="target" id="sbf_mw_8h_1a0f0c2d3ddad45d49b67349f02a2ad772"></span><a class="reference internal" href="#_CPPv211sbfMwThread" title="sbfMwThread">sbfMwThread</a> <code class="descname">sbfMw_getThread</code><span class="sig-paren">(</span>sbfMw <em>mw</em>, u_int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215sbfMw_getThread5sbfMw5u_int" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the thread for the given index in the range [0, sbfMw_getNumThreads]. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the number of thread defined at the middleware. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">mw</span></code>: pointer to middleware structure. </li>
+<li><code class="docutils literal"><span class="pre">index</span></code>: the index of the thread in the thread pool. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv212sbfMw_getLog5sbfMw">
+<span id="sbfMw_getLog__sbfMw"></span><span class="target" id="sbf_mw_8h_1aa7e45fc4943d4080534faf9d4b2f394f"></span>sbfLog <code class="descname">sbfMw_getLog</code><span class="sig-paren">(</span>sbfMw <em>mw</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv212sbfMw_getLog5sbfMw" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the log associated to the middleware. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the log associated to the middleware. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">mw</span></code>: the middleware. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv219sbfMw_getProperties5sbfMw">
+<span id="sbfMw_getProperties__sbfMw"></span><span class="target" id="sbf_mw_8h_1a655078066f200c13dfa63a1bdd650f5e"></span>sbfKeyValue <code class="descname">sbfMw_getProperties</code><span class="sig-paren">(</span>sbfMw <em>mw</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv219sbfMw_getProperties5sbfMw" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the properties settings for the middleware. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the properties settings for the middleware. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">mw</span></code>: the middleware. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv220sbfMw_getThreadIndex11sbfMwThread">
+<span id="sbfMw_getThreadIndex__sbfMwThread"></span><span class="target" id="sbf_mw_8h_1aa183ff642fc7b83bf48a3d6757f79e06"></span>u_int <code class="descname">sbfMw_getThreadIndex</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv211sbfMwThread" title="sbfMwThread">sbfMwThread</a> <em>thread</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sbfMw_getThreadIndex11sbfMwThread" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the index of a thread handler. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the index of a thread handler. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">thread</span></code>: the thread handler being querried. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv219sbfMw_getThreadMask11sbfMwThread">
+<span id="sbfMw_getThreadMask__sbfMwThread"></span><span class="target" id="sbf_mw_8h_1a68205584a281f9eba76af89248eb71f9"></span>uint64_t <code class="descname">sbfMw_getThreadMask</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv211sbfMwThread" title="sbfMwThread">sbfMwThread</a> <em>thread</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv219sbfMw_getThreadMask11sbfMwThread" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the mask for a given thread handler. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the mask for a given thread handler. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">thread</span></code>: the thread handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv224sbfMw_getThreadEventBase11sbfMwThread">
+<span id="sbfMw_getThreadEventBase__sbfMwThread"></span><span class="target" id="sbf_mw_8h_1a49eee9c382b8543bbb6e5822b6c7d554"></span><em class="property">struct</em> event_base *<code class="descname">sbfMw_getThreadEventBase</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv211sbfMwThread" title="sbfMwThread">sbfMwThread</a> <em>thread</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv224sbfMw_getThreadEventBase11sbfMwThread" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the event base for a given thread. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the event base for a given thread. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">thread</span></code>: the thread handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv221sbfMw_check_supported8uint32_t">
+<span id="sbfMw_check_supported__uint32_t"></span><span class="target" id="sbf_mw_8h_1aad63d9e99110099c757a2855f41fb337"></span>uint32_t <code class="descname">sbfMw_check_supported</code><span class="sig-paren">(</span>uint32_t <em>cap_mask</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv221sbfMw_check_supported8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns CAP_SUPPORTED if feature is supported, otherwise CAP_UNSUPPORTED is returned. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>capabilities supported. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">feature_mask</span></code>: the mask indicating the capabilities to be check. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="sbf_queue_8h"></span><em>file</em> <code class="descname">sbfQueue.h</code></dt>
+<dd><em>#include “sbfCommon.h”</em><p>This file declares the interface for handling queues. </p>
+<p><dl class="docutils">
+<dt><strong>Copyright</strong></dt>
+<dd>© Copyright 2016 Neueda all rights reserved. </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv28sbfQueue">
+<span id="sbfQueue"></span><span class="target" id="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3"></span><em class="property">typedef </em><em class="property">struct</em> sbfQueueImpl *<code class="descname">sbfQueue</code><a class="headerlink" href="#_CPPv28sbfQueue" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Declaration of the queue handler. </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv212sbfQueueItem">
+<span id="sbfQueueItem"></span><span class="target" id="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533"></span><em class="property">typedef </em><em class="property">struct</em> sbfQueueItemImpl *<code class="descname">sbfQueueItem</code><a class="headerlink" href="#_CPPv212sbfQueueItem" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Declaration of the queue item handler. </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv210sbfQueueCb">
+<span id="sbfQueueCb"></span><span class="target" id="sbf_queue_8h_1a734fa954aded6cb14781887fdcb4c15b"></span><em class="property">typedef </em>void (*<code class="descname">sbfQueueCb</code>)<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv212sbfQueueItem" title="sbfQueueItem">sbfQueueItem</a> item, void *closure<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210sbfQueueCb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>callback invoked when item needs to be processed. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">item</span></code>: the item handler. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the user data associated to the queue item. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv215sbfQueue_createP9sbfMwImplPKc">
+<span id="sbfQueue_create__sbfMwImplP.cCP"></span><span class="target" id="sbf_queue_8h_1aa9e33c0cd988ac9011c769454c406be9"></span><a class="reference internal" href="#_CPPv28sbfQueue" title="sbfQueue">sbfQueue</a> <code class="descname">sbfQueue_create</code><span class="sig-paren">(</span><em class="property">struct</em> sbfMwImpl *<em>mw</em>, <em class="property">const</em> char *<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215sbfQueue_createP9sbfMwImplPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns a queue handler for the given name. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>a queue handler for the given name. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">mw</span></code>: middleware handler. </li>
+<li><code class="docutils literal"><span class="pre">name</span></code>: the name of the topic assigned to the queue. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216sbfQueue_destroy8sbfQueue">
+<span id="sbfQueue_destroy__sbfQueue"></span><span class="target" id="sbf_queue_8h_1addab7a91fca88250c4ce64cfd5183d78"></span>void <code class="descname">sbfQueue_destroy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv28sbfQueue" title="sbfQueue">sbfQueue</a> <em>queue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216sbfQueue_destroy8sbfQueue" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Releases the memory allocated to the given queue handler. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">queue</span></code>: the queue handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216sbfQueue_getName8sbfQueue">
+<span id="sbfQueue_getName__sbfQueue"></span><span class="target" id="sbf_queue_8h_1a2f1e3e58b4b9cea02ff5fa808a8703f2"></span><em class="property">const</em> char *<code class="descname">sbfQueue_getName</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv28sbfQueue" title="sbfQueue">sbfQueue</a> <em>queue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216sbfQueue_getName8sbfQueue" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the name of the topic assigned to the queue. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>null terminated string containing the name of the queue (topic). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">queue</span></code>: the queue handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216sbfQueue_enqueue8sbfQueue10sbfQueueCbPv">
+<span id="sbfQueue_enqueue__sbfQueue.sbfQueueCb.voidP"></span><span class="target" id="sbf_queue_8h_1a4a0a1c5ebaca33ef41cfc984c536bf01"></span>void <code class="descname">sbfQueue_enqueue</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv28sbfQueue" title="sbfQueue">sbfQueue</a> <em>queue</em>, <a class="reference internal" href="#_CPPv210sbfQueueCb" title="sbfQueueCb">sbfQueueCb</a> <em>cb</em>, void *<em>closure</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216sbfQueue_enqueue8sbfQueue10sbfQueueCbPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Adds an item to the queue. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">queue</span></code>: the queue handler. </li>
+<li><code class="docutils literal"><span class="pre">cb</span></code>: the callback indicating the item has been queued. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the user data associated to the queue item. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv217sbfQueue_dispatch8sbfQueue">
+<span id="sbfQueue_dispatch__sbfQueue"></span><span class="target" id="sbf_queue_8h_1a92ae3820cd4fb1b634b638c727e5d79c"></span>void <code class="descname">sbfQueue_dispatch</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv28sbfQueue" title="sbfQueue">sbfQueue</a> <em>queue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv217sbfQueue_dispatch8sbfQueue" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Dispatch all of the items that belongs to the given queue handler. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">queue</span></code>: the queue handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216sbfQueue_getItem8sbfQueue10sbfQueueCbPv">
+<span id="sbfQueue_getItem__sbfQueue.sbfQueueCb.voidP"></span><span class="target" id="sbf_queue_8h_1a1ce1d1238f830f6f9e0032d3572036c2"></span><a class="reference internal" href="#_CPPv212sbfQueueItem" title="sbfQueueItem">sbfQueueItem</a> <code class="descname">sbfQueue_getItem</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv28sbfQueue" title="sbfQueue">sbfQueue</a> <em>queue</em>, <a class="reference internal" href="#_CPPv210sbfQueueCb" title="sbfQueueCb">sbfQueueCb</a> <em>cb</em>, void *<em>closure</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216sbfQueue_getItem8sbfQueue10sbfQueueCbPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns the item from the queue by adding the callback and user data. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the item from the queue. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">queue</span></code>: the queue handler. </li>
+<li><code class="docutils literal"><span class="pre">cb</span></code>: the callback indicating the item has been queued. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the user data associated to the queue item. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv220sbfQueue_enqueueItem8sbfQueue12sbfQueueItem">
+<span id="sbfQueue_enqueueItem__sbfQueue.sbfQueueItem"></span><span class="target" id="sbf_queue_8h_1a041be175afa83868ffd3ad53638aa073"></span>void <code class="descname">sbfQueue_enqueueItem</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv28sbfQueue" title="sbfQueue">sbfQueue</a> <em>queue</em>, <a class="reference internal" href="#_CPPv212sbfQueueItem" title="sbfQueueItem">sbfQueueItem</a> <em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sbfQueue_enqueueItem8sbfQueue12sbfQueueItem" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv220sbfQueue_getItemData12sbfQueueItem">
+<span id="sbfQueue_getItemData__sbfQueueItem"></span><span class="target" id="sbf_queue_8h_1a3a47a4e3a01ddecb9d5c49b0fab74609"></span>void *<code class="descname">sbfQueue_getItemData</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv212sbfQueueItem" title="sbfQueueItem">sbfQueueItem</a> <em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sbfQueue_getItemData12sbfQueueItem" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the data associated to the given queue item. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the data associated to a queue item. </dd>
+<dt><strong>See</strong></dt>
+<dd><a class="reference internal" href="#sbf_queue_8h_1ae5a1e7b31459264e4a5940976cfa0641"><span class="std std-ref">sbfQueue_getItemDataSize</span></a> </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">item</span></code>: the queue item handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv224sbfQueue_getItemDataSize12sbfQueueItem">
+<span id="sbfQueue_getItemDataSize__sbfQueueItem"></span><span class="target" id="sbf_queue_8h_1ae5a1e7b31459264e4a5940976cfa0641"></span>size_t <code class="descname">sbfQueue_getItemDataSize</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv212sbfQueueItem" title="sbfQueueItem">sbfQueueItem</a> <em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv224sbfQueue_getItemDataSize12sbfQueueItem" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the size of the given queue item. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the size of the given queue item. </dd>
+<dt><strong>See</strong></dt>
+<dd><a class="reference internal" href="#sbf_queue_8h_1a3a47a4e3a01ddecb9d5c49b0fab74609"><span class="std std-ref">sbfQueue_getItemData</span></a> </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">item</span></code>: the queue item handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="sbf_timer_8h"></span><em>file</em> <code class="descname">sbfTimer.h</code></dt>
+<dd><em>#include “sbfCommon.h”</em><p>This file declares the interface for handling queues. </p>
+<p><dl class="docutils">
+<dt><strong>Copyright</strong></dt>
+<dd>© Copyright 2016 Neueda all rights reserved. </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.SBF_TIMER_MILLISECONDS">
+<span class="target" id="sbf_timer_8h_1a5fe71016a949366101c0a61e5f62c3fd"></span><code class="descname">SBF_TIMER_MILLISECONDS</code><span class="sig-paren">(</span>n<span class="sig-paren">)</span><a class="headerlink" href="#c.SBF_TIMER_MILLISECONDS" title="Permalink to this definition">¶</a></dt>
+<dd><p>The milliseconds for the given seconds. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.SBF_TIMER_MICROSECONDS">
+<span class="target" id="sbf_timer_8h_1a44bb79a590d1ed47a18ef8b540ce3650"></span><code class="descname">SBF_TIMER_MICROSECONDS</code><span class="sig-paren">(</span>n<span class="sig-paren">)</span><a class="headerlink" href="#c.SBF_TIMER_MICROSECONDS" title="Permalink to this definition">¶</a></dt>
+<dd><p>The micro seconds for the given seconds. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv28sbfTimer">
+<span id="sbfTimer"></span><span class="target" id="sbf_timer_8h_1a107fc98170a20456ae5fbea0e5862ec2"></span><em class="property">typedef </em><em class="property">struct</em> sbfTimerImpl *<code class="descname">sbfTimer</code><a class="headerlink" href="#_CPPv28sbfTimer" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv210sbfTimerCb">
+<span id="sbfTimerCb"></span><span class="target" id="sbf_timer_8h_1ad4886ffe6e46a398e2c741ebd64fe552"></span><em class="property">typedef </em>void (*<code class="descname">sbfTimerCb</code>)<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv28sbfTimer" title="sbfTimer">sbfTimer</a> timer, void *closure<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210sbfTimerCb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>callback invoked when timer needs to be processed. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">timer</span></code>: the timer handler. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the user data associated to the queue item. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv215sbfTimer_createP15sbfMwThreadImplP12sbfQueueImpl10sbfTimerCbPvd">
+<span id="sbfTimer_create__sbfMwThreadImplP.sbfQueueImplP.sbfTimerCb.voidP.double"></span><span class="target" id="sbf_timer_8h_1a8812947aab58049baba5c8fa4c1b966b"></span><a class="reference internal" href="#_CPPv28sbfTimer" title="sbfTimer">sbfTimer</a> <code class="descname">sbfTimer_create</code><span class="sig-paren">(</span><em class="property">struct</em> sbfMwThreadImpl *<em>thread</em>, <em class="property">struct</em> sbfQueueImpl *<em>queue</em>, <a class="reference internal" href="#_CPPv210sbfTimerCb" title="sbfTimerCb">sbfTimerCb</a> <em>cb</em>, void *<em>closure</em>, double <em>interval</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215sbfTimer_createP15sbfMwThreadImplP12sbfQueueImpl10sbfTimerCbPvd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a timer with the given arguments. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>a timer handler. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">thread</span></code>: the thread handler. </li>
+<li><code class="docutils literal"><span class="pre">queue</span></code>: a queue. </li>
+<li><code class="docutils literal"><span class="pre">cb</span></code>: High resolution timer callback. It will be invoked when the timer expires. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: user data associated to this high resolution timer. </li>
+<li><code class="docutils literal"><span class="pre">interval</span></code>: the interval, in seconds, the timer is configured to fire the callback. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv216sbfTimer_destroy8sbfTimer">
+<span id="sbfTimer_destroy__sbfTimer"></span><span class="target" id="sbf_timer_8h_1af5cdfdf64302d94b1197ca7ea5fece24"></span>void <code class="descname">sbfTimer_destroy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv28sbfTimer" title="sbfTimer">sbfTimer</a> <em>timer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216sbfTimer_destroy8sbfTimer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Release the memory allocated by the high resolution timer. This also stops the timer so no callback will be raised. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">timer</span></code>: the timer handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv220sbfTimer_getInterval8sbfTimer">
+<span id="sbfTimer_getInterval__sbfTimer"></span><span class="target" id="sbf_timer_8h_1a61b6a284186fcc95558f0f716b6e0f49"></span>double <code class="descname">sbfTimer_getInterval</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv28sbfTimer" title="sbfTimer">sbfTimer</a> <em>timer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sbfTimer_getInterval8sbfTimer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns the interval the timer was configured. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the interval, in seconds, the timer is configured to fire the callback. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">timer</span></code>: the timer handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="sbf_common_handler_8h"></span><em>file</em> <code class="descname">sbfCommonHandler.h</code></dt>
+<dd><em>#include “sbfInterface.h”</em><em>#include “sbfMw.h”</em><em>#include “sbfTport.h”</em><p>This file declares the structures and functions for a common message handler. </p>
+<p><dl class="docutils">
+<dt><strong>Copyright</strong></dt>
+<dd>© Copyright 2016 Neueda all rights reserved. </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt>
+<span class="target" id="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14"></span><em class="property">typedef </em><code class="descname">typedefSBF_BEGIN_DECLS struct sbfMcastTopicResolverImpl* sbfMcastTopicResolver</code></dt>
+<dd><p>Multi cast topic resolver. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv228sbfMcastTopicResolver_createPKc6sbfLog">
+<span id="sbfMcastTopicResolver_create__cCP.sbfLog"></span><span class="target" id="sbf_common_handler_8h_1a4e3ac1f4227d17c997a31c515c6ddd9c"></span>sbfMcastTopicResolver <code class="descname">sbfMcastTopicResolver_create</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>address</em>, sbfLog <em>log</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv228sbfMcastTopicResolver_createPKc6sbfLog" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a multicast topic resolver. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>a multicast topic resolver. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">address</span></code>: the address to resolve </li>
+<li><code class="docutils literal"><span class="pre">log</span></code>: the log handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv229sbfMcastTopicResolver_destroy21sbfMcastTopicResolver">
+<span id="sbfMcastTopicResolver_destroy__sbfMcastTopicResolver"></span><span class="target" id="sbf_common_handler_8h_1a30b747a308778de0050c3569b6a72cd2"></span>void <code class="descname">sbfMcastTopicResolver_destroy</code><span class="sig-paren">(</span>sbfMcastTopicResolver <em>mtr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv229sbfMcastTopicResolver_destroy21sbfMcastTopicResolver" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Release the resources allocated by the multicast topic resolver. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">mtr</span></code>: the resolver handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv233sbfMcastTopicResolver_makeAddress21sbfMcastTopicResolver8sbfTopic">
+<span id="sbfMcastTopicResolver_makeAddress__sbfMcastTopicResolver.sbfTopic"></span><span class="target" id="sbf_common_handler_8h_1a83c67b0c8070436da88f38a9e592ef5b"></span>uint32_t <code class="descname">sbfMcastTopicResolver_makeAddress</code><span class="sig-paren">(</span>sbfMcastTopicResolver <em>mtr</em>, sbfTopic <em>topic</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv233sbfMcastTopicResolver_makeAddress21sbfMcastTopicResolver8sbfTopic" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>creates an address for a given resolver and topic. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>”Return of the function” </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">mtr</span></code>: the resolver handler. </li>
+<li><code class="docutils literal"><span class="pre">topic</span></code>: the topic / logical channel . </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="sbf_tcp_mesh_handler_8h"></span><em>file</em> <code class="descname">sbfTcpMeshHandler.h</code></dt>
+<dd><em>#include “sbfHandler.h”</em><em>#include “sbfInterface.h”</em><em>#include “sbfMw.h”</em><em>#include “sbfTport.h”</em><p>This file declares the structures and functions to handle TCP connections. </p>
+<p><dl class="docutils">
+<dt><strong>Copyright</strong></dt>
+<dd>© Copyright 2016 Neueda all rights reserved. </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.SBF_TCP_MESH_HANDLER_DEFAULT_PORT">
+<span class="target" id="sbf_tcp_mesh_handler_8h_1a3e90b2d7822aeb5f41f96561820cb06d"></span><code class="descname">SBF_TCP_MESH_HANDLER_DEFAULT_PORT</code><a class="headerlink" href="#c.SBF_TCP_MESH_HANDLER_DEFAULT_PORT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defautl TCP port. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.SBF_TCP_MESH_HANDLER_CONNECT_INTERVAL">
+<span class="target" id="sbf_tcp_mesh_handler_8h_1ad527a3aeea707608ed5c0435061bf92c"></span><code class="descname">SBF_TCP_MESH_HANDLER_CONNECT_INTERVAL</code><a class="headerlink" href="#c.SBF_TCP_MESH_HANDLER_CONNECT_INTERVAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>TCP Mesh connection interval. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv227sbfTcpMeshHandlerConnection">
+<span id="sbfTcpMeshHandlerConnection"></span><span class="target" id="sbf_tcp_mesh_handler_8h_1a03335cd5a301b72ab3c81fa84e585bb9"></span><em class="property">typedef </em><em class="property">struct</em> sbfTcpMeshHandlerConnectionImpl *<code class="descname">sbfTcpMeshHandlerConnection</code><a class="headerlink" href="#_CPPv227sbfTcpMeshHandlerConnection" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>TCP mesh declaration. </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv217sbfTcpMeshHandler">
+<span id="sbfTcpMeshHandler"></span><span class="target" id="sbf_tcp_mesh_handler_8h_1aaa8334a760c043b7339b056de6839b97"></span><em class="property">typedef </em><em class="property">struct</em> sbfTcpMeshHandlerImpl *<code class="descname">sbfTcpMeshHandler</code><a class="headerlink" href="#_CPPv217sbfTcpMeshHandler" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>TCP mesh handler declaration. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="sbf_udp_handler_8h"></span><em>file</em> <code class="descname">sbfUdpHandler.h</code></dt>
+<dd><em>#include “sbfHandler.h”</em><em>#include “sbfInterface.h”</em><em>#include “sbfMw.h”</em><em>#include “sbfTport.h”</em><em>#include “sbfUdpMulticast.h”</em><em>#include “sbfCommonHandler.h”</em><p>This file declares the structures and functions to provide high resolution timers. </p>
+<p><dl class="docutils">
+<dt><strong>Copyright</strong></dt>
+<dd>© Copyright 2016 Neueda all rights reserved. </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.SBF_UDP_HANDLER_DEFAULT_PORT">
+<span class="target" id="sbf_udp_handler_8h_1ae190d65949a60790c60525e14f61c3d3"></span><code class="descname">SBF_UDP_HANDLER_DEFAULT_PORT</code><a class="headerlink" href="#c.SBF_UDP_HANDLER_DEFAULT_PORT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default port for the UDP handler. </p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.SBF_UDP_HANDLER_READ_LIMIT">
+<span class="target" id="sbf_udp_handler_8h_1ad3b14f99908bed2f13126adf05e237bf"></span><code class="descname">SBF_UDP_HANDLER_READ_LIMIT</code><a class="headerlink" href="#c.SBF_UDP_HANDLER_READ_LIMIT" title="Permalink to this definition">¶</a></dt>
+<dd><p>maximum number of bytes to read </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv219sbfUdpHandlerStream">
+<span id="sbfUdpHandlerStream"></span><span class="target" id="sbf_udp_handler_8h_1aa3fe356e4b3f94b8d66ebc3cc9b1908f"></span><em class="property">typedef </em><em class="property">struct</em> sbfUdpHandlerStreamImpl *<code class="descname">sbfUdpHandlerStream</code><a class="headerlink" href="#_CPPv219sbfUdpHandlerStream" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>UDP handler stream. </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv213sbfUdpHandler">
+<span id="sbfUdpHandler"></span><span class="target" id="sbf_udp_handler_8h_1a826119cf714b6cc3ff3dcab73a9837b1"></span><em class="property">typedef </em><em class="property">struct</em> sbfUdpHandlerImpl *<code class="descname">sbfUdpHandler</code><a class="headerlink" href="#_CPPv213sbfUdpHandler" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The UDP handler. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt>
+<span class="target" id="sbf_udp_handler_8h_1a9d25098629ad0466479d14180d286667"></span><code class="descname">SBF_RB_TREE(sbfUdpHandlerStream, Tree, mTreeEntry, { if(lhs-&gt;mType !=rhs-&gt;mType) { if(lhs-&gt;mType==SBF_TOPIC_PUB) return -1;return 1;} if(lhs-&gt;mAddress&lt; rhs-&gt;mAddress) return -1;if(lhs-&gt;mAddress &gt; rhs-&gt;mAddress) return 1;return 0;})</code></dt>
+<dd><p>RB Tree storing the streams. </p>
+<p>UPD handler definition </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="know__issues_8md"></span><em>file</em> <code class="descname">know_issues.md</code></dt>
+<dd></dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="_r_e_a_d_m_e_8md"></span><em>file</em> <code class="descname">README.md</code></dt>
+<dd></dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="sbf_request_pub_8h"></span><em>file</em> <code class="descname">sbfRequestPub.h</code></dt>
+<dd><em>#include “sbfCommon.h”</em><em>#include “sbfTport.h”</em><em>#include “sbfQueue.h”</em><p>Helper structures and functions to create a publisher. </p>
+<p><dl class="docutils">
+<dt><strong>Copyright</strong></dt>
+<dd>© Copyright 2016 Neueda all rights reserved. </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv213sbfRequestPub">
+<span id="sbfRequestPub"></span><span class="target" id="sbf_request_pub_8h_1a9bcb13977342f28786f635e341e29ad4"></span><em class="property">typedef </em><em class="property">struct</em> sbfRequestPubImpl *<code class="descname">sbfRequestPub</code><a class="headerlink" href="#_CPPv213sbfRequestPub" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Declares the publisher. </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv220sbfRequestPubReadyCb">
+<span id="sbfRequestPubReadyCb"></span><span class="target" id="sbf_request_pub_8h_1a906a2e4613ca59e07e2f4d6fa8d4e92e"></span><em class="property">typedef </em>void (*<code class="descname">sbfRequestPubReadyCb</code>)<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfRequestPub" title="sbfRequestPub">sbfRequestPub</a> pub, void *closure<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sbfRequestPubReadyCb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback declaration that will be invoked when publisher is ready. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">pub</span></code>: the publisher handler. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the user data linked to the publisher handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv220sbfRequestPubReplyCb">
+<span id="sbfRequestPubReplyCb"></span><span class="target" id="sbf_request_pub_8h_1a204000cf1d1fd85c729701e42ca0504e"></span><em class="property">typedef </em>void (*<code class="descname">sbfRequestPubReplyCb</code>)<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfRequestPub" title="sbfRequestPub">sbfRequestPub</a> pub, <em class="property">struct</em> sbfRequestImpl *req, sbfBuffer buffer, void *closure<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sbfRequestPubReplyCb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback declaration when publisher is replied by the subscriptor. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">pub</span></code>: the publisher handler. </li>
+<li><code class="docutils literal"><span class="pre">req</span></code>: the request handler. </li>
+<li><code class="docutils literal"><span class="pre">buffer</span></code>: the buffer with the content of the reply. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the user data linked to the publisher handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv220sbfRequestPub_create8sbfTport8sbfQueuePKc20sbfRequestPubReadyCbPv">
+<span id="sbfRequestPub_create__sbfTport.sbfQueue.cCP.sbfRequestPubReadyCb.voidP"></span><span class="target" id="sbf_request_pub_8h_1ab20628164dcae6d44a4a985599403a2b"></span><a class="reference internal" href="#_CPPv213sbfRequestPub" title="sbfRequestPub">sbfRequestPub</a> <code class="descname">sbfRequestPub_create</code><span class="sig-paren">(</span>sbfTport <em>tport</em>, <a class="reference internal" href="#_CPPv28sbfQueue" title="sbfQueue">sbfQueue</a> <em>queue</em>, <em class="property">const</em> char *<em>topic</em>, <a class="reference internal" href="#_CPPv220sbfRequestPubReadyCb" title="sbfRequestPubReadyCb">sbfRequestPubReadyCb</a> <em>readyCb</em>, void *<em>closure</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sbfRequestPub_create8sbfTport8sbfQueuePKc20sbfRequestPubReadyCbPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates a publisher configured with the given parameters. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>a publisher configured with the given parameters. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">tport</span></code>: the port to initialise the communications. </li>
+<li><code class="docutils literal"><span class="pre">queue</span></code>: the queue to publish the messages. </li>
+<li><code class="docutils literal"><span class="pre">topic</span></code>: the logical channel name for the messages. </li>
+<li><code class="docutils literal"><span class="pre">readyCb</span></code>: the callback indicating that the channel is ready. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the user data linked to the publisher handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv221sbfRequestPub_destroy13sbfRequestPub">
+<span id="sbfRequestPub_destroy__sbfRequestPub"></span><span class="target" id="sbf_request_pub_8h_1a608a5445ee3a1d7390e4fd41e72bb806"></span>void <code class="descname">sbfRequestPub_destroy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfRequestPub" title="sbfRequestPub">sbfRequestPub</a> <em>pub</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv221sbfRequestPub_destroy13sbfRequestPub" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Release all the resources allocated by the publisher. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">pub</span></code>: the publisher handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv218sbfRequestPub_send13sbfRequestPubPv6size_t20sbfRequestPubReplyCbPv">
+<span id="sbfRequestPub_send__sbfRequestPub.voidP.s.sbfRequestPubReplyCb.voidP"></span><span class="target" id="sbf_request_pub_8h_1a012294d9f4dc9b15be7fdb8df4a5cf93"></span><em class="property">struct</em> sbfRequestImpl *<code class="descname">sbfRequestPub_send</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfRequestPub" title="sbfRequestPub">sbfRequestPub</a> <em>pub</em>, void *<em>data</em>, size_t <em>size</em>, <a class="reference internal" href="#_CPPv220sbfRequestPubReplyCb" title="sbfRequestPubReplyCb">sbfRequestPubReplyCb</a> <em>replyCb</em>, void *<em>closure</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv218sbfRequestPub_send13sbfRequestPubPv6size_t20sbfRequestPubReplyCbPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sends a message with the given subscriber. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the request handler. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">pub</span></code>: the publisher handler. </li>
+<li><code class="docutils literal"><span class="pre">data</span></code>: array of bytes to be sent. </li>
+<li><code class="docutils literal"><span class="pre">size</span></code>: the length in bytes of the data previously defined. </li>
+<li><code class="docutils literal"><span class="pre">replyCb</span></code>: the reply callback to call when the request is done. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the user data linked to the publisher handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv222sbfRequestPub_getTopic13sbfRequestPub">
+<span id="sbfRequestPub_getTopic__sbfRequestPub"></span><span class="target" id="sbf_request_pub_8h_1a4fb1ec7c72757ca669a923570a914668"></span><em class="property">const</em> char *<code class="descname">sbfRequestPub_getTopic</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfRequestPub" title="sbfRequestPub">sbfRequestPub</a> <em>pub</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv222sbfRequestPub_getTopic13sbfRequestPub" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns the name of the topic associated with the given publisher. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>null terminated string containing the name of the topic associated with the given publisher. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">pub</span></code>: the publisher handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="sbf_request_reply_8h"></span><em>file</em> <code class="descname">sbfRequestReply.h</code></dt>
+<dd><em>#include “sbfCommon.h”</em><em>#include “sbfRequestSub.h”</em><em>#include “sbfRequestPub.h”</em><em>#include “sbfMw.h”</em><em>#include “sbfTopic.h”</em><p>This file declares the structures and functions for the requester-replier communication. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="macro">
+<dt id="c.SBF_REQUEST_REPLY_HEADER_SIZE">
+<span class="target" id="sbf_request_reply_8h_1a3f3b3a4e7ab0f69f9989cb14560dad37"></span><code class="descname">SBF_REQUEST_REPLY_HEADER_SIZE</code><a class="headerlink" href="#c.SBF_REQUEST_REPLY_HEADER_SIZE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Header size in bytes for reply. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv210sbfRequest">
+<span id="sbfRequest"></span><span class="target" id="sbf_request_reply_8h_1a73616a24e829d8ac5400e7f2986036ae"></span><em class="property">typedef </em><em class="property">struct</em> sbfRequestImpl *<code class="descname">sbfRequest</code><a class="headerlink" href="#_CPPv210sbfRequest" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>request handler </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv216sbfRequest_reply10sbfRequestPv6size_t">
+<span id="sbfRequest_reply__sbfRequest.voidP.s"></span><span class="target" id="sbf_request_reply_8h_1aed25e8d1a7ca6692c4a9d7d1a0dffa32"></span>void <code class="descname">sbfRequest_reply</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv210sbfRequest" title="sbfRequest">sbfRequest</a> <em>req</em>, void *<em>data</em>, size_t <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv216sbfRequest_reply10sbfRequestPv6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Replies to a given requester with a given message. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">req</span></code>: the request handler. </li>
+<li><code class="docutils literal"><span class="pre">data</span></code>: message payload in raw byte array. </li>
+<li><code class="docutils literal"><span class="pre">size</span></code>: the size of the payload. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv217sbfRequest_detach10sbfRequest">
+<span id="sbfRequest_detach__sbfRequest"></span><span class="target" id="sbf_request_reply_8h_1a6f3bc2485806f8174bf2f2e2f443e6af"></span>void <code class="descname">sbfRequest_detach</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv210sbfRequest" title="sbfRequest">sbfRequest</a> <em>req</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv217sbfRequest_detach10sbfRequest" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Detaches a request so it can be used outside callback. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">req</span></code>: the request handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv218sbfRequest_destroy10sbfRequest">
+<span id="sbfRequest_destroy__sbfRequest"></span><span class="target" id="sbf_request_reply_8h_1acaa6ac8247a2a4a849015ea0b2517228"></span>void <code class="descname">sbfRequest_destroy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv210sbfRequest" title="sbfRequest">sbfRequest</a> <em>req</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv218sbfRequest_destroy10sbfRequest" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Release all the resources allocated by the request handler. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">req</span></code>: the request handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="file">
+<dt>
+<span class="target" id="sbf_request_sub_8h"></span><em>file</em> <code class="descname">sbfRequestSub.h</code></dt>
+<dd><em>#include “sbfCommon.h”</em><em>#include “sbfTport.h”</em><em>#include “sbfQueue.h”</em><p>Helper structures and functions to create a subscriber. </p>
+<p><dl class="docutils">
+<dt><strong>Copyright</strong></dt>
+<dd>© Copyright 2016 Neueda all rights reserved. </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="type">
+<dt id="_CPPv213sbfRequestSub">
+<span id="sbfRequestSub"></span><span class="target" id="sbf_request_sub_8h_1a6f43898e8b9affe12bb6c378cd5c08b3"></span><em class="property">typedef </em><em class="property">struct</em> sbfRequestSubImpl *<code class="descname">sbfRequestSub</code><a class="headerlink" href="#_CPPv213sbfRequestSub" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The subscriber declaration. </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv220sbfRequestSubReadyCb">
+<span id="sbfRequestSubReadyCb"></span><span class="target" id="sbf_request_sub_8h_1ae72f14267ed690077474259f953bad41"></span><em class="property">typedef </em>void (*<code class="descname">sbfRequestSubReadyCb</code>)<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfRequestSub" title="sbfRequestSub">sbfRequestSub</a> sub, void *closure<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sbfRequestSubReadyCb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback declaration that will be invoked when subscriber is ready. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">sub</span></code>: the subscriber handler. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the user data linked to the subscriber handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv222sbfRequestSubRequestCb">
+<span id="sbfRequestSubRequestCb"></span><span class="target" id="sbf_request_sub_8h_1a0e6a16a7431befbcbd2eda1c7ac826ff"></span><em class="property">typedef </em>void (*<code class="descname">sbfRequestSubRequestCb</code>)<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfRequestSub" title="sbfRequestSub">sbfRequestSub</a> sub, <em class="property">struct</em> sbfRequestImpl *req, sbfBuffer buffer, void *closure<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv222sbfRequestSubRequestCb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback declaration that will be invoked when request is processed. Request is destroyed unless sbfRequest_detach is called on it. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">sub</span></code>: the subscriber handler. </li>
+<li><code class="docutils literal"><span class="pre">req</span></code>: the request that is being attended. </li>
+<li><code class="docutils literal"><span class="pre">buffer</span></code>: the buffer requested. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the user data linked to the subscriber handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv220sbfRequestSub_create8sbfTport8sbfQueuePKc20sbfRequestSubReadyCb22sbfRequestSubRequestCbPv">
+<span id="sbfRequestSub_create__sbfTport.sbfQueue.cCP.sbfRequestSubReadyCb.sbfRequestSubRequestCb.voidP"></span><span class="target" id="sbf_request_sub_8h_1ad3d0a9ad4edaf098f039f7a3a6b3b862"></span><a class="reference internal" href="#_CPPv213sbfRequestSub" title="sbfRequestSub">sbfRequestSub</a> <code class="descname">sbfRequestSub_create</code><span class="sig-paren">(</span>sbfTport <em>tport</em>, <a class="reference internal" href="#_CPPv28sbfQueue" title="sbfQueue">sbfQueue</a> <em>queue</em>, <em class="property">const</em> char *<em>topic</em>, <a class="reference internal" href="#_CPPv220sbfRequestSubReadyCb" title="sbfRequestSubReadyCb">sbfRequestSubReadyCb</a> <em>readyCb</em>, <a class="reference internal" href="#_CPPv222sbfRequestSubRequestCb" title="sbfRequestSubRequestCb">sbfRequestSubRequestCb</a> <em>requestCb</em>, void *<em>closure</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv220sbfRequestSub_create8sbfTport8sbfQueuePKc20sbfRequestSubReadyCb22sbfRequestSubRequestCbPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates a subscriber configured with the given parameters. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>a subscriber configured with the given parameters. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">tport</span></code>: the port to initialise the communications. </li>
+<li><code class="docutils literal"><span class="pre">queue</span></code>: the queue to sublish the messages. </li>
+<li><code class="docutils literal"><span class="pre">topic</span></code>: the logical channel name for the messages. </li>
+<li><code class="docutils literal"><span class="pre">readyCb</span></code>: the callback indicating that the channel is ready. </li>
+<li><code class="docutils literal"><span class="pre">requestCb</span></code>: the callback indicating that the channel is ready. </li>
+<li><code class="docutils literal"><span class="pre">closure</span></code>: the user data linked to the subscriber handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv221sbfRequestSub_destroy13sbfRequestSub">
+<span id="sbfRequestSub_destroy__sbfRequestSub"></span><span class="target" id="sbf_request_sub_8h_1ab30d78106273929f9b4096bdfb876ec5"></span>void <code class="descname">sbfRequestSub_destroy</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfRequestSub" title="sbfRequestSub">sbfRequestSub</a> <em>sub</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv221sbfRequestSub_destroy13sbfRequestSub" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Release all the resources allocated by the subscriber. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">sub</span></code>: the subscriber handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv222sbfRequestSub_getTopic13sbfRequestSub">
+<span id="sbfRequestSub_getTopic__sbfRequestSub"></span><span class="target" id="sbf_request_sub_8h_1a76545074d59af600ec9f6dd312151dad"></span><em class="property">const</em> char *<code class="descname">sbfRequestSub_getTopic</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfRequestSub" title="sbfRequestSub">sbfRequestSub</a> <em>sub</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv222sbfRequestSub_getTopic13sbfRequestSub" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns the name of the topic associated with the given subscriber. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>null terminated string containing the name of the topic associated with the given subscriber. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">sub</span></code>: the subscriber handler. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv219sbfRequestSub_reply13sbfRequestSubP14sbfRequestImplPv6size_t">
+<span id="sbfRequestSub_reply__sbfRequestSub.sbfRequestImplP.voidP.s"></span><span class="target" id="sbf_request_sub_8h_1a1b50dcbb9968b9653a32a9c7df1b9d59"></span>void <code class="descname">sbfRequestSub_reply</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv213sbfRequestSub" title="sbfRequestSub">sbfRequestSub</a> <em>sub</em>, <em class="property">struct</em> sbfRequestImpl *<em>req</em>, void *<em>data</em>, size_t <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv219sbfRequestSub_reply13sbfRequestSubP14sbfRequestImplPv6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sends a message with the given subscriber. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">sub</span></code>: the subscriber handler. </li>
+<li><code class="docutils literal"><span class="pre">req</span></code>: the request that is being replied. </li>
+<li><code class="docutils literal"><span class="pre">data</span></code>: array of bytes to be sent. </li>
+<li><code class="docutils literal"><span class="pre">size</span></code>: the length in bytes of the data previously defined. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="page">
+<dt>
+<span class="target" id="md_know_issues"></span><em>page</em> <code class="descname">md_know_issues</code></dt>
+<dd><p><em>General</em></p>
+<p><ul class="simple">
+<li>No common error handling mechanisms. Sometimes the library just makes the program to end abruptly, some others the error is handled at application level, and some others the error is not handled. Define clear error codes per module so that they indicate the produced error as well as the mechanisms to handle them.</li>
+<li>The examples does not take care of the ownership of the memory allocated by the API.</li>
+<li>Destroy methods does not release the resources allocated during creation. As an example, timers does not stop callbacks when destroyed so callbacks will be fired internally.</li>
+<li>Destroy method should not call release reference count… Destroy should be called as the action to release all of the resources when reference count come to zero. Better to define a release method invoking the destroy when no more references are pointing to the ‘object’.</li>
+<li>All mandatory parameters defined at the API (public functions), should be checked with assertion to facilitate debugging. In the case that other parameters requires to be checked at runtime, they should be checked at the beginning of the method and propagate the error when proceeds.</li>
+</ul>
+</p>
+<p>Some private structures are used in public API (e.g. sbfBatch sbfBatch_create (struct sbfTportImpl* tport)). </p>
+</dd></dl>
+
+<dl class="dir">
+<dt>
+<span class="target" id="dir_52ff2686f796482dae89c725c32853bb"></span><em>dir</em> <code class="descname">handlers/common</code></dt>
+<dd></dd></dl>
+
+<dl class="dir">
+<dt>
+<span class="target" id="dir_4270bfced15e0e73154b13468c7c9ad9"></span><em>dir</em> <code class="descname">core</code></dt>
+<dd></dd></dl>
+
+<dl class="dir">
+<dt>
+<span class="target" id="dir_97bbe734eff8d6674660850430e62f3c"></span><em>dir</em> <code class="descname">handlers</code></dt>
+<dd></dd></dl>
+
+<dl class="dir">
+<dt>
+<span class="target" id="dir_838553633b6f9445de06a7f05c40d110"></span><em>dir</em> <code class="descname">requestreply</code></dt>
+<dd></dd></dl>
+
+<dl class="dir">
+<dt>
+<span class="target" id="dir_c1c544dc0257fe85be803ea2c3194677"></span><em>dir</em> <code class="descname">handlers/tcpmesh</code></dt>
+<dd></dd></dl>
+
+<dl class="dir">
+<dt>
+<span class="target" id="dir_518e61d9c51ec1569183e3d6232a948a"></span><em>dir</em> <code class="descname">handlers/udp</code></dt>
+<dd></dd></dl>
+
+<dl class="page">
+<dt>
+<span class="target" id="indexpage"></span><em>page</em> <code class="descname">index</code></dt>
+<dd><p>SBF is a message transport system that allows inter app communication in two different flavours:<ul class="simple">
+<li>Publisher - Subscriber</li>
+<li>Requester - Replier</li>
+</ul>
+</p>
+<p>The <code class="docutils literal"><span class="pre">publisher-subscriber</span></code> consists of publishers defining topics where messages are placed. Then one or more subscribers might register to a concrete topic to read the messages that were delivered (one to many communication). On the other hand, the <code class="docutils literal"><span class="pre">requester-replier</span></code> communication is about defining a channel where messages are sent from one requester to one publisher (one to one communication).</p>
+<p></p>
+<p><em>API</em></p>
+<p>Here you are the list of modules the API offers to build your transport<ul class="simple">
+<li>Core<ul>
+<li><a class="reference internal" href="#sbf_event_8h"><span class="std std-ref">Event</span></a></li>
+<li>Timers<ul>
+<li><a class="reference internal" href="#sbf_timer_8h"><span class="std std-ref">Timer</span></a></li>
+<li><a class="reference internal" href="#sbf_hi_res_timer_8h"><span class="std std-ref">Hi resolution timer</span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sbf_queue_8h"><span class="std std-ref">Queue</span></a></li>
+<li><a class="reference internal" href="#sbf_mw_8h"><span class="std std-ref">Middleware</span></a></li>
+</ul>
+</li>
+<li>Handlers<ul>
+<li><a class="reference internal" href="#sbf_common_handler_8h"><span class="std std-ref">Common handler</span></a></li>
+<li><a class="reference internal" href="#sbf_tcp_mesh_handler_8h"><span class="std std-ref">TCP mesh handler</span></a></li>
+<li><a class="reference internal" href="#sbf_udp_handler_8h"><span class="std std-ref">UDP handler</span></a></li>
+</ul>
+</li>
+<li>Request / reply<ul>
+<li><a class="reference internal" href="#sbf_request_pub_8h"><span class="std std-ref">Request publisher</span></a></li>
+<li><a class="reference internal" href="#sbf_request_sub_8h"><span class="std std-ref">Request subscriber</span></a></li>
+<li><a class="reference internal" href="#sbf_request_reply_8h"><span class="std std-ref">Request reply</span></a></li>
+</ul>
+</li>
+</ul>
+</p>
+<p><em>Publisher - subscriber example</em></p>
+<p>Let’s see how to create a publisher-subscriber communication.</p>
+<p><em>Publisher code</em></p>
+<p>Here are the first lines you will need to create your publisher:</p>
+<p>#### Create the middleware <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include &quot;sbfCommon.h&quot; // Common stuff such as queues, threading, ...</span>
+<span class="c1">#include &quot;sbfMw.h&quot; // The middleware API</span>
+
+<span class="o">...</span>
+
+<span class="o">//</span> <span class="n">Initialise</span> <span class="n">the</span> <span class="n">middleware</span> <span class="n">by</span> <span class="n">defining</span> <span class="n">some</span> <span class="n">properties</span> <span class="n">like</span> <span class="n">the</span> <span class="n">handler</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">tcp</span><span class="p">,</span> <span class="n">udp</span><span class="p">)</span> <span class="ow">and</span> <span class="n">the</span>  <span class="n">connection</span> <span class="n">interface</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">eth0</span><span class="p">)</span><span class="o">.</span>
+<span class="n">sbfKeyValue</span> <span class="n">properties</span> <span class="o">=</span> <span class="n">sbfKeyValue_create</span> <span class="p">();</span>
+<span class="n">sbfKeyValue_put</span> <span class="p">(</span><span class="n">properties</span><span class="p">,</span> <span class="s2">&quot;transport.default.type&quot;</span><span class="p">,</span> <span class="s2">&quot;udp&quot;</span><span class="p">);</span>
+<span class="n">sbfKeyValue_put</span> <span class="p">(</span><span class="n">properties</span><span class="p">,</span> <span class="s2">&quot;transport.default.udp.interface&quot;</span><span class="p">,</span> <span class="s2">&quot;eth0&quot;</span><span class="p">);</span>
+<span class="n">sbfMw</span> <span class="n">mw</span> <span class="o">=</span> <span class="n">sbfMw_create</span> <span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">properties</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+<p>#### Create a queue, the connection port and a thread to dispatch events <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">static</span> <span class="n">void</span><span class="o">*</span>
+<span class="n">dispatchCb</span> <span class="p">(</span><span class="n">void</span><span class="o">*</span> <span class="n">closure</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">sbfQueue_dispatch</span> <span class="p">(</span><span class="n">closure</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">NULL</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">...</span>
+
+<span class="n">sbfThread</span> <span class="n">t</span><span class="p">;</span>
+<span class="n">sbfQueue</span> <span class="n">queue</span> <span class="o">=</span> <span class="n">sbfQueue_create</span> <span class="p">(</span><span class="n">mw</span><span class="p">,</span> <span class="s2">&quot;default&quot;</span><span class="p">);</span>
+<span class="n">sbfThread_create</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">,</span> <span class="n">dispatchCb</span><span class="p">,</span> <span class="n">queue</span><span class="p">);</span>
+<span class="n">sbfTport</span> <span class="n">tport</span> <span class="o">=</span> <span class="n">sbfTport_create</span> <span class="p">(</span><span class="n">mw</span><span class="p">,</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">SBF_MW_ALL_THREADS</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+<p>#### Create the publisher <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">static</span> <span class="n">void</span>
+<span class="n">timerCb</span> <span class="p">(</span><span class="n">sbfTimer</span> <span class="n">timer</span><span class="p">,</span> <span class="n">void</span><span class="o">*</span> <span class="n">closure</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%u</span><span class="s2">&quot;</span> <span class="n">SBF_EOL</span><span class="p">,</span> <span class="n">gPublished</span><span class="p">);</span>
+    <span class="n">fflush</span> <span class="p">(</span><span class="n">stdout</span><span class="p">);</span>
+
+    <span class="n">gPublished</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">...</span>
+
+<span class="n">sbfTimer_create</span> <span class="p">(</span><span class="n">sbfMw_getDefaultThread</span> <span class="p">(</span><span class="n">mw</span><span class="p">),</span>
+                 <span class="n">queue</span><span class="p">,</span>
+                 <span class="n">timerCb</span><span class="p">,</span>
+                 <span class="n">NULL</span><span class="p">,</span>
+                 <span class="mi">1</span><span class="p">);</span>
+<span class="n">sbfPub</span> <span class="n">pub</span> <span class="o">=</span> <span class="n">sbfPub_create</span> <span class="p">(</span><span class="n">tport</span><span class="p">,</span> <span class="n">queue</span><span class="p">,</span> <span class="s2">&quot;topic&quot;</span><span class="p">,</span> <span class="n">NULL</span><span class="p">,</span> <span class="n">NULL</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+<p>You can find the whole example of the publisher <a class="reference external" href="https://gitlab.com/neueda/sbf/tree/master/tools/publisher">here</a></p>
+<p><em>Subscriber code</em></p>
+<p>Now let’s see how the subscriber works.</p>
+<p>#### Create the middleware <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include &quot;sbfCommon.h&quot; // Common stuff such as queues, threading, ...</span>
+<span class="c1">#include &quot;sbfMw.h&quot; // The middleware API</span>
+
+<span class="o">...</span>
+
+<span class="o">//</span> <span class="n">Initialise</span> <span class="n">the</span> <span class="n">middleware</span> <span class="n">by</span> <span class="n">defining</span> <span class="n">some</span> <span class="n">properties</span> <span class="n">like</span> <span class="n">the</span> <span class="n">handler</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">tcp</span><span class="p">,</span> <span class="n">udp</span><span class="p">)</span> <span class="ow">and</span> <span class="n">the</span>  <span class="n">connection</span> <span class="n">interface</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">eth0</span><span class="p">)</span><span class="o">.</span>
+<span class="n">sbfKeyValue</span> <span class="n">properties</span> <span class="o">=</span> <span class="n">sbfKeyValue_create</span> <span class="p">();</span>
+<span class="n">sbfKeyValue_put</span> <span class="p">(</span><span class="n">properties</span><span class="p">,</span> <span class="s2">&quot;transport.default.type&quot;</span><span class="p">,</span> <span class="s2">&quot;udp&quot;</span><span class="p">);</span>
+<span class="n">sbfKeyValue_put</span> <span class="p">(</span><span class="n">properties</span><span class="p">,</span> <span class="s2">&quot;transport.default.udp.interface&quot;</span><span class="p">,</span> <span class="s2">&quot;eth0&quot;</span><span class="p">);</span>
+<span class="n">sbfKeyValue_put</span> <span class="p">(</span><span class="n">properties</span><span class="p">,</span> <span class="s2">&quot;transport.default.tcpmesh.listen&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">);</span>
+<span class="n">sbfKeyValue_put</span> <span class="p">(</span><span class="n">properties</span><span class="p">,</span> <span class="s2">&quot;transport.default.tcpmesh.connect0&quot;</span><span class="p">,</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">);</span>
+<span class="n">sbfMw</span> <span class="n">mw</span> <span class="o">=</span> <span class="n">sbfMw_create</span> <span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">properties</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+<p>#### Create a queue, the connection port and a thread to dispatch events <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">static</span> <span class="n">void</span><span class="o">*</span>
+<span class="n">dispatchCb</span> <span class="p">(</span><span class="n">void</span><span class="o">*</span> <span class="n">closure</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">sbfQueue_dispatch</span> <span class="p">(</span><span class="n">closure</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">NULL</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">...</span>
+
+<span class="n">sbfThread</span> <span class="n">t</span><span class="p">;</span>
+<span class="n">sbfQueue</span> <span class="n">queue</span> <span class="o">=</span> <span class="n">sbfQueue_create</span> <span class="p">(</span><span class="n">mw</span><span class="p">,</span> <span class="s2">&quot;default&quot;</span><span class="p">);</span>
+<span class="n">sbfThread_create</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">,</span> <span class="n">dispatchCb</span><span class="p">,</span> <span class="n">queue</span><span class="p">);</span>
+<span class="n">sbfTport</span> <span class="n">tport</span> <span class="o">=</span> <span class="n">sbfTport_create</span> <span class="p">(</span><span class="n">mw</span><span class="p">,</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">SBF_MW_ALL_THREADS</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+<p>#### Create the subscriber <div class="highlight-default"><div class="highlight"><pre><span></span>static void
+timerCb (sbfTimer timer, void* closure)
+{
+    printf (&quot;%u low=%llu average=%llu high=%llu&quot; SBF_EOL,
+            gMessages,
+            gTimeLow == UINT64_MAX ? 0 : (unsigned long long)gTimeLow,
+            gMessages == 0 ? 0 : (unsigned long long)gTimeTotal / gMessages,
+            (unsigned long long)gTimeHigh);
+}
+
+static void
+messageCb (sbfSub sub, sbfBuffer buffer, void* closure)
+{
+    uint64_t* payload = sbfBuffer_getData (buffer);
+}
+...
+
+sbfTimer_create (sbfMw_getDefaultThread (mw),
+                 queue,
+                 timerCb,
+                 NULL,
+                 1);
+sbfPub pub = sbfPub_create (tport, queue, &quot;topic&quot;, NULL, NULL);
+</pre></div>
+</div>
+</p>
+<p>You can find the whole example of the subscriber <a class="reference external" href="https://gitlab.com/neueda/sbf/tree/master/tools/subscriber">here</a>.</p>
+<p><em>Requester replier example</em></p>
+<p></p>
+<p><em>Download</em></p>
+<p>Download the source code from GitLab at <a class="reference external" href="https://gitlab.com/neueda/sbf">https://gitlab.com/neueda/sbf</a>. SBT run under Linux OS (Debian, Ubuntu, Centos distros are highly recommended).</p>
+<p><em>Vagrant</em></p>
+<p>If you are running on OS X or Windows don’t worry, we provide a vagrant file to create a VirtualBox ubuntu image including all the necessary stuff to run. You will need to download <a class="reference external" href="https://www.virtualbox.org/">VirtualBox</a> and <a class="reference external" href="https://www.vagrantup.com/">Vagrant</a>.<ol class="arabic simple">
+<li>Unzip ubuntu.zip folder <code class="docutils literal"><span class="pre">user&#64;host:~$</span> <span class="pre">unzip</span> <span class="pre">ubuntu.zip</span></code></li>
+<li>Change your directory to ubuntu. <code class="docutils literal"><span class="pre">user&#64;host:~$</span> <span class="pre">cd</span> <span class="pre">ubuntu</span></code></li>
+<li>Edit the <code class="docutils literal"><span class="pre">synced_folders</span></code> file and replace the <code class="docutils literal"><span class="pre">hostpath</span></code> pointing to your shared folder (this will mount the directory under /mnt/host/).</li>
+<li>Run vagrant <code class="docutils literal"><span class="pre">user&#64;host:~/ubuntu$</span> <span class="pre">vagrant</span> <span class="pre">up</span></code></li>
+<li>Now you are ready to run the Ubuntu image on VirtualBox</li>
+<li>You will be asked to prompt your username and password <code class="docutils literal"><span class="pre">username:vagrant</span></code> <code class="docutils literal"><span class="pre">password:vagrant</span></code></li>
+</ol>
+</p>
+<p><em>Running the examples</em></p>
+<p>You will find the SBF together with some examples at GitLab (<a class="reference external" href="https://gitlab.com/neueda.sbf/">https://gitlab.com/neueda.sbf/</a>). Thus, clone the repository: <code class="docutils literal"><span class="pre">user&#64;host:~$</span> <span class="pre">git</span> <span class="pre">clone</span> </code></p>
+<p><em>Build the SBF</em></p>
+<p>Build the SBF by running the following commands: <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">sbf</span>
+<span class="n">mkdir</span> <span class="n">build</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">build</span>
+<span class="n">cmake</span> <span class="o">..</span>
+<span class="n">make</span> <span class="n">build</span> <span class="o">&amp;&amp;</span> <span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+ You will find the binaries at <code class="docutils literal"><span class="pre">cd</span> <span class="pre">build/install/bin</span></code>. <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sbf</span><span class="o">-</span><span class="n">replier</span>
+<span class="n">sbf</span><span class="o">-</span><span class="n">requester</span>
+<span class="n">sbf</span><span class="o">-</span><span class="n">publisher</span>
+<span class="n">sbf</span><span class="o">-</span><span class="n">subscriber</span>
+</pre></div>
+</div>
+ The requester sends messages and the replier reads the message and replies. Something similar for the publisher and subscriber.</p>
+<p><em>Contribute</em></p>
+<p></p>
+<p><em>License</em></p>
+<p></p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Neueda.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

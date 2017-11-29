@@ -1,5 +1,6 @@
 #include "sbfMw.h"
 #include "sbfMwPrivate.h"
+#include "sbfPerfCounter.h"
 
 static void
 sbfMwEventBaseTimerCb (int fd, short events, void* closure)
@@ -41,6 +42,9 @@ sbfMw_create (sbfLog log, sbfKeyValue properties)
     WSADATA              wsd;
 #endif
 
+    // Check all the supported capabilities
+    sbfMw_checkSupported(CAP_ALL_MASK);
+    
     value = sbfKeyValue_get (properties, "threads");
     if (value == NULL)
         threads = 1;
@@ -188,3 +192,25 @@ sbfMw_getProperties (sbfMw mw)
 {
     return mw->mProperties;
 }
+
+uint32_t
+sbfMw_checkSupported(uint32_t cap_mask)
+{
+    static uint64_t supported = 0LL;
+    static char processed = 0;
+
+    // Performs the check for the first time and cache it into static variable
+    if (processed == 0)
+    {
+        // Hi resolution counter capability
+        supported = (sbfPerfCounter_frequency() > 0)? CAP_HI_RES_COUNTER: supported;
+
+        // TODO: Extends other capabilities here...
+
+        processed = 1;
+    }
+    
+    return cap_mask & (uint32_t) supported;
+}
+
+

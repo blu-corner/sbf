@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_timer_8h" kind="file" language="C++">
+    <compoundname>sbfTimer.h</compoundname>
+    <includes local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_mw_8h" local="yes">core/sbfMw.h</includedby>
+    <incdepgraph>
+      <node id="38">
+        <label>core/sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>sbfCommon.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="42">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+      </node>
+      <node id="44">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+      </node>
+      <node id="45">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+      </node>
+      <node id="40">
+        <label>core/sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>core/sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_timer_8h_1a5fe71016a949366101c0a61e5f62c3fd" prot="public" static="no">
+        <name>SBF_TIMER_MILLISECONDS</name>
+        <param><defname>n</defname></param>
+        <initializer>((n)/1000.0)</initializer>
+        <briefdescription>
+<para>The milliseconds for the given seconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfTimer.h" line="28" column="9" bodyfile="core/sbfTimer.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_timer_8h_1a44bb79a590d1ed47a18ef8b540ce3650" prot="public" static="no">
+        <name>SBF_TIMER_MICROSECONDS</name>
+        <param><defname>n</defname></param>
+        <initializer>((n)/1000000.0)</initializer>
+        <briefdescription>
+<para>The micro seconds for the given seconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfTimer.h" line="31" column="9" bodyfile="core/sbfTimer.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_timer_8h_1a107fc98170a20456ae5fbea0e5862ec2" prot="public" static="no">
+        <type>struct sbfTimerImpl *</type>
+        <definition>typedef struct sbfTimerImpl* sbfTimer</definition>
+        <argsstring></argsstring>
+        <name>sbfTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfTimer.h" line="18" column="1" bodyfile="core/sbfTimer.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_timer_8h_1ad4886ffe6e46a398e2c741ebd64fe552" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* sbfTimerCb) (sbfTimer timer, void *closure)</definition>
+        <argsstring>)(sbfTimer timer, void *closure)</argsstring>
+        <name>sbfTimerCb</name>
+        <briefdescription>
+<para>callback invoked when timer needs to be processed. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timer handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user data associated to the queue item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfTimer.h" line="25" column="1" bodyfile="core/sbfTimer.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_timer_8h_1a8812947aab58049baba5c8fa4c1b966b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_timer_8h_1a107fc98170a20456ae5fbea0e5862ec2" kindref="member">sbfTimer</ref></type>
+        <definition>sbfTimer sbfTimer_create</definition>
+        <argsstring>(struct sbfMwThreadImpl *thread, struct sbfQueueImpl *queue, sbfTimerCb cb, void *closure, double interval)</argsstring>
+        <name>sbfTimer_create</name>
+        <param>
+          <type>struct sbfMwThreadImpl *</type>
+          <declname>thread</declname>
+        </param>
+        <param>
+          <type>struct sbfQueueImpl *</type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_timer_8h_1ad4886ffe6e46a398e2c741ebd64fe552" kindref="member">sbfTimerCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+<para>Create a timer with the given arguments. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>thread</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the thread handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a queue. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>High resolution timer callback. It will be invoked when the timer expires. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user data associated to this high resolution timer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the interval, in seconds, the timer is configured to fire the callback. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a timer handler. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfTimer.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_timer_8h_1af5cdfdf64302d94b1197ca7ea5fece24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfTimer_destroy</definition>
+        <argsstring>(sbfTimer timer)</argsstring>
+        <name>sbfTimer_destroy</name>
+        <param>
+          <type><ref refid="sbf_timer_8h_1a107fc98170a20456ae5fbea0e5862ec2" kindref="member">sbfTimer</ref></type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para>Release the memory allocated by the high resolution timer. This also stops the timer so no callback will be raised. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timer handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfTimer.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_timer_8h_1a61b6a284186fcc95558f0f716b6e0f49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double sbfTimer_getInterval</definition>
+        <argsstring>(sbfTimer timer)</argsstring>
+        <name>sbfTimer_getInterval</name>
+        <param>
+          <type><ref refid="sbf_timer_8h_1a107fc98170a20456ae5fbea0e5862ec2" kindref="member">sbfTimer</ref></type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para>returns the interval the timer was configured. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timer handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the interval, in seconds, the timer is configured to fire the callback. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfTimer.h" line="63" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file declares the interface for handling queues. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>_SBF_TIMER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_TIMER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfCommon.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">SBF_BEGIN_DECLS</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfMwThreadImpl;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfQueueImpl;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="sbf_timer_8h_1a107fc98170a20456ae5fbea0e5862ec2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfTimerImpl*<sp/><ref refid="sbf_timer_8h_1a107fc98170a20456ae5fbea0e5862ec2" kindref="member">sbfTimer</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="sbf_timer_8h_1ad4886ffe6e46a398e2c741ebd64fe552" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="sbf_timer_8h_1ad4886ffe6e46a398e2c741ebd64fe552" kindref="member">sbfTimerCb</ref>)<sp/>(<ref refid="sbf_timer_8h_1a107fc98170a20456ae5fbea0e5862ec2" kindref="member">sbfTimer</ref><sp/>timer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="sbf_timer_8h_1a5fe71016a949366101c0a61e5f62c3fd" refkind="member"><highlight class="preprocessor">#define<sp/>SBF_TIMER_MILLISECONDS(n)<sp/>((n)/1000.0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="sbf_timer_8h_1a44bb79a590d1ed47a18ef8b540ce3650" refkind="member"><highlight class="preprocessor">#define<sp/>SBF_TIMER_MICROSECONDS(n)<sp/>((n)/1000000.0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="sbf_timer_8h_1a107fc98170a20456ae5fbea0e5862ec2" kindref="member">sbfTimer</ref><sp/><ref refid="sbf_timer_8h_1a8812947aab58049baba5c8fa4c1b966b" kindref="member">sbfTimer_create</ref><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sbfMwThreadImpl*<sp/>thread,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sbfQueueImpl*<sp/>queue,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_timer_8h_1ad4886ffe6e46a398e2c741ebd64fe552" kindref="member">sbfTimerCb</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>interval);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_timer_8h_1af5cdfdf64302d94b1197ca7ea5fece24" kindref="member">sbfTimer_destroy</ref><sp/>(<ref refid="sbf_timer_8h_1a107fc98170a20456ae5fbea0e5862ec2" kindref="member">sbfTimer</ref><sp/>timer);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="sbf_timer_8h_1a61b6a284186fcc95558f0f716b6e0f49" kindref="member">sbfTimer_getInterval</ref><sp/>(<ref refid="sbf_timer_8h_1a107fc98170a20456ae5fbea0e5862ec2" kindref="member">sbfTimer</ref><sp/>timer);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">SBF_END_DECLS</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_TIMER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="core/sbfTimer.h"/>
+  </compounddef>
+</doxygen>

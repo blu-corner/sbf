@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_hi_res_timer_8h" kind="file" language="C++">
+    <compoundname>sbfHiResTimer.h</compoundname>
+    <includes local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_mw_8h" local="yes">core/sbfMw.h</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>core/sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>sbfCommon.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+      </node>
+      <node id="10">
+        <label>core/sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+      </node>
+      <node id="15">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+      </node>
+      <node id="11">
+        <label>core/sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" prot="public" static="no">
+        <type>struct sbfHiResTimerImpl *</type>
+        <definition>typedef struct sbfHiResTimerImpl* sbfHiResTimer</definition>
+        <argsstring></argsstring>
+        <name>sbfHiResTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.h" line="16" column="1" bodyfile="core/sbfHiResTimer.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* sbfHiResTimerCb) (sbfHiResTimer timer, void *closure)</definition>
+        <argsstring>)(sbfHiResTimer timer, void *closure)</argsstring>
+        <name>sbfHiResTimerCb</name>
+        <briefdescription>
+<para>Callback invoked when timer expires. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timer handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user data associated to the timer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.h" line="23" column="1" bodyfile="core/sbfHiResTimer.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_hi_res_timer_8h_1a4ed03ee88c4a1387158659a1f4b0066f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref></type>
+        <definition>sbfHiResTimer sbfHiResTimer_create</definition>
+        <argsstring>(struct sbfQueueImpl *queue, sbfHiResTimerCb cb, void *closure, u_int microseconds)</argsstring>
+        <name>sbfHiResTimer_create</name>
+        <param>
+          <type>struct sbfQueueImpl *</type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" kindref="member">sbfHiResTimerCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <param>
+          <type>u_int</type>
+          <declname>microseconds</declname>
+        </param>
+        <briefdescription>
+<para>Returns a high resolution timer handler initialised with the given data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a queue. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>High resolution timer callback. It will be invoked when the timer expires. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user data associated to this high resolution timer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>microseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the microseconds to fire the timer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a high resolution timer handler. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_hi_res_timer_8h_1a89282fbee3f560a4111eac6ae2b3ea1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfHiResTimer_destroy</definition>
+        <argsstring>(sbfHiResTimer timer)</argsstring>
+        <name>sbfHiResTimer_destroy</name>
+        <param>
+          <type><ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref></type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para>Release the memory allocated by the high resolution timer. This also stops the timer so no callback will be raised. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timer handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_hi_res_timer_8h_1a3d4d0b158165c2b16431cadaa73a7822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u_int</type>
+        <definition>u_int sbfHiResTimer_getInterval</definition>
+        <argsstring>(sbfHiResTimer timer)</argsstring>
+        <name>sbfHiResTimer_getInterval</name>
+        <param>
+          <type><ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref></type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para>&quot;Description&quot; </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timer handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&quot;Return of the function&quot; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfHiResTimer.h" line="52" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file declares the structures and functions to provide high resolution timers. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>_SBF_HI_RES_TIMER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_HI_RES_TIMER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfCommon.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">SBF_BEGIN_DECLS</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfQueueImpl;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfHiResTimerImpl*<sp/><ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" kindref="member">sbfHiResTimerCb</ref>)<sp/>(<ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref><sp/>timer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref><sp/><ref refid="sbf_hi_res_timer_8h_1a4ed03ee88c4a1387158659a1f4b0066f" kindref="member">sbfHiResTimer_create</ref><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sbfQueueImpl*<sp/>queue,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_hi_res_timer_8h_1ac0992d225a1915397533171ab6f43e97" kindref="member">sbfHiResTimerCb</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u_int<sp/>microseconds);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_hi_res_timer_8h_1a89282fbee3f560a4111eac6ae2b3ea1f" kindref="member">sbfHiResTimer_destroy</ref><sp/>(<ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref><sp/>timer);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">u_int<sp/><ref refid="sbf_hi_res_timer_8h_1a3d4d0b158165c2b16431cadaa73a7822" kindref="member">sbfHiResTimer_getInterval</ref><sp/>(<ref refid="sbf_hi_res_timer_8h_1a67efd8f45c0dc2e858a8f7732f53a71e" kindref="member">sbfHiResTimer</ref><sp/>timer);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">SBF_END_DECLS</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_HI_RES_TIMER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="core/sbfHiResTimer.h"/>
+  </compounddef>
+</doxygen>

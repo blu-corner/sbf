@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_udp_handler_8h" kind="file" language="C++">
+    <compoundname>sbfUdpHandler.h</compoundname>
+    <includes local="yes">sbfHandler.h</includes>
+    <includes local="yes">sbfInterface.h</includes>
+    <includes refid="sbf_mw_8h" local="yes">sbfMw.h</includes>
+    <includes local="yes">sbfTport.h</includes>
+    <includes local="yes">sbfUdpMulticast.h</includes>
+    <includes refid="sbf_common_handler_8h" local="yes">sbfCommonHandler.h</includes>
+    <incdepgraph>
+      <node id="82">
+        <label>sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>sbfHandler.h</label>
+      </node>
+      <node id="76">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>sbfUdpMulticast.h</label>
+      </node>
+      <node id="79">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>sbfInterface.h</label>
+      </node>
+      <node id="80">
+        <label>sbfTport.h</label>
+      </node>
+      <node id="74">
+        <label>sbfCommon.h</label>
+      </node>
+      <node id="73">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>sbfKeyValue.h</label>
+      </node>
+      <node id="78">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_udp_handler_8h_1ae190d65949a60790c60525e14f61c3d3" prot="public" static="no">
+        <name>SBF_UDP_HANDLER_DEFAULT_PORT</name>
+        <initializer>33333</initializer>
+        <briefdescription>
+<para>Default port for the UDP handler. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.h" line="33" column="9" bodyfile="handlers/udp/sbfUdpHandler.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sbf_udp_handler_8h_1ad3b14f99908bed2f13126adf05e237bf" prot="public" static="no">
+        <name>SBF_UDP_HANDLER_READ_LIMIT</name>
+        <initializer>64</initializer>
+        <briefdescription>
+<para>maximum number of bytes to read </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.h" line="36" column="9" bodyfile="handlers/udp/sbfUdpHandler.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_udp_handler_8h_1aa3fe356e4b3f94b8d66ebc3cc9b1908f" prot="public" static="no">
+        <type>struct sbfUdpHandlerStreamImpl *</type>
+        <definition>typedef struct sbfUdpHandlerStreamImpl* sbfUdpHandlerStream</definition>
+        <argsstring></argsstring>
+        <name>sbfUdpHandlerStream</name>
+        <briefdescription>
+<para>UDP handler stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.h" line="60" column="1" bodyfile="handlers/udp/sbfUdpHandler.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_udp_handler_8h_1a826119cf714b6cc3ff3dcab73a9837b1" prot="public" static="no">
+        <type>struct sbfUdpHandlerImpl *</type>
+        <definition>typedef struct sbfUdpHandlerImpl* sbfUdpHandler</definition>
+        <argsstring></argsstring>
+        <name>sbfUdpHandler</name>
+        <briefdescription>
+<para>The UDP handler. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.h" line="93" column="1" bodyfile="handlers/udp/sbfUdpHandler.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_udp_handler_8h_1a9d25098629ad0466479d14180d286667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SBF_RB_TREE</definition>
+        <argsstring>(sbfUdpHandlerStream, Tree, mTreeEntry, { if(lhs-&gt;mType !=rhs-&gt;mType) { if(lhs-&gt;mType==SBF_TOPIC_PUB) return -1;return 1;} if(lhs-&gt;mAddress&lt; rhs-&gt;mAddress) return -1;if(lhs-&gt;mAddress &gt; rhs-&gt;mAddress) return 1;return 0;}) struct sbfUdpHandlerImpl</argsstring>
+        <name>SBF_RB_TREE</name>
+        <param>
+          <type><ref refid="sbf_udp_handler_8h_1aa3fe356e4b3f94b8d66ebc3cc9b1908f" kindref="member">sbfUdpHandlerStream</ref></type>
+        </param>
+        <param>
+          <type>Tree</type>
+        </param>
+        <param>
+          <type>mTreeEntry</type>
+        </param>
+        <param>
+          <type>{ if(lhs-&gt;mType !=rhs-&gt;mType) { if(lhs-&gt;mType==SBF_TOPIC_PUB) return -1;return 1;} if(lhs-&gt;mAddress&lt; rhs-&gt;mAddress) return -1;if(lhs-&gt;mAddress &gt; rhs-&gt;mAddress) return 1;return 0;}</type>
+        </param>
+        <briefdescription>
+<para>RB Tree storing the streams. </para>        </briefdescription>
+        <detaileddescription>
+<para>UPD handler definition </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/udp/sbfUdpHandler.h" line="63" column="1" bodyfile="handlers/udp/sbfUdpHandler.h" bodystart="63" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file declares the structures and functions to provide high resolution timers. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>_SBF_UDP_HANDLER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_UDP_HANDLER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfHandler.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfInterface.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_mw_8h" kindref="compound">sbfMw.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfTport.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfUdpMulticast.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_handler_8h" kindref="compound">sbfCommonHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">SBF_BEGIN_DECLS</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>UDP<sp/>handler.<sp/>These<sp/>may<sp/>be<sp/>specified<sp/>in<sp/>the<sp/>properties:</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>udp.interface<sp/>-<sp/>interface<sp/>name<sp/>or<sp/>address</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>udp.<sp/>range<sp/>-<sp/>as<sp/>a<sp/>CIDR<sp/>address<sp/>(239/8,<sp/>239.1/16,<sp/>etc),<sp/>at<sp/>least<sp/>eight</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bits<sp/>must<sp/>be<sp/>available<sp/>for<sp/>the<sp/>host<sp/>portion</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>Multicast<sp/>address<sp/>is<sp/>automatically<sp/>allocated<sp/>based<sp/>on<sp/>the<sp/>topic.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfUdpHandlerImpl;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="sbf_udp_handler_8h_1ae190d65949a60790c60525e14f61c3d3" refkind="member"><highlight class="preprocessor">#define<sp/>SBF_UDP_HANDLER_DEFAULT_PORT<sp/>33333</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="sbf_udp_handler_8h_1ad3b14f99908bed2f13126adf05e237bf" refkind="member"><highlight class="preprocessor">#define<sp/>SBF_UDP_HANDLER_READ_LIMIT<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfUdpHandlerStreamImpl</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfUdpHandlerImpl*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mParent;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_mw_8h_1aa3f5e9034630ab7894fc62735044c133" kindref="member">sbfMwThread</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mThread;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfHandlerHandle<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mHandle;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfTopicType<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mType;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mAddress;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfUdpMulticast<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mSocket;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">event<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mEventAdd;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfHandlerAddStreamCompleteCb<sp/><sp/><sp/><sp/><sp/><sp/>mAddStreamCompleteCb;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mClosure;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">event<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mEventListen;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>RB_ENTRY<sp/>(sbfUdpHandlerStreamImpl)<sp/>mTreeEntry;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="sbf_udp_handler_8h_1aa3fe356e4b3f94b8d66ebc3cc9b1908f" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfUdpHandlerStreamImpl*<sp/><ref refid="sbf_udp_handler_8h_1aa3fe356e4b3f94b8d66ebc3cc9b1908f" kindref="member">sbfUdpHandlerStream</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="sbf_udp_handler_8h_1a9d25098629ad0466479d14180d286667" refkind="member"><highlight class="normal"><ref refid="sbf_udp_handler_8h_1a9d25098629ad0466479d14180d286667" kindref="member">SBF_RB_TREE</ref><sp/>(sbfUdpHandlerStream,<sp/>Tree,<sp/>mTreeEntry,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lhs-&gt;mType<sp/>!=<sp/>rhs-&gt;mType)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(lhs-&gt;mType<sp/>==<sp/>SBF_TOPIC_PUB)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>-1;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>1;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(lhs-&gt;mAddress<sp/>&lt;<sp/>rhs-&gt;mAddress)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(lhs-&gt;mAddress<sp/>&gt;<sp/>rhs-&gt;mAddress)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sbfUdpHandlerImpl</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfLog<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mLog;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mInterface;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14" kindref="member">sbfMcastTopicResolver</ref><sp/><sp/><sp/>mMtr;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfPool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mPool;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfUdpHandlerStreamTree<sp/>mTree;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="sbf_udp_handler_8h_1a826119cf714b6cc3ff3dcab73a9837b1" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfUdpHandlerImpl*<sp/><ref refid="sbf_udp_handler_8h_1a826119cf714b6cc3ff3dcab73a9837b1" kindref="member">sbfUdpHandler</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">SBF_END_DECLS</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_UDP_HANDLER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="handlers/udp/sbfUdpHandler.h"/>
+  </compounddef>
+</doxygen>

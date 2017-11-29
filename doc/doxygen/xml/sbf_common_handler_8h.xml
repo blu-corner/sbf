@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_common_handler_8h" kind="file" language="C++">
+    <compoundname>sbfCommonHandler.h</compoundname>
+    <includes local="yes">sbfInterface.h</includes>
+    <includes refid="sbf_mw_8h" local="yes">sbfMw.h</includes>
+    <includes local="yes">sbfTport.h</includes>
+    <includedby refid="sbf_udp_handler_8h" local="yes">handlers/udp/sbfUdpHandler.h</includedby>
+    <incdepgraph>
+      <node id="46">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>sbfInterface.h</label>
+      </node>
+      <node id="55">
+        <label>sbfTport.h</label>
+      </node>
+      <node id="49">
+        <label>sbfCommon.h</label>
+      </node>
+      <node id="48">
+        <label>sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>sbfKeyValue.h</label>
+      </node>
+      <node id="53">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="56">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14" prot="public" static="no">
+        <type>typedefSBF_BEGIN_DECLS struct sbfMcastTopicResolverImpl *</type>
+        <definition>typedef typedefSBF_BEGIN_DECLS struct sbfMcastTopicResolverImpl* sbfMcastTopicResolver</definition>
+        <argsstring></argsstring>
+        <name>sbfMcastTopicResolver</name>
+        <briefdescription>
+<para>Multi cast topic resolver. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/common/sbfCommonHandler.h" line="17" column="1" bodyfile="handlers/common/sbfCommonHandler.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_common_handler_8h_1a4e3ac1f4227d17c997a31c515c6ddd9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14" kindref="member">sbfMcastTopicResolver</ref></type>
+        <definition>sbfMcastTopicResolver sbfMcastTopicResolver_create</definition>
+        <argsstring>(const char *address, sbfLog log)</argsstring>
+        <name>sbfMcastTopicResolver_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>sbfLog</type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+<para>Create a multicast topic resolver. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the address to resolve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the log handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a multicast topic resolver. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/common/sbfCommonHandler.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_handler_8h_1a30b747a308778de0050c3569b6a72cd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfMcastTopicResolver_destroy</definition>
+        <argsstring>(sbfMcastTopicResolver mtr)</argsstring>
+        <name>sbfMcastTopicResolver_destroy</name>
+        <param>
+          <type><ref refid="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14" kindref="member">sbfMcastTopicResolver</ref></type>
+          <declname>mtr</declname>
+        </param>
+        <briefdescription>
+<para>Release the resources allocated by the multicast topic resolver. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the resolver handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/common/sbfCommonHandler.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_common_handler_8h_1a83c67b0c8070436da88f38a9e592ef5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t sbfMcastTopicResolver_makeAddress</definition>
+        <argsstring>(sbfMcastTopicResolver mtr, sbfTopic topic)</argsstring>
+        <name>sbfMcastTopicResolver_makeAddress</name>
+        <param>
+          <type><ref refid="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14" kindref="member">sbfMcastTopicResolver</ref></type>
+          <declname>mtr</declname>
+        </param>
+        <param>
+          <type>sbfTopic</type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>creates an address for a given resolver and topic. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the resolver handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the topic / logical channel . </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&quot;Return of the function&quot; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handlers/common/sbfCommonHandler.h" line="40" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file declares the structures and functions for a common message handler. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>_SBF_COMMON_HANDLER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_COMMON_HANDLER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfInterface.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_mw_8h" kindref="compound">sbfMw.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfTport.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">SBF_BEGIN_DECLS</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfMcastTopicResolverImpl*<sp/><ref refid="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14" kindref="member">sbfMcastTopicResolver</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14" kindref="member">sbfMcastTopicResolver</ref><sp/><ref refid="sbf_common_handler_8h_1a4e3ac1f4227d17c997a31c515c6ddd9c" kindref="member">sbfMcastTopicResolver_create</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>address,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfLog<sp/>log);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_common_handler_8h_1a30b747a308778de0050c3569b6a72cd2" kindref="member">sbfMcastTopicResolver_destroy</ref><sp/>(<ref refid="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14" kindref="member">sbfMcastTopicResolver</ref><sp/>mtr);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">uint32_t<sp/><ref refid="sbf_common_handler_8h_1a83c67b0c8070436da88f38a9e592ef5b" kindref="member">sbfMcastTopicResolver_makeAddress</ref><sp/>(<ref refid="sbf_common_handler_8h_1a96daacff25e2614e1bd455b77731af14" kindref="member">sbfMcastTopicResolver</ref><sp/>mtr,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sbfTopic<sp/>topic);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">SBF_END_DECLS</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_COMMON_HANDLER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="handlers/common/sbfCommonHandler.h"/>
+  </compounddef>
+</doxygen>
