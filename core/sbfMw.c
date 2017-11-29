@@ -43,7 +43,7 @@ sbfMw_create (sbfLog log, sbfKeyValue properties)
 #endif
 
     // Check all the supported capabilities
-    sbfMw_check_supported(CAP_ALL_MASK);
+    sbfMw_checkSupported(CAP_ALL_MASK);
     
     value = sbfKeyValue_get (properties, "threads");
     if (value == NULL)
@@ -194,7 +194,7 @@ sbfMw_getProperties (sbfMw mw)
 }
 
 uint32_t
-sbfMw_check_supported (uint32_t cap_mask)
+sbfMw_checkSupported(uint32_t cap_mask)
 {
     static uint64_t supported = 0LL;
     static char processed = 0;

@@ -81,7 +81,7 @@ usage (const char* argv0)
  * \param size the size of the payload
  * \param rate the time in nanoseconds between every send operation.
  */
-static void send_forever_perf_counter (sbfPub pub, uint64_t* payload, size_t size, uint64_t rate)
+static void sendForeverPerfCounter(sbfPub pub, uint64_t *payload, size_t size, uint64_t rate)
 {
     uint64_t  interval;
     uint64_t until;
@@ -112,7 +112,7 @@ static void send_forever_perf_counter (sbfPub pub, uint64_t* payload, size_t siz
  * \param size the size of the payload
  * \param nanos the time in nanoseconds between every send operation.
  */
-static void send_forever_nanosleep(sbfPub pub, uint64_t *payload, size_t size, uint64_t nanos)
+static void sendForeverNanosleep(sbfPub pub, uint64_t *payload, size_t size, uint64_t nanos)
 {
     struct timespec time1 = {
         .tv_sec = 0,
@@ -233,13 +233,13 @@ main (int argc, char** argv)
 
     // If perf counter is supported send message with perf counter implementation,
     // otherwise proceed with usleep.
-    if(sbfMw_check_supported(CAP_HI_RES_COUNTER) == CAP_HI_RES_COUNTER)
+    if(sbfMw_checkSupported(CAP_HI_RES_COUNTER) == CAP_HI_RES_COUNTER)
     {
-        send_forever_perf_counter(pub, payload, size, rate);
+        sendForeverPerfCounter(pub, payload, size, rate);
     }
     else
     {
-        send_forever_nanosleep(pub, payload, size, rate * MILLISECONDS_TO_NANO);
+        sendForeverNanosleep(pub, payload, size, rate * MILLISECONDS_TO_NANO);
     }
 
     exit (0);

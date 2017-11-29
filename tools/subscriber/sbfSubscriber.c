@@ -60,7 +60,7 @@ messageCb (sbfSub sub, sbfBuffer buffer, void* closure)
     uint64_t  this = *payload;
     double    interval = 0;
 
-    if(CAP_HI_RES_COUNTER == sbfMw_check_supported(CAP_HI_RES_COUNTER))
+    if(CAP_HI_RES_COUNTER == sbfMw_checkSupported(CAP_HI_RES_COUNTER))
     {
         now = sbfPerfCounter_get ();
         if (now > this)

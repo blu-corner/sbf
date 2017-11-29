@@ -25,8 +25,8 @@ typedef struct sbfMwThreadImpl* sbfMwThread;
 
 /** \brief Maximum number of threads */
 #define SBF_MW_THREAD_LIMIT 64
-/** \brief all threads constant */
-#define SBF_MW_ALL_THREADS (~0ULL) // Are you nuts? XD
+/** \brief thread mask */
+#define SBF_MW_ALL_THREADS (~0ULL)
 
 //------------------------------------------------------------------------------
 // Middleware API
@@ -110,7 +110,7 @@ struct event_base* sbfMw_getThreadEventBase (sbfMwThread thread);
  \param feature_mask the mask indicating the capabilities to be check.
  \return capabilities supported.
  */
-uint32_t sbfMw_check_supported(uint32_t cap_mask);
+uint32_t sbfMw_checkSupported(uint32_t cap_mask);
 
 SBF_END_DECLS
 
