@@ -1,3 +1,9 @@
+/*!
+   \file sbfAtomic.h
+   \brief This file defines the helper structures and functions to handle atomics.
+   \copyright © Copyright 2016 Neueda all rights reserved.
+ */
+
 #ifndef _SBF_ATOMIC_H_
 #define _SBF_ATOMIC_H_
 
