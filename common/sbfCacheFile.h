@@ -66,7 +66,7 @@ void sbfCacheFile_close (sbfCacheFile file);
 sbfCacheFileItem sbfCacheFile_add (sbfCacheFile file, void* itemData);
 
 /*!
-   Writes the given \itemData into a cache file item into
+   Writes the given \p itemData into a cache file item into
    \param item the item's handler.
    \param itemData the item data to be written.
    \return 0 for success, otherwise error code will be returned.

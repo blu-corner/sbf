@@ -1,5 +1,5 @@
 /*!
-   \file sbfCvsParser.h
+   \file sbfCsvParser.h
    \brief This file declares some helper functions to parse CSV files.
    \copyright © Copyright 2016 Neueda all rights reserved.
  */

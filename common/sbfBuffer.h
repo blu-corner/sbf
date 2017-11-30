@@ -41,7 +41,7 @@ sbfPool sbfBuffer_defaultPool (size_t size);
 
 /*!
    \brief Returns a memory buffer of a given size.
-   If a pool handler is provided at \pool, the memory buffer will be obtained
+   If a pool handler is provided at \p pool, the memory buffer will be obtained
    from the pool, otherwise the buffer will be allocated and returned.
    \param pool The pools handler.
    \param size the size of the buffer to be allocated.
@@ -51,7 +51,7 @@ static SBF_INLINE sbfBuffer sbfBuffer_new (sbfPool pool, size_t size);
 
 /*!
    \brief Returns a memory buffer with the given size by filling it with zeros.
-   If a pool handler is provided at \pool, the memory buffer will be obtained
+   If a pool handler is provided at \p pool, the memory buffer will be obtained
    from the pool, otherwise the buffer will be allocated and returned.
    \param pool The pools handler.
    \param size the size of the buffer to be allocated.
@@ -61,7 +61,7 @@ static SBF_INLINE sbfBuffer sbfBuffer_newZero (sbfPool pool, size_t size);
 
 /*!
    \brief Creates a buffer handler by copying the provided memory.
-   If a pool handler is provided at \pool, the memory buffer will be obtained
+   If a pool handler is provided at \p pool, the memory buffer will be obtained
    from the pool, otherwise the buffer will be allocated and returned.
    \param pool The pools handler.
    \param data the data to be linked to the buffer.

@@ -1,5 +1,5 @@
 /*!
-   \file sbfCounter.h
+   \file sbfPerfCounter.h
    \brief This file declares the structures and functions to handle
    high performance counters.
    \copyright © Copyright 2016 Neueda all rights reserved.

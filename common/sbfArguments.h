@@ -1,5 +1,5 @@
 /*!
-   \file sbfArgument.h
+   \file sbfArguments.h
    \brief This file defines the helper structures and functions to handle
    typical program arguments with options.
    \copyright © Copyright 2016 Neueda all rights reserved.
