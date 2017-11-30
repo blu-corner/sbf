@@ -1,0 +1,564 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_pool_8h" kind="file" language="C++">
+    <compoundname>sbfPool.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includes refid="sbf_atomic_8h" local="yes">sbfAtomic.h</includes>
+    <includes refid="sbf_pool_inline_8h" local="yes">sbfPoolInline.h</includes>
+    <includedby refid="sbf_buffer_8h" local="yes">common/sbfBuffer.h</includedby>
+    <incdepgraph>
+      <node id="435">
+        <label>common/sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="436" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+      </node>
+      <node id="438">
+        <label>event.h</label>
+      </node>
+      <node id="446">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="436" relation="include">
+        </childnode>
+      </node>
+      <node id="437">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="439">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="440" relation="include">
+        </childnode>
+      </node>
+      <node id="443">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="436" relation="include">
+        </childnode>
+      </node>
+      <node id="440">
+        <label>sys/types.h</label>
+      </node>
+      <node id="436">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="437" relation="include">
+        </childnode>
+        <childnode refid="438" relation="include">
+        </childnode>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+      </node>
+      <node id="442">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="441">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="444">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="436" relation="include">
+        </childnode>
+      </node>
+      <node id="445">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="436" relation="include">
+        </childnode>
+      </node>
+      <node id="447">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="448">
+        <label>common/sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="449" relation="include">
+        </childnode>
+      </node>
+      <node id="455">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="452" relation="include">
+        </childnode>
+      </node>
+      <node id="459">
+        <label>requestreply/sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="458" relation="include">
+        </childnode>
+      </node>
+      <node id="462">
+        <label>transport/sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="454" relation="include">
+        </childnode>
+      </node>
+      <node id="452">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+      </node>
+      <node id="453">
+        <label>transport/sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="454" relation="include">
+        </childnode>
+      </node>
+      <node id="449">
+        <label>common/sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+      </node>
+      <node id="456">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+      </node>
+      <node id="461">
+        <label>transport/sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="454" relation="include">
+        </childnode>
+      </node>
+      <node id="450">
+        <label>common/sbfTcpConnection.h</label>
+        <link refid="sbf_tcp_connection_8h"/>
+      </node>
+      <node id="458">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+      </node>
+      <node id="460">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+      </node>
+      <node id="451">
+        <label>common/sbfUdpMulticast.h</label>
+        <link refid="sbf_udp_multicast_8h"/>
+        <childnode refid="452" relation="include">
+        </childnode>
+      </node>
+      <node id="454">
+        <label>transport/sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="455" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+      </node>
+      <node id="457">
+        <label>requestreply/sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="458" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_pool_8h_1af6cdf81e4347a1af78ce801f7e8def71" prot="public" static="no">
+        <name>sbfPool_create</name>
+        <param><defname>itemSize</defname></param>
+        <initializer><ref refid="sbf_pool_8h_1ad804364e9a7807e56f84e0b219034b5d" kindref="member">sbfPool_create1</ref> (itemSize, __FUNCTION__, __LINE__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a pool for a given item size. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPool.h" line="35" column="9" bodyfile="common/sbfPool.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" prot="public" static="no">
+        <type>typedefSBF_BEGIN_DECLS struct sbfPoolImpl *</type>
+        <definition>typedef typedefSBF_BEGIN_DECLS struct sbfPoolImpl* sbfPool</definition>
+        <argsstring></argsstring>
+        <name>sbfPool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declares the pool&apos;s handler. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPool.h" line="17" column="1" bodyfile="common/sbfPool.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_pool_8h_1a1c178177d95f9049ab76709624cefc60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfPool_init</definition>
+        <argsstring>(sbfLog log)</argsstring>
+        <name>sbfPool_init</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the pool. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a log&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPool.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_8h_1a022dc01d52a0f691e1070d7dc1318857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+        <definition>sbfPool sbfPool_default</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>sbfPool_default</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates the default memory pool with the given size. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of memory blocks in the pool. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the default memory pool with the given size. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPool.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_8h_1ad804364e9a7807e56f84e0b219034b5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+        <definition>sbfPool sbfPool_create1</definition>
+        <argsstring>(size_t itemSize, const char *function, u_int line)</argsstring>
+        <name>sbfPool_create1</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemSize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>u_int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>Creates a pool for a given item size and stores information about the function and line where it was created. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of each item in the pool. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the line number where the pool is calling the create method. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a pool&apos;s handler. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPool.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_8h_1aa642928717354dd1f50a38ef13d92c3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfPool_destroy</definition>
+        <argsstring>(sbfPool pool)</argsstring>
+        <name>sbfPool_destroy</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+<para>Releases all the resources allocated by the pool. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the pool&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPool.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_8h_1a8a691a19809c18a79bf9793e5fac1c33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfPool_registerAtExit</definition>
+        <argsstring>(sbfPool pool)</argsstring>
+        <name>sbfPool_registerAtExit</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers a hook to be invoked when exiting if the pool cannot be created. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the pool&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPool.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_8h_1a036b21ecfeefc61149bf89e74616db72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfPool_showSummary</definition>
+        <argsstring>(sbfLog log, sbfLogLevel level)</argsstring>
+        <name>sbfPool_showSummary</name>
+        <param>
+          <type><ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shows a summary of the defautl pool through the logging system. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the log&apos;s handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the log&apos;s level. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPool.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_8h_1a953aaaebd14fca858742598754ab9939" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE size_t</type>
+        <definition>static SBF_INLINE size_t sbfPool_getItemSize</definition>
+        <argsstring>(sbfPool pool)</argsstring>
+        <name>sbfPool_getItemSize</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+<para>Returns the size of the item defined for the given pool. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the pool&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the size of the item defined for the given pool. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPool.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_8h_1a9cc7f53e5c2d0b383fb07a4a50635e97" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE void *</type>
+        <definition>static SBF_INLINE void* sbfPool_get</definition>
+        <argsstring>(sbfPool pool)</argsstring>
+        <name>sbfPool_get</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a block of memory available from the given pool. If the pool has no more memory blocks then NULL will be returned. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the pool&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a block of memory available from the given pool. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPool.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_8h_1ac8570b7b708289d672f78b8c33011368" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE void *</type>
+        <definition>static SBF_INLINE void* sbfPool_getZero</definition>
+        <argsstring>(sbfPool pool)</argsstring>
+        <name>sbfPool_getZero</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a block of memory available from the given pool and fills it with zeros. If the pool has no more memory blocks then NULL will be returned. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the pool&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a block of memory available filled with zeros. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPool.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_8h_1af636a63e2f36d7abeb2ff12371572b25" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE void</type>
+        <definition>static SBF_INLINE void sbfPool_put</definition>
+        <argsstring>(void *data)</argsstring>
+        <name>sbfPool_put</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Returns a block of memory to the pool. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the block of memory to be put into the pool. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPool.h" line="95" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file declares the structures and functions to handle a memory pool. </para>    </briefdescription>
+    <detaileddescription>
+<para>This file declares the structures and functions to handle a property file.</para><para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>_SBF_POOL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_POOL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_atomic_8h" kindref="compound">sbfAtomic.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfPoolImpl*<sp/><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_pool_8h_1a1c178177d95f9049ab76709624cefc60" kindref="member">sbfPool_init</ref><sp/>(<ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref><sp/>log);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/><ref refid="sbf_pool_8h_1a022dc01d52a0f691e1070d7dc1318857" kindref="member">sbfPool_default</ref><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="sbf_pool_8h_1af6cdf81e4347a1af78ce801f7e8def71" refkind="member"><highlight class="preprocessor">#define<sp/>sbfPool_create(itemSize)<sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>sbfPool_create1<sp/>(itemSize,<sp/>__FUNCTION__,<sp/>__LINE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/><ref refid="sbf_pool_8h_1ad804364e9a7807e56f84e0b219034b5d" kindref="member">sbfPool_create1</ref><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>itemSize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/>u_int<sp/>line);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_pool_8h_1aa642928717354dd1f50a38ef13d92c3a" kindref="member">sbfPool_destroy</ref><sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_pool_8h_1a8a691a19809c18a79bf9793e5fac1c33" kindref="member">sbfPool_registerAtExit</ref><sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_pool_8h_1a036b21ecfeefc61149bf89e74616db72" kindref="member">sbfPool_showSummary</ref><sp/>(<ref refid="sbf_log_8h_1af52e123ee70a148a5492a53d34c16c37" kindref="member">sbfLog</ref><sp/>log,<sp/><ref refid="sbf_log_8h_1ac1844c455877a8e8e2123dec81aa540a" kindref="member">sbfLogLevel</ref><sp/>level);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sbfPool_getItemSize<sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>sbfPool_get<sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>sbfPool_getZero<sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sbfPool_put<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_pool_inline_8h" kindref="compound">sbfPoolInline.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_POOL_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfPool.h"/>
+  </compounddef>
+</doxygen>

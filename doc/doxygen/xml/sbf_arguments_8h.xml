@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_arguments_8h" kind="file" language="C++">
+    <compoundname>sbfArguments.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>event.h</label>
+      </node>
+      <node id="2">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="0">
+        <label>common/sbfArguments.h</label>
+        <link refid="sbf_arguments_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="6">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="9">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" prot="public" static="no">
+        <type>typedefSBF_BEGIN_DECLS struct sbfArgumentsImpl *</type>
+        <definition>typedef typedefSBF_BEGIN_DECLS struct sbfArgumentsImpl* sbfArguments</definition>
+        <argsstring></argsstring>
+        <name>sbfArguments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Arguments handler </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="16" column="1" bodyfile="common/sbfArguments.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_arguments_8h_1ac1986c7309b61b9a9f7e6f14f01bb7c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+        <definition>sbfArguments sbfArguments_create</definition>
+        <argsstring>(const char *options, int argc, char **argv)</argsstring>
+        <name>sbfArguments_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an argument handler to manage arguments options. An argc and argv is passed to getopt. Option presence is then available from sbfArguments_hasOption, option arguments from _optionValue and the remaining positional arguments from _get. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options the caller is interested to parse. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of null terminated strings contaning the arguments. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an argument handler to manage arguments options. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a043f0d8e11876f5fa6f41fe729a2ee4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfArguments_destroy</definition>
+        <argsstring>(sbfArguments a)</argsstring>
+        <name>sbfArguments_destroy</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Releases the arguments allocated by sbfArguments_create method. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the arguments handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a4ac84c86ebe2952d2addfeb56d0f0477" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sbfArguments_hasOption</definition>
+        <argsstring>(sbfArguments a, u_char c)</argsstring>
+        <name>sbfArguments_hasOption</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>u_char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns 1 if the option is present 0 otherwise. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the argument handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>char indicating the option (e.g. h for -h option). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if the option is present 0 otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a8ccd15ea062da97bed5b5f1d322d67d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfArguments_optionValue</definition>
+        <argsstring>(sbfArguments a, u_char c)</argsstring>
+        <name>sbfArguments_optionValue</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>u_char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value associated to the option or NULL in case that the option does not exist. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the argument handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>char indicating the option (e.g. h for -h option). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the value associated to the option or NULL in case that the option does not exist. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a1a590904a2fb4676df9fcd3c4bc7b86f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u_int</type>
+        <definition>u_int sbfArguments_size</definition>
+        <argsstring>(sbfArguments a)</argsstring>
+        <name>sbfArguments_size</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of arguments held by the given argument handler. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the argument handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the number of arguments held by the given argument handler. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a34b7bcb6c4c94fbe3106a2067d3ba6d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfArguments_get</definition>
+        <argsstring>(sbfArguments a, u_int idx)</argsstring>
+        <name>sbfArguments_get</name>
+        <param>
+          <type><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>u_int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a null terminated string at the given argument index. It returns NULL if argument is out of bounds. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the argument handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index where the argument is placed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a null terminated string at the given argument index. It returns NULL if argument is out of bounds. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1ae1eed5bd8672bb68284e91e5bfb25697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfArguments_pack</definition>
+        <argsstring>(int argc, char **argv, char **buf, size_t *len)</argsstring>
+        <name>sbfArguments_pack</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Serialise the arguments in an array of null terminated strings and return it into a buffer. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of null terminated strings contaning the arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer with the serialised arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the lenght of the serialised buffer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a4bbc42a59ab8146b5d07ce42a4df28b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfArguments_unpack</definition>
+        <argsstring>(char *buf, size_t len, int *argc, char ***argv)</argsstring>
+        <name>sbfArguments_unpack</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char ***</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deserialise the arguments from an array of null terminated strings and place them into typical argc and argv variables. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer with the serialised arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the lenght of the serialised buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of null terminated strings contaning the arguments. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_arguments_8h_1a12b685719f71d0cdfcc73f0520260b1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfArguments_free</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>sbfArguments_free</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release the memory allocated by argv. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of null terminated strings contaning the arguments. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfArguments.h" line="96" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file defines the helper structures and functions to handle typical program arguments with options. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>_SBF_ARGUMENTS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_ARGUMENTS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfArgumentsImpl*<sp/><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref><sp/><ref refid="sbf_arguments_8h_1ac1986c7309b61b9a9f7e6f14f01bb7c6" kindref="member">sbfArguments_create</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>options,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_arguments_8h_1a043f0d8e11876f5fa6f41fe729a2ee4c" kindref="member">sbfArguments_destroy</ref><sp/>(<ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref><sp/>a);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sbf_arguments_8h_1a4ac84c86ebe2952d2addfeb56d0f0477" kindref="member">sbfArguments_hasOption</ref><sp/>(<ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref><sp/>a,<sp/>u_char<sp/>c);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_arguments_8h_1a8ccd15ea062da97bed5b5f1d322d67d7" kindref="member">sbfArguments_optionValue</ref><sp/>(<ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref><sp/>a,<sp/>u_char<sp/>c);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">u_int<sp/><ref refid="sbf_arguments_8h_1a1a590904a2fb4676df9fcd3c4bc7b86f" kindref="member">sbfArguments_size</ref><sp/>(<ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref><sp/>a);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_arguments_8h_1a34b7bcb6c4c94fbe3106a2067d3ba6d3" kindref="member">sbfArguments_get</ref><sp/>(<ref refid="sbf_arguments_8h_1a7719ee43b32935d79f9b3525e600ad32" kindref="member">sbfArguments</ref><sp/>a,<sp/>u_int<sp/>idx);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_arguments_8h_1ae1eed5bd8672bb68284e91e5bfb25697" kindref="member">sbfArguments_pack</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>len);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_arguments_8h_1a4bbc42a59ab8146b5d07ce42a4df28b9" kindref="member">sbfArguments_unpack</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">***<sp/>argv);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_arguments_8h_1a12b685719f71d0cdfcc73f0520260b1c" kindref="member">sbfArguments_free</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_ARGUMENTS_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfArguments.h"/>
+  </compounddef>
+</doxygen>

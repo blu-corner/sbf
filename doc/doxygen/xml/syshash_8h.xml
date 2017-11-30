@@ -1,0 +1,657 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="syshash_8h" kind="file" language="C++">
+    <compoundname>syshash.h</compoundname>
+    <includes local="no">sys/types.h</includes>
+    <includedby refid="sbf_common_8h" local="yes">common/sbfCommon.h</includedby>
+    <incdepgraph>
+      <node id="612">
+        <label>common/syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="613" relation="include">
+        </childnode>
+      </node>
+      <node id="613">
+        <label>sys/types.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="622">
+        <label>common/sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="623" relation="include">
+        </childnode>
+      </node>
+      <node id="647">
+        <label>common/sbfNumberString.h</label>
+        <link refid="sbf_number_string_8h"/>
+      </node>
+      <node id="619">
+        <label>common/sbfProperties.h</label>
+        <link refid="sbf_properties_8h"/>
+      </node>
+      <node id="638">
+        <label>common/sbfCacheFile.h</label>
+        <link refid="sbf_cache_file_8h"/>
+      </node>
+      <node id="629">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+      <node id="633">
+        <label>requestreply/sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="632" relation="include">
+        </childnode>
+      </node>
+      <node id="621">
+        <label>common/sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="622" relation="include">
+        </childnode>
+      </node>
+      <node id="636">
+        <label>transport/sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="655">
+        <label>transport/sbfTopic.h</label>
+        <link refid="sbf_topic_8h"/>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="616">
+        <label>common/sbfArguments.h</label>
+        <link refid="sbf_arguments_8h"/>
+      </node>
+      <node id="626">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+      </node>
+      <node id="614">
+        <label>common/syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="615" relation="include">
+        </childnode>
+      </node>
+      <node id="651">
+        <label>core/sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="645" relation="include">
+        </childnode>
+      </node>
+      <node id="627">
+        <label>transport/sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="617">
+        <label>common/sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="615" relation="include">
+        </childnode>
+      </node>
+      <node id="644">
+        <label>common/sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="619" relation="include">
+        </childnode>
+        <childnode refid="645" relation="include">
+        </childnode>
+      </node>
+      <node id="640">
+        <label>common/sbfDeque.h</label>
+        <link refid="sbf_deque_8h"/>
+      </node>
+      <node id="623">
+        <label>common/sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+        <childnode refid="635" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+      </node>
+      <node id="642">
+        <label>common/sbfHugePages.h</label>
+        <link refid="sbf_huge_pages_8h"/>
+      </node>
+      <node id="652">
+        <label>core/sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="645" relation="include">
+        </childnode>
+      </node>
+      <node id="630">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+      </node>
+      <node id="635">
+        <label>transport/sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="624">
+        <label>common/sbfTcpConnection.h</label>
+        <link refid="sbf_tcp_connection_8h"/>
+      </node>
+      <node id="643">
+        <label>common/sbfInterface.h</label>
+        <link refid="sbf_interface_8h"/>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+      <node id="648">
+        <label>common/sbfPath.h</label>
+        <link refid="sbf_path_8h"/>
+        <childnode refid="619" relation="include">
+        </childnode>
+      </node>
+      <node id="637">
+        <label>common/sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="623" relation="include">
+        </childnode>
+      </node>
+      <node id="632">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+      </node>
+      <node id="634">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+      <node id="654">
+        <label>core/sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="645" relation="include">
+        </childnode>
+      </node>
+      <node id="615">
+        <label>common/sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="616" relation="include">
+        </childnode>
+        <childnode refid="617" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="620" relation="include">
+        </childnode>
+        <childnode refid="621" relation="include">
+        </childnode>
+        <childnode refid="623" relation="include">
+        </childnode>
+        <childnode refid="622" relation="include">
+        </childnode>
+        <childnode refid="637" relation="include">
+        </childnode>
+        <childnode refid="638" relation="include">
+        </childnode>
+        <childnode refid="639" relation="include">
+        </childnode>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+        <childnode refid="642" relation="include">
+        </childnode>
+        <childnode refid="643" relation="include">
+        </childnode>
+        <childnode refid="644" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="647" relation="include">
+        </childnode>
+        <childnode refid="648" relation="include">
+        </childnode>
+        <childnode refid="649" relation="include">
+        </childnode>
+        <childnode refid="619" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="650" relation="include">
+        </childnode>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="651" relation="include">
+        </childnode>
+        <childnode refid="652" relation="include">
+        </childnode>
+        <childnode refid="645" relation="include">
+        </childnode>
+        <childnode refid="653" relation="include">
+        </childnode>
+        <childnode refid="654" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+        <childnode refid="634" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+        <childnode refid="635" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+        <childnode refid="655" relation="include">
+        </childnode>
+      </node>
+      <node id="625">
+        <label>common/sbfUdpMulticast.h</label>
+        <link refid="sbf_udp_multicast_8h"/>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+      <node id="628">
+        <label>transport/sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="634" relation="include">
+        </childnode>
+      </node>
+      <node id="641">
+        <label>common/sbfGuid.h</label>
+        <link refid="sbf_guid_8h"/>
+      </node>
+      <node id="639">
+        <label>common/sbfCsvParser.h</label>
+        <link refid="sbf_csv_parser_8h"/>
+      </node>
+      <node id="645">
+        <label>core/sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="649">
+        <label>common/sbfPerfCounter.h</label>
+        <link refid="sbf_perf_counter_8h"/>
+      </node>
+      <node id="618">
+        <label>common/sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="615" relation="include">
+        </childnode>
+        <childnode refid="619" relation="include">
+        </childnode>
+      </node>
+      <node id="650">
+        <label>common/sbfTcpListener.h</label>
+        <link refid="sbf_tcp_listener_8h"/>
+      </node>
+      <node id="653">
+        <label>core/sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="645" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="635" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+      </node>
+      <node id="620">
+        <label>common/sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="615" relation="include">
+        </childnode>
+      </node>
+      <node id="646">
+        <label>common/sbfLogFile.h</label>
+        <link refid="sbf_log_file_8h"/>
+      </node>
+      <node id="631">
+        <label>requestreply/sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="632" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="syshash_8h_1af66b0a0ea419cc667ccf34214172c68c" prot="public" static="no">
+        <name>HASHINIT</name>
+        <initializer>5381</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/syshash.h" line="42" column="9" bodyfile="common/syshash.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="syshash_8h_1ad2d43d654c2e05ee6665b1a72e0c7813" prot="public" static="no">
+        <name>HASHSTEP</name>
+        <param><defname>x</defname></param>
+        <param><defname>c</defname></param>
+        <initializer>(((x &lt;&lt; 5) + x) + (c))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/syshash.h" line="43" column="9" bodyfile="common/syshash.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="syshash_8h_1a4cedf1242047c49a2cf6b63a2a3e4f6f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE uint32_t</type>
+        <definition>static SBF_INLINE uint32_t hash32_buf</definition>
+        <argsstring>(const void *buf, size_t len, uint32_t hash)</argsstring>
+        <name>hash32_buf</name>
+        <param>
+          <type>const void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/syshash.h" line="52" column="1" bodyfile="common/syshash.h" bodystart="52" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="syshash_8h_1a12ef3e5e240c361ba48b3811453fe1b1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE uint32_t</type>
+        <definition>static SBF_INLINE uint32_t hash32_str</definition>
+        <argsstring>(const void *buf, uint32_t hash)</argsstring>
+        <name>hash32_str</name>
+        <param>
+          <type>const void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/syshash.h" line="66" column="1" bodyfile="common/syshash.h" bodystart="66" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="syshash_8h_1a90a0b094b317aac7b1926ef5120f866d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE uint32_t</type>
+        <definition>static SBF_INLINE uint32_t hash32_strn</definition>
+        <argsstring>(const void *buf, size_t len, uint32_t hash)</argsstring>
+        <name>hash32_strn</name>
+        <param>
+          <type>const void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/syshash.h" line="80" column="1" bodyfile="common/syshash.h" bodystart="80" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="syshash_8h_1acf368773d93f6466cbe619256a133395" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE uint32_t</type>
+        <definition>static SBF_INLINE uint32_t hash32_stre</definition>
+        <argsstring>(const void *buf, int end, const char **ep, uint32_t hash)</argsstring>
+        <name>hash32_stre</name>
+        <param>
+          <type>const void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>ep</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/syshash.h" line="96" column="1" bodyfile="common/syshash.h" bodystart="96" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="syshash_8h_1a8543cccfe83659b5d8d06210120863f9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE uint32_t</type>
+        <definition>static SBF_INLINE uint32_t hash32_strne</definition>
+        <argsstring>(const void *buf, size_t len, int end, const char **ep, uint32_t hash)</argsstring>
+        <name>hash32_strne</name>
+        <param>
+          <type>const void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>ep</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/syshash.h" line="115" column="1" bodyfile="common/syshash.h" bodystart="115" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/><sp/>$OpenBSD:<sp/>hash.h,v<sp/>1.5<sp/>2010/09/24<sp/>13:24:53<sp/>claudio<sp/>Exp<sp/>$<sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2001<sp/>Tobias<sp/>Weingartner</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,<sp/>BUT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_SYS_HASH_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SYS_HASH_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/>Note:<sp/>SMALL_KERNEL<sp/>might<sp/>be<sp/>used<sp/>to<sp/>shrink<sp/>these,<sp/>right<sp/>now<sp/>I</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>do<sp/>not<sp/>see<sp/>the<sp/>point,<sp/>as<sp/>my<sp/>kernel<sp/>did<sp/>not<sp/>grow<sp/>appreciably<sp/>when</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>I<sp/>switched<sp/>to<sp/>these<sp/>from<sp/>other<sp/>inline<sp/>code.<sp/><sp/>This<sp/>may<sp/>have<sp/>to<sp/>be</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>revisited<sp/>when/if<sp/>these<sp/>functions<sp/>become<sp/>more<sp/>prevalent<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>kernel.</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Convenience<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HASHINIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="syshash_8h_1af66b0a0ea419cc667ccf34214172c68c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HASHINIT<sp/><sp/><sp/><sp/>5381</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="syshash_8h_1ad2d43d654c2e05ee6665b1a72e0c7813" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HASHSTEP(x,c)<sp/><sp/><sp/>(((x<sp/>&lt;&lt;<sp/>5)<sp/>+<sp/>x)<sp/>+<sp/>(c))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>Return<sp/>a<sp/>32-bit<sp/>hash<sp/>of<sp/>the<sp/>given<sp/>buffer.<sp/><sp/>The<sp/>init</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>value<sp/>should<sp/>be<sp/>0,<sp/>or<sp/>the<sp/>previous<sp/>hash<sp/>value<sp/>to<sp/>extend</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>the<sp/>previous<sp/>hash.</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/>uint32_t</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">hash32_buf(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/>uint32_t<sp/>hash)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)buf;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len--)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hash<sp/>=<sp/><ref refid="syshash_8h_1ad2d43d654c2e05ee6665b1a72e0c7813" kindref="member">HASHSTEP</ref>(hash,<sp/>*p++);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hash;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>*<sp/>Return<sp/>a<sp/>32-bit<sp/>hash<sp/>of<sp/>the<sp/>given<sp/>string.</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/>uint32_t</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">hash32_str(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buf,<sp/>uint32_t<sp/>hash)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)buf;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(*p)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hash<sp/>=<sp/><ref refid="syshash_8h_1ad2d43d654c2e05ee6665b1a72e0c7813" kindref="member">HASHSTEP</ref>(hash,<sp/>*p++);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hash;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/>*<sp/>Return<sp/>a<sp/>32-bit<sp/>hash<sp/>of<sp/>the<sp/>given<sp/>string,<sp/>limited<sp/>by<sp/>N.</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/>uint32_t</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">hash32_strn(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/>uint32_t<sp/>hash)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)buf;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(*p<sp/>&amp;&amp;<sp/>len--)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hash<sp/>=<sp/><ref refid="syshash_8h_1ad2d43d654c2e05ee6665b1a72e0c7813" kindref="member">HASHSTEP</ref>(hash,<sp/>*p++);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hash;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/>*<sp/>Return<sp/>a<sp/>32-bit<sp/>hash<sp/>of<sp/>the<sp/>given<sp/>string<sp/>terminated<sp/>by<sp/>C,</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/>*<sp/>(as<sp/>well<sp/>as<sp/>0).<sp/><sp/>This<sp/>is<sp/>mainly<sp/>here<sp/>as<sp/>a<sp/>helper<sp/>for<sp/>the</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/>*<sp/>namei()<sp/>hashing<sp/>of<sp/>path<sp/>name<sp/>parts.</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/>uint32_t</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">hash32_stre(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**ep,<sp/>uint32_t<sp/>hash)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)buf;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(*p<sp/>&amp;&amp;<sp/>(*p<sp/>!=<sp/>end))</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hash<sp/>=<sp/><ref refid="syshash_8h_1ad2d43d654c2e05ee6665b1a72e0c7813" kindref="member">HASHSTEP</ref>(hash,<sp/>*p++);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ep)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ep<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>p;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hash;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/>*<sp/>Return<sp/>a<sp/>32-bit<sp/>hash<sp/>of<sp/>the<sp/>given<sp/>string,<sp/>limited<sp/>by<sp/>N,</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/>*<sp/>and<sp/>terminated<sp/>by<sp/>C<sp/>(as<sp/>well<sp/>as<sp/>0).<sp/><sp/>This<sp/>is<sp/>mainly<sp/>here</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/>*<sp/>as<sp/>a<sp/>helper<sp/>for<sp/>the<sp/>namei()<sp/>hashing<sp/>of<sp/>path<sp/>name<sp/>parts.</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/>uint32_t</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">hash32_strne(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**ep,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>hash)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)buf;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(*p<sp/>&amp;&amp;<sp/>(*p<sp/>!=<sp/>end)<sp/>&amp;&amp;<sp/>len--)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hash<sp/>=<sp/><ref refid="syshash_8h_1ad2d43d654c2e05ee6665b1a72e0c7813" kindref="member">HASHSTEP</ref>(hash,<sp/>*p++);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ep)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ep<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>p;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hash;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!_SYS_HASH_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/syshash.h"/>
+  </compounddef>
+</doxygen>

@@ -22,6 +22,8 @@ typedef struct sbfTportImpl* sbfTport;
 /*!
    \brief Creates a port for a given port name and mask.
    \param mw middleware's handler.
+   \param name the name for the port.
+   \param mask the thread mask to be used for the port connection.
    \return a handler to a connection port.
 */
 sbfTport sbfTport_create (sbfMw mw, const char* name, uint64_t mask);

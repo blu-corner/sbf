@@ -28,6 +28,7 @@ typedef enum
     A topic name is composed of three sections split by a slash
     (e.g. neueda/test/mytopic).
    \param type the type of topic (SBF_TOPIC_PUB or SBF_TOPIC_SUB).
+   \param string the name for the topic to be created.
    \return a topic handler for a given type and name.
    \see sbfTopic_getTopic sbfTopic_getFirst sbfTopic_getSecond sbfTopic_getThird
 */

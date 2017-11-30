@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsbf_handler_table" kind="struct" language="C++" prot="public">
+    <compoundname>sbfHandlerTable</compoundname>
+    <includes refid="sbf_handler_8h" local="no">sbfHandler.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsbf_handler_table_1afd3283f1d899bc9ad7b1fa47aac2433d" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t sbfHandlerTable::mPacketSize</definition>
+        <argsstring></argsstring>
+        <name>mPacketSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="88" column="1" bodyfile="transport/sbfHandler.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_handler_table_1aaa4887afcd5ea5e098456969c872cf87" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_handler_8h_1a9807fc2c0e4095ee110af36653bdf88f" kindref="member">sbfHandlerCreateFn</ref></type>
+        <definition>sbfHandlerCreateFn sbfHandlerTable::mCreate</definition>
+        <argsstring></argsstring>
+        <name>mCreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="90" column="1" bodyfile="transport/sbfHandler.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_handler_table_1aba14b9c93de7cee554fc0574cd0aebea" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_handler_8h_1af34440a3ea5da006565c681c5a363378" kindref="member">sbfHandlerDestroyFn</ref></type>
+        <definition>sbfHandlerDestroyFn sbfHandlerTable::mDestroy</definition>
+        <argsstring></argsstring>
+        <name>mDestroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="91" column="1" bodyfile="transport/sbfHandler.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_handler_table_1af94f27799d27f8d232324402186c78a8" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_handler_8h_1afe2e653b58f3168780e9e592d33caa22" kindref="member">sbfHandlerFindStreamFn</ref></type>
+        <definition>sbfHandlerFindStreamFn sbfHandlerTable::mFindStream</definition>
+        <argsstring></argsstring>
+        <name>mFindStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="93" column="1" bodyfile="transport/sbfHandler.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_handler_table_1a7854e41f179522aa0e34076d5379c4bb" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_handler_8h_1ac27fb6df67acb007f460ff1a361df8c0" kindref="member">sbfHandlerAddStreamFn</ref></type>
+        <definition>sbfHandlerAddStreamFn sbfHandlerTable::mAddStream</definition>
+        <argsstring></argsstring>
+        <name>mAddStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="94" column="1" bodyfile="transport/sbfHandler.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_handler_table_1a54e4ae99bdf581b2d7f4f6eb3d0972e5" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_handler_8h_1aa8d7d120f70f028e72e2f2ce51518a3c" kindref="member">sbfHandlerRemoveStreamFn</ref></type>
+        <definition>sbfHandlerRemoveStreamFn sbfHandlerTable::mRemoveStream</definition>
+        <argsstring></argsstring>
+        <name>mRemoveStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="95" column="1" bodyfile="transport/sbfHandler.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_handler_table_1acd88c2ddb444b1416a9c4c4ef519b115" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_handler_8h_1ad0064fd4d91a1cd37c1be20eb953b6c9" kindref="member">sbfHandlerGetBufferFn</ref></type>
+        <definition>sbfHandlerGetBufferFn sbfHandlerTable::mGetBuffer</definition>
+        <argsstring></argsstring>
+        <name>mGetBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="97" column="1" bodyfile="transport/sbfHandler.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsbf_handler_table_1ad36659c8c1d4a33ff7e04ebeb23855c0" prot="public" static="no" mutable="no">
+        <type><ref refid="sbf_handler_8h_1a5cbfeb57eb9d817d78522ded62079b36" kindref="member">sbfHandlerSendBufferFn</ref></type>
+        <definition>sbfHandlerSendBufferFn sbfHandlerTable::mSendBuffer</definition>
+        <argsstring></argsstring>
+        <name>mSendBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfHandler.h" line="98" column="1" bodyfile="transport/sbfHandler.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="transport/sbfHandler.h" line="87" column="1" bodyfile="transport/sbfHandler.h" bodystart="86" bodyend="99"/>
+    <listofallmembers>
+      <member refid="structsbf_handler_table_1a7854e41f179522aa0e34076d5379c4bb" prot="public" virt="non-virtual"><scope>sbfHandlerTable</scope><name>mAddStream</name></member>
+      <member refid="structsbf_handler_table_1aaa4887afcd5ea5e098456969c872cf87" prot="public" virt="non-virtual"><scope>sbfHandlerTable</scope><name>mCreate</name></member>
+      <member refid="structsbf_handler_table_1aba14b9c93de7cee554fc0574cd0aebea" prot="public" virt="non-virtual"><scope>sbfHandlerTable</scope><name>mDestroy</name></member>
+      <member refid="structsbf_handler_table_1af94f27799d27f8d232324402186c78a8" prot="public" virt="non-virtual"><scope>sbfHandlerTable</scope><name>mFindStream</name></member>
+      <member refid="structsbf_handler_table_1acd88c2ddb444b1416a9c4c4ef519b115" prot="public" virt="non-virtual"><scope>sbfHandlerTable</scope><name>mGetBuffer</name></member>
+      <member refid="structsbf_handler_table_1afd3283f1d899bc9ad7b1fa47aac2433d" prot="public" virt="non-virtual"><scope>sbfHandlerTable</scope><name>mPacketSize</name></member>
+      <member refid="structsbf_handler_table_1a54e4ae99bdf581b2d7f4f6eb3d0972e5" prot="public" virt="non-virtual"><scope>sbfHandlerTable</scope><name>mRemoveStream</name></member>
+      <member refid="structsbf_handler_table_1ad36659c8c1d4a33ff7e04ebeb23855c0" prot="public" virt="non-virtual"><scope>sbfHandlerTable</scope><name>mSendBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

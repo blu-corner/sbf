@@ -2,72 +2,175 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="sbf_queue_8h" kind="file" language="C++">
     <compoundname>sbfQueue.h</compoundname>
-    <includes local="yes">sbfCommon.h</includes>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
     <includedby refid="sbf_mw_8h" local="yes">core/sbfMw.h</includedby>
     <includedby refid="sbf_request_pub_8h" local="yes">requestreply/sbfRequestPub.h</includedby>
     <includedby refid="sbf_request_sub_8h" local="yes">requestreply/sbfRequestSub.h</includedby>
+    <includedby refid="sbf_pub_8h" local="yes">transport/sbfPub.h</includedby>
+    <includedby refid="sbf_sub_8h" local="yes">transport/sbfSub.h</includedby>
     <incdepgraph>
-      <node id="29">
-        <label>sbfCommon.h</label>
+      <node id="812">
+        <label>event.h</label>
       </node>
-      <node id="28">
+      <node id="811">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="813">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="814" relation="include">
+        </childnode>
+      </node>
+      <node id="817">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="810" relation="include">
+        </childnode>
+      </node>
+      <node id="814">
+        <label>sys/types.h</label>
+      </node>
+      <node id="810">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="811" relation="include">
+        </childnode>
+        <childnode refid="812" relation="include">
+        </childnode>
+        <childnode refid="813" relation="include">
+        </childnode>
+        <childnode refid="815" relation="include">
+        </childnode>
+        <childnode refid="816" relation="include">
+        </childnode>
+        <childnode refid="817" relation="include">
+        </childnode>
+        <childnode refid="818" relation="include">
+        </childnode>
+        <childnode refid="819" relation="include">
+        </childnode>
+      </node>
+      <node id="816">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="815">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="818">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="810" relation="include">
+        </childnode>
+      </node>
+      <node id="809">
         <label>core/sbfQueue.h</label>
         <link refid="sbf_queue_8h"/>
-        <childnode refid="29" relation="include">
+        <childnode refid="810" relation="include">
+        </childnode>
+      </node>
+      <node id="819">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="810" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="32">
+      <node id="822">
         <label>handlers/common/sbfCommonHandler.h</label>
         <link refid="sbf_common_handler_8h"/>
-        <childnode refid="33" relation="include">
+        <childnode refid="823" relation="include">
         </childnode>
       </node>
-      <node id="37">
+      <node id="828">
         <label>requestreply/sbfRequestSub.h</label>
         <link refid="sbf_request_sub_8h"/>
-        <childnode refid="35" relation="include">
+        <childnode refid="825" relation="include">
         </childnode>
       </node>
-      <node id="33">
+      <node id="831">
+        <label>transport/sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="826" relation="include">
+        </childnode>
+      </node>
+      <node id="823">
         <label>handlers/udp/sbfUdpHandler.h</label>
         <link refid="sbf_udp_handler_8h"/>
       </node>
-      <node id="34">
+      <node id="824">
         <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
         <link refid="sbf_tcp_mesh_handler_8h"/>
       </node>
-      <node id="35">
+      <node id="830">
+        <label>transport/sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="826" relation="include">
+        </childnode>
+      </node>
+      <node id="825">
         <label>requestreply/sbfRequestReply.h</label>
         <link refid="sbf_request_reply_8h"/>
       </node>
-      <node id="31">
+      <node id="829">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="824" relation="include">
+        </childnode>
+        <childnode refid="823" relation="include">
+        </childnode>
+      </node>
+      <node id="826">
+        <label>transport/sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="822" relation="include">
+        </childnode>
+        <childnode refid="824" relation="include">
+        </childnode>
+        <childnode refid="823" relation="include">
+        </childnode>
+        <childnode refid="827" relation="include">
+        </childnode>
+        <childnode refid="828" relation="include">
+        </childnode>
+        <childnode refid="829" relation="include">
+        </childnode>
+      </node>
+      <node id="821">
         <label>core/sbfMw.h</label>
         <link refid="sbf_mw_8h"/>
-        <childnode refid="32" relation="include">
+        <childnode refid="822" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="824" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
+        <childnode refid="823" relation="include">
         </childnode>
-        <childnode refid="35" relation="include">
+        <childnode refid="825" relation="include">
+        </childnode>
+        <childnode refid="826" relation="include">
         </childnode>
       </node>
-      <node id="30">
+      <node id="820">
         <label>core/sbfQueue.h</label>
         <link refid="sbf_queue_8h"/>
-        <childnode refid="31" relation="include">
+        <childnode refid="821" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
+        <childnode refid="827" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
+        <childnode refid="828" relation="include">
+        </childnode>
+        <childnode refid="830" relation="include">
+        </childnode>
+        <childnode refid="831" relation="include">
         </childnode>
       </node>
-      <node id="36">
+      <node id="827">
         <label>requestreply/sbfRequestPub.h</label>
         <link refid="sbf_request_pub_8h"/>
-        <childnode refid="35" relation="include">
+        <childnode refid="825" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -422,9 +525,9 @@
 <codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>_SBF_QUEUE_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_QUEUE_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sbfCommon.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal">SBF_BEGIN_DECLS</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfMwImpl;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
@@ -456,7 +559,7 @@
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="sbf_queue_8h_1ae5a1e7b31459264e4a5940976cfa0641" kindref="member">sbfQueue_getItemDataSize</ref><sp/>(<ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref><sp/>item);</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal">SBF_END_DECLS</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_QUEUE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>

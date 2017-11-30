@@ -1,3 +1,8 @@
+/*!
+   \file sbfFatal.h
+   \brief This file declares the structures and functions to handle critical errors.
+   \copyright © Copyright 2016 Neueda all rights reserved.
+ */
 #ifndef _SBF_FATAL_H_
 #define _SBF_FATAL_H_
 
@@ -5,7 +10,13 @@
 
 SBF_BEGIN_DECLS
 
+/*!
+   \brief Terminate program with a given message.
+   \param msg the message explaining the cause of termination.
+ */
 SBF_DEAD void sbfFatal_die (const char* msg);
+
+/** Declares macro to terminate program with a given message. */
 #define SBF_FATAL(msg) sbfFatal_die (msg)
 
 SBF_END_DECLS
