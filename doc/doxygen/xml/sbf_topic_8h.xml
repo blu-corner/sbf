@@ -1,0 +1,508 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_topic_8h" kind="file" language="C++">
+    <compoundname>sbfTopic.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_request_reply_8h" local="yes">requestreply/sbfRequestReply.h</includedby>
+    <includedby refid="sbf_tport_8h" local="yes">transport/sbfTport.h</includedby>
+    <incdepgraph>
+      <node id="1155">
+        <label>event.h</label>
+      </node>
+      <node id="1152">
+        <label>transport/sbfTopic.h</label>
+        <link refid="sbf_topic_8h"/>
+        <childnode refid="1153" relation="include">
+        </childnode>
+      </node>
+      <node id="1154">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="1156">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="1157" relation="include">
+        </childnode>
+      </node>
+      <node id="1160">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="1153" relation="include">
+        </childnode>
+      </node>
+      <node id="1157">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1153">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="1154" relation="include">
+        </childnode>
+        <childnode refid="1155" relation="include">
+        </childnode>
+        <childnode refid="1156" relation="include">
+        </childnode>
+        <childnode refid="1158" relation="include">
+        </childnode>
+        <childnode refid="1159" relation="include">
+        </childnode>
+        <childnode refid="1160" relation="include">
+        </childnode>
+        <childnode refid="1161" relation="include">
+        </childnode>
+        <childnode refid="1162" relation="include">
+        </childnode>
+      </node>
+      <node id="1159">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="1158">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="1161">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="1153" relation="include">
+        </childnode>
+      </node>
+      <node id="1162">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="1153" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1166">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="1167" relation="include">
+        </childnode>
+      </node>
+      <node id="1170">
+        <label>requestreply/sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="1164" relation="include">
+        </childnode>
+      </node>
+      <node id="1163">
+        <label>transport/sbfTopic.h</label>
+        <link refid="sbf_topic_8h"/>
+        <childnode refid="1164" relation="include">
+        </childnode>
+        <childnode refid="1165" relation="include">
+        </childnode>
+      </node>
+      <node id="1167">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+      </node>
+      <node id="1168">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+      </node>
+      <node id="1164">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+      </node>
+      <node id="1171">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="1168" relation="include">
+        </childnode>
+        <childnode refid="1167" relation="include">
+        </childnode>
+      </node>
+      <node id="1165">
+        <label>transport/sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="1166" relation="include">
+        </childnode>
+        <childnode refid="1168" relation="include">
+        </childnode>
+        <childnode refid="1167" relation="include">
+        </childnode>
+        <childnode refid="1169" relation="include">
+        </childnode>
+        <childnode refid="1170" relation="include">
+        </childnode>
+        <childnode refid="1171" relation="include">
+        </childnode>
+      </node>
+      <node id="1169">
+        <label>requestreply/sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="1164" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_topic_8h_1aa9f435bc8956a8d5d5e7e32e3d3e3e45" prot="public" static="no">
+        <name>SBF_TOPIC_SIZE_LIMIT</name>
+        <initializer>255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum size of topic name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.h" line="17" column="9" bodyfile="transport/sbfTopic.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" prot="public" static="no">
+        <name>sbfTopicType</name>
+        <enumvalue id="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cfaba1674380fb33d7f6a138d4f9ebacfb2" prot="public">
+          <name>SBF_TOPIC_PUB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cfa5c80119f0bb1907166badfec7d3f09da" prot="public">
+          <name>SBF_TOPIC_SUB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Types of topics </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.h" line="21" column="1" bodyfile="transport/sbfTopic.h" bodystart="20" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" prot="public" static="no">
+        <type>typedefSBF_BEGIN_DECLS struct sbfTopicImpl *</type>
+        <definition>typedef typedefSBF_BEGIN_DECLS struct sbfTopicImpl* sbfTopic</definition>
+        <argsstring></argsstring>
+        <name>sbfTopic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Public declaration for topic type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.h" line="14" column="1" bodyfile="transport/sbfTopic.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_topic_8h_1a9672cf4f3a60f28d226b45f7a1721679" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+        <definition>sbfTopic sbfTopic_create</definition>
+        <argsstring>(sbfTopicType type, const char *string)</argsstring>
+        <name>sbfTopic_create</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Returns a topic handler for a given type and name. A topic name is composed of three sections split by a slash (e.g. neueda/test/mytopic). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of topic (SBF_TOPIC_PUB or SBF_TOPIC_SUB). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name for the topic to be created. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a topic handler for a given type and name. </para></simplesect>
+<simplesect kind="see"><para><ref refid="sbf_topic_8h_1ab0f153a4579b16f243f1b946068e95c9" kindref="member">sbfTopic_getTopic</ref> <ref refid="sbf_topic_8h_1a7c42b4986cfdfcd6b9dfaef882bea027" kindref="member">sbfTopic_getFirst</ref> <ref refid="sbf_topic_8h_1a7f6f6aef75d127ae65b00a566ab24647" kindref="member">sbfTopic_getSecond</ref> <ref refid="sbf_topic_8h_1a15bcfc641e9f5996ac12a41f81ab38ff" kindref="member">sbfTopic_getThird</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8h_1a154e4f4857a66c1e372281ce493ece99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfTopic_destroy</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_destroy</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>Releases all the resources allocated by the given topic handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>topic handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8h_1a3d96e97c321ba2ffce13f89eb0a84d86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+        <definition>sbfTopic sbfTopic_copy</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_copy</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>Create another topic and returns its handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the topic handler to be copied. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>create another topic and returns its handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8h_1a1b9121e3bf33ef3e0552f11ff72c6553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sbfTopic_compare</definition>
+        <argsstring>(sbfTopic lhs, sbfTopic rhs)</argsstring>
+        <name>sbfTopic_compare</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>compares two topics and returns =&gt; 0 if they are equal, =&gt; -1 if lhs is less than rhs, =&gt; 1 if rhs is less than lhs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left topic handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right topic handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>=&gt; 0 if they are equal, =&gt; -1 if lhs is less than rhs, =&gt; 1 if rhs is less than lhs. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8h_1a17610769aed59c45ea07fa4b89651bbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref></type>
+        <definition>sbfTopicType sbfTopic_getType</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_getType</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>returns the type of topic. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the topic handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the type of topic. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8h_1ab0f153a4579b16f243f1b946068e95c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfTopic_getTopic</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_getTopic</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>returns the name of the topic. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the topic handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the name of the topic. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8h_1a7c42b4986cfdfcd6b9dfaef882bea027" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfTopic_getFirst</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_getFirst</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>Returns the first topic name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the topic handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the first topic name. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.h" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8h_1a7f6f6aef75d127ae65b00a566ab24647" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfTopic_getSecond</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_getSecond</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>Returns the second topic name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the topic handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the second topic name. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_topic_8h_1a15bcfc641e9f5996ac12a41f81ab38ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfTopic_getThird</definition>
+        <argsstring>(sbfTopic topic)</argsstring>
+        <name>sbfTopic_getThird</name>
+        <param>
+          <type><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref></type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>Returns the third topic name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the topic handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the third topic name. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfTopic.h" line="97" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Declaration of functions and structures to handle topics. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>_SBF_TOPIC_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_TOPIC_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfTopicImpl*<sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="sbf_topic_8h_1aa9f435bc8956a8d5d5e7e32e3d3e3e45" refkind="member"><highlight class="preprocessor">#define<sp/>SBF_TOPIC_SIZE_LIMIT<sp/>255</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22" refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cfaba1674380fb33d7f6a138d4f9ebacfb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cfaba1674380fb33d7f6a138d4f9ebacfb2" kindref="member">SBF_TOPIC_PUB</ref>,<sp/></highlight><highlight class="comment">//<sp/>publisher</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cfa5c80119f0bb1907166badfec7d3f09da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cfa5c80119f0bb1907166badfec7d3f09da" kindref="member">SBF_TOPIC_SUB</ref><sp/><sp/></highlight><highlight class="comment">//<sp/>subscriber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}<sp/><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/><ref refid="sbf_topic_8h_1a9672cf4f3a60f28d226b45f7a1721679" kindref="member">sbfTopic_create</ref><sp/>(<ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref><sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_topic_8h_1a154e4f4857a66c1e372281ce493ece99" kindref="member">sbfTopic_destroy</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/><ref refid="sbf_topic_8h_1a3d96e97c321ba2ffce13f89eb0a84d86" kindref="member">sbfTopic_copy</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sbf_topic_8h_1a1b9121e3bf33ef3e0552f11ff72c6553" kindref="member">sbfTopic_compare</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>lhs,<sp/><ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>rhs);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="sbf_topic_8h_1af72fcde8ef41ef75cc4f7cf0d2aff2cf" kindref="member">sbfTopicType</ref><sp/><ref refid="sbf_topic_8h_1a17610769aed59c45ea07fa4b89651bbc" kindref="member">sbfTopic_getType</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_topic_8h_1ab0f153a4579b16f243f1b946068e95c9" kindref="member">sbfTopic_getTopic</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_topic_8h_1a7c42b4986cfdfcd6b9dfaef882bea027" kindref="member">sbfTopic_getFirst</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_topic_8h_1a7f6f6aef75d127ae65b00a566ab24647" kindref="member">sbfTopic_getSecond</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_topic_8h_1a15bcfc641e9f5996ac12a41f81ab38ff" kindref="member">sbfTopic_getThird</ref><sp/>(<ref refid="sbf_topic_8h_1af2056340b1f24acb79c87fe529f7114e" kindref="member">sbfTopic</ref><sp/>topic);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_TOPIC_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="transport/sbfTopic.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_sub_8h" kind="file" language="C++">
+    <compoundname>sbfSub.h</compoundname>
+    <includes refid="sbf_buffer_8h" local="yes">sbfBuffer.h</includes>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includes refid="sbf_queue_8h" local="yes">sbfQueue.h</includes>
+    <includedby refid="sbf_tport_8h" local="yes">transport/sbfTport.h</includedby>
+    <incdepgraph>
+      <node id="1137">
+        <label>sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="1127" relation="include">
+        </childnode>
+        <childnode refid="1138" relation="include">
+        </childnode>
+        <childnode refid="1139" relation="include">
+        </childnode>
+      </node>
+      <node id="1129">
+        <label>event.h</label>
+      </node>
+      <node id="1138">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="1127" relation="include">
+        </childnode>
+      </node>
+      <node id="1125">
+        <label>transport/sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="1126" relation="include">
+        </childnode>
+        <childnode refid="1127" relation="include">
+        </childnode>
+        <childnode refid="1142" relation="include">
+        </childnode>
+      </node>
+      <node id="1128">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="1130">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="1131" relation="include">
+        </childnode>
+      </node>
+      <node id="1134">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="1127" relation="include">
+        </childnode>
+      </node>
+      <node id="1126">
+        <label>sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="1127" relation="include">
+        </childnode>
+        <childnode refid="1137" relation="include">
+        </childnode>
+        <childnode refid="1140" relation="include">
+        </childnode>
+        <childnode refid="1141" relation="include">
+        </childnode>
+      </node>
+      <node id="1131">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1141">
+        <label>sbfBufferInline.h</label>
+        <link refid="sbf_buffer_inline_8h"/>
+      </node>
+      <node id="1140">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="1127" relation="include">
+        </childnode>
+      </node>
+      <node id="1127">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="1128" relation="include">
+        </childnode>
+        <childnode refid="1129" relation="include">
+        </childnode>
+        <childnode refid="1130" relation="include">
+        </childnode>
+        <childnode refid="1132" relation="include">
+        </childnode>
+        <childnode refid="1133" relation="include">
+        </childnode>
+        <childnode refid="1134" relation="include">
+        </childnode>
+        <childnode refid="1135" relation="include">
+        </childnode>
+        <childnode refid="1136" relation="include">
+        </childnode>
+      </node>
+      <node id="1133">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="1132">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="1135">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="1127" relation="include">
+        </childnode>
+      </node>
+      <node id="1142">
+        <label>sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="1127" relation="include">
+        </childnode>
+      </node>
+      <node id="1136">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="1127" relation="include">
+        </childnode>
+      </node>
+      <node id="1139">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1145">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="1146" relation="include">
+        </childnode>
+      </node>
+      <node id="1150">
+        <label>requestreply/sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="1149" relation="include">
+        </childnode>
+      </node>
+      <node id="1143">
+        <label>transport/sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="1144" relation="include">
+        </childnode>
+      </node>
+      <node id="1146">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+      </node>
+      <node id="1147">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+      </node>
+      <node id="1149">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+      </node>
+      <node id="1151">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="1147" relation="include">
+        </childnode>
+        <childnode refid="1146" relation="include">
+        </childnode>
+      </node>
+      <node id="1144">
+        <label>transport/sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="1145" relation="include">
+        </childnode>
+        <childnode refid="1147" relation="include">
+        </childnode>
+        <childnode refid="1146" relation="include">
+        </childnode>
+        <childnode refid="1148" relation="include">
+        </childnode>
+        <childnode refid="1150" relation="include">
+        </childnode>
+        <childnode refid="1151" relation="include">
+        </childnode>
+      </node>
+      <node id="1148">
+        <label>requestreply/sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="1149" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" prot="public" static="no">
+        <type>struct sbfSubImpl *</type>
+        <definition>typedef struct sbfSubImpl* sbfSub</definition>
+        <argsstring></argsstring>
+        <name>sbfSub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declare the subscriber handler </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSub.h" line="20" column="1" bodyfile="transport/sbfSub.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_sub_8h_1a21874f3f038f352bd283fc2dffff1c2c" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* sbfSubReadyCb) (sbfSub sub, void *closure)</definition>
+        <argsstring>)(sbfSub sub, void *closure)</argsstring>
+        <name>sbfSubReadyCb</name>
+        <briefdescription>
+<para>Callback invoked when subscriber is ready to receive messages. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subscriber&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSub.h" line="26" column="1" bodyfile="transport/sbfSub.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_sub_8h_1a2f0fc2e02f85c60bea98943659ccbb4d" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* sbfSubMessageCb) (sbfSub sub, sbfBuffer buffer, void *closure)</definition>
+        <argsstring>)(sbfSub sub, sbfBuffer buffer, void *closure)</argsstring>
+        <name>sbfSubMessageCb</name>
+        <briefdescription>
+<para>Callback invoked when message is received. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subscriber&apos;s handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer containing the message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user data linked to the subscriber. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSub.h" line="34" column="1" bodyfile="transport/sbfSub.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_sub_8h_1a2ba5262c16e06c206c170bc2bdbbcfde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+        <definition>sbfSub sbfSub_create</definition>
+        <argsstring>(struct sbfTportImpl *tport, sbfQueue queue, const char *topic, sbfSubReadyCb readyCb, sbfSubMessageCb messageCb, void *closure)</argsstring>
+        <name>sbfSub_create</name>
+        <param>
+          <type>struct sbfTportImpl *</type>
+          <declname>tport</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_sub_8h_1a21874f3f038f352bd283fc2dffff1c2c" kindref="member">sbfSubReadyCb</ref></type>
+          <declname>readyCb</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_sub_8h_1a2f0fc2e02f85c60bea98943659ccbb4d" kindref="member">sbfSubMessageCb</ref></type>
+          <declname>messageCb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+<para>Creates a subscriber for a given port and topic. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tport</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the connection port linked to the transport interface. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue used to process the received messages. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the topic associated to the connection. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>readyCb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>callback invoked when publisher is ready to receive messages. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>messageCb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>callback invoked when message is received. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user data linked to the subscriber. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a subscriber for a given port and topic. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSub.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_sub_8h_1a52ee27e0190a813dad71e9b89573a74d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfSub_destroy</definition>
+        <argsstring>(sbfSub sub)</argsstring>
+        <name>sbfSub_destroy</name>
+        <param>
+          <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+<para>Releases the resources allocated by the subscriber. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subscriber&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSub.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_sub_8h_1a7b8658afac567248ddda4fbf93bcd14a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfSub_setQueueBypass</definition>
+        <argsstring>(sbfSub sub, int set)</argsstring>
+        <name>sbfSub_setQueueBypass</name>
+        <param>
+          <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>set</declname>
+        </param>
+        <briefdescription>
+<para>invoke the callback for the incoming messages without using the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subscriber&apos;s handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0 to use the queue whatever other value to bypass it. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSub.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_sub_8h_1a81974de3ef0d790b1b3ed4da9af36bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct sbfTopicImpl *</type>
+        <definition>struct sbfTopicImpl* sbfSub_getTopic</definition>
+        <argsstring>(sbfSub sub)</argsstring>
+        <name>sbfSub_getTopic</name>
+        <param>
+          <type><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref></type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+<para>Returns the topic associated to this subscriber. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subscriber&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the topic associated to this subscriber. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transport/sbfSub.h" line="71" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file declares the structures and functions to handler a subscriber. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>_SBF_SUB_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_SUB_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_buffer_8h" kindref="compound">sbfBuffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_queue_8h" kindref="compound">sbfQueue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfTportImpl;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfTopicImpl;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfSubImpl*<sp/><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="sbf_sub_8h_1a21874f3f038f352bd283fc2dffff1c2c" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="sbf_sub_8h_1a21874f3f038f352bd283fc2dffff1c2c" kindref="member">sbfSubReadyCb</ref>)<sp/>(<ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref><sp/>sub,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="sbf_sub_8h_1a2f0fc2e02f85c60bea98943659ccbb4d" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="sbf_sub_8h_1a2f0fc2e02f85c60bea98943659ccbb4d" kindref="member">sbfSubMessageCb</ref>)<sp/>(<ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref><sp/>sub,<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref><sp/><ref refid="sbf_sub_8h_1a2ba5262c16e06c206c170bc2bdbbcfde" kindref="member">sbfSub_create</ref><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sbfTportImpl*<sp/>tport,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/>queue,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>topic,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_sub_8h_1a21874f3f038f352bd283fc2dffff1c2c" kindref="member">sbfSubReadyCb</ref><sp/>readyCb,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_sub_8h_1a2f0fc2e02f85c60bea98943659ccbb4d" kindref="member">sbfSubMessageCb</ref><sp/>messageCb,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_sub_8h_1a52ee27e0190a813dad71e9b89573a74d" kindref="member">sbfSub_destroy</ref><sp/>(<ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref><sp/>sub);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_sub_8h_1a7b8658afac567248ddda4fbf93bcd14a" kindref="member">sbfSub_setQueueBypass</ref><sp/>(<ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref><sp/>sub,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfTopicImpl*<sp/><ref refid="sbf_sub_8h_1a81974de3ef0d790b1b3ed4da9af36bd6" kindref="member">sbfSub_getTopic</ref><sp/>(<ref refid="sbf_sub_8h_1a2df9639af5595d3f96296d1432b80cba" kindref="member">sbfSub</ref><sp/>sub);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_SUB_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="transport/sbfSub.h"/>
+  </compounddef>
+</doxygen>

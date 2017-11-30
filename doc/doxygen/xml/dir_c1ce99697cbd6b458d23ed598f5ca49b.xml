@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_c1ce99697cbd6b458d23ed598f5ca49b" kind="dir">
+    <compoundname>transport</compoundname>
+    <innerfile refid="sbf_batch_8h">sbfBatch.h</innerfile>
+    <innerfile refid="sbf_handler_8h">sbfHandler.h</innerfile>
+    <innerfile refid="sbf_pub_8h">sbfPub.h</innerfile>
+    <innerfile refid="sbf_sub_8h">sbfSub.h</innerfile>
+    <innerfile refid="sbf_topic_8h">sbfTopic.h</innerfile>
+    <innerfile refid="sbf_tport_8h">sbfTport.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="transport/"/>
+  </compounddef>
+</doxygen>

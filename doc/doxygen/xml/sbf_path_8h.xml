@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_path_8h" kind="file" language="C++">
+    <compoundname>sbfPath.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_properties_8h" local="yes">common/sbfProperties.h</includedby>
+    <incdepgraph>
+      <node id="413">
+        <label>event.h</label>
+      </node>
+      <node id="412">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="414">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="415" relation="include">
+        </childnode>
+      </node>
+      <node id="418">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="411" relation="include">
+        </childnode>
+      </node>
+      <node id="415">
+        <label>sys/types.h</label>
+      </node>
+      <node id="410">
+        <label>common/sbfPath.h</label>
+        <link refid="sbf_path_8h"/>
+        <childnode refid="411" relation="include">
+        </childnode>
+      </node>
+      <node id="411">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="412" relation="include">
+        </childnode>
+        <childnode refid="413" relation="include">
+        </childnode>
+        <childnode refid="414" relation="include">
+        </childnode>
+        <childnode refid="416" relation="include">
+        </childnode>
+        <childnode refid="417" relation="include">
+        </childnode>
+        <childnode refid="418" relation="include">
+        </childnode>
+        <childnode refid="419" relation="include">
+        </childnode>
+        <childnode refid="420" relation="include">
+        </childnode>
+      </node>
+      <node id="417">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="416">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="419">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="411" relation="include">
+        </childnode>
+      </node>
+      <node id="420">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="411" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="422">
+        <label>common/sbfProperties.h</label>
+        <link refid="sbf_properties_8h"/>
+      </node>
+      <node id="421">
+        <label>common/sbfPath.h</label>
+        <link refid="sbf_path_8h"/>
+        <childnode refid="422" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_path_8h_1adcb42b8d5d87e5cab225cbaa98381805" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref> const char *</type>
+        <definition>SBF_BEGIN_DECLS const char* sbfPath_root</definition>
+        <argsstring>(void)</argsstring>
+        <name>sbfPath_root</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the root path in the file system in a null terminated string. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the root path in the file system in a null terminated string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPath.h" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_path_8h_1a831e4929e41427b228e1e8200c50f33d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* sbfPath_get</definition>
+        <argsstring>(const char *fmt,...) SBF_PRINTFLIKE(1</argsstring>
+        <name>sbfPath_get</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Get path underneath root path, result must be freed by caller. Paths starting with / are copied but otherwise unmodified. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>formatted string. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>...</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>variable argument list that will be used to compose the final string together with fmt. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>path underneath root path. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPath.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_path_8h_1ad3e328363a70f49c4c323d9babb9b056" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char char *</type>
+        <definition>char char* sbfPath_getV</definition>
+        <argsstring>(const char *fmt, va_list ap)</argsstring>
+        <name>sbfPath_getV</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+<para>Get path underneath root path, result must be freed by caller. Paths starting with / are copied but otherwise unmodified. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>formatted string. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>variable argument list that will be used to compose the final string together with fmt. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>path underneath root path. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPath.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_path_8h_1a060d60caef2e753150905a60e65ea305" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* sbfPath_getConf</definition>
+        <argsstring>(const char *fmt,...)</argsstring>
+        <name>sbfPath_getConf</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Get path underneath config path, result must be freed by caller. Paths starting with / are copied but otherwise unmodified. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>formatted string. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>...</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>variable argument list that will be used to compose the final string together with fmt. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPath.h" line="48" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper file to handle file system&apos;s paths. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>_SBF_PATH_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_PATH_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_path_8h_1adcb42b8d5d87e5cab225cbaa98381805" kindref="member">sbfPath_root</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_path_8h_1a831e4929e41427b228e1e8200c50f33d" kindref="member">sbfPath_get</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,<sp/>...)<sp/>SBF_PRINTFLIKE<sp/>(1,<sp/>2);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_path_8h_1ad3e328363a70f49c4c323d9babb9b056" kindref="member">sbfPath_getV</ref><sp/>(const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,<sp/>va_list<sp/>ap);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_path_8h_1a060d60caef2e753150905a60e65ea305" kindref="member">sbfPath_getConf</ref><sp/>(const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fmt,<sp/>...);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_PATH_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfPath.h"/>
+  </compounddef>
+</doxygen>

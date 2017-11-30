@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_fatal_8h" kind="file" language="C++">
+    <compoundname>sbfFatal.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_common_8h" local="yes">common/sbfCommon.h</includedby>
+    <incdepgraph>
+      <node id="175">
+        <label>event.h</label>
+      </node>
+      <node id="174">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="176">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="177" relation="include">
+        </childnode>
+      </node>
+      <node id="172">
+        <label>common/sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="173" relation="include">
+        </childnode>
+      </node>
+      <node id="177">
+        <label>sys/types.h</label>
+      </node>
+      <node id="173">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+      </node>
+      <node id="179">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="178">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="180">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="173" relation="include">
+        </childnode>
+      </node>
+      <node id="181">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="173" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="189">
+        <label>common/sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="190" relation="include">
+        </childnode>
+      </node>
+      <node id="214">
+        <label>common/sbfNumberString.h</label>
+        <link refid="sbf_number_string_8h"/>
+      </node>
+      <node id="186">
+        <label>common/sbfProperties.h</label>
+        <link refid="sbf_properties_8h"/>
+      </node>
+      <node id="205">
+        <label>common/sbfCacheFile.h</label>
+        <link refid="sbf_cache_file_8h"/>
+      </node>
+      <node id="196">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="193" relation="include">
+        </childnode>
+      </node>
+      <node id="200">
+        <label>requestreply/sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="199" relation="include">
+        </childnode>
+      </node>
+      <node id="188">
+        <label>common/sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="189" relation="include">
+        </childnode>
+      </node>
+      <node id="203">
+        <label>transport/sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="195" relation="include">
+        </childnode>
+      </node>
+      <node id="222">
+        <label>transport/sbfTopic.h</label>
+        <link refid="sbf_topic_8h"/>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+      </node>
+      <node id="184">
+        <label>common/sbfArguments.h</label>
+        <link refid="sbf_arguments_8h"/>
+      </node>
+      <node id="193">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+      </node>
+      <node id="218">
+        <label>core/sbfEvent.h</label>
+        <link refid="sbf_event_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="194">
+        <label>transport/sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="195" relation="include">
+        </childnode>
+      </node>
+      <node id="182">
+        <label>common/sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="183" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>common/sbfKeyValue.h</label>
+        <link refid="sbf_key_value_8h"/>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="207">
+        <label>common/sbfDeque.h</label>
+        <link refid="sbf_deque_8h"/>
+      </node>
+      <node id="190">
+        <label>common/sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+      </node>
+      <node id="209">
+        <label>common/sbfHugePages.h</label>
+        <link refid="sbf_huge_pages_8h"/>
+      </node>
+      <node id="219">
+        <label>core/sbfHiResTimer.h</label>
+        <link refid="sbf_hi_res_timer_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="197">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+      </node>
+      <node id="202">
+        <label>transport/sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="195" relation="include">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>common/sbfTcpConnection.h</label>
+        <link refid="sbf_tcp_connection_8h"/>
+      </node>
+      <node id="210">
+        <label>common/sbfInterface.h</label>
+        <link refid="sbf_interface_8h"/>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+      </node>
+      <node id="215">
+        <label>common/sbfPath.h</label>
+        <link refid="sbf_path_8h"/>
+        <childnode refid="186" relation="include">
+        </childnode>
+      </node>
+      <node id="204">
+        <label>common/sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="190" relation="include">
+        </childnode>
+      </node>
+      <node id="199">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+      </node>
+      <node id="201">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+      </node>
+      <node id="221">
+        <label>core/sbfTimer.h</label>
+        <link refid="sbf_timer_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="183">
+        <label>common/sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="182" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="204" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+      </node>
+      <node id="192">
+        <label>common/sbfUdpMulticast.h</label>
+        <link refid="sbf_udp_multicast_8h"/>
+        <childnode refid="193" relation="include">
+        </childnode>
+      </node>
+      <node id="195">
+        <label>transport/sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+      </node>
+      <node id="208">
+        <label>common/sbfGuid.h</label>
+        <link refid="sbf_guid_8h"/>
+      </node>
+      <node id="206">
+        <label>common/sbfCsvParser.h</label>
+        <link refid="sbf_csv_parser_8h"/>
+      </node>
+      <node id="212">
+        <label>core/sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>common/sbfPerfCounter.h</label>
+        <link refid="sbf_perf_counter_8h"/>
+      </node>
+      <node id="185">
+        <label>common/sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>common/sbfTcpListener.h</label>
+        <link refid="sbf_tcp_listener_8h"/>
+      </node>
+      <node id="220">
+        <label>core/sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+      </node>
+      <node id="187">
+        <label>common/sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="183" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>common/sbfLogFile.h</label>
+        <link refid="sbf_log_file_8h"/>
+      </node>
+      <node id="198">
+        <label>requestreply/sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="199" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_fatal_8h_1a8ae1d367ee2c1922adb415aa8c1972b9" prot="public" static="no">
+        <name>SBF_FATAL</name>
+        <param><defname>msg</defname></param>
+        <initializer><ref refid="sbf_fatal_8h_1aec3c4c35352d97dd90794c7cc44573a0" kindref="member">sbfFatal_die</ref> (msg)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declares macro to terminate program with a given message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfFatal.h" line="20" column="9" bodyfile="common/sbfFatal.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_fatal_8h_1aec3c4c35352d97dd90794c7cc44573a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref> SBF_DEAD void</type>
+        <definition>SBF_BEGIN_DECLS SBF_DEAD void sbfFatal_die</definition>
+        <argsstring>(const char *msg)</argsstring>
+        <name>sbfFatal_die</name>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Terminate program with a given message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message explaining the cause of termination. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfFatal.h" line="17" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file declares the structures and functions to handle critical errors. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>_SBF_FATAL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_FATAL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">SBF_DEAD<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_fatal_8h_1aec3c4c35352d97dd90794c7cc44573a0" kindref="member">sbfFatal_die</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>msg);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="sbf_fatal_8h_1a8ae1d367ee2c1922adb415aa8c1972b9" refkind="member"><highlight class="preprocessor">#define<sp/>SBF_FATAL(msg)<sp/>sbfFatal_die<sp/>(msg)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_FATAL_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfFatal.h"/>
+  </compounddef>
+</doxygen>
