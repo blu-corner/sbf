@@ -15,7 +15,7 @@ set (SOURCES
     )
 
 add_library (sbfcore SHARED ${SOURCES})
-target_link_libraries (sbfcore sbfcommon)
+target_link_libraries (sbfcore sbfcommon event event_pthreads pthread dl)
 
 install (TARGETS sbfcore
          LIBRARY DESTINATION lib)
