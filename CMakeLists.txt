@@ -16,8 +16,8 @@ ExternalProject_Add(
   )
 
 # add include and lib dir
-link_directories(${CMAKE_BINARY_DIR}/install/lib)
-include_directories(${CMAKE_BINARY_DIR}/libevent/include)
+link_directories(${CMAKE_INSTALL_PREFIX}/lib)
+include_directories(${CMAKE_INSTALL_PREFIX}/include)
 
 # set version info
 set(SBF_MAJOR_VERSION 1)
