@@ -1,17 +1,18 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(SBF C)
 
-if (NOT ${CMAKE_INSTALL_PREFIX})
-  set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
-endif ()
+if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+  set (CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install" CACHE PATH "default install path" FORCE )
+endif()
 
 # allow external projects
 include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
 
 # deps
+option(LIBEVENT_CMAKE "Location of libevent-cmake" ${PROJECT_SOURCE_DIR}/thirdparty/libevent)
 ExternalProject_Add(
   libevent
-  SOURCE_DIR ${PROJECT_SOURCE_DIR}/thirdparty/libevent
+  SOURCE_DIR ${LIBEVENT_CMAKE}
   CMAKE_ARGS -DEVENT__DISABLE_TESTS=ON -DEVENT__DISABLE_REGRESS=ON -DEVENT__DISABLE_OPENSSL=ON -DEVENT__DISABLE_SAMPLES=ON -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
   )
 
