@@ -9,7 +9,8 @@ endif()
 include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
 
 # deps
-option(LIBEVENT_CMAKE "Location of libevent-cmake" ${PROJECT_SOURCE_DIR}/thirdparty/libevent)
+set(LIBEVENT_CMAKE ${PROJECT_SOURCE_DIR}/thirdparty/libevent CACHE PATH "Location of libevent-cmake" FORCE)
+message(STATUS "libevent-location: " ${LIBEVENT_CMAKE})
 ExternalProject_Add(
   libevent
   SOURCE_DIR ${LIBEVENT_CMAKE}
