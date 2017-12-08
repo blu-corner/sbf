@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(SBF C)
+project(sbf C)
 
 if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
   set (CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install" CACHE PATH "default install path" FORCE )
@@ -9,13 +9,26 @@ endif()
 include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
 
 # deps
-set(LIBEVENT_CMAKE ${PROJECT_SOURCE_DIR}/thirdparty/libevent CACHE PATH "Location of libevent-cmake" FORCE)
-message(STATUS "libevent-location: " ${LIBEVENT_CMAKE})
-ExternalProject_Add(
-  libevent
-  SOURCE_DIR ${LIBEVENT_CMAKE}
-  CMAKE_ARGS -DEVENT__DISABLE_TESTS=ON -DEVENT__DISABLE_REGRESS=ON -DEVENT__DISABLE_OPENSSL=ON -DEVENT__DISABLE_SAMPLES=ON -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
+find_library(EVENT_LIB
+  NAMES event
+  HINTS "${CMAKE_INSTALL_PREFIX}/lib"
   )
+find_library(EVENT_PTHREAD_LIB
+  NAMES event_pthreads
+  HINTS "${CMAKE_INSTALL_PREFIX}/lib"
+  )
+if (EVENT_LIB AND EVENT_PTHREAD_LIB)
+  message(STATUS "event-found: " ${EVENT_LIB})
+  message(STATUS "event-pthread-found: " ${EVENT_PTHREAD_LIB})
+elseif (NOT event_FOUND)
+  set(LIBEVENT_CMAKE ${PROJECT_SOURCE_DIR}/ext/libevent CACHE PATH "Location of libevent-cmake" FORCE)
+  message(STATUS "libevent-location: " ${LIBEVENT_CMAKE})
+  ExternalProject_Add(
+    libevent
+    SOURCE_DIR ${LIBEVENT_CMAKE}
+    CMAKE_ARGS -DEVENT__DISABLE_TESTS=ON -DEVENT__DISABLE_REGRESS=ON -DEVENT__DISABLE_OPENSSL=ON -DEVENT__DISABLE_SAMPLES=ON -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
+    )
+endif()
 
 # add include and lib dir
 link_directories(${CMAKE_INSTALL_PREFIX}/lib)
@@ -73,3 +86,25 @@ add_subdirectory(transport)
 add_subdirectory(requestreply)
 add_subdirectory(handlers)
 add_subdirectory(tools)
+
+install(EXPORT sbfcore DESTINATION lib/sbf/cmake)
+install(EXPORT sbfcommon DESTINATION lib/sbf/cmake)
+install(EXPORT sbfcommonhandler DESTINATION lib/sbf/cmake)
+install(EXPORT sbftcpmeshhandler DESTINATION lib/sbf/cmake)
+install(EXPORT sbfudphandler DESTINATION lib/sbf/cmake)
+install(EXPORT sbftransport DESTINATION lib/sbf/cmake)
+install(EXPORT sbfrequestreply DESTINATION lib/sbf/cmake)
+
+set(${PROJECT_NAME}_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include)
+set(${PROJECT_NAME}_LIBRARIES sbfcore sbfcommon sbfcommonhandler sbftcpmeshhandler sbfudphandler sbftransport sbfrequestreply)
+configure_file(
+  ${PROJECT_NAME}.cmake.in
+  ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.cmake
+  @ONLY
+  )
+install(
+  FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.cmake
+  DESTINATION lib/cmake/sbf COMPONENT dev
+  RENAME ${PROJECT_NAME}Config.cmake
+  PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ
+  )
