@@ -15,8 +15,8 @@ set (SOURCES
     )
 
 add_library (sbfcore SHARED ${SOURCES})
-target_link_libraries (sbfcore sbfcommon)
+target_link_libraries (sbfcore event event_pthreads pthread ${CMAKE_DL_LIBS})
 
-install (TARGETS sbfcore
+install (TARGETS sbfcore EXPORT sbfcore
          LIBRARY DESTINATION lib)
 install (FILES ${INSTALL_HEADERS} DESTINATION include)
