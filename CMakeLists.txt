@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 2.8.0)
 project(sbf C)
 
 if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
