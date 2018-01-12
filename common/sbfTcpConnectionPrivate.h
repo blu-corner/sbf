@@ -17,7 +17,9 @@ struct sbfTcpConnectionImpl
     struct bufferevent*        mEvent;
     int                        mQueued;
 
+    bool                       mIsUnix;
     struct sockaddr_in         mPeer;
+    struct sockaddr_un         mUnixPeer;
 
     sbfTcpConnectionReadyCb    mReadyCb;
     sbfTcpConnectionReadCb     mReadCb;

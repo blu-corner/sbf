@@ -54,6 +54,28 @@ sbfTcpConnection sbfTcpConnection_create (sbfLog log,
                                           void* closure);
 
 /*!
+   Creates a TCP connection handler.
+   \param log the log handler.
+   \param thread a thread to handle TCP connections.
+   \param queue a queue to dispatch TCP messages.
+   \param sin Information about the socket connection.
+   \param readyCb a ready callback to be notified when the connection
+   is ready.
+   \param errorCb an error callback to notify when an error happened.
+   \param readCb a read callback to inform about the data read operations.
+   \param closure user data linked to the TCP connection.
+   \return a TCP connection handler.
+ */
+sbfTcpConnection sbfTcpConnection_createUnix (sbfLog log,
+                                              struct sbfMwThreadImpl* thread,
+                                              struct sbfQueueImpl* queue,
+                                              struct sockaddr_un* sin,
+                                              sbfTcpConnectionReadyCb readyCb,
+                                              sbfTcpConnectionErrorCb errorCb,
+                                              sbfTcpConnectionReadCb readCb,
+                                              void* closure);
+
+/*!
    Releases the resources allocated by the TCP connection.
    \param tc the connection handler.
  */
