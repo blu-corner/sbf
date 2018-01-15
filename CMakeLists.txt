@@ -27,7 +27,7 @@ if (EVENT_LIB AND EVENT_PTHREAD_LIB)
   message(STATUS "event-found: " ${EVENT_LIB})
   message(STATUS "event-pthread-found: " ${EVENT_PTHREAD_LIB})
 elseif (NOT event_FOUND)
-  set(LIBEVENT_CMAKE ${PROJECT_SOURCE_DIR}/ext/libevent CACHE PATH "Location of libevent-cmake" FORCE)
+  set(LIBEVENT_CMAKE ${PROJECT_SOURCE_DIR}/thirdparty/libevent CACHE PATH "Location of libevent-cmake" FORCE)
   message(STATUS "libevent-location: " ${LIBEVENT_CMAKE})
   ExternalProject_Add(
     libevent
