@@ -3,6 +3,7 @@
 #include "sbfTcpListener.h"
 #include "sbfTcpListenerPrivate.h"
 
+
 static void
 sbfTcpListenerReadyQueueCb (sbfQueueItem item, void* closure)
 {
@@ -37,9 +38,18 @@ sbfTcpListenerEventCb (struct evconnlistener* listener,
 {
     sbfTcpListener      tl = closure;
     sbfTcpConnection    tc;
-    struct sockaddr_in* sin = (struct sockaddr_in*)address;
 
-    tc = sbfTcpConnection_wrap (tl->mLog, s, sin);
+    if (sbfTcpListener_isUnix(tl))
+    {
+        struct sockaddr_un* sin = (struct sockaddr_un*)address;
+        tc = sbfTcpConnection_wrapUnix (tl->mLog, s, sin);
+    }
+    else
+    {
+        struct sockaddr_in* sin = (struct sockaddr_in*)address;
+        tc = sbfTcpConnection_wrap (tl->mLog, s, sin);
+    }
+
     tc->mListener = tl;
 
     /*
@@ -70,6 +80,8 @@ sbfTcpListener_create (sbfLog log,
     tl->mReadyCb = readyCb;
     tl->mAcceptCb = acceptCb;
     tl->mClosure = closure;
+
+    tl -> mIsUnix = false;
 
     tl->mDestroyed = 0;
     sbfRefCount_init (&tl->mRefCount, 1);
@@ -109,6 +121,68 @@ fail:
     return NULL;
 }
 
+sbfTcpListener
+sbfTcpListener_createUnix (sbfLog log,
+                           struct sbfMwThreadImpl* thread,
+                           struct sbfQueueImpl* queue,
+                           const char* path,
+                           sbfTcpListenerReadyCb readyCb,
+                           sbfTcpListenerAcceptCb acceptCb,
+                           void* closure)
+{
+    sbfTcpListener     tl;
+    struct sockaddr_un sin;
+
+    tl = xcalloc (1, sizeof *tl);
+    tl->mLog = log;
+    tl->mThread = thread;
+    tl->mQueue = queue;
+
+    tl->mReadyCb = readyCb;
+    tl->mAcceptCb = acceptCb;
+    tl->mClosure = closure;
+
+    tl -> mIsUnix = true;
+    tl->mDestroyed = 0;
+
+    sbfRefCount_init (&tl->mRefCount, 1);
+
+
+    memset (&sin, 0, sizeof sin);
+    sin.sun_family = AF_UNIX;
+    strcpy (sin.sun_path, path);
+
+    sbfLog_debug (tl->mLog,
+                  "creating UNIX listener %p: path %s",
+                  tl,
+                  sin.sun_path);
+
+    tl->mListener = evconnlistener_new_bind (sbfMw_getThreadEventBase (thread),
+                                             sbfTcpListenerEventCb,
+                                             tl,
+                                             LEV_OPT_THREADSAFE|
+                                             LEV_OPT_CLOSE_ON_FREE|
+                                             LEV_OPT_CLOSE_ON_EXEC|
+                                             LEV_OPT_REUSEABLE,
+                                             -1,
+                                             (struct sockaddr*)&sin,
+                                             sizeof sin);
+    if (tl->mListener == NULL)
+    {
+        sbfLog_err (tl->mLog, "failed to create event listener");
+        goto fail;
+    }
+
+    sbfRefCount_increment (&tl->mRefCount);
+    sbfQueue_enqueue (queue, sbfTcpListenerReadyQueueCb, tl);
+
+    return tl;
+
+fail:
+    sbfTcpListener_destroy (tl);
+    return NULL;
+}
+
 void
 sbfTcpListener_destroy (sbfTcpListener tl)
 {
@@ -120,4 +194,11 @@ sbfTcpListener_destroy (sbfTcpListener tl)
 
     if (sbfRefCount_decrement (&tl->mRefCount))
         free (tl);
+}
+
+
+bool
+sbfTcpListener_isUnix (sbfTcpListener tl)
+{
+    return tl->mIsUnix;
 }

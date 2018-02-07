@@ -125,6 +125,10 @@ void sbfTcpConnection_sendBuffer (sbfTcpConnection tc, sbfBuffer buffer);
  */
 struct sockaddr_in* sbfTcpConnection_getPeer (sbfTcpConnection tc);
 
+struct sockaddr_un* sbfTcpConnection_getPeerUnix (sbfTcpConnection tc);
+
+bool sbfTcpConnection_isUnix (sbfTcpConnection tc);
+
 SBF_END_DECLS
 
 #endif /* _SBF_TCP_CONNECTION_H_ */

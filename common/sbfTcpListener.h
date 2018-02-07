@@ -24,7 +24,18 @@ sbfTcpListener sbfTcpListener_create (sbfLog log,
                                       sbfTcpListenerReadyCb readyCb,
                                       sbfTcpListenerAcceptCb acceptCb,
                                       void* closure);
+
+sbfTcpListener sbfTcpListener_create_unix (sbfLog log,
+                                           struct sbfMwThreadImpl* thread,
+                                           struct sbfQueueImpl* queue,
+                                           struct sockaddr_un* sin,
+                                           sbfTcpListenerReadyCb readyCb,
+                                           sbfTcpListenerAcceptCb acceptCb,
+                                           void* closure);
+
 void sbfTcpListener_destroy (sbfTcpListener tl);
+
+bool sbfTcpListener_isUnix (sbfTcpListener t1);
 
 SBF_END_DECLS
 

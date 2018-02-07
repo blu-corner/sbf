@@ -13,6 +13,9 @@ struct sbfTcpListenerImpl
 
     struct evconnlistener* mListener;
 
+
+    bool                   mIsUnix;
+
     sbfTcpListenerReadyCb  mReadyCb;
     sbfTcpListenerAcceptCb mAcceptCb;
     void*                  mClosure;

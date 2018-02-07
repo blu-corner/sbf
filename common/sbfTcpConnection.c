@@ -17,7 +17,7 @@ sbfTcpConnectionReadyQueueCb (sbfQueueItem item, void* closure)
         sbfLog_debug (tc->mLog,
                       "TCP connection %p %s ready",
                       tc,
-                      tc->mPeer.sun_path);
+                      tc->mUnixPeer.sun_path);
     }
     else
     {
@@ -47,7 +47,7 @@ sbfTcpConnectionErrorQueueCb (sbfQueueItem item, void* closure)
         sbfLog_debug (tc->mLog,
                       "TCP connection %p %s error",
                       tc,
-                      tc->mPeer.sun_path));
+                      tc->mUnixPeer.sun_path);
     }
     else
     {
@@ -289,7 +289,7 @@ sbfTcpConnection_createUnix (sbfLog log,
         return NULL;
 
     sbfLog_debug (log,
-                  "creating TCP connection %p to %s",
+                  "creating UNIX connection %p to %s",
                   tc,
                   sin->sun_path);
 
@@ -399,7 +399,7 @@ sbfTcpConnection_getPeer (sbfTcpConnection tc)
 struct sockaddr_un*
 sbfTcpConnection_getPeerUnix (sbfTcpConnection tc)
 {
-    return &tc->mPeer;
+    return &tc->mUnixPeer;
 }
 
 bool

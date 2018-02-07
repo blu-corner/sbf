@@ -39,6 +39,9 @@ sbfTcpConnection sbfTcpConnection_wrap (sbfLog log,
                                         int socket,
                                         struct sockaddr_in* sin);
 
+sbfTcpConnection sbfTcpConnection_wrapUnix (sbfLog log,
+                                            int socket,
+                                            struct sockaddr_un* sin);
 SBF_END_DECLS
 
 #endif /* _SBF_TCP_CONNECTION_PRIVATE_H_ */
