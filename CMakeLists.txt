@@ -108,7 +108,7 @@ install(EXPORT sbfudphandler DESTINATION lib/sbf/cmake)
 install(EXPORT sbftransport DESTINATION lib/sbf/cmake)
 install(EXPORT sbfrequestreply DESTINATION lib/sbf/cmake)
 
-set(${PROJECT_NAME}_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include)
+set(${PROJECT_NAME}_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include/sbf)
 set(${PROJECT_NAME}_LIBRARIES sbfcore sbfcommon sbfcommonhandler sbftcpmeshhandler sbfudphandler sbftransport sbfrequestreply)
 configure_file(
   ${PROJECT_NAME}.cmake.in

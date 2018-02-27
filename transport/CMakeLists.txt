@@ -22,4 +22,4 @@ target_link_libraries (sbftransport sbfcommon sbfcore)
 
 install (TARGETS sbftransport EXPORT sbftransport
          LIBRARY DESTINATION lib)
-install (FILES ${INSTALL_HEADERS} DESTINATION include)
+install (FILES ${INSTALL_HEADERS} DESTINATION include/sbf)

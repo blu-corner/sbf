@@ -14,4 +14,4 @@ add_library (sbfrequestreply SHARED ${SOURCES})
 
 install (TARGETS sbfrequestreply EXPORT sbfrequestreply
          LIBRARY DESTINATION lib)
-install (FILES ${INSTALL_HEADERS} DESTINATION include)
+install (FILES ${INSTALL_HEADERS} DESTINATION include/sbf)
