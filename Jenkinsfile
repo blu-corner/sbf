@@ -1,6 +1,6 @@
 // -*-groovy-*-
 def gitUrl = "https://gitlab.com/neueda-capopen/sbf.git"
-def gitBranch = "anf-jenkins"
+def gitBranch = "master"
 
 def gitCreds = '51947d2c-c215-4578-8996-605330e83e39'
 def nodeLabels = ['centos6', 'centos7', 'ubuntu']
