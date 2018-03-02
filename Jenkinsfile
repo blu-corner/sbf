@@ -40,7 +40,7 @@ for (nodeName in nodeLabels)
                 {
                     warnings canComputeNew: false, canResolveRelativePaths: false, categoriesPattern: '', consoleParsers: [[parserName: 'GNU C Compiler 4 (gcc)']], defaultEncoding: '', excludePattern: '', healthy: '', includePattern: '', messagesPattern: '', unHealthy: ''
                 }
-                * stage("unittest [$nodeName]")
+                /* stage("unittest [$nodeName]")
                 {
                     sh("""
                        cd build
