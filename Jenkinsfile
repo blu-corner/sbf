@@ -69,7 +69,7 @@ for (nodeName in nodeLabels)
                                  stopProcessingIfError: true]]])
                 } */
                 
-                if (nodeName == "ubuntu")
+                /* if (nodeName == "ubuntu")
                 {
                     stage("stylecheck")
                     {
@@ -85,7 +85,7 @@ for (nodeName in nodeLabels)
                              useStableBuildAsReference: true
                              ])
                     }
-                }   
+                } */   
             }
         }   
     }
