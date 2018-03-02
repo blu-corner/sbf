@@ -40,7 +40,7 @@ for (nodeName in nodeLabels)
                 {
                     warnings canComputeNew: false, canResolveRelativePaths: false, categoriesPattern: '', consoleParsers: [[parserName: 'GNU C Compiler 4 (gcc)']], defaultEncoding: '', excludePattern: '', healthy: '', includePattern: '', messagesPattern: '', unHealthy: ''
                 }
-                /* stage("unittest [$nodeName]")
+                * stage("unittest [$nodeName]")
                 {
                     sh("""
                        cd build
@@ -69,23 +69,23 @@ for (nodeName in nodeLabels)
                                  stopProcessingIfError: true]]])
                 } */
                 
-                /* if (nodeName == "ubuntu")
-                {
-                    stage("stylecheck")
-                    {
-                        sh("""
-                    find . -name "*.cpp" -o -name "*.cc" -o -name "*.h" -o -name "*.c" | egrep -v "ext|build" | xargs vera++ -c vera.xml -p vera-profile
-                    """)
-                        
-                        step([$class: 'CheckStylePublisher',
-                             canRunOnFailed: true,
-                             defaultEncoding: '',
-                             pattern: '**/vera.xml',
-                             failedTotalAll: '1',
-                             useStableBuildAsReference: true
-                             ])
-                    }
-                } */   
+                //if (nodeName == "ubuntu")
+                //{
+                    //stage("stylecheck")
+                    //{
+                        //sh("""
+                    //find . -name "*.cpp" -o -name "*.cc" -o -name "*.h" -o -name "*.c" | egrep -v "ext|build" | xargs vera++ -c vera.xml -p vera-profile
+                    //""")
+                        //
+                        //step([$class: 'CheckStylePublisher',
+                             //canRunOnFailed: true,
+                             //defaultEncoding: '',
+                             //pattern: '**/vera.xml',
+                             //failedTotalAll: '1',
+                             //useStableBuildAsReference: true
+                             //])
+                    //}
+                //}
             }
         }   
     }
