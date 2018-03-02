@@ -1,5 +1,5 @@
 // -*-groovy-*-
-def gitUrl = "https://gitlab.com/neueda-capopen/config.git"
+def gitUrl = "https://gitlab.com/neueda-capopen/sbf.git"
 def gitBranch = "anf-jenkins"
 
 def gitCreds = '51947d2c-c215-4578-8996-605330e83e39'
