@@ -10,6 +10,7 @@ if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 endif()
 
 option(DEBUG "Enable debug build" OFF)
+option(COVERAGE "Enable gcov coverage" OFF)
 
 # allow external projects
 include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
@@ -84,6 +85,12 @@ else ()
   message("sbf DEBUG: OFF")
   add_compile_options(-g -O2)
 endif (DEBUG)
+if (COVERAGE)
+    set(COVERAGE_COMPILE_FLAGS "-g -O0 -coverage -fprofile-arcs -ftest-coverage")
+    set(COVERAGE_LINK_FLAGS    "-coverage -lgcov")
+    set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${COVERAGE_COMPILE_FLAGS}" )
+    set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${COVERAGE_LINK_FLAGS}" )
+endif(COVERAGE)
 
 include_directories(
   ${PROJECT_SOURCE_DIR}/core
@@ -121,3 +128,6 @@ install(
   RENAME ${PROJECT_NAME}Config.cmake
   PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ
   )
+
+INCLUDE(CPack)
+SET(CPACK_GENERATOR "TGZ")

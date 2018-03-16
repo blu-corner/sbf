@@ -1,6 +1,9 @@
 // -*-groovy-*-
 def gitUrl = "https://gitlab.com/neueda-capopen/sbf.git"
 def gitBranch = "master"
+def packageName = "sbf"
+def projectPrefix = "neueda-capopen"
+def newFixVersion = "0.0.1"
 
 def gitCreds = '51947d2c-c215-4578-8996-605330e83e39'
 def nodeLabels = ['centos6', 'centos7', 'ubuntu']
@@ -34,7 +37,18 @@ for (nodeName in nodeLabels)
                         cd build
                         cmake -DTESTS=ON ../
                         make VERBOSE=1 install
+                        make package
                     """)
+                }
+                stage("archive-build")
+                {
+                    //archive
+                    archive "build/*.tar.gz"
+
+                    // find fix-version
+                    sh "ls build/$packageName*.tar.gz | awk -F \\- {'print \$2'} > new_fix_version.txt"
+                    newFixVersion = readFile ('new_fix_version.txt').trim ()
+                    println ('found-fix-version: ' + newFixVersion)
                 }
                 stage("compiler-warnings")
                 {
@@ -47,7 +61,7 @@ for (nodeName in nodeLabels)
                        export LD_LIBRARY_PATH=`pwd`/install/lib
                        ./install/bin/unittest --gtest_output=xml:../test.xml
                     """)
-                
+
                     step([$class: 'XUnitPublisher',
                          testTimeMargin: '3000',
                          thresholdMode: 1,
@@ -68,26 +82,26 @@ for (nodeName in nodeLabels)
                                  skipNoTestFiles: false,
                                  stopProcessingIfError: true]]])
                 } */
-                
-                //if (nodeName == "ubuntu")
-                //{
-                    //stage("stylecheck")
-                    //{
-                        //sh("""
-                    //find . -name "*.cpp" -o -name "*.cc" -o -name "*.h" -o -name "*.c" | egrep -v "ext|build" | xargs vera++ -c vera.xml -p vera-profile
-                    //""")
-                        //
-                        //step([$class: 'CheckStylePublisher',
-                             //canRunOnFailed: true,
-                             //defaultEncoding: '',
-                             //pattern: '**/vera.xml',
-                             //failedTotalAll: '1',
-                             //useStableBuildAsReference: true
-                             //])
-                    //}
-                //}
+
+                stage("static-analysis")
+                {
+                    sh "cppcheck -f --enable=all --xml ./src/ 2> ./cppcheck_report.xml"
+                }
+                stage("sonar-upload")
+                {
+                    withSonarQubeEnv('SonarQube Server') {
+                            sh("""
+                                /opt/sonar-scanner/bin/sonar-scanner \
+                                -Dsonar.cxx.cppcheck.reportPath=cppcheck_report.xml \
+                                -Dsonar.projectName=$packageName \
+                                -Dsonar.projectVersion=$newFixVersion \
+                                -Dsonar.projectKey=$projectPrefix-$nodeName-$packageName \
+                                -Dsonar.sources=.
+                            """)
+                        }
+                }
             }
-        }   
+        }
     }
 }
 
