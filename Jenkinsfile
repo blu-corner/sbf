@@ -90,14 +90,7 @@ for (nodeName in nodeLabels)
                 stage("sonar-upload")
                 {
                     withSonarQubeEnv('SonarQube Server') {
-                            sh("""
-                                /opt/sonar-scanner/bin/sonar-scanner \
-                                -Dsonar.cxx.cppcheck.reportPath=cppcheck_report.xml \
-                                -Dsonar.projectName=$packageName \
-                                -Dsonar.projectVersion=$newFixVersion \
-                                -Dsonar.projectKey=$projectPrefix-$nodeName-$packageName \
-                                -Dsonar.sources=.
-                            """)
+                            sh "/opt/sonar-scanner-2.8/bin/sonar-scanner -Dsonar.cxx.cppcheck.reportPath=cppcheck_report.xml -Dsonar.projectName=$packageName -Dsonar.projectVersion=$newFixVersion -Dsonar.projectKey=$projectPrefix-$nodeName-$packageName -Dsonar.sources=./src/"
                         }
                 }
             }
