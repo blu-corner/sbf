@@ -85,12 +85,12 @@ for (nodeName in nodeLabels)
 
                 stage("static-analysis")
                 {
-                    sh "cppcheck -f --enable=all --xml ./src/ 2> ./cppcheck_report.xml"
+                    sh "cppcheck -f --enable=all --xml ./ 2> ./cppcheck_report.xml"
                 }
                 stage("sonar-upload")
                 {
                     withSonarQubeEnv('SonarQube Server') {
-                            sh "/opt/sonar-scanner-2.8/bin/sonar-scanner -Dsonar.cxx.cppcheck.reportPath=cppcheck_report.xml -Dsonar.projectName=$packageName -Dsonar.projectVersion=$newFixVersion -Dsonar.projectKey=$projectPrefix-$nodeName-$packageName -Dsonar.sources=./src/"
+                            sh "/opt/sonar-scanner-2.8/bin/sonar-scanner -Dsonar.cxx.cppcheck.reportPath=cppcheck_report.xml -Dsonar.projectName=$packageName -Dsonar.projectVersion=$newFixVersion -Dsonar.projectKey=$projectPrefix-$nodeName-$packageName -Dsonar.sources=./"
                         }
                 }
             }
