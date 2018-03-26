@@ -86,11 +86,15 @@ for (nodeName in nodeLabels)
                 stage("static-analysis")
                 {
                     sh "cppcheck -f --enable=all --xml ./ 2> ./cppcheck_report.xml"
+                    sh 'vera++ -c vera.xml `find ./common ./core ./handlers ./tools ./transport -regextype posix-egrep -regex ".*\\.(cc|cpp|h|hpp)"`'
+
+                    step([$class: 'CheckStylePublisher',
+                          pattern: 'vera.xml'])
                 }
                 stage("sonar-upload")
                 {
                     withSonarQubeEnv('SonarQube Server') {
-                            sh "/opt/sonar-scanner-2.8/bin/sonar-scanner -Dsonar.cxx.cppcheck.reportPath=cppcheck_report.xml -Dsonar.projectName=$packageName -Dsonar.projectVersion=$newFixVersion -Dsonar.projectKey=$projectPrefix-$nodeName-$packageName -Dsonar.sources=./"
+                            sh "/opt/sonar-scanner-2.8/bin/sonar-scanner -Dsonar.cxx.cppcheck.reportPath=cppcheck_report.xml -Dsonar.cxx.vera.reportPath=vera.xml -Dsonar.projectName=$packageName -Dsonar.projectVersion=$newFixVersion -Dsonar.projectKey=$projectPrefix-$nodeName-$packageName -Dsonar.sources=./"
                         }
                 }
             }
