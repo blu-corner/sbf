@@ -9,6 +9,13 @@ if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
   set (CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install" CACHE PATH "default install path" FORCE )
 endif()
 
+if(APPLE)
+  set(CMAKE_XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY "libc++")
+  set(CMAKE_XCODE_ATTRIBUTE_GCC_VERSION "com.apple.compilers.llvm.clang.1_0")
+  set(CMAKE_SHARED_LINKER_FLAGS "-Wl,-undefined,dynamic_lookup")
+  set(CMAKE_MACOSX_RPATH 1)
+endif()
+
 option(DEBUG "Enable debug build" OFF)
 option(COVERAGE "Enable gcov coverage" OFF)
 
@@ -78,11 +85,11 @@ add_compile_options(
   -Wwrite-strings
   )
 if (DEBUG)
-  message("sbf DEBUG: ON")
+  message(STATUS "sbf DEBUG: ON")
   add_compile_options(-g3)
   set(SUBMODULE_FLAGS ${SUBMODULE_FLAGS} -DDEBUG=on)
 else ()
-  message("sbf DEBUG: OFF")
+  message(STATUS "sbf DEBUG: OFF")
   add_compile_options(-g -O2)
 endif (DEBUG)
 if (COVERAGE)
