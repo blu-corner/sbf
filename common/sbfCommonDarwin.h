@@ -90,11 +90,11 @@ int sbfMutex_init (pthread_mutex_t* m, int recursive);
 #define sbfMutex_lock(m) pthread_mutex_lock (m)
 #define sbfMutex_unlock(m) pthread_mutex_unlock (m)
 
-typedef os_unfair_lock_t sbfSpinLock;
-#define sbfSpinLock_init(s) do { *s = 0; } while (0)
+typedef os_unfair_lock sbfSpinLock;
+#define sbfSpinLock_init(s) memset(s, 0, sizeof(sbfSpinLock))
 #define sbfSpinLock_destroy(s)
-#define sbfSpinLock_lock(s) os_unfair_lock_lock (*(s))
-#define sbfSpinLock_unlock(s) os_unfair_lock_unlock (*(s))
+#define sbfSpinLock_lock(s) os_unfair_lock_lock (s)
+#define sbfSpinLock_unlock(s) os_unfair_lock_unlock (s)
 
 SBF_END_DECLS
 
