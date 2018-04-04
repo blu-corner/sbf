@@ -17,7 +17,9 @@ SBF_BEGIN_DECLS
 #define SBF_QUEUE_BLOCKING(queue) \
     (!((queue)->mFlags & SBF_QUEUE_NONBLOCK) && RB_EMPTY (&queue->mHiResTimers))
 
-#ifdef linux
+#if _WIN32
+#include "sbfQueueWin32.h"
+#elif linux
 #include "sbfQueueLinux.h"
 #else
 #include "sbfQueueDarwin.h"
@@ -52,7 +54,9 @@ struct sbfQueueImpl
 };
 
 #define SBF_QUEUE_FUNCTIONS
-#ifdef linux
+#if _WIN32
+#include "sbfQueueWin32.h"
+#elif linux
 #include "sbfQueueLinux.h"
 #else
 #include "sbfQueueDarwin.h"

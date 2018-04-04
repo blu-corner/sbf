@@ -5,5 +5,7 @@ set (SOURCES
 add_library (sbftcpmeshhandler SHARED ${SOURCES})
 target_link_libraries (sbftcpmeshhandler sbfcommon sbfcore sbftransport)
 
-install (TARGETS sbftcpmeshhandler EXPORT sbftcpmeshhandler
+install (TARGETS sbftcpmeshhandler
+         EXPORT sbftcpmeshhandler
+         ARCHIVE DESTINATION lib
          LIBRARY DESTINATION lib)

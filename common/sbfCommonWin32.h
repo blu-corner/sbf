@@ -10,7 +10,7 @@
 
 #include <assert.h>
 #include <errno.h>
-#include <regex.h>
+// #include <regex.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,6 +24,7 @@
 #include <iphlpapi.h>
 #include <ws2tcpip.h>
 #include <windows.h>
+#include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 
@@ -51,9 +52,10 @@ typedef intptr_t sbfSocket;
 #define SBF_PURE
 #define SBF_CONST
 #define SBF_DEAD
+#define SBF_TLS __declspec (thread)
 
-#define SBF_LIKELY(e)
-#define SBF_UNLIKELY(e)
+#define SBF_LIKELY(e) e
+#define SBF_UNLIKELY(e) e
 
 #define SBF_ASSERT(x) assert (x)
 
@@ -132,11 +134,6 @@ int     BSDgetopt(int, char* const*, const char*);
 #define optreset          BSDoptreset
 #define optarg            BSDoptarg
 
-struct timespec
-{
-    time_t tv_sec;
-    long   tv_nsec;
-};
 typedef enum
 {
     CLOCK_REALTIME,
@@ -160,9 +157,14 @@ clock_gettime (clockid_t clock_id, struct timespec* tp)
     return 0;
 }
 
+#define O_RDWR _O_RDWR
+#define O_CREAT _O_CREAT
+// https://github.com/nodejs/node/issues/2182
+#define O_NOATIME 0x40000
+
 #define PROT_READ 2
 #define PROT_WRITE 1
-
+#define MAP_ANON 1
 #define MAP_PRIVATE 0
 
 #define MAP_FAILED ((void*)-1)
