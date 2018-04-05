@@ -24,7 +24,19 @@ SBF_RB_TREE (sbfPoolCount, Tree, mTreeEntry,
     return 0;
 })
 static sbfPoolCountTree gSbfPoolCountTree = RB_INITIALIZER (&gSbfPoolCounts);
+
+#ifdef WIN32
+// https://stackoverflow.com/questions/12853554/equivalent-of-pthread-mutex-initializer-on-windows
+static sbfMutex         gSbfPoolCountMutex;
+static void __cdecl sbfPoolInitializeStaticMutex(void) {
+    sbfMutex_init (&gSbfPoolCountMutex, 1);
+}
+#pragma section(".CRT$XCU", read)
+__declspec(allocate(".CRT$XCU"))
+const void (__cdecl *pInitialize)(void) = sbfPoolInitializeStaticMutex;
+#else
 static sbfMutex         gSbfPoolCountMutex = PTHREAD_MUTEX_INITIALIZER;
+#endif
 
 static int     gSbfPoolDefaultReady;
 static sbfPool gSbfPoolDefault16;
@@ -106,7 +118,20 @@ sbfPool_default (size_t size)
 
     if (size == 0 || size > 512)
         return NULL;
+
+#if WIN32
+    u_int leading_zero = 0;
+    if (_BitScanReverse (&leading_zero, (u_int)size))
+    {
+        bits = 31 - leading_zero;
+    }
+    else
+    {
+        bits = 32;
+    } 
+#else
     bits = __builtin_clz ((u_int)size - 1);
+#endif
 
     if (!gSbfPoolDefaultReady)
         sbfPoolMakeDefault ();

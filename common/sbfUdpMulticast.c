@@ -88,7 +88,7 @@ sbfUdpMulticast_destroy (sbfUdpMulticast s)
     free (s);
 }
 
-int
+sbfSocket
 sbfUdpMulticast_getSocket (sbfUdpMulticast s)
 {
     return s->mSocket;

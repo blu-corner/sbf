@@ -59,6 +59,7 @@ typedef int sbfSocket;
 #define SBF_PURE __attribute__ ((pure))
 #define SBF_CONST __attribute__ ((const))
 #define SBF_DEAD __attribute__ ((noreturn))
+#define SBF_TLS __thread
 
 #define SBF_LIKELY(e) __builtin_expect (!!(e), 1)
 #define SBF_UNLIKELY(e) __builtin_expect (!!(e), 0)

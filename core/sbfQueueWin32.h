@@ -7,10 +7,10 @@
 #define SBF_QUEUE_DECL                          \
     sbfMutex                          mMutex;   \
     sbfCondVar                        mCondVar; \
-    SIMPLEQ_HEAD (, sbfQueueItemImpl) mItems;
+    SIMPLEQ_HEAD (, sbfQueueItemImpl) mItems
 
 #define SBF_QUEUE_ITEM_DECL                     \
-    SIMPLEQ_ENTRY (sbfQueueItemImpl) mEntry;
+    SIMPLEQ_ENTRY (sbfQueueItemImpl) mEntry
 
 #else /* SBF_QUEUE_FUNCTIONS */
 

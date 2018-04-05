@@ -76,7 +76,7 @@ sbfGuid_fromString (sbfGuid* g, const char* s)
 const char*
 sbfGuid_toString (const sbfGuid* g)
 {
-    static __thread char s[SBF_GUID_STRING_SIZE];
+    static SBF_TLS char s[SBF_GUID_STRING_SIZE];
 
     return sbfGuid_toStringBuffer (g, s, sizeof s);
 }
@@ -97,7 +97,7 @@ sbfGuid_toStringBuffer (const sbfGuid* g, char* buf, size_t len)
 const char*
 sbfGuid_toStringFixed (const sbfGuid* g)
 {
-    static __thread char s[SBF_GUID_STRING_SIZE];
+    static SBF_TLS char s[SBF_GUID_STRING_SIZE];
 
     return sbfGuid_toStringFixedBuffer (g, s, sizeof s);
 }

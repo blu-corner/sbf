@@ -24,12 +24,15 @@
 #include <iphlpapi.h>
 #include <ws2tcpip.h>
 #include <windows.h>
+#include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <getopt.h>
 
 SBF_BEGIN_DECLS
 
 typedef intptr_t sbfSocket;
+typedef SSIZE_T ssize_t;
 
 #ifndef PATH_MAX
 #define PATH_MAX MAX_PATH
@@ -51,13 +54,12 @@ typedef intptr_t sbfSocket;
 #define SBF_PURE
 #define SBF_CONST
 #define SBF_DEAD
+#define SBF_TLS __declspec (thread)
 
-#define SBF_LIKELY(e)
-#define SBF_UNLIKELY(e)
+#define SBF_LIKELY(e) e
+#define SBF_UNLIKELY(e) e
 
 #define SBF_ASSERT(x) assert (x)
-
-#define SBF_DLLEXPORT __declspec (dllexport)
 
 typedef HANDLE sbfThread;
 int sbfThread_create (sbfThread* thread, void* (*cb) (void*), void* closure);
@@ -108,9 +110,10 @@ basename (char* path)
 #define fstat _fstat
 
 char* fgetln(FILE* fp, size_t* len);
-
+char* strsep(char** stringp, const char* delim);
 size_t strlcat (char *dst, const char *src, size_t siz);
 size_t strlcpy (char *dst, const char *src, size_t siz);
+ssize_t pwrite(int fd, const void *buf, size_t count, off_t offset);
 
 int gettimeofday (struct timeval* tv, struct timezone* tz);
 #define gmtime_r(tp, tm) gmtime_s (tm, tp)
@@ -119,24 +122,6 @@ int gettimeofday (struct timeval* tv, struct timezone* tz);
 int asprintf (char** ret, const char* fmt, ...);
 int vasprintf (char** ret, const char* fmt, va_list ap);
 
-extern int   BSDopterr;
-extern int   BSDoptind;
-extern int   BSDoptopt;
-extern int   BSDoptreset;
-extern char* BSDoptarg;
-int     BSDgetopt(int, char* const*, const char*);
-#define getopt(ac, av, o) BSDgetopt (ac, av, o)
-#define opterr            BSDopterr
-#define optind            BSDoptind
-#define optopt            BSDoptopt
-#define optreset          BSDoptreset
-#define optarg            BSDoptarg
-
-struct timespec
-{
-    time_t tv_sec;
-    long   tv_nsec;
-};
 typedef enum
 {
     CLOCK_REALTIME,
@@ -160,10 +145,17 @@ clock_gettime (clockid_t clock_id, struct timespec* tp)
     return 0;
 }
 
+#define O_RDWR _O_RDWR
+#define O_CREAT _O_CREAT
+// https://github.com/nodejs/node/issues/2182
+#define O_NOATIME 0x40000
+
 #define PROT_READ 2
 #define PROT_WRITE 1
-
+#define MAP_ANON 1
 #define MAP_PRIVATE 0
+#define MAP_SHARED 0
+#define MAP_POPULATE 0
 
 #define MAP_FAILED ((void*)-1)
 

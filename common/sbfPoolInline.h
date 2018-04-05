@@ -45,7 +45,11 @@ sbfPoolNew (sbfPool pool)
 {
     sbfPoolItem item;
 
+#ifdef WIN32
+    InterlockedIncrement (&pool->mCount->mNews);
+#else
     __sync_fetch_and_add (&pool->mCount->mNews, 1);
+#endif
 
     item = (sbfPoolItem)xmalloc (pool->mSize);
     item->mPool = pool;
@@ -58,7 +62,11 @@ sbfPoolNewZero (sbfPool pool)
 {
     sbfPoolItem item;
 
+#ifdef WIN32
+    InterlockedIncrement (&pool->mCount->mNews);
+#else
     __sync_fetch_and_add (&pool->mCount->mNews, 1);
+#endif
 
     item = (sbfPoolItem)xcalloc (1, pool->mSize);
     item->mPool = pool;
@@ -94,7 +102,11 @@ sbfPool_get (sbfPool pool)
 {
     sbfPoolItem item;
 
+#ifdef WIN32
+    InterlockedIncrement (&pool->mCount->mGets);
+#else
     __sync_fetch_and_add (&pool->mCount->mGets, 1);
+#endif
 
     item = sbfPoolNextItem (pool);
     if (item == NULL)
@@ -107,7 +119,11 @@ sbfPool_getZero (sbfPool pool)
 {
     sbfPoolItem item;
 
+#ifdef WIN32
+    InterlockedIncrement (&pool->mCount->mGets);
+#else
     __sync_fetch_and_add (&pool->mCount->mGets, 1);
+#endif
 
     item = sbfPoolNextItem (pool);
     if (item == NULL)
@@ -123,7 +139,11 @@ sbfPool_put (void* data)
     sbfPoolItem item = (sbfPoolItem)data - 1;
     sbfPool     pool = item->mPool;
 
+#ifdef WIN32
+    InterlockedIncrement (&pool->mCount->mPuts);
+#else
     __sync_fetch_and_add (&pool->mCount->mPuts, 1);
+#endif
 
     do
         item->mNext = pool->mFree;

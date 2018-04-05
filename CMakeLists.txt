@@ -1,12 +1,16 @@
 cmake_minimum_required(VERSION 2.8.0)
 project(sbf C)
-
-set(CMAKE_C_COMPILER gcc)
-set(CMAKE_CXX_COMPILER g++)
 set(SUBMODULE_FLAGS -DTESTS=off)
 
 if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
   set (CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install" CACHE PATH "default install path" FORCE )
+endif()
+
+if(WIN32)
+  set(CMAKE_SHARED_LINKER_FLAGS "/FORCE:UNRESOLVED")
+  link_directories(${CMAKE_SOURCE_DIR}/thirdparty/pcre/win32/lib)
+  include_directories(${CMAKE_SOURCE_DIR}/thirdparty/getopt)
+  include_directories(${CMAKE_SOURCE_DIR}/thirdparty/pcre/win32/include)
 endif()
 
 if(APPLE)
@@ -70,7 +74,8 @@ endif (UNIX)
 
 set(CMAKE_C_STANDARD 99)
 # compile options
-add_compile_options(
+if(UNIX)
+  add_compile_options(
   -Wall
   -Wextra
   -Wbad-function-cast
@@ -84,13 +89,19 @@ add_compile_options(
   -Wsign-compare
   -Wwrite-strings
   )
+endif()
+
 if (DEBUG)
   message(STATUS "sbf DEBUG: ON")
-  add_compile_options(-g3)
+  if(UNIX)
+    add_compile_options(-g3)
+  endif()
   set(SUBMODULE_FLAGS ${SUBMODULE_FLAGS} -DDEBUG=on)
 else ()
   message(STATUS "sbf DEBUG: OFF")
-  add_compile_options(-g -O2)
+  if(UNIX)
+    add_compile_options(-g -O2)
+  endif()
 endif (DEBUG)
 if (COVERAGE)
     set(COVERAGE_COMPILE_FLAGS "-g -O0 -coverage -fprofile-arcs -ftest-coverage")
