@@ -62,7 +62,10 @@ elseif(WIN32)
     set (INSTALL_HEADERS "${INSTALL_HEADERS}"
         "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonWin32.h")
     set (SOURCES "${SOURCES}"
-        "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonWin32.c")
+        "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonWin32.c"
+        "${CMAKE_CURRENT_SOURCE_DIR}/fgetln.c"
+        "${CMAKE_CURRENT_SOURCE_DIR}/strlcat.c"
+        "${CMAKE_CURRENT_SOURCE_DIR}/strlcpy.c")
 else()
     set (INSTALL_HEADERS "${INSTALL_HEADERS}"
         "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonLinux.h")

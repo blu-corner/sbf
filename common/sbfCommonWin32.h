@@ -10,7 +10,7 @@
 
 #include <assert.h>
 #include <errno.h>
-// #include <regex.h>
+#include <regex.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -31,6 +31,7 @@
 SBF_BEGIN_DECLS
 
 typedef intptr_t sbfSocket;
+typedef SSIZE_T ssize_t;
 
 #ifndef PATH_MAX
 #define PATH_MAX MAX_PATH
@@ -110,9 +111,10 @@ basename (char* path)
 #define fstat _fstat
 
 char* fgetln(FILE* fp, size_t* len);
-
+char* strsep(char** stringp, const char* delim);
 size_t strlcat (char *dst, const char *src, size_t siz);
 size_t strlcpy (char *dst, const char *src, size_t siz);
+ssize_t pwrite(int fd, const void *buf, size_t count, off_t offset);
 
 int gettimeofday (struct timeval* tv, struct timezone* tz);
 #define gmtime_r(tp, tm) gmtime_s (tm, tp)
@@ -166,6 +168,8 @@ clock_gettime (clockid_t clock_id, struct timespec* tp)
 #define PROT_WRITE 1
 #define MAP_ANON 1
 #define MAP_PRIVATE 0
+#define MAP_SHARED 0
+#define MAP_POPULATE 0
 
 #define MAP_FAILED ((void*)-1)
 

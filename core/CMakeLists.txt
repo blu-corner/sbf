@@ -17,7 +17,7 @@ set (SOURCES
 add_library (sbfcore SHARED ${SOURCES})
 
 if(WIN32)
-    target_link_libraries (sbfcore event event_core event_extra ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS})
+    target_link_libraries (sbfcore event_core event event_extra ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS})
 else()
     target_link_libraries (sbfcore event event_pthreads ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS})
 endif()
