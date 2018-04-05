@@ -7,5 +7,6 @@ target_link_libraries (sbfudphandler sbfcommon sbfcommonhandler sbfcore sbftrans
 
 install (TARGETS sbfudphandler
          EXPORT sbfudphandler
+         RUNTIME DESTINATION lib
          ARCHIVE DESTINATION lib
          LIBRARY DESTINATION lib)

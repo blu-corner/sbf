@@ -27,6 +27,7 @@
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <getopt.h>
 
 SBF_BEGIN_DECLS
 
@@ -59,8 +60,6 @@ typedef SSIZE_T ssize_t;
 #define SBF_UNLIKELY(e) e
 
 #define SBF_ASSERT(x) assert (x)
-
-#define SBF_DLLEXPORT __declspec (dllexport)
 
 typedef HANDLE sbfThread;
 int sbfThread_create (sbfThread* thread, void* (*cb) (void*), void* closure);
@@ -122,19 +121,6 @@ int gettimeofday (struct timeval* tv, struct timezone* tz);
 
 int asprintf (char** ret, const char* fmt, ...);
 int vasprintf (char** ret, const char* fmt, va_list ap);
-
-extern int   BSDopterr;
-extern int   BSDoptind;
-extern int   BSDoptopt;
-extern int   BSDoptreset;
-extern char* BSDoptarg;
-int     BSDgetopt(int, char* const*, const char*);
-#define getopt(ac, av, o) BSDgetopt (ac, av, o)
-#define opterr            BSDopterr
-#define optind            BSDoptind
-#define optopt            BSDoptopt
-#define optreset          BSDoptreset
-#define optarg            BSDoptarg
 
 typedef enum
 {

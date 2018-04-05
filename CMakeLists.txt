@@ -9,6 +9,7 @@ endif()
 if(WIN32)
   set(CMAKE_SHARED_LINKER_FLAGS "/FORCE:UNRESOLVED")
   link_directories(${CMAKE_SOURCE_DIR}/thirdparty/pcre/win32/lib)
+  include_directories(${CMAKE_SOURCE_DIR}/thirdparty/getopt)
   include_directories(${CMAKE_SOURCE_DIR}/thirdparty/pcre/win32/include)
 endif()
 

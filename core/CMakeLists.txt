@@ -24,6 +24,7 @@ endif()
 
 install (TARGETS sbfcore
          EXPORT sbfcore
+         RUNTIME DESTINATION lib
          ARCHIVE DESTINATION lib
          LIBRARY DESTINATION lib)
 install (FILES ${INSTALL_HEADERS} DESTINATION include/sbf)

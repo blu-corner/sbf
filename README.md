@@ -20,7 +20,7 @@ $ make install
 
 ## Compilation Windows
 
-Windows can be built with cmake
+Windows can be built with cmake - open command prompt with developer tools can be found inside visual studio folder in start menu.
 
 ```
 > mkdir build
