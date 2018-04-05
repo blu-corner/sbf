@@ -177,7 +177,11 @@ sbfLogFile_get (sbfLogFile lf)
     sbfLogFileEntry lfe;
     u_int           number;
 
+#ifdef WIN32
+    number = InterlockedIncrement (&lf->mNext);
+#else
     number = __sync_fetch_and_add (&lf->mNext, 1);
+#endif
 
     lfe = &lf->mBase[number % SBF_LOG_FILE_ENTRIES];
     lfe->mNumber = number;
@@ -187,7 +191,11 @@ sbfLogFile_get (sbfLogFile lf)
 void
 sbfLogFile_flush (sbfLogFile lf, sbfLogFileEntry lfe)
 {
+#ifdef WIN32
+    MemoryBarrier ();
+#else
     __sync_synchronize ();
+#endif
 }
 
 sbfLogFileEntry
@@ -195,7 +203,11 @@ sbfLogFile_read (sbfLogFile lf, u_int* number)
 {
     sbfLogFileEntry lfe;
 
+#ifdef WIN32
+    MemoryBarrier ();
+#else
     __sync_synchronize ();
+#endif
 
     lfe = &lf->mBase[*number % SBF_LOG_FILE_ENTRIES];
     if (lfe->mTime.tv_sec == 0 || lfe->mNumber < *number)

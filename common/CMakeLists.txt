@@ -53,7 +53,23 @@ set (SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfTcpListener.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfUdpMulticast.c")
 
-if (UNIX)
+if(APPLE)
+    set (INSTALL_HEADERS "${INSTALL_HEADERS}"
+        "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonDarwin.h")
+    set (SOURCES "${SOURCES}"
+        "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonDarwin.c")
+elseif(WIN32)
+    set (INSTALL_HEADERS "${INSTALL_HEADERS}"
+        "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonWin32.h"
+        "${CMAKE_SOURCE_DIR}/thirdparty/getopt/getopt.h")
+    set (SOURCES "${SOURCES}"
+        "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonWin32.c"
+        "${CMAKE_CURRENT_SOURCE_DIR}/fgetln.c"
+        "${CMAKE_CURRENT_SOURCE_DIR}/strlcat.c"
+        "${CMAKE_CURRENT_SOURCE_DIR}/strlcpy.c"
+        "${CMAKE_SOURCE_DIR}/thirdparty/getopt/getopt.c"
+        "${CMAKE_SOURCE_DIR}/thirdparty/getopt/getopt_long.c")
+else()
     set (INSTALL_HEADERS "${INSTALL_HEADERS}"
         "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonLinux.h")
     set (SOURCES "${SOURCES}"
@@ -61,11 +77,15 @@ if (UNIX)
         "${CMAKE_CURRENT_SOURCE_DIR}/fgetln.c"
         "${CMAKE_CURRENT_SOURCE_DIR}/strlcat.c"
         "${CMAKE_CURRENT_SOURCE_DIR}/strlcpy.c")
-endif (UNIX)
+endif()
 
 add_library (sbfcommon SHARED ${SOURCES})
 target_link_libraries (sbfcommon sbfcore)
 
-install (TARGETS sbfcommon EXPORT sbfcommon
+install (TARGETS sbfcommon
+         EXPORT sbfcommon
+         COMPONENT library
+         RUNTIME DESTINATION lib
+         ARCHIVE DESTINATION lib
          LIBRARY DESTINATION lib)
-install (FILES ${INSTALL_HEADERS} DESTINATION include)
+install (FILES ${INSTALL_HEADERS} DESTINATION include/sbf)

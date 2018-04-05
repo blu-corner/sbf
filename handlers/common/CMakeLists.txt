@@ -5,5 +5,8 @@ set (SOURCES
 add_library (sbfcommonhandler SHARED ${SOURCES})
 target_link_libraries (sbfcommonhandler sbfcommon sbfcore sbftransport)
 
-install (TARGETS sbfcommonhandler EXPORT sbfcommonhandler
+install (TARGETS sbfcommonhandler
+         EXPORT sbfcommonhandler
+         RUNTIME DESTINATION lib
+         ARCHIVE DESTINATION lib
          LIBRARY DESTINATION lib)

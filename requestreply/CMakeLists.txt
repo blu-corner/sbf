@@ -12,6 +12,9 @@ set (SOURCES
 
 add_library (sbfrequestreply SHARED ${SOURCES})
 
-install (TARGETS sbfrequestreply EXPORT sbfrequestreply
+install (TARGETS sbfrequestreply
+         EXPORT sbfrequestreply
+         RUNTIME DESTINATION lib
+         ARCHIVE DESTINATION lib
          LIBRARY DESTINATION lib)
-install (FILES ${INSTALL_HEADERS} DESTINATION include)
+install (FILES ${INSTALL_HEADERS} DESTINATION include/sbf)

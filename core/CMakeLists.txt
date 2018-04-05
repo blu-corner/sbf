@@ -15,8 +15,16 @@ set (SOURCES
     )
 
 add_library (sbfcore SHARED ${SOURCES})
-target_link_libraries (sbfcore event event_pthreads pthread ${CMAKE_DL_LIBS})
 
-install (TARGETS sbfcore EXPORT sbfcore
+if(WIN32)
+    target_link_libraries (sbfcore event_core event event_extra ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS})
+else()
+    target_link_libraries (sbfcore event event_pthreads ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS})
+endif()
+
+install (TARGETS sbfcore
+         EXPORT sbfcore
+         RUNTIME DESTINATION lib
+         ARCHIVE DESTINATION lib
          LIBRARY DESTINATION lib)
-install (FILES ${INSTALL_HEADERS} DESTINATION include)
+install (FILES ${INSTALL_HEADERS} DESTINATION include/sbf)

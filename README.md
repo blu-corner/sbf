@@ -6,6 +6,29 @@ SBF is a message transport system that allows inter app communication in two dif
 The `publisher-subscriber` consists of publishers defining topics where messages are placed. Then one or more subscribers might register to a concrete topic to read the messages that were delivered (one to many communication).  
 On the other hand, the `requester-replier` communication is about defining a channel where messages are sent from one requester to one publisher (one to one communication).
 
+## Compilation Unix
+
+Windows can be built with make
+
+```
+$ mkdir build
+$ cd build
+$ cmake ../
+$ make
+$ make install
+```
+
+## Compilation Windows
+
+Windows can be built with cmake - open command prompt with developer tools can be found inside visual studio folder in start menu.
+
+```
+> mkdir build
+> cd build
+> cmake -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE -G"NMake Makefiles" ../
+> nmake
+```
+
 > TBD
 
 ## API

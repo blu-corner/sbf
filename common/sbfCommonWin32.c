@@ -84,6 +84,37 @@ error:
     return (-1);
 }
 
+char*
+strsep(char** stringp, const char* delim)
+{
+    char* start = *stringp;
+    char* p;
+
+    p = (start != NULL) ? strpbrk(start, delim) : NULL;
+
+    if (p == NULL)
+    {
+        *stringp = NULL;
+    }
+    else
+    {
+        *p = '\0';
+        *stringp = p + 1;
+    }
+
+    return start;
+}
+
+ssize_t
+pwrite(int fd, const void *buf, size_t count, off_t offset)
+{
+    // TODO
+    // get offset
+    // write
+    // reset offset
+    return 0;
+}
+
 void*
 mmap (void* addr, size_t length, int prot, int flags, int fd, off_t offset)
 {
