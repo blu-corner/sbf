@@ -36,7 +36,7 @@ for (nodeName in nodeLabels)
                         mkdir build
                         cd build
                         cmake -DTESTS=ON ../
-                        make VERBOSE=1 install | tee compiler.log
+                        make VERBOSE=1 install |& tee compiler.log
                         make package
                     """)
                 }
