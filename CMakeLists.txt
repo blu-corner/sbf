@@ -46,11 +46,11 @@ elseif (NOT event_FOUND)
     SOURCE_DIR ${LIBEVENT_CMAKE}
     CMAKE_ARGS -DEVENT__DISABLE_TESTS=ON -DEVENT__DISABLE_REGRESS=ON -DEVENT__DISABLE_OPENSSL=ON -DEVENT__DISABLE_SAMPLES=ON -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
     )
-endif()
 
-# add include and lib dir
-link_directories(${CMAKE_INSTALL_PREFIX}/lib)
-include_directories(${CMAKE_INSTALL_PREFIX}/include)
+  # add include and lib dir
+  link_directories(${CMAKE_INSTALL_PREFIX}/lib)
+  include_directories(${CMAKE_INSTALL_PREFIX}/include)
+endif()
 
 # set version info
 set(SBF_MAJOR_VERSION 1)
