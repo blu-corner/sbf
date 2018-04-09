@@ -71,6 +71,10 @@ main (int argc, char** argv)
     {
         fprintf (stderr, "failed to create connection to real time host");
     }
+    else
+    {
+        sleep(10);
+    }
     
     exit (0);
 }

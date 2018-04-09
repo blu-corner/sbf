@@ -219,7 +219,9 @@ sbfTcpConnection_create (sbfLog log,
         return NULL;
 #endif
     
-    s = socket (isUnix ? AF_UNIX : AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    s = socket (isUnix == 0 ? AF_INET : AF_UNIX,
+                SOCK_STREAM,
+                isUnix == 0 ? IPPROTO_TCP : 0);
     if (s == -1)
         return NULL;
     tc = sbfTcpConnection_wrap (log, s, isUnix, address);
