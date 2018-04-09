@@ -20,22 +20,15 @@ typedef void (*sbfTcpListenerAcceptCb) (sbfTcpListener tl,
 sbfTcpListener sbfTcpListener_create (sbfLog log,
                                       struct sbfMwThreadImpl* thread,
                                       struct sbfQueueImpl* queue,
-                                      uint16_t port,
+                                      sbfTcpConnectionAddress* address,
+                                      int isUnix,
                                       sbfTcpListenerReadyCb readyCb,
                                       sbfTcpListenerAcceptCb acceptCb,
                                       void* closure);
 
-sbfTcpListener sbfTcpListener_create_unix (sbfLog log,
-                                           struct sbfMwThreadImpl* thread,
-                                           struct sbfQueueImpl* queue,
-                                           struct sockaddr_un* sin,
-                                           sbfTcpListenerReadyCb readyCb,
-                                           sbfTcpListenerAcceptCb acceptCb,
-                                           void* closure);
-
 void sbfTcpListener_destroy (sbfTcpListener tl);
 
-bool sbfTcpListener_isUnix (sbfTcpListener t1);
+int sbfTcpListener_isUnix (sbfTcpListener t1);
 
 SBF_END_DECLS
 

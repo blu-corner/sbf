@@ -17,9 +17,8 @@ struct sbfTcpConnectionImpl
     struct bufferevent*        mEvent;
     int                        mQueued;
 
-    bool                       mIsUnix;
-    struct sockaddr_in         mPeer;
-    struct sockaddr_un         mUnixPeer;
+    int                        mIsUnix;
+    sbfTcpConnectionAddress    mPeer;
 
     sbfTcpConnectionReadyCb    mReadyCb;
     sbfTcpConnectionReadCb     mReadCb;
@@ -37,11 +36,9 @@ struct sbfTcpConnectionImpl
 
 sbfTcpConnection sbfTcpConnection_wrap (sbfLog log,
                                         int socket,
-                                        struct sockaddr_in* sin);
+                                        int isUnix,
+                                        sbfTcpConnectionAddress* address);
 
-sbfTcpConnection sbfTcpConnection_wrapUnix (sbfLog log,
-                                            int socket,
-                                            struct sockaddr_un* sin);
 SBF_END_DECLS
 
 #endif /* _SBF_TCP_CONNECTION_PRIVATE_H_ */

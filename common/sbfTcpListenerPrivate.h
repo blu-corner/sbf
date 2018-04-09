@@ -9,22 +9,23 @@ SBF_BEGIN_DECLS
 
 struct sbfTcpListenerImpl
 {
-    sbfLog                 mLog;
+    sbfLog                  mLog;
 
-    struct evconnlistener* mListener;
+    struct evconnlistener*  mListener;
 
 
-    bool                   mIsUnix;
+    int                     mIsUnix;
+    sbfTcpConnectionAddress mAddress;
 
-    sbfTcpListenerReadyCb  mReadyCb;
-    sbfTcpListenerAcceptCb mAcceptCb;
-    void*                  mClosure;
+    sbfTcpListenerReadyCb   mReadyCb;
+    sbfTcpListenerAcceptCb  mAcceptCb;
+    void*                   mClosure;
 
-    sbfMwThread            mThread;
-    sbfQueue               mQueue;
+    sbfMwThread             mThread;
+    sbfQueue                mQueue;
 
-    int                    mDestroyed;
-    sbfRefCount            mRefCount;
+    int                     mDestroyed;
+    sbfRefCount             mRefCount;
 };
 
 SBF_END_DECLS

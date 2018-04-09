@@ -17,17 +17,17 @@ sbfTcpConnectionReadyQueueCb (sbfQueueItem item, void* closure)
         sbfLog_debug (tc->mLog,
                       "TCP connection %p %s ready",
                       tc,
-                      tc->mUnixPeer.sun_path);
+                      tc->mPeer.sun.sun_path);
     }
     else
     {
         char             tmp[INET_ADDRSTRLEN];
-        inet_ntop (AF_INET, &tc->mPeer.sin_addr, tmp, sizeof tmp);
+        inet_ntop (AF_INET, &tc->mPeer.sin.sin_addr, tmp, sizeof tmp);
         sbfLog_debug (tc->mLog,
                       "TCP connection %p (%s:%hu) ready",
                       tc,
                       tmp,
-                      ntohs (tc->mPeer.sin_port));
+                      ntohs (tc->mPeer.sin.sin_port));
     }
 
     if (tc->mReadyCb != NULL && !tc->mDestroyed)
@@ -47,18 +47,18 @@ sbfTcpConnectionErrorQueueCb (sbfQueueItem item, void* closure)
         sbfLog_debug (tc->mLog,
                       "TCP connection %p %s error",
                       tc,
-                      tc->mUnixPeer.sun_path);
+                      tc->mPeer.sun.sun_path);
     }
     else
     {
         char             tmp[INET_ADDRSTRLEN];
 
-        inet_ntop (AF_INET, &tc->mPeer.sin_addr, tmp, sizeof tmp);
+        inet_ntop (AF_INET, &tc->mPeer.sin.sin_addr, tmp, sizeof tmp);
         sbfLog_debug (tc->mLog,
                       "TCP connection %p (%s:%hu) error",
                       tc,
                       tmp,
-                      ntohs (tc->mPeer.sin_port));
+                      ntohs (tc->mPeer.sin.sin_port));
     }
 
     if (tc->mErrorCb != NULL && !tc->mDestroyed)
@@ -178,35 +178,21 @@ sbfTcpConnectionSet (sbfTcpConnection tc,
 }
 
 sbfTcpConnection
-sbfTcpConnection_wrap (sbfLog log, int s, struct sockaddr_in* sin)
+sbfTcpConnection_wrap (sbfLog log,
+                       int socket,
+                       int isUnix,
+                       sbfTcpConnectionAddress* address)
 {
     sbfTcpConnection tc;
 
-    evutil_make_socket_closeonexec (s);
-    evutil_make_socket_nonblocking (s);
+    evutil_make_socket_closeonexec (socket);
+    evutil_make_socket_nonblocking (socket);
 
     tc = xcalloc (1, sizeof *tc);
     tc->mLog = log;
-    tc->mSocket = s;
-    tc->mIsUnix = false;
-    memcpy (&tc->mPeer, sin, sizeof tc->mPeer);
-
-    return tc;
-}
-
-sbfTcpConnection
-sbfTcpConnection_wrapUnix (sbfLog log, int s, struct sockaddr_un* sin)
-{
-    sbfTcpConnection tc;
-
-    evutil_make_socket_closeonexec (s);
-    evutil_make_socket_nonblocking (s);
-
-    tc = xcalloc (1, sizeof *tc);
-    tc->mLog = log;
-    tc->mSocket = s;
-    tc->mIsUnix = true;
-    memcpy (&tc->mUnixPeer, sin, sizeof tc->mUnixPeer);
+    tc->mSocket = socket;
+    tc->mIsUnix = isUnix;
+    memcpy (&tc->mPeer, address, sizeof(sbfTcpConnectionAddress));
 
     return tc;
 }
@@ -215,7 +201,8 @@ sbfTcpConnection
 sbfTcpConnection_create (sbfLog log,
                          sbfMwThread thread,
                          sbfQueue queue,
-                         struct sockaddr_in* sin,
+                         sbfTcpConnectionAddress* address,
+                         int isUnix,
                          sbfTcpConnectionReadyCb readyCb,
                          sbfTcpConnectionErrorCb errorCb,
                          sbfTcpConnectionReadCb readCb,
@@ -226,86 +213,51 @@ sbfTcpConnection_create (sbfLog log,
     char             tmp[INET_ADDRSTRLEN];
     int              error;
 
-    s = socket (AF_INET, SOCK_STREAM, IPPROTO_TCP);
+#if WIN32
+    // unix sockets are unsupported on windows
+    if (isUnix)
+        return NULL;
+#endif
+    
+    s = socket (isUnix ? AF_UNIX : AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (s == -1)
         return NULL;
-    tc = sbfTcpConnection_wrap (log, s, sin);
+    tc = sbfTcpConnection_wrap (log, s, isUnix, address);
     if (tc == NULL)
         return NULL;
 
-    inet_ntop (AF_INET, &sin->sin_addr, tmp, sizeof tmp);
-    sbfLog_debug (log,
-                  "creating TCP connection %p to %s:%hu",
-                  tc,
-                  tmp,
-                  ntohs (sin->sin_port));
+    if (isUnix == 0)
+    {
+        inet_ntop (AF_INET, &(address->sin.sin_addr), tmp, sizeof tmp);
+        sbfLog_debug (log,
+                      "creating TCP connection %p to %s:%hu",
+                      tc,
+                      tmp,
+                      ntohs (address->sin.sin_port));
+    }
 
-    error =  sbfTcpConnectionSet (tc,
-                                  thread,
-                                  queue,
-                                  readyCb,
-                                  errorCb,
-                                  readCb,
-                                  closure);
+    error = sbfTcpConnectionSet (tc,
+                                 thread,
+                                 queue,
+                                 readyCb,
+                                 errorCb,
+                                 readCb,
+                                 closure);
     if (error != 0)
         goto fail;
 
-    error = bufferevent_socket_connect (tc->mEvent,
-                                        (struct sockaddr*)sin,
-                                        sizeof *sin);
-    if (error != 0)
-        goto fail;
-
-    return tc;
-
-fail:
-    sbfLog_err (tc->mLog,
-                "error creating TCP connection %p: %s",
-                tc,
-                strerror (error));
-    sbfTcpConnection_destroy (tc);
-    return NULL;
-}
-
-sbfTcpConnection
-sbfTcpConnection_createUnix (sbfLog log,
-                             sbfMwThread thread,
-                             sbfQueue queue,
-                             struct sockaddr_un* sin,
-                             sbfTcpConnectionReadyCb readyCb,
-                             sbfTcpConnectionErrorCb errorCb,
-                             sbfTcpConnectionReadCb readCb,
-                             void* closure)
-{
-    sbfTcpConnection tc;
-    int              s;
-    int              error;
-
-    s = socket (AF_UNIX, SOCK_STREAM, IPPROTO_TCP);
-    if (s == -1)
-        return NULL;
-    tc = sbfTcpConnection_wrapUnix (log, s, sin);
-    if (tc == NULL)
-        return NULL;
-
-    sbfLog_debug (log,
-                  "creating UNIX connection %p to %s",
-                  tc,
-                  sin->sun_path);
-
-    error =  sbfTcpConnectionSet (tc,
-                                  thread,
-                                  queue,
-                                  readyCb,
-                                  errorCb,
-                                  readCb,
-                                  closure);
-    if (error != 0)
-        goto fail;
-
-    error = bufferevent_socket_connect (tc->mEvent,
-                                        (struct sockaddr*)sin,
-                                        sizeof *sin);
+    if (isUnix)
+    {
+        error = bufferevent_socket_connect (tc->mEvent,
+                                            (struct sockaddr*)&(address->sun),
+                                            sizeof(address->sun));
+    }
+    else
+    {
+        error = bufferevent_socket_connect (tc->mEvent,
+                                            (struct sockaddr*)&(address->sin),
+                                            sizeof(address->sin));
+    }
     if (error != 0)
         goto fail;
 
@@ -346,13 +298,23 @@ sbfTcpConnection_accept (sbfTcpConnection tc,
     char     tmp[INET_ADDRSTRLEN];
     sbfError error;
 
-    inet_ntop (AF_INET, &tc->mPeer.sin_addr, tmp, sizeof tmp);
-    sbfLog_debug (tc->mLog,
-                  "accepting TCP connection %p from %s:%hu",
-                  tc,
-                  tmp,
-                  ntohs (tc->mPeer.sin_port));
-
+    if (tc->mIsUnix)
+    {
+        sbfLog_debug (tc->mLog,
+                      "accepting TCP connection %p %s ready",
+                      tc,
+                      tc->mPeer.sun.sun_path);
+    }
+    else
+    {
+        inet_ntop (AF_INET, &tc->mPeer.sin.sin_addr, tmp, sizeof tmp);
+        sbfLog_debug (tc->mLog,
+                      "accepting TCP connection %p from %s:%hu",
+                      tc,
+                      tmp,
+                      ntohs (tc->mPeer.sin.sin_port));
+    }
+    
     error = sbfTcpConnectionSet (tc,
                                   thread,
                                   queue,
@@ -390,19 +352,13 @@ sbfTcpConnection_sendBuffer (sbfTcpConnection tc, sbfBuffer buffer)
         sbfBuffer_destroy (buffer);
 }
 
-struct sockaddr_in*
+sbfTcpConnectionAddress*
 sbfTcpConnection_getPeer (sbfTcpConnection tc)
 {
     return &tc->mPeer;
 }
 
-struct sockaddr_un*
-sbfTcpConnection_getPeerUnix (sbfTcpConnection tc)
-{
-    return &tc->mUnixPeer;
-}
-
-bool
+int
 sbfTcpConnection_isUnix (sbfTcpConnection tc)
 {
     return tc->mIsUnix;

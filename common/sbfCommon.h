@@ -40,9 +40,6 @@
 
 SBF_BEGIN_DECLS
 
-typedef int bool;
-enum {false, true};
-
 /*! Minium of a and b. */
 #define SBF_MIN(a, b) ((a) > (b) ? (b) : (a))
 /*! Maximum of a and b. */
