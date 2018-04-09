@@ -27,6 +27,7 @@ option(COVERAGE "Enable gcov coverage" OFF)
 include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
 
 # deps
+find_package(Threads)
 find_library(EVENT_LIB
   NAMES event
   HINTS "${CMAKE_INSTALL_PREFIX}/lib"
