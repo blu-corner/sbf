@@ -3,6 +3,7 @@
 #include "sbfTcpListener.h"
 #include "sbfTcpListenerPrivate.h"
 
+
 static void
 sbfTcpListenerReadyQueueCb (sbfQueueItem item, void* closure)
 {
@@ -37,9 +38,20 @@ sbfTcpListenerEventCb (struct evconnlistener* listener,
 {
     sbfTcpListener      tl = closure;
     sbfTcpConnection    tc;
-    struct sockaddr_in* sin = (struct sockaddr_in*)address;
+    sbfTcpConnectionAddress sbfAddress;
 
-    tc = sbfTcpConnection_wrap (tl->mLog, s, sin);
+    if (sbfTcpListener_isUnix(tl))
+    {
+        struct sockaddr_un* sun = (struct sockaddr_un*)address;
+        memcpy(&(sbfAddress.sun), sun, sizeof(struct sockaddr_un));
+    }
+    else
+    {
+        struct sockaddr_in* sin = (struct sockaddr_in*)address;
+        memcpy(&(sbfAddress.sin), sin, sizeof(struct sockaddr_in));
+    }
+
+    tc = sbfTcpConnection_wrap (tl->mLog, s, sbfTcpListener_isUnix(tl), &sbfAddress);
     tc->mListener = tl;
 
     /*
@@ -54,13 +66,13 @@ sbfTcpListener
 sbfTcpListener_create (sbfLog log,
                        struct sbfMwThreadImpl* thread,
                        struct sbfQueueImpl* queue,
-                       uint16_t port,
+                       sbfTcpConnectionAddress* address,
+                       int isUnix,
                        sbfTcpListenerReadyCb readyCb,
                        sbfTcpListenerAcceptCb acceptCb,
                        void* closure)
 {
     sbfTcpListener     tl;
-    struct sockaddr_in sin;
 
     tl = xcalloc (1, sizeof *tl);
     tl->mLog = log;
@@ -70,29 +82,46 @@ sbfTcpListener_create (sbfLog log,
     tl->mReadyCb = readyCb;
     tl->mAcceptCb = acceptCb;
     tl->mClosure = closure;
+    tl->mIsUnix = isUnix;
 
     tl->mDestroyed = 0;
     sbfRefCount_init (&tl->mRefCount, 1);
 
-    sbfLog_debug (tl->mLog,
-                  "creating TCP listener %p: port %hu",
-                  tl,
-                  port);
-
-    memset (&sin, 0, sizeof sin);
-    sin.sin_family = AF_INET;
-    sin.sin_addr.s_addr = INADDR_ANY;
-    sin.sin_port = htons (port);
-    tl->mListener = evconnlistener_new_bind (sbfMw_getThreadEventBase (thread),
-                                             sbfTcpListenerEventCb,
-                                             tl,
-                                             LEV_OPT_THREADSAFE|
-                                             LEV_OPT_CLOSE_ON_FREE|
-                                             LEV_OPT_CLOSE_ON_EXEC|
-                                             LEV_OPT_REUSEABLE,
-                                             -1,
-                                             (struct sockaddr*)&sin,
-                                             sizeof sin);
+    if (isUnix)
+    {
+        sbfLog_debug (tl->mLog,
+                      "creating TCP listener %p: unix-path %s",
+                      tl,
+                      address->sun.sun_path);
+        tl->mListener = evconnlistener_new_bind (sbfMw_getThreadEventBase (thread),
+                                                 sbfTcpListenerEventCb,
+                                                 tl,
+                                                 LEV_OPT_THREADSAFE|
+                                                 LEV_OPT_CLOSE_ON_FREE|
+                                                 LEV_OPT_CLOSE_ON_EXEC|
+                                                 LEV_OPT_REUSEABLE,
+                                                 -1,
+                                                 (struct sockaddr*)&(address->sun),
+                                                 sizeof(address->sun));
+    }
+    else
+    {
+        sbfLog_debug (tl->mLog,
+                      "creating TCP listener %p: port %hu",
+                      tl,
+                      ntohs (address->sin.sin_port));
+        tl->mListener = evconnlistener_new_bind (sbfMw_getThreadEventBase (thread),
+                                                 sbfTcpListenerEventCb,
+                                                 tl,
+                                                 LEV_OPT_THREADSAFE|
+                                                 LEV_OPT_CLOSE_ON_FREE|
+                                                 LEV_OPT_CLOSE_ON_EXEC|
+                                                 LEV_OPT_REUSEABLE,
+                                                 -1,
+                                                 (struct sockaddr*)&(address->sin),
+                                                 sizeof(address->sin));
+    }
+    
     if (tl->mListener == NULL)
     {
         sbfLog_err (tl->mLog, "failed to create event listener");
@@ -120,4 +149,10 @@ sbfTcpListener_destroy (sbfTcpListener tl)
 
     if (sbfRefCount_decrement (&tl->mRefCount))
         free (tl);
+}
+
+int
+sbfTcpListener_isUnix (sbfTcpListener tl)
+{
+    return tl->mIsUnix;
 }

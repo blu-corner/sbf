@@ -16,6 +16,13 @@ SBF_BEGIN_DECLS
 struct sbfMwThreadImpl;
 struct sbfQueueImpl;
 
+typedef union {
+    struct sockaddr_in sin;
+#ifndef WIN32
+    struct sockaddr_un sun;
+#endif
+} sbfTcpConnectionAddress;
+
 /*! Declares the TCP connection handler. */
 typedef struct sbfTcpConnectionImpl* sbfTcpConnection;
 
@@ -36,7 +43,8 @@ typedef size_t (*sbfTcpConnectionReadCb) (sbfTcpConnection tc,
    \param log the log handler.
    \param thread a thread to handle TCP connections.
    \param queue a queue to dispatch TCP messages.
-   \param sin Information about the socket connection.
+   \param address Information about the socket connection.
+   \param isUnix == 0 means is inet socket else is unix socket only support on unix platforms
    \param readyCb a ready callback to be notified when the connection
    is ready.
    \param errorCb an error callback to notify when an error happened.
@@ -47,7 +55,8 @@ typedef size_t (*sbfTcpConnectionReadCb) (sbfTcpConnection tc,
 sbfTcpConnection sbfTcpConnection_create (sbfLog log,
                                           struct sbfMwThreadImpl* thread,
                                           struct sbfQueueImpl* queue,
-                                          struct sockaddr_in* sin,
+                                          sbfTcpConnectionAddress* address,
+                                          int isUnix,
                                           sbfTcpConnectionReadyCb readyCb,
                                           sbfTcpConnectionErrorCb errorCb,
                                           sbfTcpConnectionReadCb readCb,
@@ -101,7 +110,13 @@ void sbfTcpConnection_sendBuffer (sbfTcpConnection tc, sbfBuffer buffer);
    \param tc the TCP connection's handler.
    \return the connection details for a given TCP connection handler.
  */
-struct sockaddr_in* sbfTcpConnection_getPeer (sbfTcpConnection tc);
+sbfTcpConnectionAddress* sbfTcpConnection_getPeer (sbfTcpConnection tc);
+
+/*!
+   Returns true if connection is to a unix socket or or not
+   \param tc the TCP connection's handler.
+ */
+int sbfTcpConnection_isUnix (sbfTcpConnection tc);
 
 SBF_END_DECLS
 
