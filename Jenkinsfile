@@ -6,11 +6,13 @@ def projectPrefix = "neueda-capopen"
 def newFixVersion = "0.0.1"
 
 def gitCreds = '51947d2c-c215-4578-8996-605330e83e39'
-def nodeLabels = ['centos6', 'centos7', 'ubuntu']
+def nodeLabels = ['centos6', 'centos7', 'ubuntu', 'fedora']
 def buildTest = [:]
 
-for (nodeName in nodeLabels)
+for (int i = 0; i < nodeLabels.size(); i++)
 {
+    int index = i
+    def nodeName = nodeLabels[index]
     stage ("Build-Test")
     {
         buildTest["build-test-$nodeName"] = {
@@ -86,7 +88,7 @@ for (nodeName in nodeLabels)
                 stage("static-analysis")
                 {
                     sh "cppcheck -f --enable=all --suppress=missingIncludeSystem --xml ./ 2> ./cppcheck_report.xml"
-                    sh 'vera++ -c vera.xml `find ./common ./core ./handlers ./tools ./transport -regextype posix-egrep -regex ".*\\.(cc|cpp|h|hpp)"`'
+                    sh 'vera++ -p vera-profile -c vera.xml `find ./common ./core ./handlers ./tools ./transport -regextype posix-egrep -regex ".*\\.(cc|cpp|h|hpp)"`'
 
                     step([$class: 'CheckStylePublisher',
                           pattern: 'vera.xml'])
