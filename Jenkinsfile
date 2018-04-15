@@ -88,7 +88,7 @@ for (int i = 0; i < nodeLabels.size(); i++)
                 stage("static-analysis")
                 {
                     sh "cppcheck -f --enable=all --suppress=missingIncludeSystem --xml ./ 2> ./cppcheck_report.xml"
-                    sh 'vera++ -p vera-profile -c vera.xml `find ./common ./core ./handlers ./tools ./transport -regextype posix-egrep -regex ".*\\.(cc|cpp|h|hpp)"`'
+                    sh 'vera++ -p /vera-profile -c vera.xml `find ./common ./core ./handlers ./tools ./transport -regextype posix-egrep -regex ".*\\.(cc|cpp|h|hpp)"`'
 
                     step([$class: 'CheckStylePublisher',
                           pattern: 'vera.xml'])
