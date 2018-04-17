@@ -45,6 +45,7 @@ for (int i = 0; i < nodeLabels.size(); i++)
                 stage("archive-build")
                 {
                     //archive
+                    sh "cd build; find . -maxdepth 1 -name '*.tar.gz' -exec sh -c 'mv {} \$(basename {} .tar.gz)-${nodeName}.tar.gz' \\;"
                     archive "build/*.tar.gz"
 
                     // find fix-version
