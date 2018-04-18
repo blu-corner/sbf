@@ -45,6 +45,7 @@ for (int i = 0; i < nodeLabels.size(); i++)
                 stage("archive-build")
                 {
                     //archive
+                    sh "cd build; find . -maxdepth 1 -name '*.tar.gz' -exec sh -c 'mv {} \$(basename {} .tar.gz)-${nodeName}.tar.gz' \\;"
                     archive "build/*.tar.gz"
 
                     // find fix-version
@@ -95,8 +96,10 @@ for (int i = 0; i < nodeLabels.size(); i++)
                 }
                 stage("sonar-upload")
                 {
-                    withSonarQubeEnv('SonarQube Server') {
-                        sh "/opt/sonar-scanner-2.8/bin/sonar-scanner -Dsonar.cxx.cppcheck.reportPath=cppcheck_report.xml -Dsonar.cxx.vera.reportPath=vera.xml -Dsonar.cxx.compiler.parser=GCC -Dsonar.cxx.compiler.reportPath=build/compiler.log -Dsonar.cxx.compiler.charset=UTF-8 -Dsonar.projectName=$packageName -Dsonar.projectVersion=$newFixVersion -Dsonar.projectKey=$projectPrefix-$nodeName-$packageName -Dsonar.sources=./"
+                    if(nodeName == 'ubuntu') {
+                        withSonarQubeEnv('SonarQube Server') {
+                            sh "/opt/sonar-scanner-2.8/bin/sonar-scanner -Dsonar.cxx.cppcheck.reportPath=cppcheck_report.xml -Dsonar.cxx.vera.reportPath=vera.xml -Dsonar.cxx.compiler.parser=GCC -Dsonar.cxx.compiler.reportPath=build/compiler.log -Dsonar.cxx.compiler.charset=UTF-8 -Dsonar.projectName=$packageName -Dsonar.projectVersion=$newFixVersion -Dsonar.projectKey=$projectPrefix-$nodeName-$packageName -Dsonar.sources=./"
+                        }
                     }
                 }
             }
