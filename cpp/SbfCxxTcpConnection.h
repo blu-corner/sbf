@@ -2,6 +2,8 @@
 
 #include "sbfTcpConnection.h"
 
+namespace neueda
+{
 class SbfTcpConnectionDelegate {
 public:
     virtual ~SbfTcpConnectionDelegate () { }
@@ -45,4 +47,4 @@ private:
                                           size_t size,
                                           void* closure);
 };
-
+}
