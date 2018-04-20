@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.0)
-project(sbf C)
+project(sbf)
 set(SUBMODULE_FLAGS -DTESTS=off)
 
 if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
@@ -128,6 +128,7 @@ add_subdirectory(transport)
 add_subdirectory(requestreply)
 add_subdirectory(handlers)
 add_subdirectory(tools)
+add_subdirectory(cpp)
 
 install(EXPORT sbfcore DESTINATION lib/sbf/cmake)
 install(EXPORT sbfcommon DESTINATION lib/sbf/cmake)
