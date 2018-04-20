@@ -11,6 +11,10 @@
 #include "sbfBuffer.h"
 #include "sbfCommon.h"
 
+#ifndef WIN32
+#include <sys/un.h>
+#endif
+
 SBF_BEGIN_DECLS
 
 struct sbfMwThreadImpl;
