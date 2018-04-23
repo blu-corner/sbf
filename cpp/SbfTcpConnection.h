@@ -34,10 +34,11 @@ public:
 
     virtual bool isUnix ();
 
-private:
+protected:
     sbfTcpConnection mConnection;
     SbfTcpConnectionDelegate* mDelegate;
-
+    
+private:
     static void sbfTcpConnectionReadyCb (sbfTcpConnection tc, void* closure);
     static void sbfTcpConnectionErrorCb (sbfTcpConnection tc, void* closure);
     static size_t sbfTcpConnectionReadCb (sbfTcpConnection tc,

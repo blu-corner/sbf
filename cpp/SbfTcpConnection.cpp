@@ -21,7 +21,8 @@ SbfTcpConnection::SbfTcpConnection (sbfLog log,
 
 SbfTcpConnection::~SbfTcpConnection ()
 {
-    sbfTcpConnection_destroy (getHandle ());
+    if (getHandle () != NULL)
+        sbfTcpConnection_destroy (getHandle ());
 }
 
 sbfTcpConnection
