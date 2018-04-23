@@ -116,6 +116,7 @@ private:
         {
             return instance->mDelegate->onRead (data, size);
         }
+        return size;
     }
 };
 }
