@@ -1,5 +1,7 @@
-#include "SbfTcpConnection.h"
+#include "SbfCxxTcpConnection.h"
 
+namespace neueda
+{
 SbfTcpConnection::SbfTcpConnection (sbfLog log,
                                     struct sbfMwThreadImpl* thread,
                                     struct sbfQueueImpl* queue,
@@ -87,4 +89,5 @@ SbfTcpConnection::sbfTcpConnectionReadCb (sbfTcpConnection tc,
         return instance->mDelegate->onRead (data, size);
     }
     return size;
+}
 }

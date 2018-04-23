@@ -34,9 +34,9 @@ find_library(EVENT_LIB
 find_library(EVENT_PTHREAD_LIB
   NAMES event_pthreads
   HINTS "${CMAKE_INSTALL_PREFIX}/lib")
-find_path(EVENT_INCLUDE_DIR event2/event.h
-  HINTS "${CMAKE_INSTALL_PREFIX}/include")
 
+find_path(EVENT_INCLUDE_DIR event2/event.h
+  PATHS "${CMAKE_INSTALL_PREFIX}/include")
 if (EVENT_LIB AND EVENT_PTHREAD_LIB)
   message(STATUS "event-found: " ${EVENT_LIB})
   message(STATUS "event-pthread-found: " ${EVENT_PTHREAD_LIB})
@@ -50,11 +50,11 @@ elseif (NOT event_FOUND)
     SOURCE_DIR ${LIBEVENT_CMAKE}
     CMAKE_ARGS -DEVENT__DISABLE_TESTS=ON -DEVENT__DISABLE_REGRESS=ON -DEVENT__DISABLE_OPENSSL=ON -DEVENT__DISABLE_SAMPLES=ON -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
     )
-
-  # add include and lib dir
-  link_directories(${CMAKE_INSTALL_PREFIX}/lib)
-  include_directories(${CMAKE_INSTALL_PREFIX}/include)
 endif()
+
+# add include and lib dir
+link_directories(${CMAKE_INSTALL_PREFIX}/lib)
+include_directories(${CMAKE_INSTALL_PREFIX}/include)
 
 # set version info
 set(SBF_MAJOR_VERSION 1)
