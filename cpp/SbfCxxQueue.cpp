@@ -1,4 +1,4 @@
-#include "SbfQueue.h"
+#include "SbfCxxQueue.h"
 
 SbfQueue::SbfQueue (struct sbfMwImpl* mw,
                     const char* name,

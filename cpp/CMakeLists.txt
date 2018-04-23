@@ -1,11 +1,10 @@
 set (INSTALL_HEADERS
   "${CMAKE_CURRENT_SOURCE_DIR}/SbfCxxTcpConnection.h"
-  "${CMAKE_CURRENT_SOURCE_DIR}/SbfQueue.h")
+  "${CMAKE_CURRENT_SOURCE_DIR}/SbfCxxQueue.h")
 
 set (SOURCES
   "${CMAKE_CURRENT_SOURCE_DIR}/SbfCxxTcpConnection.cpp"
-  "${CMAKE_CURRENT_SOURCE_DIR}/SbfQueue.cpp")
-)
+  "${CMAKE_CURRENT_SOURCE_DIR}/SbfCxxQueue.cpp")
 
 add_library (sbfcxx SHARED ${SOURCES})
 target_link_libraries (sbfcxx sbfcommon sbfcore)
