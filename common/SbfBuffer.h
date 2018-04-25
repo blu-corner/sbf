@@ -4,9 +4,9 @@
 
 class SbfBufferDelegate {
 public:
-    virtual ~SbfBufferDelegate () { }
+     ~SbfBufferDelegate () { }
 
-    virtual void destroy (void* data, void* closure) { }
+     void destroy (void* data, void* closure) { }
 };
 
 class SbfBuffer {
@@ -18,13 +18,13 @@ public:
 
     virtual ~SbfBuffer ();
 
-    virtual sbfBuffer getNew (size_t size);
+    virtual SbfBuffer getNew (size_t size);
 
-    virtual sbfBuffer newZero (size_t size);
+    virtual SbfBuffer newZero (size_t size);
 
-    virtual sbfBuffer copy (void* data, size_t size);
+    virtual SbfBuffer copy (void* data, size_t size);
 
-    virtual sbfBuffer wrap (void* data, size_t size);
+    virtual SbfBuffer wrap (void* data, size_t size);
 
     virtual void addRef (sbfBuffer buffer);
 
@@ -34,7 +34,7 @@ public:
 
     virtual void* getData (sbfBuffer buffer);
 
-    virtual void setData (sbfBuffer buffer, void* data)
+    virtual void setData (sbfBuffer buffer, void* data);
 
     virtual size_t getSize (sbfBuffer buffer);
 
