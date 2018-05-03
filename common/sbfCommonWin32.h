@@ -67,13 +67,23 @@ int sbfThread_create (sbfThread* thread, void* (*cb) (void*), void* closure);
 
 typedef CONDITION_VARIABLE sbfCondVar;
 #define sbfCondVar_init(c) InitializeConditionVariable (c)
+#define sbfCondVar_init_attr(c, a) InitializeConditionVariable (c)
 #define sbfCondVar_destroy(c)
 #define sbfCondVar_wait(c, m) SleepConditionVariableCS (c, m, INFINITE)
 #define sbfCondVar_broadcast(c) WakeAllConditionVariable (c)
 #define sbfCondVar_signal(c) WakeConditionVariable (c)
 
+typedef void sbfCondAttr;
+#define sbfCondAttr_init(a)
+#define sbfCondAttr_setpshared(a, p)
+
+typedef void sbfMutexAttr;
+#define sbfMutexAttr_init(a)
+#define sbfMutexAttr_setpshared(a, p)
+
 typedef CRITICAL_SECTION sbfMutex;
 #define sbfMutex_init(m, recursive) InitializeCriticalSection (m)
+#define sbfMutex_init_attr(m, a) InitializeCriticalSection (m)
 #define sbfMutex_destroy(m) DeleteCriticalSection (m)
 #define sbfMutex_lock(m) EnterCriticalSection (m)
 #define sbfMutex_unlock(m) LeaveCriticalSection (m)

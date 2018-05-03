@@ -75,13 +75,23 @@ typedef pthread_t sbfThread;
 
 typedef pthread_cond_t sbfCondVar;
 #define sbfCondVar_init(c) pthread_cond_init (c, NULL)
+#define sbfCondVar_init_attr(c, a) pthread_cond_init (c, a)
 #define sbfCondVar_destroy(c) pthread_cond_destroy (c)
 #define sbfCondVar_wait(c, m) pthread_cond_wait (c, m)
 #define sbfCondVar_broadcast(c) pthread_cond_broadcast (c)
 #define sbfCondVar_signal(c) pthread_cond_signal (c)
 
+typedef pthread_condattr_t sbfCondAttr;
+#define sbfCondAttr_init(a) pthread_condattr_init (a)
+#define sbfCondAttr_setpshared(a, p) pthread_condattr_setpshared (a, p)
+
+typedef pthread_mutexattr_t sbfMutexAttr;
+#define sbfMutexAttr_init(a) pthread_mutexattr_init (a)
+#define sbfMutexAttr_setpshared(a, p) pthread_mutexattr_setpshared (a, p)
+
 typedef pthread_mutex_t sbfMutex;
 int sbfMutex_init (pthread_mutex_t* m, int recursive);
+#define sbfMutex_init_attr(m, a) pthread_mutex_init (m, a)
 #define sbfMutex_destroy(m) pthread_mutex_destroy (m)
 #define sbfMutex_lock(m) pthread_mutex_lock (m)
 #define sbfMutex_unlock(m) pthread_mutex_unlock (m)
