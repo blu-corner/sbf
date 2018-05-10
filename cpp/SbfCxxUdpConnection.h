@@ -64,6 +64,7 @@ public:
         return sbfUdpMulticast_read (
                               getHandle (),
                               SbfUdpMulticastConnection::sbfUdpConnectionRead,
+                              this,
                               limit)
     }
 
