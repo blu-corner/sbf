@@ -6,6 +6,7 @@ namespace neueda
 {
 
 class SbfTimerDelegate {
+public:
     virtual ~SbfTimerDelegate() { }
     virtual void onTicked () { }
 };
