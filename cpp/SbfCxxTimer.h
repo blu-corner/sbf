@@ -43,7 +43,7 @@ public:
     virtual void reschedule ()
     {
         if (getHandle () != NULL)
-            sbfTimer_destroy (getHandle ())
+            sbfTimer_destroy (getHandle ());
 
 
         mTimer = sbfTimer_create (mThread,
