@@ -39,6 +39,19 @@ public:
         return mTimer;
     }
 
+    virtual void reschedule ()
+    {
+        if (getHandle () != NULL)
+            sbfTimer_destroy (getHandle ())
+
+
+        mTimer = sbfTimer_create (mThread,
+                                  mQueue,
+                                  SbfTimer::sbfTimerTicked,
+                                  this,
+                                  mInterval);
+    }
+
 protected:
     sbfMwThread       mThread;
     sbfQueue          mQueue;
