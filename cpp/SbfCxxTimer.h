@@ -1,5 +1,7 @@
 #pragma once
 
+#include "sbfTimer.h"
+
 namespace neueda
 {
 
@@ -48,7 +50,7 @@ protected:
 private:
     static void sbfTimerTicked (sbfTimer timer, void* closure)
     {
-        SbfTimer* instance = static_cast<SbfTimer>(closure);
+        SbfTimer* instance = static_cast<SbfTimer*>(closure);
 
         if (instance->mDelegate)
         {
