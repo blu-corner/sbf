@@ -130,24 +130,24 @@ add_subdirectory(handlers)
 add_subdirectory(tools)
 add_subdirectory(cpp)
 
-install(EXPORT sbfcore DESTINATION lib/sbf/cmake)
-install(EXPORT sbfcommon DESTINATION lib/sbf/cmake)
-install(EXPORT sbfcommonhandler DESTINATION lib/sbf/cmake)
-install(EXPORT sbftcpmeshhandler DESTINATION lib/sbf/cmake)
-install(EXPORT sbfudphandler DESTINATION lib/sbf/cmake)
-install(EXPORT sbftransport DESTINATION lib/sbf/cmake)
-install(EXPORT sbfrequestreply DESTINATION lib/sbf/cmake)
+install(EXPORT sbfcore DESTINATION lib/sbf/cmake COMPONENT dev)
+install(EXPORT sbfcommon DESTINATION lib/sbf/cmake COMPONENT dev)
+install(EXPORT sbfcommonhandler DESTINATION lib/sbf/cmake COMPONENT dev)
+install(EXPORT sbftcpmeshhandler DESTINATION lib/sbf/cmake COMPONENT dev)
+install(EXPORT sbfudphandler DESTINATION lib/sbf/cmake COMPONENT dev)
+install(EXPORT sbftransport  DESTINATION lib/sbf/cmake COMPONENT dev)
+install(EXPORT sbfrequestreply DESTINATION lib/sbf/cmake COMPONENT dev)
 
 set(${PROJECT_NAME}_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include/sbf)
 set(${PROJECT_NAME}_LIBRARIES sbfcore sbfcommon sbfcommonhandler sbftcpmeshhandler sbfudphandler sbftransport sbfrequestreply)
 configure_file(
-  ${PROJECT_NAME}.cmake.in
-  ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.cmake
+  ${PROJECT_SOURCE_DIR}/${PROJECT_NAME}.cmake.in
+  ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config-install.cmake
   @ONLY
   )
 install(
-  FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.cmake
-  DESTINATION lib/cmake/sbf COMPONENT dev
+  FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config-install.cmake
+  DESTINATION lib/cmake/${PROJECT_NAME} COMPONENT dev
   RENAME ${PROJECT_NAME}Config.cmake
   PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ
   )
