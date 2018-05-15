@@ -42,7 +42,7 @@ public:
         return mListener;
     }
 
-    virtual bool connect ()
+    virtual bool listen ()
     {
         mListener = sbfTcpListener_create (mLog,
                                            mThread,
