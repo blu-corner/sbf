@@ -16,7 +16,7 @@ public:
                 u_int line,
                 SbfBufferDelegate* delegate)
     {
-        mBuffer = sbfBudffer_newZero(...)
+        mBuffer = sbfBuffer_newZero(...)
     }
 
     virtual ~SbfBuffer ()
