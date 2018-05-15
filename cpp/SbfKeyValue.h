@@ -4,26 +4,62 @@
 
 class SbfKeyValue {
 public:
-    SbfKeyValue (void);
+    SbfKeyValue (void)
+    {
+        mValue = sbfKeyValue_create (void);
+    }
 
-    virtual ~SbfKeyValue ();
+    virtual ~SbfKeyValue ()
+    {
+        if (getHandle () != NULL)
+            sbfKeyValue_destroy (getHandle ());
+    }
 
-    virtual const copy ();
+    virtual sbfKeyValue getHandle ()
+    {
+        return mValue;
+    }
 
-    virtual unsigned int size ();
+    virtual const copy ()
+    {
+        return sbfKeyValue_copy (getHandle ());
+    }
 
-    virtual const char* get (const char* key);
+    virtual unsigned int size ()
+    {
+        return sbfKeyValue_size (getHandle ());
+    }
 
-    virtual const char* getV (const char* fmt, ...) SBF_PRINTFLIKE(2, 3);
+    virtual const char* get (const char* key)
+    {
+        return sbfKeyValue_get (getHandle (), key);
+    }
 
-    virtual void put (const char* key, const char* value);
+    virtual const char* getV (const char* fmt, ...)
+    {
+        return sbfKeyValue_getV (getHandle (), __VA_ARGS__);
+    }
 
-    virtual void remove (const char* key);
+    virtual void put (const char* key, const char* value)
+    {
+        sbfKeyValue_put (getHandle(), key, value);
+    }
 
-    virtual const char* first (void** cookie);
+    virtual void remove (const char* key)
+    {
+        sbfKeyValue_remove (getHandle(), key);
+    }
 
-    virtual const char* next (void** cookie);
+    virtual const char* first (void** cookie)
+    {
+        return sbfKeyValue_first (getHandle(), cookie);
+    }
 
-private:
+    virtual const char* next (void** cookie)
+    {
+        return sbfKeyValue_next (getHandle(), cookie);
+    }
+
+protected:
     sbfKeyValue mValue;
 };
