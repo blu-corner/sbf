@@ -14,34 +14,59 @@ public:
     SbfBuffer  (size_t size,
                 const char* function,
                 u_int line,
-                SbfBufferDelegate* delegate);
+                SbfBufferDelegate* delegate)
+    {
+        mBuffer = sbfBudffer_newZero(...)
+    }
 
-    virtual ~SbfBuffer ();
+    virtual ~SbfBuffer ()
+    {
+        if (getHandle() != NULL)
+            sbfBuffer_destroy (getHandle ());
+    }
 
-    virtual SbfBuffer getNew (size_t size);
+    virtual sbfBuffer getHandle ()
+    {
+        return mBuffer;
+    }
 
-    virtual SbfBuffer newZero (size_t size);
+    virtual void addRef ()
+    {
+        sbfBuffer_addRef (getHandle ());
+    }
 
-    virtual SbfBuffer copy (void* data, size_t size);
+    virtual void lock ()
+    {
+        sbfBuffer_lock (getHandle ());
+    }
 
-    virtual SbfBuffer wrap (void* data, size_t size);
+    virtual void destroy ()
+    {
+        sbfBuffer_destroy (getHandle());
+    }
 
-    virtual void addRef (sbfBuffer buffer);
+    virtual void* getData ()
+    {
+        sbfBuffer_getData (getHandle ());
+    }
 
-    virtual void lock (sbfBuffer buffer);
+    virtual void setData (void* data)
+    {
+        sbfBuffer_getData (getHandle (), data);
+    }
 
-    virtual void destroy (sbfBuffer buffer);
+    virtual size_t getSize ()
+    {
+        sbfBuffer_getSize (getHandle ());
+    }
 
-    virtual void* getData (sbfBuffer buffer);
-
-    virtual void setData (sbfBuffer buffer, void* data);
-
-    virtual size_t getSize (sbfBuffer buffer);
-
-    virtual void setSize (sbfBuffer buffer, size_t size);
+    virtual void setSize (size_t size)
+    {
+        sbfBuffer_setSize (getHandle (), size);
+    }
 
 private:
-    SbfBuffer mBuffer;
+    sbfBuffer mBuffer;
     SbfBufferDelegate* mDelegate;
 
     static struct sbfBufferImpl* sbfBuffer;
