@@ -1,6 +1,10 @@
 #include "sbfTcpConnection.h"
 #include "sbfTcpConnectionPrivate.h"
 
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+
 static void
 sbfTcpConnectionBufferFreeCb (const void *data, size_t datalen, void* closure)
 {
@@ -181,12 +185,25 @@ sbfTcpConnection
 sbfTcpConnection_wrap (sbfLog log,
                        int socket,
                        int isUnix,
+                       int disableNagles,
                        sbfTcpConnectionAddress* address)
 {
     sbfTcpConnection tc;
 
     evutil_make_socket_closeonexec (socket);
     evutil_make_socket_nonblocking (socket);
+
+    if (disableNagles)
+    {
+        int flag = 1;
+        int result = setsockopt (socket,
+                                 IPPROTO_TCP,
+                                 TCP_NODELAY,
+                                 (char *)&flag,
+                                 sizeof (int));
+        if (result < 0)
+            sbfLog_err (log, "failed to disabled nagles on tcp-socket");
+    }
 
     tc = xcalloc (1, sizeof *tc);
     tc->mLog = log;
@@ -203,6 +220,7 @@ sbfTcpConnection_create (sbfLog log,
                          sbfQueue queue,
                          sbfTcpConnectionAddress* address,
                          int isUnix,
+                         int disableNagles,
                          sbfTcpConnectionReadyCb readyCb,
                          sbfTcpConnectionErrorCb errorCb,
                          sbfTcpConnectionReadCb readCb,
@@ -216,7 +234,10 @@ sbfTcpConnection_create (sbfLog log,
 #if WIN32
     // unix sockets are unsupported on windows
     if (isUnix)
+    {
+        sbfLog_err (log, "unix-sockets not supported on windows");
         return NULL;
+    }
 #endif
     
     s = socket (isUnix == 0 ? AF_INET : AF_UNIX,
@@ -224,7 +245,7 @@ sbfTcpConnection_create (sbfLog log,
                 isUnix == 0 ? IPPROTO_TCP : 0);
     if (s == -1)
         return NULL;
-    tc = sbfTcpConnection_wrap (log, s, isUnix, address);
+    tc = sbfTcpConnection_wrap (log, s, isUnix, disableNagles, address);
     if (tc == NULL)
         return NULL;
 

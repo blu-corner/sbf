@@ -37,6 +37,7 @@ struct sbfTcpConnectionImpl
 sbfTcpConnection sbfTcpConnection_wrap (sbfLog log,
                                         int socket,
                                         int isUnix,
+                                        int disableNagles,
                                         sbfTcpConnectionAddress* address);
 
 SBF_END_DECLS

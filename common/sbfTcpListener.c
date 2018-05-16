@@ -51,7 +51,7 @@ sbfTcpListenerEventCb (struct evconnlistener* listener,
         memcpy(&(sbfAddress.sin), sin, sizeof(struct sockaddr_in));
     }
 
-    tc = sbfTcpConnection_wrap (tl->mLog, s, sbfTcpListener_isUnix(tl), &sbfAddress);
+    tc = sbfTcpConnection_wrap (tl->mLog, s, sbfTcpListener_isUnix(tl), 0, &sbfAddress);
     tc->mListener = tl;
 
     /*

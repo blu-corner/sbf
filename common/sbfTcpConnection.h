@@ -49,6 +49,7 @@ typedef size_t (*sbfTcpConnectionReadCb) (sbfTcpConnection tc,
    \param queue a queue to dispatch TCP messages.
    \param address Information about the socket connection.
    \param isUnix == 0 means is inet socket else is unix socket only support on unix platforms
+   \param disableNagles > 0 turns on TCP_NODELAY
    \param readyCb a ready callback to be notified when the connection
    is ready.
    \param errorCb an error callback to notify when an error happened.
@@ -61,6 +62,7 @@ sbfTcpConnection sbfTcpConnection_create (sbfLog log,
                                           struct sbfQueueImpl* queue,
                                           sbfTcpConnectionAddress* address,
                                           int isUnix,
+                                          int disableNagles,
                                           sbfTcpConnectionReadyCb readyCb,
                                           sbfTcpConnectionErrorCb errorCb,
                                           sbfTcpConnectionReadCb readCb,
