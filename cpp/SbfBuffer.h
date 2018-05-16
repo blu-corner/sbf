@@ -11,12 +11,9 @@ public:
 
 class SbfBuffer {
 public:
-    SbfBuffer  (size_t size,
-                const char* function,
-                u_int line,
-                SbfBufferDelegate* delegate)
+    SbfBuffer  (sbfPool pool, size_t size)
     {
-        mBuffer = sbfBuffer_newZero(...)
+        mBuffer = sbfBuffer_newZero(pool, size);
     }
 
     virtual ~SbfBuffer ()
