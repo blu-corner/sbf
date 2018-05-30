@@ -128,7 +128,6 @@ add_subdirectory(transport)
 add_subdirectory(requestreply)
 add_subdirectory(handlers)
 add_subdirectory(tools)
-add_subdirectory(cpp)
 
 install(EXPORT sbfcore DESTINATION lib/cmake/sbf COMPONENT dev)
 install(EXPORT sbfcommon DESTINATION lib/cmake/sbf COMPONENT dev)
