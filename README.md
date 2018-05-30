@@ -1,38 +1,42 @@
-# SBF - Super Bloody Fast
-SBF is a message transport system that allows inter app communication in two different flavours:  
-* Publisher - Subscriber
-* Requester - Replier
+# SBF (Super Blazing Fast) a messaging orientated middleware in C.
 
-The `publisher-subscriber` consists of publishers defining topics where messages are placed. Then one or more subscribers might register to a concrete topic to read the messages that were delivered (one to many communication).  
-On the other hand, the `requester-replier` communication is about defining a channel where messages are sent from one requester to one publisher (one to one communication).
+SBF gives publish/subscribe and request/reply messaging semantics in addition to core networking libraries and common utils (queues, timers and event handling) to build applications. The library uses async callback idiom to deliver messages/events/timers etc. The core event engine is provided by the open source library libevent.
 
-## Compilation Unix
+For messaging a choice of TCP or UDP multicast can be used depending on the use case of the application. UDP multicast is better if there is a one to many publish/subscribe topology.
 
-Windows can be built with make
+For publish/subscribe a topic is created and one or many publishers can publish messages on the topic and one or many subscribers can listen for messages on that topic.
 
-```
+For request/reply, a publisher sends a single request on a topic and one or more subscribers can send a reply to that specific request for the specific publisher.
+
+SBF is brokerless and uses a deterministic addressing scheme for topic resolution.
+
+## Getting Started
+
+To compile the installation for Linux:
+
+```bash
+$ git submodule update --init --recursive
 $ mkdir build
 $ cd build
 $ cmake ../
-$ make
 $ make install
-```
-
-## Compilation Windows
-
-Windows can be built with cmake - open command prompt with developer tools can be found inside visual studio folder in start menu.
 
 ```
+To compile the installation for Windows, same as above but change cmake command for nmake
+
+```bash
 > mkdir build
 > cd build
 > cmake -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE -G"NMake Makefiles" ../
-> nmake
+> nmak
 ```
 
-> TBD
+### Dependencies
 
-## API
-Here you are the list of modules the API offers to build your transport
+All dependencies are managed through git submodules.
+
+### API modules
+
 * Core
   * [Event](@ref sbfEvent.h)
   * Timers
@@ -44,33 +48,65 @@ Here you are the list of modules the API offers to build your transport
   * [Common handler](@ref sbfCommonHandler.h)
   * [TCP mesh handler](@ref sbfTcpMeshHandler.h)
   * [UDP handler](@ref sbfUdpHandler.h)
-* Request / reply
+* Transport, pub/sub and Request/reply
+  * [Transport](@ref sbfTport.h)
+  * [Publisher](@ref sbfPub.h)
+  * [Subscriber](@ref sbfSub.h)
   * [Request publisher](@ref sbfRequestPub.h)
   * [Request subscriber](@ref sbfRequestSub.h)
   * [Request reply](@ref sbfRequestReply.h)
 
-## Publisher - subscriber example
-Let's see how to create a publisher-subscriber communication.
+### Example Usage
 
-### Publisher code
-Here are the first lines you will need to create your publisher:
+Examples for publish/subscribe, request/reply can be found in ./tools/ directory this is the best place to start
 
-#### Create the middleware  
+When creating application, typically you need to create the following base compoonents
+
+* Log
+* KeyValue for properties
+* MW
+* Transport
+* Queue 
+* Thead to dispatch Queue
+
+Once complete, publishers, subscriber, timers and events can be created, the callbacks will be delivered via the dispatching queue
+
+The following shows creating each component
+
+#### Create Log
+
 ```c
-#include "sbfCommon.h" // Common stuff such as queues, threading, ...
-#include "sbfMw.h" // The middleware API
-
-...
-
-// Initialise the middleware by defining some properties like the handler (e.g. tcp, udp) and the  connection interface (e.g. eth0).
-sbfKeyValue properties = sbfKeyValue_create ();
-sbfKeyValue_put (properties, "transport.default.type", "udp");
-sbfKeyValue_put (properties, "transport.default.udp.interface", "eth0");
-sbfMw mw = sbfMw_create (log, properties);
+// Initialise the logging system
+log = sbfLog_create (NULL, "%s", "");
+sbfLog_setLevel (log, SBF_LOG_OFF);
 ```
 
-#### Create a queue, the connection port and a thread to dispatch events
+#### Create configuration 
+
 ```c
+// Initialise the middleware by defining some properties like the handler
+// (e.g. tcp, udp) and the  connection interface (e.g. eth0).
+properties = sbfKeyValue_create ();
+sbfKeyValue_put (properties, "transport.default.type", "udp");
+sbfKeyValue_put (properties, "transport.default.udp.interface", "eth0");
+```
+
+#### Create MW
+
+```c
+mw = sbfMw_create (log, properties);
+```
+
+#### Create Transport
+
+```c
+tport = sbfTport_create (mw, "default", SBF_MW_ALL_THREADS);
+```
+
+#### Create Queue and thread to dispatch
+
+```c
+// Thread entry point for queue dispatch
 static void*
 dispatchCb (void* closure)
 {
@@ -78,111 +114,43 @@ dispatchCb (void* closure)
     return NULL;
 }
 
-...
-
-sbfThread t;
-sbfQueue queue = sbfQueue_create (mw, "default");
+// Create a queue, the connection port and a thread to dispatch events
+queue = sbfQueue_create (mw, "default");
 sbfThread_create (&t, dispatchCb, queue);
-sbfTport tport = sbfTport_create (mw, "default", SBF_MW_ALL_THREADS);
 ```
 
-#### Create the publisher
+#### Create Subscriber for topic
+
 ```c
-static void
-timerCb (sbfTimer timer, void* closure)
-{
-    printf ("%u" SBF_EOL, gPublished);
-    fflush (stdout);
-
-    gPublished = 0;
-}
-
-...
-
-sbfTimer_create (sbfMw_getDefaultThread (mw),
-                 queue,
-                 timerCb,
-                 NULL,
-                 1);
-sbfPub pub = sbfPub_create (tport, queue, "topic", NULL, NULL);
-```
-
-You can find the whole example of the publisher  [here](https://gitlab.com/neueda/sbf/tree/master/tools/publisher)
-
-### Subscriber code
-Now let's see how the subscriber works.
-
-#### Create the middleware  
-```c
-#include "sbfCommon.h" // Common stuff such as queues, threading, ...
-#include "sbfMw.h" // The middleware API
-
-...
-
-// Initialise the middleware by defining some properties like the handler (e.g. tcp, udp) and the  connection interface (e.g. eth0).
-sbfKeyValue properties = sbfKeyValue_create ();
-sbfKeyValue_put (properties, "transport.default.type", "udp");
-sbfKeyValue_put (properties, "transport.default.udp.interface", "eth0");
-sbfKeyValue_put (properties, "transport.default.tcpmesh.listen", "0");
-sbfKeyValue_put (properties, "transport.default.tcpmesh.connect0", "127.0.0.1");
-sbfMw mw = sbfMw_create (log, properties);
-```
-
-#### Create a queue, the connection port and a thread to dispatch events
-```c
-static void*
-dispatchCb (void* closure)
-{
-    sbfQueue_dispatch (closure);
-    return NULL;
-}
-
-...
-
-sbfThread t;
-sbfQueue queue = sbfQueue_create (mw, "default");
-sbfThread_create (&t, dispatchCb, queue);
-sbfTport tport = sbfTport_create (mw, "default", SBF_MW_ALL_THREADS);
-```
-
-#### Create the subscriber
-```c
-static void
-timerCb (sbfTimer timer, void* closure)
-{
-    printf ("%u low=%llu average=%llu high=%llu" SBF_EOL,
-            gMessages,
-            gTimeLow == UINT64_MAX ? 0 : (unsigned long long)gTimeLow,
-            gMessages == 0 ? 0 : (unsigned long long)gTimeTotal / gMessages,
-            (unsigned long long)gTimeHigh);
-}
-
+// message callback function
 static void
 messageCb (sbfSub sub, sbfBuffer buffer, void* closure)
 {
     uint64_t* payload = sbfBuffer_getData (buffer);
-}
-...
+    uint64_t  now;
+    uint64_t  this = *payload;
+    double    interval = 0;
 
-sbfTimer_create (sbfMw_getDefaultThread (mw),
-                 queue,
-                 timerCb,
-                 NULL,
-                 1);
-sbfPub pub = sbfPub_create (tport, queue, "topic", NULL, NULL);
+    if(CAP_HI_RES_COUNTER == sbfMw_checkSupported (CAP_HI_RES_COUNTER))
+    {
+        now = sbfPerfCounter_get ();
+        if (now > this)
+            interval = sbfPerfCounter_microseconds (now - this);
+        gTimeTotal += (uint64_t)interval;
+        if (interval < gTimeLow)
+            gTimeLow = (uint64_t)interval;
+        if (interval > gTimeHigh)
+            gTimeHigh = (uint64_t)interval;
+    }
+
+    gMessages++;
+}
+
+sbfSub_create (tport, queue, "TEST_TOPIC", NULL, messageCb, NULL);
 ```
 
-You can find the whole example of the subscriber   [here](https://gitlab.com/neueda/sbf/tree/master/tools/subscriber).
-
-## Requester replier example
-> TBD
-
-# Download
-Download the source code from GitLab at https://gitlab.com/neueda/sbf.
-SBT run under Linux OS (Debian, Ubuntu, Centos distros are highly recommended).
-
 ## Vagrant
-If you are running on OS X or Windows don't worry, we provide a vagrant file to create a VirtualBox ubuntu image including all the necessary stuff to run.
+If you are running on OS X or Windows we provide a vagrant file to create a VirtualBox ubuntu image including all the necessary stuff to run.
 You will need to download [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/).
 1. Unzip ubuntu.zip folder
 `user@host:~$ unzip ubuntu.zip`
@@ -196,30 +164,3 @@ You will need to download [VirtualBox](https://www.virtualbox.org/) and [Vagrant
 `username:vagrant`
 `password:vagrant`
 
-# Running the examples
-You will find the SBF together with some examples at GitLab (https://gitlab.com/neueda.sbf/). Thus, clone the repository:
-`user@host:~$ git clone https://gitlab.com/neueda.sbf/`
-
-## Build the SBF
-Build the SBF by running the following commands:
-```
-cd sbf
-mkdir build && cd build
-cmake ..
-make build && make install
-```
-You will find the binaries at `cd build/install/bin`.
-```
-sbf-replier
-sbf-requester
-sbf-publisher
-sbf-subscriber
-```
-The requester sends messages and the replier reads the message and replies.
-Something similar for the publisher and subscriber.
-
-# Contribute
-> TBD
-
-# License
-> TBD

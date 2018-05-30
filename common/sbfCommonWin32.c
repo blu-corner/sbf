@@ -85,7 +85,7 @@ error:
 }
 
 char*
-strsep(char** stringp, const char* delim)
+strsep (char** stringp, const char* delim)
 {
     char* start = *stringp;
     char* p;
@@ -106,7 +106,7 @@ strsep(char** stringp, const char* delim)
 }
 
 ssize_t
-pwrite(int fd, const void *buf, size_t count, off_t offset)
+pwrite (int fd, const void *buf, size_t count, off_t offset)
 {
     // TODO
     // get offset
