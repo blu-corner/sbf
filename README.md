@@ -40,10 +40,10 @@ All dependencies are managed through git submodules.
 * Core
   * [Event](@ref sbfEvent.h)
   * Timers
-    * [Timer](@ref sbfTimer.h)
-    * [Hi resolution timer](@ref sbfHiResTimer.h)
-  * [Queue](@ref sbfQueue.h)
-  * [Middleware](@ref sbfMw.h)
+    * [Timer](@ref core/sbfTimer.h)
+    * [Hi resolution timer](@ref core/sbfHiResTimer.h)
+  * [Queue](@ref core/sbfQueue.h)
+  * [Middleware](@ref core/sbfMw.h)
 * Handlers
   * [Common handler](@ref sbfCommonHandler.h)
   * [TCP mesh handler](@ref sbfTcpMeshHandler.h)
