@@ -110,7 +110,7 @@ struct event_base* sbfMw_getThreadEventBase (sbfMwThread thread);
  \param cap_mask the mask indicating the capabilities to be check.
  \return capabilities supported.
  */
-uint32_t sbfMw_checkSupported(uint32_t cap_mask);
+uint32_t sbfMw_checkSupported (uint32_t capMask);
 
 SBF_END_DECLS
 

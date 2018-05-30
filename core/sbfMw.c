@@ -43,7 +43,7 @@ sbfMw_create (sbfLog log, sbfKeyValue properties)
 #endif
 
     // Check all the supported capabilities
-    sbfMw_checkSupported(CAP_ALL_MASK);
+    sbfMw_checkSupported (CAP_ALL_MASK);
     
     value = sbfKeyValue_get (properties, "threads");
     if (value == NULL)
@@ -70,7 +70,7 @@ sbfMw_create (sbfLog log, sbfKeyValue properties)
                   threads);
 
 #ifdef WIN32
-    if (WSAStartup(MAKEWORD (2, 2), &wsd) != 0)
+    if (WSAStartup (MAKEWORD (2, 2), &wsd) != 0)
         SBF_FATAL ("WSAStartup failed");
     if (evthread_use_windows_threads () != 0)
         SBF_FATAL ("event_use_windows_threads failed");
@@ -194,23 +194,21 @@ sbfMw_getProperties (sbfMw mw)
 }
 
 uint32_t
-sbfMw_checkSupported(uint32_t cap_mask)
+sbfMw_checkSupported (uint32_t capMask)
 {
     static uint64_t supported = 0LL;
-    static char processed = 0;
+    static uint8_t  processed = 0;
 
     // Performs the check for the first time and cache it into static variable
     if (processed == 0)
     {
         // Hi resolution counter capability
-        supported = (sbfPerfCounter_frequency() > 0)? CAP_HI_RES_COUNTER: supported;
-
-        // TODO: Extends other capabilities here...
-
+        supported = (sbfPerfCounter_frequency () > 0) ? CAP_HI_RES_COUNTER : 
+                                                        supported;
         processed = 1;
     }
     
-    return cap_mask & (uint32_t) supported;
+    return capMask & (uint32_t) supported;
 }
 
 
