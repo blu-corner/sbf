@@ -1,7 +1,7 @@
 /*!
    \file sbfPublisher.c
    \brief This file defines a publisher sending messages for a given rate.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
 */
 
 // External dependencies

@@ -1,7 +1,7 @@
 /*!
    \file sbfHugePages.h
    \brief This file declares the structures and functions to manage huge pages.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
  */
 
 #ifndef _SBF_HUGE_PAGES_H_

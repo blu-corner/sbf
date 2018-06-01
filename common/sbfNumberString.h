@@ -1,7 +1,7 @@
 /*!
    \file sbfNumberString.h
    \brief Helper file to convert from string to number.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
  */
 
 #ifndef _SBF_NUMBER_STRING_H_

@@ -2,7 +2,7 @@
    \file sbfTcpConnection.h
    \brief This file declares the structures and functions to handle
    TCP connections.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
  */
 
 #ifndef _SBF_TCP_CONNECTION_H_

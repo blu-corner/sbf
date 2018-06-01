@@ -1,7 +1,7 @@
 /*!
    \file sbfDeque.h
    \brief This file declares the structures and functions to handle a queue.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
  */
 
 #ifndef _SBF_DEQUE_H_

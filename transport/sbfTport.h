@@ -2,7 +2,7 @@
    \file sbfTport.h
    \brief This file declares the structures and functions to handler port
    connections.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
 */
 #ifndef _SBF_TPORT_H_
 #define _SBF_TPORT_H_

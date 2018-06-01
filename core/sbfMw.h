@@ -1,7 +1,7 @@
 /*!
    \file sbfMw.h
    \brief This file represents the middleware API.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
 */
 #ifndef _SBF_MW_H_
 #define _SBF_MW_H_

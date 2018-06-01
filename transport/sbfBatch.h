@@ -1,7 +1,7 @@
 /*!
    \file sbfBatch.h
    \brief This file declares the structures and funcions to handle batches.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
 */
 #ifndef _SBF_BATCH_H_
 #define _SBF_BATCH_H_

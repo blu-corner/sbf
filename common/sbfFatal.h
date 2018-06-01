@@ -1,7 +1,7 @@
 /*!
    \file sbfFatal.h
    \brief This file declares the structures and functions to handle critical errors.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
  */
 #ifndef _SBF_FATAL_H_
 #define _SBF_FATAL_H_

@@ -1,7 +1,7 @@
 /*!
    \file sbfTimer.h
    \brief This file declares the interface for handling queues.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
 */
 
 #ifndef _SBF_TIMER_H_

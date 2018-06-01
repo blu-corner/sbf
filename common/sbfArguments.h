@@ -2,7 +2,7 @@
    \file sbfArguments.h
    \brief This file defines the helper structures and functions to handle
    typical program arguments with options.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
  */
 
 #ifndef _SBF_ARGUMENTS_H_

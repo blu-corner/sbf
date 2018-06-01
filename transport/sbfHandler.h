@@ -2,7 +2,7 @@
    \file sbfHandler.h
    \brief This file declares structures and functions for
    different type of handlers.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
 */
 #ifndef _SBF_HANDLER_H_
 #define _SBF_HANDLER_H_

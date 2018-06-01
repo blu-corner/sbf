@@ -1,7 +1,7 @@
 /*!
    \file sbfTopic.h
    \brief Declaration of functions and structures to handle topics.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
 */
 #ifndef _SBF_TOPIC_H_
 #define _SBF_TOPIC_H_

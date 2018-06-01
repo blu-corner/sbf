@@ -2,7 +2,7 @@
    \file sbfEvent.h
    \brief This file declares the event structures and functions for event
    handling.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
 */
 #ifndef _SBF_EVENT_H_
 #define _SBF_EVENT_H_

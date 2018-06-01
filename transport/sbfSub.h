@@ -2,7 +2,7 @@
    \file sbfSub.h
    \brief This file declares the structures and functions to handler
    a subscriber.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
 */
 #ifndef _SBF_SUB_H_
 #define _SBF_SUB_H_

@@ -2,7 +2,7 @@
    \file sbfKeyValue.h
    \brief This file declares the structures and functions to manage
    an in memory key value table.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
  */
 
 #ifndef _SBF_KEY_VALUE_H_

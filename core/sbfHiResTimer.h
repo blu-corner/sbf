@@ -2,7 +2,7 @@
    \file sbfHiResTimer.h
    \brief This file declares the structures and functions to provide high
    resolution timers.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
 */
 #ifndef _SBF_HI_RES_TIMER_H_
 #define _SBF_HI_RES_TIMER_H_

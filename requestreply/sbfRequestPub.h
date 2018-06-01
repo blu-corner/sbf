@@ -1,7 +1,7 @@
 /*!
    \file sbfRequestPub.h
    \brief Helper structures and functions to create a publisher.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
 */
 #ifndef _SBF_REQUEST_PUB_H_
 #define _SBF_REQUEST_PUB_H_

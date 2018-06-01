@@ -2,7 +2,7 @@
    \file sbfCommonHandler.h
    \brief This file declares the structures and functions for a common
    message handler.
-   \copyright © Copyright 2016 Neueda all rights reserved.
+   \Copyright 2014-2018 Neueda Ltd.
 */
 #ifndef _SBF_COMMON_HANDLER_H_
 #define _SBF_COMMON_HANDLER_H_
