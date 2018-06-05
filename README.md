@@ -149,18 +149,3 @@ messageCb (sbfSub sub, sbfBuffer buffer, void* closure)
 sbfSub_create (tport, queue, "TEST_TOPIC", NULL, messageCb, NULL);
 ```
 
-## Vagrant
-If you are running on OS X or Windows we provide a vagrant file to create a VirtualBox ubuntu image including all the necessary stuff to run.
-You will need to download [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/).
-1. Unzip ubuntu.zip folder
-`user@host:~$ unzip ubuntu.zip`
-2. Change your directory to ubuntu.
-`user@host:~$ cd ubuntu`
-3. Edit the `synced_folders` file and replace the `hostpath` pointing to your shared folder (this will mount the directory under /mnt/host/).
-4. Run vagrant
-`user@host:~/ubuntu$ vagrant up`
-5. Now you are ready to run the Ubuntu image on VirtualBox
-6. You will be asked to prompt your username and password
-`username:vagrant`
-`password:vagrant`
-
