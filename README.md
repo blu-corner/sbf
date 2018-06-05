@@ -22,14 +22,6 @@ $ cmake ../
 $ make install
 
 ```
-To compile the installation for Windows, same as above but change cmake command for nmake
-
-```bash
-> mkdir build
-> cd build
-> cmake -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE -G"NMake Makefiles" ../
-> nmak
-```
 
 ### Dependencies
 
@@ -58,9 +50,9 @@ All dependencies are managed through git submodules.
 
 ### Example Usage
 
-Examples for publish/subscribe, request/reply can be found in ./tools/ directory this is the best place to start
+Examples for publish/subscribe, request/reply can be found in [examples](./examples) directory this is the best place to start.
 
-When creating application, typically you need to create the following base compoonents
+When creating an application, typically you need to create the following base compoonents
 
 * Log
 * KeyValue for properties
@@ -69,7 +61,7 @@ When creating application, typically you need to create the following base compo
 * Queue 
 * Thead to dispatch Queue
 
-Once complete, publishers, subscriber, timers and events can be created, the callbacks will be delivered via the dispatching queue
+Once complete, publishers, subscribers, timers and events can be created, the callbacks will be delivered via the dispatching queue
 
 The following shows creating each component
 
