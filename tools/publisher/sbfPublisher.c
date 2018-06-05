@@ -195,6 +195,7 @@ main (int argc, char** argv)
                 ull = sizeof t;
             if (ull < SIZE_MAX)
                 size = (size_t)ull;
+            break;
         case 't':
             topic = optarg;
             break;
