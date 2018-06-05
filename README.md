@@ -38,23 +38,23 @@ All dependencies are managed through git submodules.
 ### API modules
 
 * Core
-  * [Event](./core/sbfEvent.h)
+  * [Event](./src/core/sbfEvent.h)
   * Timers
-    * [Timer](./core/sbfTimer.h)
-    * [Hi resolution timer](./core/sbfHiResTimer.h)
-  * [Queue](./core/sbfQueue.h)
-  * [Middleware](./core/sbfMw.h)
+    * [Timer](./src/core/sbfTimer.h)
+    * [Hi resolution timer](./src/core/sbfHiResTimer.h)
+  * [Queue](./src/core/sbfQueue.h)
+  * [Middleware](./src/core/sbfMw.h)
 * Handlers
-  * [Common handler](./handlers/common/sbfCommonHandler.h)
-  * [TCP mesh handler](./handlers/tcpmesh/sbfTcpMeshHandler.h)
-  * [UDP handler](./handlers/udp/sbfUdpHandler.h)
+  * [Common handler](./src/handlers/common/sbfCommonHandler.h)
+  * [TCP mesh handler](./src/handlers/tcpmesh/sbfTcpMeshHandler.h)
+  * [UDP handler](./src/handlers/udp/sbfUdpHandler.h)
 * Transport, pub/sub and Request/reply
-  * [Transport](./transport/sbfTport.h)
-  * [Publisher](./transport/sbfPub.h)
-  * [Subscriber](./transport/sbfSub.h)
-  * [Request publisher](./requestreply/sbfRequestPub.h)
-  * [Request subscriber](./requestreply/sbfRequestSub.h)
-  * [Request reply](./requestreply/sbfRequestReply.h)
+  * [Transport](./src/transport/sbfTport.h)
+  * [Publisher](./src/transport/sbfPub.h)
+  * [Subscriber](./src/transport/sbfSub.h)
+  * [Request publisher](./src/requestreply/sbfRequestPub.h)
+  * [Request subscriber](./src/requestreply/sbfRequestSub.h)
+  * [Request reply](./src/requestreply/sbfRequestReply.h)
 
 ### Example Usage
 
