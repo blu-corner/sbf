@@ -115,19 +115,19 @@ if (COVERAGE)
 endif(COVERAGE)
 
 include_directories(
-  ${PROJECT_SOURCE_DIR}/core
-  ${PROJECT_SOURCE_DIR}/common
-  ${PROJECT_SOURCE_DIR}/requestreply
-  ${PROJECT_SOURCE_DIR}/transport
-  ${PROJECT_SOURCE_DIR}/handlers/common
+  ${PROJECT_SOURCE_DIR}/src/core
+  ${PROJECT_SOURCE_DIR}/src/common
+  ${PROJECT_SOURCE_DIR}/src/requestreply
+  ${PROJECT_SOURCE_DIR}/src/transport
+  ${PROJECT_SOURCE_DIR}/src/handlers/common
   )
 
-add_subdirectory(common)
-add_subdirectory(core)
-add_subdirectory(transport)
-add_subdirectory(requestreply)
-add_subdirectory(handlers)
-add_subdirectory(tools)
+add_subdirectory(src/common)
+add_subdirectory(src/core)
+add_subdirectory(src/transport)
+add_subdirectory(src/requestreply)
+add_subdirectory(src/handlers)
+add_subdirectory(examples)
 
 install(EXPORT sbfcore DESTINATION lib/cmake/sbf COMPONENT dev)
 install(EXPORT sbfcommon DESTINATION lib/cmake/sbf COMPONENT dev)
