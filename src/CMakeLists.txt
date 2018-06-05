@@ -1,0 +1,5 @@
+add_subdirectory(common)
+add_subdirectory(core)
+add_subdirectory(transport)
+add_subdirectory(requestreply)
+add_subdirectory(handlers)
