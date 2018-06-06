@@ -1,0 +1,150 @@
+cmake_minimum_required(VERSION 2.8.0)
+project(sbf C)
+set(SUBMODULE_FLAGS -DTESTS=off)
+
+if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+  set (CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install" CACHE PATH "default install path" FORCE )
+endif()
+
+if(WIN32)
+  set(CMAKE_SHARED_LINKER_FLAGS "/FORCE:UNRESOLVED")
+  link_directories(${CMAKE_SOURCE_DIR}/thirdparty/pcre/win32/lib)
+  include_directories(${CMAKE_SOURCE_DIR}/thirdparty/getopt)
+  include_directories(${CMAKE_SOURCE_DIR}/thirdparty/pcre/win32/include)
+endif()
+
+if(APPLE)
+  set(CMAKE_XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY "libc++")
+  set(CMAKE_XCODE_ATTRIBUTE_GCC_VERSION "com.apple.compilers.llvm.clang.1_0")
+  set(CMAKE_SHARED_LINKER_FLAGS "-Wl,-undefined,dynamic_lookup")
+  set(CMAKE_MACOSX_RPATH 1)
+endif()
+
+option(DEBUG "Enable debug build" OFF)
+option(COVERAGE "Enable gcov coverage" OFF)
+
+# allow external projects
+include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
+
+# deps
+find_package(Threads)
+find_library(EVENT_LIB
+  NAMES event
+  HINTS "${CMAKE_INSTALL_PREFIX}/lib")
+find_library(EVENT_PTHREAD_LIB
+  NAMES event_pthreads
+  HINTS "${CMAKE_INSTALL_PREFIX}/lib")
+find_path(EVENT_INCLUDE_DIR event2/event.h
+  PATHS "${CMAKE_INSTALL_PREFIX}/include")
+if (EVENT_LIB AND EVENT_PTHREAD_LIB)
+  message(STATUS "event-found: " ${EVENT_LIB})
+  message(STATUS "event-pthread-found: " ${EVENT_PTHREAD_LIB})
+  message(STATUS "event-headers-found: " ${EVENT_INCLUDE_DIR})
+  include_directories(${EVENT_INCLUDE_DIR})
+elseif (NOT event_FOUND)
+  set(LIBEVENT_CMAKE ${PROJECT_SOURCE_DIR}/ext/libevent CACHE PATH "Location of libevent-cmake" FORCE)
+  message(STATUS "libevent-location: " ${LIBEVENT_CMAKE})
+  ExternalProject_Add(
+    libevent
+    SOURCE_DIR ${LIBEVENT_CMAKE}
+    CMAKE_ARGS -DEVENT__DISABLE_TESTS=ON -DEVENT__DISABLE_REGRESS=ON -DEVENT__DISABLE_OPENSSL=ON -DEVENT__DISABLE_SAMPLES=ON -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
+    )
+endif()
+
+# add include and lib dir
+link_directories(${CMAKE_INSTALL_PREFIX}/lib)
+include_directories(${CMAKE_INSTALL_PREFIX}/include)
+
+# set version info
+set(SBF_MAJOR_VERSION 1)
+set(SBF_MINOR_VERSION 0)
+set(SBF_PATCH_VERSION 0)
+set(SBF_VERSION ${SBF_MAJOR_VERSION}.${SBF_MINOR_VERSION}.${SBF_PATCH_VERSION})
+
+if (UNIX)
+  macro (add_library _name)
+    _add_library(${ARGV})
+    if (TARGET ${_name})
+      SET_TARGET_PROPERTIES(${_name}
+        PROPERTIES
+            VERSION ${SBF_VERSION}
+            # SOVERSION 0.0.0
+        )
+    endif()
+  endmacro()
+endif (UNIX)
+        
+
+set(CMAKE_C_STANDARD 99)
+# compile options
+if(UNIX)
+  add_compile_options(
+  -Wall
+  -Wextra
+  -Wbad-function-cast
+  -Wcast-align
+  -Wfloat-equal
+  -Wformat=2
+  -Wno-format-y2k
+  -Wno-missing-field-initializers
+  -Wno-unused-parameter
+  -Wpointer-arith
+  -Wsign-compare
+  -Wwrite-strings
+  )
+endif()
+
+if (DEBUG)
+  message(STATUS "sbf DEBUG: ON")
+  if(UNIX)
+    add_compile_options(-g3)
+  endif()
+  set(SUBMODULE_FLAGS ${SUBMODULE_FLAGS} -DDEBUG=on)
+else ()
+  message(STATUS "sbf DEBUG: OFF")
+  if(UNIX)
+    add_compile_options(-g -O2)
+  endif()
+endif (DEBUG)
+if (COVERAGE)
+    set(COVERAGE_COMPILE_FLAGS "-g -O0 -coverage -fprofile-arcs -ftest-coverage")
+    set(COVERAGE_LINK_FLAGS    "-coverage -lgcov")
+    set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${COVERAGE_COMPILE_FLAGS}" )
+    set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${COVERAGE_LINK_FLAGS}" )
+endif(COVERAGE)
+
+include_directories(
+  ${PROJECT_SOURCE_DIR}/src/core
+  ${PROJECT_SOURCE_DIR}/src/common
+  ${PROJECT_SOURCE_DIR}/src/requestreply
+  ${PROJECT_SOURCE_DIR}/src/transport
+  ${PROJECT_SOURCE_DIR}/src/handlers/common
+  )
+
+add_subdirectory(src)
+add_subdirectory(examples)
+
+install(EXPORT sbfcore DESTINATION lib/cmake/sbf COMPONENT dev)
+install(EXPORT sbfcommon DESTINATION lib/cmake/sbf COMPONENT dev)
+install(EXPORT sbfcommonhandler DESTINATION lib/cmake/sbf COMPONENT dev)
+install(EXPORT sbftcpmeshhandler DESTINATION lib/cmake/sbf COMPONENT dev)
+install(EXPORT sbfudphandler DESTINATION lib/cmake/sbf COMPONENT dev)
+install(EXPORT sbftransport  DESTINATION lib/cmake/sbf COMPONENT dev)
+install(EXPORT sbfrequestreply DESTINATION lib/cmake/sbf COMPONENT dev)
+
+set(${PROJECT_NAME}_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include/sbf)
+set(${PROJECT_NAME}_LIBRARIES sbfcore sbfcommon sbfcommonhandler sbftcpmeshhandler sbfudphandler sbftransport sbfrequestreply)
+configure_file(
+  ${PROJECT_SOURCE_DIR}/${PROJECT_NAME}.cmake.in
+  ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config-install.cmake
+  @ONLY
+  )
+install(
+  FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config-install.cmake
+  DESTINATION lib/cmake/${PROJECT_NAME} COMPONENT dev
+  RENAME ${PROJECT_NAME}Config.cmake
+  PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ
+  )
+
+INCLUDE(CPack)
+SET(CPACK_GENERATOR "TGZ")

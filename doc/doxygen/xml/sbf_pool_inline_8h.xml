@@ -1,0 +1,404 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_pool_inline_8h" kind="file" language="C++">
+    <compoundname>sbfPoolInline.h</compoundname>
+    <includedby refid="sbf_pool_8h" local="yes">common/sbfPool.h</includedby>
+    <invincdepgraph>
+      <node id="465">
+        <label>common/sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="466" relation="include">
+        </childnode>
+      </node>
+      <node id="472">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="476">
+        <label>requestreply/sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="475" relation="include">
+        </childnode>
+      </node>
+      <node id="479">
+        <label>transport/sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="471" relation="include">
+        </childnode>
+      </node>
+      <node id="469">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+      </node>
+      <node id="470">
+        <label>transport/sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="471" relation="include">
+        </childnode>
+      </node>
+      <node id="466">
+        <label>common/sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="467" relation="include">
+        </childnode>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="478" relation="include">
+        </childnode>
+        <childnode refid="479" relation="include">
+        </childnode>
+      </node>
+      <node id="473">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+      </node>
+      <node id="478">
+        <label>transport/sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="471" relation="include">
+        </childnode>
+      </node>
+      <node id="467">
+        <label>common/sbfTcpConnection.h</label>
+        <link refid="sbf_tcp_connection_8h"/>
+      </node>
+      <node id="475">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+      </node>
+      <node id="477">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="473" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="468">
+        <label>common/sbfUdpMulticast.h</label>
+        <link refid="sbf_udp_multicast_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="471">
+        <label>transport/sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="472" relation="include">
+        </childnode>
+        <childnode refid="473" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+        <childnode refid="476" relation="include">
+        </childnode>
+        <childnode refid="477" relation="include">
+        </childnode>
+      </node>
+      <node id="464">
+        <label>common/sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+        <childnode refid="465" relation="include">
+        </childnode>
+      </node>
+      <node id="474">
+        <label>requestreply/sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="475" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_pool_inline_8h_1afd4119d5de42a3e0ec12b3a3c5c430ee" prot="public" static="no">
+        <type>struct sbfPoolCountImpl *</type>
+        <definition>typedef struct sbfPoolCountImpl* sbfPoolCount</definition>
+        <argsstring></argsstring>
+        <name>sbfPoolCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="18" column="1" bodyfile="common/sbfPoolInline.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_pool_inline_8h_1a4f86f687e7aef922dd4c85241171dfa1" prot="public" static="no">
+        <type>struct sbfPoolItemImpl *</type>
+        <definition>typedef struct sbfPoolItemImpl* sbfPoolItem</definition>
+        <argsstring></argsstring>
+        <name>sbfPoolItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="26" column="1" bodyfile="common/sbfPoolInline.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_pool_inline_8h_1ab4a61a6b6ddf65fc21992963ce1140dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE <ref refid="sbf_pool_inline_8h_1a4f86f687e7aef922dd4c85241171dfa1" kindref="member">sbfPoolItem</ref></type>
+        <definition>static SBF_INLINE sbfPoolItem sbfPoolNew</definition>
+        <argsstring>(sbfPool pool)</argsstring>
+        <name>sbfPoolNew</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="44" column="1" bodyfile="common/sbfPoolInline.h" bodystart="44" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_inline_8h_1a5bfaef2a7d25d244eca652f6f1136c8c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE <ref refid="sbf_pool_inline_8h_1a4f86f687e7aef922dd4c85241171dfa1" kindref="member">sbfPoolItem</ref></type>
+        <definition>static SBF_INLINE sbfPoolItem sbfPoolNewZero</definition>
+        <argsstring>(sbfPool pool)</argsstring>
+        <name>sbfPoolNewZero</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="57" column="1" bodyfile="common/sbfPoolInline.h" bodystart="57" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_inline_8h_1a10d891843e87dd86d6e88faeef4f7cd2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE <ref refid="sbf_pool_inline_8h_1a4f86f687e7aef922dd4c85241171dfa1" kindref="member">sbfPoolItem</ref></type>
+        <definition>static SBF_INLINE sbfPoolItem sbfPoolNextItem</definition>
+        <argsstring>(sbfPool pool)</argsstring>
+        <name>sbfPoolNextItem</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="70" column="1" bodyfile="common/sbfPoolInline.h" bodystart="70" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_inline_8h_1a953aaaebd14fca858742598754ab9939" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE size_t</type>
+        <definition>static SBF_INLINE size_t sbfPool_getItemSize</definition>
+        <argsstring>(sbfPool pool)</argsstring>
+        <name>sbfPool_getItemSize</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="87" column="1" bodyfile="common/sbfPoolInline.h" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_inline_8h_1a9cc7f53e5c2d0b383fb07a4a50635e97" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE void *</type>
+        <definition>static SBF_INLINE void* sbfPool_get</definition>
+        <argsstring>(sbfPool pool)</argsstring>
+        <name>sbfPool_get</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="93" column="1" bodyfile="common/sbfPoolInline.h" bodystart="93" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_inline_8h_1ac8570b7b708289d672f78b8c33011368" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE void *</type>
+        <definition>static SBF_INLINE void* sbfPool_getZero</definition>
+        <argsstring>(sbfPool pool)</argsstring>
+        <name>sbfPool_getZero</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="106" column="1" bodyfile="common/sbfPoolInline.h" bodystart="106" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_pool_inline_8h_1af636a63e2f36d7abeb2ff12371572b25" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE void</type>
+        <definition>static SBF_INLINE void sbfPool_put</definition>
+        <argsstring>(void *data)</argsstring>
+        <name>sbfPool_put</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfPoolInline.h" line="121" column="1" bodyfile="common/sbfPoolInline.h" bodystart="121" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SBF_POOL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;must<sp/>be<sp/>included<sp/>from<sp/>sbfPool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfPoolCountImpl</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mFunction;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mLine;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mPools;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mSize;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mGets;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mPuts;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mNews;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="systree_8h_1a9c7350c93a42f7c017405c95676a3092" kindref="member">RB_ENTRY</ref><sp/>(sbfPoolCountImpl)<sp/>mTreeEntry;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18" refid="sbf_pool_inline_8h_1afd4119d5de42a3e0ec12b3a3c5c430ee" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfPoolCountImpl*<sp/><ref refid="sbf_pool_inline_8h_1afd4119d5de42a3e0ec12b3a3c5c430ee" kindref="member">sbfPoolCount</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfPoolItemImpl</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mPool;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfPoolItemImpl*<sp/>mNext;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26" refid="sbf_pool_inline_8h_1a4f86f687e7aef922dd4c85241171dfa1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfPoolItemImpl*<sp/><ref refid="sbf_pool_inline_8h_1a4f86f687e7aef922dd4c85241171dfa1" kindref="member">sbfPoolItem</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfPoolImpl</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mItemSize;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mSize;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfSpinLock<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mLock;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfPoolItemImpl*<sp/><sp/><sp/>mAvailable;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfPoolItemImpl*<sp/><sp/><sp/>mFree;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfPoolCount<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mCount;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sysqueue_8h_1af71bfd90dc9d00fb03545fe66c67d673" kindref="member">TAILQ_ENTRY</ref><sp/>(sbfPoolImpl)<sp/>mListEntry;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mAtExit;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/>sbfPoolItem</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">sbfPoolNew<sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfPoolItem<sp/>item;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>__sync_fetch_and_add<sp/>(&amp;pool-&gt;mCount-&gt;mNews,<sp/>1);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>item<sp/>=<sp/>(<ref refid="sbf_pool_inline_8h_1a4f86f687e7aef922dd4c85241171dfa1" kindref="member">sbfPoolItem</ref>)<ref refid="sbf_memory_8h_1a6af5faec3f9662b20ffc9903f923dec0" kindref="member">xmalloc</ref><sp/>(pool-&gt;mSize);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>item-&gt;mPool<sp/>=<sp/>pool;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>item-&gt;mNext<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>item;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/>sbfPoolItem</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">sbfPoolNewZero<sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfPoolItem<sp/>item;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>__sync_fetch_and_add<sp/>(&amp;pool-&gt;mCount-&gt;mNews,<sp/>1);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>item<sp/>=<sp/>(<ref refid="sbf_pool_inline_8h_1a4f86f687e7aef922dd4c85241171dfa1" kindref="member">sbfPoolItem</ref>)<ref refid="sbf_memory_8h_1ade8988c3fcdbca51eb623eb5f7ad5150" kindref="member">xcalloc</ref><sp/>(1,<sp/>pool-&gt;mSize);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>item-&gt;mPool<sp/>=<sp/>pool;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>item-&gt;mNext<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>item;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/>sbfPoolItem</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">sbfPoolNextItem<sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfPoolItem<sp/>item;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfSpinLock_lock<sp/>(&amp;pool-&gt;mLock);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>item<sp/>=<sp/>pool-&gt;mAvailable;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item<sp/>=<sp/><ref refid="sbf_atomic_8h_1ae3ce06094663800b2d1c6f519b34c0fa" kindref="member">sbfAtomic_swapP</ref><sp/>(&amp;pool-&gt;mFree,<sp/>NULL);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pool-&gt;mAvailable<sp/>=<sp/>item-&gt;mNext;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfSpinLock_unlock<sp/>(&amp;pool-&gt;mLock);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>item;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">sbfPool_getItemSize<sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pool-&gt;mItemSize;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">sbfPool_get<sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfPoolItem<sp/>item;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>__sync_fetch_and_add<sp/>(&amp;pool-&gt;mCount-&gt;mGets,<sp/>1);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>item<sp/>=<sp/>sbfPoolNextItem<sp/>(pool);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item<sp/>=<sp/>sbfPoolNew<sp/>(pool);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>item<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">sbfPool_getZero<sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfPoolItem<sp/>item;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>__sync_fetch_and_add<sp/>(&amp;pool-&gt;mCount-&gt;mGets,<sp/>1);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>item<sp/>=<sp/>sbfPoolNextItem<sp/>(pool);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item<sp/>=<sp/>sbfPoolNewZero<sp/>(pool);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset<sp/>(item<sp/>+<sp/>1,<sp/>0,<sp/>pool-&gt;mItemSize);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>item<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">sbfPool_put<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>sbfPoolItem<sp/>item<sp/>=<sp/>(<ref refid="sbf_pool_inline_8h_1a4f86f687e7aef922dd4c85241171dfa1" kindref="member">sbfPoolItem</ref>)data<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/><sp/><sp/><sp/><sp/>pool<sp/>=<sp/>item-&gt;mPool;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>__sync_fetch_and_add<sp/>(&amp;pool-&gt;mCount-&gt;mPuts,<sp/>1);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item-&gt;mNext<sp/>=<sp/>pool-&gt;mFree;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="sbf_atomic_8h_1a86ad4ce08cbe9ebe0bbc8bf6ae438530" kindref="member">sbfAtomic_compareAndSwapP</ref><sp/>(&amp;pool-&gt;mFree,<sp/>item-&gt;mNext,<sp/>item));</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="common/sbfPoolInline.h"/>
+  </compounddef>
+</doxygen>

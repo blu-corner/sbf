@@ -1,0 +1,759 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_buffer_8h" kind="file" language="C++">
+    <compoundname>sbfBuffer.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includes refid="sbf_pool_8h" local="yes">sbfPool.h</includes>
+    <includes refid="sbf_ref_count_8h" local="yes">sbfRefCount.h</includes>
+    <includes refid="sbf_buffer_inline_8h" local="yes">sbfBufferInline.h</includes>
+    <includedby refid="sbf_tcp_connection_8h" local="yes">common/sbfTcpConnection.h</includedby>
+    <includedby refid="sbf_udp_multicast_8h" local="yes">common/sbfUdpMulticast.h</includedby>
+    <includedby refid="sbf_batch_8h" local="yes">transport/sbfBatch.h</includedby>
+    <includedby refid="sbf_pub_8h" local="yes">transport/sbfPub.h</includedby>
+    <includedby refid="sbf_sub_8h" local="yes">transport/sbfSub.h</includedby>
+    <incdepgraph>
+      <node id="50">
+        <label>sbfPool.h</label>
+        <link refid="sbf_pool_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>event.h</label>
+      </node>
+      <node id="51">
+        <label>sbfAtomic.h</label>
+        <link refid="sbf_atomic_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="43">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>common/sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>sys/types.h</label>
+      </node>
+      <node id="54">
+        <label>sbfBufferInline.h</label>
+        <link refid="sbf_buffer_inline_8h"/>
+      </node>
+      <node id="53">
+        <label>sbfRefCount.h</label>
+        <link refid="sbf_ref_count_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="45">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="48">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>sbfPoolInline.h</label>
+        <link refid="sbf_pool_inline_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="61">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>requestreply/sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>transport/sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+      </node>
+      <node id="59">
+        <label>transport/sbfBatch.h</label>
+        <link refid="sbf_batch_8h"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>common/sbfBuffer.h</label>
+        <link refid="sbf_buffer_8h"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+      </node>
+      <node id="67">
+        <label>transport/sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>common/sbfTcpConnection.h</label>
+        <link refid="sbf_tcp_connection_8h"/>
+      </node>
+      <node id="64">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+      </node>
+      <node id="66">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>common/sbfUdpMulticast.h</label>
+        <link refid="sbf_udp_multicast_8h"/>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>transport/sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>requestreply/sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sbf_buffer_8h_1aa4e1e3381a982ca38035fc6a73824a91" prot="public" static="no">
+        <name>sbfBuffer_createPool</name>
+        <param><defname>size</defname></param>
+        <initializer><ref refid="sbf_buffer_8h_1aae2767f72ac1ff767924c156c2c00955" kindref="member">sbfBuffer_createPool1</ref> (size, __FUNCTION__, __LINE__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="sbf_pool_8h_1ad804364e9a7807e56f84e0b219034b5d" kindref="member">sbfPool_create1</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="29" column="9" bodyfile="common/sbfBuffer.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" prot="public" static="no">
+        <type>typedefSBF_BEGIN_DECLS struct sbfBufferImpl *</type>
+        <definition>typedef typedefSBF_BEGIN_DECLS struct sbfBufferImpl* sbfBuffer</definition>
+        <argsstring></argsstring>
+        <name>sbfBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declare the buffer handler </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="18" column="1" bodyfile="common/sbfBuffer.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_buffer_8h_1a5846b791c7dfaf050a36392117d5a549" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* sbfBufferDestroyCb) (sbfBuffer buffer, void *data, void *closure)</definition>
+        <argsstring>)(sbfBuffer buffer, void *data, void *closure)</argsstring>
+        <name>sbfBufferDestroyCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="20" column="1" bodyfile="common/sbfBuffer.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_buffer_8h_1aae2767f72ac1ff767924c156c2c00955" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+        <definition>sbfPool sbfBuffer_createPool1</definition>
+        <argsstring>(size_t size, const char *function, u_int line)</argsstring>
+        <name>sbfBuffer_createPool1</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>u_int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="sbf_pool_8h_1ad804364e9a7807e56f84e0b219034b5d" kindref="member">sbfPool_create1</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_buffer_8h_1a849e5e5240022dbf30207cba78b89afd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+        <definition>sbfPool sbfBuffer_defaultPool</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>sbfBuffer_defaultPool</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="sbf_pool_8h_1a022dc01d52a0f691e1070d7dc1318857" kindref="member">sbfPool_default</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_buffer_8h_1acd20a850c6e0bae84cc6906b8a532c40" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE <ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+        <definition>static SBF_INLINE sbfBuffer sbfBuffer_new</definition>
+        <argsstring>(sbfPool pool, size_t size)</argsstring>
+        <name>sbfBuffer_new</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Returns a memory buffer of a given size. If a pool handler is provided at <computeroutput>pool</computeroutput>, the memory buffer will be obtained from the pool, otherwise the buffer will be allocated and returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pools handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the buffer to be allocated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a buffer&apos;s handler. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_buffer_8h_1a5a7b94e9e0927abfa7023b1a6b300a09" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE <ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+        <definition>static SBF_INLINE sbfBuffer sbfBuffer_newZero</definition>
+        <argsstring>(sbfPool pool, size_t size)</argsstring>
+        <name>sbfBuffer_newZero</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Returns a memory buffer with the given size by filling it with zeros. If a pool handler is provided at <computeroutput>pool</computeroutput>, the memory buffer will be obtained from the pool, otherwise the buffer will be allocated and returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pools handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the buffer to be allocated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a buffer&apos;s handler. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_buffer_8h_1a3f97598ec371b4db1374fc4aef75f75d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE <ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+        <definition>static SBF_INLINE sbfBuffer sbfBuffer_copy</definition>
+        <argsstring>(sbfPool pool, void *data, size_t size)</argsstring>
+        <name>sbfBuffer_copy</name>
+        <param>
+          <type><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref></type>
+          <declname>pool</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Creates a buffer handler by copying the provided memory. If a pool handler is provided at <computeroutput>pool</computeroutput>, the memory buffer will be obtained from the pool, otherwise the buffer will be allocated and returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pools handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the data to be linked to the buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the buffer to be allocated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_buffer_8h_1a1d9a08f5b2e75407761e904cbb11c459" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE <ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+        <definition>static SBF_INLINE sbfBuffer sbfBuffer_wrap</definition>
+        <argsstring>(void *data, size_t size, sbfBufferDestroyCb cb, void *closure)</argsstring>
+        <name>sbfBuffer_wrap</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a5846b791c7dfaf050a36392117d5a549" kindref="member">sbfBufferDestroyCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+<para>It uses an internal pool so that provided memory is linked to the buffer so that no copy is performed. When the buffer is destroyed then the provided callback will be invoked to release the data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the memory to be wrapped. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the memory. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a callback that will be invoked when the buffer is destroyed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a user data linked to the returned buffer&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a buffer handler. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_buffer_8h_1a20b54cb05a4d26866313023e0d943cb7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE void</type>
+        <definition>static SBF_INLINE void sbfBuffer_addRef</definition>
+        <argsstring>(sbfBuffer buffer)</argsstring>
+        <name>sbfBuffer_addRef</name>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Increases the reference count for the buffer handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>sbfBuffer_destroy </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_buffer_8h_1abdddf1c9628096b9ad1b6b396ac3e2ea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE void</type>
+        <definition>static SBF_INLINE void sbfBuffer_lock</definition>
+        <argsstring>(sbfBuffer buffer)</argsstring>
+        <name>sbfBuffer_lock</name>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Blocks the buffer to avoid content modifications. If the caller tries to modify the buffer after a lock operation, the program will exit. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_buffer_8h_1a42152aa6a54990b45807573cd58dd633" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE void</type>
+        <definition>static SBF_INLINE void sbfBuffer_destroy</definition>
+        <argsstring>(sbfBuffer buffer)</argsstring>
+        <name>sbfBuffer_destroy</name>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Decreases the reference count and releases the resources allocated by the buffer when counts come down to zero. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_buffer_8h_1a4fabfe30cb536fdf9d690532ee98eadd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE void *</type>
+        <definition>static SBF_INLINE void* sbfBuffer_getData</definition>
+        <argsstring>(sbfBuffer buffer)</argsstring>
+        <name>sbfBuffer_getData</name>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Returns the data allocated by the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer&apos;s handler.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+eturn </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="118" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_buffer_8h_1a9229156dcc934fe54f832d702d7c0ecb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE void</type>
+        <definition>static SBF_INLINE void sbfBuffer_setData</definition>
+        <argsstring>(sbfBuffer buffer, void *data)</argsstring>
+        <name>sbfBuffer_setData</name>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Links a data to the given buffer&apos;s handler (no copy). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer&apos;s handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the data to be linked to the buffer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="125" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_buffer_8h_1a8ed38cd8f18ff6ffd65d2d31012790e5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE size_t</type>
+        <definition>static SBF_INLINE size_t sbfBuffer_getSize</definition>
+        <argsstring>(sbfBuffer buffer)</argsstring>
+        <name>sbfBuffer_getSize</name>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Returns the size of the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the size of the buffer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="132" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_buffer_8h_1acd191499d5129b1456abb6a3f5980201" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SBF_INLINE void</type>
+        <definition>static SBF_INLINE void sbfBuffer_setSize</definition>
+        <argsstring>(sbfBuffer buffer, size_t size)</argsstring>
+        <name>sbfBuffer_setSize</name>
+        <param>
+          <type><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sets the size of the buffer (no allocation of memory is performed). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer&apos;s handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the buffer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfBuffer.h" line="139" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file defines the helper structures and functions to handle buffers. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>_SBF_BUFFER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_BUFFER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_pool_8h" kindref="compound">sbfPool.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_ref_count_8h" kindref="compound">sbfRefCount.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfBufferImpl*<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="sbf_buffer_8h_1a5846b791c7dfaf050a36392117d5a549" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="sbf_buffer_8h_1a5846b791c7dfaf050a36392117d5a549" kindref="member">sbfBufferDestroyCb</ref>)<sp/>(<ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Facade<sp/>methods<sp/>for<sp/>pool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="sbf_buffer_8h_1aa4e1e3381a982ca38035fc6a73824a91" refkind="member"><highlight class="preprocessor">#define<sp/>sbfBuffer_createPool(size)<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>sbfBuffer_createPool1<sp/>(size,<sp/>__FUNCTION__,<sp/>__LINE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/><ref refid="sbf_buffer_8h_1aae2767f72ac1ff767924c156c2c00955" kindref="member">sbfBuffer_createPool1</ref><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/>u_int<sp/>line);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/><ref refid="sbf_buffer_8h_1a849e5e5240022dbf30207cba78b89afd" kindref="member">sbfBuffer_defaultPool</ref><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Public<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>sbfBuffer_new<sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>sbfBuffer_newZero<sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>sbfBuffer_copy<sp/>(<ref refid="sbf_pool_8h_1aa33450533ed8791755450ca2ae6bdd22" kindref="member">sbfPool</ref><sp/>pool,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/><ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>sbfBuffer_wrap<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sbf_buffer_8h_1a5846b791c7dfaf050a36392117d5a549" kindref="member">sbfBufferDestroyCb</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sbfBuffer_addRef<sp/>(<ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sbfBuffer_lock<sp/>(<ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sbfBuffer_destroy<sp/>(<ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>sbfBuffer_getData<sp/>(<ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sbfBuffer_setData<sp/>(<ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sbfBuffer_getSize<sp/>(<ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SBF_INLINE<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/>sbfBuffer_setSize<sp/>(<ref refid="sbf_buffer_8h_1a1e025c4644df2171527745712604be3b" kindref="member">sbfBuffer</ref><sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_buffer_inline_8h" kindref="compound">sbfBufferInline.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_BUFFER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfBuffer.h"/>
+  </compounddef>
+</doxygen>

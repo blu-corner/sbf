@@ -1,0 +1,568 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_queue_8h" kind="file" language="C++">
+    <compoundname>sbfQueue.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <includedby refid="sbf_mw_8h" local="yes">core/sbfMw.h</includedby>
+    <includedby refid="sbf_request_pub_8h" local="yes">requestreply/sbfRequestPub.h</includedby>
+    <includedby refid="sbf_request_sub_8h" local="yes">requestreply/sbfRequestSub.h</includedby>
+    <includedby refid="sbf_pub_8h" local="yes">transport/sbfPub.h</includedby>
+    <includedby refid="sbf_sub_8h" local="yes">transport/sbfSub.h</includedby>
+    <incdepgraph>
+      <node id="812">
+        <label>event.h</label>
+      </node>
+      <node id="811">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="813">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="814" relation="include">
+        </childnode>
+      </node>
+      <node id="817">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="810" relation="include">
+        </childnode>
+      </node>
+      <node id="814">
+        <label>sys/types.h</label>
+      </node>
+      <node id="810">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="811" relation="include">
+        </childnode>
+        <childnode refid="812" relation="include">
+        </childnode>
+        <childnode refid="813" relation="include">
+        </childnode>
+        <childnode refid="815" relation="include">
+        </childnode>
+        <childnode refid="816" relation="include">
+        </childnode>
+        <childnode refid="817" relation="include">
+        </childnode>
+        <childnode refid="818" relation="include">
+        </childnode>
+        <childnode refid="819" relation="include">
+        </childnode>
+      </node>
+      <node id="816">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="815">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="818">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="810" relation="include">
+        </childnode>
+      </node>
+      <node id="809">
+        <label>core/sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="810" relation="include">
+        </childnode>
+      </node>
+      <node id="819">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="810" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="822">
+        <label>handlers/common/sbfCommonHandler.h</label>
+        <link refid="sbf_common_handler_8h"/>
+        <childnode refid="823" relation="include">
+        </childnode>
+      </node>
+      <node id="828">
+        <label>requestreply/sbfRequestSub.h</label>
+        <link refid="sbf_request_sub_8h"/>
+        <childnode refid="825" relation="include">
+        </childnode>
+      </node>
+      <node id="831">
+        <label>transport/sbfSub.h</label>
+        <link refid="sbf_sub_8h"/>
+        <childnode refid="826" relation="include">
+        </childnode>
+      </node>
+      <node id="823">
+        <label>handlers/udp/sbfUdpHandler.h</label>
+        <link refid="sbf_udp_handler_8h"/>
+      </node>
+      <node id="824">
+        <label>handlers/tcpmesh/sbfTcpMeshHandler.h</label>
+        <link refid="sbf_tcp_mesh_handler_8h"/>
+      </node>
+      <node id="830">
+        <label>transport/sbfPub.h</label>
+        <link refid="sbf_pub_8h"/>
+        <childnode refid="826" relation="include">
+        </childnode>
+      </node>
+      <node id="825">
+        <label>requestreply/sbfRequestReply.h</label>
+        <link refid="sbf_request_reply_8h"/>
+      </node>
+      <node id="829">
+        <label>transport/sbfHandler.h</label>
+        <link refid="sbf_handler_8h"/>
+        <childnode refid="824" relation="include">
+        </childnode>
+        <childnode refid="823" relation="include">
+        </childnode>
+      </node>
+      <node id="826">
+        <label>transport/sbfTport.h</label>
+        <link refid="sbf_tport_8h"/>
+        <childnode refid="822" relation="include">
+        </childnode>
+        <childnode refid="824" relation="include">
+        </childnode>
+        <childnode refid="823" relation="include">
+        </childnode>
+        <childnode refid="827" relation="include">
+        </childnode>
+        <childnode refid="828" relation="include">
+        </childnode>
+        <childnode refid="829" relation="include">
+        </childnode>
+      </node>
+      <node id="821">
+        <label>core/sbfMw.h</label>
+        <link refid="sbf_mw_8h"/>
+        <childnode refid="822" relation="include">
+        </childnode>
+        <childnode refid="824" relation="include">
+        </childnode>
+        <childnode refid="823" relation="include">
+        </childnode>
+        <childnode refid="825" relation="include">
+        </childnode>
+        <childnode refid="826" relation="include">
+        </childnode>
+      </node>
+      <node id="820">
+        <label>core/sbfQueue.h</label>
+        <link refid="sbf_queue_8h"/>
+        <childnode refid="821" relation="include">
+        </childnode>
+        <childnode refid="827" relation="include">
+        </childnode>
+        <childnode refid="828" relation="include">
+        </childnode>
+        <childnode refid="830" relation="include">
+        </childnode>
+        <childnode refid="831" relation="include">
+        </childnode>
+      </node>
+      <node id="827">
+        <label>requestreply/sbfRequestPub.h</label>
+        <link refid="sbf_request_pub_8h"/>
+        <childnode refid="825" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" prot="public" static="no">
+        <type>struct sbfQueueImpl *</type>
+        <definition>typedef struct sbfQueueImpl* sbfQueue</definition>
+        <argsstring></argsstring>
+        <name>sbfQueue</name>
+        <briefdescription>
+<para>Declaration of the queue handler. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.h" line="16" column="1" bodyfile="core/sbfQueue.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" prot="public" static="no">
+        <type>struct sbfQueueItemImpl *</type>
+        <definition>typedef struct sbfQueueItemImpl* sbfQueueItem</definition>
+        <argsstring></argsstring>
+        <name>sbfQueueItem</name>
+        <briefdescription>
+<para>Declaration of the queue item handler. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.h" line="19" column="1" bodyfile="core/sbfQueue.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sbf_queue_8h_1a734fa954aded6cb14781887fdcb4c15b" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* sbfQueueCb) (sbfQueueItem item, void *closure)</definition>
+        <argsstring>)(sbfQueueItem item, void *closure)</argsstring>
+        <name>sbfQueueCb</name>
+        <briefdescription>
+<para>callback invoked when item needs to be processed. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the item handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user data associated to the queue item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.h" line="26" column="1" bodyfile="core/sbfQueue.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_queue_8h_1aa9e33c0cd988ac9011c769454c406be9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+        <definition>sbfQueue sbfQueue_create</definition>
+        <argsstring>(struct sbfMwImpl *mw, const char *name)</argsstring>
+        <name>sbfQueue_create</name>
+        <param>
+          <type>struct sbfMwImpl *</type>
+          <declname>mw</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Returns a queue handler for the given name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>middleware handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the topic assigned to the queue. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a queue handler for the given name. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8h_1addab7a91fca88250c4ce64cfd5183d78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfQueue_destroy</definition>
+        <argsstring>(sbfQueue queue)</argsstring>
+        <name>sbfQueue_destroy</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Releases the memory allocated to the given queue handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8h_1a2f1e3e58b4b9cea02ff5fa808a8703f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sbfQueue_getName</definition>
+        <argsstring>(sbfQueue queue)</argsstring>
+        <name>sbfQueue_getName</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Returns the name of the topic assigned to the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null terminated string containing the name of the queue (topic). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8h_1a4a0a1c5ebaca33ef41cfc984c536bf01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfQueue_enqueue</definition>
+        <argsstring>(sbfQueue queue, sbfQueueCb cb, void *closure)</argsstring>
+        <name>sbfQueue_enqueue</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1a734fa954aded6cb14781887fdcb4c15b" kindref="member">sbfQueueCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+<para>Adds an item to the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the callback indicating the item has been queued. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user data associated to the queue item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8h_1a92ae3820cd4fb1b634b638c727e5d79c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfQueue_dispatch</definition>
+        <argsstring>(sbfQueue queue)</argsstring>
+        <name>sbfQueue_dispatch</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Dispatch all of the items that belongs to the given queue handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8h_1a1ce1d1238f830f6f9e0032d3572036c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+        <definition>sbfQueueItem sbfQueue_getItem</definition>
+        <argsstring>(sbfQueue queue, sbfQueueCb cb, void *closure)</argsstring>
+        <name>sbfQueue_getItem</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1a734fa954aded6cb14781887fdcb4c15b" kindref="member">sbfQueueCb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+<para>returns the item from the queue by adding the callback and user data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the callback indicating the item has been queued. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user data associated to the queue item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the item from the queue. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8h_1a041be175afa83868ffd3ad53638aa073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfQueue_enqueueItem</definition>
+        <argsstring>(sbfQueue queue, sbfQueueItem item)</argsstring>
+        <name>sbfQueue_enqueueItem</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref></type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8h_1a3a47a4e3a01ddecb9d5c49b0fab74609" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sbfQueue_getItemData</definition>
+        <argsstring>(sbfQueueItem item)</argsstring>
+        <name>sbfQueue_getItemData</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Returns the data associated to the given queue item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue item handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the data associated to a queue item. </para></simplesect>
+<simplesect kind="see"><para><ref refid="sbf_queue_8h_1ae5a1e7b31459264e4a5940976cfa0641" kindref="member">sbfQueue_getItemDataSize</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_queue_8h_1ae5a1e7b31459264e4a5940976cfa0641" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t sbfQueue_getItemDataSize</definition>
+        <argsstring>(sbfQueueItem item)</argsstring>
+        <name>sbfQueue_getItemDataSize</name>
+        <param>
+          <type><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Returns the size of the given queue item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue item handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the size of the given queue item. </para></simplesect>
+<simplesect kind="see"><para><ref refid="sbf_queue_8h_1a3a47a4e3a01ddecb9d5c49b0fab74609" kindref="member">sbfQueue_getItemData</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/sbfQueue.h" line="92" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file declares the interface for handling queues. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>_SBF_QUEUE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_QUEUE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfMwImpl;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfQueueImpl*<sp/><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfQueueItemImpl*<sp/><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="sbf_queue_8h_1a734fa954aded6cb14781887fdcb4c15b" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="sbf_queue_8h_1a734fa954aded6cb14781887fdcb4c15b" kindref="member">sbfQueueCb</ref>)<sp/>(<ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref><sp/>item,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>Shouldn&apos;t<sp/>this<sp/>helper<sp/>function<sp/>be<sp/>in<sp/>middleware??</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"></highlight><highlight class="normal"><ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/><ref refid="sbf_queue_8h_1aa9e33c0cd988ac9011c769454c406be9" kindref="member">sbfQueue_create</ref><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sbfMwImpl*<sp/>mw,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_queue_8h_1addab7a91fca88250c4ce64cfd5183d78" kindref="member">sbfQueue_destroy</ref><sp/>(<ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/>queue);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sbf_queue_8h_1a2f1e3e58b4b9cea02ff5fa808a8703f2" kindref="member">sbfQueue_getName</ref><sp/>(<ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/>queue);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_queue_8h_1a4a0a1c5ebaca33ef41cfc984c536bf01" kindref="member">sbfQueue_enqueue</ref><sp/>(<ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/>queue,<sp/><ref refid="sbf_queue_8h_1a734fa954aded6cb14781887fdcb4c15b" kindref="member">sbfQueueCb</ref><sp/>cb,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_queue_8h_1a92ae3820cd4fb1b634b638c727e5d79c" kindref="member">sbfQueue_dispatch</ref><sp/>(<ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/>queue);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref><sp/><ref refid="sbf_queue_8h_1a1ce1d1238f830f6f9e0032d3572036c2" kindref="member">sbfQueue_getItem</ref><sp/>(<ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/>queue,<sp/><ref refid="sbf_queue_8h_1a734fa954aded6cb14781887fdcb4c15b" kindref="member">sbfQueueCb</ref><sp/>cb,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>closure);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_queue_8h_1a041be175afa83868ffd3ad53638aa073" kindref="member">sbfQueue_enqueueItem</ref><sp/>(<ref refid="sbf_queue_8h_1aa8b64a26e53f1e9c6eef9d3379d805e3" kindref="member">sbfQueue</ref><sp/>queue,<sp/><ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref><sp/>item);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="75"><highlight class="comment">*<sp/>Each<sp/>item<sp/>has<sp/>a<sp/>small<sp/>data<sp/>buffer<sp/>associated<sp/>with<sp/>it,<sp/>to<sp/>avoid<sp/>having<sp/>to</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">*<sp/>allocate<sp/>a<sp/>container<sp/>object<sp/>for<sp/>callbacks<sp/>which<sp/>need<sp/>multiple<sp/>arguments.</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="84"><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="sbf_queue_8h_1a3a47a4e3a01ddecb9d5c49b0fab74609" kindref="member">sbfQueue_getItemData</ref><sp/>(<ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref><sp/>item);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="sbf_queue_8h_1ae5a1e7b31459264e4a5940976cfa0641" kindref="member">sbfQueue_getItemDataSize</ref><sp/>(<ref refid="sbf_queue_8h_1ad7433ebbf8ca13f31f33dddedbdf5533" kindref="member">sbfQueueItem</ref><sp/>item);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_QUEUE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="core/sbfQueue.h"/>
+  </compounddef>
+</doxygen>

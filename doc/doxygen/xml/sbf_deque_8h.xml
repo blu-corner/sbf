@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sbf_deque_8h" kind="file" language="C++">
+    <compoundname>sbfDeque.h</compoundname>
+    <includes refid="sbf_common_8h" local="yes">sbfCommon.h</includes>
+    <incdepgraph>
+      <node id="163">
+        <label>event.h</label>
+      </node>
+      <node id="162">
+        <label>sbfVersion.h</label>
+        <link refid="sbf_version_8h"/>
+      </node>
+      <node id="164">
+        <label>syshash.h</label>
+        <link refid="syshash_8h"/>
+        <childnode refid="165" relation="include">
+        </childnode>
+      </node>
+      <node id="168">
+        <label>sbfFatal.h</label>
+        <link refid="sbf_fatal_8h"/>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>common/sbfDeque.h</label>
+        <link refid="sbf_deque_8h"/>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="165">
+        <label>sys/types.h</label>
+      </node>
+      <node id="161">
+        <label>sbfCommon.h</label>
+        <link refid="sbf_common_8h"/>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+      </node>
+      <node id="167">
+        <label>systree.h</label>
+        <link refid="systree_8h"/>
+      </node>
+      <node id="166">
+        <label>sysqueue.h</label>
+        <link refid="sysqueue_8h"/>
+      </node>
+      <node id="169">
+        <label>sbfLog.h</label>
+        <link refid="sbf_log_8h"/>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="170">
+        <label>sbfMemory.h</label>
+        <link refid="sbf_memory_8h"/>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" prot="public" static="no">
+        <type>typedefSBF_BEGIN_DECLS struct sbfDequeImpl *</type>
+        <definition>typedef typedefSBF_BEGIN_DECLS struct sbfDequeImpl* sbfDeque</definition>
+        <argsstring></argsstring>
+        <name>sbfDeque</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declares the queue handller </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfDeque.h" line="15" column="1" bodyfile="common/sbfDeque.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sbf_deque_8h_1a5afb200f08bb44f3a3190848405d7501" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref></type>
+        <definition>sbfDeque sbfDeque_create</definition>
+        <argsstring>(void)</argsstring>
+        <name>sbfDeque_create</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Creates a queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the created queue&apos;s handler. </para></simplesect>
+<simplesect kind="see"><para><ref refid="sbf_deque_8h_1afe27711d3c7feb5c35bb09af6f460b89" kindref="member">sbfDeque_destroy</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfDeque.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_deque_8h_1afe27711d3c7feb5c35bb09af6f460b89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfDeque_destroy</definition>
+        <argsstring>(sbfDeque dq)</argsstring>
+        <name>sbfDeque_destroy</name>
+        <param>
+          <type><ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref></type>
+          <declname>dq</declname>
+        </param>
+        <briefdescription>
+<para>Releases all the resources allocated by the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="sbf_deque_8h_1a5afb200f08bb44f3a3190848405d7501" kindref="member">sbfDeque_create</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfDeque.h" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_deque_8h_1a930e84316ec17a80ce06143280df0c4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfDeque_pushBack</definition>
+        <argsstring>(sbfDeque dq, void *vp)</argsstring>
+        <name>sbfDeque_pushBack</name>
+        <param>
+          <type><ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref></type>
+          <declname>dq</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>vp</declname>
+        </param>
+        <briefdescription>
+<para>Pushes an element at the end of the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue&apos;s handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the data to be pushed into the queue. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfDeque.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_deque_8h_1a8ee20374d183a5abb343defbfaab2519" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sbfDeque_pushFront</definition>
+        <argsstring>(sbfDeque dq, void *vp)</argsstring>
+        <name>sbfDeque_pushFront</name>
+        <param>
+          <type><ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref></type>
+          <declname>dq</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>vp</declname>
+        </param>
+        <briefdescription>
+<para>Pushes an element in front of the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue&apos;s handler. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the data to be pushed into the queue. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfDeque.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_deque_8h_1af8e0bf33a9f1df2c8a27759ca46e15d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sbfDeque_popBack</definition>
+        <argsstring>(sbfDeque dq)</argsstring>
+        <name>sbfDeque_popBack</name>
+        <param>
+          <type><ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref></type>
+          <declname>dq</declname>
+        </param>
+        <briefdescription>
+<para>Extracts an element from the back of the queue and return it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the element that was at the back of the queue. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfDeque.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_deque_8h_1aebba170a8ca8e2228bda5a27419e8616" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sbfDeque_popFront</definition>
+        <argsstring>(sbfDeque dq)</argsstring>
+        <name>sbfDeque_popFront</name>
+        <param>
+          <type><ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref></type>
+          <declname>dq</declname>
+        </param>
+        <briefdescription>
+<para>Extracts an element from the front of the queue and return it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the element that was at the front of the queue. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfDeque.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_deque_8h_1a8e00563176158afd65e7dd8277f5ad74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sbfDeque_back</definition>
+        <argsstring>(sbfDeque dq)</argsstring>
+        <name>sbfDeque_back</name>
+        <param>
+          <type><ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref></type>
+          <declname>dq</declname>
+        </param>
+        <briefdescription>
+<para>Returns the element that was at the back of the queue but does not extract it from the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the element that was at the back of the queue but does not extract. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfDeque.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="sbf_deque_8h_1abd1c1b0ba11e913e20b1503ee42ef705" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sbfDeque_front</definition>
+        <argsstring>(sbfDeque dq)</argsstring>
+        <name>sbfDeque_front</name>
+        <param>
+          <type><ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref></type>
+          <declname>dq</declname>
+        </param>
+        <briefdescription>
+<para>Returns the element that was at the front of the queue but does not extract it from the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue&apos;s handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the element that was at the front of the queue. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/sbfDeque.h" line="73" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file declares the structures and functions to handle a queue. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>© Copyright 2016 Neueda all rights reserved. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>_SBF_DEQUE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SBF_DEQUE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbf_common_8h" kindref="compound">sbfCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="sbf_common_8h_1a2e3c8d8485e2902b071ca73d389df0e4" kindref="member">SBF_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sbfDequeImpl*<sp/><ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref><sp/><ref refid="sbf_deque_8h_1a5afb200f08bb44f3a3190848405d7501" kindref="member">sbfDeque_create</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_deque_8h_1afe27711d3c7feb5c35bb09af6f460b89" kindref="member">sbfDeque_destroy</ref><sp/>(<ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref><sp/>dq);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_deque_8h_1a930e84316ec17a80ce06143280df0c4a" kindref="member">sbfDeque_pushBack</ref><sp/>(<ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref><sp/>dq,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>vp);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sbf_deque_8h_1a8ee20374d183a5abb343defbfaab2519" kindref="member">sbfDeque_pushFront</ref><sp/>(<ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref><sp/>dq,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>vp);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="sbf_deque_8h_1af8e0bf33a9f1df2c8a27759ca46e15d9" kindref="member">sbfDeque_popBack</ref><sp/>(<ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref><sp/>dq);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="sbf_deque_8h_1aebba170a8ca8e2228bda5a27419e8616" kindref="member">sbfDeque_popFront</ref><sp/>(<ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref><sp/>dq);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="sbf_deque_8h_1a8e00563176158afd65e7dd8277f5ad74" kindref="member">sbfDeque_back</ref><sp/>(<ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref><sp/>dq);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="sbf_deque_8h_1abd1c1b0ba11e913e20b1503ee42ef705" kindref="member">sbfDeque_front</ref><sp/>(<ref refid="sbf_deque_8h_1ab1a7c953633e35a799196f8e2ac7a564" kindref="member">sbfDeque</ref><sp/>dq);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><ref refid="sbf_common_8h_1a04f299102afdb82186ca2307f1c33c9e" kindref="member">SBF_END_DECLS</ref></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_SBF_DEQUE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/sbfDeque.h"/>
+  </compounddef>
+</doxygen>

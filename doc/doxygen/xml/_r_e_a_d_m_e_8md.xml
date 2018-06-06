@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>SBF<sp/>-<sp/>Super<sp/>Bloody<sp/>Fast</highlight></codeline>
+<codeline><highlight class="normal">SBF<sp/>is<sp/>a<sp/>message<sp/>transport<sp/>system<sp/>that<sp/>allows<sp/>inter<sp/>app<sp/>communication<sp/>in<sp/>two<sp/>different<sp/>flavours:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Publisher<sp/>-<sp/>Subscriber</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Requester<sp/>-<sp/>Replier</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>`publisher-subscriber`<sp/>consists<sp/>of<sp/>publishers<sp/>defining<sp/>topics<sp/>where<sp/>messages<sp/>are<sp/>placed.<sp/>Then<sp/>one<sp/>or<sp/>more<sp/>subscribers<sp/>might<sp/>register<sp/>to<sp/>a<sp/>concrete<sp/>topic<sp/>to<sp/>read<sp/>the<sp/>messages<sp/>that<sp/>were<sp/>delivered<sp/>(one<sp/>to<sp/>many<sp/>communication).<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">On<sp/>the<sp/>other<sp/>hand,<sp/>the<sp/>`requester-replier`<sp/>communication<sp/>is<sp/>about<sp/>defining<sp/>a<sp/>channel<sp/>where<sp/>messages<sp/>are<sp/>sent<sp/>from<sp/>one<sp/>requester<sp/>to<sp/>one<sp/>publisher<sp/>(one<sp/>to<sp/>one<sp/>communication).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>TBD</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>API</highlight></codeline>
+<codeline><highlight class="normal">Here<sp/>you<sp/>are<sp/>the<sp/>list<sp/>of<sp/>modules<sp/>the<sp/>API<sp/>offers<sp/>to<sp/>build<sp/>your<sp/>transport</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Core</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Event](@ref<sp/>sbfEvent.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Timers</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>[Timer](@ref<sp/>sbfTimer.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>[Hi<sp/>resolution<sp/>timer](@ref<sp/>sbfHiResTimer.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Queue](@ref<sp/>sbfQueue.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Middleware](@ref<sp/>sbfMw.h)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Handlers</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Common<sp/>handler](@ref<sp/>sbfCommonHandler.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[TCP<sp/>mesh<sp/>handler](@ref<sp/>sbfTcpMeshHandler.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[UDP<sp/>handler](@ref<sp/>sbfUdpHandler.h)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Request<sp/>/<sp/>reply</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Request<sp/>publisher](@ref<sp/>sbfRequestPub.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Request<sp/>subscriber](@ref<sp/>sbfRequestSub.h)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Request<sp/>reply](@ref<sp/>sbfRequestReply.h)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Publisher<sp/>-<sp/>subscriber<sp/>example</highlight></codeline>
+<codeline><highlight class="normal">Let&apos;s<sp/>see<sp/>how<sp/>to<sp/>create<sp/>a<sp/>publisher-subscriber<sp/>communication.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Publisher<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">Here<sp/>are<sp/>the<sp/>first<sp/>lines<sp/>you<sp/>will<sp/>need<sp/>to<sp/>create<sp/>your<sp/>publisher:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Create<sp/>the<sp/>middleware<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;sbfCommon.h&quot;<sp/>//<sp/>Common<sp/>stuff<sp/>such<sp/>as<sp/>queues,<sp/>threading,<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;sbfMw.h&quot;<sp/>//<sp/>The<sp/>middleware<sp/>API</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Initialise<sp/>the<sp/>middleware<sp/>by<sp/>defining<sp/>some<sp/>properties<sp/>like<sp/>the<sp/>handler<sp/>(e.g.<sp/>tcp,<sp/>udp)<sp/>and<sp/>the<sp/><sp/>connection<sp/>interface<sp/>(e.g.<sp/>eth0).</highlight></codeline>
+<codeline><highlight class="normal">sbfKeyValue<sp/>properties<sp/>=<sp/>sbfKeyValue_create<sp/>();</highlight></codeline>
+<codeline><highlight class="normal">sbfKeyValue_put<sp/>(properties,<sp/>&quot;transport.default.type&quot;,<sp/>&quot;udp&quot;);</highlight></codeline>
+<codeline><highlight class="normal">sbfKeyValue_put<sp/>(properties,<sp/>&quot;transport.default.udp.interface&quot;,<sp/>&quot;eth0&quot;);</highlight></codeline>
+<codeline><highlight class="normal">sbfMw<sp/>mw<sp/>=<sp/>sbfMw_create<sp/>(log,<sp/>properties);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Create<sp/>a<sp/>queue,<sp/>the<sp/>connection<sp/>port<sp/>and<sp/>a<sp/>thread<sp/>to<sp/>dispatch<sp/>events</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>void*</highlight></codeline>
+<codeline><highlight class="normal">dispatchCb<sp/>(void*<sp/>closure)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sbfQueue_dispatch<sp/>(closure);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sbfThread<sp/>t;</highlight></codeline>
+<codeline><highlight class="normal">sbfQueue<sp/>queue<sp/>=<sp/>sbfQueue_create<sp/>(mw,<sp/>&quot;default&quot;);</highlight></codeline>
+<codeline><highlight class="normal">sbfThread_create<sp/>(&amp;t,<sp/>dispatchCb,<sp/>queue);</highlight></codeline>
+<codeline><highlight class="normal">sbfTport<sp/>tport<sp/>=<sp/>sbfTport_create<sp/>(mw,<sp/>&quot;default&quot;,<sp/>SBF_MW_ALL_THREADS);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Create<sp/>the<sp/>publisher</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>void</highlight></codeline>
+<codeline><highlight class="normal">timerCb<sp/>(sbfTimer<sp/>timer,<sp/>void*<sp/>closure)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(&quot;%u&quot;<sp/>SBF_EOL,<sp/>gPublished);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>fflush<sp/>(stdout);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>gPublished<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sbfTimer_create<sp/>(sbfMw_getDefaultThread<sp/>(mw),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timerCb,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline><highlight class="normal">sbfPub<sp/>pub<sp/>=<sp/>sbfPub_create<sp/>(tport,<sp/>queue,<sp/>&quot;topic&quot;,<sp/>NULL,<sp/>NULL);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>find<sp/>the<sp/>whole<sp/>example<sp/>of<sp/>the<sp/>publisher<sp/><sp/>[here](https://gitlab.com/neueda/sbf/tree/master/tools/publisher)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Subscriber<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">Now<sp/>let&apos;s<sp/>see<sp/>how<sp/>the<sp/>subscriber<sp/>works.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Create<sp/>the<sp/>middleware<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;sbfCommon.h&quot;<sp/>//<sp/>Common<sp/>stuff<sp/>such<sp/>as<sp/>queues,<sp/>threading,<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;sbfMw.h&quot;<sp/>//<sp/>The<sp/>middleware<sp/>API</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Initialise<sp/>the<sp/>middleware<sp/>by<sp/>defining<sp/>some<sp/>properties<sp/>like<sp/>the<sp/>handler<sp/>(e.g.<sp/>tcp,<sp/>udp)<sp/>and<sp/>the<sp/><sp/>connection<sp/>interface<sp/>(e.g.<sp/>eth0).</highlight></codeline>
+<codeline><highlight class="normal">sbfKeyValue<sp/>properties<sp/>=<sp/>sbfKeyValue_create<sp/>();</highlight></codeline>
+<codeline><highlight class="normal">sbfKeyValue_put<sp/>(properties,<sp/>&quot;transport.default.type&quot;,<sp/>&quot;udp&quot;);</highlight></codeline>
+<codeline><highlight class="normal">sbfKeyValue_put<sp/>(properties,<sp/>&quot;transport.default.udp.interface&quot;,<sp/>&quot;eth0&quot;);</highlight></codeline>
+<codeline><highlight class="normal">sbfKeyValue_put<sp/>(properties,<sp/>&quot;transport.default.tcpmesh.listen&quot;,<sp/>&quot;0&quot;);</highlight></codeline>
+<codeline><highlight class="normal">sbfKeyValue_put<sp/>(properties,<sp/>&quot;transport.default.tcpmesh.connect0&quot;,<sp/>&quot;127.0.0.1&quot;);</highlight></codeline>
+<codeline><highlight class="normal">sbfMw<sp/>mw<sp/>=<sp/>sbfMw_create<sp/>(log,<sp/>properties);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Create<sp/>a<sp/>queue,<sp/>the<sp/>connection<sp/>port<sp/>and<sp/>a<sp/>thread<sp/>to<sp/>dispatch<sp/>events</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>void*</highlight></codeline>
+<codeline><highlight class="normal">dispatchCb<sp/>(void*<sp/>closure)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sbfQueue_dispatch<sp/>(closure);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sbfThread<sp/>t;</highlight></codeline>
+<codeline><highlight class="normal">sbfQueue<sp/>queue<sp/>=<sp/>sbfQueue_create<sp/>(mw,<sp/>&quot;default&quot;);</highlight></codeline>
+<codeline><highlight class="normal">sbfThread_create<sp/>(&amp;t,<sp/>dispatchCb,<sp/>queue);</highlight></codeline>
+<codeline><highlight class="normal">sbfTport<sp/>tport<sp/>=<sp/>sbfTport_create<sp/>(mw,<sp/>&quot;default&quot;,<sp/>SBF_MW_ALL_THREADS);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Create<sp/>the<sp/>subscriber</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">static<sp/>void</highlight></codeline>
+<codeline><highlight class="normal">timerCb<sp/>(sbfTimer<sp/>timer,<sp/>void*<sp/>closure)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(&quot;%u<sp/>low=%llu<sp/>average=%llu<sp/>high=%llu&quot;<sp/>SBF_EOL,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gMessages,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gTimeLow<sp/>==<sp/>UINT64_MAX<sp/>?<sp/>0<sp/>:<sp/>(unsigned<sp/>long<sp/>long)gTimeLow,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gMessages<sp/>==<sp/>0<sp/>?<sp/>0<sp/>:<sp/>(unsigned<sp/>long<sp/>long)gTimeTotal<sp/>/<sp/>gMessages,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(unsigned<sp/>long<sp/>long)gTimeHigh);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">static<sp/>void</highlight></codeline>
+<codeline><highlight class="normal">messageCb<sp/>(sbfSub<sp/>sub,<sp/>sbfBuffer<sp/>buffer,<sp/>void*<sp/>closure)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t*<sp/>payload<sp/>=<sp/>sbfBuffer_getData<sp/>(buffer);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sbfTimer_create<sp/>(sbfMw_getDefaultThread<sp/>(mw),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timerCb,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline><highlight class="normal">sbfPub<sp/>pub<sp/>=<sp/>sbfPub_create<sp/>(tport,<sp/>queue,<sp/>&quot;topic&quot;,<sp/>NULL,<sp/>NULL);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>find<sp/>the<sp/>whole<sp/>example<sp/>of<sp/>the<sp/>subscriber<sp/><sp/><sp/>[here](https://gitlab.com/neueda/sbf/tree/master/tools/subscriber).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Requester<sp/>replier<sp/>example</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>TBD</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Download</highlight></codeline>
+<codeline><highlight class="normal">Download<sp/>the<sp/>source<sp/>code<sp/>from<sp/>GitLab<sp/>at<sp/>https://gitlab.com/neueda/sbf.</highlight></codeline>
+<codeline><highlight class="normal">SBT<sp/>run<sp/>under<sp/>Linux<sp/>OS<sp/>(Debian,<sp/>Ubuntu,<sp/>Centos<sp/>distros<sp/>are<sp/>highly<sp/>recommended).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Vagrant</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>are<sp/>running<sp/>on<sp/>OS<sp/>X<sp/>or<sp/>Windows<sp/>don&apos;t<sp/>worry,<sp/>we<sp/>provide<sp/>a<sp/>vagrant<sp/>file<sp/>to<sp/>create<sp/>a<sp/>VirtualBox<sp/>ubuntu<sp/>image<sp/>including<sp/>all<sp/>the<sp/>necessary<sp/>stuff<sp/>to<sp/>run.</highlight></codeline>
+<codeline><highlight class="normal">You<sp/>will<sp/>need<sp/>to<sp/>download<sp/>[VirtualBox](https://www.virtualbox.org/)<sp/>and<sp/>[Vagrant](https://www.vagrantup.com/).</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>Unzip<sp/>ubuntu.zip<sp/>folder</highlight></codeline>
+<codeline><highlight class="normal">`user@host:~$<sp/>unzip<sp/>ubuntu.zip`</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Change<sp/>your<sp/>directory<sp/>to<sp/>ubuntu.</highlight></codeline>
+<codeline><highlight class="normal">`user@host:~$<sp/>cd<sp/>ubuntu`</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Edit<sp/>the<sp/>`synced_folders`<sp/>file<sp/>and<sp/>replace<sp/>the<sp/>`hostpath`<sp/>pointing<sp/>to<sp/>your<sp/>shared<sp/>folder<sp/>(this<sp/>will<sp/>mount<sp/>the<sp/>directory<sp/>under<sp/>/mnt/host/).</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Run<sp/>vagrant</highlight></codeline>
+<codeline><highlight class="normal">`user@host:~/ubuntu$<sp/>vagrant<sp/>up`</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Now<sp/>you<sp/>are<sp/>ready<sp/>to<sp/>run<sp/>the<sp/>Ubuntu<sp/>image<sp/>on<sp/>VirtualBox</highlight></codeline>
+<codeline><highlight class="normal">6.<sp/>You<sp/>will<sp/>be<sp/>asked<sp/>to<sp/>prompt<sp/>your<sp/>username<sp/>and<sp/>password</highlight></codeline>
+<codeline><highlight class="normal">`username:vagrant`</highlight></codeline>
+<codeline><highlight class="normal">`password:vagrant`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Running<sp/>the<sp/>examples</highlight></codeline>
+<codeline><highlight class="normal">You<sp/>will<sp/>find<sp/>the<sp/>SBF<sp/>together<sp/>with<sp/>some<sp/>examples<sp/>at<sp/>GitLab<sp/>(https://gitlab.com/neueda.sbf/).<sp/>Thus,<sp/>clone<sp/>the<sp/>repository:</highlight></codeline>
+<codeline><highlight class="normal">`user@host:~$<sp/>git<sp/>clone<sp/>https://gitlab.com/neueda.sbf/`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Build<sp/>the<sp/>SBF</highlight></codeline>
+<codeline><highlight class="normal">Build<sp/>the<sp/>SBF<sp/>by<sp/>running<sp/>the<sp/>following<sp/>commands:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>sbf</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>build<sp/>&amp;&amp;<sp/>cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>build<sp/>&amp;&amp;<sp/>make<sp/>install</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">You<sp/>will<sp/>find<sp/>the<sp/>binaries<sp/>at<sp/>`cd<sp/>build/install/bin`.</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">sbf-replier</highlight></codeline>
+<codeline><highlight class="normal">sbf-requester</highlight></codeline>
+<codeline><highlight class="normal">sbf-publisher</highlight></codeline>
+<codeline><highlight class="normal">sbf-subscriber</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>requester<sp/>sends<sp/>messages<sp/>and<sp/>the<sp/>replier<sp/>reads<sp/>the<sp/>message<sp/>and<sp/>replies.</highlight></codeline>
+<codeline><highlight class="normal">Something<sp/>similar<sp/>for<sp/>the<sp/>publisher<sp/>and<sp/>subscriber.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Contribute</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>TBD</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>License</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>TBD</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>
