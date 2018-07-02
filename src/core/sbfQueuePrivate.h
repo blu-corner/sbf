@@ -43,7 +43,6 @@ struct sbfQueueImpl
     int               mFlags;
 
     int               mExited;
-    int               mDestroyed;
     sbfRefCount       mRefCount;
 
     sbfPool           mPool;

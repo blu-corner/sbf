@@ -24,7 +24,6 @@ sbfQueue_create (sbfMw mw, const char* name)
 
     queue->mPool = sbfPool_create (sizeof (struct sbfQueueItemImpl));
 
-    queue->mDestroyed = 0;
     sbfRefCount_init (&queue->mRefCount, 1);
 
     sbfQueueCreate (queue);
@@ -41,7 +40,7 @@ sbfQueue_destroy (sbfQueue queue)
 
     sbfHiResTimer_queueDestroy (queue);
 
-    queue->mDestroyed = 1;
+    sbfQueue_addRef (queue);
     sbfQueue_enqueue (queue, NULL, NULL);
     queue->mExited = 1;
 
@@ -92,9 +91,6 @@ sbfQueue_dispatch (sbfQueue queue)
 {
     sbfQueueItem item;
 
-    if (queue->mDestroyed)
-        return;
-
     sbfQueue_addRef (queue);
     sbfLog_debug (queue->mLog, "queue %p entered", queue);
 
@@ -107,7 +103,10 @@ sbfQueue_dispatch (sbfQueue queue)
                 item->mCb (item, item->mClosure);
             sbfPool_put (item);
             if (SBF_UNLIKELY (item->mCb == NULL))
+            {
+                sbfQueue_removeRef (queue);
                 break; /* NULL callback means destroyed */
+            }
         }
         sbfHiResTimer_queueDispatch (queue);
     }
