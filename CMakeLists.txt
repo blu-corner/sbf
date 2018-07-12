@@ -122,6 +122,7 @@ include_directories(
   )
 
 add_subdirectory(src)
+add_subdirectory(cpp)
 add_subdirectory(examples)
 
 install(EXPORT sbfcore DESTINATION lib/cmake/sbf COMPONENT dev)
