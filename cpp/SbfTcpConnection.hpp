@@ -22,6 +22,7 @@ public:
                       struct sbfQueueImpl* queue,
                       sbfTcpConnectionAddress* address,
                       bool isUnix,
+                      bool disableNagles,
                       SbfTcpConnectionDelegate* delegate)
         : mConnection (NULL),
           mLog (log),
@@ -29,6 +30,7 @@ public:
           mQueue (queue),
           mAddress (address),
           mIsUnix (isUnix),
+          mDisableNagles (disableNagles),
           mDelegate (delegate)
     {
     }
@@ -51,6 +53,7 @@ public:
                                                mQueue,
                                                mAddress,
                                                mIsUnix ? 1 : 0,
+                                               mDisableNagles ? 1 : 0,
                                                SbfTcpConnection::sbfTcpConnectionReadyCb,
                                                SbfTcpConnection::sbfTcpConnectionErrorCb,
                                                SbfTcpConnection::sbfTcpConnectionReadCb,
@@ -85,6 +88,7 @@ protected:
     struct sbfQueueImpl*      mQueue;
     sbfTcpConnectionAddress*  mAddress;
     bool                      mIsUnix;
+    bool                      mDisableNagles;
     SbfTcpConnectionDelegate* mDelegate;
     
 private:
