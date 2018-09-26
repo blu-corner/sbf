@@ -27,6 +27,13 @@ option(COVERAGE "Enable gcov coverage" OFF)
 include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
 
 # deps
+if(NOT SUBMODULE_ROOT_DIR)
+    set(SUBMODULE_ROOT_DIR ${PROJECT_SOURCE_DIR})
+endif()
+if(NOT SUBMODULE_PREFIX_DIR)
+    set(SUBMODULE_PREFIX_DIR ${CMAKE_BINARY_DIR})
+endif()
+
 find_package(Threads)
 find_library(EVENT_LIB
   NAMES event
@@ -42,10 +49,11 @@ if (EVENT_LIB AND EVENT_PTHREAD_LIB)
   message(STATUS "event-headers-found: " ${EVENT_INCLUDE_DIR})
   include_directories(${EVENT_INCLUDE_DIR})
 elseif (NOT event_FOUND)
-  set(LIBEVENT_CMAKE ${PROJECT_SOURCE_DIR}/ext/libevent CACHE PATH "Location of libevent-cmake" FORCE)
+  set(LIBEVENT_CMAKE ${SUBMODULE_ROOT_DIR}/ext/libevent CACHE PATH "Location of libevent-cmake" FORCE)
   message(STATUS "libevent-location: " ${LIBEVENT_CMAKE})
   ExternalProject_Add(
     libevent
+    PREFIX ${SUBMODULE_PREFIX_DIR}
     SOURCE_DIR ${LIBEVENT_CMAKE}
     CMAKE_ARGS -DEVENT__DISABLE_TESTS=ON -DEVENT__DISABLE_REGRESS=ON -DEVENT__DISABLE_OPENSSL=ON -DEVENT__DISABLE_SAMPLES=ON -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
     )
