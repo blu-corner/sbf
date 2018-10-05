@@ -11,6 +11,7 @@ set (SOURCES
     )
 
 add_library (sbfrequestreply SHARED ${SOURCES})
+target_link_libraries(sbfrequestreply sbfcommon sbftransport)
 
 install (TARGETS sbfrequestreply
          EXPORT sbfrequestreply

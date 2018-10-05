@@ -8,9 +8,11 @@ endif()
 
 if(WIN32)
   set(CMAKE_SHARED_LINKER_FLAGS "/FORCE:UNRESOLVED")
-  link_directories(${CMAKE_SOURCE_DIR}/thirdparty/pcre/win32/lib)
-  include_directories(${CMAKE_SOURCE_DIR}/thirdparty/getopt)
-  include_directories(${CMAKE_SOURCE_DIR}/thirdparty/pcre/win32/include)
+  set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
+  set(BUILD_SHARED_LIBS TRUE)
+  link_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/win32/lib)
+  include_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/getopt)
+  include_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/win32/include)
 endif()
 
 if(APPLE)
@@ -22,6 +24,7 @@ endif()
 
 option(DEBUG "Enable debug build" OFF)
 option(COVERAGE "Enable gcov coverage" OFF)
+option(EXAMPLES "Enable examples" ON)
 
 # allow external projects
 include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
@@ -55,13 +58,14 @@ elseif (NOT event_FOUND)
     libevent
     PREFIX ${SUBMODULE_PREFIX_DIR}
     SOURCE_DIR ${LIBEVENT_CMAKE}
-    CMAKE_ARGS -DEVENT__DISABLE_TESTS=ON -DEVENT__DISABLE_REGRESS=ON -DEVENT__DISABLE_OPENSSL=ON -DEVENT__DISABLE_SAMPLES=ON -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
+    CMAKE_ARGS -DEVENT__DISABLE_DEBUG=ON -DEVENT__DISABLE_BENCHMARK=ON -DEVENT__DISABLE_TESTS=ON -DEVENT__DISABLE_REGRESS=ON -DEVENT__DISABLE_OPENSSL=ON -DEVENT__DISABLE_SAMPLES=ON -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
     )
 endif()
 
 # add include and lib dir
 link_directories(${CMAKE_INSTALL_PREFIX}/lib)
-include_directories(${CMAKE_INSTALL_PREFIX}/include)
+include_directories(${CMAKE_INSTALL_PREFIX}/include
+					${CMAKE_INSTALL_PREFIX}/include/sbf)
 
 # set version info
 set(SBF_MAJOR_VERSION 1)
@@ -124,13 +128,16 @@ endif(COVERAGE)
 include_directories(
   ${PROJECT_SOURCE_DIR}/src/core
   ${PROJECT_SOURCE_DIR}/src/common
+  ${PROJECT_SOURCE_DIR}/src/network
   ${PROJECT_SOURCE_DIR}/src/requestreply
   ${PROJECT_SOURCE_DIR}/src/transport
   ${PROJECT_SOURCE_DIR}/src/handlers/common
   )
 
 add_subdirectory(src)
+if(EXAMPLES)
 add_subdirectory(examples)
+endif()
 
 install(EXPORT sbfcore DESTINATION lib/cmake/sbf COMPONENT dev)
 install(EXPORT sbfcommon DESTINATION lib/cmake/sbf COMPONENT dev)
@@ -139,9 +146,11 @@ install(EXPORT sbftcpmeshhandler DESTINATION lib/cmake/sbf COMPONENT dev)
 install(EXPORT sbfudphandler DESTINATION lib/cmake/sbf COMPONENT dev)
 install(EXPORT sbftransport  DESTINATION lib/cmake/sbf COMPONENT dev)
 install(EXPORT sbfrequestreply DESTINATION lib/cmake/sbf COMPONENT dev)
+install(EXPORT sbfnetwork DESTINATION lib/cmake/sbf COMPONENT dev)
 
 set(${PROJECT_NAME}_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include/sbf)
-set(${PROJECT_NAME}_LIBRARIES sbfcore sbfcommon sbfcommonhandler sbftcpmeshhandler sbfudphandler sbftransport sbfrequestreply)
+#set(${PROJECT_NAME}_LIBRARIES sbfcore sbfcommon sbfcommonhandler sbftcpmeshhandler sbfudphandler sbftransport sbfrequestreply)
+set(${PROJECT_NAME}_LIBRARIES sbfcore sbfcommon)
 configure_file(
   ${PROJECT_SOURCE_DIR}/${PROJECT_NAME}.cmake.in
   ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config-install.cmake

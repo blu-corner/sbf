@@ -23,8 +23,13 @@ sbfPropertiesLoadFile (const char* path, sbfKeyValue table, char** error)
     }
 
     line = NULL;
-    while ((linelen = getline (&line, &size, f)) != -1)
+	while (1)
     {
+		line = fgetln(f, &linelen);
+		if (ferror(f))
+			goto fail;
+		if (feof(f))
+			break;
         n++;
 
         while (linelen > 0 && line[linelen - 1] == '\n')
