@@ -1,10 +1,6 @@
 #include "sbfTcpConnection.h"
 #include "sbfTcpConnectionPrivate.h"
 
-//#include <sys/socket.h>
-//#include <netinet/in.h>
-//#include <netinet/tcp.h>
-
 static void
 sbfTcpConnectionBufferFreeCb (const void *data, size_t datalen, void* closure)
 {
