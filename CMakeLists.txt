@@ -13,6 +13,14 @@ if(WIN32)
   link_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/win32/lib)
   include_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/getopt)
   include_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/win32/include)
+
+  set(THIRDPARTY_INCLUDES ${CMAKE_SOURCE_DIR}/src/thirdparty/getopt/getopt.h
+						  ${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/win32/include/pcre.h
+						  ${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/win32/include/pcreposix.h
+						  ${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/win32/include/regex.h)
+
+  INSTALL(FILES ${THIRDPARTY_INCLUDES}
+          DESTINATION include/sbf)
 endif()
 
 if(APPLE)
