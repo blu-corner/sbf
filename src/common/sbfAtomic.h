@@ -9,20 +9,26 @@
 
 #include "sbfCommon.h"
 
-#ifdef WIN32
-#define sbfAtomic_swap InterlockedExchange
-#define sbfAtomic_swapP InterlockedExchangePointer
+static SBF_INLINE int64_t
+sbfAtomic_compareAndSwap (volatile int64_t* ptr,
+                          int64_t compare,
+                          int64_t replace)
+{
+#ifdef _WIN32
+    return _InterlockedCompareExchange64 (ptr, replace, compare) == compare;
 #else
-#define sbfAtomic_swap __sync_lock_test_and_set
-#define sbfAtomic_swapP __sync_lock_test_and_set
+    return __sync_bool_compare_and_swap (ptr, compare, replace);
 #endif
+}
 
-#ifdef WIN32
-#define sbfAtomic_compareAndSwap InterlockedCompareExchange
-#define sbfAtomic_compareAndSwapP InterlockedCompareExchangePointer
+static SBF_INLINE int64_t
+sbfAtomic_swap (volatile int64_t* ptr, int64_t value)
+{
+#ifdef _WIN32
+    return _InterlockedExchange64 (ptr, value);
 #else
-#define sbfAtomic_compareAndSwap __sync_bool_compare_and_swap
-#define sbfAtomic_compareAndSwapP __sync_bool_compare_and_swap
+    return __sync_lock_test_and_set (ptr, value);
 #endif
+}
 
 #endif /* _SBF_ATOMIC_H_ */
