@@ -17,8 +17,15 @@ set (SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfTopic.c"
     )
 
+set (LIBS sbfcommon
+		  sbfcore)
+if(WIN32)
+	set (LIBS "${LIBS}"
+			  pcre3)
+endif()
+
 add_library (sbftransport SHARED ${SOURCES})
-target_link_libraries (sbftransport sbfcommon sbfcore)
+target_link_libraries (sbftransport ${LIBS})
 
 install (TARGETS sbftransport
          EXPORT sbftransport

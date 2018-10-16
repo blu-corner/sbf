@@ -22,9 +22,6 @@ set (INSTALL_HEADERS
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfPoolInline.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfProperties.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfRefCount.h"
-    "${CMAKE_CURRENT_SOURCE_DIR}/sbfTcpConnection.h"
-    "${CMAKE_CURRENT_SOURCE_DIR}/sbfTcpListener.h"
-    "${CMAKE_CURRENT_SOURCE_DIR}/sbfUdpMulticast.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfVersion.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/syshash.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/sysqueue.h"
@@ -48,27 +45,36 @@ set (SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfPath.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfPerfCounter.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfPool.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/sbfProperties.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/sbfTcpConnection.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/sbfTcpListener.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/sbfUdpMulticast.c")
+    "${CMAKE_CURRENT_SOURCE_DIR}/sbfProperties.c")
+
+set (LIBS event_core
+		  event
+		  "${CMAKE_THREAD_LIBS_INIT}"
+		  "${CMAKE_DL_LIBS}")
 
 if(APPLE)
     set (INSTALL_HEADERS "${INSTALL_HEADERS}"
         "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonDarwin.h")
     set (SOURCES "${SOURCES}"
         "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonDarwin.c")
+	set (LIBS "${LIBS}"
+			 	event_pthreads)
 elseif(WIN32)
     set (INSTALL_HEADERS "${INSTALL_HEADERS}"
         "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonWin32.h"
-        "${CMAKE_SOURCE_DIR}/thirdparty/getopt/getopt.h")
+        "${CMAKE_SOURCE_DIR}/src/thirdparty/getopt/getopt.h")
     set (SOURCES "${SOURCES}"
         "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonWin32.c"
         "${CMAKE_CURRENT_SOURCE_DIR}/fgetln.c"
         "${CMAKE_CURRENT_SOURCE_DIR}/strlcat.c"
         "${CMAKE_CURRENT_SOURCE_DIR}/strlcpy.c"
-        "${CMAKE_SOURCE_DIR}/thirdparty/getopt/getopt.c"
-        "${CMAKE_SOURCE_DIR}/thirdparty/getopt/getopt_long.c")
+        "${CMAKE_SOURCE_DIR}/src/thirdparty/getopt/getopt.c")
+	set (LIBS "${LIBS}"
+			 	event_core
+				event_extra
+				Ws2_32.lib
+				Iphlpapi.lib
+				Pathcch.lib)
 else()
     set (INSTALL_HEADERS "${INSTALL_HEADERS}"
         "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonLinux.h")
@@ -77,10 +83,12 @@ else()
         "${CMAKE_CURRENT_SOURCE_DIR}/fgetln.c"
         "${CMAKE_CURRENT_SOURCE_DIR}/strlcat.c"
         "${CMAKE_CURRENT_SOURCE_DIR}/strlcpy.c")
+	set (LIBS "${LIBS}"
+			 	event_pthreads)
 endif()
 
 add_library (sbfcommon SHARED ${SOURCES})
-target_link_libraries (sbfcommon sbfcore)
+target_link_libraries (sbfcommon ${LIBS})
 
 install (TARGETS sbfcommon
          EXPORT sbfcommon

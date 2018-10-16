@@ -20,6 +20,7 @@
 
 #include <process.h>
 #include <winsock2.h> /* must be before windows.h */
+#include <pathcch.h>
 #include <io.h>
 #include <iphlpapi.h>
 #include <ws2tcpip.h>
@@ -30,6 +31,8 @@
 #include <getopt.h>
 
 SBF_BEGIN_DECLS
+
+#define u_int uint32_t
 
 typedef intptr_t sbfSocket;
 typedef SSIZE_T ssize_t;
@@ -93,6 +96,8 @@ typedef CRITICAL_SECTION sbfMutex;
 #define sbfSpinLock_destroy sbfMutex_destroy
 #define sbfSpinLock_lock sbfMutex_lock
 #define sbfSpinLock_unlock sbfMutex_unlock
+
+#define dirname(dir) PathCchRemoveFileSpec(dir, strlen(dir))
 
 static SBF_INLINE void
 sleep (u_int seconds)

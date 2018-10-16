@@ -40,16 +40,13 @@ sbfTcpListenerEventCb (struct evconnlistener* listener,
     sbfTcpConnection    tc;
     sbfTcpConnectionAddress sbfAddress;
 
-    if (sbfTcpListener_isUnix(tl))
-    {
-        struct sockaddr_un* sun = (struct sockaddr_un*)address;
-        memcpy(&(sbfAddress.sun), sun, sizeof(struct sockaddr_un));
-    }
-    else
-    {
-        struct sockaddr_in* sin = (struct sockaddr_in*)address;
-        memcpy(&(sbfAddress.sin), sin, sizeof(struct sockaddr_in));
-    }
+#ifndef WIN32
+	struct sockaddr_un* sun = (struct sockaddr_un*)address;
+	memcpy(&(sbfAddress.sun), sun, sizeof(struct sockaddr_un));
+#else
+	struct sockaddr_in* sin = (struct sockaddr_in*)address;
+	memcpy(&(sbfAddress.sin), sin, sizeof(struct sockaddr_in));
+#endif
 
     tc = sbfTcpConnection_wrap (tl->mLog, s, sbfTcpListener_isUnix(tl), 0, &sbfAddress);
     tc->mListener = tl;
@@ -87,8 +84,7 @@ sbfTcpListener_create (sbfLog log,
     tl->mDestroyed = 0;
     sbfRefCount_init (&tl->mRefCount, 1);
 
-    if (isUnix)
-    {
+#ifndef WIN32
         sbfLog_debug (tl->mLog,
                       "creating TCP listener %p: unix-path %s",
                       tl,
@@ -103,9 +99,7 @@ sbfTcpListener_create (sbfLog log,
                                                  -1,
                                                  (struct sockaddr*)&(address->sun),
                                                  sizeof(address->sun));
-    }
-    else
-    {
+#else
         sbfLog_debug (tl->mLog,
                       "creating TCP listener %p: port %hu",
                       tl,
@@ -120,7 +114,7 @@ sbfTcpListener_create (sbfLog log,
                                                  -1,
                                                  (struct sockaddr*)&(address->sin),
                                                  sizeof(address->sin));
-    }
+#endif
     
     if (tl->mListener == NULL)
     {

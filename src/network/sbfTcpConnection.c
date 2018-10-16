@@ -1,10 +1,6 @@
 #include "sbfTcpConnection.h"
 #include "sbfTcpConnectionPrivate.h"
 
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netinet/tcp.h>
-
 static void
 sbfTcpConnectionBufferFreeCb (const void *data, size_t datalen, void* closure)
 {
@@ -16,15 +12,12 @@ sbfTcpConnectionReadyQueueCb (sbfQueueItem item, void* closure)
 {
     sbfTcpConnection tc = closure;
 
-    if (tc->mIsUnix)
-    {
+#ifndef WIN32
         sbfLog_debug (tc->mLog,
                       "TCP connection %p %s ready",
                       tc,
                       tc->mPeer.sun.sun_path);
-    }
-    else
-    {
+#else
         char             tmp[INET_ADDRSTRLEN];
         inet_ntop (AF_INET, &tc->mPeer.sin.sin_addr, tmp, sizeof tmp);
         sbfLog_debug (tc->mLog,
@@ -32,7 +25,7 @@ sbfTcpConnectionReadyQueueCb (sbfQueueItem item, void* closure)
                       tc,
                       tmp,
                       ntohs (tc->mPeer.sin.sin_port));
-    }
+#endif
 
     if (tc->mReadyCb != NULL && !tc->mDestroyed)
         tc->mReadyCb (tc, tc->mClosure);
@@ -46,15 +39,12 @@ sbfTcpConnectionErrorQueueCb (sbfQueueItem item, void* closure)
 {
     sbfTcpConnection tc = closure;
 
-    if (tc->mIsUnix)
-    {
+#ifndef WIN32
         sbfLog_debug (tc->mLog,
                       "TCP connection %p %s error",
                       tc,
                       tc->mPeer.sun.sun_path);
-    }
-    else
-    {
+#else
         char             tmp[INET_ADDRSTRLEN];
 
         inet_ntop (AF_INET, &tc->mPeer.sin.sin_addr, tmp, sizeof tmp);
@@ -63,7 +53,7 @@ sbfTcpConnectionErrorQueueCb (sbfQueueItem item, void* closure)
                       tc,
                       tmp,
                       ntohs (tc->mPeer.sin.sin_port));
-    }
+#endif
 
     if (tc->mErrorCb != NULL && !tc->mDestroyed)
         tc->mErrorCb (tc, tc->mClosure);
@@ -269,18 +259,16 @@ sbfTcpConnection_create (sbfLog log,
     if (error != 0)
         goto fail;
 
-    if (isUnix)
-    {
+#ifndef WIN32
         error = bufferevent_socket_connect (tc->mEvent,
                                             (struct sockaddr*)&(address->sun),
                                             sizeof(address->sun));
-    }
-    else
-    {
+#else
         error = bufferevent_socket_connect (tc->mEvent,
                                             (struct sockaddr*)&(address->sin),
                                             sizeof(address->sin));
-    }
+#endif
+
     if (error != 0)
         goto fail;
 
@@ -321,22 +309,19 @@ sbfTcpConnection_accept (sbfTcpConnection tc,
     char     tmp[INET_ADDRSTRLEN];
     sbfError error;
 
-    if (tc->mIsUnix)
-    {
+#ifndef WIN32
         sbfLog_debug (tc->mLog,
                       "accepting TCP connection %p %s ready",
                       tc,
                       tc->mPeer.sun.sun_path);
-    }
-    else
-    {
+#else
         inet_ntop (AF_INET, &tc->mPeer.sin.sin_addr, tmp, sizeof tmp);
         sbfLog_debug (tc->mLog,
                       "accepting TCP connection %p from %s:%hu",
                       tc,
                       tmp,
                       ntohs (tc->mPeer.sin.sin_port));
-    }
+#endif
     
     error = sbfTcpConnectionSet (tc,
                                   thread,

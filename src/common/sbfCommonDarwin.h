@@ -16,6 +16,7 @@
 #include <arpa/inet.h>
 
 #include <netinet/in.h>
+#include <netinet/tcp.h>
 
 #include <assert.h>
 #include <ctype.h>
