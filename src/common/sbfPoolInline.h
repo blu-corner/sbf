@@ -78,12 +78,17 @@ static SBF_INLINE sbfPoolItem
 sbfPoolNextItem (sbfPool pool)
 {
     sbfPoolItem item;
+    uint64_t    value;
 
     sbfSpinLock_lock (&pool->mLock);
 
     item = pool->mAvailable;
     if (item == NULL)
-        item = sbfAtomic_swapP (&pool->mFree, NULL);
+    {
+        value = sbfAtomic_swap ((volatile int64_t*)&pool->mFree,
+                             (int64_t)NULL);
+        item = (sbfPoolItem)value;
+    }
     if (item != NULL)
         pool->mAvailable = item->mNext;
 
@@ -147,5 +152,7 @@ sbfPool_put (void* data)
 
     do
         item->mNext = pool->mFree;
-    while (!sbfAtomic_compareAndSwapP (&pool->mFree, item->mNext, item));
+    while (!sbfAtomic_compareAndSwap ((volatile int64_t*)&pool->mFree,
+                                      (int64_t)item->mNext,
+                                      (int64_t)item));
 }
