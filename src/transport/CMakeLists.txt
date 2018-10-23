@@ -21,7 +21,8 @@ set (LIBS sbfcommon
 		  sbfcore)
 if(WIN32)
 	set (LIBS "${LIBS}"
-			  pcre3)
+			  pcre
+              pcreposix)
 endif()
 
 add_library (sbftransport SHARED ${SOURCES})
