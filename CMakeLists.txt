@@ -10,17 +10,20 @@ if(WIN32)
   set(CMAKE_SHARED_LINKER_FLAGS "/FORCE:UNRESOLVED")
   set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
   set(BUILD_SHARED_LIBS TRUE)
-  link_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/win32/lib)
+  link_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/x64/lib)
   include_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/getopt)
-  include_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/win32/include)
+  include_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/x64/include)
 
+  file(GLOB THIRDPARTY_LIB ${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/x64/lib/*)
   set(THIRDPARTY_INCLUDES ${CMAKE_SOURCE_DIR}/src/thirdparty/getopt/getopt.h
-						  ${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/win32/include/pcre.h
-						  ${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/win32/include/pcreposix.h
-						  ${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/win32/include/regex.h)
+						  ${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/x64/include/pcre.h
+						  ${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/x64/include/pcreposix.h
+						  ${CMAKE_SOURCE_DIR}/src/thirdparty/pcre/x64/include/regex.h)
 
   INSTALL(FILES ${THIRDPARTY_INCLUDES}
           DESTINATION include/sbf)
+  INSTALL(FILES ${THIRDPARTY_LIB}
+          DESTINATION lib)
 endif()
 
 if(APPLE)
