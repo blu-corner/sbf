@@ -25,6 +25,10 @@ endif()
 add_library (sbfnetwork SHARED ${SOURCES})
 target_link_libraries (sbfnetwork ${LIBS})
 
+if (NOT EVENT_LIB)
+    add_dependencies (sbfnetwork libevent)
+endif()
+
 
 install (TARGETS sbfnetwork
          EXPORT sbfnetwork

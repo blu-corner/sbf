@@ -31,6 +31,10 @@ endif()
 add_library (sbfcore SHARED ${SOURCES})
 target_link_libraries (sbfcore ${LIBS})
 
+if (NOT EVENT_LIB)
+    add_dependencies (sbfcore libevent)
+endif()
+
 install (TARGETS sbfcore
          EXPORT sbfcore
          RUNTIME DESTINATION lib

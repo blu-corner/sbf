@@ -90,6 +90,10 @@ endif()
 add_library (sbfcommon SHARED ${SOURCES})
 target_link_libraries (sbfcommon ${LIBS})
 
+if (NOT EVENT_LIB)
+    add_dependencies (sbfcommon libevent)
+endif()
+
 install (TARGETS sbfcommon
          EXPORT sbfcommon
          COMPONENT library
