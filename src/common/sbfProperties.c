@@ -8,8 +8,7 @@ sbfPropertiesLoadFile (const char* path, sbfKeyValue table, char** error)
     char*   next;
     FILE*   f;
     char*   line;
-    ssize_t linelen;
-    size_t  size;
+    size_t linelen;
     char*   s;
     char*   value;
     u_int   n = 0;
