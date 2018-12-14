@@ -306,7 +306,6 @@ sbfTcpConnection_accept (sbfTcpConnection tc,
                          sbfTcpConnectionReadCb readCb,
                          void* closure)
 {
-    char     tmp[INET_ADDRSTRLEN];
     sbfError error;
 
 #ifndef WIN32
@@ -315,6 +314,7 @@ sbfTcpConnection_accept (sbfTcpConnection tc,
                       tc,
                       tc->mPeer.sun.sun_path);
 #else
+        char     tmp[INET_ADDRSTRLEN];
         inet_ntop (AF_INET, &tc->mPeer.sin.sin_addr, tmp, sizeof tmp);
         sbfLog_debug (tc->mLog,
                       "accepting TCP connection %p from %s:%hu",
