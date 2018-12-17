@@ -140,7 +140,7 @@ static SBF_INLINE void   sbfBuffer_setSize (sbfBuffer buffer, size_t size);
 
 #include "sbfBufferInline.h"
 
-sbfPool gSbfBufferDefaultPool;
+extern sbfPool gSbfBufferDefaultPool;
 
 SBF_END_DECLS
 
