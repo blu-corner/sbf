@@ -60,15 +60,18 @@ sbfUdpMulticast_create (sbfUdpMulticastType type,
         if (bind (s->mSocket, (struct sockaddr*)&sin, sizeof sin) < 0)
             goto fail;
 
-        memset (&im, 0, sizeof im);
-        im.imr_multiaddr.s_addr = address->sin_addr.s_addr;
-        im.imr_interface.s_addr = interf;
-        if (setsockopt (s->mSocket,
-                        IPPROTO_IP,
-                        IP_ADD_MEMBERSHIP,
-                        (void*)&im,
-                        sizeof im) < 0)
-            goto fail;
+        if ((address->sin_addr.s_addr & 0xFF) >= 224)
+        {
+            memset (&im, 0, sizeof im);
+            im.imr_multiaddr.s_addr = address->sin_addr.s_addr;
+            im.imr_interface.s_addr = interf;
+            if (setsockopt (s->mSocket,
+                            IPPROTO_IP,
+                            IP_ADD_MEMBERSHIP,
+                            (void*)&im,
+                            sizeof im) < 0)
+                goto fail; 
+        }
     }
 
     return s;
