@@ -31,4 +31,24 @@ sbfAtomic_swap (volatile int64_t* ptr, int64_t value)
 #endif
 }
 
+static SBF_INLINE int64_t
+sbfAtomic_increment (volatile int64_t* ptr, int64_t value)
+{
+#ifdef _WIN32
+    return _InterlockedExchangeAdd64 (ptr, value);
+#else
+    return __sync_fetch_and_add (ptr, value);
+#endif
+}
+
+static SBF_INLINE int64_t
+sbfAtomic_decrement (volatile int64_t* ptr, int64_t value)
+{
+#ifdef _WIN32
+    return _InterlockedExchangeAdd64 (ptr, -value) - value;
+#else
+    return __sync_sub_and_fetch (ptr, value);
+#endif
+}
+
 #endif /* _SBF_ATOMIC_H_ */
