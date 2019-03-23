@@ -54,6 +54,13 @@ void sbfUdpMulticast_destroy (sbfUdpMulticast s);
  */
 sbfSocket sbfUdpMulticast_getSocket (sbfUdpMulticast s);
 
+/*!
+   \brief Returns the address which sent the last received packet.
+   \param s the UDP multicast handler.
+   \return pointer to the sockaddr_in struct containing the address.
+ */
+const struct sockaddr_in* sbfUdpMulticast_getReceiveAddress (sbfUdpMulticast s);
+
 /*! Macro to send a buffer. */
 #define sbfUdpMulticast_sendBuffer(s, b) \
     sbfUdpMulticast_send (s, sbfBuffer_getData (b), sbfBuffer_getSize (b))

@@ -11,6 +11,7 @@ struct sbfUdpMulticastImpl
 
     sbfSocket           mSocket;
     struct sockaddr_in  mAddress;
+    struct sockaddr_in  mReceiveAddress;
 
     sbfPool             mPool;
 };
