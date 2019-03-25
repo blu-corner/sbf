@@ -23,6 +23,8 @@ sbfUdpMulticast_create (sbfUdpMulticastType type,
     memcpy (&s->mAddress, address, sizeof s->mAddress);
     s->mAddress.sin_family = AF_INET;
 
+    memset (&s->mReceiveAddress, 0x0, sizeof s->mReceiveAddress);
+
     s->mSocket = socket (AF_INET, SOCK_DGRAM, IPPROTO_UDP);
     if (s->mSocket < 0)
         goto fail;
@@ -97,6 +99,12 @@ sbfUdpMulticast_getSocket (sbfUdpMulticast s)
     return s->mSocket;
 }
 
+const struct sockaddr_in*
+sbfUdpMulticast_getReceiveAddress (sbfUdpMulticast s)
+{
+    return &s->mReceiveAddress;
+}
+
 sbfError
 sbfUdpMulticast_send (sbfUdpMulticast s, const void* buf, size_t len)
 {
@@ -129,6 +137,7 @@ sbfUdpMulticast_read (sbfUdpMulticast s,
     sbfError  error;
     u_int     i;
     int       used;
+    socklen_t sockLen = sizeof (s->mReceiveAddress);
 
     error = 0;
     buffer = NULL;
@@ -137,10 +146,12 @@ sbfUdpMulticast_read (sbfUdpMulticast s,
     {
         buffer = sbfBuffer_new (s->mPool, SBF_UDP_MULTICAST_SIZE_LIMIT);
 
-        used = recv (s->mSocket,
-                     sbfBuffer_getData (buffer),
-                     sbfBuffer_getSize (buffer),
-                     0);
+        used = recvfrom (s->mSocket,
+                         sbfBuffer_getData (buffer),
+                         sbfBuffer_getSize (buffer),
+                         0,
+                         (struct sockaddr*)&s->mReceiveAddress,
+                         &sockLen);
         if (used == 0)
             break;
         if (used == -1)
