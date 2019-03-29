@@ -25,9 +25,7 @@ before_script:
     - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:`pwd`/install/lib
 
 script:
-    - cmake -DCOVERAGE=ON -DTESTS=ON ../
+    - cmake ../
     - build-wrapper-linux-x86-64 --out-dir ./Linux-output make install
-    - ./install/bin/unittest
-    - gcov `find ./src/ ./test -regextype posix-egrep -regex ".*\\.(o)"`
     - cd ../
     - sonar-scanner
