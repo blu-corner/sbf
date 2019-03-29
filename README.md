@@ -1,4 +1,4 @@
-# SBF (Super Blazing Fast) a messaging orientated middleware in C.
+# SBF (Super Blazing Fast) a messaging orientated middleware in C. [![Build Status](https://travis-ci.com/blu-corner/sbf.svg?branch=master)](https://travis-ci.com/blu-corner/sbf) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=blu-corner_sbf&metric=alert_status)](https://sonarcloud.io/dashboard?id=blu-corner_sbf)
 
 SBF gives publish/subscribe and request/reply messaging semantics in addition to core networking libraries and common utils (queues, timers and event handling) to build applications. The library uses async callback idiom to deliver messages/events/timers etc. The core event engine is provided by the open source library libevent.
 
