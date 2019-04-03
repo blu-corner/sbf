@@ -57,10 +57,18 @@ find_library(EVENT_LIB
 find_library(EVENT_PTHREAD_LIB
   NAMES event_pthreads
   HINTS "${CMAKE_INSTALL_PREFIX}/lib")
+find_library(EVENT_CORE_LIB
+  NAMES event_core
+  HINTS "${CMAKE_INSTALL_PREFIX}/lib")
+find_library(EVENT_EXTRA_LIB
+  NAMES event_extra
+  HINTS "${CMAKE_INSTALL_PREFIX}/lib")
 find_path(EVENT_INCLUDE_DIR event2/event.h
   PATHS "${CMAKE_INSTALL_PREFIX}/include")
+
 if (EVENT_LIB AND EVENT_PTHREAD_LIB)
   message(STATUS "event-found: " ${EVENT_LIB})
+  message(STATUS "event-core-found: " ${EVENT_CORE_LIB})
   message(STATUS "event-pthread-found: " ${EVENT_PTHREAD_LIB})
   message(STATUS "event-headers-found: " ${EVENT_INCLUDE_DIR})
   include_directories(${EVENT_INCLUDE_DIR})
@@ -73,12 +81,16 @@ elseif (NOT event_FOUND)
     SOURCE_DIR ${LIBEVENT_CMAKE}
     CMAKE_ARGS -DEVENT__DISABLE_DEBUG=ON -DEVENT__DISABLE_BENCHMARK=ON -DEVENT__DISABLE_TESTS=ON -DEVENT__DISABLE_REGRESS=ON -DEVENT__DISABLE_OPENSSL=ON -DEVENT__DISABLE_SAMPLES=ON -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
     )
+  set(EVENT_LIB event)
+  set(EVENT_CORE_LIB event_core)
+  set(EVENT_PTHREAD_LIB event_pthreads)
+  set(EVENT_EXTRA_LIB event_extra)
 endif()
 
 # add include and lib dir
 link_directories(${CMAKE_INSTALL_PREFIX}/lib)
 include_directories(${CMAKE_INSTALL_PREFIX}/include
-					${CMAKE_INSTALL_PREFIX}/include/sbf)
+  ${CMAKE_INSTALL_PREFIX}/include/sbf)
 
 # set version info
 set(SBF_MAJOR_VERSION 1)

@@ -9,17 +9,18 @@ set (SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfUdpMulticast.c")
 
 set (LIBS sbfcommon
-		  sbfcore
-		  event
-		  ${CMAKE_THREAD_LIBS_INIT}
-		  ${CMAKE_DL_LIBS})
+  sbfcore
+  ${EVENT_LIB}
+  ${CMAKE_THREAD_LIBS_INIT}
+  ${CMAKE_DL_LIBS})
+
 if(WIN32)
-	set (LIBS "${LIBS}"
-			  event_core
-			  event_extra)
+  set (LIBS "${LIBS}"
+    ${EVENT_CORE_LIB}
+    ${EVENT_EXTRA_LIB})
 else()
-	set (LIBS "${LIBS}"
-			  event_pthreads)
+  set (LIBS "${LIBS}"
+    ${EVENT_PTHREAD_LIB})
 endif()
 
 add_library (sbfnetwork SHARED ${SOURCES})
@@ -28,7 +29,6 @@ target_link_libraries (sbfnetwork ${LIBS})
 if (NOT EVENT_LIB)
     add_dependencies (sbfnetwork libevent)
 endif()
-
 
 install (TARGETS sbfnetwork
          EXPORT sbfnetwork
