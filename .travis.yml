@@ -28,4 +28,4 @@ script:
     - cmake ../
     - build-wrapper-linux-x86-64 --out-dir ./Linux-output make install
     - cd ../
-    - sonar-scanner
+    - 'if [ "$TRAVIS_PULL_REQUEST" = "false"  ]; then sonar-scanner; fi' # sonar only on non-PRs
