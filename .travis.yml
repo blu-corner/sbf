@@ -2,7 +2,6 @@ language: cpp
 compiler: gcc
 os:
     - linux
-sudo: required
 
 branches:
     only:
@@ -11,10 +10,6 @@ branches:
 addons:
     sonarcloud:
         organization: "neueda-blu-corner"
-
-before_install:
-    - sudo apt-get update
-    - sudo apt-get install -y vera++ cppcheck valgrind gcovr unzip
 
 before_script:
     - wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
