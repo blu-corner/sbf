@@ -23,8 +23,6 @@ sbfShmRingBuffer sbfShmRingBuffer_create (
 
 sbfShmRingBuffer sbfShmRingBuffer_attach (
     const char* path,
-    size_t elementSize,
-    size_t numberElements,
     const char** errorText);
 
 void sbfShmRingBuffer_destroy (sbfShmRingBuffer buffer);

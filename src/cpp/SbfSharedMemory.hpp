@@ -26,13 +26,9 @@ namespace neueda
         }
 
         static SbfShmRingBuffer* attach (const char* path,
-                                         size_t elementSize,
-                                         size_t numberElements,
                                          std::string& error) {
             const char* errorText = NULL;
             sbfShmRingBuffer buffer = sbfShmRingBuffer_attach (path,
-                                                               elementSize,
-                                                               numberElements,
                                                                &errorText);
             if (buffer == NULL) {
                 error.assign (errorText);
@@ -55,7 +51,7 @@ namespace neueda
         }
 
         bool empty () const {
-            sbfShmRingBuffer_empty (mHandle) == 1;
+            return sbfShmRingBuffer_empty (mHandle) == 1;
         }
 
         bool isFileBased () const {
@@ -67,34 +63,34 @@ namespace neueda
 
             std::string path;
             if (cpath != NULL) {
-                path.assign (cpath)
+                path.assign (cpath);
             }
             
             return path;
         }
 
         bool enqueue (const void* data, size_t length) {
-            return sbfShmRingBuffer_enqueue (data, length) == 0;
+            return sbfShmRingBuffer_enqueue (mHandle, data, length) == 0;
         }
 
         bool dequeue (void* data, size_t length) {
-            return sbfShmRingBuffer_dequeue (data, length) == 0;
+            return sbfShmRingBuffer_dequeue (mHandle, data, length) == 0;
         }
 
-        bool allocatedDequeue (void* data, size_t length) {
-            return sbfShmRingBuffer_dequeueAllocated (data, length) == 0;
+        bool allocatedDequeue (void** data, size_t* length) {
+            return sbfShmRingBuffer_dequeueAllocated (mHandle, data, length) == 0;
         }
 
         bool blockingEnqueue (const void* data, size_t length) {
-            return sbfShmRingBuffer_blockingEnqueue (data, length) == 0;
+            return sbfShmRingBuffer_blockingEnqueue (mHandle, data, length) == 0;
         }
 
         bool blockingDequeue (void* data, size_t length) {
-            return sbfShmRingBuffer_blockingDequeue (data, length) == 0;
+            return sbfShmRingBuffer_blockingDequeue (mHandle, data, length) == 0;
         }
 
-        bool blockingAllocatedDequeue (void* data, size_t length) {
-            return sbfShmRingBuffer_blockingDequeueAllocated (data, length) == 0;
+        bool blockingAllocatedDequeue (void** data, size_t* length) {
+            return sbfShmRingBuffer_blockingDequeueAllocated (mHandle, data, length) == 0;
         }
 
     private:

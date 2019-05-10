@@ -5,8 +5,6 @@ int main (int argc, char** argv)
 {
     const char* errorText = NULL;
     sbfShmRingBuffer buffer = sbfShmRingBuffer_attach ("./shm1.dat",
-                                                       5,  // element size
-                                                       5,  // capacity
                                                        &errorText);
     if (buffer == NULL) {
         fprintf (stderr, "failed to attach ring-buffer: %s\n", errorText);

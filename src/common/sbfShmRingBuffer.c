@@ -134,26 +134,23 @@ sbfShmRingBuffer_attach (const char* path, const char ** errorText)
     }
 
     // get file size
-    if (fseek (fp, 0L, SEEK_END) == -1) {
-        close (fd);
-        *errorText = strerror (errno);
-        return NULL;
-    }
-    
-    long totalSize = ftell (fp);
-    if (totalSize == -1) {
+    off_t offset;
+    if ((offset = lseek (fd, 0L, SEEK_END)) == (off_t)-1) {
         close (fd);
         *errorText = strerror (errno);
         return NULL;
     }
 
+    // total size is the offset from the begining
+    size_t totalSize = offset;
+
     // shared memory address
-    addr = mmap (NULL,                   /* addr */
-                 totalSize,              /* total size */
-                 PROT_READ | PROT_WRITE, /* mode */
-                 MAP_SHARED,             /* attribs */
-                 fd,                     /* fd */
-                 0);                     /* offset */
+    void* addr = mmap (NULL,                   /* addr */
+                       totalSize,              /* total size */
+                       PROT_READ | PROT_WRITE, /* mode */
+                       MAP_SHARED,             /* attribs */
+                       fd,                     /* fd */
+                       0);                     /* offset */
     if (addr == (void*)-1) {
         *errorText = strerror (errno);
         close (fd);
