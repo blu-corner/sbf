@@ -177,7 +177,7 @@ main (int argc, char** argv)
 
     // Initialise the logging system
     log = sbfLog_create (NULL, "%s", "");
-    sbfLog_setLevel (log, SBF_LOG_DEBUG);
+    sbfLog_setLevel (log, SBF_LOG_OFF);
 
     // Apply command options and print message if wrong option is found
     while ((opt = getopt (argc, argv, "h:i:r:s:t:v:")) != -1) {
