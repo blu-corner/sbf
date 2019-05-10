@@ -1,14 +1,14 @@
-#include "sbfSharedMemoryRingBuffer.h"
+#include "sbfShmRingBuffer.h"
 #include "stdbool.h"
 
 
 int main (int argc, char** argv)
 {
     const char* errorText = NULL;
-    sbfShmMemoryRingBuffer buffer = sbfShmMemoryRingBuffer_create ("./shm1.dat",
-                                                                   6,  // element size
-                                                                   5, // capacity
-                                                                   &errorText);
+    sbfShmRingBuffer buffer = sbfShmRingBuffer_create ("./shm1.dat",
+                                                       6,  // element size
+                                                       5,  // capacity
+                                                       &errorText);
     if (buffer == NULL) {
         fprintf (stderr, "failed to create ring-buffer: %s\n", errorText);
         return -1;
@@ -22,7 +22,7 @@ int main (int argc, char** argv)
         snprintf (data, sizeof data, "cake%i", i);
         printf("ENQUEUE: [%i] - [%s]\n", i, data);
         
-        ok = sbfShmMemoryRingBuffer_blockingEnqueue (buffer, (const void*)data, sizeof data) == 0;
+        ok = sbfShmRingBuffer_blockingEnqueue (buffer, (const void*)data, sizeof data) == 0;
         if (!ok) {
             fprintf (stderr, "failed to insert");
             return -1;
@@ -35,7 +35,7 @@ int main (int argc, char** argv)
     snprintf (data, sizeof data, "cake%i", i);
     printf("ENQUEUE: [%i] - [%s]\n", i, data);
     
-    ok = sbfShmMemoryRingBuffer_blockingEnqueue (buffer, (const void*)data, sizeof data) == 0;
+    ok = sbfShmRingBuffer_blockingEnqueue (buffer, (const void*)data, sizeof data) == 0;
     if (!ok) {
         fprintf (stderr, "failed to insert");
         return -1;
@@ -47,14 +47,14 @@ int main (int argc, char** argv)
         snprintf (data, sizeof data, "cake%i", i);
         printf("ENQUEUE: [%i] - [%s]\n", i, data);
         
-        ok = sbfShmMemoryRingBuffer_blockingEnqueue (buffer, (const void*)data, sizeof data) == 0;
+        ok = sbfShmRingBuffer_blockingEnqueue (buffer, (const void*)data, sizeof data) == 0;
         if (!ok) {
             fprintf (stderr, "failed to insert");
             return -1;
         }
     }
 
-    sbfShmMemoryRingBuffer_destroy (buffer);
+    sbfShmRingBuffer_destroy (buffer);
     
     return 0;
 }

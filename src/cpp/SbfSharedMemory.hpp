@@ -1,95 +1,106 @@
 #pragma once
 
-#include "sbfSharedMemoryRingBuffer.h"
+#include "sbfShmRingBuffer.h"
 #include <string>
 
 
 namespace neueda
 {
-    class SbfSharedMemoryRingBuffer {
+    class SbfShmRingBuffer {
     public:
-        static SbfSharedMemoryRingBuffer* create (const char* path,
-                                                  size_t elementSize,
-                                                  size_t numberElements,
-                                                  std::string& error) {
+        static SbfShmRingBuffer* create (const char* path,
+                                         size_t elementSize,
+                                         size_t numberElements,
+                                         std::string& error) {
             const char* errorText = NULL;
-            sbfShmMemoryRingBuffer buffer = sbfShmMemoryRingBuffer_create (path,
-                                                                           elementSize,
-                                                                           numberElements,
-                                                                           &errorText);
+            sbfShmRingBuffer buffer = sbfShmRingBuffer_create (path,
+                                                               elementSize,
+                                                               numberElements,
+                                                               &errorText);
             if (buffer == NULL) {
                 error.assign (errorText);
                 return nullptr;
             }
 
-            return new SbfSharedMemoryRingBuffer (buffer);
+            return new SbfShmRingBuffer (buffer);
         }
 
-        static SbfSharedMemoryRingBuffer* attach (const char* path,
-                                                  size_t elementSize,
-                                                  size_t numberElements,
-                                                  std::string& error) {
+        static SbfShmRingBuffer* attach (const char* path,
+                                         size_t elementSize,
+                                         size_t numberElements,
+                                         std::string& error) {
             const char* errorText = NULL;
-            sbfShmMemoryRingBuffer buffer = sbfShmMemoryRingBuffer_attach (path,
-                                                                           elementSize,
-                                                                           numberElements,
-                                                                           &errorText);
+            sbfShmRingBuffer buffer = sbfShmRingBuffer_attach (path,
+                                                               elementSize,
+                                                               numberElements,
+                                                               &errorText);
             if (buffer == NULL) {
                 error.assign (errorText);
                 return nullptr;
             }
 
-            return new SbfSharedMemoryRingBuffer (buffer);
+            return new SbfShmRingBuffer (buffer);
         }
 
-        ~SbfSharedMemoryRingBuffer() {
-            sbfShmMemoryRingBuffer_destroy (mHandle);
+        ~SbfShmRingBuffer() {
+            sbfShmRingBuffer_destroy (mHandle);
         }
         
         size_t getSize () const {
-            return sbfShmMemoryRingBuffer_size (mHandle);
+            return sbfShmRingBuffer_size (mHandle);
         }
 
         size_t getCapacity () const {
-            return sbfShmMemoryRingBuffer_capacity (mHandle);
+            return sbfShmRingBuffer_capacity (mHandle);
         }
 
         bool empty () const {
-            sbfShmMemoryRingBuffer_empty (mHandle) == 1;
+            sbfShmRingBuffer_empty (mHandle) == 1;
         }
 
         bool isFileBased () const {
-            return sbfShmMemoryRingBuffer_isFileBased (mHandle) == 1;
+            return sbfShmRingBuffer_isFileBased (mHandle) == 1;
+        }
+
+        std::string getFilePath () const {
+            const char* cpath = sbfShmRingBuffer_getFilePath (mHandle);
+
+            std::string path;
+            if (cpath != NULL) {
+                path.assign (cpath)
+            }
+            
+            return path;
         }
 
         bool enqueue (const void* data, size_t length) {
-            return sbfShmMemoryRingBuffer_enqueue (data, length) == 0;
+            return sbfShmRingBuffer_enqueue (data, length) == 0;
         }
 
         bool dequeue (void* data, size_t length) {
-            return sbfShmMemoryRingBuffer_dequeue (data, length) == 0;
+            return sbfShmRingBuffer_dequeue (data, length) == 0;
         }
 
         bool allocatedDequeue (void* data, size_t length) {
-            return sbfShmMemoryRingBuffer_dequeueAllocated (data, length) == 0;
+            return sbfShmRingBuffer_dequeueAllocated (data, length) == 0;
         }
 
         bool blockingEnqueue (const void* data, size_t length) {
-            return sbfShmMemoryRingBuffer_blockingEnqueue (data, length) == 0;
+            return sbfShmRingBuffer_blockingEnqueue (data, length) == 0;
         }
 
         bool blockingDequeue (void* data, size_t length) {
-            return sbfShmMemoryRingBuffer_blockingDequeue (data, length) == 0;
+            return sbfShmRingBuffer_blockingDequeue (data, length) == 0;
         }
 
         bool blockingAllocatedDequeue (void* data, size_t length) {
-            return sbfShmMemoryRingBuffer_blockingDequeueAllocated (data, length) == 0;
+            return sbfShmRingBuffer_blockingDequeueAllocated (data, length) == 0;
         }
 
     private:
-        SbfSharedMemoryRingBuffer (sbfShmMemoryRingBuffer handle)
+        SbfShmRingBuffer (sbfShmRingBuffer handle)
             : mHandle (handle) { }
         
-        sbfShmMemoryRingBuffer mHandle;
+        sbfShmRingBuffer mHandle;
     };
 }

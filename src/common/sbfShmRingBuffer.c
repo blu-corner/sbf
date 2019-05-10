@@ -1,5 +1,5 @@
-#include "sbfSharedMemoryRingBuffer.h"
-#include "sbfSharedMemoryRingBufferPrivate.h"
+#include "sbfShmRingBuffer.h"
+#include "sbfShmRingBufferPrivate.h"
 
 
 static const char* SBF_SHARED_MEMOERY_ERRORS[] = {
@@ -10,23 +10,29 @@ static const char* SBF_SHARED_MEMOERY_ERRORS[] = {
 #define SBF_SHM_CREATE_FILE_ALREADY_EXISTS  SBF_SHARED_MEMOERY_ERRORS[0]
 #define SBF_SHM_ATTACH_FILE_DOESNT_EXIST    SBF_SHARED_MEMOERY_ERRORS[1]
 
-static const char SBF_SHARED_MEMORY_TRAILER[] = "SBF_SHARED_MEMORY";
+static const char SBF_SHARED_MEMORY_TRAILER[] = "_SBF";
 
 
-sbfShmMemoryRingBuffer
-sbfShmMemoryRingBuffer_create (const char* path,
-                               size_t elementSize,
-                               size_t numberElements,
-                               const char ** errorText)
+sbfShmRingBuffer
+sbfShmRingBuffer_create (const char* path,
+                         size_t elementSize,
+                         size_t numberElements,
+                         const char** errorText)
 {
     int alignedElementSize = elementSize + (elementSize % (sizeof (int)));
-    int totalSize = sizeof (struct sbfShmRingBufferHeaderImpl)
-        + (alignedElementSize * numberElements);
+    int totalSize = sizeof (struct sbfShmRingBufferHeaderImpl) /* header */
+        + (alignedElementSize * numberElements)              /* buffer itself */
+        + sizeof (SBF_SHARED_MEMORY_TRAILER);                /* trailer */
 
     int fd = -1;
     void* addr;
     if (path == NULL)  {
-        addr = mmap (NULL, totalSize, PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+        addr = mmap (NULL,                       // addr
+                     totalSize,                  // total size
+                     PROT_READ | PROT_WRITE,     // mode
+                     MAP_SHARED | MAP_ANONYMOUS, // attributes
+                     -1,                         // fd
+                     0);                         // offset
     } else {
         // check already exists
         if (access (path, F_OK) != -1) {
@@ -50,14 +56,21 @@ sbfShmMemoryRingBuffer_create (const char* path,
         }
 
         // write a trailer to ensure the length
-        if (write(fd, SBF_SHARED_MEMORY_TRAILER, sizeof (SBF_SHARED_MEMORY_TRAILER)) == -1) {
+        if (write (fd, SBF_SHARED_MEMORY_TRAILER,
+                  sizeof (SBF_SHARED_MEMORY_TRAILER)) == -1)
+        {
             *errorText = strerror (errno);
             close (fd);
             return NULL;
         }
 
         // shared memory address
-        addr = mmap (NULL, totalSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+        addr = mmap (NULL,                   /* addr */
+                     totalSize,              /* total size */
+                     PROT_READ | PROT_WRITE, /* mode */
+                     MAP_SHARED,             /* attribs */
+                     fd,                     /* fd */
+                     0);                     /* offset */
     }
 
     if (addr == (void*)-1) {
@@ -67,7 +80,8 @@ sbfShmMemoryRingBuffer_create (const char* path,
         return NULL;
     }
     
-    struct sbfShmRingBufferHeaderImpl* header = (struct sbfShmRingBufferHeaderImpl*)addr;
+    struct sbfShmRingBufferHeaderImpl* header =
+        (struct sbfShmRingBufferHeaderImpl*)addr;
     header->mHead = 0;
     header->mTail = 0;
     header->mSize = totalSize;
@@ -88,9 +102,10 @@ sbfShmMemoryRingBuffer_create (const char* path,
     sbfCondVar_init_attr (&(header->mEnqueueCond), &condAttr);
     sbfCondVar_init_attr (&(header->mDequeueCond), &condAttr);
 
-    unsigned char* ringBuffer = (unsigned char*)addr + sizeof(struct sbfShmRingBufferHeaderImpl);
+    unsigned char* ringBuffer = (unsigned char*)addr
+        + sizeof(struct sbfShmRingBufferHeaderImpl);
     
-    sbfShmMemoryRingBuffer buffer;
+    sbfShmRingBuffer buffer;
     buffer = xmalloc (sizeof (*buffer));
     buffer->mFile = xstrdup (path);
     buffer->mFd = fd;
@@ -102,16 +117,9 @@ sbfShmMemoryRingBuffer_create (const char* path,
     return buffer;
 }
 
-sbfShmMemoryRingBuffer
-sbfShmMemoryRingBuffer_attach (const char* path,
-                               size_t elementSize,
-                               size_t numberElements,
-                               const char ** errorText)
+sbfShmRingBuffer
+sbfShmRingBuffer_attach (const char* path, const char ** errorText)
 {
-    int alignedElementSize = elementSize + (elementSize % (sizeof (int)));
-    int totalSize = sizeof (struct sbfShmRingBufferHeaderImpl)
-        + (alignedElementSize * numberElements);
-
     // file needs to exist
     if (access (path, W_OK) != 0) {
         *errorText = SBF_SHM_ATTACH_FILE_DOESNT_EXIST;
@@ -125,17 +133,37 @@ sbfShmMemoryRingBuffer_attach (const char* path,
         return NULL;
     }
 
+    // get file size
+    if (fseek (fp, 0L, SEEK_END) == -1) {
+        close (fd);
+        *errorText = strerror (errno);
+        return NULL;
+    }
+    
+    long totalSize = ftell (fp);
+    if (totalSize == -1) {
+        close (fd);
+        *errorText = strerror (errno);
+        return NULL;
+    }
+
     // shared memory address
-    void* addr = mmap (NULL, totalSize, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+    addr = mmap (NULL,                   /* addr */
+                 totalSize,              /* total size */
+                 PROT_READ | PROT_WRITE, /* mode */
+                 MAP_SHARED,             /* attribs */
+                 fd,                     /* fd */
+                 0);                     /* offset */
     if (addr == (void*)-1) {
         *errorText = strerror (errno);
         close (fd);
         return NULL;
     }
 
-    unsigned char* ringBuffer = (unsigned char*)addr + sizeof(struct sbfShmRingBufferHeaderImpl);
+    unsigned char* ringBuffer =
+        (unsigned char*)addr + sizeof(struct sbfShmRingBufferHeaderImpl);
 
-    sbfShmMemoryRingBuffer buffer;
+    sbfShmRingBuffer buffer;
     buffer = xmalloc (sizeof (*buffer));
     buffer->mFile = xstrdup (path);
     buffer->mFd = fd;
@@ -148,7 +176,7 @@ sbfShmMemoryRingBuffer_attach (const char* path,
 }
 
 static void
-sbfShmMemoryRingBuffer_signal (sbfShmMemoryRingBuffer buffer)
+sbfShmRingBuffer_signal (sbfShmRingBuffer buffer)
 {
     buffer->mDidSignal = 1;
     sbfCondVar_signal (&(buffer->mHeader->mEnqueueCond));
@@ -156,10 +184,10 @@ sbfShmMemoryRingBuffer_signal (sbfShmMemoryRingBuffer buffer)
 }
 
 void
-sbfShmMemoryRingBuffer_destroy (sbfShmMemoryRingBuffer buffer)
+sbfShmRingBuffer_destroy (sbfShmRingBuffer buffer)
 {
     // signal for the blocking api to allow them to escape
-    sbfShmMemoryRingBuffer_signal (buffer);
+    sbfShmRingBuffer_signal (buffer);
     
     if (buffer->mFile != NULL)
         free (buffer->mFile);
@@ -172,35 +200,42 @@ sbfShmMemoryRingBuffer_destroy (sbfShmMemoryRingBuffer buffer)
 }
 
 size_t
-sbfShmMemoryRingBuffer_size (sbfShmMemoryRingBuffer buffer)
+sbfShmRingBuffer_size (sbfShmRingBuffer buffer)
 {
     return buffer->mHeader->mElements;
 }
 
 size_t
-sbfShmMemoryRingBuffer_capacity (sbfShmMemoryRingBuffer buffer)
+sbfShmRingBuffer_capacity (sbfShmRingBuffer buffer)
 {
     return buffer->mHeader->mSize;
 }
 
 int
-sbfShmMemoryRingBuffer_empty (sbfShmMemoryRingBuffer buffer)
+sbfShmRingBuffer_empty (sbfShmRingBuffer buffer)
 {
     return buffer->mHeader->mElements == 0;
 }
 
 int
-sbfShmMemoryRingBuffer_isFileBased (sbfShmMemoryRingBuffer buffer)
+sbfShmRingBuffer_isFileBased (sbfShmRingBuffer buffer)
 {
     return buffer->mFile != NULL;
 }
 
-static void
-sbfShmMemoryRingBuffer_doEnqueue (sbfShmMemoryRingBuffer buffer,
-                                  const void* restrict data,
-                                  size_t length)
+const char*
+sbfShmRingBuffer_getFilePath (sbfShmRingBuffer buffer)
 {
-    unsigned char* row = buffer->mBuffer + (buffer->mHeader->mTail * buffer->mHeader->mElementSize);
+    return buffer->mFile;
+}
+
+static void
+sbfShmRingBuffer_doEnqueue (sbfShmRingBuffer buffer,
+                            const void* restrict data,
+                            size_t length)
+{
+    unsigned char* row = buffer->mBuffer
+        + (buffer->mHeader->mTail * buffer->mHeader->mElementSize);
     
     // handle overflow case - truncate
     size_t copyLength = length > buffer->mHeader->mElementSize ?
@@ -216,15 +251,17 @@ sbfShmMemoryRingBuffer_doEnqueue (sbfShmMemoryRingBuffer buffer,
 
     // update info
     buffer->mHeader->mElements += 1;
-    buffer->mHeader->mTail = (buffer->mHeader->mTail + 1) % buffer->mHeader->mCapacity;
+    buffer->mHeader->mTail =
+        (buffer->mHeader->mTail + 1) % buffer->mHeader->mCapacity;
 }
 
 static void
-sbfShmMemoryRingBuffer_doDequeue (sbfShmMemoryRingBuffer buffer,
-                                  void* restrict data,
-                                  size_t length)
+sbfShmRingBuffer_doDequeue (sbfShmRingBuffer buffer,
+                            void* restrict data,
+                            size_t length)
 {
-    unsigned char* row = buffer->mBuffer + (buffer->mHeader->mHead * buffer->mHeader->mElementSize);
+    unsigned char* row = buffer->mBuffer
+        + (buffer->mHeader->mHead * buffer->mHeader->mElementSize);
 
     // handle overflow case
     size_t copyLength = buffer->mHeader->mElementSize > length ?
@@ -240,13 +277,14 @@ sbfShmMemoryRingBuffer_doDequeue (sbfShmMemoryRingBuffer buffer,
 
     // update info
     buffer->mHeader->mElements -= 1;
-    buffer->mHeader->mHead = (buffer->mHeader->mHead + 1) % buffer->mHeader->mCapacity;
+    buffer->mHeader->mHead =
+        (buffer->mHeader->mHead + 1) % buffer->mHeader->mCapacity;
 }
 
 int
-sbfShmMemoryRingBuffer_enqueue (sbfShmMemoryRingBuffer buffer,
-                                const void* restrict data,
-                                size_t length)
+sbfShmRingBuffer_enqueue (sbfShmRingBuffer buffer,
+                          const void* restrict data,
+                          size_t length)
 {
     sbfMutex_lock (&(buffer->mHeader->mMutex));
     
@@ -263,7 +301,7 @@ sbfShmMemoryRingBuffer_enqueue (sbfShmMemoryRingBuffer buffer,
         return -2;
     }
 
-    sbfShmMemoryRingBuffer_doEnqueue (buffer, data, length);
+    sbfShmRingBuffer_doEnqueue (buffer, data, length);
 
     sbfCondVar_signal (&(buffer->mHeader->mDequeueCond));
     sbfMutex_unlock (&(buffer->mHeader->mMutex));
@@ -272,9 +310,9 @@ sbfShmMemoryRingBuffer_enqueue (sbfShmMemoryRingBuffer buffer,
 }
 
 int
-sbfShmMemoryRingBuffer_dequeue (sbfShmMemoryRingBuffer buffer,
-                                void* restrict data,
-                                size_t length)
+sbfShmRingBuffer_dequeue (sbfShmRingBuffer buffer,
+                          void* restrict data,
+                          size_t length)
 {
     sbfMutex_lock (&(buffer->mHeader->mMutex));
     
@@ -284,7 +322,7 @@ sbfShmMemoryRingBuffer_dequeue (sbfShmMemoryRingBuffer buffer,
         return -1;
     }
 
-    sbfShmMemoryRingBuffer_doDequeue (buffer, data, length);
+    sbfShmRingBuffer_doDequeue (buffer, data, length);
 
     sbfCondVar_signal (&(buffer->mHeader->mEnqueueCond));
     sbfMutex_unlock (&(buffer->mHeader->mMutex));
@@ -293,24 +331,28 @@ sbfShmMemoryRingBuffer_dequeue (sbfShmMemoryRingBuffer buffer,
 }
 
 int
-sbfShmMemoryRingBuffer_dequeueAllocated (sbfShmMemoryRingBuffer buffer,
-                                         void** data,
-                                         size_t* length)
+sbfShmRingBuffer_dequeueAllocated (sbfShmRingBuffer buffer,
+                                   void** data,
+                                   size_t* length)
 {
     *length = buffer->mHeader->mElementSize;
     *data = xmalloc (*length);
 
-    return sbfShmMemoryRingBuffer_dequeue (buffer, *data, *length);
+    return sbfShmRingBuffer_dequeue (buffer, *data, *length);
 }
 
 int
-sbfShmMemoryRingBuffer_blockingEnqueue (sbfShmMemoryRingBuffer buffer,
-                                        const void* restrict data,
-                                        size_t length)
+sbfShmRingBuffer_blockingEnqueue (sbfShmRingBuffer buffer,
+                                  const void* restrict data,
+                                  size_t length)
 {
     sbfMutex_lock (&(buffer->mHeader->mMutex));
-    if ((buffer->mHeader->mElements + 1) > buffer->mHeader->mCapacity && !(buffer->mDidSignal))
-        sbfCondVar_wait (&(buffer->mHeader->mEnqueueCond), &(buffer->mHeader->mMutex));
+    if ((buffer->mHeader->mElements + 1) > buffer->mHeader->mCapacity
+        && !(buffer->mDidSignal))
+    {
+        sbfCondVar_wait (&(buffer->mHeader->mEnqueueCond),
+                         &(buffer->mHeader->mMutex));
+    }
 
     if (buffer->mDidSignal)
         return -5;
@@ -322,7 +364,7 @@ sbfShmMemoryRingBuffer_blockingEnqueue (sbfShmMemoryRingBuffer buffer,
         return -1;
     }
 
-    sbfShmMemoryRingBuffer_doEnqueue (buffer, data, length);
+    sbfShmRingBuffer_doEnqueue (buffer, data, length);
 
     sbfCondVar_signal (&(buffer->mHeader->mDequeueCond));
     sbfMutex_unlock (&(buffer->mHeader->mMutex));
@@ -331,18 +373,21 @@ sbfShmMemoryRingBuffer_blockingEnqueue (sbfShmMemoryRingBuffer buffer,
 }
 
 int
-sbfShmMemoryRingBuffer_blockingDequeue (sbfShmMemoryRingBuffer buffer,
-                                        void* restrict data,
-                                        size_t length)
+sbfShmRingBuffer_blockingDequeue (sbfShmRingBuffer buffer,
+                                  void* restrict data,
+                                  size_t length)
 {
     sbfMutex_lock (&(buffer->mHeader->mMutex));
     if (buffer->mHeader->mElements == 0 && !(buffer->mDidSignal))
-        sbfCondVar_wait (&(buffer->mHeader->mDequeueCond), &(buffer->mHeader->mMutex));
+    {
+        sbfCondVar_wait (&(buffer->mHeader->mDequeueCond),
+                         &(buffer->mHeader->mMutex));
+    }
 
     if (buffer->mDidSignal)
         return -5;
 
-    sbfShmMemoryRingBuffer_doDequeue (buffer, data, length);
+    sbfShmRingBuffer_doDequeue (buffer, data, length);
 
     sbfCondVar_signal (&(buffer->mHeader->mEnqueueCond));
     sbfMutex_unlock (&(buffer->mHeader->mMutex));
@@ -351,12 +396,12 @@ sbfShmMemoryRingBuffer_blockingDequeue (sbfShmMemoryRingBuffer buffer,
 }
 
 int
-sbfShmMemoryRingBuffer_blockingDequeueAllocated (sbfShmMemoryRingBuffer buffer,
-                                                 void** data,
-                                                 size_t* length)
+sbfShmRingBuffer_blockingDequeueAllocated (sbfShmRingBuffer buffer,
+                                           void** data,
+                                           size_t* length)
 {
     *length = buffer->mHeader->mElementSize;
     *data = xmalloc (*length);
 
-    return sbfShmMemoryRingBuffer_blockingDequeue (buffer, *data, *length);
+    return sbfShmRingBuffer_blockingDequeue (buffer, *data, *length);
 }
