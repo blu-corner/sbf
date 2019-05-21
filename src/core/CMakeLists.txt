@@ -14,20 +14,16 @@ set (SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfTimer.c"
     )
 
-set (LIBS sbfcommon
-          event
-	   	  ${CMAKE_THREAD_LIBS_INIT}
-		  ${CMAKE_DL_LIBS})
-
+set(LIBS sbfcommon ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS} ${EVENT_LIB})
 if(WIN32)
-	set (LIBS "${LIBS}"
-			  event_core
-			  event_extra)
+  set (LIBS "${LIBS}"
+    ${EVENT_CORE_LIB}
+    ${EVENT_EXTRA_LIB})
 else()
-	set (LIBS "${LIBS}"
-			  event_pthreads)
+  set (LIBS "${LIBS}"
+    ${EVENT_PTHREAD_LIB})
 endif()
-
+  
 add_library (sbfcore SHARED ${SOURCES})
 target_link_libraries (sbfcore ${LIBS})
 

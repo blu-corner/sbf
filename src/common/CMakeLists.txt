@@ -47,44 +47,44 @@ set (SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfPool.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfProperties.c")
 
-set (LIBS event_core
-		  event
-		  "${CMAKE_THREAD_LIBS_INIT}"
-		  "${CMAKE_DL_LIBS}")
+set (LIBS ${EVENT_LIB}
+  ${EVENT_CORE_LIB}
+  ${CMAKE_THREAD_LIBS_INIT}
+  ${CMAKE_DL_LIBS})
 
 if(APPLE)
-    set (INSTALL_HEADERS "${INSTALL_HEADERS}"
-        "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonDarwin.h")
-    set (SOURCES "${SOURCES}"
-        "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonDarwin.c")
-	set (LIBS "${LIBS}"
-			 	event_pthreads)
+  set (INSTALL_HEADERS "${INSTALL_HEADERS}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonDarwin.h")
+  set (SOURCES "${SOURCES}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonDarwin.c")
+  set (LIBS "${LIBS}"
+    ${EVENT_PTHREAD_LIB})
 elseif(WIN32)
-    set (INSTALL_HEADERS "${INSTALL_HEADERS}"
-        "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonWin32.h"
-        "${CMAKE_SOURCE_DIR}/src/thirdparty/getopt/getopt.h")
-    set (SOURCES "${SOURCES}"
-        "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonWin32.c"
-        "${CMAKE_CURRENT_SOURCE_DIR}/fgetln.c"
-        "${CMAKE_CURRENT_SOURCE_DIR}/strlcat.c"
-        "${CMAKE_CURRENT_SOURCE_DIR}/strlcpy.c"
-        "${CMAKE_SOURCE_DIR}/src/thirdparty/getopt/getopt.c")
-	set (LIBS "${LIBS}"
-			 	event_core
-				event_extra
-				Ws2_32.lib
-				Iphlpapi.lib
-				Pathcch.lib)
+  set (INSTALL_HEADERS "${INSTALL_HEADERS}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonWin32.h"
+    "${CMAKE_SOURCE_DIR}/src/thirdparty/getopt/getopt.h")
+  set (SOURCES "${SOURCES}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonWin32.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/fgetln.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/strlcat.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/strlcpy.c"
+    "${CMAKE_SOURCE_DIR}/src/thirdparty/getopt/getopt.c")
+  set (LIBS "${LIBS}"
+    ${EVENT_CORE_LIB}
+    ${EVENT_EXTRA_LIB}
+    Ws2_32.lib
+    Iphlpapi.lib
+    Pathcch.lib)
 else()
-    set (INSTALL_HEADERS "${INSTALL_HEADERS}"
-        "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonLinux.h")
-    set (SOURCES "${SOURCES}"
-        "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonLinux.c"
-        "${CMAKE_CURRENT_SOURCE_DIR}/fgetln.c"
-        "${CMAKE_CURRENT_SOURCE_DIR}/strlcat.c"
-        "${CMAKE_CURRENT_SOURCE_DIR}/strlcpy.c")
-	set (LIBS "${LIBS}"
-			 	event_pthreads)
+  set (INSTALL_HEADERS "${INSTALL_HEADERS}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonLinux.h")
+  set (SOURCES "${SOURCES}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/sbfCommonLinux.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/fgetln.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/strlcat.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/strlcpy.c")
+  set (LIBS "${LIBS}"
+    ${EVENT_PTHREAD_LIB})
 endif()
 
 add_library (sbfcommon SHARED ${SOURCES})
