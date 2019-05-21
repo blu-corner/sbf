@@ -2,14 +2,15 @@ language: cpp
 compiler: gcc
 os:
     - linux
-
-branches:
-    only:
-        - master
+git:
+    submodules: false
 
 addons:
     sonarcloud:
         organization: "neueda-blu-corner"
+
+before_install:
+    - git submodule update --init
 
 before_script:
     - wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
@@ -18,9 +19,23 @@ before_script:
     - mkdir build
     - cd build
     - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:`pwd`/install/lib
-
 script:
     - cmake ../
     - build-wrapper-linux-x86-64 --out-dir ./Linux-output make install
     - cd ../
     - 'if [ "$TRAVIS_PULL_REQUEST" = "false"  ]; then sonar-scanner; fi' # sonar only on non-PRs
+
+before_deploy:
+    - mkdir release
+    - tar czf release/$TRAVIS_TAG-complete.tar.gz $(git ls-files)
+deploy:
+    provider: releases
+    api_key:
+        secure: qx2krrcjI17zLBDLz5iCrcB3V2XFm6PHd+a6QtAYlT/3iNMpXU5eUBB40uof9FlArh54Sc6DdAzqTt8WDpdVuNL5z6AHLRwP2UBXw2JDWD3VimSPQYvxYKMhhvpUPH2a+JUQlrPlMmX3eVQDn5KQNTrmxwGzxlxpO/jFMkX+sC1bOvsSopd2svYTjc/4intlJ1m+zqMNLBmL8FxZlnPqTEeOn5EgXPPpdakcrwQd1XlP98p/PQcX64+7sJX4NwMOFCu2jsQVmyvWkMMi9NvhWMo3pdLQuSuaIgds0sZ7RtAFNc052Jx7IaFXNyYwdbX0GY4iOFlDjOiGPQDtbh5aJNWcRZK7Nd9Ax+4vsJXvcMLIC3F0790l0EWQvDNCVkp5akILIex1VkIzb7ZY1jeHckZsi+l5jjph6xoue+DMpP6gOqrnAg8ho9FGO3g5tmJG7e87vPPmlxTyO26uhIhWBZEOmD/dTMzjpnWTD4VfWzj8kfE/l+9eoHdSFOL4kkb13DBysvxyVuOe2MA30ZaIInijkPUuT0d1SweqkqqHvERWwOlzyfsuWGtPYmVNHp3WEZQKi1S73/ZDbxm1SPwjk2rCZ8x7NsF7weZ52q8uWWcx9X3b8aEyTf706TNVDDHx5/lFeudbun/ZRVF69yI7L59eIiGFMfgdQ+7B9kcz+ZE=
+    file_glob: true
+    file: release/*
+    skip_cleanup: true
+    on:
+        all_branches: true
+        tags: true
+        condition: $TRAVIS_TAG =~ ^v([0-9]+)\.([0-9]+)\.([0-9]+)$ 
