@@ -232,7 +232,7 @@ sbfTcpConnection_create (sbfLog log,
     
     s = socket (isUnix == 0 ? AF_INET : AF_UNIX,
                 SOCK_STREAM,
-                isUnix == 0 ? IPPROTO_TCP : 0);
+                IPPROTO_TCP);
     if (s == -1)
         return NULL;
     tc = sbfTcpConnection_wrap (log, s, isUnix, disableNagles, address);
@@ -259,15 +259,19 @@ sbfTcpConnection_create (sbfLog log,
     if (error != 0)
         goto fail;
 
-#ifndef WIN32
+    if (isUnix) {
+#ifdef WIN32
+        goto fail;
+#else
         error = bufferevent_socket_connect (tc->mEvent,
                                             (struct sockaddr*)&(address->sun),
                                             sizeof(address->sun));
-#else
+#endif
+    } else {
         error = bufferevent_socket_connect (tc->mEvent,
                                             (struct sockaddr*)&(address->sin),
                                             sizeof(address->sin));
-#endif
+    }
 
     if (error != 0)
         goto fail;

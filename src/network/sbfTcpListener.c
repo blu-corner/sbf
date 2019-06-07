@@ -84,7 +84,11 @@ sbfTcpListener_create (sbfLog log,
     tl->mDestroyed = 0;
     sbfRefCount_init (&tl->mRefCount, 1);
 
-#ifndef WIN32
+    if (tl->mIsUnix) {
+#ifdef WIN32
+        sbfLog_err (tl->mLog, "failed to create event listener unix socket not supported on windows");
+        goto fail;
+#else
         sbfLog_debug (tl->mLog,
                       "creating TCP listener %p: unix-path %s",
                       tl,
@@ -99,7 +103,8 @@ sbfTcpListener_create (sbfLog log,
                                                  -1,
                                                  (struct sockaddr*)&(address->sun),
                                                  sizeof(address->sun));
-#else
+#endif
+    } else {
         sbfLog_debug (tl->mLog,
                       "creating TCP listener %p: port %hu",
                       tl,
@@ -114,7 +119,7 @@ sbfTcpListener_create (sbfLog log,
                                                  -1,
                                                  (struct sockaddr*)&(address->sin),
                                                  sizeof(address->sin));
-#endif
+    }
     
     if (tl->mListener == NULL)
     {
