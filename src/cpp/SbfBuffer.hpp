@@ -2,6 +2,9 @@
 
 #include "sbfBuffer.h"
 
+namespace neueda
+{
+
 class SbfBufferDelegate {
 public:
      ~SbfBufferDelegate () { }
@@ -11,9 +14,14 @@ public:
 
 class SbfBuffer {
 public:
-    SbfBuffer  (sbfPool pool, size_t size)
+    SbfBuffer (size_t size)
     {
-        mBuffer = sbfBuffer_newZero(pool, size);
+        mBuffer = sbfBuffer_newZero (NULL, size);
+    }
+
+    SbfBuffer (void* data, size_t size)
+    {
+        mBuffer = sbfBuffer_copy (NULL, data, size);
     }
 
     virtual ~SbfBuffer ()
@@ -44,17 +52,17 @@ public:
 
     virtual void* getData ()
     {
-        sbfBuffer_getData (getHandle ());
+        return sbfBuffer_getData (getHandle ());
     }
 
     virtual void setData (void* data)
     {
-        sbfBuffer_getData (getHandle (), data);
+        sbfBuffer_setData (getHandle (), data);
     }
 
     virtual size_t getSize ()
     {
-        sbfBuffer_getSize (getHandle ());
+        return sbfBuffer_getSize (getHandle ());
     }
 
     virtual void setSize (size_t size)
@@ -66,8 +74,9 @@ private:
     sbfBuffer mBuffer;
     SbfBufferDelegate* mDelegate;
 
-    static struct sbfBufferImpl* sbfBuffer;
     static void (*sbfBufferDestroyCb) (sbfBuffer buffer,
                                         void* data,
                                         void* closure);
 };
+
+}
