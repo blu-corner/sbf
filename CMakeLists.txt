@@ -38,6 +38,7 @@ endif()
 option(DEBUG "Enable debug build" OFF)
 option(COVERAGE "Enable gcov coverage" OFF)
 option(EXAMPLES "Enable examples" ON)
+option(JAVA "Enable Java bindings" OFF)
 
 # allow external projects
 include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
@@ -157,6 +158,7 @@ include_directories(
   ${PROJECT_SOURCE_DIR}/src/requestreply
   ${PROJECT_SOURCE_DIR}/src/transport
   ${PROJECT_SOURCE_DIR}/src/handlers/common
+  ${PROJECT_SOURCE_DIR}/src/cpp
   )
 
 add_subdirectory(src)
