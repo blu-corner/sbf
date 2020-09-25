@@ -1,6 +1,8 @@
 #pragma once
 
 #include "sbfTimer.h"
+#include "SbfMw.hpp"
+#include "SbfQueue.hpp"
 
 namespace neueda
 {
@@ -14,8 +16,8 @@ public:
 class SbfTimer {
 public:
     SbfTimer (sbfMwThread thread,
-              sbfQueue queue,
-              SbfTimerDelegate* delegate,
+              neueda::SbfQueue* queue,
+              neueda::SbfTimerDelegate* delegate,
               double interval)
         : mThread (thread),
           mQueue (queue),
@@ -23,7 +25,7 @@ public:
           mInterval (interval)
     {
         mTimer = sbfTimer_create (mThread,
-                                  mQueue,
+                                  mQueue->getHandle (),
                                   SbfTimer::sbfTimerTicked,
                                   this,
                                   mInterval);
@@ -47,7 +49,7 @@ public:
 
 
         mTimer = sbfTimer_create (mThread,
-                                  mQueue,
+                                  mQueue->getHandle (),
                                   SbfTimer::sbfTimerTicked,
                                   this,
                                   mInterval);
@@ -55,10 +57,9 @@ public:
 
 protected:
     sbfMwThread       mThread;
-    sbfQueue          mQueue;
+    SbfQueue*         mQueue;
     SbfTimerDelegate* mDelegate;
     double            mInterval;
-
     sbfTimer          mTimer;
 
 private:
