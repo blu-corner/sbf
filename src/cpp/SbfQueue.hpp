@@ -1,41 +1,76 @@
 #pragma once
 
 #include "sbfQueue.h"
+#include "SbfMw.hpp"
+
+namespace neueda
+{
 
 class SbfQueueDelegate
 {
 public:
     virtual ~SbfQueueDelegate() { }
 
-    virtual void onQueueItem (sbfQueueItem item) { }
+    virtual void onQueueItem () { }
 };
 
 class SbfQueue
 {
 public:
-    SbfQueue (struct sbfMwImpl* mw,
-              const char* name,
-              SbfQueueDelegate* delegate);
+    SbfQueue (SbfMw* mw, const char* name)
+    {
+        mQueue = sbfQueue_create(mw->getHandle(), name);
+    }
 
-    virtual ~SbfQueue ();
+    virtual ~SbfQueue ()
+    {
+        if (getHandle () != NULL)
+            sbfQueue_destroy (getHandle ());
+    }
 
-    sbfQueue getHandle ();
+    virtual void destroy()
+    {
+        if (getHandle () != NULL)
+            sbfQueue_destroy (getHandle ());
+    }
 
-    const char* getName ();
+    virtual sbfQueue getHandle ()
+    {
+        return mQueue;
+    }
 
-    void enqueue (void* item);
+    const char* getName ()
+    {
+        const char* ret = NULL;
+        if (getHandle () != NULL)
+        {
+            ret = sbfQueue_getName (getHandle ());
+        }
+        return ret;
+    }
 
-    void enqueueItem (sbfQueueItem item);
+    void enqueue (SbfQueueDelegate* item)
+    {
+        sbfQueue_enqueue (getHandle (), SbfQueue::sbfQueueCb, item);
+    }
 
-    void dispatch ();
-
-    void* getItemData (sbfQueueItem item);
-
-    size_t getItemDataSize (sbfQueueItem item);
+    void dispatch ()
+    {
+        sbfQueue_dispatch (mQueue);
+    }
 
 private:
-    static void sbfQueueCb (sbfQueueItem item, void* closure);
+    static void sbfQueueCb (sbfQueueItem queueItem, void* closure)
+    {
+        SbfQueueDelegate* instance = static_cast<SbfQueueDelegate*>(closure);
+
+        if (instance)
+        {
+            instance->onQueueItem ();
+        }
+    }
     
     sbfQueue mQueue;
-    SbfQueueDelegate* mDelegate;
 };
+
+}
