@@ -1,12 +1,16 @@
 #pragma once
 
 #include "sbfKeyValue.h"
+#include <iostream>
+
+namespace neueda
+{
 
 class SbfKeyValue {
 public:
     SbfKeyValue (void)
     {
-        mValue = sbfKeyValue_create (void);
+        mValue = sbfKeyValue_create ();
     }
 
     virtual ~SbfKeyValue ()
@@ -20,7 +24,7 @@ public:
         return mValue;
     }
 
-    virtual const copy ()
+    virtual sbfKeyValue copy ()
     {
         return sbfKeyValue_copy (getHandle ());
     }
@@ -37,7 +41,19 @@ public:
 
     virtual const char* getV (const char* fmt, ...)
     {
-        return sbfKeyValue_getV (getHandle (), __VA_ARGS__);
+        va_list     ap;
+        char*       key;
+        const char* value;
+
+        va_start (ap, fmt);
+        xvasprintf (&key, fmt, ap);
+        std::cout << fmt << key << std::endl;
+        va_end (ap);
+        std::cout << fmt << key << std::endl;
+
+        value = get (key);
+        free (key);
+        return value;
     }
 
     virtual void put (const char* key, const char* value)
@@ -63,3 +79,5 @@ public:
 protected:
     sbfKeyValue mValue;
 };
+
+}
