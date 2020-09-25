@@ -13,7 +13,7 @@ public:
      */
     SbfLog ()
     {
-        mValue = sbfLog_create (NULL, "", "");
+        mValue = sbfLog_create (NULL, "%s", "");
     }
 
     /*

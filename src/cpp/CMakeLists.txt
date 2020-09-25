@@ -1,3 +1,5 @@
 FILE(GLOB INSTALL_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.hpp)
 
 install (FILES ${INSTALL_HEADERS} DESTINATION include/sbf/cpp)
+
+add_subdirectory(bindings)
