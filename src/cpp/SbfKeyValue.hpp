@@ -1,7 +1,6 @@
 #pragma once
 
 #include "sbfKeyValue.h"
-#include <iostream>
 
 namespace neueda
 {
@@ -47,9 +46,7 @@ public:
 
         va_start (ap, fmt);
         xvasprintf (&key, fmt, ap);
-        std::cout << fmt << key << std::endl;
         va_end (ap);
-        std::cout << fmt << key << std::endl;
 
         value = get (key);
         free (key);
