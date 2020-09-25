@@ -44,6 +44,9 @@ main (int argc, char** argv)
     
     sbfQueue_destroy (queue);
     sbfThread_join (t);
+    sbfMw_destroy (mw);
+    sbfKeyValue_destroy (properties);
+    sbfLog_destroy (log);
 
     return 0;
 }
