@@ -19,6 +19,15 @@ public:
 
 class SbfSub {
 public:
+    /*!
+        \brief Constructs a subscriber object.
+        \param[in] tport Connection port.
+        \param[in] queue Queue for handling objects as they come in.
+        \param[in] topic The topic.
+        \param[in] delegate A delegate object for handling when the subsriber
+                            is ready and receives a message.
+        \return A SbfSub object.
+     */
     SbfSub (neueda::SbfTport* tport,
             neueda::SbfQueue* queue,
             const char* topic,
@@ -33,17 +42,29 @@ public:
                                 this);
     }
 
+    /*!
+        \brief Destructor that deletes the private subscriber handler.
+        \return None.
+     */
     virtual ~SbfSub ()
     {
         if (getHandle () != NULL)
             sbfSub_destroy (getHandle ());
     }
 
+    /*!
+        \brief Returns a handle to the private C subscriber struct.
+        \return Pointer to a struct sbfSubImpl.
+     */
     virtual sbfSub getHandle ()
     {
         return mValue;
     }
 
+    /*!
+        \brief Returns the topic associated with this subscriber.
+        \return the topic associated to the subscriber.
+    */
     virtual sbfTopicImpl* getTopic ()
     {
         sbfTopicImpl* ret = NULL;
