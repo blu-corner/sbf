@@ -20,6 +20,15 @@ public:
 
 class SbfRequestPub {
 public:
+    /*!
+        \brief Constructs a requester object.
+        \param[in] tport Connection port.
+        \param[in] queue Queue for publishing objects.
+        \param[in] topic The topic.
+        \param[in] delegate A delegate object for handling when the publisher
+                            is ready.
+        \return A SbfRequestPub object.
+     */
     SbfRequestPub (neueda::SbfTport* tport,
                    neueda::SbfQueue* queue,
                    const char* topic,
@@ -33,17 +42,31 @@ public:
                                        this);
     }
 
+    /*!
+        \brief Destructor that deletes the private requester handler.
+        \return None.
+     */
     virtual ~SbfRequestPub ()
     {
         if (getHandle () != NULL)
             sbfRequestPub_destroy (getHandle ());
     }
 
+    /*!
+        \brief Returns a handle to the private C requester struct.
+        \return Pointer to a struct sbfRequestPubImpl.
+     */
     virtual sbfRequestPub getHandle ()
     {
         return mValue;
     }
 
+    /*!
+        \brief Sends a payload as a request.
+        \param data pointer to the payload to be sent.
+        \param size the size of the payload.
+        \return None.
+    */
     virtual void send (void* data, size_t size)
     {
         if (getHandle () != NULL)
@@ -54,6 +77,10 @@ public:
                                 this);
     }
 
+    /*!
+        \brief Returns the topic associated with this requester.
+        \return the topic associated to the requester.
+    */
     virtual const char* getTopic ()
     {
         const char* ret = NULL;

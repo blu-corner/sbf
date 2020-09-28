@@ -15,6 +15,16 @@ public:
 
 class SbfTimer {
 public:
+    /*!
+        \brief Constructs a subscriber object.
+        \param[in] thread The thread handler.
+        \param[in] queue Queue.
+        \param[in] delegate A delegate object that will be called when the timer
+                            fires.
+        \param[in] interval Time in seconds before the timer is fires the
+                            callback.
+        \return A SbfSub object.
+     */
     SbfTimer (sbfMwThread thread,
               neueda::SbfQueue* queue,
               neueda::SbfTimerDelegate* delegate,
@@ -31,17 +41,29 @@ public:
                                   mInterval);
     }
 
+    /*!
+        \brief Destructor that deletes the private timer handler.
+        \return None.
+     */
     virtual ~SbfTimer ()
     {
         if (getHandle () != NULL)
             sbfTimer_destroy (getHandle ());
     }
 
+    /*!
+        \brief Returns a handle to the private C timer struct.
+        \return Pointer to a struct sbfTimerImpl.
+     */
     virtual sbfTimer getHandle ()
     {
         return mTimer;
     }
 
+    /*!
+        \brief Reschedule the timer for the already configured interval.
+        \return None.
+     */
     virtual void reschedule ()
     {
         if (getHandle () != NULL)

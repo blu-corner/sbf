@@ -1,31 +1,39 @@
 #pragma once
 
 #include "sbfLog.h"
+#include "sbfLogFile.h"
 
 namespace neueda
 {
 
 class SbfLog {
 public:
-    /*
-     * Restricting the CPP log constructors from printing an initial
-     * message.
+    /*!
+        \brief Constructs a log that outputs to stdout.
+        \return A SbfLog object.
      */
     SbfLog ()
     {
         mValue = sbfLog_create (NULL, "%s", "");
     }
 
-    /*
-     * TODO constructor for constructing a log file.
-     **/
-
+    /*!
+        \brief Destructor that deletes the private log handler.
+        \return None.
+     */
     virtual ~SbfLog ()
     {
         if (getHandle () != NULL)
             sbfLog_destroy (getHandle ());
     }
 
+    /*!
+        \brief Logs a message with a given level into the log.
+        \param level the log level.
+        \param fmt the formatting string.
+        \param ... the parameters for the formatting string.
+        \return None.
+    */
     virtual void log (sbfLogLevel level, const char* fmt, ...)
     {
         if (getHandle () == NULL)
@@ -40,6 +48,13 @@ public:
         va_end (ap);
     }
 
+    /*!
+        \brief Logs a chunk of binary data with a given level into the log.
+        \param level the log level.
+        \param buf the data to be logged.
+        \param len the size of the data in bytes.
+        \return None.
+    */
     virtual void logData (sbfLogLevel level, void* buf, size_t len)
     {
         if (getHandle () == NULL)
@@ -48,11 +63,19 @@ public:
         sbfLog_logData (getHandle (), level, buf, len);
     }
 
+    /*!
+        \brief Returns a handle to the private C log struct.
+        \return Pointer to a struct sbfLogImpl.
+     */
     virtual sbfLog getHandle ()
     {
         return mValue;
     }
 
+    /*!
+        \brief Returns the log's level.
+        \return the log's level.
+    */
     virtual sbfLogLevel getLevel()
     {
         if (getHandle () != NULL)
@@ -65,12 +88,21 @@ public:
         }
     }
 
+    /*!
+        \brief Sets the log's level
+        \param[in] level The log's level.
+        \return None.
+    */
     virtual void setLevel(sbfLogLevel level)
     {
         if (getHandle () != NULL)
             sbfLog_setLevel (getHandle (), level);
     }
 
+    /*!
+        \brief Sets the log's level from a string.
+        \param[in] level Null terminated string representation of the log level.
+    */
     virtual bool setLevelFromString (const char* s)
     {
         bool ret = false;
@@ -86,6 +118,11 @@ public:
         return ret;
     }
     
+    /*!
+       \brief Return a string representation of an enum log level.
+       \param[in] level The log level to conver to string.
+       \return Null terminated string representation of the pass in level.
+     */
     virtual const char* levelToString (sbfLogLevel level)
     {
         return sbfLog_levelToString (level);
