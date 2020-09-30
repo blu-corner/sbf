@@ -31,47 +31,25 @@ public:
     SbfSub (neueda::SbfTport* tport,
             neueda::SbfQueue* queue,
             const char* topic,
-            neueda::SbfSubDelegate* delegate)
-        : mDelegate (delegate)
-    {
-        mValue = sbfSub_create (tport->getHandle (),
-                                queue->getHandle (),
-                                topic,
-                                SbfSub::sbfSubReady,
-                                SbfSub::sbfSubMessage,
-                                this);
-    }
+            neueda::SbfSubDelegate* delegate);
 
     /*!
         \brief Destructor that deletes the private subscriber handler.
         \return None.
      */
-    virtual ~SbfSub ()
-    {
-        if (getHandle () != NULL)
-            sbfSub_destroy (getHandle ());
-    }
+    virtual ~SbfSub ();
 
     /*!
         \brief Returns a handle to the private C subscriber struct.
         \return Pointer to a struct sbfSubImpl.
      */
-    virtual sbfSub getHandle ()
-    {
-        return mValue;
-    }
+    virtual sbfSub getHandle ();
 
     /*!
         \brief Returns the topic associated with this subscriber.
         \return the topic associated to the subscriber.
     */
-    virtual sbfTopicImpl* getTopic ()
-    {
-        sbfTopicImpl* ret = NULL;
-        if (getHandle () != NULL)
-            ret = sbfSub_getTopic (getHandle ());
-        return ret;
-    }
+    virtual sbfTopicImpl* getTopic ();
 
 protected:
     sbfSub          mValue;

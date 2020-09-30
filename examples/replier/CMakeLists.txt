@@ -15,7 +15,11 @@ add_executable (sbf-replier ${SOURCES})
 target_link_libraries (sbf-replier sbfcommon sbfcore sbfrequestreply sbftransport)
 
 add_executable (sbf-cpp-replier ${CPP_SOURCES})
-target_link_libraries (sbf-cpp-replier sbfcommon sbfcore sbfrequestreply sbftransport)
+target_link_libraries (sbf-cpp-replier sbfcpp
+                                       sbfcommon
+                                       sbfcore
+                                       sbfrequestreply
+                                       sbftransport)
 
 install (TARGETS sbf-replier sbf-cpp-replier
     RUNTIME DESTINATION bin)

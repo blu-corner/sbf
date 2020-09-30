@@ -13,7 +13,7 @@ add_executable (sbf-queue ${SOURCES})
 target_link_libraries (sbf-queue sbfcore sbfcommon)
 
 add_executable (sbf-cpp-queue ${CPP_SOURCES})
-target_link_libraries (sbf-cpp-queue sbfcore sbfcommon)
+target_link_libraries (sbf-cpp-queue sbfcpp sbfcore sbfcommon)
 
 install (TARGETS sbf-queue sbf-cpp-queue
     RUNTIME DESTINATION bin)

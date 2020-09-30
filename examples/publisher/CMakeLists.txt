@@ -13,7 +13,7 @@ add_executable (sbf-publisher ${SOURCES})
 target_link_libraries (sbf-publisher sbfcore sbfcommon sbftransport)
 
 add_executable (sbf-cpp-publisher ${CPP_SOURCES})
-target_link_libraries (sbf-cpp-publisher sbfcore sbfcommon sbftransport)
+target_link_libraries (sbf-cpp-publisher sbfcpp sbfcore sbfcommon sbftransport)
 
 install (TARGETS sbf-publisher sbf-cpp-publisher
     RUNTIME DESTINATION bin)

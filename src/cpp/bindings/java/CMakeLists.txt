@@ -15,7 +15,8 @@ set_source_files_properties(../sbf.java.i PROPERTIES CPLUSPLUS ON)
 # Add swig module
 add_compile_options(-fno-strict-aliasing)
 swig_add_module(Sbf java ../sbf.java.i)
-swig_link_libraries(Sbf sbfcommon
+swig_link_libraries(Sbf sbfcpp
+                        sbfcommon
                         sbfcore
                         sbftransport
                         sbfnetwork

@@ -28,54 +28,25 @@ public:
     SbfTimer (sbfMwThread thread,
               neueda::SbfQueue* queue,
               neueda::SbfTimerDelegate* delegate,
-              double interval)
-        : mThread (thread),
-          mQueue (queue),
-          mDelegate (delegate),
-          mInterval (interval)
-    {
-        mTimer = sbfTimer_create (mThread,
-                                  mQueue->getHandle (),
-                                  SbfTimer::sbfTimerTicked,
-                                  this,
-                                  mInterval);
-    }
+              double interval);
 
     /*!
         \brief Destructor that deletes the private timer handler.
         \return None.
      */
-    virtual ~SbfTimer ()
-    {
-        if (getHandle () != NULL)
-            sbfTimer_destroy (getHandle ());
-    }
+    virtual ~SbfTimer ();
 
     /*!
         \brief Returns a handle to the private C timer struct.
         \return Pointer to a struct sbfTimerImpl.
      */
-    virtual sbfTimer getHandle ()
-    {
-        return mTimer;
-    }
+    virtual sbfTimer getHandle ();
 
     /*!
         \brief Reschedule the timer for the already configured interval.
         \return None.
      */
-    virtual void reschedule ()
-    {
-        if (getHandle () != NULL)
-            sbfTimer_destroy (getHandle ());
-
-
-        mTimer = sbfTimer_create (mThread,
-                                  mQueue->getHandle (),
-                                  SbfTimer::sbfTimerTicked,
-                                  this,
-                                  mInterval);
-    }
+    virtual void reschedule ();
 
 protected:
     sbfMwThread       mThread;
