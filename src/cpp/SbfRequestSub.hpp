@@ -32,35 +32,19 @@ public:
     SbfRequestSub (neueda::SbfTport* tport,
                    neueda::SbfQueue* queue,
                    const char* topic,
-                   neueda::SbfRequestSubDelegate* delegate)
-        : mDelegate (delegate)
-    {
-        mValue = sbfRequestSub_create (tport->getHandle (),
-                                       queue->getHandle (),
-                                       topic,
-                                       SbfRequestSub::sbfSubReady,
-                                       SbfRequestSub::sbfSubRequest,
-                                       this);
-    }
+                   neueda::SbfRequestSubDelegate* delegate);
 
     /*!
         \brief Destructor that deletes the private replier handler.
         \return None.
      */
-    virtual ~SbfRequestSub ()
-    {
-        if (getHandle () != NULL)
-            sbfRequestSub_destroy (getHandle ());
-    }
+    virtual ~SbfRequestSub ();
 
     /*!
         \brief Returns a handle to the private C replier struct.
         \return Pointer to a struct sbfRequestSubImpl.
      */
-    virtual sbfRequestSub getHandle ()
-    {
-        return mValue;
-    }
+    virtual sbfRequestSub getHandle ();
 
     /*!
         \brief Sends a message with the given subscriber.
@@ -69,23 +53,13 @@ public:
         \param size the length in bytes of the data previously defined.
         \return None.
      */
-    virtual void reply (struct sbfRequestImpl* req, void* data, size_t size)
-    {
-        if (getHandle () != NULL)
-            sbfRequestSub_reply (getHandle(), req, data, size);
-    }
+    virtual void reply (struct sbfRequestImpl* req, void* data, size_t size);
 
     /*!
         \brief Returns the topic associated with this replier.
         \return the topic associated to the replier.
     */
-    virtual const char* getTopic ()
-    {
-        const char* ret = NULL;
-        if (getHandle () != NULL)
-            ret = sbfRequestSub_getTopic (getHandle ());
-        return ret;
-    }
+    virtual const char* getTopic ();
 
 protected:
     sbfRequestSub   mValue;

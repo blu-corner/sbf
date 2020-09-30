@@ -16,50 +16,31 @@ public:
         \param[in] mask The thread mask to be used for the port connection.
         \return A SbfTport object.
      */
-    SbfTport (SbfMw* mw, const char* name, uint64_t mask) : mMw(mw)
-    {
-        mValue = sbfTport_create (mw->getHandle(), name, mask);
-    }
+    SbfTport (SbfMw* mw, const char* name, uint64_t mask);
 
     /*!
         \brief Destructor that deletes the private port handler.
         \return None.
      */
-    virtual ~SbfTport ()
-    {
-        if (getHandle () != NULL)
-            sbfTport_destroy (getHandle ());
-    }
+    virtual ~SbfTport ();
 
     /*!
         \brief Returns a handle to the private C port struct.
         \return Pointer to a struct sbfTportImpl.
      */
-    virtual sbfTport getHandle ()
-    {
-        return mValue;
-    }
+    virtual sbfTport getHandle ();
 
     /*!
         \brief Returns the name associated to the port.
         \return the name associated to the port.
     */
-    virtual const char* getName ()
-    {
-        const char* ret = NULL;
-        if (getHandle () != NULL)
-            ret = sbfTport_getName (getHandle());
-        return ret;
-    }
+    virtual const char* getName ();
 
     /*!
         \brief Returns the middleware associated to the port.
         \return the middleware associated to the port.
     */
-    virtual SbfMw* getMw ()
-    {
-        return mMw;
-    }
+    virtual SbfMw* getMw ();
 
 protected:
     sbfTport mValue;

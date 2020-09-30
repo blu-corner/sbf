@@ -16,43 +16,25 @@ public:
                               settings for the middleware.
         \return A SbfMw object.
      */
-    SbfMw (SbfLog* log, SbfKeyValue* properties) :
-        mLog(log),
-        mProperties(properties)
-    {
-        mValue = sbfMw_create (log->getHandle(), properties->getHandle());
-    }
+    SbfMw (SbfLog* log, SbfKeyValue* properties);
 
     /*!
         \brief Destructor that deletes the private middleware handler.
         \return None.
      */
-    virtual ~SbfMw ()
-    {
-        if (getHandle () != NULL)
-            sbfMw_destroy (getHandle ());
-    }
+    virtual ~SbfMw ();
 
     /*!
         \brief Returns a handle to the private C middleware struct.
         \return Pointer to a struct sbfMwImpl.
      */
-    virtual sbfMw getHandle ()
-    {
-        return mValue;
-    }
+    virtual sbfMw getHandle ();
 
     /*!
         \brief Returns the number of threads defined at the middleware.
         \return  the number of thread defined at the middleware.
     */
-    virtual u_int getNumThreads()
-    {
-        u_int ret = 0;
-        if (getHandle () != NULL)
-            ret = sbfMw_getNumThreads (getHandle());
-        return ret;
-    }
+    virtual u_int getNumThreads();
 
     /*!
         \brief Returns the thread for the given index
@@ -60,41 +42,26 @@ public:
         \param[in] index the index of the thread in the thread pool.
         \return sbfMwThread at the given index.
     */
-    virtual sbfMwThread getThread(u_int index)
-    {
-        sbfMwThread ret = NULL;
-        if (getHandle () != NULL)
-            ret = sbfMw_getThread (getHandle (), index);
-        return ret;
-    }
+    virtual sbfMwThread getThread(u_int index);
 
     /*!
         \brief Returns the default thread.
         \return sbfMwThread of the default thread.
     */
-    virtual sbfMwThread getDefaultThread()
-    {
-        return getThread(0);
-    }
+    virtual sbfMwThread getDefaultThread();
 
     /*!
         \brief Returns the logger linked to the middleware
         \return SbfLog pointer
     */
-    virtual SbfLog* getLog()
-    {
-        return mLog;
-    }
+    virtual SbfLog* getLog();
 
     /*!
         \brief Returns the key value table object that contains the config
                for the current middleware.
         \return SbfKeyValue pointer
     */
-    virtual SbfKeyValue* getProperties()
-    {
-        return mProperties;
-    }
+    virtual SbfKeyValue* getProperties();
 
 protected:
     sbfMw mValue;

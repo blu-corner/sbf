@@ -32,62 +32,33 @@ public:
     SbfRequestPub (neueda::SbfTport* tport,
                    neueda::SbfQueue* queue,
                    const char* topic,
-                   neueda::SbfRequestPubDelegate* delegate)
-        : mDelegate (delegate)
-    {
-        mValue = sbfRequestPub_create (tport->getHandle (),
-                                       queue->getHandle (),
-                                       topic,
-                                       SbfRequestPub::sbfPubReady,
-                                       this);
-    }
+                   neueda::SbfRequestPubDelegate* delegate);
 
     /*!
         \brief Destructor that deletes the private requester handler.
         \return None.
      */
-    virtual ~SbfRequestPub ()
-    {
-        if (getHandle () != NULL)
-            sbfRequestPub_destroy (getHandle ());
-    }
+    virtual ~SbfRequestPub ();
 
     /*!
         \brief Returns a handle to the private C requester struct.
         \return Pointer to a struct sbfRequestPubImpl.
      */
-    virtual sbfRequestPub getHandle ()
-    {
-        return mValue;
-    }
+    virtual sbfRequestPub getHandle ();
 
     /*!
         \brief Sends a payload as a request.
-        \param data pointer to the payload to be sent.
-        \param size the size of the payload.
+        \param[in] data pointer to the payload to be sent.
+        \param[in] size the size of the payload.
         \return None.
     */
-    virtual void send (void* data, size_t size)
-    {
-        if (getHandle () != NULL)
-            sbfRequestPub_send (getHandle (),
-                                data,
-                                size,
-                                SbfRequestPub::sbfPubReply,
-                                this);
-    }
+    virtual void send (void* data, size_t size);
 
     /*!
         \brief Returns the topic associated with this requester.
         \return the topic associated to the requester.
     */
-    virtual const char* getTopic ()
-    {
-        const char* ret = NULL;
-        if (getHandle () != NULL)
-            ret = sbfRequestPub_getTopic (getHandle ());
-        return ret;
-    }
+    virtual const char* getTopic ();
 
 protected:
     sbfRequestPub   mValue;

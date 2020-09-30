@@ -29,50 +29,26 @@ public:
     SbfPub (neueda::SbfTport* tport,
             neueda::SbfQueue* queue,
             const char* topic,
-            neueda::SbfPubDelegate* delegate)
-        : mDelegate (delegate)
-    {
-        mValue = sbfPub_create (tport->getHandle (),
-                                queue->getHandle (),
-                                topic,
-                                SbfPub::sbfPubReady,
-                                this);
-    }
+            neueda::SbfPubDelegate* delegate);
 
     /*!
         \brief Destructor that deletes the private publisher handler.
         \return None.
      */
-    virtual ~SbfPub ()
-    {
-        if (getHandle () != NULL)
-            sbfPub_destroy (getHandle ());
-    }
+    virtual ~SbfPub ();
 
     /*!
         \brief Returns a handle to the private C publisher struct.
         \return Pointer to a struct sbfPubImpl.
      */
-    virtual sbfPub getHandle ()
-    {
-        return mValue;
-    }
+    virtual sbfPub getHandle ();
 
     /*!
         \brief Allocates and returns a buffer.
         \param size the size of the buffer to be allocated.
         \return the buffer allocated by the publisher.
     */
-    virtual neueda::SbfBuffer* getBuffer (size_t size)
-    {
-        SbfBuffer* ret = NULL;
-        if (getHandle () != NULL)
-        {
-            sbfBuffer buf = sbfPub_getBuffer (getHandle (), size);
-            ret = new neueda::SbfBuffer (buf->mData, buf->mSize);
-        }
-        return ret;
-    }
+    virtual neueda::SbfBuffer* getBuffer (size_t size);
 
     /*!
         \brief Sends a buffer throught the publisher.
@@ -82,14 +58,7 @@ public:
         \param buffer the buffer to be sent.
         \return None.
     */
-    virtual void sendBuffer (neueda::SbfBuffer* buffer)
-    {
-        if (getHandle () != NULL)
-        {
-            sbfPub_sendBuffer (getHandle (), buffer->getHandle ());
-            delete buffer;
-        }
-    }
+    virtual void sendBuffer (neueda::SbfBuffer* buffer);
 
     /*!
         \brief Sends a payload through the publisher.
@@ -97,27 +66,13 @@ public:
         \param size the size of the payload.
         \return None.
     */
-    virtual void send (void* data, size_t size)
-    {
-        if (getHandle () != NULL)
-        {
-            sbfPub_send (getHandle (), data, size);
-        }
-    }
+    virtual void send (void* data, size_t size);
 
     /*!
         \brief Returns the topic associated with this publisher.
         \return the topic associated to the publisher.
     */
-    virtual sbfTopicImpl* getTopic ()
-    {
-        sbfTopicImpl* ret = NULL;
-        if (getHandle () != NULL)
-        {
-            ret = sbfPub_getTopic (getHandle ());
-        }
-        return ret;
-    }
+    virtual sbfTopicImpl* getTopic ();
 
 protected:
     sbfPub          mValue;
