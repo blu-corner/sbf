@@ -40,10 +40,8 @@ set(JNI_SOURCES
     ${CMAKE_CURRENT_BINARY_DIR}/SWIGTYPE_p_sbfTopicImpl.java
     ${CMAKE_CURRENT_BINARY_DIR}/SWIGTYPE_p_sbfTimer.java
     ${CMAKE_CURRENT_BINARY_DIR}/SWIGTYPE_p_sbfTport.java
-    ${CMAKE_CURRENT_BINARY_DIR}/SWIGTYPE_p_unsigned_char.java
     ${CMAKE_CURRENT_BINARY_DIR}/SWIGTYPE_p_u_int.java
     ${CMAKE_CURRENT_BINARY_DIR}/SWIGTYPE_p_void.java
-    ${CMAKE_CURRENT_BINARY_DIR}/SwigBuffer.java
     ${CMAKE_CURRENT_BINARY_DIR}/SbfBuffer.java
     ${CMAKE_CURRENT_BINARY_DIR}/SbfBufferDelegate.java
     ${CMAKE_CURRENT_BINARY_DIR}/SbfKeyValue.java

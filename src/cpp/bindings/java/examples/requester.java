@@ -17,7 +17,7 @@ class RequesterDelegate extends SbfRequestPubDelegate
                            SbfBuffer buff)
     {
         try {
-            int i = (int) requester.deserialize(buff.getData ());
+            int i = (int) requester.deserialize(buff.getByteArray ());
             System.out.format("Received reply '%d'\n", i);
             if (i == 20)
             {
