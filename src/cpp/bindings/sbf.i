@@ -24,7 +24,6 @@
 #include <SbfTimer.hpp>
 #include <SbfRequestPub.hpp>
 #include <SbfRequestSub.hpp>
-#include <swigBuffer.h>
 
 %}
 
@@ -64,16 +63,8 @@ typedef enum
     virtual void log (sbfLogLevel level, const char* msg) {
         self->log (level, "%s", msg);
     }
-
-    virtual void logData (sbfLogLevel level, neueda::SwigBuffer buff) {
-        void* buffer = (void*) malloc(buff.size);
-        memcpy (buffer, buff.addr, buff.size+1);
-        self->logData (level, buffer, buff.size);
-    }
 }
-%newobject neueda::SbfLog::logData;
 %ignore neueda::SbfLog::log;
-%ignore neueda::SbfLog::logData;
 %include "SbfLog.hpp"
 
 /*
@@ -113,32 +104,35 @@ typedef enum
 %include "SbfTimer.hpp"
 
 /*
- * Swig buffer used for passing in objects from higher up languages.
- */
-%include "swigBuffer.h"
-
-/*
  * SbfBuffer
  */
 %extend neueda::SbfBuffer {
-    SbfBuffer (neueda::SwigBuffer buf) {
-        return new neueda::SbfBuffer(buf.addr, buf.size);
+    SbfBuffer (void* bytes, size_t length) {
+        return new neueda::SbfBuffer(bytes, length);
     }
-    virtual void setData (neueda::SwigBuffer buff) {
-        void* buffer = (void*) malloc(buff.size);
-        memcpy (buffer, buff.addr, buff.size+1);
-        self->setSize (buff.size);
-        self->setData (buffer);
+    virtual void setData (const char* buffer, size_t length) {
+        void* buff = (void*) malloc (length);
+        memcpy (buff, buffer, length+1);
+        self->setSize (length);
+        self->setData (buff);
     }
 
-    virtual neueda::SwigBuffer getData () {
-        neueda::SwigBuffer buff = { new unsigned char[self->getSize ()], self->getSize () };
-        memcpy (buff.addr, self->getData (), buff.size+1);
-        return buff;
+    virtual jbyteArray getByteArray () {
+        JNIEnv* jenv = JNU_GetEnv();
+        if (jenv != 0)
+        {
+            jbyteArray jb = (jenv)->NewByteArray (self->getSize());
+            (jenv)->SetByteArrayRegion(jb,
+                                       0,
+                                       self->getSize (),
+                                       (jbyte *)self->getData ());
+            return jb;
+        }
+        return NULL;
     }
 }
 %newobject neueda::SbfBuffer::setData;
-%newobject neueda::SbfBuffer::getData;
+%newobject neueda::SbfBuffer::getByteArray;
 %newobject neueda::SbfBuffer::SbfBuffer;
 // Ignore methods we don't want to expose or already overridden
 %ignore neueda::SbfBuffer::SbfBuffer;
@@ -151,10 +145,10 @@ typedef enum
  * SbfRequestPub
  */
 %extend neueda::SbfRequestPub {
-    virtual void send (neueda::SwigBuffer buff) {
-        void* buffer = (void*) malloc(buff.size);
-        memcpy (buffer, buff.addr, buff.size+1);
-        self->send (buffer, buff.size);
+    virtual void send (const char* buffer, size_t length) {
+        void* buff = (void*) malloc(length);
+        memcpy (buff, buffer, length + 1);
+        self->send (buff, length);
     }
 }
 %newobject neueda::SbfRequestPub::send;
@@ -166,10 +160,10 @@ typedef enum
  * SbfRequestSub
  */
 %extend neueda::SbfRequestSub {
-    virtual void reply (struct sbfRequestImpl* req, neueda::SwigBuffer buff) {
-        void* buffer = (void*) malloc(buff.size);
-        memcpy (buffer, buff.addr, buff.size+1);
-        self->reply (req, buffer, buff.size);
+    virtual void reply (struct sbfRequestImpl* req, const char* buffer, size_t length) {
+        void* buff = (void*) malloc(length);
+        memcpy (buff, buffer, length+1);
+        self->reply (req, buff, length);
     }
 }
 %newobject neueda::SbfRequestSub::reply;

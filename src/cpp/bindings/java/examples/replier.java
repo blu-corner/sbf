@@ -17,10 +17,10 @@ class ReplierDelegate extends SbfRequestSubDelegate
                              SbfBuffer buff)
     {
         try {
-            int i = (int) replier.deserialize(buff.getData ());
+            int i = (int) replier.deserialize(buff.getByteArray ());
             System.out.format ("Received request '%d'\n", i);
             System.out.format ("Sending reply '%d'\n", i);
-            sub.reply (req, buff.getData ());
+            sub.reply (req, buff.getByteArray ());
             if (i == 20)
             {
                 replier.queue.destroy();

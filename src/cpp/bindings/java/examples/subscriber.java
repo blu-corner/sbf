@@ -15,7 +15,7 @@ class SubDelegate extends SbfSubDelegate
     public void onSubMessage(SbfSub sub, SbfBuffer buffer)
     {
         try {
-            int i = (int)subscriber.deserialize(buffer.getData());
+            int i = (int)subscriber.deserialize(buffer.getByteArray());
             if (i % 100 == 0)
             {
                 System.out.format("Got int '%d'\n", i);
