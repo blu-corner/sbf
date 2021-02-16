@@ -27,8 +27,10 @@ sbfTcpConnectionReadyQueueCb (sbfQueueItem item, void* closure)
                       ntohs (tc->mPeer.sin.sin_port));
 #endif
 
-    if (tc->mReadyCb != NULL && !tc->mDestroyed)
+    if (tc->mReadyCb != NULL)
         tc->mReadyCb (tc, tc->mClosure);
+
+    bufferevent_decref (tc->mEvent);
 
     if (sbfRefCount_decrement (&tc->mRefCount))
         free (tc);
@@ -55,8 +57,10 @@ sbfTcpConnectionErrorQueueCb (sbfQueueItem item, void* closure)
                       ntohs (tc->mPeer.sin.sin_port));
 #endif
 
-    if (tc->mErrorCb != NULL && !tc->mDestroyed)
+    if (tc->mErrorCb != NULL)
         tc->mErrorCb (tc, tc->mClosure);
+
+    bufferevent_decref (tc->mEvent);
 
     if (sbfRefCount_decrement (&tc->mRefCount))
         free (tc);
@@ -67,28 +71,32 @@ sbfTcpConnectionReadQueueCb (sbfQueueItem item, void* closure)
 {
     sbfTcpConnection tc = closure;
     struct evbuffer* evb = bufferevent_get_input (tc->mEvent);
-    size_t           size;
+    size_t           size = evbuffer_get_length (evb);
     size_t           used;
 
-    if (!tc->mDestroyed)
+    if (size != 0)
     {
-        size = evbuffer_get_length (evb);
-        if (size != 0)
-        {
-            used = tc->mReadCb (tc,
-                                evbuffer_pullup (evb, -1),
-                                size,
-                                tc->mClosure);
-            if (!tc->mDestroyed)
-                evbuffer_drain (evb, used);
-        }
-
-        if (!tc->mDestroyed)
-        {
-            tc->mQueued = 0;
-            bufferevent_enable (tc->mEvent, EV_READ);
-        }
+        used = tc->mReadCb (tc,
+                            evbuffer_pullup (evb, -1),
+                            size,
+                            tc->mClosure);
+        evbuffer_drain (evb, used);
     }
+
+    bufferevent_enable (tc->mEvent, EV_READ);
+
+    bufferevent_decref (tc->mEvent);
+
+    if (sbfRefCount_decrement (&tc->mRefCount))
+        free (tc);
+}
+
+static void
+sbfTcpConnectionDestroyQueueCb (sbfQueueItem item, void* closure)
+{
+    sbfTcpConnection tc = closure;
+
+    bufferevent_decref (tc->mEvent);
 
     if (sbfRefCount_decrement (&tc->mRefCount))
         free (tc);
@@ -99,13 +107,10 @@ sbfTcpConnectionEventReadCb (struct bufferevent* bev, void* closure)
 {
     sbfTcpConnection tc = closure;
 
-    if (tc->mQueued)
-        return;
-
-    tc->mQueued = 1;
     bufferevent_disable (tc->mEvent, EV_READ);
 
     sbfRefCount_increment (&tc->mRefCount);
+    bufferevent_incref (tc->mEvent);
     sbfQueue_enqueue (tc->mQueue, sbfTcpConnectionReadQueueCb, tc);
 }
 
@@ -120,17 +125,15 @@ sbfTcpConnectionEventEventCb (struct bufferevent* bev,
     {
         bufferevent_enable (tc->mEvent, EV_READ|EV_WRITE);
         sbfRefCount_increment (&tc->mRefCount);
+        bufferevent_incref (tc->mEvent);
         sbfQueue_enqueue (tc->mQueue, sbfTcpConnectionReadyQueueCb, tc);
         return;
     }
 
     if (events & (BEV_EVENT_ERROR|BEV_EVENT_TIMEOUT|BEV_EVENT_EOF))
     {
-        if (tc->mEvent != NULL)
-            bufferevent_free (tc->mEvent);
-        tc->mEvent = NULL;
-
         sbfRefCount_increment (&tc->mRefCount);
+        bufferevent_incref (tc->mEvent);
         sbfQueue_enqueue (tc->mQueue, sbfTcpConnectionErrorQueueCb, tc);
         return;
     }
@@ -153,10 +156,8 @@ sbfTcpConnectionSet (sbfTcpConnection tc,
     tc->mReadCb = readCb;
     tc->mClosure = closure;
 
-    tc->mDestroyed = 0;
     sbfRefCount_init (&tc->mRefCount, 1);
 
-    tc->mQueued = 0;
     tc->mEvent = bufferevent_socket_new (sbfMw_getThreadEventBase (thread),
                                          tc->mSocket,
                                          BEV_OPT_THREADSAFE);
@@ -292,13 +293,11 @@ sbfTcpConnection_destroy (sbfTcpConnection tc)
 {
     sbfLog_debug (tc->mLog, "destroying TCP connection %p", tc);
 
-    tc->mDestroyed = 1;
     EVUTIL_CLOSESOCKET (tc->mSocket);
-    if (tc->mEvent != NULL)
-        bufferevent_free (tc->mEvent);
 
-    if (sbfRefCount_decrement (&tc->mRefCount))
-        free (tc);
+    bufferevent_setcb (tc->mEvent, NULL, NULL, NULL, tc);
+
+    sbfQueue_enqueue (tc->mQueue, sbfTcpConnectionDestroyQueueCb, tc);
 }
 
 sbfError

@@ -15,7 +15,6 @@ struct sbfTcpConnectionImpl
 
     sbfSocket                  mSocket;
     struct bufferevent*        mEvent;
-    int                        mQueued;
 
     int                        mIsUnix;
     sbfTcpConnectionAddress    mPeer;
@@ -28,7 +27,6 @@ struct sbfTcpConnectionImpl
     sbfMwThread                mThread;
     sbfQueue                   mQueue;
 
-    int                        mDestroyed;
     sbfRefCount                mRefCount;
 
     struct sbfTcpListenerImpl* mListener;
