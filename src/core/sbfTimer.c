@@ -27,12 +27,18 @@ sbfTimerEventCb (int fd, short events, void* closure)
     }
 }
 
+void
+sbfTimer_enable (sbfTimer timer)
+{
+    event_add (&timer->mEvent, &timer->mTime);
+}
+
 sbfTimer
-sbfTimer_create (sbfMwThread thread,
-                 sbfQueue queue,
-                 sbfTimerCb cb,
-                 void* closure,
-                 double interval)
+sbfTimer_create_disabled (sbfMwThread thread,
+                          sbfQueue queue,
+                          sbfTimerCb cb,
+                          void* closure,
+                          double interval)
 {
     sbfTimer timer;
 
@@ -63,7 +69,22 @@ sbfTimer_create (sbfMwThread thread,
                   0,
                   sbfTimerEventCb,
                   timer);
-    event_add (&timer->mEvent, &timer->mTime);
+
+    return timer;
+}
+
+sbfTimer
+sbfTimer_create (sbfMwThread thread,
+                 sbfQueue queue,
+                 sbfTimerCb cb,
+                 void* closure,
+                 double interval)
+{
+    sbfTimer timer;
+
+    timer = sbfTimer_create_disabled (thread, queue, cb, closure, interval);
+
+    sbfTimer_enable (timer);
 
     return timer;
 }
