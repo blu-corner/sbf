@@ -290,8 +290,8 @@ sbfTcpConnection_destroy (sbfTcpConnection tc)
 
     tc->mDestroyed = 1;
     EVUTIL_CLOSESOCKET (tc->mSocket);
-
-    bufferevent_free (tc->mEvent);
+    if (tc->mEvent != NULL)
+        bufferevent_free (tc->mEvent);
 
     if (sbfRefCount_decrement (&tc->mRefCount))
         free (tc);
