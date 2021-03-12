@@ -126,10 +126,6 @@ sbfTcpConnectionEventEventCb (struct bufferevent* bev,
 
     if (events & (BEV_EVENT_ERROR|BEV_EVENT_TIMEOUT|BEV_EVENT_EOF))
     {
-        if (tc->mEvent != NULL)
-            bufferevent_free (tc->mEvent);
-        tc->mEvent = NULL;
-
         sbfRefCount_increment (&tc->mRefCount);
         sbfQueue_enqueue (tc->mQueue, sbfTcpConnectionErrorQueueCb, tc);
         return;
