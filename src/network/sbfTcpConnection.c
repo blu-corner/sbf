@@ -66,12 +66,13 @@ static void
 sbfTcpConnectionReadQueueCb (sbfQueueItem item, void* closure)
 {
     sbfTcpConnection tc = closure;
-    struct evbuffer* evb = bufferevent_get_input (tc->mEvent);
+    struct evbuffer* evb;
     size_t           size;
     size_t           used;
 
     if (!tc->mDestroyed)
     {
+        evb = bufferevent_get_input (tc->mEvent);
         size = evbuffer_get_length (evb);
         if (size != 0)
         {
