@@ -66,12 +66,13 @@ static void
 sbfTcpConnectionReadQueueCb (sbfQueueItem item, void* closure)
 {
     sbfTcpConnection tc = closure;
-    struct evbuffer* evb = bufferevent_get_input (tc->mEvent);
+    struct evbuffer* evb;
     size_t           size;
     size_t           used;
 
     if (!tc->mDestroyed)
     {
+        evb = bufferevent_get_input (tc->mEvent);
         size = evbuffer_get_length (evb);
         if (size != 0)
         {
@@ -126,10 +127,6 @@ sbfTcpConnectionEventEventCb (struct bufferevent* bev,
 
     if (events & (BEV_EVENT_ERROR|BEV_EVENT_TIMEOUT|BEV_EVENT_EOF))
     {
-        if (tc->mEvent != NULL)
-            bufferevent_free (tc->mEvent);
-        tc->mEvent = NULL;
-
         sbfRefCount_increment (&tc->mRefCount);
         sbfQueue_enqueue (tc->mQueue, sbfTcpConnectionErrorQueueCb, tc);
         return;

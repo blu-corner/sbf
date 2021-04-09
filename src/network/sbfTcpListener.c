@@ -24,6 +24,8 @@ sbfTcpListenerAcceptQueueCb (sbfQueueItem item, void* closure)
 
     if (!tl->mDestroyed)
         tl->mAcceptCb (tl, tc, tl->mClosure);
+    else
+        free (tc); /* _wrap doesn't init refcount, so just free here */
 
     if (sbfRefCount_decrement (&tl->mRefCount))
         free (tl);

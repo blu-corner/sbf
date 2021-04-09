@@ -31,6 +31,29 @@ typedef void (*sbfTimerCb) (sbfTimer timer, void* closure);
 #define SBF_TIMER_MICROSECONDS(n) ((n)/1000000.0)
 
 /*!
+ \brief Enable a timer that was created with sbfTimer_create_disabled
+ \param timer the timer handler.
+*/
+void sbfTimer_enable (sbfTimer timer);
+
+/*!
+   \brief Create a timer with the given arguments which can be enabled later.
+   \param thread the thread handler.
+   \param queue a queue.
+   \param cb High resolution timer callback. It will be invoked when the
+   timer expires.
+   \param closure user data associated to this high resolution timer.
+   \param interval the interval, in seconds, the timer is configured to fire
+    the callback.
+   \return a timer handler.
+*/
+sbfTimer sbfTimer_create_disabled (struct sbfMwThreadImpl* thread,
+                                   struct sbfQueueImpl* queue,
+                                   sbfTimerCb cb,
+                                   void* closure,
+                                   double interval);
+
+/*!
    \brief Create a timer with the given arguments.
    \param thread the thread handler.
    \param queue a queue.
