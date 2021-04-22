@@ -5,13 +5,6 @@
 namespace neueda
 {
 
-class SbfBufferDelegate {
-public:
-     ~SbfBufferDelegate () { }
-
-     void destroy (void* data, void* closure) { }
-};
-
 class SbfBuffer {
 public:
     /*!
@@ -29,6 +22,19 @@ public:
         \return An SbfBuffer object.
      */
     SbfBuffer (void* data, size_t size);
+
+    SbfBuffer (const SbfBuffer& other) : mBuffer {other.mBuffer}
+    {
+        if (mBuffer)
+            sbfBuffer_addRef (mBuffer);
+    }
+
+    SbfBuffer& operator= (const SbfBuffer& other)
+    {
+        if (mBuffer)
+            sbfBuffer_addRef (mBuffer);
+        return *this;
+    }
 
     /*!
         \brief Destructor that deletes the private buffer handler.
@@ -91,7 +97,6 @@ public:
 
 private:
     sbfBuffer mBuffer;
-    SbfBufferDelegate* mDelegate;
 
     static void (*sbfBufferDestroyCb) (sbfBuffer buffer,
                                         void* data,
