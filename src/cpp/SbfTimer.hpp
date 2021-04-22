@@ -1,6 +1,8 @@
 #pragma once
 
 #include "sbfTimer.h"
+#include "SbfMw.hpp"
+#include "SbfQueue.hpp"
 
 namespace neueda
 {
@@ -13,52 +15,44 @@ public:
 
 class SbfTimer {
 public:
+    /*!
+        \brief Constructs a subscriber object.
+        \param[in] thread The thread handler.
+        \param[in] queue Queue.
+        \param[in] delegate A delegate object that will be called when the timer
+                            fires.
+        \param[in] interval Time in seconds before the timer is fires the
+                            callback.
+        \return A SbfSub object.
+     */
     SbfTimer (sbfMwThread thread,
-              sbfQueue queue,
-              SbfTimerDelegate* delegate,
-              double interval)
-        : mThread (thread),
-          mQueue (queue),
-          mDelegate (delegate),
-          mInterval (interval)
-    {
-        mTimer = sbfTimer_create (mThread,
-                                  mQueue,
-                                  SbfTimer::sbfTimerTicked,
-                                  this,
-                                  mInterval);
-    }
+              neueda::SbfQueue* queue,
+              neueda::SbfTimerDelegate* delegate,
+              double interval);
 
-    virtual ~SbfTimer ()
-    {
-        if (getHandle () != NULL)
-            sbfTimer_destroy (getHandle ());
-    }
+    /*!
+        \brief Destructor that deletes the private timer handler.
+        \return None.
+     */
+    virtual ~SbfTimer ();
 
-    virtual sbfTimer getHandle ()
-    {
-        return mTimer;
-    }
+    /*!
+        \brief Returns a handle to the private C timer struct.
+        \return Pointer to a struct sbfTimerImpl.
+     */
+    virtual sbfTimer getHandle ();
 
-    virtual void reschedule ()
-    {
-        if (getHandle () != NULL)
-            sbfTimer_destroy (getHandle ());
-
-
-        mTimer = sbfTimer_create (mThread,
-                                  mQueue,
-                                  SbfTimer::sbfTimerTicked,
-                                  this,
-                                  mInterval);
-    }
+    /*!
+        \brief Reschedule the timer for the already configured interval.
+        \return None.
+     */
+    virtual void reschedule ();
 
 protected:
     sbfMwThread       mThread;
-    sbfQueue          mQueue;
+    SbfQueue*         mQueue;
     SbfTimerDelegate* mDelegate;
     double            mInterval;
-
     sbfTimer          mTimer;
 
 private:
