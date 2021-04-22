@@ -17,7 +17,17 @@ class PubTimerDelegate extends SbfTimerDelegate
 {
     public void onTicked()
     {
-        System.out.format ("Published '%d'\n", publisher.published);
+        try {
+            System.out.format ("Publishing '%d'\n", publisher.published);
+            byte [] bytes = publisher.serialize(publisher.published++);
+            SbfBuffer buf = new SbfBuffer(bytes);
+            publisher.pub.sendBuffer(buf);
+            if (publisher.published > 20)
+            {
+                publisher.queue.destroy();
+            }
+        } catch (Exception e) {
+        }
     }
 }
 
@@ -33,8 +43,9 @@ class PublisherThread extends Thread {
 public class publisher
 {
     public static SbfQueue queue;
-    public static int published;
-    
+    public static SbfPub pub;
+    public static int published = 1;
+
     public static byte[] serialize(Object obj) throws IOException {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         ObjectOutputStream os = new ObjectOutputStream(out);
@@ -68,25 +79,10 @@ public class publisher
 
         SbfTimer timer = new SbfTimer (mw.getDefaultThread (), queue, t_delegate, 1);
 
-        SbfPub pub = new SbfPub(tport, queue, "OUT", p_delegate);
+        pub = new SbfPub(tport, queue, "OUT", p_delegate);
 
         PublisherThread t = new PublisherThread();
         t.start();
-
-        // Set buffer to string
-        try {
-            for (published = 1; published <= 1000; published++)
-            {
-                byte [] bytes = serialize(published);
-                SbfBuffer buf = new SbfBuffer(bytes);
-                pub.sendBuffer(buf);
-                Thread.sleep(10);
-            }
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
-        queue.destroy();
         t.join();
     }
 }

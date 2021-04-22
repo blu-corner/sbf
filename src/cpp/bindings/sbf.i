@@ -27,12 +27,9 @@
 
 %}
 
-%include <arrays_java.i>
 %include <std_array.i>
 %include <stl.i>
-%include <swiginterface.i>
 %include <stdint.i>
-
 
 typedef enum
 {
@@ -43,11 +40,6 @@ typedef enum
     SBF_LOG_OFF
 } sbfLogLevel;
 
-%javaconst(1);
-%javaconst(0) CAP_ALL_MASK;
-%javaconst(0) CAP_HI_RES_COUNTER;
-%javaconst(0) SBF_MW_THREAD_LIMIT;
-%javaconst(0) SBF_MW_ALL_THREADS;
 #define CAP_ALL_MASK 0x00000001
 #define CAP_HI_RES_COUNTER 1 << 0
 #define SBF_MW_THREAD_LIMIT 64
@@ -65,12 +57,14 @@ typedef enum
     }
 }
 %ignore neueda::SbfLog::log;
+%feature("nodirector") neueda::SbfLog::log;
 %include "SbfLog.hpp"
 
 /*
  * SbfKeyValue
  */
 %ignore neueda::SbfKeyValue::getV;
+%feature("nodirector") neueda::SbfKeyValue::getV;
 %include "SbfKeyValue.hpp"
 
 /*
@@ -81,11 +75,23 @@ typedef enum
 /*
  * SbfQueue
  */
+%feature("nodirector") neueda::SbfQueue;
 %include "SbfQueue.hpp"
 
 /*
  * SbfPub
  */
+%extend neueda::SbfPub {
+    virtual void send (const char* buffer, size_t length) {
+        void* buff = (void*) malloc(length);
+        memcpy (buff, buffer, length + 1);
+        self->send (buff, length);
+    }
+}
+// Ignore method we've overridden
+%ignore neueda::SbfPub::send;
+%feature("nodirector") neueda::SbfPub::send;
+%newobject neueda::SbfPub::send;
 %include "SbfPub.hpp"
 
 /*
@@ -116,20 +122,6 @@ typedef enum
         self->setSize (length);
         self->setData (buff);
     }
-
-    virtual jbyteArray getByteArray () {
-        JNIEnv* jenv = JNU_GetEnv();
-        if (jenv != 0)
-        {
-            jbyteArray jb = (jenv)->NewByteArray (self->getSize());
-            (jenv)->SetByteArrayRegion(jb,
-                                       0,
-                                       self->getSize (),
-                                       (jbyte *)self->getData ());
-            return jb;
-        }
-        return NULL;
-    }
 }
 %newobject neueda::SbfBuffer::setData;
 %newobject neueda::SbfBuffer::getByteArray;
@@ -154,6 +146,7 @@ typedef enum
 %newobject neueda::SbfRequestPub::send;
 // Ignore method we've overridden
 %ignore neueda::SbfRequestPub::send;
+%feature("nodirector") neueda::SbfRequestPub::send;
 %include "SbfRequestPub.hpp"
 
 /*

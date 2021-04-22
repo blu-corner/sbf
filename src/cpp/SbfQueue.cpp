@@ -14,7 +14,10 @@ neueda::SbfQueue::~SbfQueue ()
 void neueda::SbfQueue::destroy()
 {
     if (getHandle () != NULL)
+    {
         sbfQueue_destroy (getHandle ());
+        mQueue = NULL;
+    }
 }
 
 sbfQueue neueda::SbfQueue::getHandle ()
@@ -34,7 +37,8 @@ const char* neueda::SbfQueue::getName ()
 
 void neueda::SbfQueue::enqueue (SbfQueueDelegate* item)
 {
-    sbfQueue_enqueue (getHandle (), SbfQueue::sbfQueueCb, item);
+    if (getHandle () != NULL)
+        sbfQueue_enqueue (getHandle (), SbfQueue::sbfQueueCb, item);
 }
 
 void neueda::SbfQueue::dispatch ()

@@ -16,14 +16,11 @@ class SubDelegate extends SbfSubDelegate
     {
         try {
             int i = (int)subscriber.deserialize(buffer.getByteArray());
-            if (i % 100 == 0)
+            System.out.format("Got int '%d'\n", i);
+            if (i == 20)
             {
-                System.out.format("Got int '%d'\n", i);
-                if (i == 1000)
-                {
-                    subscriber.queue.destroy();
-                    System.out.format ("Subscribing finished\n");
-                }
+                subscriber.queue.destroy();
+                System.out.format ("Subscribing finished\n");
             }
         } catch (Exception e) {
             System.out.println(e);

@@ -2,12 +2,16 @@
  * Copyright 2014-2018 Neueda Ltd.
  */
 import com.neueda.sbf.*;
+import java.util.concurrent.TimeUnit;
 
 class QueueDelegate1 extends SbfQueueDelegate
 {
     public void onQueueItem()
     {
         System.out.println ("Queue 1");
+        queue.dequeued++;
+        if (queue.queued == queue.dequeued)
+            queue.queue.destroy();
     }
 }
 
@@ -16,6 +20,9 @@ class QueueDelegate2 extends SbfQueueDelegate
     public void onQueueItem()
     {
         System.out.println ("Queue 2");
+        queue.dequeued++;
+        if (queue.queued == queue.dequeued)
+            queue.queue.destroy();
     }
 }
 
@@ -23,12 +30,21 @@ class DispatchThread extends Thread {
     public void run() {
         System.out.println("Hello from dispatch thread!");
         queue.queue.dispatch();
+        System.out.println("Hello from dispatch thread!");
     }
 }
 
 public class queue
 {
     public static SbfQueue queue;
+    public static int queued = 0;
+    public static int dequeued = 0;
+
+    public static void addToQueue(SbfQueueDelegate del)
+    {
+        queue.enqueue(del);
+        queued++;
+    }
 
     public static void main(String[] args) throws InterruptedException
     {
@@ -45,17 +61,16 @@ public class queue
         queue = new SbfQueue (mw, "default");
         QueueDelegate1 delegate1 = new QueueDelegate1();
         QueueDelegate2 delegate2 = new QueueDelegate2();
-        queue.enqueue (delegate1);
-        queue.enqueue (delegate1);
-        queue.enqueue (delegate2);
-        queue.enqueue (delegate1);
-        queue.enqueue (delegate2);
-        queue.enqueue (delegate2);
-        queue.enqueue (delegate1);
+        addToQueue (delegate1);
+        addToQueue (delegate1);
+        addToQueue (delegate2);
+        addToQueue (delegate1);
+        addToQueue (delegate2);
+        addToQueue (delegate2);
+        addToQueue (delegate1);
 
         DispatchThread t = new DispatchThread();
         t.start();
-        queue.destroy();
         t.join();
     }
 }

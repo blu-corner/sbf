@@ -2,6 +2,12 @@ cmake_minimum_required(VERSION 2.8.0)
 project(sbf C CXX)
 set(SUBMODULE_FLAGS -DTESTS=off)
 
+if(PYTHON_LIBRARY AND PYTHON_INCLUDE_DIR AND PYTHON_EXECUTABLE)
+    set(SUBMODULE_FLAGS ${SUBMODULE_FLAGS} -DPYTHON_LIBRARY=${PYTHON_LIBRARY})
+    set(SUBMODULE_FLAGS ${SUBMODULE_FLAGS} -DPYTHON_INCLUDE_DIR=${PYTHON_INCLUDE_DIR})
+    set(SUBMODULE_FLAGS ${SUBMODULE_FLAGS} -DPYTHON_EXECUTABLE=${PYTHON_EXECUTABLE})
+endif()
+
 if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
   set (CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install" CACHE PATH "default install path" FORCE )
 endif()
@@ -39,6 +45,8 @@ option(DEBUG "Enable debug build" OFF)
 option(COVERAGE "Enable gcov coverage" OFF)
 option(EXAMPLES "Enable examples" ON)
 option(JAVA "Enable Java bindings" OFF)
+option(PYTHON "Enable Python bindings" OFF)
+set(PYTHON_CONFIG "python-config" CACHE STRING "python-config for build env config")
 
 # allow external projects
 include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
@@ -111,7 +119,7 @@ if (UNIX)
     endif()
   endmacro()
 endif (UNIX)
-        
+
 
 set(CMAKE_C_STANDARD 99)
 # compile options

@@ -43,7 +43,6 @@ set(JNI_SOURCES
     ${CMAKE_CURRENT_BINARY_DIR}/SWIGTYPE_p_u_int.java
     ${CMAKE_CURRENT_BINARY_DIR}/SWIGTYPE_p_void.java
     ${CMAKE_CURRENT_BINARY_DIR}/SbfBuffer.java
-    ${CMAKE_CURRENT_BINARY_DIR}/SbfBufferDelegate.java
     ${CMAKE_CURRENT_BINARY_DIR}/SbfKeyValue.java
     ${CMAKE_CURRENT_BINARY_DIR}/SbfLog.java
     ${CMAKE_CURRENT_BINARY_DIR}/SbfMw.java

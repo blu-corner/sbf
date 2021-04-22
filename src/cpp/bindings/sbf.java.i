@@ -17,6 +17,13 @@ SWIG_JAVABODY_PROXY(public, public, SWIGTYPE)
 SWIG_JAVABODY_TYPEWRAPPER(public, public, public, SWIGTYPE)
 
 %include "exception.i"
+%include <swiginterface.i>
+
+%javaconst(1);
+%javaconst(0) CAP_ALL_MASK;
+%javaconst(0) CAP_HI_RES_COUNTER;
+%javaconst(0) SBF_MW_THREAD_LIMIT;
+%javaconst(0) SBF_MW_ALL_THREADS;
 
 // simple exception handler
 %exception {
@@ -53,6 +60,26 @@ static JNIEnv * JNU_GetEnv() {
     return env;
 }
 %}
+
+/*
+ * SbfBuffer
+ */
+%extend neueda::SbfBuffer {
+    virtual jbyteArray getByteArray () {
+        JNIEnv* jenv = JNU_GetEnv();
+        if (jenv != 0)
+        {
+            jbyteArray jb = (jenv)->NewByteArray (self->getSize());
+            (jenv)->SetByteArrayRegion(jb,
+                                       0,
+                                       self->getSize (),
+                                       (jbyte *)self->getData ());
+            return jb;
+        }
+        return NULL;
+    }
+}
+%newobject neueda::SbfBuffer::getByteArray;
 
 %apply (char *STRING, int LENGTH) { (void* bytes, size_t length) }
 %apply (char *STRING, int LENGTH) { (const char* buffer, size_t length) }
