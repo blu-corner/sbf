@@ -23,6 +23,7 @@ set (INSTALL_HEADERS
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfProperties.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfRefCount.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfVersion.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/sbfShmRingBuffer.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/syshash.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/sysqueue.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/systree.h")
@@ -45,7 +46,8 @@ set (SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfPath.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfPerfCounter.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/sbfPool.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/sbfProperties.c")
+    "${CMAKE_CURRENT_SOURCE_DIR}/sbfProperties.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/sbfShmRingBuffer.c")
 
 set (LIBS ${EVENT_LIB}
   ${EVENT_CORE_LIB}
